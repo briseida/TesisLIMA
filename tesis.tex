@@ -1,4 +1,5 @@
 \documentclass[12pt]{book}
+
 \usepackage[dvipsnames]{xcolor}
 \usepackage{amssymb,latexsym}
 \usepackage{graphicx}
@@ -120,11 +121,56 @@ blah blah blah blah blah blah blah blah blah.
 
  \newpage \thispagestyle{empty}
 
-\chapter{Primer capítulo}
+\chapter{Representaciones de Grupos}
 \label{cha:primer-capitulo}
 
+\section{Representaciones}
 
-\backmatter
+\begin{definition}
+  Una operación binaria en un conjunto $G$ es una función
+  de la forma $G  \times G \rightarrow G$. Para cada $(a,b)\in G
+  \times G$, denotaremos al elemento $*((a,b))\in G$ por $a*b$.
+\end{definition}
+
+\begin{definition}
+  Un $\mathbf{grupo}$ es un conjunto no vacío $G$, junto con una
+  operación binaria $*$ que satisface las siguientes condiciones:
+    \begin{enumerate}
+    \item La operación es asociativa, es decir, $$a*(b*c)=(a*b)*c$$ para todo $a,b,c \in G$.
+    \item Existe un elemento neutro $e \in G$ que
+      satisface $$a*e=e*a=a$$ para todo $a \in G$.
+    \item Para cada elemento $a \in G$ existe otro elemento $a' \in G$
+      tal que $$a*a'=a'*a=e$$ Al elemento $a'$ se le llama inverso del
+      elemento a.
+    \end{enumerate}
+\end{definition}
+
+\begin{definition}
+  Si $G$ y $H$ son grupos, entonces un $\mathbf{homomorfismo}$ de $G$
+  en $H$ es una función $\phi:G\rightarrow H$ la cual
+  satisface $$\phi(ab)=\phi(a)\phi(b)$$ para todo $a,b \in G$
+\end{definition}
+
+\begin{definition}
+  Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
+  diremos que $\phi$ es un  $\mathbf{isomorfismo}$. También diremos que
+  $G$ y $H$ son grupos  $\mathbf{isomorfos}$ cuando exista un
+    isomorfismo entre ellos, usaremos la notación $G\cong H$.
+\end{definition}
+
+\begin{theorem}
+  Supongamos que $G$ y $H$ son grupos y sea $\phi:G\rightarrow H$ un
+  homomorfismo. Entonces $$G/Ker \phi\cong Im \phi$$ 
+\end{theorem}
+
+  Sea $G$ un grupo y $GL(n,\mathbb{C})$ denota el grupo de matrices
+  invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
+
+
+\begin{definition}
+  Una representación de $G$ sobre $F$, es un homomorfismo $\rho$ de $G$
+  en $GL(n,F)$, para algún $n$. El grado de $\rho$ es el entero $n$.
+\end{definition}
 
 % \bibliographystyle{plain}
 % \bibliography{labiblio}
