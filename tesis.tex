@@ -165,18 +165,121 @@ blah blah blah blah blah blah blah blah blah.
   homomorfismo. Entonces $$G/\ker \phi\cong \im \phi$$ 
 \end{theorem}
 
-  Sea $G$ un grupo y $GL(n,\mathbb{C})$ denota el grupo de matrices
+  Denotemos $GL(n,\mathbb{C})$ al grupo de matrices
   invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
+  Y a $GL(V)$ a los operadores lineales invertibles en un
+  $\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
+  Además $GL(n,\mathbb{C})\cong GL(V)$ es un isomorfismo de grupos.
 
 
 \begin{definition}
-  Una representación de $G$ sobre $F$, es un homomorfismo $\rho$ de $G$
-  en $GL(n,F)$, para algún $n$. El grado de $\rho$ es el entero $n$.
+  Sea $G$ un grupo y $Y$ un conjunto no vacío. Una  \textbf{acción de G
+  en Y} es una función $*:G \times Y \rightarrow Y$ tal que
+\begin{enumerate}
+\item $e*x=x$ para todo $x\in Y.$
+\item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in Y$ y $g_{1},g_{2}\in G.$
+\end{enumerate}
+   Bajo estas condiciones, $Y$ es un $G$-conjunto. En ocasiones, por
+   abuso de notación, en lugar de $g*x$ usaremos la notación $gx.$
 \end{definition}
 
+\begin{definition}\textbf{Acciones lineales.}
+  Sea $G$ un grupo y se tiene una acción de $G$ en un $K$-espacio
+  vectorial $V$ de dimensión finita, es decir, una función
+ $$*:G\times V \rightarrow V $$
+que satisface los axiomas:
+\begin{enumerate}
+\item $e*v=v$, para todo $v\in V$ y donde $e$ es el neutro de $G$.
+\item $(g_{1}g_{2})*v=g_{1}*(g_{2}*v)$ para todo $v\in V$ y
+  $g_{1},g_{2}\in G$.
+\item $g_{1}*(v+w)=g_{1}*v+g_{1}*w$, para $g_{1}\in G$ y $v,w \in V .$
+\item $g_{1}*(\lambda v)=\lambda(g_{1}*v)$, para $\lambda \in K$, y
+  $v\in V$ y $g_{1}\in G.$
+\end{enumerate}
+Diremos que la acción es $G$-lineal y que $V$ es un $G$-espacio
+vectorial.
+\end{definition} 
+
+\begin{theorem}
+  Existe una correspondencia biyectiva entre el conjunto de acciones
+  lineales de un grupo $G$ en un $K$-espacio vectorial $V$ y el conjunto
+  de homomorfismos de $G$ en $GL(V)$
+\end{theorem}
+
+  \textit{Demostración.}\\
+
+  Supongamos primero que se tiene una acción lineal 
+  $$*:G\times V \rightarrow V$$
+  para cada $g\in G$, usando esta acción definamos la función $\rho
+  g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.\\
+
+  Primero observemos que la función $\rho:G\rightarrow GL(V)$ es un
+  homomorfismo de grupos ya que si $g,h\in G$, entonces para todo
+  $v\in V$:\\
+
+  $(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho
+  g \circ \rho h)v$\\
+     por lo que $\rho(gh)=\rho g \circ \rho h$\\
+
+  Ahora demostremos que $\rho g$ es una transformación lineal
+  invertible. Sean $v,w \in V$, $\lambda \in K$\\
+
+  $(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w$\\
+  $(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)$\\
+
+  Así que $\rho g$ es lineal, ahora veamos que es invertible. Como $G$
+  es un grupo, existe $g^{-1}\in G$.\\
+  
+ $((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho
+ g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v$\\
+ $((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho
+ g^{-1})((\rho g)v)=(\rho g^{-1})(gv)= g^{-1}(gv)=(g^{-1}g)v=v$\\
+
+Suponga ahora que se tiene un homomorfismo de grupos
+   
+  
+
+\begin{definition}
+  Si $G$ es un grupo y $V$ es un $K$-espacio vectorial, una
+  \textbf{representación lineal} de $G$ en $V$ es un homomorfismo 
+     $$\rho:G\rightarrow GL(V).$$
+  Se denotará $(\rho,V)$ para enfatizar el hecho de que la
+  representación $\rho$ de $G$  es sobre el espacio lineal $V$. A
+  dicho espacio lineal $V$ se le llamará \emph{espacio de representación} y a
+  su dimensión el \emph{grado} de la representación 
+\end{definition}
+
+Estudiar las representaciones lineales de un grupo $G$ en un espacio
+vectorial $V$, es equivalente a estudiar las acciones lineales de $G$
+en $V$.\\
+
+En este trabajo estudiaremos representaciones de grupos finitos en
+espacios vectoriales complejos y de dimensión finita. 
+
+\begin{example}(\textbf{Representación trivial})
+  La representación trivial de un grupo $G$ es el homomorfismo
+  $\rho:G\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo
+  $g\in G$.
+\end{example}
+
+\begin{example}(\textbf{Representación signo})
+  La representación 
+\end{example}
+
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
+\bigskip
 \bigskip
 
 \begin{center}
+Tabla de S4
+
 \begin{tabular}{c|r r r r r}
   No. Elementos& 1 & 6 & 8 & 6 & 3 \\
   Clase & (1) & (12) & (123) & (1234) &(12)(34)\\
