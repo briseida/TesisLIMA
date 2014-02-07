@@ -1,3 +1,4 @@
+
 \documentclass[12pt]{book}
 
 \usepackage[dvipsnames]{xcolor}
@@ -153,6 +154,15 @@ blah blah blah blah blah blah blah blah blah.
   satisface $$\phi(ab)=\phi(a)\phi(b)$$ para todo $a,b \in G$
 \end{definition}
 
+\begin{theorem}
+  Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
+  \begin{enumerate}
+    \item $\rho(e)=e^{'}$, donde $e\in G$ y  $e^{'}\in G^{'}$ son los
+    neutros respectivos. 
+    \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
+  \end{enumerate}
+\end{theorem}
+
 \begin{definition}
   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
@@ -209,35 +219,44 @@ vectorial.
   \textit{Demostración.} Supongamos primero que se tiene una acción lineal 
   $$*:G\times V \rightarrow V$$
   para cada $g\in G$, usando esta acción definamos la función $\rho
-  g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.\\
+  g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.
 
   Primero observemos que la función $\rho:G\rightarrow GL(V)$ es un
   homomorfismo de grupos ya que si $g,h\in G$, entonces para todo
-  $v\in V$:\\
+  $v\in V$:
 
-  $(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho
-  g \circ \rho h)v$\\
-     por lo que $\rho(gh)=\rho g \circ \rho h$\\
+  $$(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho g \circ \rho h)v$$
+  por lo que $\rho(gh)=\rho g \circ \rho h$
 
   Ahora demostremos que $\rho g$ es una transformación lineal
-  invertible. Sean $v,w \in V$, $\lambda \in K$\\
+  invertible. Sean $v,w \in V$, $\lambda \in K$.
 
-  $(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w$\\
-  $(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)$\\
+  \begin{flalign*}
+   &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w\\
+   &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)       
+  \end{flalign*}
 
   Así que $\rho g$ es lineal, ahora veamos que es invertible. Como $G$
-  es un grupo, existe $g^{-1}\in G$.\\
-  
- $((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho
- g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v$\\
- $((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho
- g^{-1})((\rho g)v)=(\rho g^{-1})(gv)= g^{-1}(gv)=(g^{-1}g)v=v$\\
+  es un grupo, existe $g^{-1}\in G$.
 
-Suponga ahora que se tiene un homomorfismo de grupos
-$\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define un
-acción de $G$ en $V$.
-$g(v+w)=(\rho g)(v+w)=(rho g)v+(\rho g)w$\\
-   
+  \begin{eqnarray*}
+     ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v\\
+     ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v
+   \end{eqnarray*}
+
+Suponga ahora que se tiene un homomorfismo de grupos $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define un
+acción lineal de $G$ en $V$. 
+
+\begin{enumerate}
+   \item $e$ es el neutro de $G$, entonces $$ev=(\rho e)v=id_{V}=v$$ para
+     todo $v\in V$. 
+   \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho
+     g \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
+   \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=(\rho g)(v+w)=(\rho g)v+(\rho g)w=gv+gw$$
+   \item Para $\lambda\in K$, $v\in V$ y $g\in G$, 
+    $$g(\lambda v)=(\rho g)(\lambda v)=\lambda((\rho g)v)=\lambda(gv)$$
+\end{enumerate}
+$\qed$
 
 \begin{definition}
   Si $G$ es un grupo y $V$ es un $K$-espacio vectorial, una
@@ -251,7 +270,7 @@ $g(v+w)=(\rho g)(v+w)=(rho g)v+(\rho g)w$\\
 
 Estudiar las representaciones lineales de un grupo $G$ en un espacio
 vectorial $V$, es equivalente a estudiar las acciones lineales de $G$
-en $V$.\\
+en $V$. 
 
 En este trabajo estudiaremos representaciones de grupos finitos en
 espacios vectoriales complejos y de dimensión finita. 
@@ -263,12 +282,31 @@ espacios vectoriales complejos y de dimensión finita.
 \end{example}
 
 \begin{example}(\textbf{Representación signo})
-  La representación 
+  El grupo simétrico sobre $\mathbb{I}_{n}=\{1,2,\ldots,n\}$, denotado
+  por $\mathcal{S}_{n}$ es el grupo de todas las permutaciones de $\mathbb{I}_{n}$ 
+  Si $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
+  transposiciones, definimos la función signo
+  $sgn:\mathcal{S}_{n} \rightarrow\{\pm1\}$ mediante $$sgn(\pi):=(-1)^{k}.$$
 \end{example}
 
-\begin{example}(\textbf{Representación estándar})
-  La representación 
+\begin{example}(\textbf{Representación regular})
+  Sea $G$ cualquier grupo de orden $n$ y sea V el espacio vectorial de
+  dimensión $n$ con base $\mathcal{B}=\{v_{g}\}_{g\in G}$ indexada por
+  los elementos del grupos. Para cada $\sigma\in G$ definamos la función
+  $\rho(\sigma):\mathcal{B}\rightarrow \mathcal{B}$ mediante $\rho(\sigma)(v_{g})=v_{\sigma g}$.
+  Mostremos que la función $$\rho:G\rightarrow GL(V)$$ dada por
+  $\sigma\mapsto\rho(\sigma)$ es un homomorfismo. Si $\sigma,\tau \in G$
+  y si $v_{g}\in \mathcal{B}$, entonces $$\rho(\sigma
+  \tau)v_{g}=v_{(\sigma\tau)g}=v_{\sigma(\tau g)}=\rho(\sigma)v_{\tau
+    g}=\rho(\sigma)(\rho(\tau)v_{g})=\rho(\sigma)\rho(\tau)v_{g} $$
+  así que $\rho(\sigma\tau)=\rho(\sigma)\rho(\tau)$. Por definición el 
+  grado de la representación es el orden de $G$.
+
+  
+
 \end{example}
+
+
 
 \bigskip
 \bigskip
