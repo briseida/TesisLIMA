@@ -121,7 +121,7 @@ lo que sus homologías con coeficientes complejos definen
 representaciones de $S_{n}$. 
 
 La descomposición en irreducibles de tales homologías ha sido exhibida
-por Bouc (19?). En el presente trabajo se muestra el resultado
+por Bouc (1992). En el presente trabajo se muestra el resultado
 correspondiente para la gráfica de clanes $K(G_{6})$.
 
 \vspace{2cm}
@@ -140,24 +140,23 @@ blah blah blah blah blah blah blah blah blah.
 \chapter{Representaciones de Grupos}
 \label{cha:primer-capitulo}
 
-\section{Representaciones}
+\section{Grupos}
 
 \begin{definition}
   Una \textbf{operación binaria} en un conjunto $G$ es una función
   de la forma $G  \times G \rightarrow G$. Para cada $(a,b)\in G
-  \times G$, denotaremos al elemento $*((a,b))\in G$ por $a*b$.
-\end{definition}
+  \times G$, denotaremos al elemento $*((a,b))\in G$ por $ab$. 
+\end{definition} 
 
-\begin{definition}
+\begin{definition} 
   Un \textbf{grupo} es un conjunto no vacío $G$, junto con una
   \textbf{operación binaria} $*$ que satisface las siguientes condiciones:
     \begin{enumerate}
-    \item La operación es asociativa, es decir, $$a*(b*c)=(a*b)*c$$ para todo $a,b,c \in G$.
-    \item Existe un elemento neutro $e \in G$ que
-      satisface $$a*e=e*a=a$$ para todo $a \in G$.
+    \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
+    \item Existe un elemento neutro $1 \in G$ que
+      satisface $$a1=1a=a$$ para todo $a \in G$.
     \item Para cada elemento $a \in G$ existe otro elemento $a' \in G$
-      tal que $$a*a'=a'*a=e$$ Al elemento $a'$ se le llama inverso del
-      elemento a.
+      tal que $$aa'=a'a=1$$ Al elemento $a'$ se le llama inverso del elemento $a$.
     \end{enumerate}
 \end{definition}
 
@@ -170,11 +169,13 @@ blah blah blah blah blah blah blah blah blah.
 \begin{theorem}
   Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
   \begin{enumerate}
-    \item $\rho(e)=e^{'}$, donde $e\in G$ y  $e^{'}\in G^{'}$ son los
+    \item $\rho(1)=1^{'}$, donde $1\in G$ y  $1^{'}\in G^{'}$ son los
     neutros respectivos. 
     \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
   \end{enumerate}
 \end{theorem}
+
+La demostración del teorema anterior es elemental, por lo tanto la omitiremos.
 
 \begin{definition}
   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
@@ -194,12 +195,13 @@ blah blah blah blah blah blah blah blah blah.
   $\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
   Además $GL(n,\mathbb{C})\cong GL(V)$ es un isomorfismo de grupos.
 
+\section{Acciones de Grupos}
 
 \begin{definition}
   Sea $G$ un grupo y $Y$ un conjunto no vacío. Una  \textbf{acción de $G$
   en $Y$} es una función $*:G \times Y \rightarrow Y$ tal que
 \begin{enumerate}
-\item $e*x=x$ para todo $x\in Y.$
+\item $1*x=x$ para todo $x\in Y.$
 \item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in Y$ y $g_{1},g_{2}\in G.$
 \end{enumerate}
    Bajo estas condiciones, $Y$ es un $G$-conjunto. En ocasiones, por
@@ -212,11 +214,11 @@ blah blah blah blah blah blah blah blah blah.
  $$*:G\times V \rightarrow V $$
 que satisface los axiomas:
 \begin{enumerate}
-\item $e*v=v$, para todo $v\in V$ (donde $e$ es el neutro de $G$).
-\item $(g_{1}g_{2})*v=g_{1}*(g_{2}*v)$ para todos $v\in V$ y
+\item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
+\item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
   $g_{1},g_{2}\in G$.
-\item $g_{1}*(v+w)=g_{1}*v+g_{1}*w$, para $g_{1}\in G$ y $v,w \in V .$
-\item $g_{1}*(\lambda v)=\lambda(g_{1}*v)$, para $\lambda \in K$,
+\item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
+\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in K$,
   $v\in V$ y $g_{1}\in G.$
 \end{enumerate}
 Diremos que la acción es $G$-lineal y que $V$ es un $G$-espacio
@@ -260,8 +262,8 @@ vectorial.
 Suponga ahora que se tiene un homomorfismo de grupos $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define un
 acción lineal de $G$ en $V$. 
 
-\begin{enumerate}
-   \item $e$ es el neutro de $G$, entonces $$ev=(\rho e)v=id_{V}=v$$ para
+\begin{enumerate} 
+   \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=id_{V}=v$$ para
      todo $v\in V$. 
    \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho
      g \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
@@ -269,7 +271,10 @@ acción lineal de $G$ en $V$.
    \item Para $\lambda\in K$, $v\in V$ y $g\in G$, 
     $$g(\lambda v)=(\rho g)(\lambda v)=\lambda((\rho g)v)=\lambda(gv)$$
 \end{enumerate}
+
 $\qed$
+
+\section{Representaciones de Grupos}
 
 \begin{definition}
   Si $G$ es un grupo y $V$ es un $K$-espacio vectorial, una
@@ -320,19 +325,19 @@ espacios vectoriales complejos y de dimensión finita.
 \chapter{Homología de Complejos Simpliciales}
 %\label{cha:primer-capitulo}
 
-\section{Complejo de Apareamiento}
+\section{Complejo de Emparejamiento}
 
 \begin{definition}
 Consideremos la gráfica completa de $n$ vértices $K_{n}$, tales
-vértices son etiquetados como $a_{1},a_{2},\ldots,a_{n}$ y
-$\overline{a_{i}a_{j}}$ denotará la arista que une al vértice $a_{i}$ con el
-vértice $a_{j}$. Llamaremos \textbf{complejo de apareamiento} de orden
+vértices son etiquetados como $1,2,\ldots,n$ e
+$\overline{ij}$ denotará la arista que une al vértice $i$ con el
+vértice $j$. Llamaremos \textbf{complejo de emparejamiento} de orden
 $n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
 
 \begin{enumerate}
   \item Su conjunto de vértices $\mathcal{V}$ consta de las aristas de la gráfica
   $K_{n}$. 
-  \item Si $v_{i}=\overline{a_{p}a_{q}}$ y $v_{j}=\overline{a_{r}a_{s}}$ están en
+  \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
   $\mathcal{V}$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $M_{n}$ si $v_{i}$
   y $v_{j}$ son ajenas
 \end{enumerate} 
@@ -486,13 +491,6 @@ No. de Elementos  & 1 & 3 & 3 & 6 & 6 & 1 & 6 & 8 & 6 & 8 \\
   \hline
   $\phi_{1}$ & 1 & 1 & 1 & -1 & -1 & 1 &-1 & 1 &- 1 & 1  \\
 \end{tabular}
-
-El presente trabajo tiene como objetivo analizar la estructura de
-G-módulos de homología de complejos simpliciales en los cuales actúa
-un grupo G finito. Con ello en mente se muestra en primera instancia
-un procedimiento para conocer los G-módulos de dimensión finita,
-dotándonos de una herramienta para obtener información y realizar así
-una clasificación de ellos.
 
 % \bibliographystyle{plain}
 % \bibliography{labiblio}
