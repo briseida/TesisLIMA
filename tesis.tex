@@ -338,6 +338,43 @@ $\Delta$; Si $A$ tiene $p+1$ elementos, decimos que $A$ es un
 \emph{p-simplejo} y su dimensión es $p$. La dimensión de $\Delta$
 es el máximo de las dimensiones de los simplejos de $\Delta$.
 
+Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
+\textbf{0-simplejo orientado} es un punto $v$. Un \textbf{1-simplejo
+  orientado} es un segmento de línea dirigido $v_{1}v_{2}$ uniendo los
+puntos $v_{1}$ y $v_{2}$ en dirección de $v_{1}$ a $v_{2}$, así que
+$v_{1}v_{2}\neq v_{2}v_{1}$, pero estaremos de acuerdoo en que
+$v_{1}v_{2}=-v_{2}v_{1}$. Un \textbf{2-simplejo orientado} es una
+región triangular $v_{1}v_{2}v_{3}$ con dirección de $v_{1}$ a $v_{2}$
+a $v_{3}$, claramente $v_{1}v_{2}v_{3}$ tiene el mismo orden que
+$v_{2}v_{3}v_{1}$ y $v_{3}v_{1}v_{2}$, pero con orientación opuesta a
+$v_{1}v_{3}v_{2}$, $v_{3}v_{2}v_{1}$ y $v_{2}v_{1}v_{3}$, es decir, estaremos de acuerdo que:
+$$v_{1}v_{2}v_{3}=v_{2}v_{3}v_{1}=v_{3}v_{1}v_{2}=-v_{1}v_{3}v_{2}=-v_{3}v_{2}v_{1}=-v_{2}v_{1}v_{3}$$
+
+Note que $v_{i}v_{j}v_{k}$ es igual a $v_{1}v_{2}v_{3}$ si
+
+\[ \left(
+  \begin{array}{ccc}
+    1 & 2 & 3 \\
+    i & j & k 
+  \end{array} 
+\right)\] 
+
+es una permutación par y es igual a $-v_{1}v_{2}v_{3}$ si la
+permutación es impar.
+
+Un \textbf{3-simplejo orientado} está dado por una secuencia ordenada
+$v_{1}v_{2}v_{3}v_{4}$ de cuatro vértices de un tetraedro sólido y
+acordaremos que $v_{1}v_{2}v_{3}v_{4}=\pm v_{i}v_{j}v_{r}v_{s}$,
+dependiendo si la permutación es par o impar. Así que dos
+\emph{n-simplejos}, son equivalentes si difieren el uno del otro
+por una permutación par.
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\\
+
+Queda pendiente figura de 1,2 y 3-simplejo ?????????\\
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
 \section{Complejo de Emparejamiento}
 
 \begin{definition}
