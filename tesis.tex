@@ -387,13 +387,32 @@ Queda pendiente figura de 1,2 y 3-simplejo ?????????\\
   \end{enumerate} 
 \end{definition}
 
-Dado que en nuestro caso solo estudiamos complejos simpliciales cuyo
+Dado que en nuestro caso sólo estudiamos complejos simpliciales cuyo
 conjunto de vértices es finito, la segunda condición no se aplica.
 
 Sumamos $p$-cadenas sumando sus valores; el grupo resultante es
 denotado por $C_{p}(\Delta)$ y es llamado el \textbf{grupos de
   \emph{p}-cadenas (orientadas)} de $\Delta$. Si $p<0$ o $p>dim \Delta$,
 $C_{p}(\Delta)$ denota al grupo trivial.
+
+\begin{definition}
+  Si $\sigma$ es un simplejo orientado, la \textbf{cadena elemental} $c$
+  correspondiente a $\sigma$ es la función definida como:
+  \[ 
+  \begin{array}{cl}
+    c(\sigma)=1, & \\
+    c(\sigma^{'})=-1 & \mbox{si $\sigma^{'}$ tiene orientación opuesta de $\sigma$}, \\
+    c(\tau)=0 & \mbox{para todos los otros simplejos orientados $\tau$}, 
+  \end{array}\] 
+  \end{definition}
+
+Por abuso de notación, muchas veces usamos el símbolo $\sigma$ para
+denotar no sólo a un simplejo, o a un simplejo orientado, también
+denotamos a la $p$-cadena elemental $c$ correspondiente al simplejo
+orientado $\sigma$. Con esta convención, si $\sigma$ y $\sigma^{'}$
+tienen orientaciones opuestas del mismo simplejo, entonces podemos
+escribir $\sigma^{'}=-\sigma$, pues ésta ecuación se mantiene cuando
+nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
 
 \section{Complejo de Emparejamiento}
 
