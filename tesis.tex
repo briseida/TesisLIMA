@@ -375,6 +375,26 @@ Queda pendiente figura de 1,2 y 3-simplejo ?????????\\
 
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
+\begin{definition}
+  Sea $\Delta$ un complejo simplicial. Una \textbf{\emph{p}-cadena} en
+  $\Delta$ es una función $c$ de el conjunto de $p$-simplejos de
+  $\Delta$ a los complejos, tal que:
+  \begin{enumerate}
+    \item $c(\sigma)=-c(\sigma^{'})$ si $\sigma$ y $\sigma^{'}$ tienen
+      direcciones opuestas del mismo simplejo.
+    \item $c(\sigma)=0$ para todo $p$-simplejo orientado $\sigma$,
+      excepto en un número finito de ellos.
+  \end{enumerate} 
+\end{definition}
+
+Dado que en nuestro caso solo estudiamos complejos simpliciales cuyo
+conjunto de vértices es finito, la segunda condición no se aplica.
+
+Sumamos $p$-cadenas sumando sus valores; el grupo resultante es
+denotado por $C_{p}(\Delta)$ y es llamado el \textbf{grupos de
+  \emph{p}-cadenas (orientadas)} de $\Delta$. Si $p<0$ o $p>dim \Delta$,
+$C_{p}(\Delta)$ denota al grupo trivial.
+
 \section{Complejo de Emparejamiento}
 
 \begin{definition}
