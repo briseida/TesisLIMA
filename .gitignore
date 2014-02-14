@@ -1,10 +1,10 @@
 /auto/tesis.el
-/tesis.aux
-/tesis.idx
-/tesis.log
-/tesis.pdf
-/tesis.bbl
-/tesis.blg
+*.aux
+*.idx
+*.log
+*.pdf
+*.bbl
+*.blg
 /_region_.tex
-/auto/_region_.el
+/auto/*
 /tesis.synctex.gz
