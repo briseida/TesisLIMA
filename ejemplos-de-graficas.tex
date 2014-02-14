@@ -1,5 +1,6 @@
 \documentclass{article}
 
+\usepackage{tikz}
 \usepackage{tkz-graph}
 \usepackage{tkz-berge}
 
@@ -8,9 +9,18 @@
 Este es un ejemplo:
 \begin{center}
   \begin{tikzpicture}
-    \Vertex[x=0,y=0]{a}
+    \Vertex[x=0,y=0,Math]{a}
     \Vertex[x=1,y=1]{b}
     \Edge(a)(b)
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \GraphInit[vstyle=Shade]
+    %\GraphInit[vstyle=Art]
+    %\SetVertexNoLabel
+    \grPetersen[Math,rotation=90,RA=5,RB=3]
   \end{tikzpicture}
 \end{center}
 
