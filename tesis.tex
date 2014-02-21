@@ -341,11 +341,11 @@ es el máximo de las dimensiones de los simplejos de $\Delta$.
 Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
 \textbf{0-simplejo orientado} es un punto $v$. Un \textbf{1-simplejo
   orientado} es un segmento de línea dirigido $v_{1}v_{2}$ uniendo los
-puntos $v_{1}$ y $v_{2}$ en dirección de $v_{1}$ a $v_{2}$, así que
-$v_{1}v_{2}\neq v_{2}v_{1}$, pero estaremos de acuerdoo en que
+puntos $v_{1}$ y $v_{2}$ en dirección de $v_{1}$ a $v_{2}$ ver \setlength{\fboxsep}{0pt}\colorbox{green}{FIGURA(referencia)}, así que
+$v_{1}v_{2}\neq v_{2}v_{1}$, pero estaremos de acuerdo en que
 $v_{1}v_{2}=-v_{2}v_{1}$. Un \textbf{2-simplejo orientado} es una
 región triangular $v_{1}v_{2}v_{3}$ con dirección de $v_{1}$ a $v_{2}$
-a $v_{3}$, claramente $v_{1}v_{2}v_{3}$ tiene el mismo orden que
+a $v_{3}$ ver \setlength{\fboxsep}{0pt}\colorbox{green}{FIGURA(referencia)}, claramente $v_{1}v_{2}v_{3}$ tiene el mismo orden que
 $v_{2}v_{3}v_{1}$ y $v_{3}v_{1}v_{2}$, pero con orientación opuesta a
 $v_{1}v_{3}v_{2}$, $v_{3}v_{2}v_{1}$ y $v_{2}v_{1}v_{3}$, es decir, estaremos de acuerdo que:
 $$v_{1}v_{2}v_{3}=v_{2}v_{3}v_{1}=v_{3}v_{1}v_{2}=-v_{1}v_{3}v_{2}=-v_{3}v_{2}v_{1}=-v_{2}v_{1}v_{3}$$
@@ -363,17 +363,59 @@ es una permutación par y es igual a $-v_{1}v_{2}v_{3}$ si la
 permutación es impar.
 
 Un \textbf{3-simplejo orientado} está dado por una secuencia ordenada
-$v_{1}v_{2}v_{3}v_{4}$ de cuatro vértices de un tetraedro sólido y
+$v_{1}v_{2}v_{3}v_{4}$ de cuatro vértices de un tetraedro sólido
+ver \setlength{\fboxsep}{0pt}\colorbox{green}{FIGURA(referencia)} y
 acordaremos que $v_{1}v_{2}v_{3}v_{4}=\pm v_{i}v_{j}v_{r}v_{s}$,
 dependiendo si la permutación es par o impar. Así que dos
 \emph{n-simplejos}, son equivalentes si difieren el uno del otro
-por una permutación par.
+por una permutación par. 
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@\\
+\begin{center}
+  \begin{tikzpicture}
+    \GraphInit[vstyle=Classic]
+    \tikzset{VertexStyle/.style = {%
+        shape= circle,
+        shading= ball,
+        ball color= green!40!black,
+        minimum size = 0.1pt,draw}}
+    \Vertex[x=0,y=0,Math]{v_{0}}
+    \Vertex[x=2,y=2,Math]{v_{1}}
+    \Edge[style={->}](v_{0})(v_{1})
+  \end{tikzpicture}
+\end{center}
 
-Queda pendiente figura de 1,2 y 3-simplejo ?????????\\
+\begin{center}
+  \begin{tikzpicture}
+    \draw[help lines] (-2,0);% grid (2,3);
+    %\SetGraphUnit{2}
+    \GraphInit[vstyle=Classic]
+    \tikzset{VertexStyle/.style = {%
+        shape= circle,
+        shading= ball,
+        ball color= green!40!black,%
+        minimum size = 2pt,draw}}
+    \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180,]{v_{0}}
+    \Vertex[x=2,y=0,Math]{v_{1}}
+    \Vertex[x=0,y=2.5,Math]{v_{2}}
+    \Edge[style={->}](v_{0})(v_{1})
+    \Edge[style={->}](v_{1})(v_{2})
+    \Edge[style={->}](v_{2})(v_{0})
+ \end{tikzpicture}
+\end{center}
 
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+\begin{center}
+\begin{tikzpicture}[scale=.6]
+  \SetVertexNoLabel
+  \GraphInit[vstyle=Classic]
+    \tikzset{VertexStyle/.style = {%
+        shape= circle,
+        shading= ball,
+        ball color= green!40!black,%
+        minimum size = 2pt,draw}}
+  %\SetGraphShadeColor{red!50}{black}{red}
+  \grTetrahedral[RA=4]
+\end{tikzpicture}
+\end{center}
 
 \begin{definition}
   Sea $\Delta$ un complejo simplicial. Una \textbf{\emph{p}-cadena} en
@@ -413,6 +455,8 @@ orientado $\sigma$. Con esta convención, si $\sigma$ y $\sigma^{'}$
 tienen orientaciones opuestas del mismo simplejo, entonces podemos
 escribir $\sigma^{'}=-\sigma$, pues ésta ecuación se mantiene cuando
 nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
+
+
 
 \section{Complejo de emparejamiento}
 
