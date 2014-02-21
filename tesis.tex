@@ -528,6 +528,59 @@ nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
 
 \fbox{\parbox[b]{\linewidth}{\textbf{\underline{\emph{Nota:}}} \\{\setlength{\fboxsep}{0pt}\colorbox{green}{QUEDA PENDIENTE DEMOSTRACIÓN}}}}
 
+
+\begin{corollary}
+  Toda función $f$ de los p-simplejos orientados de $\Delta$ en
+  un espacio vectorial $G$ puede extenderse de manera única a un
+  homomorfismo de $C_{p}(\Delta)\rightarrow G$, tal que $f(-
+  \sigma)=-f(\sigma)$ para todo p-simplejo orientado $\sigma$.
+\end{corollary}
+
+\begin{definition}
+  Sea $\sigma=[v_{0},\ldots,v_{p}]$ un simplejo orientado con $p>0$,
+  definimos el homomorfismo $\partial_{p}:C_{p}(\Delta)\rightarrow
+  C_{p-1}(\Delta)$ como:
+
+  \begin{equation}
+    \label{ofrontera}
+    \partial_{p}(\sigma)=\partial_{p}[v_{0},\ldots,v_{p}]=\sum^{p}_{i=0}(-1)^{i}[v_{0},\ldots,\widehat
+    v_{i},\ldots,v_{p}],
+  \end{equation}
+  al que llamamos el \textbf{\emph{p}-ésimo operador frontera}, donde
+  $\widehat v_{i}$ indica que el vértice $v_{i}$ es borrado del arreglo.
+\end{definition}
+
+Puesto que $C_{p}(\Delta)$ es el grupo trivial para $p<0$, diremos
+que $\partial_{p}$ es el homomorfismo trivial para $p\leq
+0$. Mostremos ahora que $\partial_{p}$ está bien definido y que
+$\partial_{p}(-\sigma)=-\partial_{p}(\sigma)$. Para esto es suficiente
+mostrar que la ecuación $(\ref{ofrontera})$ cambia de signo si intercambiamos dos
+vértices adyacentes en el orden $[v_{0},\ldots,v_{p}]$, entonces,
+debemos comparar las expresiones:
+$$\partial_{p}[v_{0},\ldots,v_{j},v_{j+1},\ldots,v_{p}] \mbox{ y } \partial_{p}[v_{0},\ldots,v_{j+1},v_{j},\ldots,v_{p}].$$
+
+Para $i\neq j$, $j+1$, el $i$-ésimo término de estas dos expresiones
+difieren precisamente por un signo; los términos son idénticos,
+excepto que $v_{j}$ y $v_{j+1}$ aparecen intercambiados. Veamos que
+sucede sobre el i-ésimo término cuando $i=j$ y $i=j+1$. En la primera
+expresión tenemos que:
+$$(-1)^{j}[\ldots,v_{j-1},\widehat v_{j},v_{j+1},v_{j+2},\ldots]+(-1)^{j+1}[\ldots,v_{j-1},v_{j},\widehat
+v_{j+1},v_{j+2},\ldots].$$
+en la segunda expresión tenemos:
+$$(-1)^{j}[\ldots,v_{j-1},\widehat v_{j+1},v_{j},v_{j+2},\ldots]+(-1)^{j+1}[\ldots,v_{j-1},v_{j+1},\widehat
+v_{j},v_{j+2},\ldots].$$
+Comparando estas dos expresiones observamos que solo difieren por un signo.
+
+\begin{example}
+  De acuerdo a lo anterior, tenemos que
+  \begin{enumerate}
+  \item para un \emph{1-simplejo}: $\partial_{1}[v_{0},v_{1}]= v_{1}-v_{0}$,
+  \item para un \emph{2-simplejo}: $\partial_{2}[v_{0},v_{1},v_{2}]=[v_{1},v_{2}]-[v_{0},v_{2}]+[v_{0},v_{1}]$,
+  \item para un \emph{3-simplejo}:
+    $\partial_{3}[v_{0},v_{1},v_{2},v_{3}]=[v_{1},v_{2},v_{3}]-[v_{0},v_{2},v_{3}]+[v_{0},v_{1},v_{3}]-[v_{0},v_{1},v_{2}]$. 
+  \end{enumerate}
+\end{example}
+
 \section{Complejo de emparejamiento}
 
 \begin{definition}
