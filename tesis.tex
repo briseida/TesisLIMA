@@ -581,6 +581,63 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
   \end{enumerate}
 \end{example}
 
+\section{$\partial^{2}=0$ y Homología simplicial}
+
+\begin{definition}
+   El kernel de $\partial_{p}:C_{p}(\Delta)\rightarrow
+   C_{p-1}(\Delta)$ es llamado el espacio de
+   \textbf{\emph{p}-ciclos} y denotado por $Z_{p}(\Delta)$. La imagen de
+   $\partial_{p+1}:C_{p+1}(\Delta)\rightarrow C_{p}(\Delta)$ es
+   llamado el espacio de \textbf{\emph{p}-fronteras} y es denotado por $B_{p}(\Delta)$.
+\end{definition}
+
+\begin{theorem}
+    $\partial_{p-1}\circ\partial_{p}=0$
+\end{theorem}
+
+\textit{Demostración.} Calculamos 
+\begin{align*}
+  \partial_{p-1}\partial_{p}[v_{0},\ldots,v_{p}]&=\sum_{i=0}^{p}(-1)^{i}\partial_{p-1}[v_{0},\ldots,\widehat
+  v_{i},\ldots,v_{p}]\\
+  &=\sum_{j<i}(-1)^{i}(-1)^{j}[\ldots,\widehat v_{j},\ldots,\widehat v_{i},\ldots]\\
+  &+\sum_{j>i}(-1)^{i}(-1)^{j-1}[\ldots,\widehat v_{i},\ldots,\widehat v_{j},\ldots].
+\end{align*}
+
+Los términos de estas dos sumas se cancelan a pares. $\qed$
+
+\begin{corollary}
+  $B_{p}(\Delta)$ es subespacio de $Z_{p}(\Delta)$.
+\end{corollary}
+
+\textit{Demostración.} Primero veamos que $B_{n}(\Delta)\subseteq Z_{n}(\Delta)$, tenemos que
+$B_{n}(\Delta)=\partial[C_{n+1}(\Delta)]$, si $b\in B_{n}(\Delta)$,
+podemos escribir a $b$ como $b=\partial_{n+1}(c)$ para algún $c\in
+C_{n+1}(\Delta)$. Así que
+$$\partial_{n}(b)=\partial_{n}(\partial_{n+1}(c))=0$$
+
+por lo tanto $b\in Z_{n}(\Delta)$.
+Las otras condiciones se siguen de que $\partial_{n+1}$ es un
+homomorfismo:
+
+\begin{enumerate}
+  \item Tomemos $0\in C_{n+1}$, así que $\partial_{n+1}(0)=\widehat 0$,
+    por lo tanto $\widehat 0\in B_{n}(\Delta)$
+  \item Sean $b_{1}\in B_{n}(\Delta)$ y $b_{2}\in B_{n}(\Delta)$,
+    donde $b_{1}=\partial_{n+1}(c_{1})$ y $b_{2}=\partial_{n+1}(c_{2})$ para
+    algún $c_{1},c_{2}\in C_{n+1}(\Delta)$, así que $b_{1}+b_{2}\in B_{n}$
+    pues $b_{1}+b_{2}=\partial_{n+1}(c_{1})+\partial_{n+1}(c_{2})=\partial_{n+1}(c_{1}+c_{2})$
+    ya que $c_{1}+c_{2}\in C_{n+1}(\Delta)$.
+  \item Por último sea $a\in \mathbb{C}$, y $b\in B_{n}(\Delta)$ con
+    $b=\partial_{n+1}(c)$ para algún $c\in C_{n+1}(\Delta)$, notemos
+    que $ac\in C_{n+1}(\Delta)$, así que $ab\in B_{n}(\Delta)$ pues $ab=a\partial_{n+1}(c)=\partial_{n+1}(ac)$.
+\end{enumerate}
+ 
+\begin{definition}
+   Definimos al espacio
+   $$H_{p}(\Delta)=Z_{p}(\Delta)/B_{p}(\Delta)$$
+   al cual llamamos la \textbf{\emph{p}-ésima homología de $\Delta$}
+\end{definition}
+
 \section{Complejo de emparejamiento}
 
 \begin{definition}
