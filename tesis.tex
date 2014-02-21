@@ -137,6 +137,70 @@ blah blah blah blah blah blah blah blah blah.
 
  \newpage \thispagestyle{empty}
 
+\chapter{Repaso de álgebra lineal}
+%\label{cha:repaso-algebra-line}
+
+En este capítulo se revisan algunos resultados de álgebra lineal, las
+pruebas se omiten pero se puede consultar algún texto de álgebra
+lineal como {\setlength{\fboxsep}{0pt}\colorbox{green}{REFERENCIA}
+  para más  detalles. En este trabajo todos los espacios vectoriales considerados serán dimensionalmente finitos.
+
+\begin{definition}
+  Sea $W$ un subespacio de un espacio vectorial $V$ sobre un campo
+  $F$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
+  llama \textbf{co-conjunto de $W$ que contiene a $v$}. Es frecuente
+  expresar este co-conjunto como $v+W$ en vez de $\{v\}+W$. 
+\end{definition}
+
+Se puede demostrar lo siguiente:
+ 
+$v_{1}+W=v_{2}+W$ si y solo si $v_{1}-v_{2}\in W.$
+
+La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in V\}$ de todos los co-conjuntos de $W$ como: 
+
+$(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para toda $v_{1}$, $v_{2}\in V$ y
+
+$a(v+W)=av+W$ para toda $v\in V$ y $a\in F$.
+
+Se puede demostrar que las operaciones anteriores están bien definidas.
+
+\begin{definition}
+  El conjunto $S$ es un espacio vectorial bajo las operaciones
+  definidas anteriormente y se llama \textbf{espacio cociente de $V$ módulo $W$} y se denota mediante $V/W$. 
+\end{definition}
+
+\begin{theorem}
+  Sea $(V/W)$ el espacio cociente de $V$ módulo $W$, se tiene:
+  $$dim (V/W)=dim(V)-dim(W)$$
+\end{theorem}
+
+\begin{definition}
+  Si $W_{1}$ y $W_{2}$ son dos subconjuntos no vacíos de un espacio
+  vectorial $V$, entonces la \textbf{suma de $W_{1}$ y $W_{2}$}, que se
+  expresa como $W_{1}+W_{2}$, es el conjunto $\{x+y:x\in W_{1}$ y $y\in
+  W_{_2}\}$. La suma de cualquier número finito de subconjuntos no
+  vacíos de $V$, $W_{1},\cdots,W_{n}$, se define análogamente como el
+  conjunto
+  $$W_{1}+\ldots+W_{n}=\{x_{1}+\ldots+x_{n}: x_{i}\in W_{i} \mbox{ para }i=1,2,\ldots,n\}$$
+\end{definition}
+
+\begin{definition}
+  Un espacio vectorial $V$ es la \textbf{suma directa de $W_{1}$ y
+  $W_{2}$}, denotada como $V=W_{1}\oplus W_{2}$, si $W_{1}$ y $W_{2}$
+son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$ 
+\end{definition}
+
+\begin{theorem}
+  Sean $W_{1}$ y $W_{2}$ subespacios de $V$ tales que
+  $V=W_{1}+W_{2}$. Luego, $V=W_{1}\oplus W_{2}$ si y solo si 
+  $$dim(V)=dim(W_{1})+dim(W_{2}).$$
+\end{theorem}
+
+\begin{theorem}
+  Sean $V$ y $W$ espacios vectoriales (sobre el mismo campo
+  $F$). Entonces $V$ es isomorfo a $W$ si y solo si $dim (V)=dim(W).$ 
+\end{theorem}
+
 \chapter{Representaciones de grupos}
 \label{cha:primer-capitulo}
 
