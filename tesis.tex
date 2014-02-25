@@ -197,6 +197,17 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 \end{theorem}
 
 \begin{theorem}
+  \label{clunica}
+  Sea $V$ un espacio vectorial y $\beta=\{x_{1},\dots,x_{n}\}$ un
+  subconjunto de $V$. Luego $\beta$ es una base de $V$ si y solo si
+  cada vector $y\in V$ puede ser expresado de manera única como una
+  combinación lineal de vectores de $\beta$, es decir, puede ser
+  expresado de la forma
+  $$y+a_{1}x_{1}+\ldots,a_{n}x_{n}$$
+  para escalares únicos $a_{1},\ldots,a_{n}.$
+\end{theorem}
+
+\begin{theorem}
   Sean $V$ y $W$ espacios vectoriales (sobre el mismo campo
   $F$). Entonces $V$ es isomorfo a $W$ si y solo si $dim (V)=dim(W).$ 
 \end{theorem}
@@ -526,8 +537,15 @@ nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
    correspondientes cadenas elementales como elementos de la base.
 \end{lemma}
 
-\fbox{\parbox[b]{\linewidth}{\textbf{\underline{\emph{Nota:}}} \\{\setlength{\fboxsep}{0pt}\colorbox{green}{QUEDA PENDIENTE DEMOSTRACIÓN}}}}
-
+\textit{Demostración.} Orientando (arbitrariamente) a cada
+\emph{p}-simplejo de $\Delta$, toda \emph{p}-cadena se puede escribir
+de manera única como una combinación lineal finita
+$$c=\sum n_{i}\sigma_{i},$$
+de las correspondientes cadenas elementales $\sigma_{i}$. La
+cadena $c$ asigna el valor $(n_{i})$ al \emph{p}-simplejo orientado
+$\sigma_{i}$ , el valor $(-n_{i})$ a la orientación opuesta de
+$\sigma_{i}$ y el valor $0$ a todo \emph{p}-simplejo orientado que no
+aparece en la suma, se sigue del teorema $\ref{clunica}$. $\qed$
 
 \begin{corollary}
   Toda función $f$ de los p-simplejos orientados de $\Delta$ en
