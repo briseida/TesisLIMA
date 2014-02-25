@@ -451,7 +451,7 @@ por una permutación par.
 \begin{center}
   \begin{tikzpicture}
     \draw[help lines] (-2,0);% grid (2,3);
-    %\SetGraphUnit{2}
+    \SetGraphUnit{2}
     \GraphInit[vstyle=Classic]
     \tikzset{VertexStyle/.style = {%
         shape= circle,
@@ -499,7 +499,7 @@ conjunto de vértices es finito, la segunda condición no se aplica.
 Sumamos $p$-cadenas sumando sus valores; el $\mathbb{C}$-espacio vectorial resultante es
 denotado por $C_{p}(\Delta)$ y es llamado el \textbf{espacio de
   \emph{p}-cadenas (orientadas)} de $\Delta$. Si $p<0$ o $p>dim \Delta$,
-$C_{p}(\Delta)$ denota al grupo trivial.
+$C_{p}(\Delta)$ denota al espacio trivial.
 
 \begin{definition}
   Si $\sigma$ es un simplejo orientado, la \textbf{cadena elemental} $c$
@@ -531,14 +531,14 @@ nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
 
 \begin{corollary}
   Toda función $f$ de los p-simplejos orientados de $\Delta$ en
-  un espacio vectorial $G$ puede extenderse de manera única a un
-  homomorfismo de $C_{p}(\Delta)\rightarrow G$, tal que $f(-
+  un espacio vectorial $V$ puede extenderse de manera única a una
+  trasformación lineal de $C_{p}(\Delta)\rightarrow V$, tal que $f(-
   \sigma)=-f(\sigma)$ para todo p-simplejo orientado $\sigma$.
 \end{corollary}
 
 \begin{definition}
   Sea $\sigma=[v_{0},\ldots,v_{p}]$ un simplejo orientado con $p>0$,
-  definimos el homomorfismo $\partial_{p}:C_{p}(\Delta)\rightarrow
+  definimos la trasformación lineal $\partial_{p}:C_{p}(\Delta)\rightarrow
   C_{p-1}(\Delta)$ como:
 
   \begin{equation}
@@ -550,8 +550,8 @@ nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
   $\widehat v_{i}$ indica que el vértice $v_{i}$ es borrado del arreglo.
 \end{definition}
 
-Puesto que $C_{p}(\Delta)$ es el grupo trivial para $p<0$, diremos
-que $\partial_{p}$ es el homomorfismo trivial para $p\leq
+Puesto que $C_{p}(\Delta)$ es el espacio trivial para $p<0$, diremos
+que $\partial_{p}$ es la \textit{trasformación cero} para $p\leq
 0$. Mostremos ahora que $\partial_{p}$ está bien definido y que
 $\partial_{p}(-\sigma)=-\partial_{p}(\sigma)$. Para esto es suficiente
 mostrar que la ecuación $(\ref{ofrontera})$ cambia de signo si intercambiamos dos
@@ -616,8 +616,8 @@ C_{n+1}(\Delta)$. Así que
 $$\partial_{n}(b)=\partial_{n}(\partial_{n+1}(c))=0$$
 
 por lo tanto $b\in Z_{n}(\Delta)$.
-Las otras condiciones se siguen de que $\partial_{n+1}$ es un
-homomorfismo:
+Las otras condiciones se siguen de que $\partial_{n+1}$ es una
+transformación lineal:
 
 \begin{enumerate}
   \item Tomemos $0\in C_{n+1}$, así que $\partial_{n+1}(0)=\widehat 0$,
@@ -805,8 +805,10 @@ No. de Elementos  & 1 & 3 & 3 & 6 & 6 & 1 & 6 & 8 & 6 & 8 \\
   $\phi_{1}$ & 1 & 1 & 1 & -1 & -1 & 1 &-1 & 1 &- 1 & 1  \\
 \end{tabular}
 
-% \bibliographystyle{plain}
-% \bibliography{labiblio}
+Vamos a citar \cite{MR0225619}
+
+\bibliographystyle{plain}
+\bibliography{labiblio}
 
 \printindex
 
