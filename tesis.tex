@@ -170,8 +170,9 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 \end{definition}
 
 \begin{theorem}
+  \label{dim-esp-coc}
   Sea $(V/W)$ el espacio cociente de $V$ módulo $W$, se tiene:
-  $$dim (V/W)=dim(V)-dim(W)$$
+  $$\dim(V/W)=\dim(V)-\dim(W)$$
 \end{theorem}
 
 \begin{definition}
@@ -191,9 +192,10 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 \end{definition}
 
 \begin{theorem}
+  \label{esp-isomorfos}
   Sean $W_{1}$ y $W_{2}$ subespacios de $V$ tales que
   $V=W_{1}+W_{2}$. Luego, $V=W_{1}\oplus W_{2}$ si y solo si 
-  $$dim(V)=dim(W_{1})+dim(W_{2}).$$
+  $$\dim(V)=\dim(W_{1})+\dim(W_{2}).$$
 \end{theorem}
 
 \begin{theorem}
@@ -205,6 +207,13 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
   expresado de la forma
   $$y+a_{1}x_{1}+\ldots,a_{n}x_{n}$$
   para escalares únicos $a_{1},\ldots,a_{n}.$
+\end{theorem}
+
+\begin{theorem}
+  \label{imT}
+  Sean $V$ y $W$ espacios vectoriales y sea $T:V \rightarrow W$
+  lineal. Si $V$ tiene una base $\beta=\{v_{1},\ldots,v_{n}\}$,
+  entonces $Im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
 \end{theorem}
 
 \begin{theorem}
@@ -604,8 +613,8 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
 \begin{definition}
    El kernel de $\partial_{p}:C_{p}(\Delta)\rightarrow
    C_{p-1}(\Delta)$ es llamado el espacio de
-   \textbf{\emph{p}-ciclos} y denotado por $Z_{p}(\Delta)$. La imagen de
-   $\partial_{p+1}:C_{p+1}(\Delta)\rightarrow C_{p}(\Delta)$ es
+   \textbf{\emph{p}-ciclos} y denotado por $Z_{p}(\Delta)$. La imagen
+   de $\partial_{p+1}:C_{p+1}(\Delta)\rightarrow C_{p}(\Delta)$ es
    llamado el espacio de \textbf{\emph{p}-fronteras} y es denotado por $B_{p}(\Delta)$.
 \end{definition}
 
@@ -655,6 +664,126 @@ transformación lineal:
    $$H_{p}(\Delta)=Z_{p}(\Delta)/B_{p}(\Delta)$$
    al cual llamamos la \textbf{\emph{p}-ésima homología de $\Delta$}
 \end{definition}
+
+\begin{example}
+  Calculemos para $n=0, 1, 2$ los espacios $Z_{n}(\Delta)$,
+  $B_{n}(\Delta)$ y $H_{n}$ para la superficie $\Delta$ del tetraedro.
+
+  Como $C_{-1}(\Delta)=0$ por definición, se sigue que
+  $$\boldsymbol{Z_{0}(\Delta)}=C_{0}(\Delta)$$
+  Por otro lado, $C_{1}(\Delta)=\langle v_{0}v_{1},v_{0}v_{2},v_{0}v_{3},v_{1}v_{2},v_{1}v_{3},v_{2}v_{3}\rangle$,
+  así que por el teorema $\ref{imT}$ tenemos 
+  \begin{align*}
+    \boldsymbol{B_{0}(\Delta)}=&\partial_{1}[C_{1}(\Delta)]\\
+    &=\langle \partial_{1}(v_{0}v_{1}),\partial_{1}(v_{0}v_{2}),\partial_{1}(v_{0}v_{3}),\partial_{1}(v_{1}v_{2}),\partial_{1}(v_{1}v_{3}),\partial_{1}(v_{2}v_{3})\rangle\\
+    &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0},v_{2}-v_{1},v_{3}-v_{1},v_{3}-v_{2}\rangle\\
+    &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0}\rangle
+  \end{align*}
+  Así que $\dim(B_{0}(\Delta))=3$, además $C_{0}(\Delta)=\langle
+  v_{0},v_{1},v_{2},v_{3}\rangle$, por lo que la
+  $\dim(Z_{0}(\Delta))=\dim(C_{0}(\Delta))=4$, luego de el teorema
+  $\ref{dim-esp-coc}$ tenemos que
+  $\dim(Z_{0}(\Delta)/B_{0}(\Delta))=1$, así mismo la
+  $\dim(\mathbb{C})=1$, por el resultado $\ref{esp-isomorfos}$ se sigue
+  que $Z_{0}(\Delta)/B_{0}(\Delta)\cong \mathbb{C}$
+
+  Por lo tanto:
+  $$\boldsymbol{H_{0}(\Delta)}=Z_{0}(\Delta)/B_{0}(\Delta)\cong \mathbb{C}$$
+  Un razonamiento similar se sigue para calcular las homologías restantes.
+  Ahora calculemos $B_{1}(\Delta)$. Sabemos que:
+  $$C_{2}(\Delta)=\langle
+  v_{0}v_{1}v_{2},v_{0}v_{2}v_{3},v_{0}v_{1}v_{3},v_{1}v_{2}v_{3}\rangle$$
+  Nuevamente por el teorema $\ref{imT}$ tenemos:
+  \begin{align}  
+    \label{generadores-B1}
+    &\boldsymbol{B_{1}(\Delta)}=\partial_{2}[C_{2}(\Delta)]=\langle\partial_{2}(v_{0}v_{1}v_{2}),\partial_{2}(v_{0}v_{2}v_{3}),\partial_{2}(v_{0}v_{1}v_{3}),\partial_{2}
+    (v_{1}v_{2}v_{3})\rangle \nonumber\\
+    &=\langle v_{1}v_{2}-v_{0}v_{2}+v_{0}v_{1},v_{2}v_{3}-v_{0}v_{3}+v_{0}v_{2},\nonumber\\
+    &\phantom{{}=v_{1}v_{2}-v_{0}v_{2}+v_{0}v_{1},v_{2}v_{3}}v_{1}v_{3}-v_{0}v_{3}+v_{0}v_{1},v_{2}v_{3}-v_{1}v_{3}+v_{1}v_{2}\rangle\nonumber\\
+    &=\langle v_{1}v_{2}-v_{0}v_{2}+v_{0}v_{1},v_{2}v_{3}-v_{0}v_{3}+v_{0}v_{2},v_{1}v_{3}-v_{0}v_{3}+v_{0}v_{1}\rangle
+  \end{align} 
+ 
+  A continuación veremos que el conjunto generador de $Z_{1}(\Delta)$
+  es el mismo que $B_{1}(\Delta)$. Sea $c\in C_{1}(\Delta)$, es decir,
+ $$c=n_{1}v_{0}v_{1}+n_{2}v_{0}v_{2}+n_{3}v_{0}v_{3}+n_{4}v_{1}v_{2}+n_{5}v_{1}v_{3}+n_{6}v_{2}v_{3}$$
+ tal que:
+ \begin{align*}
+   \partial_{1}(c)&=n_{1}(v_{1}-v_{0})+n_{2}(v_{2}-v_{0})+n_{3}(v_{3}-v_{0})\\
+   &\phantom{{}=n_{1}}+n_{4}(v_{2}-v_{1})+n_{5}(v_{3}-v_{1})+n_{6}(v_{3}-v_{2})\\
+   % \nonumber \\
+   &=(-n_{1}-n_{2}-n_{3})v_{0}+(n_{1}-n_{4}-n_{5})v_{1}\\
+   &\phantom{{}=-n_{1}}+(n_{2}+n_{4}-n_{6})v_{2}+(n_{3}+n_{5}+n_{6})v_{3}\\
+   &=0
+ \end{align*}
+ Así que tenemos que resolver el siguiente sistema de ecuaciones:
+ \[\begin{array}{rrrrr}
+   -n_{1} & -n_{2} & -n_{3} & = & 0 \\
+   n_{1} & -n_{4} & -n_{5} & = & 0 \\
+   n_{2} & +n_{4} & -n_{6} & = & 0 \\
+   n_{3} & +n_{5} & +n_{6} & = & 0 
+ \end{array}\]
+ Lo representamos en forma matricial.
+ \[ \left(
+   \begin{array}{rrrrrr}
+  % n_{1} & n_{2} & n_{3} & n_{4} & n_{5} & n_{6} \\
+     -1  & -1    & -1   & 0    & 0     & 0 \\
+     1   & 0     &    0 & -1   & -1    & 0 \\
+     0   & 1     &    0 & 1   & 0    & -1 \\
+     0   & 0     &    1 & 0   & 1    & 1 
+   \end{array} 
+ \right)\]
+ y lo llevamos a su forma escalonada reducida
+ \[ \left(
+   \begin{array}{rrrrrr}
+     % n_{1} & n_{2} & n_{3} & n_{4} & n_{5} & n_{6} \\
+     1     &    0  & 0     & -1    & -1    & 0 \\
+     0     &    1  & 0     &  1    & 0     & -1 \\
+     0     &    0  & 1     & 0     & 1     & 1 \\
+     0     &    0  & 0     & 0     & 0     & 0 
+   \end{array} 
+ \right)\]
+ De lo cual concluimos:
+ \[\begin{array}{rrrrr}
+   % n_{1}& = & n_{4} & n_{5} & n_{6} \\  
+   n_{1} & = & n_{4} & +n_{5} & \\
+   n_{2} & = & -n_{4} &      &+n_{6} \\
+   n_{3} & = &        &-n_{5}&-n_{6} 
+ \end{array}\]
+ Entonces podemos escribir a $c\in Z_{1}(\Delta)$ como:
+ \begin{align}
+   \label{generadores-Z1}
+   c&=(n_{4}+n_{5})v_{0}v_{1}+(-n_{4}+n_{6})v_{0}v_{2}+(-n_{5}-n_{6})v_{0}v_{3}\nonumber\\
+   &\phantom{{}=n_{4}}+n_{4}v_{1}v_{2}+n_{5}v_{1}v_{3}+n_{6}v_{2}v_{3}\nonumber\\
+   &=n_{4}(v_{0}v_{1}-v_{0}v_{2}+v_{1}v_{2})+n_{5}(v_{0}v_{1}-v_{0}v_{3}+v_{1}v_{3})\nonumber\\
+   &\phantom{{}=n_{4}}+n_{6}(v_{0}v_{2}-v_{0}v_{3}+v_{2}v_{3})
+ \end{align}
+ Por lo que de la ecuación anterior $\ref{generadores-Z1}$ tenemos:
+ $$\boldsymbol{Z_{1}(\Delta)}=\langle v_{0}v_{1}-v_{0}v_{2}+v_{1}v_{2},v_{0}v_{1}-v_{0}v_{3}+v_{1}v_{3},v_{0}v_{2}-v_{0}v_{3}+v_{2}v_{3}\rangle$$
+ Notemos de las ecuaciones $\ref{generadores-B1}$ y
+ $\ref{generadores-Z1}$ que  $Z_{1}(\Delta)$ y $B_{1}(\Delta)$ tienen
+ el mismo conjunto generador, por lo tanto
+ $Z_{1}(\Delta)=B_{1}(\Delta)$, en consecuencia,
+ $$\boldsymbol{H_{1}(\Delta)}=Z_{1}(\Delta)/B_{1}(\Delta)=0$$
+ Los simplejos de dimensión más alta son los \emph{2-simplejos}, así
+ que $C_{3}(\Delta)=0$ por lo que 
+ $$\boldsymbol{B_{2}(\Delta)}=\partial_{3}[C_{3}(\Delta)]=0$$ 
+ Por determinar $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir 
+ $$c=n_{1}v_{0}v_{1}v_{2}+n_{2}v_{0}v_{2}v_{3}+n_{3}v_{0}v_{1}v_{3}+n_{4}v_{1}v_{2}v_{3}$$
+ tal que
+ \begin{align*}
+   \partial_{2}(c)&=n_{1}(v_{1}v_{2}-v_{0}v_{2}+v_{0}v_{1})+n_{2}(v_{2}v_{3}-v_{0}v_{3}+v_{0}v_{2})\\
+   &+n_{3}(v_{1}v_{3}-v_{0}v_{3}+v_{0}v_{1})+n_{4}(v_{2}v_{3}-v_{1}v_{3}+v_{1}v_{2})\\
+   &=(n_{1}+n_{3})v_{0}v_{1}+(-n_{1}+n_{2})v_{0}v_{2}+(-n_{2}-n_{3})v_{0}v_{3}\\
+   & +(n_{1}+n_{4})v_{1}v_{2}+(n_{3}-n_{4})v_{1}v_{3}+(n_{2}+n_{4})v_{2}v_{3}\\
+   &=0
+ \end{align*}
+ entonces $n_{1}=n_{2}=-n_{3}=-n_{4}$, así que podemos escribir a $c$
+ de la siguiente forma: 
+ $$c=n_{1}(v_{0}v_{1}v_{2}+v_{0}v_{2}v_{3}-v_{0}v_{1}v_{3}-v_{1}v_{2}v_{3})$$
+ de donde vemos que
+ $$Z_{2}(\Delta)=\langle v_{0}v_{1}v_{2}+v_{0}v_{2}v_{3}-v_{0}v_{1}v_{3}-v_{1}v_{2}v_{3}\rangle$$
+ es decir, $\boldsymbol{Z_{2}(\Delta)}\cong \mathbb{C}$. Luego  $\boldsymbol{H_{2}}(\Delta)=Z_{2}(\Delta)/B_{2}(\Delta)\cong\mathbb{C}$.
+\end{example}
 
 \section{Complejo de emparejamiento}
 
