@@ -1,0 +1,92 @@
+\documentclass[final,xcolor=svgnames]{beamer}
+\usetheme{RJH}
+\usepackage[orientation=portrait,size=a2,scale=1.4,debug]{beamerposter}
+%\usepackage[orientation=portrait,size=custom,width=30,height=50,scale=1,debug]{beamerposter}
+\usepackage[absolute,overlay]{textpos}
+\setlength{\TPHorizModule}{1cm}
+\setlength{\TPVertModule}{1cm}
+
+\usepackage[T1]{fontenc}
+
+\usefonttheme{professionalfonts}
+\useinnertheme[shadow]{rounded}
+\usecolortheme{orchid}
+
+\usepackage{arev}
+\usepackage{tikz}
+\usepackage{tkz-graph}
+\usepackage{tkz-berge}
+%\usepackage{tkz-berge-add}
+
+\usepackage[spanish,mexico,es-nolayout]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amscd}
+
+
+\title{%\fontfamily{ptm}\fontseries{b}\fontsize{78}{80}\selectfont
+  Representaciones en homologías}
+\author{%\fontfamily{ppl}\fontseries{b}\fontsize{68}{70}\selectfont
+  Briseida Trejo Escamilla}
+\footer{\texttt{btbrisi@hotmail.com}}
+\date{}
+
+\begin{document}
+\begin{frame}{}
+  \begin{block}{Resumen}
+    \renewcommand{\VertexLineWidth}{3pt}
+    \renewcommand{\EdgeLineWidth}{3pt}
+    \centering
+    \begin{minipage}{0.15\linewidth}
+      \begin{tikzpicture}[rotate=90]
+        \GraphInit[vstyle=Hasse]
+        \grPetersen[RA=2,RB=1]
+      \end{tikzpicture}
+    \end{minipage}
+    \begin{minipage}{0.6\linewidth}
+      \centering
+      %\fontfamily{ptm}\fontseries{b}\fontsize{48}{50}\selectfont
+
+      Aquí puede ir un resumen
+
+    \end{minipage}
+    \begin{minipage}{0.15\linewidth}
+      \begin{tikzpicture}[rotate=90]
+        \GraphInit[vstyle=Hasse]
+        \grPrism[RA=2,RB=1]{5}
+      \end{tikzpicture}
+    \end{minipage}
+  \end{block}
+
+  \vfill
+  
+  \begin{columns}
+    \begin{column}{0.5\textwidth}
+      \centering
+      \begin{block}{Representaciones}
+        blah blah
+      \end{block}
+    \end{column}
+    \begin{column}{0.5\textwidth}
+      \begin{block}{Título}
+        blah
+      \end{block}
+    \end{column}
+  \end{columns}
+
+  \vfill
+
+  \begin{block}{Blah blah}
+    \begin{tiny}
+    \[
+    \begin{CD}
+      C_{2}(M_{6}) @>{\partial_{2}}>> C_{1}(M_{6}) @>{\partial_{1}}>> C_{0}(M_{6}) @>{\varepsilon}>> \mathbb{C}\\
+      @VVV   @VVV   @VVV   @VVV    \\
+      S^{(4,1,1)}\oplus S^{(3,3)} @>{\widehat\partial_{2}}>>
+      S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>> 
+      \mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
+    \end{CD}
+    \]
+    \end{tiny}
+  \end{block}
+\end{frame}
+\end{document}
