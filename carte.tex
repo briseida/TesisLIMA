@@ -1,0 +1,190 @@
+
+\documentclass[12pt]{book}
+
+\usepackage[dvipsnames]{xcolor}
+\usepackage{amssymb,latexsym}
+\usepackage{graphicx}
+
+\usepackage[spanish,mexico,es-nolayout]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amscd}
+%\usepackage{amssymb}
+\usepackage{amsthm}
+%\usepackage{graphicx}
+\usepackage{color}
+\usepackage{tikz}
+\usepackage{tkz-berge}
+\usepackage{makeidx}
+\usepackage{url}
+\usepackage{xspace}
+\usepackage{tocbibind}
+\usepackage{rotating}
+\usepackage{young}
+% ver http://gilmation.com/articles/latex-margins-for-book-binding/
+% y http://tex.stackexchange.com/questions/50258/margins-of-book-class
+\usepackage[margin=3.5cm]{geometry}
+\geometry{bindingoffset=1cm}
+
+\usepackage{babelbib}
+
+\usetikzlibrary{positioning,shapes,fit,arrows,decorations.pathmorphing}
+\definecolor{myblue}{RGB}{56,94,141}
+
+
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}[theorem]{Corolario}
+\newtheorem{proposition}[theorem]{Proposición}
+
+\theoremstyle{definition}
+
+\newtheorem{definition}[theorem]{Definición}
+\newtheorem{notation}[theorem]{Notación}
+\newtheorem{example}[theorem]{Ejemplo}
+\newtheorem{lemma}[theorem]{Lema}
+
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\sgn}{sgn}
+
+\newcounter{in}
+\newcounter{ini}
+
+\makeindex
+
+\newcommand{\elespacio}{1.4cm}
+
+\begin{document}
+\chapter{Cartel}
+%\label{cha:repaso-algebra-line}
+
+\begin{small}
+%\begin{sideways}        
+ \[
+  \begin{CD}
+    C_{2}(M_{6}) @>{\partial_{2}}>> C_{1}(M_{6}) @>{\partial_{1}}>> C_{0}(M_{6}) @>{\varepsilon}>> \mathbb{C}\\
+    @VVV   @VVV   @VVV   @VVV    \\
+    S^{(4,1,1)}\oplus S^{(3,3)} @>{\widehat\partial_{2}}>>
+    S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>> 
+    \mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
+  \end{CD}
+  \]
+%\end{sideways} 
+\end{small}
+
+$\widetilde H_{0}(M_{6})=\ker\widehat\varepsilon/\im\widehat\partial_{1}=0$ pues
+$M_{6}$ es conexo entonces
+$\ker\widehat\varepsilon=\im\widehat\partial_{1}$
+
+$\mathbb{C}$ no pertenece a $\im\widehat\partial_{1}$
+$\ker\widehat\varepsilon$ es $\mathbb{C} \oplus S^{(5,1)}\oplus
+S^{(4,2)}$ ó $S^{(5,1)}\oplus S^{(4,2)}$, por lo tanto
+\begin{align*}
+  %\label{eq:2}
+   \im\widehat\partial_{1}&=S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}/\ker\widehat\partial_{1}\\
+   &=S^{(5,1)}\oplus S^{(4,2)}
+\end{align*}
+entonces 
+$$\boldsymbol{\ker\widehat\partial_{1}}=S^{(4,1,1)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}$$
+
+$0=\widetilde H_{2}(M_{6})=\ker\widehat\partial_{2}/\im\widehat\partial_{3}$
+asi que $\im\widehat\partial_{3}=0$ pues $C_{3}(M_{6})=0$
+por lo tanto $\ker\widehat\partial_{2}=0$\\
+
+por lo tanto 
+\begin{align*}
+  %\label{eq:3}
+  \boldsymbol{\im\widehat\partial_{2}}&=S^{(4,1,1)}\oplus
+  S^{(3,3)}/\ker\widehat\partial_{2}\\
+  %&=S^{(4,1,1)}\oplus S^{(3,3)}/0\\
+  &=S^{(4,1,1)}\oplus S^{(3,3)}
+\end{align*}
+Así que 
+\begin{align}
+  \label{eq:4}
+  \widetilde
+  H_{1}(M_{6})&=\ker\widehat\partial_{1}/\im\widehat\partial_{2}\\
+  &=S^{(4,1,1)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}/ S^{(4,1,1)}\oplus S^{(3,3)}\\
+  &=S^{(3,2,1)}
+\end{align}
+
+
+\[
+\begin{CD}
+  F@>{h}>>G\\
+@A{i} AA  @A{j}AA\\
+X @>>{g}>Y
+\end{CD}
+\]
+
+%\begin{sideways}                               
+  \[
+  \begin{CD}
+    C_{2}(K(M_{6})) @>{\partial_{2}}>> C_{1}(K(M_{6})) @>{\partial_{1}}>> C_{0}(K(M_{6})) @>{\varepsilon}>> \mathbb{C}\\
+    @VVV   @VVV   @VVV   @VVV    \\
+    S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)} @>{\widehat\partial_{2}}>>
+    S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus S^{(2,2,2)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>> 
+    \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
+  \end{CD}
+  \]
+%\end{sideways}  
+  
+  $\widetilde H_{0}(K(M_{6}))=\ker\widehat\varepsilon/\im\widehat\partial_{1}=0$, pues
+  $K(M_{6})$ es conexo, así que
+  $\ker\widehat\varepsilon\cong\im\widehat\partial_{1}$
+
+  $\ker\widehat\varepsilon$ puede ser $S^{(4,2)}\oplus S^{(2,2,2)}$ o $
+  \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)}$ y $\mathbb{C}$ no
+  pertenece a $\im\widehat\partial_{1}$
+  
+  \begin{align*}
+    %\label{eq:1}
+      \im\widehat\partial_{1}&=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus S^{(2,2,2)}\oplus S^{(3,2,1)}/\ker\widehat\partial_{1}\\
+      &=S^{(4,2)}\oplus S^{(2,2,2)}
+  \end{align*}
+ lo que $\Rightarrow$
+ $$\boldsymbol{\ker\widehat\partial_{1}}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}$$
+
+ $0=\widetilde H_{2}(K(M_{6}))=\ker\widehat\partial_{2}/\im\widehat\partial_{3}$
+
+ $\im\widehat\partial_{3}=0$ pues $C_{3}(K(M_{6}))=0$ lo cual
+ $\Rightarrow$ $\ker\widehat\partial_{2}=0$
+ \begin{align*}
+   %\label{eq:5}
+   \boldsymbol{\im\widehat\partial_{2}}&=S^{(2,1,1,1,1)}\oplus
+   S^{(3,1,1,1)}/\ker\widehat\partial_{2}\\
+   %&=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}/0\\
+   &=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
+ \end{align*}
+
+ Así que
+ \begin{align*}
+    \widetilde H_{1}(K(M_{6}))&=\ker\widehat\partial_{1}/\im\widehat\partial_{2}\\
+    &=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}/S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\\
+    &=S^{(3,2,1)}
+\end{align*}
+
+\begin{theorem}{(Fórmula Hook-length).} 
+  Sea $\lambda\vdash n$ sea un diagrama de Young. Entonces
+  $$\dim S^{\lambda}=\frac{n!}{\prod_{u\in \lambda}h_{\lambda}(u)}.$$
+\end{theorem}
+ 
+\begin{theorem}(Bouc)
+  Para todo $n\geq1$ y $k\in \mathbb{Z}$,
+  \begin{equation*}
+    %\label{eq:6}
+    \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\lambda:\lambda\vdash n\\
+      \lambda=\lambda^{'}\\r(\lambda)=\mid \lambda \mid-2k} S^{\lambda}.
+  \end{equation*}
+  sobre los $\lambda$'s diagramas de Young estándar para $\lambda^{'}$
+  el auto-conjugado de $\lambda$ y rango $n-2k$ (el cual puede ser
+  obtenido de la fórmula de Hook-length).
+\end{theorem}
+
+
+
+% \bibliographystyle{plain}
+
+% \bibliography{labiblio}
+
+\printindex
+
+\end{document}
