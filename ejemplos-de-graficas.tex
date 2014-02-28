@@ -18,9 +18,25 @@ Este es un ejemplo:
 \begin{center}
   \begin{tikzpicture}
     \GraphInit[vstyle=Shade]
-    %\GraphInit[vstyle=Art]
-    %\SetVertexNoLabel
+    \GraphInit[vstyle=Art]
+    \SetVertexNoLabel
     \grPetersen[Math,rotation=90,RA=5,RB=3]
+  \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \GraphInit[vstyle=Classic]
+    \tikzset{VertexStyle/.style = {%
+        shape= circle,
+        shading= ball,
+        ball color= green!40!black,%
+        minimum size = 2pt,draw}}
+    \Vertex[x=0,y=0]{A}
+    \Vertex[x=2,y=2]{B}
+    \Edge[style={->}](A)(B)
+    \Edge(A)(B)
+    %\Vertex{A}\EA[unit=10]
   \end{tikzpicture}
 \end{center}
 
