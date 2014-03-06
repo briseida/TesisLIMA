@@ -18,6 +18,25 @@
   \end{tikzpicture}
 \end{center}
 
+\begin{tikzpicture}%[rotate=90,scale=1]
+  \newcommand{\aset}[2]{$\{#1,#2\}$}
+  \GraphInit[vstyle=Classic]
+  %\tikzset{VertexStyle/.style={draw,circle}}
+  \SetVertexNoLabel
+  \SetVertexMath
+  \SetUpVertex[MinSize=30pt]
+  \grEmptyCycle[RA=1,rotation=-90]{5}
+  \grEmptyCycle[RA=3,prefix=w,rotation=-90]{5}
+  \grCycle[RA=5,prefix=z,rotation=90]{5}
+  \EdgeInGraphMod{a}{5}{2}
+  \EdgeMod{a}{w}{5}{1}
+  \EdgeMod{a}{w}{5}{-1}
+  \EdgeMod{w}{z}{5}{2}
+  \EdgeMod{w}{z}{5}{-2}   
+  \AssignVertexLabel{z}{\textsl{$(\overline{12},\overline{34})$},\textsl{$(\overline{12},\overline{45})$},\textsl{$(\overline{13},\overline{45})$},\textsl{$(\overline{13},\overline{25})$},\textsl{$(\overline{25},\overline{34})$}}
+  \AssignVertexLabel{w}{\textsl{$(\overline{13},\overline{24})$},\textsl{$(\overline{14},\overline{25})$},\textsl{$(\overline{15},\overline{34})$},\textsl{$(\overline{12},\overline{35})$},\textsl{$(\overline{23},\overline{45})$}}
+  \AssignVertexLabel{a}{\textsl{$(\overline{14},\overline{23})$},\textsl{$(\overline{15},\overline{24})$},\textsl{$(\overline{14},\overline{35})$},\textsl{$(\overline{15},\overline{23})$},\textsl{$(\overline{24},\overline{35})$}}
+\end{tikzpicture}
 %\begin{center}
  % \begin{tikzpicture}
   %  \grEmptyCycle[RA=2,prefix=v,rotation=180,Math]{3} 
