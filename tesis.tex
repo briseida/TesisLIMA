@@ -420,7 +420,10 @@ cada subconjunto no vacío de $A$ pertenece a $\Delta$.
 El elemento $A$ de $\Delta$ es llamado \textbf{simplejo} de
 $\Delta$; Si $A$ tiene $p+1$ elementos, decimos que $A$ es un
 \emph{p-simplejo} y su dimensión es $p$. La dimensión de $\Delta$
-es el máximo de las dimensiones de los simplejos de $\Delta$.
+es el máximo de las dimensiones de los simplejos de $\Delta$. El
+conjunto \textbf{vértices} $V$ de $\Delta$ es la unión de los
+elementos de un punto de $\Delta$; no hacemos distinción entre los
+vértices $v\in V$ y los $0$-simplejos $\{v\}\in \Delta$. 
 
 Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
 \textbf{0-simplejo orientado} es un punto $v$. Un \textbf{1-simplejo
@@ -456,47 +459,25 @@ por una permutación par.
 
 \begin{center}
   \begin{tikzpicture}
-    \GraphInit[vstyle=Classic]
-    \tikzset{VertexStyle/.style = {%
-        shape= circle,
-        shading= ball,
-        ball color= green!40!black,
-        minimum size = 0.1pt,draw}}
+    \GraphInit[vstyle=Classic][scale=.2]
     \Vertex[x=0,y=0,Math]{v_{0}}
-    \Vertex[x=2,y=2,Math]{v_{1}}
+    \Vertex[x=1.5,y=1.5,Math]{v_{1}}
     \Edge[style={->}](v_{0})(v_{1})
-  \end{tikzpicture}
-\end{center}
-
-\begin{center}
-  \begin{tikzpicture}
+  \end{tikzpicture}\quad
+  \begin{tikzpicture}[scale=.6]
     \draw[help lines] (-2,0);% grid (2,3);
     \SetGraphUnit{2}
     \GraphInit[vstyle=Classic]
-    \tikzset{VertexStyle/.style = {%
-        shape= circle,
-        shading= ball,
-        ball color= green!40!black,%
-        minimum size = 2pt,draw}}
     \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180,]{v_{0}}
     \Vertex[x=2,y=0,Math]{v_{1}}
     \Vertex[x=0,y=2.5,Math]{v_{2}}
     \Edge[style={->}](v_{0})(v_{1})
     \Edge[style={->}](v_{1})(v_{2})
     \Edge[style={->}](v_{2})(v_{0})
- \end{tikzpicture}
-\end{center}
-
-\begin{center}
-\begin{tikzpicture}[scale=.6]
+ \end{tikzpicture}\qquad
+\begin{tikzpicture}[scale=.25]
   \SetVertexNoLabel
   \GraphInit[vstyle=Classic]
-    \tikzset{VertexStyle/.style = {%
-        shape= circle,
-        shading= ball,
-        ball color= green!40!black,%
-        minimum size = 2pt,draw}}
-  %\SetGraphShadeColor{red!50}{black}{red}
   \grTetrahedral[RA=4]
 \end{tikzpicture}
 \end{center}
@@ -564,14 +545,14 @@ aparece en la suma, se sigue del teorema $\ref{clunica}$. $\qed$
 \end{corollary}
 
 \begin{definition}
-  Sea $\sigma=[v_{0},\ldots,v_{p}]$ un simplejo orientado con $p>0$,
+  Sea $\sigma=v_{0}\ldots v_{p}$ un simplejo orientado con $p>0$,
   definimos la trasformación lineal $\partial_{p}:C_{p}(\Delta)\rightarrow
   C_{p-1}(\Delta)$ como:
 
   \begin{equation}
     \label{ofrontera}
-    \partial_{p}(\sigma)=\partial_{p}[v_{0},\ldots,v_{p}]=\sum^{p}_{i=0}(-1)^{i}[v_{0},\ldots,\widehat
-    v_{i},\ldots,v_{p}],
+    \partial_{p}(\sigma)=\partial_{p}(v_{0}\ldots
+    v_{p})=\sum^{p}_{i=0}(-1)^{i}(v_{0}\ldots \widehat v_{i}\ldots v_{p}),
   \end{equation}
   al que llamamos el \textbf{\emph{p}-ésimo operador frontera}, donde
   $\widehat v_{i}$ indica que el vértice $v_{i}$ es borrado del arreglo.
@@ -582,29 +563,27 @@ que $\partial_{p}$ es la \textit{trasformación cero} para $p\leq
 0$. Mostremos ahora que $\partial_{p}$ está bien definido y que
 $\partial_{p}(-\sigma)=-\partial_{p}(\sigma)$. Para esto es suficiente
 mostrar que la ecuación $(\ref{ofrontera})$ cambia de signo si intercambiamos dos
-vértices adyacentes en el orden $[v_{0},\ldots,v_{p}]$, entonces,
+vértices adyacentes en el orden $v_{0}\ldots v_{p}$, entonces,
 debemos comparar las expresiones:
-$$\partial_{p}[v_{0},\ldots,v_{j},v_{j+1},\ldots,v_{p}] \mbox{ y } \partial_{p}[v_{0},\ldots,v_{j+1},v_{j},\ldots,v_{p}].$$
+$$\partial_{p}(v_{0}\ldots v_{j} v_{j+1} \ldots v_{p}) \mbox{ y } \partial_{p}(v_{0}\ldots v_{j+1} v_{j} \ldots v_{p}).$$
 
 Para $i\neq j$, $j+1$, el $i$-ésimo término de estas dos expresiones
 difieren precisamente por un signo; los términos son idénticos,
 excepto que $v_{j}$ y $v_{j+1}$ aparecen intercambiados. Veamos que
 sucede sobre el i-ésimo término cuando $i=j$ y $i=j+1$. En la primera
 expresión tenemos que:
-$$(-1)^{j}[\ldots,v_{j-1},\widehat v_{j},v_{j+1},v_{j+2},\ldots]+(-1)^{j+1}[\ldots,v_{j-1},v_{j},\widehat
-v_{j+1},v_{j+2},\ldots].$$
+$$(-1)^{j}(\ldots v_{j-1} \widehat v_{j}v_{j+1}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j}\widehat v_{j+1}v_{j+2}\ldots).$$
 en la segunda expresión tenemos:
-$$(-1)^{j}[\ldots,v_{j-1},\widehat v_{j+1},v_{j},v_{j+2},\ldots]+(-1)^{j+1}[\ldots,v_{j-1},v_{j+1},\widehat
-v_{j},v_{j+2},\ldots].$$
+$$(-1)^{j}(\ldots v_{j-1}\widehat v_{j+1}v_{j}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j+1}\widehat v_{j}v_{j+2}\ldots).$$
 Comparando estas dos expresiones observamos que solo difieren por un signo.
 
 \begin{example}
   De acuerdo a lo anterior, tenemos que
   \begin{enumerate}
-  \item para un \emph{1-simplejo}: $\partial_{1}[v_{0},v_{1}]= v_{1}-v_{0}$,
-  \item para un \emph{2-simplejo}: $\partial_{2}[v_{0},v_{1},v_{2}]=[v_{1},v_{2}]-[v_{0},v_{2}]+[v_{0},v_{1}]$,
+  \item para un \emph{1-simplejo}: $\partial_{1}(v_{0}v_{1})= v_{1}-v_{0}$,
+  \item para un \emph{2-simplejo}: $\partial_{2}(v_{0}v_{1}v_{2})=v_{1}v_{2}-v_{0}v_{2}+v_{0}v_{1}$,
   \item para un \emph{3-simplejo}:
-    $\partial_{3}[v_{0},v_{1},v_{2},v_{3}]=[v_{1},v_{2},v_{3}]-[v_{0},v_{2},v_{3}]+[v_{0},v_{1},v_{3}]-[v_{0},v_{1},v_{2}]$. 
+    $\partial_{3}(v_{0}v_{1}v_{2}v_{3})=v_{1}v_{2}v_{3}-v_{0}v_{2}v_{3}+v_{0}v_{1}v_{3}-v_{0}v_{1}v_{2}$. 
   \end{enumerate}
 \end{example}
 
@@ -624,10 +603,10 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
 
 \textit{Demostración.} Calculamos 
 \begin{align*}
-  \partial_{p-1}\partial_{p}[v_{0},\ldots,v_{p}]&=\sum_{i=0}^{p}(-1)^{i}\partial_{p-1}[v_{0},\ldots,\widehat
-  v_{i},\ldots,v_{p}]\\
-  &=\sum_{j<i}(-1)^{i}(-1)^{j}[\ldots,\widehat v_{j},\ldots,\widehat v_{i},\ldots]\\
-  &+\sum_{j>i}(-1)^{i}(-1)^{j-1}[\ldots,\widehat v_{i},\ldots,\widehat v_{j},\ldots].
+  \partial_{p-1}\partial_{p}(v_{0}\ldots
+  v_{p})&=\sum_{i=0}^{p}(-1)^{i}\partial_{p-1}(v_{0}\ldots \widehat v_{i}\ldots v_{p})\\
+  &=\sum_{j<i}(-1)^{i}(-1)^{j}(\ldots \widehat v_{j} \ldots \widehat v_{i} \ldots)\\
+  &+\sum_{j>i}(-1)^{i}(-1)^{j-1}(\ldots\widehat v_{i}\ldots \widehat v_{j}\ldots).
 \end{align*}
 
 Los términos de estas dos sumas se cancelan a pares. $\qed$
@@ -644,21 +623,19 @@ $$\partial_{n}(b)=\partial_{n}(\partial_{n+1}(c))=0$$
 
 por lo tanto $b\in Z_{n}(\Delta)$.
 Las otras condiciones se siguen de que $\partial_{n+1}$ es una
-transformación lineal:
-
-\begin{enumerate}
-  \item Tomemos $0\in C_{n+1}$, así que $\partial_{n+1}(0)=\widehat 0$,
-    por lo tanto $\widehat 0\in B_{n}(\Delta)$
-  \item Sean $b_{1}\in B_{n}(\Delta)$ y $b_{2}\in B_{n}(\Delta)$,
-    donde $b_{1}=\partial_{n+1}(c_{1})$ y $b_{2}=\partial_{n+1}(c_{2})$ para
-    algún $c_{1},c_{2}\in C_{n+1}(\Delta)$, así que $b_{1}+b_{2}\in B_{n}$
-    pues $b_{1}+b_{2}=\partial_{n+1}(c_{1})+\partial_{n+1}(c_{2})=\partial_{n+1}(c_{1}+c_{2})$
-    ya que $c_{1}+c_{2}\in C_{n+1}(\Delta)$.
-  \item Por último sea $a\in \mathbb{C}$, y $b\in B_{n}(\Delta)$ con
-    $b=\partial_{n+1}(c)$ para algún $c\in C_{n+1}(\Delta)$, notemos
-    que $ac\in C_{n+1}(\Delta)$, así que $ab\in B_{n}(\Delta)$ pues $ab=a\partial_{n+1}(c)=\partial_{n+1}(ac)$.
-\end{enumerate}
- 
+transformación lineal. $\qed$
+% \begin{enumerate}
+%   \item Tomemos $0\in C_{n+1}$, así que $\partial_{n+1}(0)=\widehat 0$,
+%     por lo tanto $\widehat 0\in B_{n}(\Delta)$
+%   \item Sean $b_{1}\in B_{n}(\Delta)$ y $b_{2}\in B_{n}(\Delta)$,
+%     donde $b_{1}=\partial_{n+1}(c_{1})$ y $b_{2}=\partial_{n+1}(c_{2})$ para
+%     algún $c_{1},c_{2}\in C_{n+1}(\Delta)$, así que $b_{1}+b_{2}\in B_{n}$
+%     pues $b_{1}+b_{2}=\partial_{n+1}(c_{1})+\partial_{n+1}(c_{2})=\partial_{n+1}(c_{1}+c_{2})$
+%     ya que $c_{1}+c_{2}\in C_{n+1}(\Delta)$.
+%   \item Por último sea $a\in \mathbb{C}$, y $b\in B_{n}(\Delta)$ con
+%     $b=\partial_{n+1}(c)$ para algún $c\in C_{n+1}(\Delta)$, notemos
+%     que $ac\in C_{n+1}(\Delta)$, así que $ab\in B_{n}(\Delta)$ pues $ab=a\partial_{n+1}(c)=\partial_{n+1}(ac)$.
+% \end{enumerate}
 \begin{definition}
    Definimos al espacio
    $$H_{p}(\Delta)=Z_{p}(\Delta)/B_{p}(\Delta)$$
@@ -673,12 +650,18 @@ transformación lineal:
   $$\boldsymbol{Z_{0}(\Delta)}=C_{0}(\Delta)$$
   Por otro lado, $C_{1}(\Delta)=\langle v_{0}v_{1},v_{0}v_{2},v_{0}v_{3},v_{1}v_{2},v_{1}v_{3},v_{2}v_{3}\rangle$,
   así que por el teorema $\ref{imT}$ tenemos 
-  \begin{align*}
-    \boldsymbol{B_{0}(\Delta)}=&\partial_{1}[C_{1}(\Delta)]\\
-    &=\langle \partial_{1}(v_{0}v_{1}),\partial_{1}(v_{0}v_{2}),\partial_{1}(v_{0}v_{3}),\partial_{1}(v_{1}v_{2}),\partial_{1}(v_{1}v_{3}),\partial_{1}(v_{2}v_{3})\rangle\\
-    &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0},v_{2}-v_{1},v_{3}-v_{1},v_{3}-v_{2}\rangle\\
+  \begin{align}
+    \label{frontera0}
+    \boldsymbol{B_{0}(\Delta)}=&\partial_{1}[C_{1}(\Delta)]\nonumber\\
+    &=\langle \partial_{1}(v_{0}v_{1}),\partial_{1}(v_{0}v_{2}),\partial_{1}(v_{0}v_{3}),\partial_{1}(v_{1}v_{2}),\partial_{1}(v_{1}v_{3}),\partial_{1}(v_{2}v_{3})\rangle\nonumber\\
+    &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0},v_{2}-v_{1},v_{3}-v_{1},v_{3}-v_{2}\rangle\nonumber\\
     &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0}\rangle
-  \end{align*}
+  \end{align} 
+  pues los vectores $v_{2}-v_{1}, v_{3}-v_{1}, v_{3}-v_{2}$ son
+  combinación lineal de los vectores de $\ref{frontera0}$, es decir:
+  $$v_{2}-v_{1}=(v_{2}-v_{0})-(v_{1}-v_{0})$$
+  $$v_{3}-v_{1}=(v_{3}-v_{0})-(v_{1}-v_{0})$$
+  $$v_{3}-v_{2}=(v_{3}-v_{0})-(v_{2}-v_{0})$$
   Así que $\dim(B_{0}(\Delta))=3$, además $C_{0}(\Delta)=\langle
   v_{0},v_{1},v_{2},v_{3}\rangle$, por lo que la
   $\dim(Z_{0}(\Delta))=\dim(C_{0}(\Delta))=4$, luego de el teorema
