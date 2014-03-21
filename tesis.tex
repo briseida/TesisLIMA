@@ -213,13 +213,32 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
   \label{imT}
   Sean $V$ y $W$ espacios vectoriales y sea $T:V \rightarrow W$
   lineal. Si $V$ tiene una base $\beta=\{v_{1},\ldots,v_{n}\}$,
-  entonces $Im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
+  entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
 \end{theorem}
 
 \begin{theorem}
   Sean $V$ y $W$ espacios vectoriales (sobre el mismo campo
-  $F$). Entonces $V$ es isomorfo a $W$ si y solo si $dim (V)=dim(W).$ 
+  $F$). Entonces $V$ es isomorfo a $W$ si y solo si $\dim (V)=\dim(W).$ 
 \end{theorem}
+
+\begin{theorem}{(\textbf{Teorema de Isomorfismo})}
+  Si $f:V\rightarrow W$ es una transformación lineal, el espacio
+  cociente $V/\ker(f)\cong \im(f)$. Un isomorfismo entre estos dos
+  espacios es el siguiente:
+  $$\phi:V/\ker(f)\rightarrow \im(f)$$
+  definido po $\phi(\boldsymbol{v}+\ker(f))=f(\boldsymbol{v}).$
+\end{theorem}
+\textit{Demostración.} Hay que demostrar que $\phi$ está bien
+definida, es decir, que si
+$\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$, entonces
+$f(\boldsymbol{v_1})=f(\boldsymbol{v_{2}}).$ Pero
+$\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$ si y sólo si
+$\boldsymbol{v_{1}}-\boldsymbol{v_{2}}\in \ker(f)$, es decir,
+$f(\boldsymbol{v_{1}}-\boldsymbol{v_{2}})=f(\boldsymbol{v_1})-f(\boldsymbol{v_2})=0$,
+como se quería. Queda por demostrar de forma directa que $\phi$ es una
+transformación lineal; y para demostrar que es isomorfismo falta
+demostrar que es inyectiva y sobreyectiva, lo cual también se hace de
+forma directa.\qed
 
 \chapter{Representaciones de grupos}
 \label{cha:primer-capitulo}
