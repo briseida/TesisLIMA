@@ -205,7 +205,7 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
   cada vector $y\in V$ puede ser expresado de manera única como una
   combinación lineal de vectores de $\beta$, es decir, puede ser
   expresado de la forma
-  $$y+a_{1}x_{1}+\ldots,a_{n}x_{n}$$
+  $$y=a_{1}x_{1}+\ldots+a_{n}x_{n}$$
   para escalares únicos $a_{1},\ldots,a_{n}.$
 \end{theorem}
 
@@ -616,6 +616,17 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
    llamado el espacio de \textbf{\emph{p}-fronteras} y es denotado por $B_{p}(\Delta)$.
 \end{definition}
 
+\begin{definition}
+  Sea $\varepsilon:C_{0}\rightarrow \mathbb{C}$ la transformación
+  lineal sobreyectiva definida por $\varepsilon(v)=1$ para cada
+  vértice $v\in \Delta$. Entonces si $c$ es una $0$-cadena,
+  $\varepsilon(c)$ es igual a la suma de los valores de $c$ en los
+  vértices de $\Delta$, es decir:
+  $$\varepsilon(\sum \lambda_{i}v_{i})=\sum\lambda_{i}$$
+  El mapa $\varepsilon$ es llamado \textbf{mapa aumento} para
+  $C_{0}(\Delta)$.
+\end{definition}
+
 \begin{theorem}
     $\partial_{p-1}\circ\partial_{p}=0$
 \end{theorem}
@@ -786,6 +797,8 @@ transformación lineal. $\qed$
  $$Z_{2}(\Delta)=\langle v_{0}v_{1}v_{2}+v_{0}v_{2}v_{3}-v_{0}v_{1}v_{3}-v_{1}v_{2}v_{3}\rangle$$
  es decir, $\boldsymbol{Z_{2}(\Delta)}\cong \mathbb{C}$. Luego  $\boldsymbol{H_{2}}(\Delta)=Z_{2}(\Delta)/B_{2}(\Delta)\cong\mathbb{C}$.
 \end{example}
+
+\section{Cadena de complejos}
 
 \section{Complejo de emparejamiento}
 
