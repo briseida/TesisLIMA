@@ -7,7 +7,7 @@
 
 \usepackage[spanish,mexico,es-nolayout]{babel}
 \usepackage[utf8]{inputenc}
-\usepackage{amsmath}
+\usepackage{amsmath,amscd}
 %\usepackage{amssymb}
 \usepackage{amsthm}
 %\usepackage{graphicx}
@@ -848,6 +848,53 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
     de} $\boldsymbol{k}$\textbf{-fronteras.} El espacio cociente $H_{k}(A)=Z_{k}(A)/B_{k}(A)$
   es el $\boldsymbol{k}$\textbf{-ésimo espacio homología de A.}
 \end{definition}
+
+\begin{theorem}
+  Sean $(A,\partial)$ y $(A^{'},\partial^{'})$ complejos de cadenas, y
+  suponga que hay una colección $f$ de transformaciones lineales
+  $f_{k}:A_{k}\rightarrow A^{'}_{k}$ como se indica en el diagrama  
+  \[
+  \begin{CD}
+    \cdots @>{\partial_{k+2}}>> A_{k+1} @>{\partial_{k+1}}>> A_{k} @>{\partial_{k}}>> A_{k-1} @>{\partial_{k-1}}>> \cdots\\
+    @.   @VVf_{k+1}V   @VVf_{k}V   @VVf_{k-1}V    \\
+    \cdots @>{\partial^{'}_{k+2}}>> A^{'}_{k+1} @>{\partial^{'}_{k+1}}>> A^{'}_{k} @>{\partial^{'}_{k}}>> A^{'}_{k-1} @>{\partial^{'}_{k-1}}>> \cdots
+  \end{CD}
+  \]
+  Supongamos, además que
+  $$f_{k-1}\partial_{k}=\partial^{'}_{k}f_{k}$$
+  para todo $k$. Entonces $f_{k}$ induce una transformación lineal
+  $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'}).$
+\end{theorem}
+\begin{proof}[Demostración.]
+  Sea $z\in Z_{k}(A)$. Ahora
+  \begin{equation*}
+    \partial^{'}_{k}(f_{k}(z))=f_{k-1}(\partial_{k}(z))=f_{k-1}(0)=0,
+  \end{equation*}
+  así que $f_{k}(z)\in Z_{k}(A^{'})$. Definamos
+  $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ por
+  \begin{equation}
+    \label{trans-lin-homologias}
+    f_{*k}(z+B_{k}(A))=f_{k}(z)+B_{k}(A^{'}).
+  \end{equation}
+  
+  Primero debemos mostrar que $f_{*k}$ está bien definida, es decir,
+  independientemente de la elección de un representante de
+  $z+B_{k}(A).$ Supongamos que $z_{1}\in (z+B_{k}(A)).$ Entonces
+  $(z_{1}-z)\in B_{k}(A)$, así que existe $c\in A_{k+1}$ tal que
+  $z_{1}-z=\partial_{k+1}(c).$ Pero entonces
+  $$f_{k}(z_{1})-f_{k}(z)=f_{k}(z_{1}-z)=f_{k}(\partial_{k+1}(c))=\partial^{'}_{k+1}(f_{k+1}(c))$$
+  este último término es un elemento de
+  $\partial^{'}_{k+1}[A^{'}_{k+1}]=B_{k}(A^{'}).$ Por lo tanto
+  $$f_{k}(z_{1})\in (f_{k}(z)+B_{k}(A^{'}))$$
+  Así dos representantes de el mismo co-conjunto en
+  $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son mapeados en representantes de el mismo
+  co-conjunto en $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'}).$ Esto muestra
+  que $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ está bien definida por
+  la ecuación $(\ref{trans-lin-homologias})$.
+  
+  Demostrar que $f_{*k}$ es una transformación lineal se sigue de la
+  linealidad de $f$.
+\end{proof}
 
 
 % \begin{definition}
