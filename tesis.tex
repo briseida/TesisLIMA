@@ -627,34 +627,6 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
   $C_{0}(\Delta)$.
 \end{definition}
 
-\begin{definition}
-  Las secuencias
-  \begin{small}
-    \[
-    \begin{array}{ccccccccccccccccc}
-      \dots 0 & \rightarrow & 0 &\rightarrow & C_{n}(\Delta) &
-      \stackrel{\partial_{n}}{\rightarrow} & C_{n-1}(\Delta)& \rightarrow
-      & \ldots & \rightarrow & C_{1}(\Delta) &
-      \stackrel{\partial_{1}}{\rightarrow} & C_{0}(\Delta) & \rightarrow &
-      0 & \rightarrow & 0 \dots
-    \end{array} 
-    \]
-  \end{small}
-  y
-  \begin{small}
-    \[
-    \begin{array}{ccccccccccccccccc}
-      \dots 0 & \rightarrow & 0 &\rightarrow & C_{n}(\Delta) &
-      \stackrel{\partial_{n}}{\rightarrow} & C_{n-1}(\Delta)& \rightarrow
-      & \ldots & \rightarrow & C_{1}(\Delta) &
-      \stackrel{\partial_{1}}{\rightarrow} & C_{0}(\Delta) &  \stackrel{\varepsilon}{\rightarrow} &
-      \mathbb{C} & \rightarrow & 0 \dots
-    \end{array} 
-    \]
-  \end{small}
-  es la \textbf{cadena compleja} de $\Delta$ y la \textbf{cadena compleja aumentada} de $\Delta$, respectivamente.
-\end{definition}
-
 \begin{theorem}
   $\partial_{p-1}\circ\partial_{p}=0$ para cualquier $p$ y también $\varepsilon\circ\partial_{1}=0$.
 \end{theorem}
@@ -840,6 +812,43 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 \end{example}
 
 \section{Cadena de complejos}
+
+\begin{definition}
+  Una \textbf{cadena compleja} $(A,\partial)$ es una secuencia
+  $$A=\{\cdots,A_{2},A_{1},A_{0},A_{-1},A_{-2},\cdots\}$$
+  de espacios vectoriales $A_{k}$, junto con una colección
+  $\partial=\{\partial_{k}\mid k \in \mathbb{Z}\}$ de transformaciones
+  lineales tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$ y $\partial_{k-1}\partial_{k}=0.$
+\end{definition}
+
+
+% \begin{definition}
+%   Las secuencias
+%   \begin{small}
+%     \[
+%     \begin{array}{ccccccccccccccccc}
+%       \dots 0 & \rightarrow & 0 &\rightarrow & C_{n}(\Delta) &
+%       \stackrel{\partial_{n}}{\rightarrow} & C_{n-1}(\Delta)& \rightarrow
+%       & \ldots & \rightarrow & C_{1}(\Delta) &
+%       \stackrel{\partial_{1}}{\rightarrow} & C_{0}(\Delta) & \rightarrow &
+%       0 & \rightarrow & 0 \dots
+%     \end{array} 
+%     \]
+%   \end{small}
+%   y
+%   \begin{small}
+%     \[
+%     \begin{array}{ccccccccccccccccc}
+%       \dots 0 & \rightarrow & 0 &\rightarrow & C_{n}(\Delta) &
+%       \stackrel{\partial_{n}}{\rightarrow} & C_{n-1}(\Delta)& \rightarrow
+%       & \ldots & \rightarrow & C_{1}(\Delta) &
+%       \stackrel{\partial_{1}}{\rightarrow} & C_{0}(\Delta) &  \stackrel{\varepsilon}{\rightarrow} &
+%       \mathbb{C} & \rightarrow & 0 \dots
+%     \end{array} 
+%     \]
+%   \end{small}
+%   es la \textbf{cadena compleja} de $\Delta$ y la \textbf{cadena compleja aumentada} de $\Delta$, respectivamente.
+% \end{definition}
 
 \section{Complejo de emparejamiento}
 
