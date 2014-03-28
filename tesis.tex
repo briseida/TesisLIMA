@@ -821,6 +821,26 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
   lineales tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$ y $\partial_{k-1}\partial_{k}=0.$
 \end{definition}
 
+\begin{theorem}
+  Si $(A,\partial)$ es una cadena compleja, entonces la imagen bajo
+  $\partial_{k}$ es un subespacio de el kernel de $\partial_{k-1}$
+\end{theorem}
+\begin{proof}[Demostración.]
+  Considere
+  \begin{small}
+    \[
+    \begin{array}{ccccc}
+      A_{k} & \stackrel{\partial_{k}}{\longrightarrow} & A_{k-1} &
+      \stackrel{\partial_{k-1}}{\longrightarrow} & A_{k-2}.
+    \end{array} 
+    \]
+  \end{small}
+  $\partial_{k-1}\partial_{k}=0,$ pues $(A,\partial)$ es una cadena
+  compleja. Esto es $\partial_{k-1}[\partial_{k}[A_{k}]]=0.$ Así que
+  $\partial_{k}[A_{k}]$ está contenido en el kernel de
+  $\partial_{k-1}$, como se quería demostrar.
+\end{proof}
+
 
 % \begin{definition}
 %   Las secuencias
