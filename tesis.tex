@@ -143,11 +143,11 @@ blah blah blah blah blah blah blah blah blah.
 En este capítulo se revisan algunos resultados de álgebra lineal, las
 pruebas se omiten pero se puede consultar algún texto de álgebra
 lineal como \cite{friedberg1982algebra}
-  para más  detalles. En este trabajo todos los espacios vectoriales considerados serán dimensionalmente finitos.
+  para más  detalles. En este trabajo todos los espacios vectoriales
+  considerados serán dimensionalmente finitos y sobre los complejos.
 
 \begin{definition}
-  Sea $W$ un subespacio de un espacio vectorial $V$ sobre un campo
-  $F$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
+  Sea $W$ un subespacio de un espacio vectorial $V$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
   llama \textbf{co-conjunto de $W$ que contiene a $v$}. Es frecuente
   expresar este co-conjunto como $v+W$ en vez de $\{v\}+W$. 
 \end{definition}
@@ -160,7 +160,7 @@ La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in V\}$ de todos
 
 $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para toda $v_{1}$, $v_{2}\in V$ y
 
-$a(v+W)=av+W$ para toda $v\in V$ y $a\in F$.
+$a(v+W)=av+W$ para toda $v\in V$ y $a\in \mathbb{C}$.
 
 Se puede demostrar que las operaciones anteriores están bien definidas.
 
@@ -200,12 +200,12 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 
 \begin{theorem}
   \label{clunica}
-  Sea $V$ un espacio vectorial y $\beta=\{x_{1},\dots,x_{n}\}$ un
+  Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
   subconjunto de $V$. Luego $\beta$ es una base de $V$ si y solo si
   cada vector $y\in V$ puede ser expresado de manera única como una
   combinación lineal de vectores de $\beta$, es decir, puede ser
   expresado de la forma
-  $$y=a_{1}x_{1}+\ldots+a_{n}x_{n}$$
+  $$y=a_{1}v_{1}+\ldots+a_{n}v_{n}$$
   para escalares únicos $a_{1},\ldots,a_{n}.$
 \end{theorem}
 
@@ -228,17 +228,18 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
   $$\phi:V/\ker(f)\rightarrow \im(f)$$
   definido po $\phi(\boldsymbol{v}+\ker(f))=f(\boldsymbol{v}).$
 \end{theorem}
-\textit{Demostración.} Hay que demostrar que $\phi$ está bien
-definida, es decir, que si
-$\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$, entonces
-$f(\boldsymbol{v_1})=f(\boldsymbol{v_{2}}).$ Pero
-$\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$ si y sólo si
-$\boldsymbol{v_{1}}-\boldsymbol{v_{2}}\in \ker(f)$, es decir,
-$f(\boldsymbol{v_{1}}-\boldsymbol{v_{2}})=f(\boldsymbol{v_1})-f(\boldsymbol{v_2})=0$,
-como se quería. Queda por demostrar de forma directa que $\phi$ es una
-transformación lineal; y para demostrar que es isomorfismo falta
-demostrar que es inyectiva y sobreyectiva, lo cual también se hace de
-forma directa.\qed
+\begin{proof}[Demostración.]
+  Hay que demostrar que $\phi$ está bien definida, es decir, que si
+  $\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$, entonces
+  $f(\boldsymbol{v_1})=f(\boldsymbol{v_{2}}).$ Pero
+  $\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$ si y sólo si
+  $\boldsymbol{v_{1}}-\boldsymbol{v_{2}}\in \ker(f)$, es decir,
+  $f(\boldsymbol{v_{1}}-\boldsymbol{v_{2}})=f(\boldsymbol{v_1})-f(\boldsymbol{v_2})=0$,
+  como se quería. Queda por demostrar de forma directa que $\phi$ es
+  una transformación lineal; y para demostrar que es isomorfismo falta
+  demostrar que es inyectiva y sobreyectiva, lo cual también se hace
+  de forma directa.
+\end{proof}
 
 \chapter{Representaciones de grupos}
 \label{cha:primer-capitulo}
@@ -623,7 +624,7 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
   $\varepsilon(c)$ es igual a la suma de los valores de $c$ en los
   vértices de $\Delta$, es decir:
   $$\varepsilon(\sum \lambda_{i}v_{i})=\sum\lambda_{i}$$
-  El mapa $\varepsilon$ es llamado \textbf{mapa aumento} para
+  $\varepsilon$ es llamada la \textbf{función aumento} para
   $C_{0}(\Delta)$.
 \end{definition}
 
@@ -675,9 +676,8 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 \end{definition}
 
 \begin{definition}
-  Definimos el \textbf{espacio de homología reducida} de $\Delta$ en
-  dimensión $0$, denotado por $\widetilde H_{0}(\Delta)$, con la
-  ecuación 
+  Definimos la \textbf{homología reducida} de $\Delta$ en
+  dimensión $0$, denotado por $\widetilde H_{0}(\Delta)$, como
   \begin{equation*}
     \widetilde H_{0}(\Delta)=\ker\varepsilon/\im \partial_{1}
   \end{equation*}
@@ -811,10 +811,10 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
  es decir, $\boldsymbol{Z_{2}(\Delta)}\cong \mathbb{C}$. Luego  $\boldsymbol{H_{2}}(\Delta)=Z_{2}(\Delta)/B_{2}(\Delta)\cong\mathbb{C}$.
 \end{example}
 
-\section{Cadena de complejos}
+\section{Complejo de cadenas}
 
 \begin{definition}
-  Una \textbf{cadena compleja} $(A,\partial)$ es una secuencia
+  Un \textbf{complejo de cadenas} $(A,\partial)$ es una secuencia
   $$A=\{\cdots,A_{2},A_{1},A_{0},A_{-1},A_{-2},\cdots\}$$
   de espacios vectoriales $A_{k}$, junto con una colección
   $\partial=\{\partial_{k}\mid k \in \mathbb{Z}\}$ de transformaciones
@@ -822,7 +822,7 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 \end{definition}
 
 \begin{theorem}
-  Si $(A,\partial)$ es una cadena compleja, entonces la imagen bajo
+  Si $(A,\partial)$ es un complejo de cadenas, entonces la imagen bajo
   $\partial_{k}$ es un subespacio de el kernel de $\partial_{k-1}$
 \end{theorem}
 \begin{proof}[Demostración.]
@@ -835,23 +835,23 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
     \end{array} 
     \]
   \end{small}
-  $\partial_{k-1}\partial_{k}=0,$ pues $(A,\partial)$ es una cadena
-  compleja. Esto es $\partial_{k-1}[\partial_{k}[A_{k}]]=0.$ Así que
+  $\partial_{k-1}\partial_{k}=0,$ pues $(A,\partial)$ es un complejo
+  de cadenas. Esto es $\partial_{k-1}[\partial_{k}[A_{k}]]=0.$ Así que
   $\partial_{k}[A_{k}]$ está contenido en el kernel de
   $\partial_{k-1}$, como se quería demostrar.
 \end{proof}
 
 \begin{definition}
-  Si $(A,\partial)$ es una cadena compleja, entonces el kernel
-  $Z_{k}(A)$ de $\partial_{k}$ es el espacio de $\boldsymbol{k}$\textbf{-ciclos,} y
+  Si $(A,\partial)$ es un complejo de cadenas, entonces el kernel
+  $Z_{k}(A)$ de $\partial_{k}$ es el\textbf{ espacio de} $\boldsymbol{k}$\textbf{-ciclos,} y
   la imagen $B_{k}(A)=\partial_{k+1}[A_{k+1}]$ es el \textbf{espacio
     de} $\boldsymbol{k}$\textbf{-fronteras.} El espacio cociente $H_{k}(A)=Z_{k}(A)/B_{k}(A)$
-  es el $\boldsymbol{k}$\textbf{-ésimo espacio homología de A.}
+  es la $\boldsymbol{k}$\textbf{-ésima homología de A.}
 \end{definition}
 
 \begin{theorem}
   Sean $(A,\partial)$ y $(A^{'},\partial^{'})$ complejos de cadenas, y
-  suponga que hay una colección $f$ de transformaciones lineales
+  supongamos que hay una colección $f$ de transformaciones lineales
   $f_{k}:A_{k}\rightarrow A^{'}_{k}$ como se indica en el diagrama  
   \[
   \begin{CD}
@@ -887,7 +887,7 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
   $\partial^{'}_{k+1}[A^{'}_{k+1}]=B_{k}(A^{'}).$ Por lo tanto
   $$f_{k}(z_{1})\in (f_{k}(z)+B_{k}(A^{'}))$$
   Así dos representantes de el mismo co-conjunto en
-  $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son mapeados en representantes de el mismo
+  $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son enviados en representantes de el mismo
   co-conjunto en $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'}).$ Esto muestra
   que $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ está bien definida por
   la ecuación $(\ref{trans-lin-homologias})$.
@@ -946,7 +946,6 @@ $n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
 \begin{example}
 Considerese la gráfica $K_{4}$
 \end{example}
-
 
 \bigskip
 \bigskip
