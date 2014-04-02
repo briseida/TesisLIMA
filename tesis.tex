@@ -895,86 +895,276 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
   Demostrar que $f_{*k}$ es una transformación lineal se sigue de la
   linealidad de $f$.
 \end{proof}
-
-
-% \begin{definition}
-%   Las secuencias
-%   \begin{small}
-%     \[
-%     \begin{array}{ccccccccccccccccc}
-%       \dots 0 & \rightarrow & 0 &\rightarrow & C_{n}(\Delta) &
-%       \stackrel{\partial_{n}}{\rightarrow} & C_{n-1}(\Delta)& \rightarrow
-%       & \ldots & \rightarrow & C_{1}(\Delta) &
-%       \stackrel{\partial_{1}}{\rightarrow} & C_{0}(\Delta) & \rightarrow &
-%       0 & \rightarrow & 0 \dots
-%     \end{array} 
-%     \]
-%   \end{small}
-%   y
-%   \begin{small}
-%     \[
-%     \begin{array}{ccccccccccccccccc}
-%       \dots 0 & \rightarrow & 0 &\rightarrow & C_{n}(\Delta) &
-%       \stackrel{\partial_{n}}{\rightarrow} & C_{n-1}(\Delta)& \rightarrow
-%       & \ldots & \rightarrow & C_{1}(\Delta) &
-%       \stackrel{\partial_{1}}{\rightarrow} & C_{0}(\Delta) &  \stackrel{\varepsilon}{\rightarrow} &
-%       \mathbb{C} & \rightarrow & 0 \dots
-%     \end{array} 
-%     \]
-%   \end{small}
-%   es la \textbf{cadena compleja} de $\Delta$ y la \textbf{cadena compleja aumentada} de $\Delta$, respectivamente.
-% \end{definition}
+Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
+isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 \section{Complejo de emparejamiento}
 
 \begin{definition}
 Consideremos la gráfica completa de $n$ vértices $K_{n}$, tales
-vértices son etiquetados como $1,2,\ldots,n$ e
+vértices son etiquetados como $1,2,\ldots,n$, además
 $\overline{ij}$ denotará la arista que une al vértice $i$ con el
 vértice $j$. Llamaremos \textbf{complejo de emparejamiento} de orden
-$n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
+$n$ al complejo simplicial $G_{n}$ de dimensión $n$ tal que:
 
 \begin{enumerate}
-  \item Su conjunto de vértices $\mathcal{V}$ consta de las aristas de la gráfica
+  \item Su conjunto de vértices $V$ consta de las aristas de la gráfica
   $K_{n}$. 
   \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
-  $\mathcal{V}$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $M_{n}$ si $v_{i}$
-  y $v_{j}$ son ajenas
+  $V$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $G_{n}$ si $v_{i}$
+  y $v_{j}$ son ajenas.
 \end{enumerate} 
 \end{definition}
 
 \begin{example}
-Considerese la gráfica $K_{4}$
-\end{example}
-
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
-\bigskip
+Considérese la gráfica $K_{4}$; construiremos el complejo de
+emparejamiento $G_{4}$ dado por el conjunto de vértices
+$$V=\{\overline{12},\overline{13},\overline{14},\overline{23},\overline{24},\overline{34}\},$$
+que es el conjunto de aristas de la gráfica de $K_{4}$. La familia de
+$1$-simplejos estará dada por el siguiente conjunto:
+$$\{\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.$$ 
+Es decir,
+\begin{equation*}
+  G_{4}=\{\{\overline{12}\},\{\overline{13}\},\{\overline{14}\},\{\overline{23}\},\{\overline{24}\},\{\overline{34}\},\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.
+\end{equation*}
 
 \begin{center}
-Tabla de S4
+  \begin{minipage}{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+      \draw[help lines] (-2,0);% grid (0,2);
+      \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+      \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
+      \Vertex[x=0,y=0,Math]{3}
+      \Vertex[x=-2,y=2,Math,LabelOut,Lpos=180]{1}
+      \Vertex[x=0,y=2,Math]{4} \Edge(1)(2) \Edge(1)(3) \Edge(1)(4)
+      \Edge(2)(3) \Edge(2)(4) \Edge(3)(4)
+    \end{tikzpicture}
+  
+    $K_{4}$
+  \end{minipage}
+  \begin{minipage}{0.3\linewidth}
+    \centering
+    \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+      \draw[help lines] (-2,0);% grid (0,2);
+      \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+      \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90]{12}
+      \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{34}
+      \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90]{24}
+      \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90]{13}
+      \Vertex[x=0,y=2,Math,LabelOut,Lpos=90]{14}
+      \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90]{23} \Edge(12)(34)
+      \Edge(24)(13) \Edge(14)(23)
+    \end{tikzpicture}
+  
+    $G_{4}$
+  \end{minipage}
+  % \begin{minipage}{0.3\linewidth}
+  %   \centering
+  %   \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+  %     \draw[help lines] (-2,0);% grid (2,0);
+  %     \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+  %     \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34} \Vertex[x=0,
+  %     y=0,Math,LabelOut,Lpos=-90]{24,13} \Vertex[x=2,
+  %     y=0,Math,LabelOut,Lpos=-90]{14,23}
+  %   \end{tikzpicture}
+  
+  %   $K(G_{4})$
+  % \end{minipage}
+\end{center}
 
+Tomando la notación de $p$-simplejos orientados tenemos los espacios
+de cadenas:
+\begin{equation*}
+  C_{0}(G_{4})=\langle(\overline{12}),(\overline{13}),(\overline{14}),(\overline{23}),(\overline{24}),(\overline{34})\rangle.
+\end{equation*}
+\begin{equation*}
+ C_{1}(G_{4})=\langle(\overline{12},\overline{34}),(\overline{13},\overline{24}),(\overline{14},\overline{23})\rangle
+\end{equation*}
+Sean
+\begin{center}
+  \begin{tabular}{ccc}
+    $a_{1}=\overline{12}$, & $a_{4}=\overline{23}$, & $b_{1}=(\overline{12},\overline{34})$,\\
+    $a_{2}=\overline{13}$, & $a_{5}=\overline{24}$, & $b_{2}=(\overline{13},\overline{24})$,\\
+    $a_{3}=\overline{14}$, & $a_{6}=\overline{34}$, & $b_{3}=(\overline{14},\overline{23})$,\\
+  \end{tabular}
+\end{center}
+Consideremos a $\beta_{0}=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6}\}$ y
+$\beta_{1}=\{b_{1},b_{2},b_{3}\}$ como las bases de $C_{0}(G_{4})$ y
+$C_{1}(G_{4})$ respectivamente. Notemos que $\dim C_{0}(G_{4})=6$ y
+$\dim C_{1}(G_{4})=3$. A continuación se tiene la acción un
+representante de cada clase de conjugación del grupo
+simétrico $S_{4}$ sobre los elementos de la base de $C_{0}(G_{4})$ y $C_{1}(G_{4})$.
+
+\begin{center}
+  \begin{tabular}{llll}
+    $(12)a_{1}=a_{1}$ & $(123)a_{1}=a_{4}$ & $(1234)a_{1}=a_{4}$ & $(12)(34)a_{1}=a_{1}$ \\
+    $(12)a_{2}=a_{4}$ & $(123)a_{2}=a_{1}$ & $(1234)a_{2}=a_{5}$ & $(12)(34)a_{2}=a_{5}$ \\
+    $(12)a_{3}=a_{5}$ & $(123)a_{3}=a_{5}$ & $(1234)a_{3}=a_{1}$ & $(12)(34)a_{3}=a_{4}$ \\
+    $(12)a_{4}=a_{2}$ & $(123)a_{4}=a_{2}$ & $(1234)a_{4}=a_{6}$ & $(12)(34)a_{4}=a_{3}$ \\
+    $(12)a_{5}=a_{3}$ & $(123)a_{5}=a_{6}$ & $(1234)a_{5}=a_{2}$ & $(12)(34)a_{5}=a_{2}$ \\
+    $(12)a_{6}=a_{6}$ & $(123)a_{6}=a_{3}$ & $(1234)a_{6}=a_{3}$ & $(12)(34)a_{6}=a_{6}$ \\
+  \end{tabular}
+\end{center}
+
+\begin{center}
+  \begin{tabular}{llll}
+    $(12)b_{1}=b_{1}$  & $(123)b_{1}=-b_{3}$ & $(1234)b_{1}=-b_{3}$ & $(12)(34)b_{1}=b_{1}$ \\
+    $(12)b_{2}=-b_{3}$ & $(123)b_{2}=b_{1}$  & $(1234)b_{2}=-b_{2}$ & $(12)(34)b_{2}=-b_{2}$ \\
+    $(12)b_{3}=-b_{2}$ & $(123)b_{3}=-b_{2}$ & $(1234)b_{3}=b_{1}$  & $(12)(34)b_{3}=-b_{3}$ \\
+  \end{tabular}
+\end{center}
+Entonces tenemos las representaciones $\theta_{1}$ y $\theta_{2}$ de
+$S_{4}$ en $C_{0}(G_{4})$ y $C_{1}(G_{4})$ respectivamente como se
+muestra enseguida:
+
+\begin{center}
+  $\theta_{1}(12)= \left(
+    \begin{array}{rrrrrr}
+      1 & 0 & 0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 1 & 0 & 0\\
+      0 & 0 & 0 & 0 & 1 & 0\\
+      0 & 1 & 0 & 0 & 0 & 0\\
+      0 & 0 & 1 & 0 & 0 & 0\\
+      0 & 0 & 0 & 0 & 0 & 1\\
+    \end{array} 
+  \right)$\quad 
+  $\theta_{1}(123)= \left(
+    \begin{array}{rrrrrr}
+      0 & 1 & 0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 1 & 0 & 0\\
+      0 & 0 & 0 & 0 & 0 & 1\\
+      1 & 0 & 0 & 0 & 0 & 0\\
+      0 & 0 & 1 & 0 & 0 & 0\\
+      0 & 0 & 0 & 0 & 1 & 0\\
+    \end{array} 
+  \right)$
+\end{center}
+
+\begin{center}
+  $\theta_{1}(1234)= \left(
+    \begin{array}{rrrrrr}
+      0 & 0 & 1 & 0 & 0 & 0\\
+      0 & 0 & 0 & 0 & 1 & 0\\
+      0 & 0 & 0 & 0 & 0 & 1\\
+      1 & 0 & 0 & 0 & 0 & 0\\
+      0 & 1 & 0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 1 & 0 & 0\\
+    \end{array} 
+  \right)$ \quad
+  $\theta_{1}(12)(34)= \left(
+    \begin{array}{rrrrrr}
+      1 & 0 & 0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 0 & 1 & 0\\
+      0 & 0 & 0 & 1 & 0 & 0\\
+      0 & 0 & 1 & 0 & 0 & 0\\
+      0 & 1 & 0 & 0 & 0 & 0\\
+      0 & 0 & 0 & 1 & 0 & 1\\
+    \end{array} 
+  \right)$ 
+\end{center}
+
+\begin{center}
+  $\theta_{2}(12)= \left(
+    \begin{array}{rrr}
+      1 & 0 & 0 \\
+      0 & 0 & -1 \\
+      0 & -1 & 0 \\
+    \end{array} 
+  \right)$ \quad
+  $\theta_{2}(123)= \left(
+    \begin{array}{rrr}
+      0 & 1 & 0 \\
+      0 & 0 & -1 \\
+      -1 & 0 & 0 \\
+    \end{array} 
+  \right)$
+\end{center}
+
+\begin{center}
+  $\theta_{2}(1234)= \left(
+    \begin{array}{rrr}
+      0 & 0 & 1 \\
+      0 & -1 & 0 \\
+      -1 & 0 & 0 \\
+    \end{array} 
+  \right)$ \quad
+  $\theta_{2}(12)(34)= \left(
+    \begin{array}{rrr}
+      1 & 0 & 0 \\
+      0 & -1& 0 \\
+      0 & 0 & -1 \\
+    \end{array} 
+  \right)$
+\end{center}
+de tal forma que
+
+\begin{tabular}{r r r}
+  $\chi_{C_{0}(G_{4})}((1))=6$, & $\chi_{C_{0}(G_{4})}((12))=2$, & $\chi_{C_{0}(G_{4})}((123))=0$, \\
+  $\chi_{C_{0}(G_{4})}((1234))=0$, & $\chi_{C_{0}(G_{4})}((12)(34))=2$, & \\
+\end{tabular}
+\bigskip	
+
+\begin{tabular}{r r r}
+  $\chi_{C_{1}(G_{4})}((1))=3$, & $\chi_{C_{1}(G_{4})}((12))=1$, & $\chi_{C_{1}(G_{4})}((123))=0$, \\
+  $\chi_{C_{1}(G_{4})}((1234))=-1$, & $\chi_{C_{1}(G_{4})}((12)(34))=-1$. & \\
+\end{tabular}
+\medskip
+
+Añadiendo estos dos últimos caracteres a la tabla de caracteres de
+$S_{4}$ tenemos:
+\begin{center}
 \begin{tabular}{c|r r r r r}
   No. Elementos& 1 & 6 & 8 & 6 & 3 \\
   Clase & (1) & (12) & (123) & (1234) &(12)(34)\\
     \hline
-  $\chi_{{1}}$ & 1 & 1 & 1 & 1 & 1 \\
-  $\chi_{{2}}$ & 1 & -1 & 1 & -1 & 1\\
-  $\chi_{{3}}$ & 3 & 1 & 0 & -1 & -1\\
-  $\chi_{{4}}$ & 3 & -1 & 0 & 1 & -1 \\
-  $\chi_{{5}}$ & 2 & 0 & -1 & 0 & 2 \\
+  $\chi_{\mathbb{C}}$ & 1 & 1 & 1 & 1 & 1 \\
+  $\chi_{S^{(1,1,1,1)}}$ & 1 & -1 & 1 & -1 & 1\\
+  $\chi_{S^{(3,1)}}$ & 3 & 1 & 0 & -1 & -1\\
+  $\chi_{S^{(2,1,1)}}$ & 3 & -1 & 0 & 1 & -1 \\
+  $\chi_{S^{(2,2)}}$ & 2 & 0 & -1 & 0 & 2 \\
     \hline
-  $\chi_{C_{0}(M_{4})}$ & 6 & 2 & 0 & 0 & 2 \\
-  $\chi_{C_{1}(M_{4})}$ & 3 & 1 & 0 & -1 & -1
+  $\chi_{C_{0}(G_{4})}$ & 6 & 2 & 0 & 0 & 2 \\
+  $\chi_{C_{1}(G_{4})}$ & 3 & 1 & 0 & -1 & -1
 \end{tabular}
+
+Tabla de caracteres de $S_{4}$, $C_{0}(G_{4})$ y $C_{1}(G_{4})$
 \end{center}
+
+Queremos escribir a $C_{0}(G_{4})$ como suma directa de módulos
+irreducibles de $S_{4}$, así que calculemos el producto interno de $\chi_{C_{0}(G_{4})}$ con los
+caracteres de los módulos irreducibles de $S_{4}$ para conocer la
+multiplicidad con la que aparecen estos últimos.
+(\setlength{\fboxsep}{0pt}\colorbox{green}{COROLARIO(referencia)todavía
+no escrito})
+\begin{align*}
+  \langle\chi_{C_{0}(G_{4})},\chi_{\mathbb{C}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(1\cdot2)+(8)(1\cdot0)+(6)(1\cdot0)+(3)(1\cdot2))\\
+  &=\frac{1}{24}(6+12+6)=1\\
+  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(1,1,1,1)}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(-1\cdot2)+(8)(1\cdot0)+(6)(-1\cdot0)+(3)(1\cdot2))\\
+  &=\frac{1}{24}(6-12+6)=0\\
+  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(3,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(1\cdot2)+(8)(0\cdot0)+(6)(-1\cdot0)+(3)(-1\cdot2))\\
+  &=\frac{1}{24}(18+12-6)=1\\
+  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(2,1,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(-1\cdot2)+(8)(0\cdot0)+(6)(1\cdot0)+(3)(-1\cdot2))\\
+  &=\frac{1}{24}(18-12-6)=0\\
+  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(2,2)}}\rangle &=\frac{1}{24}((1)(2\cdot6)+(6)(0\cdot2)+(8)(-1\cdot0)+(6)(0\cdot0)+(3)(2\cdot2))\\
+  &=\frac{1}{24}(12+12)=1
+\end{align*}
+De lo anterior se sigue:
+$$C_{0}(G_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}$$
+De la \setlength{\fboxsep}{0pt}\colorbox{green}{TABLA S4(referencia)}
+podemos observar que $\chi_{C_{1}(G_{4})}=\chi_{S^{(3,1)}}$, así que  
+$$C_{1}(G_{4})\cong S^{(3,1)}$$
+Con lo cual tenemos el siguiente complejo de cadenas:
+ \[
+  \begin{CD}
+    0 @>{\partial_{2}}>> C_{1}(G_{4}) @>{\partial_{1}}>> C_{0}(G_{4}) @>{\varepsilon}>> \mathbb{C}\\
+    @VVV   @V{\cong}VV   @V{\cong}VV   @VVV    \\
+    0 @>{\widehat\partial_{2}}>>  S^{(3,1)} @>{\widehat\partial_{1}}>> 
+    \mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
+  \end{CD}
+  \]
+\end{example}
+
 
 \bigskip
 
