@@ -148,15 +148,16 @@ lineal como \cite{friedberg1982algebra}
 
 \begin{definition}
   Sea $W$ un subespacio de un espacio vectorial $V$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
-  llama \textbf{co-conjunto de $W$ que contiene a $v$}. Es frecuente
-  expresar este co-conjunto como $v+W$ en vez de $\{v\}+W$. 
+  llama \textbf{clase lateral de $W$ que contiene a $v$}. Es frecuente
+  expresar esta clase lateral como $v+W$ en vez de $\{v\}+W$. 
 \end{definition}
 
 Se puede demostrar lo siguiente:
  
 $v_{1}+W=v_{2}+W$ si y solo si $v_{1}-v_{2}\in W.$
 
-La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in V\}$ de todos los co-conjuntos de $W$ como: 
+La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
+V\}$ de todos las clases laterales de $W$ como: 
 
 $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para toda $v_{1}$, $v_{2}\in V$ y
 
@@ -226,15 +227,15 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
   cociente $V/\ker(f)\cong \im(f)$. Un isomorfismo entre estos dos
   espacios es el siguiente:
   $$\phi:V/\ker(f)\rightarrow \im(f)$$
-  definido po $\phi(\boldsymbol{v}+\ker(f))=f(\boldsymbol{v}).$
+  definido por $\phi(v+\ker(f))=f(v).$
 \end{theorem}
 \begin{proof}[Demostración.]
   Hay que demostrar que $\phi$ está bien definida, es decir, que si
-  $\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$, entonces
-  $f(\boldsymbol{v_1})=f(\boldsymbol{v_{2}}).$ Pero
-  $\boldsymbol{v_1}+\ker(f)=\boldsymbol{v_2}+\ker(f)$ si y sólo si
-  $\boldsymbol{v_{1}}-\boldsymbol{v_{2}}\in \ker(f)$, es decir,
-  $f(\boldsymbol{v_{1}}-\boldsymbol{v_{2}})=f(\boldsymbol{v_1})-f(\boldsymbol{v_2})=0$,
+  $v_1+\ker(f)=v_2+\ker(f)$, entonces
+  $f(v_1)=f(v_{2}).$ Pero
+  $v_1+\ker(f)=v_2+\ker(f)$ si y sólo si
+  $v_{1}-v_{2}\in \ker(f)$, es decir,
+  $f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
   como se quería. Queda por demostrar de forma directa que $\phi$ es
   una transformación lineal; y para demostrar que es isomorfismo falta
   demostrar que es inyectiva y sobreyectiva, lo cual también se hace
@@ -565,7 +566,9 @@ aparece en la suma, se sigue del teorema $\ref{clunica}$. $\qed$
 \end{corollary}
 
 \begin{definition}
-  Sea $\sigma=v_{0}\ldots v_{p}$ un simplejo orientado con $p>0$,
+  Sea $\sigma=(v_{0},\ldots ,v_{p})$ un simplejo orientado con $p>0$
+  (sin embargo también será denotado como $\sigma=v_{0}\ldots v_{p}$
+  cuando no tengamos problemas de confusión),
   definimos la trasformación lineal $\partial_{p}:C_{p}(\Delta)\rightarrow
   C_{p-1}(\Delta)$ como:
 
@@ -886,9 +889,9 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
   este último término es un elemento de
   $\partial^{'}_{k+1}[A^{'}_{k+1}]=B_{k}(A^{'}).$ Por lo tanto
   $$f_{k}(z_{1})\in (f_{k}(z)+B_{k}(A^{'}))$$
-  Así dos representantes de el mismo co-conjunto en
-  $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son enviados en representantes de el mismo
-  co-conjunto en $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'}).$ Esto muestra
+  Así dos representantes de la misma clase lateral en
+  $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son enviados en representantes de la misma
+  clase lateral en $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'}).$ Esto muestra
   que $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ está bien definida por
   la ecuación $(\ref{trans-lin-homologias})$.
   
@@ -898,34 +901,41 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
 isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
+\chapter{Gráficas}
+%\label{cha:primer-capitulo}
+\section{Gráficas de Clanes}
+
+\chapter{Homologías .....}
+%\label{cha:primer-capitulo}
 \section{Complejo de emparejamiento}
 
 \begin{definition}
 Consideremos la gráfica completa de $n$ vértices $K_{n}$, tales
 vértices son etiquetados como $1,2,\ldots,n$, además
 $\overline{ij}$ denotará la arista que une al vértice $i$ con el
-vértice $j$. Llamaremos \textbf{complejo de emparejamiento} de orden
-$n$ al complejo simplicial $G_{n}$ de dimensión $n$ tal que:
+vértice $j$ (donde $\overline{ij}=\overline{ji}$). Llamaremos \textbf{complejo de emparejamiento} de orden
+$n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
 
 \begin{enumerate}
   \item Su conjunto de vértices $V$ consta de las aristas de la gráfica
   $K_{n}$. 
   \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
-  $V$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $G_{n}$ si $v_{i}$
+  $V$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $M_{n}$ si $v_{i}$
   y $v_{j}$ son ajenas.
 \end{enumerate} 
+La \textbf{gráfica de emparejamiento} de $K_{n}$ será denotada por $G_{n}$.
 \end{definition}
 
 \begin{example}
 Considérese la gráfica $K_{4}$; construiremos el complejo de
-emparejamiento $G_{4}$ dado por el conjunto de vértices
+emparejamiento $M_{4}$ dado por el conjunto de vértices
 $$V=\{\overline{12},\overline{13},\overline{14},\overline{23},\overline{24},\overline{34}\},$$
 que es el conjunto de aristas de la gráfica de $K_{4}$. La familia de
 $1$-simplejos estará dada por el siguiente conjunto:
 $$\{\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.$$ 
 Es decir,
 \begin{equation*}
-  G_{4}=\{\{\overline{12}\},\{\overline{13}\},\{\overline{14}\},\{\overline{23}\},\{\overline{24}\},\{\overline{34}\},\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.
+  M_{4}=\{\{\overline{12}\},\{\overline{13}\},\{\overline{14}\},\{\overline{23}\},\{\overline{24}\},\{\overline{34}\},\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.
 \end{equation*}
 
 \begin{center}
@@ -976,10 +986,10 @@ Es decir,
 Tomando la notación de $p$-simplejos orientados tenemos los espacios
 de cadenas:
 \begin{equation*}
-  C_{0}(G_{4})=\langle(\overline{12}),(\overline{13}),(\overline{14}),(\overline{23}),(\overline{24}),(\overline{34})\rangle.
+  C_{0}(M_{4})=\langle(\overline{12}),(\overline{13}),(\overline{14}),(\overline{23}),(\overline{24}),(\overline{34})\rangle.
 \end{equation*}
 \begin{equation*}
- C_{1}(G_{4})=\langle(\overline{12},\overline{34}),(\overline{13},\overline{24}),(\overline{14},\overline{23})\rangle
+ C_{1}(M_{4})=\langle(\overline{12},\overline{34}),(\overline{13},\overline{24}),(\overline{14},\overline{23})\rangle
 \end{equation*}
 Sean
 \begin{center}
@@ -990,12 +1000,11 @@ Sean
   \end{tabular}
 \end{center}
 Consideremos a $\beta_{0}=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6}\}$ y
-$\beta_{1}=\{b_{1},b_{2},b_{3}\}$ como las bases de $C_{0}(G_{4})$ y
-$C_{1}(G_{4})$ respectivamente. Notemos que $\dim C_{0}(G_{4})=6$ y
-$\dim C_{1}(G_{4})=3$. A continuación se tiene la acción un
+$\beta_{1}=\{b_{1},b_{2},b_{3}\}$ como las bases de $C_{0}(M_{4})$ y
+$C_{1}(M_{4})$ respectivamente. Notemos que $\dim C_{0}(M_{4})=6$ y
+$\dim C_{1}(M_{4})=3$. A continuación se tiene la acción un
 representante de cada clase de conjugación del grupo
-simétrico $S_{4}$ sobre los elementos de la base de $C_{0}(G_{4})$ y $C_{1}(G_{4})$.
-
+simétrico $S_{4}$ sobre los elementos de la base de $C_{0}(M_{4})$ y $C_{1}(M_{4})$.
 \begin{center}
   \begin{tabular}{llll}
     $(12)a_{1}=a_{1}$ & $(123)a_{1}=a_{4}$ & $(1234)a_{1}=a_{4}$ & $(12)(34)a_{1}=a_{1}$ \\
@@ -1015,7 +1024,7 @@ simétrico $S_{4}$ sobre los elementos de la base de $C_{0}(G_{4})$ y $C_{1}(G_{
   \end{tabular}
 \end{center}
 Entonces tenemos las representaciones $\theta_{1}$ y $\theta_{2}$ de
-$S_{4}$ en $C_{0}(G_{4})$ y $C_{1}(G_{4})$ respectivamente como se
+$S_{4}$ en $C_{0}(M_{4})$ y $C_{1}(M_{4})$ respectivamente como se
 muestra enseguida:
 
 \begin{center}
@@ -1100,14 +1109,14 @@ muestra enseguida:
 de tal forma que
 
 \begin{tabular}{r r r}
-  $\chi_{C_{0}(G_{4})}((1))=6$, & $\chi_{C_{0}(G_{4})}((12))=2$, & $\chi_{C_{0}(G_{4})}((123))=0$, \\
-  $\chi_{C_{0}(G_{4})}((1234))=0$, & $\chi_{C_{0}(G_{4})}((12)(34))=2$, & \\
+  $\chi_{C_{0}(M_{4})}((1))=6$, & $\chi_{C_{0}(M_{4})}((12))=2$, & $\chi_{C_{0}(M_{4})}((123))=0$, \\
+  $\chi_{C_{0}(M_{4})}((1234))=0$, & $\chi_{C_{0}(M_{4})}((12)(34))=2$, & \\
 \end{tabular}
 \bigskip	
 
 \begin{tabular}{r r r}
-  $\chi_{C_{1}(G_{4})}((1))=3$, & $\chi_{C_{1}(G_{4})}((12))=1$, & $\chi_{C_{1}(G_{4})}((123))=0$, \\
-  $\chi_{C_{1}(G_{4})}((1234))=-1$, & $\chi_{C_{1}(G_{4})}((12)(34))=-1$. & \\
+  $\chi_{C_{1}(M_{4})}((1))=3$, & $\chi_{C_{1}(M_{4})}((12))=1$, & $\chi_{C_{1}(M_{4})}((123))=0$, \\
+  $\chi_{C_{1}(M_{4})}((1234))=-1$, & $\chi_{C_{1}(M_{4})}((12)(34))=-1$. & \\
 \end{tabular}
 \medskip
 
@@ -1124,40 +1133,40 @@ $S_{4}$ tenemos:
   $\chi_{S^{(2,1,1)}}$ & 3 & -1 & 0 & 1 & -1 \\
   $\chi_{S^{(2,2)}}$ & 2 & 0 & -1 & 0 & 2 \\
     \hline
-  $\chi_{C_{0}(G_{4})}$ & 6 & 2 & 0 & 0 & 2 \\
-  $\chi_{C_{1}(G_{4})}$ & 3 & 1 & 0 & -1 & -1
+  $\chi_{C_{0}(M_{4})}$ & 6 & 2 & 0 & 0 & 2 \\
+  $\chi_{C_{1}(M_{4})}$ & 3 & 1 & 0 & -1 & -1
 \end{tabular}
 
-Tabla de caracteres de $S_{4}$, $C_{0}(G_{4})$ y $C_{1}(G_{4})$
+Tabla de caracteres de $S_{4}$, $C_{0}(M_{4})$ y $C_{1}(M_{4})$
 \end{center}
 
-Queremos escribir a $C_{0}(G_{4})$ como suma directa de módulos
-irreducibles de $S_{4}$, así que calculemos el producto interno de $\chi_{C_{0}(G_{4})}$ con los
+Queremos escribir a $C_{0}(M_{4})$ como suma directa de módulos
+irreducibles de $S_{4}$, así que calculemos el producto interno de $\chi_{C_{0}(M_{4})}$ con los
 caracteres de los módulos irreducibles de $S_{4}$ para conocer la
 multiplicidad con la que aparecen estos últimos.
 (\setlength{\fboxsep}{0pt}\colorbox{green}{COROLARIO(referencia)todavía
 no escrito})
 \begin{align*}
-  \langle\chi_{C_{0}(G_{4})},\chi_{\mathbb{C}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(1\cdot2)+(8)(1\cdot0)+(6)(1\cdot0)+(3)(1\cdot2))\\
+  \langle\chi_{C_{0}(M_{4})},\chi_{\mathbb{C}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(1\cdot2)+(8)(1\cdot0)+(6)(1\cdot0)+(3)(1\cdot2))\\
   &=\frac{1}{24}(6+12+6)=1\\
-  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(1,1,1,1)}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(-1\cdot2)+(8)(1\cdot0)+(6)(-1\cdot0)+(3)(1\cdot2))\\
+  \langle\chi_{C_{0}(M_{4})},\chi_{S^{(1,1,1,1)}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(-1\cdot2)+(8)(1\cdot0)+(6)(-1\cdot0)+(3)(1\cdot2))\\
   &=\frac{1}{24}(6-12+6)=0\\
-  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(3,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(1\cdot2)+(8)(0\cdot0)+(6)(-1\cdot0)+(3)(-1\cdot2))\\
+  \langle\chi_{C_{0}(M_{4})},\chi_{S^{(3,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(1\cdot2)+(8)(0\cdot0)+(6)(-1\cdot0)+(3)(-1\cdot2))\\
   &=\frac{1}{24}(18+12-6)=1\\
-  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(2,1,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(-1\cdot2)+(8)(0\cdot0)+(6)(1\cdot0)+(3)(-1\cdot2))\\
+  \langle\chi_{C_{0}(M_{4})},\chi_{S^{(2,1,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(-1\cdot2)+(8)(0\cdot0)+(6)(1\cdot0)+(3)(-1\cdot2))\\
   &=\frac{1}{24}(18-12-6)=0\\
-  \langle\chi_{C_{0}(G_{4})},\chi_{S^{(2,2)}}\rangle &=\frac{1}{24}((1)(2\cdot6)+(6)(0\cdot2)+(8)(-1\cdot0)+(6)(0\cdot0)+(3)(2\cdot2))\\
+  \langle\chi_{C_{0}(M_{4})},\chi_{S^{(2,2)}}\rangle &=\frac{1}{24}((1)(2\cdot6)+(6)(0\cdot2)+(8)(-1\cdot0)+(6)(0\cdot0)+(3)(2\cdot2))\\
   &=\frac{1}{24}(12+12)=1
 \end{align*}
 De lo anterior se sigue:
-$$C_{0}(G_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}$$
+$$C_{0}(M_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}$$
 De la \setlength{\fboxsep}{0pt}\colorbox{green}{TABLA S4(referencia)}
 podemos observar que $\chi_{C_{1}(G_{4})}=\chi_{S^{(3,1)}}$, así que  
-$$C_{1}(G_{4})\cong S^{(3,1)}$$
+$$C_{1}(M_{4})\cong S^{(3,1)}$$
 Con lo cual tenemos el siguiente complejo de cadenas:
  \[
   \begin{CD}
-    0 @>{\partial_{2}}>> C_{1}(G_{4}) @>{\partial_{1}}>> C_{0}(G_{4}) @>{\varepsilon}>> \mathbb{C}\\
+    0 @>{\partial_{2}}>> C_{1}(M_{4}) @>{\partial_{1}}>> C_{0}(M_{4}) @>{\varepsilon}>> \mathbb{C}\\
     @VVV   @V{\cong}VV   @V{\cong}VV   @VVV    \\
     0 @>{\widehat\partial_{2}}>>  S^{(3,1)} @>{\widehat\partial_{1}}>> 
     \mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
