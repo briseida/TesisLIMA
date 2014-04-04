@@ -821,7 +821,11 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
   $$A=\{\cdots,A_{2},A_{1},A_{0},A_{-1},A_{-2},\cdots\}$$
   de espacios vectoriales $A_{k}$, junto con una colección
   $\partial=\{\partial_{k}\mid k \in \mathbb{Z}\}$ de transformaciones
-  lineales tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$ y $\partial_{k-1}\partial_{k}=0.$
+  lineales tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$ y
+  $\partial_{k-1}\partial_{k}=0.$
+
+  Al complejo de cadenas en donde $A_{-1}=\mathbb{C}$ y $\partial_{0}=\varepsilon$,
+  donde $\varepsilon$ es la función aumento, le llamamos \textbf{complejo de cadenas aumentado}.
 \end{definition}
 
 \begin{theorem}
@@ -1163,7 +1167,31 @@ $$C_{0}(M_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}$$
 De la \setlength{\fboxsep}{0pt}\colorbox{green}{TABLA S4(referencia)}
 podemos observar que $\chi_{C_{1}(G_{4})}=\chi_{S^{(3,1)}}$, así que  
 $$C_{1}(M_{4})\cong S^{(3,1)}$$
-Con lo cual tenemos el siguiente complejo de cadenas:
+Con lo cual tenemos los siguientes complejos de cadenas aumentados:
+
+\begin{small}
+    \[
+    \begin{array}{ccccccccccccc}
+      \dots 0 & \rightarrow & 0 &
+      \stackrel{\partial_{2}}{\rightarrow} & C_{1}(M_{4}) &
+      \stackrel{\partial_{1}}{\rightarrow} & C_{0}(M_{4}) & \stackrel{\varepsilon}{\rightarrow} &
+      \mathbb{C} & \rightarrow  & 0 & \rightarrow & 0 \dots
+    \end{array} 
+    \]
+  \end{small}
+\begin{small}
+    \[
+    \begin{array}{ccccccccccccc}
+      \dots 0 & \rightarrow & 0 &
+      \stackrel{\widehat\partial_{2}}{\rightarrow} &  S^{(3,1)} &
+      \stackrel{\widehat\partial_{1}}{\rightarrow} & \mathbb{C} \oplus
+      S^{(3,1)}\oplus S^{(2,2)} & \stackrel{\widehat\varepsilon}{\rightarrow} &
+      \mathbb{C} & \rightarrow  & 0 & \rightarrow & 0 \dots
+    \end{array} 
+    \]
+  \end{small}
+
+Relacionados mediante:
  \[
   \begin{CD}
     0 @>{\partial_{2}}>> C_{1}(M_{4}) @>{\partial_{1}}>> C_{0}(M_{4}) @>{\varepsilon}>> \mathbb{C}\\
@@ -1173,8 +1201,11 @@ Con lo cual tenemos el siguiente complejo de cadenas:
   \end{CD}
   \]
 \end{example}
-
-
+Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y $\widetilde H_{1}(M_{4})$ 
+$$\varepsilon[S^{(3,1)}]=0$$
+$$\varepsilon[S^{(2,2)}]=0$$
+$\varepsilon[\mathbb{C}]=\mathbb{C}$ pues $\varepsilon$ es
+sobreyectiva. Así que $\ker \varepsilon=S^{(3,1)}\oplus S^{(2,2)}$
 \bigskip
 
 \begin{center}
