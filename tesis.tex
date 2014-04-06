@@ -147,6 +147,7 @@ En el primer capítulo...
 
 \chapter{Repaso de álgebra lineal}
 %\label{cha:repaso-algebra-line}
+\section{Espacios vectoriales}
 
 En este capítulo se revisan algunos resultados de álgebra lineal, las
 pruebas se omiten pero se puede consultar algún texto de álgebra
@@ -201,7 +202,6 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 \end{definition}
 
 \begin{theorem}
-  \label{esp-isomorfos}
   Sean $W_{1}$ y $W_{2}$ subespacios de $V$ tales que
   $V=W_{1}+W_{2}$. Luego, $V=W_{1}\oplus W_{2}$ si y solo si 
   $$\dim(V)=\dim(W_{1})+\dim(W_{2}).$$
@@ -219,6 +219,15 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 \end{theorem}
 
 \begin{theorem}
+  \label{esp-iguales}
+  Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
+  $n$. Entonces, $W$ es dimensionalmente finito y $\dim(W)\leq
+  n$. Además, si $\dim(W)=n$, entonces $W=V$.
+\end{theorem}
+
+\section{Transformaciones lineales}
+
+\begin{theorem}
   \label{imT}
   Sean $V$ y $W$ espacios vectoriales y sea $T:V \rightarrow W$
   lineal. Si $V$ tiene una base $\beta=\{v_{1},\ldots,v_{n}\}$,
@@ -226,6 +235,7 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 \end{theorem}
 
 \begin{theorem}
+  \label{esp-isomorfos}
   Sean $V$ y $W$ espacios vectoriales (sobre el mismo campo
   $F$). Entonces $V$ es isomorfo a $W$ si y solo si $\dim (V)=\dim(W).$ 
 \end{theorem}
@@ -915,9 +925,23 @@ isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 \chapter{Gráficas}
 %\label{cha:primer-capitulo}
+Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V$
+de $p$ \emph{vértices} junto con un conjunto preescrito $X$ de $q$ pares no
+ordenados de puntos distintos de $V$. Cada par $x=\{u,v\}$ de puntos
+en $X$ es una \emph{arista} de $G$, y se dice que $x$ une a $u$ y a
+$v$. Escribimos a $x=uv$ y decimos que $u$ y $v$ son vértices
+adyacentes.
+
+Completa, maximal
+\begin{definition}
+  Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
+  subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
+  \textbf{gráfica de intersección} de $F$ es denotada
+\end{definition}
+
 \section{Gráficas de Clanes}
 
-\chapter{Homologías .....}
+\chapter{Homologías del complejo de emparejamiento}
 %\label{cha:primer-capitulo}
 \section{Complejo de emparejamiento}
 
@@ -971,11 +995,11 @@ Es decir,
       \draw[help lines] (-2,0);% grid (0,2);
       \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
       \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90,L=\overline{12}]{12}
-      \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{34}
-      \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90]{24}
-      \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90]{13}
-      \Vertex[x=0,y=2,Math,LabelOut,Lpos=90]{14}
-      \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90]{23} \Edge(12)(34)
+      \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90,L=\overline{34}]{34}
+      \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90,L=\overline{24}]{24}
+      \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90,L=\overline{13}]{13}
+      \Vertex[x=0,y=2,Math,LabelOut,Lpos=90,L=\overline{14}]{14}
+      \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90,L=\overline{23}]{23} \Edge(12)(34)
       \Edge(24)(13) \Edge(14)(23)
     \end{tikzpicture}
   
@@ -983,12 +1007,12 @@ Es decir,
   \end{minipage}
   % \begin{minipage}{0.3\linewidth}
   %   \centering
-  %   \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+  %   \begin{tikzpicture}[x=1 cm,y=0.8 cm]
   %     \draw[help lines] (-2,0);% grid (2,0);
   %     \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-  %     \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34} \Vertex[x=0,
-  %     y=0,Math,LabelOut,Lpos=-90]{24,13} \Vertex[x=2,
-  %     y=0,Math,LabelOut,Lpos=-90]{14,23}
+  %     \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34} 
+  %     \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90]{24,13} 
+  %     \Vertex[x=2,y=0,Math,LabelOut,Lpos=-90]{14,23}
   %   \end{tikzpicture}
   
   %   $K(G_{4})$
