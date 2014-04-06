@@ -187,7 +187,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 
 \begin{definition}
   Si $W_{1}$ y $W_{2}$ son dos subconjuntos no vacíos de un espacio
-  vectorial $V$, entonces la \textbf{suma de $W_{1}$ y $W_{2}$}, que se
+  vectorial $V$, entonces la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
   expresa como $W_{1}+W_{2}$, es el conjunto $\{x+y:x\in W_{1}$ y $y\in
   W_{_2}\}$. La suma de cualquier número finito de subconjuntos no
   vacíos de $V$, $W_{1},\cdots,W_{n}$, se define análogamente como el
@@ -442,8 +442,17 @@ espacios vectoriales complejos y de dimensión finita.
     g}=\rho(\sigma)(\rho(\tau)v_{g})=\rho(\sigma)\rho(\tau)v_{g} $$
   así que $\rho(\sigma\tau)=\rho(\sigma)\rho(\tau)$. Por definición el 
   grado de la representación es el orden de $G$.
-
 \end{example}
+
+\section{Submódulos}
+
+\begin{definition}
+  Sea $V$ un $G$-módulo. Un \textbf{submódulo} de $V$ es un subespacio
+  $W$ que es invariante bajo la acción de $G$, es decir, $ gw\in W$
+  para todos $w\in W$, $g\in G$, tal que $W$ junto con la acción de
+  $G$ es en sí mismo un $G$-módulo. Escribiremos $W\leq V$ si $W$ es
+  submódulo de $V$. 
+\end{definition}
 
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
@@ -925,19 +934,19 @@ isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 \chapter{Gráficas}
 %\label{cha:primer-capitulo}
-Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V$
-de $p$ \emph{vértices} junto con un conjunto preescrito $X$ de $q$ pares no
-ordenados de puntos distintos de $V$. Cada par $x=\{u,v\}$ de puntos
-en $X$ es una \emph{arista} de $G$, y se dice que $x$ une a $u$ y a
-$v$. Escribimos a $x=uv$ y decimos que $u$ y $v$ son vértices
-adyacentes.
+% Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V$
+% de $p$ \emph{vértices} junto con un conjunto preescrito $X$ de $q$ pares no
+% ordenados de puntos distintos de $V$. Cada par $x=\{u,v\}$ de puntos
+% en $X$ es una \emph{arista} de $G$, y se dice que $x$ une a $u$ y a
+% $v$. Escribimos a $x=uv$ y decimos que $u$ y $v$ son vértices
+% adyacentes.
 
-Completa, maximal
-\begin{definition}
-  Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
-  subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
-  \textbf{gráfica de intersección} de $F$ es denotada
-\end{definition}
+% Completa, maximal
+% \begin{definition}
+%   Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
+%   subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
+%   \textbf{gráfica de intersección} de $F$ es denotada
+% \end{definition}
 
 \section{Gráficas de Clanes}
 
