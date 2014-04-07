@@ -186,7 +186,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 \end{theorem}
 
 \begin{theorem}
-  \label{dim-esp-vect}
+  \label{dim-esp-vec}
   Sean $W_{1}$ y $W_{2}$ subespacios de un espacio vectorial
   $V$. Entonces, 
   $$\dim(W_{1}+W_{2})=\dim(W_{1})+\dim(W_{2})-\dim(W_{1}\cap W_{2}).$$ 
@@ -473,6 +473,19 @@ espacios vectoriales complejos y de dimensión finita.
   generado} por $W$, y se denota por $\langle W\rangle$. Si $V=\langle
   W \rangle$ decimos que $W$ \emph{genera} a $V$. 
 \end{definition}
+
+Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma directa} de
+$U$ y $V$ al conjunto $U\times V=\{(u,v):u\in U,v\in V\}$ con las operaciones
+$$(u,v)+(u_{1},v_{1})=(u+u_{1},v+v_{1})$$
+$$k(u,v)=(ku,kv),$$
+donde $u,u_{1}\in U$, $v,v_{1}\in V$ y $k\in \mathbb{C}$. Con estas
+operaciones $U\times V$ es un espacio vectorial, que designaremos por
+$$U\oplus V.$$
+
+Así que dados $V$ y $W$ $G$-módulos, podemos formar un tercer módulo a partir
+de la suma directa $V\oplus W$, definiendo la acción como
+$a(v,w)=(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
+cantidad finita de $G$-módulos.
 
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
