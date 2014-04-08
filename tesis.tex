@@ -500,7 +500,30 @@ contienen a $\bigcup_{i\in I}W_{i}$. En el caso de que $V=\sum_{i\in
 $\{W_{i}\}$.
 
 \textbf{\emph{Observación:}} En el caso de que $W_{1}$ y $W_{2}$ son
-submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
+submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
+$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
+
+\begin{proposition}
+  Supongamos que $S\leq M$, $S$ irreducible, si $M=S\oplus T$ donde $S$
+  tiene multiplicidad uno y sea $S^{'}\leq M$, tal que $S^{'}\cong S$, entonces $S=S^{'}$.
+\end{proposition}
+
+\begin{proof}[Demostración.]
+  Consideremos $S\cap S^{'}\leq S$, así que $S\cap S^{'}=0$ o $S\cap
+  S^{'}=S$, pues $S$ es irreducible.
+
+  Si $S\cap S^{'}=0$, consideremos $U$ el submódulo generado por $S\cup S'$ al cual
+  denotamos como $S+S^{'}$ y como $S\cap S^{'}=0$, entonces
+  $S+S^{'}\cong S\oplus S^{'}$ como notamos en la observación anterior,
+  así que $M$ tendría un submódulo isomorfo a dos copias de S, lo cual
+  no es posible por hipótesis. 
+  
+ Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap
+ S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$ así que
+ $\dim(S)=\dim(S^{'})$. Por lo tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
+ sea $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
+ que $S\cap S^{'}=S^{'}$, con lo que $S=S^{'}$ como se quería demostrar.
+\end{proof}
 
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
