@@ -248,6 +248,7 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 \end{theorem}
 
 \begin{theorem}{(\textbf{Teorema de Isomorfismo})}
+  \label{teorema-isomorfismo-esp}
   Si $f:V\rightarrow W$ es una transformación lineal, el espacio
   cociente $V/\ker(f)\cong \im(f)$. Un isomorfismo entre estos dos
   espacios es el siguiente:
@@ -530,6 +531,20 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
  $\dim(S)=\dim(S^{'})$. Por lo tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
  sea $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
  que $S\cap S^{'}=S^{'}$, con lo que $S=S^{'}$ como se quería demostrar.
+\end{proof}
+
+\begin{theorem}[Lema de Shur]
+  Si $V$ y $W$ son $G$-módulos irreducibles, y $\phi:V\rightarrow W$
+  es una transformación lineal no trivial, entonces $\phi$ es un isomorfismo.
+\end{theorem}
+
+\begin{proof}[Demostración.]
+  Como $\ker \phi\leq V$, y $V$ es irreducible, entonces $\ker \phi=0$
+  o $\ker\phi=V$, pero  $\ker\phi\neq V$ pues $\phi$ es no trivial,
+  así que $\ker \phi=0$ y por lo tanto $\phi$ es inyectiva. 
+
+  Análogamente, $\im\phi\leq W$ y $\im \phi\neq 0$, así que $\im
+  \phi=W$ y entonces $\phi$ es suprayectiva.
 \end{proof}
 
 \chapter{Homología de complejos simpliciales}
