@@ -547,6 +547,24 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
   \phi=W$ y entonces $\phi$ es suprayectiva.
 \end{proof}
 
+\begin{proposition}
+  Sea $f:V\rightarrow W$ una transformación lineal, $S\leq V$ con $S$
+  irreducible, entonces $f[S]=S$ o $f[S]=0$.
+\end{proposition}
+
+\begin{proof}[Demostración.]
+  Tomemos el siguiente morfismo de módulos
+  $S\stackrel{i}{\hookrightarrow} V\stackrel{f}{\rightarrow}W$ donde
+  $i$ es función inclusión. Así que $S/\ker(f\circ i)\cong\im(f\circ
+  i)$ por el teorema \ref{teorema-isomorfismo-esp}. Como $\ker(f\circ
+  i)\leq S$ entonces $\ker(f\circ i)=0$ o $\ker(f\circ i)=S$, pues $S$ es irreducible.
+
+  Si $\ker(f\circ i)=0$, se sigue que
+  $$ S=S/0\cong\im(f\circ i)=f(S)$$
+
+  Por otro lado, si $\ker(f\circ i)=S$, tenemos
+  $$ 0=S/S\cong\im(f\circ i)=f(S)$$
+\end{proof}
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
 
