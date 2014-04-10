@@ -533,9 +533,10 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
  que $S\cap S^{'}=S^{'}$, con lo que $S=S^{'}$ como se quería demostrar.
 \end{proof}
 
-\begin{theorem}[Lema de Shur]
+\begin{theorem}[Lema de Schur]
+  \label{lema-schur}
   Si $V$ y $W$ son $G$-módulos irreducibles, y $\phi:V\rightarrow W$
-  es una transformación lineal no trivial, entonces $\phi$ es un isomorfismo.
+  es un morfismo de $G$-módulos no trivial, entonces $\phi$ es un isomorfismo.
 \end{theorem}
 
 \begin{proof}[Demostración.]
@@ -548,8 +549,9 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
 \end{proof}
 
 \begin{proposition}
-  Sea $f:V\rightarrow W$ una transformación lineal, $S\leq V$ con $S$
-  irreducible, entonces $f[S]=S$ o $f[S]=0$.
+  \label{im-mod-irreducible}
+   Si $V$ y $W$ son $G$-módulos, $f:V\rightarrow W$ un morfismo de $G$-módulos, $S\leq V$ con $S$
+  irreducible, entonces $f[S]\cong S$ o $f[S]=0$.
 \end{proposition}
 
 \begin{proof}[Demostración.]
@@ -560,11 +562,12 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
   i)\leq S$ entonces $\ker(f\circ i)=0$ o $\ker(f\circ i)=S$, pues $S$ es irreducible.
 
   Si $\ker(f\circ i)=0$, se sigue que
-  $$ S=S/0\cong\im(f\circ i)=f(S)$$
+  $$S\cong S/0\cong\im(f\circ i)=f(S)$$
 
   Por otro lado, si $\ker(f\circ i)=S$, tenemos
-  $$ 0=S/S\cong\im(f\circ i)=f(S)$$
+  $$0=S/S\cong\im(f\circ i)=f(S)$$
 \end{proof}
+
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
 
@@ -1353,12 +1356,19 @@ Relacionados mediante:
   \end{CD}
   \]
 \end{example}
-Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y $\widetilde H_{1}(M_{4})$ 
-$$\varepsilon[S^{(3,1)}]=0$$
-$$\varepsilon[S^{(2,2)}]=0$$
-$\varepsilon[\mathbb{C}]=\mathbb{C}$ pues $\varepsilon$ es
-sobreyectiva. Así que $\ker \varepsilon=S^{(3,1)}\oplus S^{(2,2)}$
-\bigskip
+Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
+$\widetilde H_{1}(M_{4})$.
+
+Por el teorema \ref{teorema-isomorfismo-esp} y como $\widehat\varepsilon$ es suprayectiva tenemos:
+$$\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)}/\ker(\widehat\varepsilon)\cong\im\widehat\varepsilon=\mathbb{C}$$
+entonces
+$$\ker\widehat\varepsilon= S^{(3,1)}\oplus S^{(2,2)}$$.
+
+% $$\widetilde H_{0}(M_{4})=Z_{0}(M_{4})/B_{0}(M_{4})/=\ker
+% \widehat\varepsilon/\im \widehat\partial_{1}$$
+% $$\widetilde H_{1}(M_{4})=Z_{1}(M_{4})/B_{1}(M_{4})/=\ker
+% \widehat\partial_{1}/\im \widehat\partial_{2}$$
+%por el terema \ref{lema-shur} \ref{im-mod-irreducible}
 
 \begin{center}
 \begin{small}
