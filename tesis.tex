@@ -510,7 +510,13 @@ $\{W_{i}\}$.
 \textbf{\emph{Observación:}} En el caso de que $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
 $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
-
+% dado por el siguiente isomorfismo:
+% \begin{align*}
+%   \phi:W_{1}+W_{2}&\rightarrow W_{1}\oplus W_{2}\\
+%   w_{1} & \mapsto  (w_{1},0)\\
+%   w_{2} & \mapsto  (0,w_{2})\\
+%   0 & \mapsto (0,0)
+% \end{align*}
 \begin{proposition}
   Supongamos que $S\leq M$, $S$ irreducible, si $M=S\oplus T$ donde $S$
   tiene multiplicidad uno y sea $S^{'}\leq M$, tal que $S^{'}\cong S$, entonces $S=S^{'}$.
@@ -551,7 +557,7 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
 \begin{proposition}
   \label{im-mod-irreducible}
    Si $V$ y $W$ son $G$-módulos, $f:V\rightarrow W$ un morfismo de $G$-módulos, $S\leq V$ con $S$
-  irreducible, entonces $f[S]\cong S$ o $f[S]=0$.
+  irreducible, entonces $f(S)\cong S$ o $f(S)=0$.
 \end{proposition}
 
 \begin{proof}[Demostración.]
