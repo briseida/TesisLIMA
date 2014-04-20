@@ -1167,7 +1167,8 @@ $\beta_{1}=\{b_{1},b_{2},b_{3}\}$ como las bases de $C_{0}(M_{4})$ y
 $C_{1}(M_{4})$ respectivamente. Notemos que $\dim C_{0}(M_{4})=6$ y
 $\dim C_{1}(M_{4})=3$. A continuación se tiene la acción un
 representante de cada clase de conjugación del grupo
-simétrico $S_{4}$ sobre los elementos de la base de $C_{0}(M_{4})$ y $C_{1}(M_{4})$.
+simétrico $S_{4}$ sobre los elementos de la base de $C_{0}(M_{4})$ y
+$C_{1}(M_{4})$.
 \begin{center}
   \begin{tabular}{llll}
     $(12)a_{1}=a_{1}$ & $(123)a_{1}=a_{4}$ & $(1234)a_{1}=a_{4}$ & $(12)(34)a_{1}=a_{1}$ \\
@@ -1336,11 +1337,12 @@ C_{1}(M_{4})\cong S^{(3,1)}
 \end{equation}
 Con lo cual tenemos los siguientes complejos de cadenas aumentados
 donde $\partial_{1},\partial_{2},\varepsilon$ son los correspondientes
-operadores frontera y la función aumento; $\widehat\partial_{2},\widehat\partial_{1},\widehat\varepsilon$ son
-los morfismos inducidos bajo los isomorfismo en las expresiones
-\ref{eq:C_0(M_4)} y \ref{eq:C_1(M_4)}.
+operadores frontera y la función aumento;
+$\widehat\partial_{2},\widehat\partial_{1},\widehat\varepsilon$ son
+morfismos de módulos. 
+
 \begin{small}
-    \[
+  \[
     \begin{array}{ccccccccccccc}
       \dots 0 & \rightarrow & 0 &
       \stackrel{\partial_{2}}{\rightarrow} & C_{1}(M_{4}) &
@@ -1349,6 +1351,7 @@ los morfismos inducidos bajo los isomorfismo en las expresiones
     \end{array} 
     \]
   \end{small}
+
 \begin{small}
     \[
     \begin{array}{ccccccccccccc}
@@ -1360,59 +1363,84 @@ los morfismos inducidos bajo los isomorfismo en las expresiones
     \end{array} 
     \]
   \end{small}
-Obteniendo el diagrama:
+Obteniendo el siguiente diagrama conmutativo, donde $f_{1}$ y $f_{0}$
+son los isomorfimos obtenidos en las expresiones \ref{eq:C_1(M_4)}, \ref{eq:C_0(M_4)}
+ respectivamente: \setlength{\fboxsep}{0pt}\colorbox{green}{(porqué conmuta)}
 \begin{figure}[!hbtp]
   \centering
   \[
   \begin{CD}
     0 @>{\partial_{2}}>> C_{1}(M_{4}) @>{\partial_{1}}>> C_{0}(M_{4}) @>{\varepsilon}>> \mathbb{C}\\
-    @VVV   @V{\cong}VV   @V{\cong}VV   @VVV    \\
+    @VVV   @V{f_{1}}VV   @V{f_{0}}VV   @VVV    \\
     0 @>{\widehat\partial_{2}}>> S^{(3,1)} @>{\widehat\partial_{1}}>>
     \mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)} @>{\widehat
       \varepsilon}>> \mathbb{C}
   \end{CD}
   \]
   
-  \caption{Diagrama...........}
-\label{fig:emparejamiento-4}
+  \caption{Diagrama conmutativo de los complejos de cadenas de $M_{4}$}
+\label{fig:diagrama-conmutativo4}
 \end{figure}
 
-\end{example}
-Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
+Ahora calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
 $\widetilde H_{1}(M_{4})$.
 
 Por el teorema \ref{teorema-isomorfismo-mod} y como $\widehat\varepsilon$ es suprayectiva tenemos:
 $$\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)}/\ker(\widehat\varepsilon)\cong\im\widehat\varepsilon=\mathbb{C}$$
 entonces
-$$\ker\widehat\varepsilon= S^{(3,1)}\oplus S^{(2,2)}.$$
+\begin{equation}
+\label{ker-0-4}
+\ker\widehat\varepsilon\cong S^{(3,1)}\oplus S^{(2,2)}
+\end{equation}
 
-$\im\widehat\partial_{1}=S^{(3,1)}$ o $\im\widehat\partial_{1}=0$ por
-la proposición \ref{im-mod-irreducible}.....falta incluir proposición
-\ref{modulos-iguales}. 
+Por otra parte tenemos que $\im\widehat\partial_{1}\cong S^{(3,1)}$ o $\im\widehat\partial_{1}=0$ por
+la proposición \ref{im-mod-irreducible}
 
-Como
-$\partial_{1}((\overline{12},\overline{34}))=\overline{34}-\overline{12}$
-(definición del operador frontera ......) se sigue que $\im\partial_{1}\neq 0$, así
-$\im\widehat\partial_{1}\neq 0$ (diagrama es conmutativo....chasing
-diagram,...). Un razonamiento similar se sigue para cálculos .....
+Como $\partial_{1}((\overline{12},\overline{34}))=\overline{34}-\overline{12}$
+tenemos que $\im\partial_{1}\neq 0$ (en general $\partial_{k}\neq 0$
+por definición del operador frontera), se sigue que
+$\im\widehat\partial_{1}\neq 0$ puesto que el diagrama es
+conmutativo. Por lo tanto
+\begin{equation}
+\label{im-1-4}
+\im\widehat\partial_{1}\cong S^{(3,1)}
+\end{equation}
+Un razonamiento similar usamos para cálculos
+posteriores.
 
-Así que 
-$$\im\widehat\partial_{1}=S^{(3,1)}$$
-Por el teorema \ref{teorema-isomorfismo-mod}
-$$S^{(3,1)}=\im\widehat\partial_{1}\cong
-S_{(3,1)}/\ker\widehat\partial_{1}$$
+De las expresiones \ref{ker-0-4}, \ref{im-1-4} y de la
+proposición \ref{modulos-iguales} concluimos:
+\begin{equation}
+\label{ker-0-4=}
+\ker\widehat\varepsilon=S^{(3,1)}\oplus S^{(2,2)}
+\end{equation}
+\begin{equation}
+\label{im-1-4=}
+\im\widehat\partial_{1}=S^{(3,1)}
+\end{equation}
+
+Nuevamente por el teorema \ref{teorema-isomorfismo-mod}
+$$S^{(3,1)}/\ker\widehat\partial_{1}\cong\im\widehat\partial_{1}= S^{(3,1)} $$
 entonces
-$$\ker\widehat\partial_{1}=0$$
-$\im\widehat\partial_{2}=\widehat\partial_{2}(0)=0$
+\begin{equation}
+\ker\widehat\partial_{1}=0
+\label{ker-1-4}
+\end{equation}
 
-Por lo tanto,
+$\widehat\partial_{2}$ es un morfismo de módulos, así que
+\begin{equation}
+\im\widehat\partial_{2}=\widehat\partial_{2}(0)=0
+\label{im-2-4}
+\end{equation}
+Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
+\ref{ker-1-4} y \ref{im-2-4} obtenemos:
 \begin{align*}
 \widetilde H_{0}(M_{4})&=\ker \widehat\varepsilon/\im
 \widehat\partial_{1}=S^{(3,1)}\oplus S^{(2,2)}/S^{(3,1)}=S^{(2,2)},\\
 \widetilde H_{1}(M_{4})&=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=0/0=0.
 \end{align*}
 
-por el teorema \ref{lema-schur} y \ref{im-mod-irreducible}
+\end{example}
 
 \begin{example}
   Considérese el complejo de emparejamiento $M_{5}$, que
@@ -1450,7 +1478,7 @@ la gráfica de emparejamiento $G_{5}$ se muestra en la figura \ref{fig:G_5},
     \AssignVertexLabel{b}{\textsl{$\overline{35}$},\textsl{$\overline{25}$},\textsl{$\overline{24}$},\textsl{$\overline{14}$},\textsl{$\overline{13}$}}
   \end{tikzpicture}
   
-  \caption{Complejo de emparejamiento $G_{5}$.}
+  \caption{Complejo de emparejamiento $G_{5}$}
   \label{fig:G_5}
 \end{figure}
 
