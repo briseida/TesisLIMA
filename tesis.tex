@@ -470,17 +470,15 @@ el campo de los complejos.
   submódulo de $V$. 
 \end{definition}
 
-\begin{theorem}
-  \label{interseccion-submodulos}
-  Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
-  colección de submódulos de $V$ es un submódulo de $V$.
-\end{theorem}
+% \begin{theorem}
+%   \label{interseccion-submodulos}
+%   Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
+%   colección de submódulos de $V$ es un submódulo de $V$.
+% \end{theorem}
 
 \begin{definition}
-  Sean $V$ un $G$-módulo y $W\subseteq V$. La intersección de todos
-  los submódulos de $V$ que contienen a $W$ se llama el \textbf{submódulo
-  generado} por $W$, y se denota por $\langle W\rangle$. Si $V=\langle
-  W \rangle$ decimos que $W$ \emph{genera} a $V$. 
+  Sea $V$ un $G$-módulo. Al submódulo de $V$ generado por las combinaciones lineales de los
+  elementos de $W$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
 \end{definition}
 
 Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma directa} de
@@ -496,16 +494,11 @@ de la suma directa $V\oplus W$, definiendo la acción como
 $a(v,w)=(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
 cantidad finita de $G$-módulos.
 
-Por otro lado, si $V$ es un $G$-módulo y $W_{1}$, $W_{2}$ son
-submódulos, la intersección de todos los submódulos de $V$ que
-contienen a $W_{1}\cup W_{2}$ es un submódulo de $V$ por el teorema
-\ref{interseccion-submodulos}, se llama la \textbf{suma} de $W_{1}$ y $W_{2}$ y
-se denota con $W_{1}+W_{2}$. Ésta definición se puede extender a una
-colección arbitraria $\{W_{i}\}_{i\in I}$ de submódulos de $V$ es
-decir, $\sum_{i\in I}W_{i}$ es la intersección de todos los submódulos de $V$ que
-contienen a $\bigcup_{i\in I}W_{i}$. En el caso de que $V=\sum_{i\in
-  I}W_{i}$, decimos que $V$ está generado por los submódulos
-$\{W_{i}\}$.
+Por otro lado, si $V$ es un $G$-módulo, se llama la \textbf{suma} de $W_{1}$ y $W_{2}$ y se denota con
+$W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$. Ésta definición se puede extender a una
+colección arbitraria $\{W_{i}\}_{i\in I}$ es
+decir, $\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
+
 
 \textbf{\emph{Observación:}} En el caso de que $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
@@ -518,6 +511,7 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
 %   0 & \mapsto (0,0)
 % \end{align*}
 \begin{proposition}
+  \label{modulos-iguales}
   Supongamos que $S\leq M$, $S$ irreducible, si $M=S\oplus T$ donde $S$
   tiene multiplicidad uno y sea $S^{'}\leq M$, tal que $S^{'}\cong S$, entonces $S=S^{'}$.
 \end{proposition}
@@ -573,7 +567,11 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
   Por otro lado, si $\ker(f\circ i)=S$, tenemos
   $$0=S/S\cong\im(f\circ i)=f(S)$$
 \end{proof}
-
+\bigskip
+\begin{theorem}[Teorema de isomorfismo de módulos]
+  \label{teorema-isomorfismo-mod}
+  Sean.....
+\end{theorem}
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
 
@@ -1287,23 +1285,25 @@ de tal forma que
 
 Añadiendo estos dos últimos caracteres a la tabla de caracteres de
 $S_{4}$ tenemos:
-\begin{center}
-\begin{tabular}{c|r r r r r}
-  No. Elementos& 1 & 6 & 8 & 6 & 3 \\
-  Clase & (1) & (12) & (123) & (1234) &(12)(34)\\
+\begin{table}[htpb]
+  \centering
+  \begin{tabular}{c|r r r r r}
+    No. Elementos & 1 & 6 & 8 & 6 & 3 \\
+    Clase & (1) & (12) & (123) & (1234) &(12)(34)\\
     \hline
-  $\chi_{\mathbb{C}}$ & 1 & 1 & 1 & 1 & 1 \\
-  $\chi_{S^{(1,1,1,1)}}$ & 1 & -1 & 1 & -1 & 1\\
-  $\chi_{S^{(3,1)}}$ & 3 & 1 & 0 & -1 & -1\\
-  $\chi_{S^{(2,1,1)}}$ & 3 & -1 & 0 & 1 & -1 \\
-  $\chi_{S^{(2,2)}}$ & 2 & 0 & -1 & 0 & 2 \\
+    $\chi_{\mathbb{C}}$ & 1 & 1 & 1 & 1 & 1 \\
+    $\chi_{S^{(1,1,1,1)}}$ & 1 & -1 & 1 & -1 & 1\\
+    $\chi_{S^{(3,1)}}$ & 3 & 1 & 0 & -1 & -1\\
+    $\chi_{S^{(2,1,1)}}$ & 3 & -1 & 0 & 1 & -1 \\
+    $\chi_{S^{(2,2)}}$ & 2 & 0 & -1 & 0 & 2 \\
     \hline
-  $\chi_{C_{0}(M_{4})}$ & 6 & 2 & 0 & 0 & 2 \\
-  $\chi_{C_{1}(M_{4})}$ & 3 & 1 & 0 & -1 & -1
-\end{tabular}
+    $\chi_{C_{0}(M_{4})}$ & 6 & 2 & 0 & 0 & 2 \\
+    $\chi_{C_{1}(M_{4})}$ & 3 & 1 & 0 & -1 & -1
+  \end{tabular}
 
-Tabla de caracteres de $S_{4}$, $C_{0}(M_{4})$ y $C_{1}(M_{4})$
-\end{center}
+\caption{Tabla de caracteres de $S_{4}$, $C_{0}(M_{4})$ y $C_{1}(M_{4})$.}
+\label{tab:S_4}
+\end{table}
 
 Queremos escribir a $C_{0}(M_{4})$ como suma directa de módulos
 irreducibles de $S_{4}$, así que calculemos el producto interno de $\chi_{C_{0}(M_{4})}$ con los
@@ -1324,12 +1324,21 @@ no escrito})
   &=\frac{1}{24}(12+12)=1
 \end{align*}
 De lo anterior se sigue:
-$$C_{0}(M_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}$$
-De la \setlength{\fboxsep}{0pt}\colorbox{green}{TABLA S4(referencia)}
-podemos observar que $\chi_{C_{1}(G_{4})}=\chi_{S^{(3,1)}}$, así que  
-$$C_{1}(M_{4})\cong S^{(3,1)}$$
-Con lo cual tenemos los siguientes complejos de cadenas aumentados:
-
+\begin{equation}
+\label{eq:C_0(M_4)}
+C_{0}(M_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}
+\end{equation}
+De la tabla \ref{tab:S_4}
+podemos observar que $\chi_{C_{1}(M_{4})}=\chi_{S^{(3,1)}}$, así que  
+\begin{equation}
+\label{eq:C_1(M_4)}
+C_{1}(M_{4})\cong S^{(3,1)}
+\end{equation}
+Con lo cual tenemos los siguientes complejos de cadenas aumentados
+donde $\partial_{1},\partial_{2},\varepsilon$ son los correspondientes
+operadores frontera y la función aumento; $\widehat\partial_{2},\widehat\partial_{1},\widehat\varepsilon$ son
+los morfismos inducidos bajo los isomorfismo en las expresiones
+\ref{eq:C_0(M_4)} y \ref{eq:C_1(M_4)}.
 \begin{small}
     \[
     \begin{array}{ccccccccccccc}
@@ -1351,143 +1360,205 @@ Con lo cual tenemos los siguientes complejos de cadenas aumentados:
     \end{array} 
     \]
   \end{small}
-
-Relacionados mediante:
- \[
+Obteniendo el diagrama:
+\begin{figure}[!hbtp]
+  \centering
+  \[
   \begin{CD}
     0 @>{\partial_{2}}>> C_{1}(M_{4}) @>{\partial_{1}}>> C_{0}(M_{4}) @>{\varepsilon}>> \mathbb{C}\\
     @VVV   @V{\cong}VV   @V{\cong}VV   @VVV    \\
-    0 @>{\widehat\partial_{2}}>>  S^{(3,1)} @>{\widehat\partial_{1}}>> 
-    \mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)} @>{\widehat \varepsilon}>>  \mathbb{C}
+    0 @>{\widehat\partial_{2}}>> S^{(3,1)} @>{\widehat\partial_{1}}>>
+    \mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)} @>{\widehat
+      \varepsilon}>> \mathbb{C}
   \end{CD}
   \]
+  
+  \caption{Diagrama...........}
+\label{fig:emparejamiento-4}
+\end{figure}
+
 \end{example}
 Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
 $\widetilde H_{1}(M_{4})$.
 
-Por el teorema \ref{teorema-isomorfismo-esp} y como $\widehat\varepsilon$ es suprayectiva tenemos:
+Por el teorema \ref{teorema-isomorfismo-mod} y como $\widehat\varepsilon$ es suprayectiva tenemos:
 $$\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)}/\ker(\widehat\varepsilon)\cong\im\widehat\varepsilon=\mathbb{C}$$
 entonces
-$$\ker\widehat\varepsilon= S^{(3,1)}\oplus S^{(2,2)}$$.
+$$\ker\widehat\varepsilon= S^{(3,1)}\oplus S^{(2,2)}.$$
 
-% $$\widetilde H_{0}(M_{4})=Z_{0}(M_{4})/B_{0}(M_{4})/=\ker
-% \widehat\varepsilon/\im \widehat\partial_{1}$$
-% $$\widetilde H_{1}(M_{4})=Z_{1}(M_{4})/B_{1}(M_{4})/=\ker
-% \widehat\partial_{1}/\im \widehat\partial_{2}$$
-%por el terema \ref{lema-shur} \ref{im-mod-irreducible}
+$\im\widehat\partial_{1}=S^{(3,1)}$ o $\im\widehat\partial_{1}=0$ por
+la proposición \ref{im-mod-irreducible}.....falta incluir proposición
+\ref{modulos-iguales}. 
 
-\begin{center}
-\begin{small}
-\begin{tabular}{c |r r r r r r r}
-  No. Elementos& 1 & 10 & 20 & 30 & 24 & 15 & 20  \\
-  Clase & (1) & (12) & (123) & (1234) & (12345) & (12)(34) & (123)(45) \\
-    \hline
-  $\chi_{\mathbb{C}}=\xi_{1}$ & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
-  $\chi_{\mathbb{C}^{'}}=\xi_{2}$ & 1 & -1 & 1 & -1 & 1 & 1 & -1\\
-  $\chi_{V_{5}}=\xi_{3}$ & 4 & 2 & 1 & 0 & -1 & 0 & -1\\
-  $\chi_{V_{5}^{'}}=\xi_{4}$ & 4 & -2 & 1 & 0 & -1 & 0 & 1 \\
-  $\chi_{W_{1}}=\xi_{5}$ & 6 & 0 & 0 & 0 & 1 & -2 & 0 \\
-  $\chi_{W_{2}}=\xi_{6}$ & 5 & 1 & -1 & -1 & 0 & 1 & 1 \\
-  $\chi_{W_{2}^{'}}=\xi_{7}$ & 5 & -1 & -1 & 1 & 0 & 1 & -1 \\
-  \hline
-  $\chi_{C_{0}(M_{5})}$ & 10 & 4 & 1 & 0 & 0 & 2 & 1 \\
-  $\chi_{C_{1}(M_{5})}$ & 15 & 3 & 0 & -1 & 0 & -1 & 0
-\end{tabular}
-\end{small}
-\end{center}
+Como
+$\partial_{1}((\overline{12},\overline{34}))=\overline{34}-\overline{12}$
+(definición del operador frontera ......) se sigue que $\im\partial_{1}\neq 0$, así
+$\im\widehat\partial_{1}\neq 0$ (diagrama es conmutativo....chasing
+diagram,...). Un razonamiento similar se sigue para cálculos .....
 
-\bigskip
+Así que 
+$$\im\widehat\partial_{1}=S^{(3,1)}$$
+Por el teorema \ref{teorema-isomorfismo-mod}
+$$S^{(3,1)}=\im\widehat\partial_{1}\cong
+S_{(3,1)}/\ker\widehat\partial_{1}$$
+entonces
+$$\ker\widehat\partial_{1}=0$$
+$\im\widehat\partial_{2}=\widehat\partial_{2}(0)=0$
 
-\begin{tabular}{c |r r r r r r}
+Por lo tanto,
+\begin{align*}
+\widetilde H_{0}(M_{4})&=\ker \widehat\varepsilon/\im
+\widehat\partial_{1}=S^{(3,1)}\oplus S^{(2,2)}/S^{(3,1)}=S^{(2,2)},\\
+\widetilde H_{1}(M_{4})&=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=0/0=0.
+\end{align*}
+
+por el teorema \ref{lema-schur} y \ref{im-mod-irreducible}
+
+\begin{example}
+  Considérese el complejo de emparejamiento $M_{5}$, que
+  está dado por el conjunto (aristas de la gráfica de $K_{5}$) por el conjunto de vértices:
+  $$V=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6},a_{7},a_{8},a_{9},a_{10}\}$$
+  donde
+  \begin{table}[!hbtp]
+    \centering
+    \begin{tabular}{lllll}
+    $a_{1}=\overline{12}$ & $a_{2}=\overline{13}$ & $a_{3}=\overline{14}$ & $a_{4}=\overline{15}$ & $a_{5}=\overline{23}$ \\
+    $a_{6}=\overline{24}$ & $a_{7}=\overline{25}$ & $a_{8}=\overline{34}$ & $a_{9}=\overline{35}$ & $a_{10}=\overline{12}$
+  \end{tabular}
+\end{table}
+
+Entonces la familia de $1$-simplejos orientados estará dada por:
+
+\centering
+  \begin{tabular}[h]{lll}
+    $b_{1}=(\overline{12},\overline{34})$ & $b_{6}=(\overline{13},\overline{45})$ & $b_{11}=(\overline{15},\overline{24})$  \\
+    $b_{2}=(\overline{12},\overline{35})$ & $b_{7}=(\overline{14},\overline{23})$ & $b_{12}=(\overline{15},\overline{34})$  \\
+    $b_{3}=(\overline{12},\overline{45})$ & $b_{8}=(\overline{14},\overline{25})$ & $b_{13}=(\overline{23},\overline{45})$  \\
+    $b_{4}=(\overline{13},\overline{24})$ & $b_{9}=(\overline{14},\overline{35})$ & $b_{14}=(\overline{24},\overline{35})$  \\
+    $b_{5}=(\overline{13},\overline{25})$ & $b_{10}=(\overline{15},\overline{23})$ & $b_{15}=(\overline{25},\overline{34})$  
+  \end{tabular}
+
+la gráfica de emparejamiento $G_{5}$ se muestra en la figura \ref{fig:G_5},
+
+\begin{figure}[!hbtp]
+  \centering
+  \begin{tikzpicture}[rotate=90,scale=0.8]
+    \newcommand{\aset}[2]{$\{#1,#2\}$} \GraphInit[vstyle=Classic]
+    \SetUpVertex[MinSize=17pt] \SetVertexNoLabel \SetVertexMath
+    \grPetersen[RA=3,RB=1.5]
+    \AssignVertexLabel{a}{\textsl{$\overline{12}$},\textsl{$\overline{34}$},\textsl{$\overline{15}$},\textsl{$\overline{23}$},\textsl{$\overline{45}$}}
+    \AssignVertexLabel{b}{\textsl{$\overline{35}$},\textsl{$\overline{25}$},\textsl{$\overline{24}$},\textsl{$\overline{14}$},\textsl{$\overline{13}$}}
+  \end{tikzpicture}
+  
+  \caption{Complejo de emparejamiento $G_{5}$.}
+  \label{fig:G_5}
+\end{figure}
+
+\begin{table}[!hbtp]
+  \centering
+  \begin{small}
+    \begin{tabular}{c |r r r r r r r}
+      No. Elementos& 1 & 10 & 20 & 30 & 24 & 15 & 20  \\
+      Clase & (1) & (12) & (123) & (1234) & (12345) & (12)(34) & (123)(45) \\
+      \hline
+      $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+      $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & 1 & -1 & 1 & 1 & -1\\
+      $\chi_{S^{(4,1)}}$      & 4 & 2 & 1 & 0 & -1 & 0 & -1\\
+      $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & 1 & 0 & -1 & 0 & 1 \\
+      $\chi_{S^{(3,1,1)}}$    & 6 & 0 & 0 & 0 & 1 & -2 & 0 \\
+      $\chi_{S^{(3,2)}}$     & 5 & 1 & -1 & -1 & 0 & 1 & 1 \\
+      $\chi_{S^{(2,2,1)}}$   & 5 & -1 & -1 & 1 & 0 & 1 & -1 
+    \end{tabular}
+  \end{small}
+
+  \caption{Tabla de caracteres de $S_{5}$}
+  \label{tab:S_5}
+\end{table}
+
+$$V_{0}=\langle\overline{45}\rangle$$
+$$H_{0}=\{g\in S_{5}\mid
+gV_{0}=V_{0}\}=\{\langle(1),(12),(123),(45),(12)(45),(123)(45)\rangle\}$$
+
+\begin{table}[!hbtp]
+  \centering
+  \begin{tabular}{c |r r r r r r}
   No. Elementos& 1 & 1 & 3 & 3 & 2 & 2 \\
   Clase & (1) & (45) & (12) & (12)(45) & (123) & (123)(45) \\
     \hline
-  $\xi_{1}$ & 1 & 1 & 1 & 1 & 1 & 1 \\
-  $\xi_{2}$ & 1 & -1 & -1 & 1 & 1 & -1 \\
-  $\xi_{3}$ & 4 & 2 & 2 & 0 & 1 & -1 \\
-  $\xi_{4}$ & 4 & -2 & -2 & 0 & 1 & 1 \\
-  $\xi_{5}$ & 6 & 0 & 0 & -2 & 0 & 0 \\
-  $\xi_{6}$ & 5 & 1 & 1 & 1 & -1 & 1 \\
-  $\xi_{7}$ & 5 & -1 & -1 & 1 & -1 & -1 \\
+  $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 & 1 \\
+  $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 & -1 \\
+  $\chi_{S^{(4,1)}}$      & 4 & 2 & 2 & 0 & 1 & -1 \\
+  $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & -2 & 0 & 1 & 1 \\
+  $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & 0 & 0 \\
+  $\chi_{S^{(3,2)}}$      & 5 & 1 & 1 & 1 & -1 & 1 \\
+  $\chi_{S^{(2,2,1)}}$    & 5 & -1 & -1 & 1 & -1 & -1 \\
   \hline
-  $\phi_{1}$ & 1 & 1 & 1 & 1 & 1 & 1 \\
+  $\chi_{V_{0}}$ & 1 & 1 & 1 & 1 & 1 & 1 \\
 \end{tabular}
 
-\bigskip
+\caption{Caracteres de $S_{5}$ restringidos a $H_{0}$ y carácter de $V_{0}$}
+\label{tab:restriccion-H_0}
+\end{table}
 
-\begin{tabular}{c |r r r r r}
+$$V_{1}=\langle(\overline{13},\overline{24})\rangle$$
+$$H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}$$
+
+\begin{align*}
+  \langle\chi_{C_{0}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+  &=\frac{1}{12}(1+1+3+3+2+2)=1\\
+  \langle\chi_{C_{0}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+  &=\frac{1}{12}(1-1-3+3+2-2)=0 \\
+\langle\chi_{C_{0}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+  &=\frac{1}{12}(4+2+6+0+2-2)=1 \\
+\langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+  &=\frac{1}{12}(4-2-6+0+2+2)=0 \\
+\langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+  &=\frac{1}{12}(6+0+0-6+0+0)=0 \\
+\langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+  &=\frac{1}{12}(5+1+3+3-2+2)=1 \\
+\langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+  &=\frac{1}{12}(5-1-3+3-2-2)=0 
+\end{align*}
+
+\begin{table}[!hbtp]
+  \centering
+  \begin{tabular}{c |r r r r r}
    & & (24) & (1432) & (14)(23) & \\
   Elementos & (1) & (13) & (1234) & (12)(34) & (13)(24) \\
     \hline
-  $\xi_{1}$ & 1 & 1 & 1 & 1 & 1 \\
-  $\xi_{2}$ & 1 & -1 & -1 & 1 & 1 \\
-  $\xi_{3}$ & 4 & 2 & 0 & 0 & 0 \\
-  $\xi_{4}$ & 4 & -2 & 0 & 0 & 0 \\
-  $\xi_{5}$ & 6 & 0 & 0 & -2 & -2 \\
-  $\xi_{6}$ & 5 & 1 & -1 & 1 & 1 \\
-  $\xi_{7}$ & 5 & -1 & 1 & 1 & 1 \\
+  $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 \\
+  $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 \\
+  $\chi_{S^{(4,1)}}$      & 4 & 2 & 0 & 0 & 0 \\
+  $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & 0 & 0 & 0 \\
+  $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & -2 \\
+  $\chi_{S^{(3,2)}}$      & 5 & 1 & -1 & 1 & 1 \\
+  $\chi_{S^{(2,2,1)}}$    & 5 & -1 & 1 & 1 & 1 \\
   \hline
-  $\phi_{1}$ & 1 & 1 & -1 & -1 & 1 \\
+  $\chi_{V_{1}}$ & 1 & 1 & -1 & -1 & 1 \\
 \end{tabular}
 
-\bigskip
+\caption{Caracteres de $S_5$ restringidos a $H_{1}$ y carácter de $V_{1}$}
+\label{tab:restriccion-H_1}
+\end{table}
 
-\begin{tabular}{c |r r r r}
-  Elementos & (1) & (12) & (45) & (12)(45) \\
-    \hline
-  $\xi_{1}$ & 1 & 1  & 1  & 1 \\
-  $\xi_{2}$ & 1 & -1 & -1 & 1  \\
-  $\xi_{3}$ & 4 & 2  & 2  & 0  \\
-  $\xi_{4}$ & 4 & -2 & -2 & 0  \\
-  $\xi_{5}$ & 6 & 0  & 0  & -2 \\
-  $\xi_{6}$ & 5 & 1  & 1  & 1  \\
-  $\xi_{7}$ & 5 & -1 & -1 & 1  \\
-  \hline
-  $\phi_{1}$ & 1 & 1 & -1 & -1 \\
-\end{tabular}
+\begin{align*}
+  \langle\chi_{C_{1}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+  &=\frac{1}{8}(1+2-2-2+1)=0\\
+  \langle\chi_{C_{1}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+  &=\frac{1}{8}(1-2+2-2+1)=0 \\
+\langle\chi_{C_{1}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+  &=\frac{1}{8}(4+4+0+0+0)=1 \\
+\langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+  &=\frac{1}{8}(4-4+0+0+0)=0 \\
+\langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+  &=\frac{1}{8}(6+0+0+4-2)=1 \\
+\langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+  &=\frac{1}{8}(5+2+2-2+1)=1 \\
+\langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+  &=\frac{1}{8}(5-2-2-2+1)=0 
+\end{align*}
 
-\bigskip
-
-\begin{tabular}{c |r r r r r r r r}
-          &   & (12) & (12)(34) &          &             &              & &  \\        
-          &   & (34) & (12)(56) &(13)(24)  &             & (13)(24)(56) & (2314)& (2314)(56)\\
-Elementos &(1)& (56) & (34)(56) & (14)(23) & (12)(34)(56)& (14)(23)(56) &(2413)&(2413)(56)\\
-    \hline
-  $S^{{(6)}}$           & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 \\
-  $S^{{(1,1,1,1,1,1)}}$ & 1 & -1 & 1  & 1 &-1 &-1 &-1 & 1  \\
-  $S^{{(5,1)}}$         & 5 & 3  & 1  & 1 &-1 &-1 & 1 &-1  \\
-  $S^{{(2,1,1,1,1)}}$   & 5 & -3 &  1 & 1 & 1 & 1 &-1 &-1  \\
-  $S^{{(4,1,1)}}$       & 10& 2  & -2 & -2&-2 &-2 & 0 & 0  \\
-  $S^{{(3,1,1,1)}}$     & 10&-2  & -2 &-2 & 2 & 2 & 0 & 0  \\
-  $S^{{(4,2)}}$         & 9 & 3  & 1  & 1 & 3 &3  &-1 & 1  \\
-  $S^{{(2,2,1,1)}}$     & 9 & -3 & 1  & 1 & -3&-3 & 1 & 1  \\
-  $S^{{(3,3)}}$         & 5 & 1  & 1  & 1 &-3 &-3 &-1 & -1 \\
-  $S^{{(2,2,2)}}$       & 5 & -1 & 1  & 1 & 3 & 3 & 1 & -1 \\
-  $S^{{(3,2,1)}}$       & 16& 0  & 0  & 0 & 0 & 0 & 0 &  0 \\
-    \hline
-  $\phi_{1}$            & 1 & 1  & 1  & -1& 1 & -1&-1 &-1  \\
-\end{tabular}
-
-\bigskip
-
-\begin{tabular}{c |r r r r r r r r r r}
-No. de Elementos  & 1 & 3 & 3 & 6 & 6 & 1 & 6 & 8 & 6 & 8 \\
- &(1)& (2) & (2,2) & (2,2) & (4)& (2,2,2) & (2,2,2) & (3,3) & (4,2) & (6)\\
-    \hline
-  $S^{{(6)}}$         & 1 & 1  & 1  & 1 & 1 &1  & 1 & 1 & 1 & 1 \\
-  $S^{{(1,1,1,1,1,1)}}$ & 1 & -1 & 1  & 1 & -1&-1 &-1 & 1 & 1 & -1 \\
-  $S^{{(5,1)}}$       & 5 & 3  & 1  & 1 & 1 &-1 &-1 &-1 &-1 & -1 \\
-  $S^{{(2,1,1,1,1)}}$  & 5 & -3 &  1 & 1 &-1 & 1 & 1 &-1  &-1 & 1 \\
-  $S^{{(4,1,1)}}$     & 10& 2  & -2 & -2& 0 &-2 &-2 & 1  & 0 & 1 \\
-  $S^{{(3,1,1,1)}}$    & 10&-2  & -2 &-2 & 0 & 2 & 2 & 1 & 0 & -1 \\
-  $S^{{(4,2)}}$       & 9 & 3  & 1  & 1 & -1& 3 & 3 & 0 & 1 &  0 \\
-  $S^{{(2,2,1,1)}}$    & 9 & -3 & 1  & 1 & 1 &-3 &-3 & 0 & 1 &  0 \\
-  $S^{{(3,3)}}$       & 5 & 1  & 1  & 1 &-1 &-3 & -3& 2 &-1 &  0 \\
-  $S^{{(2,2,2)}}$     & 5  & -1& 1  & 1 & 1 & 3 & 3 & 2 & -1 & 0 \\
-  $S^{{(3,2,1)}}$     & 16 & 0 & 0  & 0 & 0 & 0 & 0 & -2 & 0 & 0 \\
-  \hline
-  $\phi_{1}$ & 1 & 1 & 1 & -1 & -1 & 1 &-1 & 1 &- 1 & 1  \\
-\end{tabular}
+\end{example}
 
 Vamos a citar \cite{MR0225619}
 
