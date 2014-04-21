@@ -470,11 +470,11 @@ el campo de los complejos.
   submódulo de $V$. 
 \end{definition}
 
-% \begin{theorem}
-%   \label{interseccion-submodulos}
-%   Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
-%   colección de submódulos de $V$ es un submódulo de $V$.
-% \end{theorem}
+\begin{theorem}
+  \label{interseccion-submodulos}
+  Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
+  colección de submódulos de $V$ es un submódulo de $V$.
+\end{theorem}
 
 \begin{definition}
   Sea $V$ un $G$-módulo. Al submódulo de $V$ generado por las combinaciones lineales de los
@@ -503,13 +503,31 @@ decir, $\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}
 \textbf{\emph{Observación:}} En el caso de que $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
 $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
+%
 % dado por el siguiente isomorfismo:
 % \begin{align*}
 %   \phi:W_{1}+W_{2}&\rightarrow W_{1}\oplus W_{2}\\
-%   w_{1} & \mapsto  (w_{1},0)\\
-%   w_{2} & \mapsto  (0,w_{2})\\
-%   0 & \mapsto (0,0)
+%   w & \mapsto  (w_{1},w_{2})
 % \end{align*}
+% sean
+% $w^{1}_{1},w^{2}_{1},\ldots,w^{n}_{1},w^{1}_{2},w^{2}_{2},\ldots,w^{m}_{2}$
+% los elementos de $W_{1}\cup W_{2}$ donde $w^{i}_{1}\in W_{1}$ y
+% $w^{i}_{2}\in W_{2}$, tomemos $w\in W_{1}+W_{2}$, es decir,
+% \begin{align*}
+%   w&=a_{1}w^{1}_{1}+a_{2}w^{2}_{1}+\ldots+a_{n}w^{n}_{1}+a_{n+1}w^{1}_{2}+a_{n+2}w^{2}_{2}+\ldots+a_{m}w^{m}_{2}\\
+%   &=w_{1}+w_{2}
+% \end{align*}
+% donde $w_{1}=a_{1}w^{1}_{1}+a_{2}w^{2}_{1}+\ldots+a_{n}w^{n}_{1}$ y
+% $w_{2}=a_{n+1}w^{1}_{2}+a_{n+2}w^{2}_{2}+\ldots+a_{m}w^{m}_{2}$,
+% $w_{1}\in W_{1}$ puesto que $w_{1}$ es combinación lineal de los
+% elementos de $W_{1}$, de forma análoga concluimos que $w_{2}\in
+% W_{2}$. Ahora veamos que $\phi$ está bien definida, supongamos que
+% $w=w_{1}+w_{2}=w^{'}_{1}+w^{'}_{2}$, así que
+% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}$ y notamos que $w_{1}-w^{'}_{1}\in W_{1}$ y
+% $w^{'}_{2}-w_{2}\in W_{2}$, así que
+% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}\in W_{1}\cap W_{2}$, entonces
+% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}=0$ por hipótesis, por lo tanto
+% $w_{1}=w^{'}_{1}$ y $w^{'}_{2}=w_{2}$.
 \begin{proposition}
   \label{modulos-iguales}
   Supongamos que $S\leq M$, $S$ irreducible, si $M=S\oplus T$ donde $S$
@@ -1400,7 +1418,7 @@ Como $\partial_{1}((\overline{12},\overline{34}))=\overline{34}-\overline{12}$
 tenemos que $\im\partial_{1}\neq 0$ (en general $\partial_{k}\neq 0$
 por definición del operador frontera), se sigue que
 $\im\widehat\partial_{1}\neq 0$ puesto que el diagrama es
-conmutativo. Por lo tanto
+conmutativo. Por lo tanto 
 \begin{equation}
 \label{im-1-4}
 \im\widehat\partial_{1}\cong S^{(3,1)}
