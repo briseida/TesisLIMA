@@ -1383,7 +1383,8 @@ morfismos de módulos.
   \end{small}
 Obteniendo el siguiente diagrama conmutativo, donde $f_{1}$ y $f_{0}$
 son los isomorfimos obtenidos en las expresiones \ref{eq:C_1(M_4)}, \ref{eq:C_0(M_4)}
- respectivamente: \setlength{\fboxsep}{0pt}\colorbox{green}{(porqué conmuta)}
+ respectivamente: \setlength{\fboxsep}{0pt}\colorbox{green}{(porqué
+   conmuta)}
 \begin{figure}[!hbtp]
   \centering
   \[
@@ -1403,8 +1404,9 @@ son los isomorfimos obtenidos en las expresiones \ref{eq:C_1(M_4)}, \ref{eq:C_0(
 Ahora calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
 $\widetilde H_{1}(M_{4})$.
 
-Por el teorema \ref{teorema-isomorfismo-mod} y como $\widehat\varepsilon$ es suprayectiva tenemos:
-$$\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)}/\ker(\widehat\varepsilon)\cong\im\widehat\varepsilon=\mathbb{C}$$
+Por el teorema \ref{teorema-isomorfismo-mod} y como
+$\widehat\varepsilon$ es suprayectiva tenemos:
+$$\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)}/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
 entonces
 \begin{equation}
 \label{ker-0-4}
@@ -1429,8 +1431,6 @@ conmutativo. Por lo tanto
 \label{im-1-4}
 \im\widehat\partial_{1}\cong S^{(3,1)}
 \end{equation}
-Un razonamiento similar usamos para cálculos
-posteriores.
 
 De las expresiones \ref{ker-0-4}, \ref{im-1-4} y de la
 proposición \ref{modulos-iguales} concluimos:
@@ -1468,7 +1468,7 @@ Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
 
 \begin{example}
   Considérese el complejo de emparejamiento $M_{5}$, que
-  está dado por el conjunto (aristas de la gráfica de $K_{5}$) por el conjunto de vértices:
+  está dado por el conjunto de vértices (aristas de la gráfica de $K_{5}$):
   $$V=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6},a_{7},a_{8},a_{9},a_{10}\}$$
   donde
   \begin{table}[!hbtp]
@@ -1480,8 +1480,7 @@ Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
 \end{table}
 
 Entonces la familia de $1$-simplejos orientados estará dada por:
-
-\centering
+\begin{center}
   \begin{tabular}[h]{lll}
     $b_{1}=(\overline{12},\overline{34})$ & $b_{6}=(\overline{13},\overline{45})$ & $b_{11}=(\overline{15},\overline{24})$  \\
     $b_{2}=(\overline{12},\overline{35})$ & $b_{7}=(\overline{14},\overline{23})$ & $b_{12}=(\overline{15},\overline{34})$  \\
@@ -1489,12 +1488,10 @@ Entonces la familia de $1$-simplejos orientados estará dada por:
     $b_{4}=(\overline{13},\overline{24})$ & $b_{9}=(\overline{14},\overline{35})$ & $b_{14}=(\overline{24},\overline{35})$  \\
     $b_{5}=(\overline{13},\overline{25})$ & $b_{10}=(\overline{15},\overline{23})$ & $b_{15}=(\overline{25},\overline{34})$  
   \end{tabular}
-
-la gráfica de emparejamiento $G_{5}$ se muestra en la figura \ref{fig:G_5},
-
+\end{center}
 \begin{figure}[!hbtp]
   \centering
-  \begin{tikzpicture}[rotate=90,scale=0.8]
+  \begin{tikzpicture}[rotate=90,scale=0.75]
     \newcommand{\aset}[2]{$\{#1,#2\}$} \GraphInit[vstyle=Classic]
     \SetUpVertex[MinSize=17pt] \SetVertexNoLabel \SetVertexMath
     \grPetersen[RA=3,RB=1.5]
@@ -1502,10 +1499,9 @@ la gráfica de emparejamiento $G_{5}$ se muestra en la figura \ref{fig:G_5},
     \AssignVertexLabel{b}{\textsl{$\overline{35}$},\textsl{$\overline{25}$},\textsl{$\overline{24}$},\textsl{$\overline{14}$},\textsl{$\overline{13}$}}
   \end{tikzpicture}
   
-  \caption{Complejo de emparejamiento $G_{5}$}
+  \caption{Gráfica de emparejamiento $G_{5}$}
   \label{fig:G_5}
 \end{figure}
-
 \begin{table}[!hbtp]
   \centering
   \begin{small}
@@ -1527,92 +1523,183 @@ la gráfica de emparejamiento $G_{5}$ se muestra en la figura \ref{fig:G_5},
   \label{tab:S_5}
 \end{table}
 
-$$V_{0}=\langle\overline{45}\rangle$$
-$$H_{0}=\{g\in S_{5}\mid
-gV_{0}=V_{0}\}=\{\langle(1),(12),(123),(45),(12)(45),(123)(45)\rangle\}$$
+Con el teorema de la reciprocidad de Frobenius
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)} obtendremos la
+descomposición de los espacios de cadenas $C_{0}(M_{5})$ y
+$C_{1}(M_{5})$ en módulos de Specht con un menor
+número de cálculos. 
+
+Consideremos:
+\begin{eqnarray*}
+  V_{0}&=&\langle\overline{45}\rangle\\
+  H_{0}&=&\{g\in S_{5}\mid gV_{0}=V_{0}\}=\{\langle(1),(12),(123),(45),(12)(45),(123)(45)\rangle\}\\
+\end{eqnarray*}
 
 \begin{table}[!hbtp]
   \centering
-  \begin{tabular}{c |r r r r r r}
-  No. Elementos& 1 & 1 & 3 & 3 & 2 & 2 \\
-  Clase & (1) & (45) & (12) & (12)(45) & (123) & (123)(45) \\
-    \hline
-  $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 & 1 \\
-  $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 & -1 \\
-  $\chi_{S^{(4,1)}}$      & 4 & 2 & 2 & 0 & 1 & -1 \\
-  $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & -2 & 0 & 1 & 1 \\
-  $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & 0 & 0 \\
-  $\chi_{S^{(3,2)}}$      & 5 & 1 & 1 & 1 & -1 & 1 \\
-  $\chi_{S^{(2,2,1)}}$    & 5 & -1 & -1 & 1 & -1 & -1 \\
-  \hline
-  $\chi_{V_{0}}$ & 1 & 1 & 1 & 1 & 1 & 1 \\
-\end{tabular}
+    \begin{tabular}{c |r r r r r r}
+      No. Elementos& 1 & 1 & 3 & 3 & 2 & 2 \\
+      Clase & (1) & (45) & (12) & (12)(45) & (123) & (123)(45) \\
+      \hline
+      $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 & 1 \\
+      $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 & -1 \\
+      $\chi_{S^{(4,1)}}$      & 4 & 2 & 2 & 0 & 1 & -1 \\
+      $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & -2 & 0 & 1 & 1 \\
+      $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & 0 & 0 \\
+      $\chi_{S^{(3,2)}}$      & 5 & 1 & 1 & 1 & -1 & 1 \\
+      $\chi_{S^{(2,2,1)}}$    & 5 & -1 & -1 & 1 & -1 & -1 \\
+      \hline
+      $\chi_{V_{0}}$ & 1 & 1 & 1 & 1 & 1 & 1 \\
+    \end{tabular}
 
 \caption{Caracteres de $S_{5}$ restringidos a $H_{0}$ y carácter de $V_{0}$}
 \label{tab:restriccion-H_0}
 \end{table}
 
-$$V_{1}=\langle(\overline{13},\overline{24})\rangle$$
-$$H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}$$
+{\scriptsize
+  \begin{align*}
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\ 
+    &=\frac{1}{12}(1+1+3+3+2+2)=1\\ 
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    &=\frac{1}{12}(1-1-3+3+2-2)=0 \\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    &=\frac{1}{12}(4+2+6+0+2-2)=1 \\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    &=\frac{1}{12}(4-2-6+0+2+2)=0 \\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    &=\frac{1}{12}(6+0+0-6+0+0)=0 \\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    &=\frac{1}{12}(5+1+3+3-2+2)=1 \\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    &=\frac{1}{12}(5-1-3+3-2-2)=0 
+  \end{align*}}
 
-\begin{align*}
-  \langle\chi_{C_{0}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
-  &=\frac{1}{12}(1+1+3+3+2+2)=1\\
-  \langle\chi_{C_{0}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
-  &=\frac{1}{12}(1-1-3+3+2-2)=0 \\
-\langle\chi_{C_{0}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
-  &=\frac{1}{12}(4+2+6+0+2-2)=1 \\
-\langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
-  &=\frac{1}{12}(4-2-6+0+2+2)=0 \\
-\langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
-  &=\frac{1}{12}(6+0+0-6+0+0)=0 \\
-\langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
-  &=\frac{1}{12}(5+1+3+3-2+2)=1 \\
-\langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
-  &=\frac{1}{12}(5-1-3+3-2-2)=0 
-\end{align*}
+De los productos internos calculados anteriormente obtenemos:
+\begin{equation}
+  \label{eq:C0-M5}
+  C_{0}(M_{5})\cong \mathbb{C}\oplus S^{(4,1)} \oplus S^{(3,2)} 
+\end{equation}
+Ahora consideremos los siguientes conjuntos, nuevamente para usar
+reciprocidad de Frobenius.
+\begin{eqnarray*}
+  V_{1}&=&\langle(\overline{13},\overline{24})\rangle\\
+  H_{1}&=&\{g\in S_{5}\mid gV_{1}=V_{1}\}
+\end{eqnarray*}
 
-\begin{table}[!hbtp]
+  \begin{table}[!hbtp]
+    \centering
+    \begin{small}
+      \begin{tabular}{c |r r r r r}
+        & & (24) & (1432) & (14)(23) & \\
+        Elementos & (1) & (13) & (1234) & (12)(34) & (13)(24) \\
+        \hline
+        $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 \\
+        $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 \\
+        $\chi_{S^{(4,1)}}$      & 4 & 2 & 0 & 0 & 0 \\
+        $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & 0 & 0 & 0 \\
+        $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & -2 \\
+        $\chi_{S^{(3,2)}}$      & 5 & 1 & -1 & 1 & 1 \\
+        $\chi_{S^{(2,2,1)}}$    & 5 & -1 & 1 & 1 & 1 \\
+        \hline
+        $\chi_{V_{1}}$ & 1 & 1 & -1 & -1 & 1 \\
+      \end{tabular}
+
+    \end{small}
+    \caption{Caracteres de $S_5$ restringidos a $H_{1}$ y carácter de $V_{1}$}
+    \label{tab:restriccion-H_1}
+  \end{table}
+
+{\scriptsize
+  \begin{align*}
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    &=\frac{1}{8}(1+2-2-2+1)=0\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    &=\frac{1}{8}(1-2+2-2+1)=0 \\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    &=\frac{1}{8}(4+4+0+0+0)=1 \\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    &=\frac{1}{8}(4-4+0+0+0)=0 \\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    &=\frac{1}{8}(6+0+0+4-2)=1 \\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    &=\frac{1}{8}(5+2+2-2+1)=1 \\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    &=\frac{1}{8}(5-2-2-2+1)=0
+  \end{align*}}
+
+De donde obtenemos:
+\begin{equation}
+  \label{eq:C1-M5}
+  C_{1}(M_{5})\cong S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)}
+\end{equation}
+En la figura \ref{fig:diagrama-conmutativo5} se muestra el diagrama
+conmutativo de los complejos de cadena de $M_{5}$, donde $f_{0}$ y $f_{1}$ son los isomorfismos obtenidos de las expresiones \ref{eq:C0-M5} y \ref{eq:C1-M5}
+
+\begin{figure}[h]
   \centering
-  \begin{tabular}{c |r r r r r}
-   & & (24) & (1432) & (14)(23) & \\
-  Elementos & (1) & (13) & (1234) & (12)(34) & (13)(24) \\
-    \hline
-  $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 \\
-  $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 \\
-  $\chi_{S^{(4,1)}}$      & 4 & 2 & 0 & 0 & 0 \\
-  $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & 0 & 0 & 0 \\
-  $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & -2 \\
-  $\chi_{S^{(3,2)}}$      & 5 & 1 & -1 & 1 & 1 \\
-  $\chi_{S^{(2,2,1)}}$    & 5 & -1 & 1 & 1 & 1 \\
-  \hline
-  $\chi_{V_{1}}$ & 1 & 1 & -1 & -1 & 1 \\
-\end{tabular}
+    \[
+    \begin{CD}
+      0 @>{\partial_{2}}>> C_{1}(M_{5}) @>{\partial_{1}}>> C_{0}(M_{5}) @>{\varepsilon}>> \mathbb{C}\\
+      @VVV   @Vf_{1} VV   @Vf_{0} VV   @VVV    \\
+      0 @>{\widehat\partial_{2}}>> S^{(4,1)}\oplus S^{(3,1,1)}\oplus
+      S^{(3,2)} @>{\widehat\partial_{1}}>> \mathbb{C}\oplus S^{(4,1)}
+      \oplus S^{(3,2)} @>{\widehat \varepsilon}>> \mathbb{C}
+    \end{CD}
+    \]
 
-\caption{Caracteres de $S_5$ restringidos a $H_{1}$ y carácter de $V_{1}$}
-\label{tab:restriccion-H_1}
-\end{table}
+    \caption{Diagrama conmutativo de los complejos de cadenas de
+      $M_{5}$}
+\label{fig:diagrama-conmutativo5}
+\end{figure}
 
-\begin{align*}
-  \langle\chi_{C_{1}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
-  &=\frac{1}{8}(1+2-2-2+1)=0\\
-  \langle\chi_{C_{1}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
-  &=\frac{1}{8}(1-2+2-2+1)=0 \\
-\langle\chi_{C_{1}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
-  &=\frac{1}{8}(4+4+0+0+0)=1 \\
-\langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
-  &=\frac{1}{8}(4-4+0+0+0)=0 \\
-\langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
-  &=\frac{1}{8}(6+0+0+4-2)=1 \\
-\langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
-  &=\frac{1}{8}(5+2+2-2+1)=1 \\
-\langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
-  &=\frac{1}{8}(5-2-2-2+1)=0 
-\end{align*}
+Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
+$\widetilde H_{1}(M_{4})$.
 
+Como $\widehat\varepsilon$ es suprayectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
+$$\mathbb{C}\oplus S^{(4,1)} \oplus
+S^{(3,2)}/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
+así que
+\begin{equation*}
+\label{ker0-5}
+\ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}
+\end{equation*}
+Sabemos que $\widetilde H_{0}(M_{5})=\ker \widehat\varepsilon/\im
+\widehat\partial_{1}=0$ pues $M_{5}$ ($M_{5}$ ó $G_{5}$???????) es
+conexo, se sigue que $\ker \widehat\varepsilon\cong
+\im\widehat\partial_{1}$, con lo cual:
+\begin{equation}
+\label{im1-5}
+\im \widehat\partial_{1}\cong S^{(4,1)} \oplus S^{(3,2)}
+\end{equation}
+Además el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-5} se tiene:
+$$ S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)}/\ker
+\widehat\partial_{1}\cong \im \widehat\partial_{1}$$
+De lo anterior y la proposición \ref{modulos-iguales} tenemos:
+\begin{equation}
+\label{ker1-5}
+\ker \widehat\partial_{1}= S^{(3,1,1)}
+\end{equation}
+
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+$$\widehat\partial_{1}(S^{(4,1)})\cong S^{(4,1)} \mbox{ o } \widehat\partial_{1}(S^{(4,1)})=0$$
+$$\widehat\partial_{1}(S^{(3,1,1)})=0$$
+$$\widehat\partial_{1}(S^{(3,2)})\cong S^{(3,2)} \mbox{ o } \widehat\partial_{1}(S^{(3,2)})=0$$
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+Por otro lado
+\begin{equation}
+\im\widehat\partial_{2}=\widehat\partial_{2}(0)=0
+\label{im-2-4}
+\end{equation}
+pues $\widehat\partial_{2}$ es un morfismo de módulos.
+
+De las ecuaciones \ref{ker1-5} y \ref{im-2-4} concluimos:
+\begin{equation*}
+  \widetilde H_{1}(M_{5})=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=S^{(3,1,1)}/0=S^{(3,1,1)}.
+\end{equation*}
 \end{example}
 
-Vamos a citar \cite{MR0225619}
+%Vamos a citar \cite{MR0225619}
 
 \bibliographystyle{plain}
 \bibliography{labiblio}
