@@ -18,6 +18,7 @@
 \usepackage{url}
 \usepackage{xspace}
 \usepackage{tocbibind}
+\usepackage{rotating}
 % ver http://gilmation.com/articles/latex-margins-for-book-binding/
 % y http://tex.stackexchange.com/questions/50258/margins-of-book-class
 \usepackage[margin=3.5cm]{geometry}
@@ -575,8 +576,8 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
 \begin{proof}[Demostración.]
   Tomemos el siguiente morfismo de módulos
   $S\stackrel{i}{\hookrightarrow} V\stackrel{f}{\rightarrow}W$ donde
-  $i$ es función inclusión. Así que $S/\ker(f\circ i)\cong\im(f\circ
-  i)$ por el teorema \ref{teorema-isomorfismo-esp}. Como $\ker(f\circ
+  $i$ es la función inclusión. Así que $S/\ker(f\circ i)\cong\im(f\circ
+  i)$ por el teorema \ref{teorema-isomorfismo-mod}. Como $\ker(f\circ
   i)\leq S$ entonces $\ker(f\circ i)=0$ o $\ker(f\circ i)=S$, pues $S$ es irreducible.
 
   Si $\ker(f\circ i)=0$, se sigue que
@@ -1353,11 +1354,9 @@ podemos observar que $\chi_{C_{1}(M_{4})}=\chi_{S^{(3,1)}}$, así que
 \label{eq:C_1(M_4)}
 C_{1}(M_{4})\cong S^{(3,1)}
 \end{equation}
-Con lo cual tenemos los siguientes complejos de cadenas aumentados
+Con lo cual tenemos el siguiente complejo de cadenas aumentado
 donde $\partial_{1},\partial_{2},\varepsilon$ son los correspondientes
-operadores frontera y la función aumento;
-$\widehat\partial_{2},\widehat\partial_{1},\widehat\varepsilon$ son
-morfismos de módulos. 
+operadores frontera y la función aumento:
 
 \begin{small}
   \[
@@ -1369,6 +1368,11 @@ morfismos de módulos.
     \end{array} 
     \]
   \end{small}
+Sean $f_{0}$ y $f_{1}$ los isomorfimos obtenidos de las expresiones
+\ref{eq:C_0(M_4)}, \ref{eq:C_1(M_4)} respectivamente, y definimos en
+general al morfismo $\widehat\partial_{k}$ como
+$\widehat\partial_{k}=f_{k-1}\circ \partial_{k}\circ f^{-1}_{k}$, con
+lo cual tenemos el complejo de cadenas aumentado: 
 
 \begin{small}
     \[
@@ -1381,10 +1385,9 @@ morfismos de módulos.
     \end{array} 
     \]
   \end{small}
-Obteniendo el siguiente diagrama conmutativo, donde $f_{1}$ y $f_{0}$
-son los isomorfimos obtenidos en las expresiones \ref{eq:C_1(M_4)}, \ref{eq:C_0(M_4)}
- respectivamente: \setlength{\fboxsep}{0pt}\colorbox{green}{(porqué
-   conmuta)}
+
+En la figura \ref{fig:diagrama-conmutativo4} se muestra diagrama
+conmutativo de los complejos de cadenas anteriores.
 \begin{figure}[!hbtp]
   \centering
   \[
@@ -1406,7 +1409,7 @@ $\widetilde H_{1}(M_{4})$.
 
 Por el teorema \ref{teorema-isomorfismo-mod} y como
 $\widehat\varepsilon$ es suprayectiva tenemos:
-$$\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)}/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
+$$(\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)})/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
 entonces
 \begin{equation}
 \label{ker-0-4}
@@ -1475,18 +1478,18 @@ Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
     \centering
     \begin{tabular}{lllll}
     $a_{1}=\overline{12}$ & $a_{2}=\overline{13}$ & $a_{3}=\overline{14}$ & $a_{4}=\overline{15}$ & $a_{5}=\overline{23}$ \\
-    $a_{6}=\overline{24}$ & $a_{7}=\overline{25}$ & $a_{8}=\overline{34}$ & $a_{9}=\overline{35}$ & $a_{10}=\overline{12}$
+    $a_{6}=\overline{24}$ & $a_{7}=\overline{25}$ & $a_{8}=\overline{34}$ & $a_{9}=\overline{35}$ & $a_{10}=\overline{45}$
   \end{tabular}
 \end{table}
 
 Entonces la familia de $1$-simplejos orientados estará dada por:
 \begin{center}
   \begin{tabular}[h]{lll}
-    $b_{1}=(\overline{12},\overline{34})$ & $b_{6}=(\overline{13},\overline{45})$ & $b_{11}=(\overline{15},\overline{24})$  \\
-    $b_{2}=(\overline{12},\overline{35})$ & $b_{7}=(\overline{14},\overline{23})$ & $b_{12}=(\overline{15},\overline{34})$  \\
-    $b_{3}=(\overline{12},\overline{45})$ & $b_{8}=(\overline{14},\overline{25})$ & $b_{13}=(\overline{23},\overline{45})$  \\
-    $b_{4}=(\overline{13},\overline{24})$ & $b_{9}=(\overline{14},\overline{35})$ & $b_{14}=(\overline{24},\overline{35})$  \\
-    $b_{5}=(\overline{13},\overline{25})$ & $b_{10}=(\overline{15},\overline{23})$ & $b_{15}=(\overline{25},\overline{34})$  
+    $b_{1}=(a_{1},a_{8})$ & $b_{6}=(a_{2},a_{10})$ & $b_{11}=(a_{4},a_{6})$  \\
+    $b_{2}=(a_{1},a_{9})$ & $b_{7}=(a_{3},a_{5})$ & $b_{12}=(a_{4},a_{8})$  \\
+    $b_{3}=(a_{1},a_{10})$ & $b_{8}=(a_{3},a_{7})$ & $b_{13}=(a_{5},a_{10})$  \\
+    $b_{4}=(a_{2},a_{6})$ & $b_{9}=(a_{3},a_{9})$ & $b_{14}=(a_{6},a_{9})$  \\
+    $b_{5}=(a_{2},a_{7})$ & $b_{10}=(a_{4},a_{5})$ & $b_{15}=(a_{7},a_{8})$  
   \end{tabular}
 \end{center}
 \begin{figure}[!hbtp]
@@ -1656,15 +1659,15 @@ Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
 $\widetilde H_{1}(M_{4})$.
 
 Como $\widehat\varepsilon$ es suprayectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
-$$\mathbb{C}\oplus S^{(4,1)} \oplus
-S^{(3,2)}/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
+$$(\mathbb{C}\oplus S^{(4,1)} \oplus
+S^{(3,2)})/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
 así que
 \begin{equation*}
 \label{ker0-5}
 \ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}
 \end{equation*}
 Sabemos que $\widetilde H_{0}(M_{5})=\ker \widehat\varepsilon/\im
-\widehat\partial_{1}=0$ pues $M_{5}$ ($M_{5}$ ó $G_{5}$???????) es
+\widehat\partial_{1}=0$ pues $M_{5}$  es
 conexo, se sigue que $\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
@@ -1672,19 +1675,13 @@ conexo, se sigue que $\ker \widehat\varepsilon\cong
 \im \widehat\partial_{1}\cong S^{(4,1)} \oplus S^{(3,2)}
 \end{equation}
 Además el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-5} se tiene:
-$$ S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)}/\ker
+$$(S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)})/\ker
 \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
 \label{ker1-5}
 \ker \widehat\partial_{1}= S^{(3,1,1)}
 \end{equation}
-
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-$$\widehat\partial_{1}(S^{(4,1)})\cong S^{(4,1)} \mbox{ o } \widehat\partial_{1}(S^{(4,1)})=0$$
-$$\widehat\partial_{1}(S^{(3,1,1)})=0$$
-$$\widehat\partial_{1}(S^{(3,2)})\cong S^{(3,2)} \mbox{ o } \widehat\partial_{1}(S^{(3,2)})=0$$
-@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 Por otro lado
 \begin{equation}
@@ -1697,6 +1694,82 @@ De las ecuaciones \ref{ker1-5} y \ref{im-2-4} concluimos:
 \begin{equation*}
   \widetilde H_{1}(M_{5})=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=S^{(3,1,1)}/0=S^{(3,1,1)}.
 \end{equation*}
+ 
+Usamos el hecho de que $M_{5}$ es conexo para concluir que $\widetilde
+H_{0}(M_{5})=0$, notemos que no es necesario, por lo que
+necesitamos calcular $\im \widehat\partial_{1}$. 
+
+Verifiquemos primero que $\dim(\im \partial_{1})=9$, del teorema
+\ref{imT}, sabemos que
+$\im \partial_{1}=\langle\partial_{1}(b_{1}),\ldots,\partial_{1}(b_{15})\rangle$,
+veamos que el número de vectores linealmente independientes es 9, es
+decir, si
+$$\lambda_{1}\partial_{1}(b_{1})+\lambda_{2}\partial_{1}(b_{2})+\ldots+\lambda_{15}\partial_{1}(b_{15})=0$$
+así que:
+\begin{align*}
+  &\lambda_{1}(a_{8}-a_{1})+\lambda_{2}(a_{9}-a_{1})+\lambda_{3}(a_{10}-a_{1})+\lambda_{4}(a_{6}-a_{2})+\lambda_{5}(a_{7}-a_{2})\\
+  &\qquad
+  {}+\lambda_{6}(a_{10}-a_{2})+\lambda_{7}(a_{5}-a_{3})+\lambda_{8}(a_{7}-a_{3})+\lambda_{9}(a_{9}-a_{3})+\lambda_{10}(a_{5}-a_{4})\\
+  &\qquad{}+\lambda_{11}(a_{6}-a_{4})+\lambda_{12}(a_{8}-a_{4})+\lambda_{13}(a_{10}-a_{5})+\lambda_{14}(a_{9}-a_{6})+\lambda_{15}(a_{8}-a_{7})\\
+  &=(-\lambda_{1}-\lambda_{2}-\lambda_{3})a_{1}+(-\lambda_{4}-\lambda_{5}-\lambda_{6})a_{2}+(-\lambda_{7}-\lambda_{8}-\lambda_{9})a_{3}\\
+  &\qquad{}+(-\lambda_{10}-\lambda_{11}-\lambda_{12})a_{4}+(\lambda_{7}+\lambda_{10}-\lambda_{13})a_{5}+(\lambda_{4}+\lambda_{11}-\lambda_{14})a_{6}\\
+  &\qquad{}+(\lambda_{5}+\lambda_{8}-\lambda_{15})a_{7}+(\lambda_{1}+\lambda_{12}+\lambda_{15})a_{8}+(\lambda_{2}+\lambda_{9}+\lambda_{14})a_{9}\\
+  &\qquad{}+(\lambda_{3}+\lambda_{6}+\lambda_{13})a_{10}=0
+\end{align*}
+con lo cual obtenemos el siguiente sistema de ecuaciones:
+ \[\begin{array}{rrrrr}
+   -\lambda_{1} & -\lambda_{2} & -\lambda_{3} & = & 0 \\
+   -\lambda_{4} & -\lambda_{5} & -\lambda_{6} & = & 0 \\
+   -\lambda_{7} & -\lambda_{8} & -\lambda_{9} & = & 0 \\
+   -\lambda_{10} & -\lambda_{11} & -\lambda_{12} & = & 0 \\
+   \lambda_{7} & +\lambda_{10} & -\lambda_{13} & = & 0 \\
+   \lambda_{4} & +\lambda_{11} & -\lambda_{14} & = & 0 \\
+   \lambda_{5} & +\lambda_{8} & -\lambda_{15} & = & 0 \\
+   \lambda_{1} & +\lambda_{12} & +\lambda_{15} & = & 0 \\
+   \lambda_{2} & +\lambda_{9} & +\lambda_{14} & = & 0 \\
+   \lambda_{3} & +\lambda_{6} & +\lambda_{13} & = & 0 
+ \end{array}\]
+al que representamos en su forma matricial:
+\[ \left(
+  \begin{tabular}{rrrrrrrrrrrrrrr}
+    -1 & -1 & -1 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  \\
+    0  & 0  & 0  & -1 & -1 & -1 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  \\
+    0  & 0  & 0  & 0  & 0  & 0  & -1 & -1 & -1 & 0  & 0  & 0  & 0  & 0  & 0  \\
+    0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & -1 & -1 & -1 & 0  & 0  & 0  \\
+    0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0  & 1  & 0  & 0  & -1 & 0  & 0  \\
+    0  & 0  & 0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0  & -1 & 0  \\
+    0  & 0  & 0  & 0  & 1  & 0  & 0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & -1 \\
+    1  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0  & 1  \\
+    0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0  & 0  & 0  & 1  & 0  \\
+    0  & 0  & 1  & 0  & 0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0 
+  \end{tabular}
+\right)\] 
+lo llevamos a su forma escalonada reducida:
+\[ \left(
+  \begin{tabular}{rrrrrrrrrrrrrrr}
+    1 & 1 & 1 & 0 & 0 & 0 & 0 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  \\
+    0 & 1 & 1 & 0 & 0 & 0 & 0 & 0  & 0  & 0  & 0  & -1 & 0  & 0  & -1 \\
+    0 & 0 & 1 & 0 & 0 & 0 & 0 & 0  & -1 & 0  & 0  & -1 & 0  & -1 & -1 \\
+    0 & 0 & 0 & 1 & 0 & 0 & 0 & 0  & 0  & 0  & 1  & 0  & 0  & -1 & 0  \\
+    0 & 0 & 0 & 0 & 1 & 0 & 0 & 1  & 0  & 0  & 0  & 0  & 0  & 0  & -1 \\
+    0 & 0 & 0 & 0 & 0 & 1 & 0 & -1 & 0  & 0  & -1 & 0  & 0  & 1  & 1  \\
+    0 & 0 & 0 & 0 & 0 & 0 & 1 & 0  & 0  & 1  & 0  & 0  & -1 & 0  & 0  \\
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 1  & 1  & -1 & 0  & 0  & 1  & 0  & 0  \\
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  & 0  & 1  & 1  & 1  & 0  & 0  & 0  \\
+    0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0 
+  \end{tabular}
+\right)\]
+Por lo tanto $\dim(\im\partial_{1})=9$, lo cual implica que
+$\dim(\im\widehat\partial_{1})=9$ (se sigue de la definición de
+$\widehat\partial_{1}$).
+
+Por el teorema \ref{im-mod-irreducible} tenemos:
+  $$\widehat\partial_{1}(S^{(4,1)})=S^{(4,1)} \quad \mbox{o }\quad \widehat\partial_{1}(S^{(4,1)})=0$$
+  $$\widehat\partial_{1}(S^{(3,1,1)})=0$$
+  $$\widehat\partial_{1}(S^{(3,2)})=S^{(4,1)} \quad \mbox{o }\quad \widehat\partial_{1}(S^{(3,2)})=0$$
+además $\dim(S^{(4,1)})=4$ y $\dim(S^{(3,2)})=5$, luego
+$$\im\widehat\partial_{1}=\widehat\partial_{1}(S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)})=S^{(4,1)}\oplus S^{(3,2)}$$
+
 \end{example}
 
 %Vamos a citar \cite{MR0225619}
