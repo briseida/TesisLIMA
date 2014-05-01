@@ -2089,7 +2089,7 @@ de $b_{j}$ no pertenece a ningún otro triángulo distinto de $c_{i}$, por
 lo tanto $\partial_{2}(c_{j})$ no es combinación lineal de las fronteras
 $\partial_{2}(c_{i})$ con $i\neq j$.
 
-Así que $\dim(\im\partial_{2})=$10, lo cual implica que
+Así que $\dim(\im\partial_{2})=10$, lo cual implica que
 $\dim(\im\widehat\partial_{2})=10$ (se sigue de la definición de
 $\widehat\partial_{2}$).
 
@@ -2414,6 +2414,45 @@ De las ecuaciones \ref{ker1-M6}, \ref{im2-M6} y la proposición
   S^{(3,2,1)})/(S^{(4,1,1)}\oplus S^{(3,3)})\\
   &=&S^{(3,2,1)}
 \end{eqnarray*}
+
+En lo anterior usamos el hecho de que $\widetilde H_{2}(M_{6})=0$ de el
+resultado de \setlength{\fboxsep}{0pt}\colorbox{green}{(referencia[Bouc]????)}, sin embargo veamos que no es necesario, por lo que
+necesitamos calcular $\im \widehat\partial_{2}$. 
+
+Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
+\ref{imT}, sabemos que $\im \partial_{2}=\langle\partial_{2}(c_{1}),\ldots,\partial_{2}(c_{15})\rangle$,
+veamos que el número de vectores linealmente independientes de la
+$\im \partial_{2}$ es 15, es decir, si
+$$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{15}\partial_{2}(c_{15})=0$$
+así que:
+
+\begin{footnotesize}
+  \begin{align*}
+    &\lambda_{1}(a_{10}a_{15}-a_{1}a_{15}+a_{1}a_{10})+\lambda_{2}(a_{11}a_{14}-a_{1}a_{14}+a_{1}a_{11})+\lambda_{3}(a_{12}a_{13}-a_{1}a_{13}+a_{1}a_{12})\\
+    &+\lambda_{4}(a_{7}a_{15}-a_{2}a_{15}+a_{2}a_{7})+\lambda_{5}(a_{8}a_{14}-a_{2}a_{14}+a_{2}a_{8})+\lambda_{6}(a_{9}a_{13}-a_{2}a_{13}+a_{2}a_{9})\\
+    &+\lambda_{7}(a_{6}a_{15}-a_{3}a_{15}+a_{3}a_{6})+\lambda_{8}(a_{8}a_{12}-a_{3}a_{12}+a_{3}a_{8})+\lambda_{9}(a_{9}a_{11}-a_{3}a_{11}+a_{3}a_{9})\\
+    &+\lambda_{10}(a_{6}a_{14}-a_{4}a_{14}+a_{4}a_{6})+\lambda_{11}(a_{7}a_{12}-a_{4}a_{12}+a_{4}a_{7})+\lambda_{12}(a_{9}a_{10}-a_{4}a_{10}+a_{4}a_{9})\\
+    &+\lambda_{13}(a_{6}a_{13}-a_{5}a_{13}+a_{5}a_{6})+\lambda_{14}(a_{7}a_{11}-a_{5}a_{11}+a_{5}a_{7})+\lambda_{15}(a_{8}a_{10}-a_{5}a_{10}+a_{5}a_{8})\\
+    &=0
+  \end{align*}
+\end{footnotesize}
+Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{15}=0$,
+intuituvamente esto se puede deducir de la gráfica
+\ref{fig:emparejamiento6}. Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
+de $b_{j}$ no pertenece a ningún otro triángulo distinto de $c_{i}$, por
+lo tanto $\partial_{2}(c_{j})$ no es combinación lineal de las fronteras
+$\partial_{2}(c_{i})$ con $i\neq j$.
+
+Así que $\dim(\im\partial_{2})=15$, lo cual implica que
+$\dim(\im\widehat\partial_{2})=15$ (se sigue de la definición de
+$\widehat\partial_{2}$).
+
+Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
+  $$\widehat\partial_{2}(S^{(4,1,1)})=S^{(4,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(4,1,1)})=0$$
+  $$\widehat\partial_{2}(S^{(3,3)})=S^{(3,3)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,3)})=0$$
+Además $\dim(S^{(4,1,1)})=10$ y $\dim(S^{(3,3)})=5$, entonces:
+$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(4,1,1)}\oplus
+S^{(3,3)})=S^{(4,1,1)}\oplus S^{(3,3)}$$
 
 \end{example}
 
