@@ -2054,13 +2054,11 @@ De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 
 De las ecuaciones \ref{ker1-KM5} y \ref{im2-KM5} tenemos:
 
-\begin{equation*}
-\widetilde H_{1}(K(M_{5}))=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=(S^{(2,1,1,1)}\oplus 2S^{(3,1,1)})/(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(3,1,1)}.
-\end{equation*}
-
-
-
-
+\begin{eqnarray*}
+  \widetilde H_{1}(K(M_{5}))&=&\ker \widehat\partial_{1}/\im
+  \widehat\partial_{2}\\
+  &=&(S^{(2,1,1,1)}\oplus 2S^{(3,1,1)})/(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(3,1,1)}.
+\end{eqnarray*}
 
 Anteriormente usamos el hecho de que $M_{5}\simeq K(M_{5})$  para
 concluir que $\widetilde H_{0}(K(M_{5}))=\widetilde H_{0}(M_{5})=0$, sin embargo veamos que no es necesario, por lo que
@@ -2075,14 +2073,15 @@ decir, si
 $$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{10}\partial_{2}(c_{10})=0$$
 así que:
 
-\footnotesize{
-\begin{align*}
-  &\lambda_{1}(a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2})+\lambda_{2}(a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12})+\lambda_{3}(a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9})\\
-  &+\lambda_{4}(a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6})+\lambda_{5}(a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5})+\lambda_{6}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11})\\
-  &+\lambda_{7}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8})+\lambda_{8}(a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8})+\lambda_{9}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10})\\
-  &+\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11})\\
-  &=0
-\end{align*}}
+\begin{footnotesize}
+  \begin{align*}
+    &\lambda_{1}(a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2})+\lambda_{2}(a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12})+\lambda_{3}(a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9})\\
+    &+\lambda_{4}(a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6})+\lambda_{5}(a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5})+\lambda_{6}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11})\\
+    &+\lambda_{7}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8})+\lambda_{8}(a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8})+\lambda_{9}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10})\\
+    &+\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11})\\
+    &=0
+  \end{align*}
+\end{footnotesize}
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{10}=0$,
 intuituvamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
 Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
@@ -2099,6 +2098,322 @@ Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
   $$\widehat\partial_{2}(S^{(3,1,1)})=S^{(3,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1)})=0$$
 Además $\dim(S^{(2,1,1,1)})=4$ y $\dim(S^{(3,1,1)})=6$, entonces:
 $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(2,1,1,1)}\oplus S^{(3,1,1)}$$
+
+\end{example}
+
+\begin{example}
+  \label{ejemploM6}
+  Consideremos el complejo de emparejamiento $M_{6}$, que está dado
+  por el conjunto de vértices (aristas de la gráfica de $K_{6}$):
+  \begin{center}
+    \begin{tabular}[h]{lllll}
+      $a_{1}=\overline{12}$ & $a_{4}=\overline{15}$ & $a_{7}=\overline{24}$ & $a_{10}=\overline{34}$ & $a_{13}=\overline{45}$  \\
+      $a_{2}=\overline{13}$ & $a_{5}=\overline{16}$ & $a_{8}=\overline{25}$ & $a_{11}=\overline{35}$ & $a_{14}=\overline{46}$  \\
+      $a_{3}=\overline{14}$ & $a_{6}=\overline{23}$ & $a_{9}=\overline{26}$ & $a_{12}=\overline{36}$ & $a_{15}=\overline{56}$  
+    \end{tabular}
+  \end{center}
+  los $1$-simplejos:
+  \begin{center}
+    \begin{tabular}[h]{llll}
+      $b_{1}=(a_{1},a_{10})$ & $b_{13}=(a_{3},a_{6})$ & $b_{25}=(a_{5},a_{6})$ & $b_{37}=(a_{8},a_{10})$ \\
+      $b_{2}=(a_{1},a_{11})$ & $b_{14}=(a_{3},a_{8})$ & $b_{26}=(a_{5},a_{7})$ & $b_{38}=(a_{8},a_{12})$ \\
+      $b_{3}=(a_{1},a_{12})$ & $b_{15}=(a_{3},a_{9})$ & $b_{27}=(a_{5},a_{8})$ & $b_{39}=(a_{8},a_{14})$ \\
+      $b_{4}=(a_{1},a_{13})$ & $b_{16}=(a_{3},a_{11})$ & $b_{28}=(a_{5},a_{10})$ & $b_{40}=(a_{9},a_{10})$ \\
+      $b_{5}=(a_{1},a_{14})$ & $b_{17}=(a_{3},a_{12})$ & $b_{29}=(a_{5},a_{11})$ & $b_{41}=(a_{9},a_{11})$ \\
+      $b_{6}=(a_{1},a_{15})$ & $b_{18}=(a_{3},a_{15})$ & $b_{30}=(a_{5},a_{13})$ & $b_{42}=(a_{9},a_{13})$ \\
+      $b_{7}=(a_{2},a_{7})$ & $b_{19}=(a_{4},a_{6})$ & $b_{31}=(a_{6},a_{13})$ & $b_{43}=(a_{10},a_{15})$ \\
+      $b_{8}=(a_{2},a_{8})$ & $b_{20}=(a_{4},a_{7})$ & $b_{32}=(a_{6},a_{14})$ & $b_{44}=(a_{11},a_{14})$ \\
+      $b_{9}=(a_{2},a_{9})$ & $b_{21}=(a_{4},a_{9})$ & $b_{33}=(a_{6},a_{15})$ & $b_{45}=(a_{12},a_{13})$ \\
+      $b_{10}=(a_{2},a_{13})$ & $b_{22}=(a_{4},a_{10})$ & $b_{34}=(a_{7},a_{11})$ &  \\
+      $b_{11}=(a_{2},a_{14})$ & $b_{23}=(a_{4},a_{12})$ & $b_{35}=(a_{7},a_{12})$ &  \\
+      $b_{12}=(a_{2},a_{15})$ & $b_{24}=(a_{4},a_{14})$ & $b_{36}=(a_{7},a_{15})$ &  
+    \end{tabular}
+  \end{center}
+  y los $2$-simplejos:
+  \begin{center}
+    \begin{tabular}[h]{lll}
+      $c_{1}=(a_{1},a_{10},a_{15})$ & $c_{6}=(a_{2},a_{9},a_{13})$ & $c_{11}=(a_{4},a_{7},a_{12})$  \\
+      $c_{2}=(a_{1},a_{11},a_{14})$ & $c_{7}=(a_{3},a_{6},a_{15})$ & $c_{12}=(a_{4},a_{9},a_{10})$  \\
+      $c_{3}=(a_{1},a_{12},a_{13})$ & $c_{8}=(a_{3},a_{8},a_{12})$ & $c_{13}=(a_{5},a_{6},a_{13})$  \\
+      $c_{4}=(a_{2},a_{7},a_{15})$ & $c_{9}=(a_{3},a_{9},a_{11})$ & $c_{14}=(a_{5},a_{7},a_{11})$  \\
+      $c_{5}=(a_{2},a_{8},a_{14})$ & $c_{10}=(a_{4},a_{6},a_{14})$ & $c_{15}=(a_{5},a_{8},a_{10})$  
+    \end{tabular}
+  \end{center}
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=.5]
+    \GraphInit[vstyle=Normal] \SetVertexNoLabel
+    \grStar[RA=3.7,Math]{7}%
+    \grEmptyCycle[RA=8,prefix=c]{24} \EdgeInGraphMod*{a}{6}{1}{0}{2}
+    \EdgeInGraphMod*{c}{24}{1}{0}{2} \EdgeFromOneToSeq{a}{c}{1}{2}{5}
+    \EdgeFromOneToSeq{a}{c}{2}{6}{9}
+    \EdgeFromOneToSeq{a}{c}{3}{10}{13}
+    \EdgeFromOneToSeq{a}{c}{4}{14}{17}
+    \EdgeFromOneToSeq{a}{c}{5}{18}{21}
+    \EdgeFromOneToSeq{a}{c}{0}{22}{23}
+    \EdgeFromOneToSeq{a}{c}{0}{0}{1}
+    \AssignVertexLabel{a}{\textsl{$a_{15}$},\textsl{$a_{10}$},\textsl{$a_{13}$},\textsl{$a_{12}$},\textsl{$a_{14}$},\textsl{$a_{11}$},\textsl{$a_{1}$}}
+    \AssignVertexLabel{c}{\textsl{$a_{7}$},\textsl{$a_{2}$},\textsl{$a_{8}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{4}$},\textsl{$a_{9}$},\textsl{$a_{2}$},\textsl{$a_{6}$},\textsl{$a_{5}$},\textsl{$a_{7}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{2}$},\textsl{$a_{7}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{3}$}}
+  \end{tikzpicture}
+  
+  \caption{Gráfica de emparejamiento $M_{6}$}
+  \label{fig:emparejamiento6}
+\end{figure}
+
+\begin{table}[!hbtp]
+  \resizebox*{!}{5.5cm}{
+    \centering
+    \begin{tabular}{c |r r r r r r r r r r r}
+      No. de Elementos  & 720 & 48 & 18 & 16 & 8 & 6 & 5 & 48 & 18 & 8 &6\\
+      Clase&(1)& (2) & (3) & (2,2) & (4)& (3,2) & (5) & (2,2,2) & (3,3)
+      & (4,2)  & (6) \\
+      \hline
+      $\chi_{S^{{(6)}}}$         & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 & 1 & 1&1 \\
+      $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1  & 1 & -1&-1 & 1 &-1 & 1& 1&-1 \\
+      $\chi_{S^{{(5,1)}}}$       & 5 & 3  & 2  & 1 & 1 & 0 & 0 &-1 &-1&-1&-1 \\
+      $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3 &  2 & 1 &-1 & 0 & 0 & 1 &-1&-1&1  \\
+      $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & 1  & -2& 0 &-1 & 0 &-2 & 1& 0&1  \\
+      $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2  & 1  &-2 & 0 & 1 & 0 & 2 & 1& 0&-1 \\
+      $\chi_{S^{{(4,2)}}}$       & 9 & 3  & 0  & 1 & -1& 0 &-1 & 3 & 0& 1&0 \\
+      $\chi_{S^{{(2,2,1,1)}}}$    & 9 & -3 & 0  & 1 & 1 & 0 &-1 &-3 & 0& 1&0 \\
+      $\chi_{S^{{(3,3)}}}$       & 5 & 1  & -1  & 1 &-1 &1 & 0 & -3& 2& -1&0 \\
+      $\chi_{S^{{(2,2,2)}}}$     & 5  & -1& -1  & 1 & 1 & -1& 0& 3 & 2& -1&0 \\
+      $\chi_{S^{{(3,2,1)}}}$     & 16 & 0 & -2  & 0 & 0 & 0 & 1& 0 &-2& 0 &0
+    \end{tabular}}
+    
+    \caption{Tabla de caracteres de $S_{6}$}
+    \label{tab:S_6}
+  \end{table}
+  La tabla \ref{tab:S_6} nos ayudará a construir las tablas de
+  caracteres restringidas a los conjuntos que se establecen a
+  continuación, esto para obtener la descomposición de los espacios de
+  cadenas $C_{0}(M_{6})$, $C_{1}(M_{6})$ y $C_{2}(M_{6})$ en
+  módulos de Specht de forma análoga como se hizo en los ejemplos anteriores.
+  
+  Consideremos:
+  $$V_{0}=\langle a_{1}\rangle=\langle (\overline{12})\rangle$$
+
+  \begin{footnotesize}
+    \begin{align*}
+      H_{0}=&\{g\in S_{6}\mid
+      gV_{0}=V_{0}\}=\{(1),(12),(34),(35),(36),(45),(46),(56),(345),(346),\\
+      &(354),(356),(364),(365),(456),(465),(12)(34),(12)(35),(12)(36),(12)(45),\\
+      &(12)(46),(12)(56),(34)(56),(35)(46),(36)(45),(3456),(3465),(3546),(3564),\\
+      &(3645),(3654),(345)(12),(346)(12),(354)(12),(356)(12),(364)(12),(365)(12),\\
+      &(456)(12),(465)(12),(12)(34)(56),(12)(35)(46),(12)(36)(45),(3456)(12),\\
+      &(3465)(12),(3546)(12),(3564)(12),(3645)(12),(3654)(12)\}
+    \end{align*}
+  \end{footnotesize}
+
+ \begin{table}[!hbtp]
+    \centering
+    \begin{tabular}{c |r r r r r r r r}
+      No. de Elementos  & 1 & 7 & 8 & 9 & 6 & 8 & 3 & 6  \\
+      Clase&(1)& (2) & (3) & (2,2) & (4)& (3,2) & (2,2,2) & (4,2)\\
+      \hline
+      $\chi_{S^{{(6)}}}$         & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 \\
+      $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1  & 1 & -1&-1 &-1 & 1 \\
+      $\chi_{S^{{(5,1)}}}$       & 5 & 3  & 2  & 1 & 1 & 0 &-1 &-1 \\
+      $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3 &  2 & 1 &-1 & 0 & 1 &-1  \\
+      $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & 1  & -2& 0 &-1 &-2 & 0  \\
+      $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2  & 1  &-2 & 0 & 1 & 2 & 0 \\
+      $\chi_{S^{{(4,2)}}}$       & 9 & 3  & 0  & 1 & -1& 0 & 3 & 1 \\
+      $\chi_{S^{{(2,2,1,1)}}}$    & 9 & -3 & 0  & 1 & 1 & 0 &-3 & 1 \\
+      $\chi_{S^{{(3,3)}}}$       & 5 & 1  & -1  & 1 &-1 &1 & -3& -1 \\
+      $\chi_{S^{{(2,2,2)}}}$     & 5  & -1& -1  & 1 & 1 & -1& 3 & -1 \\
+      $\chi_{S^{{(3,2,1)}}}$     & 16 & 0 & -2  & 0 & 0 & 0 & 0 & 0 \\
+      \hline
+      $\chi_{V_{0}}$        & 1 & 1 & 1 & 1 & 1 & 1 &1 & 1  \\
+    \end{tabular}
+
+    \caption{Caracteres de $S_{6}$ restringidos a $H_{0}$ y carácter de $V_{0}$}
+    \label{tab:restriccion-H_0-M-6}
+  \end{table}
+
+  De los productos internos calculados a partir de la la tabla
+  \ref{tab:restriccion-H_0-M-6} obtenemos:
+  \begin{equation}
+    C_{0}(M_{6})\cong \mathbb{C}\oplus S^{(5,1)}\oplus S^{(4,2)}
+    \label{C0-M6}
+  \end{equation}
+  Ahora tomemos:
+  \begin{equation*}
+    V_{1}=\langle b_{1}\rangle =\langle
+    (a_{1},a_{2})\rangle=\langle(\overline{12},\overline{34})\rangle
+  \end{equation*}
+  \begin{small}
+    \begin{align*}
+      H_{1}=&\{g \in S_{6}\mid
+      gV_{1}=V_{1}\}=\{(1),(12),(34),(56),(12)(34),(12)(56),(34)(56),\\
+      &(13)(24),(14)(23),(12)(34)(56),(13)(24)(56),(14)(23)(56),(2314),\\
+      &(2413),(2314)(56),(2413)(56)\}
+    \end{align*}
+  \end{small}
+  Con $V_{1}$ y $H_{1}$ construimos la tabla
+  \ref{tab:restriccion-H-1-M-6} y calculamos los productos internos
+  correspondientes con la reciprocidad de Frobenius de forma similar a los ejemplos anteriores.
+  
+ \begin{table}[!hbtp]
+    \resizebox*{!}{5.8cm}{
+      \centering
+      \begin{tabular}{c |r r r r r r r r}
+        &   & (12) & (12)(34) &          &             &              & &  \\        
+        &   & (34) & (12)(56) &(13)(24)  &             & (13)(24)(56) & (2314)& (2314)(56)\\
+        Elementos &(1)& (56) & (34)(56) & (14)(23) & (12)(34)(56)& (14)(23)(56) &(2413)&(2413)(56)\\
+        \hline
+        $\chi_{S^{{(6)}}}$           & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 \\
+        $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1  & 1 &-1 &-1 &-1 & 1  \\
+        $\chi_{S^{{(5,1)}}}$         & 5 & 3  & 1  & 1 &-1 &-1 & 1 &-1  \\
+        $\chi_{S^{{(2,1,1,1,1)}}}$   & 5 & -3 &  1 & 1 & 1 & 1 &-1 &-1  \\
+        $\chi_{S^{{(4,1,1)}}}$       & 10& 2  & -2 & -2&-2 &-2 & 0 & 0  \\
+        $\chi_{S^{{(3,1,1,1)}}}$     & 10&-2  & -2 &-2 & 2 & 2 & 0 & 0  \\
+        $\chi_{S^{{(4,2)}}}$         & 9 & 3  & 1  & 1 & 3 &3  &-1 & 1  \\
+        $\chi_{S^{{(2,2,1,1)}}}$     & 9 & -3 & 1  & 1 & -3&-3 & 1 & 1  \\
+        $\chi_{S^{{(3,3)}}}$         & 5 & 1  & 1  & 1 &-3 &-3 &-1 & -1 \\
+        $\chi_{S^{{(2,2,2)}}}$       & 5 & -1 & 1  & 1 & 3 & 3 & 1 & -1 \\
+        $\chi_{S^{{(3,2,1)}}}$       & 16& 0  & 0  & 0 & 0 & 0 & 0 &  0 \\
+        \hline
+        $\chi_{V_{1}}$            & 1 & 1  & 1  & -1& 1 & -1&-1 &-1  \\
+      \end{tabular}}
+    
+    \caption{Caracteres de $S_{6}$ restringidos a $H_{1}$ y carácter de $V_{1}$}
+    \label{tab:restriccion-H-1-M-6}
+  \end{table}  
+  \begin{footnotesize}
+    De donde obtenemos:
+    \begin{equation}
+      C_{1}(M_{6})=S^{(5,1)}\oplus S^{{(4,1,1)}} \oplus S^{{(4,2)}}
+      \oplus S^{{(3,3)}} \oplus S^{{(3,2,1)}}
+      \label{C1-M6}
+    \end{equation}
+    Por último consideremos:
+    \begin{equation*}
+      V_{2}=\langle c_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle
+    \end{equation*}
+  \end{footnotesize}
+  \begin{tiny}
+    \begin{align*}
+      H_{2}=&\{g\in S_{6}\mid
+      gV_{2}=V_{2}\}=\{(1),(12),(34),(56),(12)(34),(12)(56),(34)(56),(13)(24),(14)(23),(15)(26),(16)(25),\\
+      &(35)(46),(36)(45),(12)(34)(56),(13)(24)(56),(14)(23)(56),(15)(26)(34),(16)(25)(34),(35)(46)(12),\\
+      &(36)(45)(12),(2314),(2413),(1625),(1526),(3546),(3645),(2314)(56),(2413)(56),(1625)(34),(1526)(34),\\
+      &(3546)(12),(3645)(12),(135)(246),(136)(245),(145)(236),(146)(235),(153)(264),(154)(263),(163)(254),\\
+      &(164)(253),(135246),(136245),(145236),(146235),(153264),(154263),(163254),(164253)\}
+    \end{align*}
+  \end{tiny}
+
+  \begin{table}[h]
+    \centering
+    \resizebox*{!}{5.8cm}{
+      \begin{tabular}{c |r r r r r r r r r r}
+        No. de Elementos  & 1 & 3 & 3 & 6 & 6 & 1 & 6 & 8 & 6 & 8 \\
+        Clase &(1)& (2) & (2,2) & (2,2) & (4)& (2,2,2) & (2,2,2) & (3,3) & (4,2) & (6)\\
+        \hline
+        $\chi_{S^{{(6)}}}$         & 1 & 1  & 1  & 1 & 1 &1  & 1 & 1 & 1 & 1 \\
+        $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1  & 1 & -1&-1 &-1 & 1 & 1 & -1 \\
+        $\chi_{S^{{(5,1)}}}$       & 5 & 3  & 1  & 1 & 1 &-1 &-1 &-1 &-1 & -1 \\
+        $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3 &  1 & 1 &-1 & 1 & 1 &-1  &-1 & 1 \\
+        $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & -2 & -2& 0 &-2 &-2 & 1  & 0 & 1 \\
+        $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2  & -2 &-2 & 0 & 2 & 2 & 1 & 0 & -1 \\
+        $\chi_{S^{{(4,2)}}}$       & 9 & 3  & 1  & 1 & -1& 3 & 3 & 0 & 1 &  0 \\
+        $\chi_{S^{{(2,2,1,1)}}}$    & 9 & -3 & 1  & 1 & 1 &-3 &-3 & 0 & 1 &  0 \\
+        $\chi_{S^{{(3,3)}}}$       & 5 & 1  & 1  & 1 &-1 &-3 & -3& 2 &-1 &  0 \\
+        $\chi_{S^{{(2,2,2)}}}$     & 5  & -1& 1  & 1 & 1 & 3 & 3 & 2 & -1 & 0 \\
+        $\chi_{S^{{(3,2,1)}}}$     & 16 & 0 & 0  & 0 & 0 & 0 & 0 & -2 & 0 & 0 \\
+        \hline
+        $\chi_{V_{2}}$ & 1 & 1 & 1 & -1 & -1 & 1 &-1 & 1 &- 1 & 1  \\
+      \end{tabular}}
+
+    \caption{Caracteres de $S_{6}$ restringidos a $H_2$ y carácter de $V_{2}$}
+    \label{tab:restriccion-H_2-M-6}
+  \end{table}
+  De la tabla \ref{tab:restriccion-H_2-M-6} obtenemos:
+  \begin{equation}
+    C_{2}(M_{6})\cong S^{(4,1,1)}\oplus S^{(3,3)}
+    \label{C2-M6}
+  \end{equation}
+
+  En la figura \ref{fig:emparejamiento-6} se muestra el diagrama
+  conmutativo de los complejos de cadena de $M_{6}$, donde $f_{0}$,
+  $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
+  \ref{C0-M6}, \ref{C1-M6} y \ref{C2-M6}.
+
+  \begin{figure}[h]
+    \centering
+    \scriptsize{
+      \[
+      \begin{CD}
+        0 @>{\partial_{3}}>> C_{2}(M_{6}) @>{\partial_{2}}>> C_{1}(M_{6}) @>{\partial_{1}}>> C_{0}(M_{6}) @>{\varepsilon}>> \mathbb{C}\\
+        @VVV @Vf_{2}VV   @Vf_{1}VV  @Vf_{0}VV  @VVV    \\
+        0 @>{\widehat\partial_{3}}>> S^{(4,1,1)}\oplus S^{(3,3)} @>{\widehat\partial_{2}}>>
+        S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus
+        S^{(3,2,1)} @>{\widehat\partial_{1}}>> \mathbb{C} \oplus
+    S^{(5,1)}\oplus S^{(4,2)} @>{\widehat \varepsilon}>> \mathbb{C}
+  \end{CD}
+  \]
+}
+
+\caption{Diagrama conmutativo de los complejos de cadenas de $M_{6}$}
+\label{fig:emparejamiento-6}
+\end{figure}
+
+Por calcular las homologías reducidas $\widetilde
+H_{0}(M_{6})$, $\widetilde H_{1}(M_{6})$ y $\widetilde H_{2}(M_{6})$.
+
+Como $\widehat\varepsilon$ es suprayectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
+\begin{equation*}
+  (\mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
+\end{equation*}
+
+así que
+\begin{equation*}
+  \label{ker0-M6}
+  \ker\widehat\varepsilon\cong  S^{(5,1)}\oplus S^{(4,2)} 
+\end{equation*}
+Sabemos que $\widetilde H_{0}(M_{6})=\ker \widehat\varepsilon/\im
+\widehat\partial_{1}=0$ pues $M_{6}$ es conexo, se sigue que $\ker \widehat\varepsilon\cong
+\im\widehat\partial_{1}$, con lo cual:
+\begin{equation}
+  \label{im1-M6}
+  \im \widehat\partial_{1}\cong  S^{(5,1)}\oplus S^{(4,2)} 
+\end{equation}
+
+Además de el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-M6} se tiene:
+$$(S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
+De lo anterior y la proposición \ref{modulos-iguales} tenemos:
+\begin{equation}
+\label{ker1-M6}
+\ker \widehat\partial_{1}=S^{(4,1,1)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}
+\end{equation}
+Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
+\begin{equation*}
+\im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
+\label{im3-KM5}
+\end{equation*}
+También de
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia[Bouc]????)} sabemos:
+\begin{equation*}
+\widetilde H_{2}(M_{6})=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0.
+\end{equation*}
+por lo que $\ker \widehat\partial_{2}=0$. De el teorema
+\ref{teorema-isomorfismo-mod} tenemos:
+$$(S^{(4,1,1)}\oplus S^{(3,3)})/\ker \widehat\partial_{2}\cong \im \widehat\partial_{2}$$
+De lo anterior y la proposición \ref{modulos-iguales} tenemos:
+\begin{equation}
+\im \widehat\partial_{2}=S^{(4,1,1)}\oplus S^{(3,3)}
+\label{im2-M6}
+\end{equation}
+
+De las ecuaciones \ref{ker1-M6}, \ref{im2-M6} y la proposición
+\ref{modulos-iguales} tenemos:
+\begin{eqnarray*}
+  \widetilde H_{1}(M_{6})&=&\ker \widehat\partial_{1}/\im
+  \widehat\partial_{2}\\
+  &=&(S^{(4,1,1)}\oplus S^{(3,3)}\oplus
+  S^{(3,2,1)})/(S^{(4,1,1)}\oplus S^{(3,3)})\\
+  &=&S^{(3,2,1)}
+\end{eqnarray*}
 
 \end{example}
 
