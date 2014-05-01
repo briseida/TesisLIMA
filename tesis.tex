@@ -504,7 +504,7 @@ decir, $\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}
 \textbf{\emph{Observación:}} En el caso de que $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
 $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
-%
+
 % dado por el siguiente isomorfismo:
 % \begin{align*}
 %   \phi:W_{1}+W_{2}&\rightarrow W_{1}\oplus W_{2}\\
@@ -1109,13 +1109,14 @@ La \textbf{gráfica de emparejamiento} de $K_{n}$ será denotada por $G_{n}$.
 \end{definition}
 
 \begin{example}
-Considérese la gráfica $K_{4}$; construiremos el complejo de
-emparejamiento $M_{4}$ dado por el conjunto de vértices
-$$V=\{\overline{12},\overline{13},\overline{14},\overline{23},\overline{24},\overline{34}\},$$
-que es el conjunto de aristas de la gráfica de $K_{4}$. La familia de
-$1$-simplejos estará dada por el siguiente conjunto:
-$$\{\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.$$ 
-Es decir,
+  \label{ejemploM4}
+  Considérese la gráfica $K_{4}$; construiremos el complejo de
+  emparejamiento $M_{4}$ dado por el conjunto de vértices
+  $$V=\{\overline{12},\overline{13},\overline{14},\overline{23},\overline{24},\overline{34}\},$$
+  que es el conjunto de aristas de la gráfica de $K_{4}$. La familia de
+  $1$-simplejos estará dada por el siguiente conjunto:
+  $$\{\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.$$ 
+  Es decir,
 \begin{equation*}
   M_{4}=\{\{\overline{12}\},\{\overline{13}\},\{\overline{14}\},\{\overline{23}\},\{\overline{24}\},\{\overline{34}\},\{\overline{12},\overline{34}\},\{\overline{13},\overline{24}\},\{\overline{14},\overline{23}\}\}.
 \end{equation*}
@@ -1470,6 +1471,7 @@ Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
 \end{example}
 
 \begin{example}
+  \label{ejemploM5}
   Considérese el complejo de emparejamiento $M_{5}$, que
   está dado por el conjunto de vértices (aristas de la gráfica de $K_{5}$):
   $$V=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6},a_{7},a_{8},a_{9},a_{10}\}$$
@@ -1636,7 +1638,9 @@ De donde obtenemos:
   C_{1}(M_{5})\cong S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)}
 \end{equation}
 En la figura \ref{fig:diagrama-conmutativo5} se muestra el diagrama
-conmutativo de los complejos de cadena de $M_{5}$, donde $f_{0}$ y $f_{1}$ son los isomorfismos obtenidos de las expresiones \ref{eq:C0-M5} y \ref{eq:C1-M5}
+conmutativo de los complejos de cadena de $M_{5}$, donde $f_{0}$ y
+$f_{1}$ son los isomorfismos obtenidos de las expresiones
+\ref{eq:C0-M5} y \ref{eq:C1-M5}
 
 \begin{figure}[h]
   \centering
@@ -1695,14 +1699,15 @@ De las ecuaciones \ref{ker1-5} y \ref{im-2-4} concluimos:
   \widetilde H_{1}(M_{5})=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=S^{(3,1,1)}/0=S^{(3,1,1)}.
 \end{equation*}
  
-Usamos el hecho de que $M_{5}$ es conexo para concluir que $\widetilde
-H_{0}(M_{5})=0$, notemos que no es necesario, por lo que
+Anteriormente usamos el hecho de que $M_{5}$ es conexo para concluir que $\widetilde
+H_{0}(M_{5})=0$, sin embargo notemos que no es necesario, por lo que
 necesitamos calcular $\im \widehat\partial_{1}$. 
 
-Verifiquemos primero que $\dim(\im \partial_{1})=9$, del teorema
+Verifiquemos primero que $\dim(\im \partial_{1})=9$. Del teorema
 \ref{imT}, sabemos que
 $\im \partial_{1}=\langle\partial_{1}(b_{1}),\ldots,\partial_{1}(b_{15})\rangle$,
-veamos que el número de vectores linealmente independientes es 9, es
+veamos que el número de vectores linealmente independientes de la
+$\im \partial_{1}$ es 9, es
 decir, si
 $$\lambda_{1}\partial_{1}(b_{1})+\lambda_{2}\partial_{1}(b_{2})+\ldots+\lambda_{15}\partial_{1}(b_{15})=0$$
 así que:
@@ -1769,7 +1774,289 @@ Por el teorema \ref{im-mod-irreducible} tenemos:
   $$\widehat\partial_{1}(S^{(3,2)})=S^{(4,1)} \quad \mbox{o }\quad \widehat\partial_{1}(S^{(3,2)})=0$$
 además $\dim(S^{(4,1)})=4$ y $\dim(S^{(3,2)})=5$, luego
 $$\im\widehat\partial_{1}=\widehat\partial_{1}(S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)})=S^{(4,1)}\oplus S^{(3,2)}$$
+\end{example}
 
+\begin{example}
+  \label{ejemploKM5}
+  Consideremos el complejo de clanes de la gráfica de emparejamiento
+  $M_{5}$, al que denotamos como $K(M_{5})$, que está dado por el
+  conjunto de vértices (aristas de la gráfica de
+  $M_{5}$):
+\begin{center}
+  \begin{tabular}[h]{lll}
+    $a_{1}=(\overline{12},\overline{34})$ & $a_{6}=(\overline{13},\overline{45})$ & $a_{11}=(\overline{15},\overline{24})$  \\
+    $a_{2}=(\overline{12},\overline{35})$ & $a_{7}=(\overline{14},\overline{23})$ & $a_{12}=(\overline{15},\overline{34})$  \\
+    $a_{3}=(\overline{12},\overline{45})$ & $a_{8}=(\overline{14},\overline{25})$ & $a_{13}=(\overline{23},\overline{45})$  \\
+    $a_{4}=(\overline{13},\overline{24})$ & $a_{9}=(\overline{14},\overline{35})$ & $a_{14}=(\overline{24},\overline{35})$  \\
+    $a_{5}=(\overline{13},\overline{25})$ & $a_{10}=(\overline{15},\overline{23})$ & $a_{15}=(\overline{25},\overline{34})$  
+  \end{tabular}
+\end{center}
+
+La familia de $1$-simplejos orientados estará dada por:
+\begin{center}
+  \begin{tabular}[h]{llll}
+    $b_{1}=(a_{1},a_{2})$ & $b_{9}=(a_{3},a_{13})$ & $b_{17}=(a_{6},a_{13})$ & $b_{25}=(a_{10},a_{11})$ \\
+    $b_{2}=(a_{1},a_{3})$ & $b_{10}=(a_{4},a_{5})$ & $b_{18}=(a_{7},a_{8})$ & $b_{26}=(a_{10},a_{12})$ \\
+    $b_{3}=(a_{1},a_{12})$ & $b_{11}=(a_{4},a_{6})$ & $b_{19}=(a_{7},a_{9})$ & $b_{27}=(a_{10},a_{13})$ \\
+    $b_{4}=(a_{1},a_{15})$ & $b_{12}=(a_{4},a_{11})$ & $b_{20}=(a_{7},a_{10})$ & $b_{28}=(a_{11},a_{12})$ \\
+    $b_{5}=(a_{2},a_{3})$ & $b_{13}=(a_{4},a_{14})$ & $b_{21}=(a_{7},a_{13})$ & $b_{29}=(a_{11},a_{14})$ \\
+    $b_{6}=(a_{2},a_{9})$ & $b_{14}=(a_{5},a_{6})$ & $b_{22}=(a_{8},a_{9})$ & $b_{30}=(a_{12},a_{15})$ \\
+    $b_{7}=(a_{2},a_{14})$ & $b_{15}=(a_{5},a_{8})$ & $b_{23}=(a_{8},a_{15})$ &  \\
+    $b_{8}=(a_{3},a_{6})$ & $b_{16}=(a_{5},a_{15})$ & $b_{24}=(a_{9},a_{14})$ &
+  \end{tabular}
+\end{center}
+Los $2$-simplejos orientados son:
+
+\begin{tabular}[h]{llll}
+  $c_{1}=(a_{1},a_{2},a_{3})$ & $c_{4}=(a_{3},a_{6},a_{13})$ &$c_{7}=(a_{5},a_{8},a_{15})$ &$c_{9}=(a_{7},a_{10},a_{13})$ \\
+  $c_{2}=(a_{1},a_{12},a_{15})$ & $c_{5}=(a_{4},a_{5},a_{6})$ &$c_{8}=(a_{7},a_{8},a_{9})$ &$c_{10}=(a_{10},a_{11},a_{12})$ \\
+  $c_{3}=(a_{2},a_{9},a_{14})$ & $c_{6}=(a_{4},a_{11},a_{14})$ &  &
+\end{tabular}
+
+\begin{figure}[!hbtp]
+  \centering
+  \begin{tikzpicture}[scale=.85]%[rotate=90,scale=1]
+    \newcommand{\aset}[2]{$\{#1,#2\}$} \GraphInit[vstyle=Classic]
+    % \tikzset{VertexStyle/.style={draw,circle}}
+    \SetVertexNoLabel \SetVertexMath \SetUpVertex[MinSize=17pt]
+    \grEmptyCycle[RA=1,rotation=-90]{5}
+    \grEmptyCycle[RA=2.5,prefix=w,rotation=-90]{5}
+    \grCycle[RA=3.8,prefix=z,rotation=90]{5} \EdgeInGraphMod{a}{5}{2}
+    \EdgeMod{a}{w}{5}{1} \EdgeMod{a}{w}{5}{-1} \EdgeMod{w}{z}{5}{2}
+    \EdgeMod{w}{z}{5}{-2}
+    \AssignVertexLabel{z}{\textsl{$a_{1}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{5}$},\textsl{$a_{15}$}}
+    \AssignVertexLabel{w}{\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{12}$},\textsl{$a_{2}$},\textsl{$a_{13}$}}
+    \AssignVertexLabel{a}{\textsl{$a_{7}$},\textsl{$a_{11}$},\textsl{$a_{9}$},\textsl{$a_{10}$},\textsl{$a_{14}$}}
+  \end{tikzpicture}
+ 
+  \caption{Gráfica de clanes $K(G_{5})$}
+  \label{fig:KG_5}
+\end{figure}
+
+A continuación obtendremos la descomposición de los espacios de
+cadenas $C_{0}(K(M_{5}))$, $C_{1}(K(M_{5}))$ y $C_{2}(K(M_{5}))$ en
+módulos de Specht por medio de el teorema de la reciprocidad de Frobenius.
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)}
+
+Consideremos:
+\begin{eqnarray*}
+V_{0}=\langle a_{1}\rangle=\langle
+(\overline{12},\overline{34})\rangle\\
+H_{0}=\{g\in S_{5}\mid gV_{0}=V_{0}\}
+\end{eqnarray*}
+
+  \begin{table}[!hbtp]
+    \centering
+    \resizebox*{!}{5.2cm}{
+    \begin{tabular}{c |r r r r}
+      &     &      &        & (12)(34) \\
+      &     & (12) & (1324) & (13)(24) \\
+      Elementos & (1) & (34) & (1423) & (14)(23) \\
+      \hline
+      $\chi_{S^{(5)}}$       & 1 & 1  & 1  & 1  \\
+      $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1  \\
+      $\chi_{S^{(4,1)}}$      & 4 & 2  & 0  & 0  \\
+      $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & 0  & 0  \\
+      $\chi_{S^{(3,1,1)}}$    & 6 & 0  & 0  & -2 \\
+      $\chi_{S^{(3,2)}}$     & 5 & 1  & -1  & 1  \\
+      $\chi_{S^{(2,2,1)}}$   & 5 & -1  & 1  & 1  \\
+      \hline
+      $\chi_{V_{0}}$ & 1 & 1 & 1 & 1 
+    \end{tabular}}
+    
+    \caption{Caracteres de $S_{5}$ restringidos a $H_{0}$ y carácter de $V_{0}$}
+    \label{tab:clanes-H_0-5}
+  \end{table}
+
+\begin{eqnarray*}
+  \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
+ \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=0\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=0\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=0\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
+\end{eqnarray*}
+Con los productos internos calculados obtenemos:
+\begin{equation}
+C_{0}(K(M_{5}))\cong \mathbb{C}\oplus S^{(4,1)}\oplus S^{(3,2)}\oplus
+S^{(2,2,1)}
+\label{C0-KM5}
+\end{equation}
+Consideremos los siguientes conjuntos:
+\begin{eqnarray*}
+V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle((\overline{12},\overline{34}),(\overline{12},\overline{35}))\rangle\\
+H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}=\{(1),(12),(45),(12)(45)\}
+\end{eqnarray*}
+% \begin{align*}
+%   (1)b_{1}&=b_{1}\\
+%   (12)b_{1}&=b_{1}\\
+%   (45)b_{1}&=-b_{1}\\
+%   (12)(45)b_{1}&=-b_{1}
+% \end{align*}
+\begin{table}[!hbtp]
+  \centering
+  \begin{tabular}{c |r r r r}
+    Elementos & (1) & (12) & (45) & (12)(45) \\
+    \hline
+    $\chi_{S^{(5)}}$ & 1 & 1  & 1  & 1 \\
+    $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1  \\
+    $\chi_{S^{(4,1)}}$ & 4 & 2  & 2  & 0  \\
+    $\chi_{S^{(2,1,1,1)}}$ & 4 & -2 & -2 & 0  \\
+    $\chi_{S^{(3,1,1)}}$ & 6 & 0  & 0  & -2 \\
+    $\chi_{S^{(3,2)}}$ & 5 & 1  & 1  & 1  \\
+    $\chi_{S^{(2,2,1)}}$ & 5 & -1 & -1 & 1  \\
+    \hline
+    $\chi_{V_{1}}$ & 1 & 1 & -1 & -1 \\
+  \end{tabular}
+
+  \caption{Caracteres de $S_{5}$ restringidos a $H_{1}$ y carácter de $V_{1}$}
+  \label{tab:clanes-H_1-5}
+\end{table}
+
+De la tabla \ref{tab:clanes-H_1-5} calculamos los productos internos:
+\begin{eqnarray*}
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}}\downarrow_{H_{1}}\rangle_{H_{1}}=0\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=0\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=2\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1
+\end{eqnarray*}
+De donde resulta:
+\begin{equation}
+C_{1}(K(M_{5}))\cong S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus
+2S^{(3,1,1)}\oplus S^{(3,2)} \oplus S^{(2,2,1)}
+\label{C1-KM5}
+\end{equation}
+Ahora tomemos los siguientes conjuntos:
+\begin{eqnarray*}
+V_{2}=\langle c_{1}\rangle=\langle
+(a_{1},a_{2},a_{3})\rangle&=&\langle((\overline{12},\overline{34}),(\overline{12},\overline{35}),(\overline{12},\overline{45}))\rangle\\
+H_{2}&=&\{g\in S_{5}\mid gV_{2}=V_{2}\}
+\end{eqnarray*}
+Con lo cual conseguimos la tabla \ref{tab:clanes-H_2-5}.
+\begin{table}[!hbtp]
+  \centering
+  \begin{tabular}{c |r r r r r r}
+    &     &      & (34) & (12)(34) &       &  \\
+    &     &      & (35) & (12)(35) & (345) & (12)(345) \\
+    Elementos & (1) & (12) & (45) & (12)(45) & (354) & (12)(354) \\
+    \hline
+    $\chi_{S^{(5)}}$ & 1 & 1  & 1  & 1 & 1 & 1 \\
+    $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 & -1\\
+    $\chi_{S^{(4,1)}}$ & 4 & 2  & 2  & 0 & 1 & -1\\
+    $\chi_{S^{(2,1,1,1)}}$ & 4 & -2 & -2 & 0 & 1 & 1\\
+    $\chi_{S^{(3,1,1)}}$ & 6 & 0  & 0  & -2& 0 & 0\\
+    $\chi_{S^{(3,2)}}$ & 5 & 1  & 1  & 1 & -1& 1\\
+    $\chi_{S^{(2,2,1)}}$ & 5 & -1 & -1 & 1 & -1& -1\\
+    \hline
+    $\chi_{V_{2}}$ & 1 & 1 & -1 & -1& 1 & 1\\
+  \end{tabular}
+
+  \caption{Caracteres de $S_{5}$ restringidos a $H_{2}$ y carácter de $V_{2}$}
+  \label{tab:clanes-H_2-5}
+\end{table}
+
+La cual nos ayuda a calcular los siguientes productos internos:
+\begin{eqnarray*}
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(5)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(4,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=1\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,1,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=1\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,2)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,2,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
+\end{eqnarray*}
+
+De donde obtenemos:
+\begin{equation}
+\label{C2-KM5}
+C_{2}(K(M_{5}))\cong S^{(2,1,1,1)}\oplus S^{(3,1,1)}
+\end{equation}
+
+En la figura \ref{fig:diagrama-conmutativo-clanes5} se muestra el diagrama
+conmutativo de los complejos de cadena de $K(M_{5})$, donde $f_{0}$,
+$f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
+\ref{C0-KM5}, \ref{C1-KM5} y \ref{C2-KM5}.
+
+\begin{figure}[h]
+  \centering
+  {\tiny
+  \[
+  \begin{CD}
+    0 @>{\partial_{3}}>> C_{2}(K(M_{5})) @>{\partial_{2}}>> C_{1}(K(M_{5})) @>{\partial_{1}}>> C_{0}(K(M_{5})) @>{\varepsilon}>> \mathbb{C}\\
+    @VVV   @Vf_{2}VV   @Vf_{1}VV  @Vf_{0}VV  @VVV    \\
+    0 @>{\widehat\partial_{3}}>> S^{(2,1,1,1)}\oplus S^{(3,1,1)}
+    @>{\widehat\partial_{2}}>> S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus
+    2S^{(3,1,1)}\oplus S^{(3,2)} \oplus S^{(2,2,1)}
+    @>{\widehat\partial_{1}}>> \mathbb{C}\oplus S^{(4,1)}\oplus
+    S^{(3,2)}\oplus S^{(2,2,1)}@>{\widehat \varepsilon}>> \mathbb{C}
+  \end{CD}
+  \]
+   }
+  
+  \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{5})$}
+  \label{fig:diagrama-conmutativo-clanes5}
+\end{figure}
+
+Calculemos las homologías reducidas $\widetilde H_{0}(K(M_{5}))$,
+$\widetilde H_{1}(K(M_{5}))$ y $\widetilde H_{2}(K(M_{5}))$.
+
+Como $\widehat\varepsilon$ es suprayectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
+\begin{equation*}
+  (\mathbb{C}\oplus S^{(4,1)}\oplus S^{(3,2)}\oplus
+  S^{(2,2,1)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
+\end{equation*}
+así que
+\begin{equation*}
+  \label{ker0-KM5}
+  \ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}\oplus S^{(2,2,1)}
+\end{equation*}
+Sabemos que $\widetilde H_{0}(K(M_{5}))=\ker \widehat\varepsilon/\im
+\widehat\partial_{1}=0$ pues $K(M_{5})$ es conexo, se sigue que $\ker \widehat\varepsilon\cong
+\im\widehat\partial_{1}$, con lo cual:
+\begin{equation}
+  \label{im1-KM5}
+  \im \widehat\partial_{1}\cong S^{(4,1)} \oplus S^{(3,2)}\oplus S^{(2,2,1)}
+\end{equation}
+
+Además el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-KM5} se tiene:
+$$(S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus 2S^{(3,1,1)}\oplus S^{(3,2)}
+\oplus S^{(2,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
+De lo anterior y la proposición \ref{modulos-iguales} tenemos:
+\begin{equation}
+\label{ker1-KM5}
+\ker \widehat\partial_{1}=S^{(2,1,1,1)}\oplus 2S^{(3,1,1)}
+\end{equation}
+Por otro lado
+\begin{equation*}
+\im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
+\label{im3-KM5}
+\end{equation*}
+pues $\widehat\partial_{3}$ es un morfismo de módulos. Ya que $M_{5}\simeq K(M_{5})$
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)} por el teorema
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)} tenemos que
+$\widetilde H_{2}(M_{5})=\widetilde H_{2}(K(M_{5}))$ y  $\widetilde H_{2}(M_{5})=0$, así que:
+\begin{equation*}
+\widetilde H_{2}(K(M_{5}))=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0.
+\end{equation*}
+por lo que $\ker \widehat\partial_{2}=0$. De el teorema
+\ref{teorema-isomorfismo-mod} tenemos:
+$$(S^{(2,1,1,1)}\oplus S^{(3,1,1)})/\ker \widehat\partial_{2}\cong \im
+\widehat\partial_{2}$$
+De lo anterior y la proposición \ref{modulos-iguales} tenemos:
+\begin{equation}
+\im \widehat\partial_{2}=S^{(2,1,1,1)}\oplus S^{(3,1,1)}
+\label{im2-KM5}
+\end{equation}
+
+De las ecuaciones \ref{ker1-KM5} y \ref{im2-KM5} tenemos:
+
+\begin{equation*}
+\widetilde H_{1}(K(M_{5}))=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=(S^{(2,1,1,1)}\oplus 2S^{(3,1,1)})/(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(3,1,1)}.
+\end{equation*}
 \end{example}
 
 %Vamos a citar \cite{MR0225619}
