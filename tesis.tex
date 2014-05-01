@@ -2057,6 +2057,49 @@ De las ecuaciones \ref{ker1-KM5} y \ref{im2-KM5} tenemos:
 \begin{equation*}
 \widetilde H_{1}(K(M_{5}))=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=(S^{(2,1,1,1)}\oplus 2S^{(3,1,1)})/(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(3,1,1)}.
 \end{equation*}
+
+
+
+
+
+Anteriormente usamos el hecho de que $M_{5}\simeq K(M_{5})$  para
+concluir que $\widetilde H_{0}(K(M_{5}))=\widetilde H_{0}(M_{5})=0$, sin embargo veamos que no es necesario, por lo que
+necesitamos calcular $\im \widehat\partial_{2}$. 
+
+Verifiquemos primero que $\dim(\im \partial_{2})=10$. Del teorema
+\ref{imT}, sabemos que
+$\im \partial_{2}=\langle\partial_{2}(c_{1}),\ldots,\partial_{2}(c_{10})\rangle$,
+veamos que el número de vectores linealmente independientes de la
+$\im \partial_{2}$ es 10, es
+decir, si
+$$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{10}\partial_{2}(c_{10})=0$$
+así que:
+
+\footnotesize{
+\begin{align*}
+  &\lambda_{1}(a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2})+\lambda_{2}(a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12})+\lambda_{3}(a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9})\\
+  &+\lambda_{4}(a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6})+\lambda_{5}(a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5})+\lambda_{6}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11})\\
+  &+\lambda_{7}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8})+\lambda_{8}(a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8})+\lambda_{9}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10})\\
+  &+\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11})\\
+  &=0
+\end{align*}}
+Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{10}=0$,
+intuituvamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
+Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
+de $b_{j}$ no pertenece a ningún otro triángulo distinto de $c_{i}$, por
+lo tanto $\partial_{2}(c_{j})$ no es combinación lineal de las fronteras
+$\partial_{2}(c_{i})$ con $i\neq j$.
+
+Así que $\dim(\im\partial_{2})=$10, lo cual implica que
+$\dim(\im\widehat\partial_{2})=10$ (se sigue de la definición de
+$\widehat\partial_{2}$).
+
+Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
+  $$\widehat\partial_{2}(S^{(2,1,1,1)})=S^{(2,1,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(2,1,1,1)})=0$$
+  $$\widehat\partial_{2}(S^{(3,1,1)})=S^{(3,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1)})=0$$
+Además $\dim(S^{(2,1,1,1)})=4$ y $\dim(S^{(3,1,1)})=6$, entonces:
+$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(2,1,1,1)}\oplus S^{(3,1,1)}$$
+
 \end{example}
 
 %Vamos a citar \cite{MR0225619}
