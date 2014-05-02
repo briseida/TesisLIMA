@@ -2334,7 +2334,7 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=
     \label{C2-M6}
   \end{equation}
 
-  En la figura \ref{fig:emparejamiento-6} se muestra el diagrama
+  En la figura \ref{fig:diagrama-conmutativo6} se muestra el diagrama
   conmutativo de los complejos de cadena de $M_{6}$, donde $f_{0}$,
   $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
   \ref{C0-M6}, \ref{C1-M6} y \ref{C2-M6}.
@@ -2355,7 +2355,7 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=
 }
 
 \caption{Diagrama conmutativo de los complejos de cadenas de $M_{6}$}
-\label{fig:emparejamiento-6}
+\label{fig:diagrama-conmutativo6}
 \end{figure}
 
 Por calcular las homologías reducidas $\widetilde
@@ -2450,12 +2450,291 @@ $\widehat\partial_{2}$).
 Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
   $$\widehat\partial_{2}(S^{(4,1,1)})=S^{(4,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(4,1,1)})=0$$
   $$\widehat\partial_{2}(S^{(3,3)})=S^{(3,3)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,3)})=0$$
-Además $\dim(S^{(4,1,1)})=10$ y $\dim(S^{(3,3)})=5$, entonces:
-$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(4,1,1)}\oplus
-S^{(3,3)})=S^{(4,1,1)}\oplus S^{(3,3)}$$
+  Además $\dim(S^{(4,1,1)})=10$ y $\dim(S^{(3,3)})=5$, entonces:
+  $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(4,1,1)}\oplus
+  S^{(3,3)})=S^{(4,1,1)}\oplus S^{(3,3)}$$
 
 \end{example}
 
+\begin{example}
+
+\label{ejemploKM6}
+  Consideremos el complejo de clanes de la gráfica de emparejamiento
+  $M_{6}$, al que denotamos como $K(M_{6})$, que está dado por el
+  conjunto de vértices (triángulos de la gráfica de
+  $M_{5}$):
+
+\begin{center}
+  \begin{tabular}[h]{lll}
+    $a_{1}=(\overline{12},\overline{34},\overline{56})$&$a_{6}=(\overline{13},\overline{26},\overline{45})$&$a_{11}=(\overline{15},\overline{24},\overline{36})$  \\
+    $a_{2}=(\overline{12},\overline{35},\overline{46})$&$a_{7}=(\overline{14},\overline{23},\overline{56})$&$a_{12}=(\overline{15},\overline{26},\overline{34})$  \\
+    $a_{3}=(\overline{12},\overline{36},\overline{45})$&$a_{8}=(\overline{14},\overline{25},\overline{36})$&$a_{13}=(\overline{16},\overline{23},\overline{45})$  \\
+    $a_{4}=(\overline{13},\overline{24},\overline{56})$&$a_{9}=(\overline{14},\overline{26},\overline{35})$&$a_{14}=(\overline{16},\overline{24},\overline{35})$ \\
+    $a_{5}=(\overline{13},\overline{25},\overline{46})$&$a_{10}=(\overline{15},\overline{23},\overline{46})$&$a_{15}=(\overline{16},\overline{25},\overline{34})$  
+  \end{tabular}
+\end{center}
+
+el conjunto $1$-simplejos:
+\begin{center}
+  \begin{tabular}[h]{llll}
+    $b_{1}=(a_{1},a_{2})$ & $b_{7}=(a_{2},a_{3})$ & $b_{13}=(a_{3},a_{8})$ & $b_{19}=(a_{8},a_{11})$ \\     
+    $b_{2}=(a_{1},a_{3})$ & $b_{8}=(a_{2},a_{5})$ & $b_{14}=(a_{3},a_{11})$ & $b_{20}=(a_{9},a_{14})$ \\     
+    $b_{3}=(a_{1},a_{4})$ & $b_{9}=(a_{2},a_{9})$ & $b_{15}=(a_{3},a_{13})$ & $b_{21}=(a_{12},a_{15})$ \\     
+    $b_{4}=(a_{1},a_{7})$ & $b_{10}=(a_{2},a_{10})$ & $b_{16}=(a_{4},a_{7})$ &  \\     
+    $b_{5}=(a_{1},a_{12})$ & $b_{11}=(a_{2},a_{14})$ & $b_{17}=(a_{5},a_{10})$ &  \\     
+    $b_{6}=(a_{1},a_{15})$ & $b_{12}=(a_{3},a_{6})$ & $b_{18}=(a_{6},a_{13})$ & \\     
+  \end{tabular}
+\end{center}
+
+y los $2$-simplejos:
+\begin{center}
+  \begin{tabular}[h]{lll}
+    $c_{1}=(a_{1},a_{2},a_{3})$ & $c_{6}=(a_{3},a_{6},a_{13})$ & $c_{11}=(a_{13},a_{14},a_{15})$   \\
+    $c_{2}=(a_{1},a_{4},a_{7})$ & $c_{7}=(a_{3},a_{8},a_{11})$ & $c_{12}=(a_{7},a_{10},a_{13})$\\
+    $c_{3}=(a_{1},a_{12},a_{15})$& $c_{8}=(a_{4},a_{5},a_{6})$ & $c_{13}=(a_{4},a_{11},a_{14})$\\
+    $c_{4}=(a_{2},a_{5},a_{10})$& $c_{9}=(a_{7},a_{8},a_{9})$ & $c_{14}=(a_{5},a_{8},a_{15})$\\
+    $c_{5}=(a_{2},a_{9},a_{14})$& $c_{10}=(a_{10},a_{11},a_{12})$ & $c_{15}=(a_{6},a_{9},a_{12})$
+  \end{tabular}
+\end{center}
+
+\begin{align*}
+  \partial(c_{1})&=a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2} \\
+  \partial(c_{2})&=a_{4}a_{7}-a_{1}a_{7}+a_{1}a_{4} \\
+  \partial(c_{3})&=a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12} \\
+  \partial(c_{4})&=a_{5}a_{10}-a_{2}a_{10}+a_{2}a_{5} \\
+  \partial(c_{5})&=a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9} \\
+  \partial(c_{6})&=a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6} \\
+  \partial(c_{7})&=a_{8}a_{11}-a_{3}a_{11}+a_{3}a_{8} \\
+  \partial(c_{8})&=a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5} \\
+  \partial(c_{9})&=a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8} \\
+  \partial(c_{10})&=a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11} \\
+  \partial(c_{11})&=a_{14}a_{15}-a_{13}a_{15}+a_{13}a_{14} \\
+  \partial(c_{12})&=a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10} \\
+  \partial(c_{13})&=a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11} \\
+  \partial(c_{14})&=a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8} \\
+  \partial(c_{15})&=a_{9}a_{12}-a_{6}a_{12}+a_{6}a_{9} 
+  \end{align*}
+
+\begin{align*}
+  \partial(c_{1})&=\lambda_{1}(a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2}) \\
+  \partial(c_{2})&=\lambda_{2}(a_{4}a_{7}-a_{1}a_{7}+a_{1}a_{4}) \\
+  \partial(c_{3})&=\lambda_{3}(a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12}) \\
+  \partial(c_{4})&=\lambda_{4}(a_{5}a_{10}-a_{2}a_{10}+a_{2}a_{5}) \\
+  \partial(c_{5})&=\lambda_{5}(a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9}) \\
+  \partial(c_{6})&=\lambda_{6}(a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6}) \\
+  \partial(c_{7})&=\lambda_{7}(a_{8}a_{11}-a_{3}a_{11}+a_{3}a_{8}) \\
+  \partial(c_{8})&=\lambda_{8}(a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5}) \\
+  \partial(c_{9})&=\lambda_{9}(a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8}) \\
+  \partial(c_{10})&=\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11}) \\
+  \partial(c_{11})&=\lambda_{11}(a_{14}a_{15}-a_{13}a_{15}+a_{13}a_{14}) \\
+  \partial(c_{12})&=\lambda_{12}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10}) \\
+  \partial(c_{13})&=\lambda_{13}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11}) \\
+  \partial(c_{14})&=\lambda_{14}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8}) \\
+  \partial(c_{15})&=\lambda_{15}(a_{9}a_{12}-a_{6}a_{12}+a_{6}a_{9}) 
+  \end{align*}
+
+\begin{center}
+  \begin{tikzpicture}[scale=.85]
+    \GraphInit[vstyle=Normal]
+    \SetVertexNoLabel
+    \grCycle[RA=1,prefix=a,rotation=-90]{3}
+    \grEmptyCycle[RA=3,prefix=b,rotation=-10]{12}
+    \EdgeInGraphMod*{b}{12}{1}{0}{2}
+    \EdgeFromOneToSeq{a}{b}{1}{0}{3}
+    \EdgeFromOneToSeq{a}{b}{2}{4}{7}
+    \EdgeFromOneToSeq{a}{b}{0}{8}{11}
+    \AssignVertexLabel{a}{\textsl{$a_{2}$},\textsl{$a_{1}$},\textsl{$a_{3}$}}
+    \AssignVertexLabel{b}{\textsl{$a_{7}$},\textsl{$a_{4}$},\textsl{$a_{15}$},\textsl{$a_{12}$},\textsl{$a_{6}$},\textsl{$a_{13}$},\textsl{$a_{11}$},\textsl{$a_{8}$},\textsl{$a_{10}$},\textsl{$a_{5}$},\textsl{$a_{14}$},\textsl{$a_{9}$}}
+  \end{tikzpicture}
+\end{center}
+
+
+
+
+  $$V_{0}=\langle a_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle$$
+  \begin{footnotesize}
+    \begin{align*}
+      H_{0}=&\{g\in S_{6}\mid
+      gV_{0}=V_{0}\}=\{(1),(12),(34),(56),(12)(34),(12)(56),(13)(24),(14)(23),\\
+      &(15)(26),(16)(25),(34)(56),(35)(46),(36)(45),(1423),(1324),(1625),(1526),\\
+      &(3645),(3546),(12)(34)(56),(13)(24)(56),(14)(23)(56),(15)(26)(34),(16)(25)(34),\\
+      &(35)(46)(12),(36)(45)(12),(153)(264),(135)(246),(145)(236),(154)(263),\\
+      &(136)(245),(163)(254),(146)(235),(164)(253),(1423)(56),(1324)(56),(1625)(34),\\
+      &(1526)(34),(3645)(12),(3546)(12),(135246),(136245),(145236),(146235),\\
+      &(153264),(154263),(163254),(164253)\}
+    \end{align*}
+  \end{footnotesize}
+
+  
+  \begin{table}[!hbtp]
+    \centering
+    \begin{tabular}{c |r r r r r r r r}
+      No. de Elementos  & 1 & 3 & 9 & 6 & 7 & 8 & 6 & 8  \\
+      Clase&(1)& (2) & (2,2) & (4) & (2,2,2)& (3,3) & (4,2) & (6)\\
+      \hline
+      $\chi_{S^{{(6)}}}$         & 1 & 1  & 1 & 1 & 1 & 1 & 1 & 1\\
+      $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1 & -1&-1 & 1 & 1 &-1\\
+      $\chi_{S^{{(5,1)}}}$       & 5 & 3  & 1 & 1 &-1 &-1 &-1 &-1\\
+      $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3 & 1 &-1 & 1 &-1  &-1 & 1\\
+      $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & -2& 0 &-2 & 1  & 0 & 1\\
+      $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2  &-2 & 0 & 2 & 1 & 0 &-1\\
+      $\chi_{S^{{(4,2)}}}$       & 9 & 3  & 1 & -1& 3 & 0 & 1 & 0\\
+      $\chi_{S^{{(2,2,1,1)}}}$    & 9 & -3 & 1 & 1 &-3 & 0 & 1 & 0\\
+      $\chi_{S^{{(3,3)}}}$       & 5 & 1  & 1 &-1 & -3& 2 & -1& 0\\
+      $\chi_{S^{{(2,2,2)}}}$     & 5  & -1 & 1 & 1 & 3 & 2 &-1& 0\\
+      $\chi_{S^{{(3,2,1)}}}$     & 16 & 0  & 0 & 0 & 0 &-2 & 0& 0\\
+      \hline
+      $\chi_{V_{0}}$        & 1 & 1 & 1 & 1 & 1 & 1 &1 & 1  \\
+    \end{tabular}
+
+    \caption{Caracteres de $S_{6}$ restringidos a $H_{0}$ y carácter de $V_{0}$}
+    \label{tab:clanes-H_0-6}
+  \end{table}
+
+  \begin{equation}
+    C_{0}(K(M_{6}))\cong \mathbb{C}\oplus S^{(4,2)}\oplus S^{(2,2,2)}
+    \label{C0-KM6}
+  \end{equation}
+  $$V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46})\rangle$$
+  \begin{footnotesize}
+    \begin{align*}
+      H_{1}&=\{g\in S_{6}\mid gV_{1}=V_{1}\}\\
+      &=\{(1),(12),(36),(45),(12)(36),(12)(45),(34)(56),(35)(46),(36)(45),(12)(34)(56),\\
+      &\qquad{}(12)(35)(46),(12)(36)(45),(12)(3564),(12)(3465),(3564),(3465)\}
+    \end{align*}
+  \end{footnotesize}
+
+  
+  \begin{table}[!hbtp]
+    \centering
+    \begin{tabular}{c |r r r r r r r r}
+      No. de Elementos  & 1 & 1 & 2 & 3 & 2 & 2 & 2 & 3  \\
+      Clase&(1)& (2) & (2) & (2,2) & (2,2)& (4) & (4,2) & (2,2,2)\\
+      \hline
+      $\chi_{S^{{(6)}}}$         & 1 & 1 &1  & 1 & 1 & 1 & 1 & 1\\
+      $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1&-1 & 1 & 1 &-1 & 1 &-1\\
+      $\chi_{S^{{(5,1)}}}$       & 5 & 3 & 3 & 1 & 1 & 1 &-1 &-1\\
+      $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3& -3 & 1 &1 &-1 &-1 & 1\\
+      $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & 2 &-2 &-2& 0 & 0 & -2\\
+      $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2 & -2&-2 & -2& 0 & 0 &2\\
+      $\chi_{S^{{(4,2)}}}$       & 9 & 3 & 3 & 1 & 1 & -1& 1 & 3\\
+      $\chi_{S^{{(2,2,1,1)}}}$    & 9 &-3 & -3&1  & 1 & 1 & 1 & -3\\
+      $\chi_{S^{{(3,3)}}}$       & 5 & 1 & 1 &1  &1  & -1& -1& -3\\
+      $\chi_{S^{{(2,2,2)}}}$     & 5 &-1 & -1&1  & 1 & 1 &-1& 3\\
+      $\chi_{S^{{(3,2,1)}}}$     & 16 &0 &0  & 0 & 0 & 0 & 0& 0\\
+      \hline
+      $\chi_{V_{1}}$        & 1 & 1 & -1 & 1 & -1 & -1 &-1 & 1  \\
+    \end{tabular}
+    
+    \caption{Caracteres de $S_{6}$ restringidos a $H_{1}$ y carácter de $V_{1}$}
+    \label{tab:clanes-H_1-6}
+  \end{table}
+
+  \begin{equation}
+    C_{1}(K(M_{6}))\cong S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus
+    S^{(4,2)} \oplus S^{(2,2,2)}\oplus S^{(3,2,1)}
+    \label{C1-KM6}
+  \end{equation}
+$$V_{2}=\langle c_{1}\rangle=\langle
+(a_{1},a_{2},a_{3})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46}),(\overline{12},\overline{36},\overline{45})\rangle$$
+
+\begin{footnotesize}
+  \begin{align*}
+    H_{2}=&\{g\in S_{6}\mid
+    gV_{2}=V_{2}\}=\{(1),(12),(34),(35),(36),(45),(46),(56),(345),(346),\\
+    &(354),(356),(364),(365),(456),(465),(12)(34),(12)(35),(12)(36),(12)(45),\\
+    &(12)(46),(12)(56),(34)(56),(35)(46),(36)(45),(3456),(3465),(3546),(3564),\\
+    &(3645),(3654),(345)(12),(346)(12),(354)(12),(356)(12),(364)(12),(365)(12),\\
+    &(456)(12),(465)(12),(12)(34)(56),(12)(35)(46),(12)(36)(45),(3456)(12),\\
+    &(3465)(12),(3546)(12),(3564)(12),(3645)(12),(3654)(12)\}
+  \end{align*}
+\end{footnotesize}
+
+\begin{table}[!hbtp]
+  \centering
+  \resizebox*{!}{6cm}{
+  \begin{tabular}{c |r r r r r r r r r r}
+    No. de Elementos  & 1 & 1 & 6 & 8 & 3 & 6 & 6 & 8 & 3 & 6  \\
+    Clase &(1)& (2) & (2) & (3) & (2,2)& (2,2) & (4) & (3,2) & (2,2,2) & (4,2)\\
+    \hline
+    $\chi_{S^{{(6)}}}$         &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 \\ 
+    $\chi_{S^{{(1,1,1,1,1,1)}}}$ &  1 & -1 & -1 &  1 &  1 &  1 & -1 & -1 & -1& 1\\ 
+    $\chi_{S^{{(5,1)}}}$       &  5 &  3 &  3 &  2 &  1 &  1 &  1 &  0 & -1&-1\\
+    $\chi_{S^{{(2,1,1,1,1)}}}$  &  5 & -3 & -3 &  2 &  1 &  1 & -1 &  0 &  1&-1\\  
+    $\chi_{S^{{(4,1,1)}}}$     & 10 &  2 &  2 &  1 & -2 & -2 &  0 & -1 & -2 &0\\
+    $\chi_{S^{{(3,1,1,1)}}}$    & 10 & -2 & -2 &  1 & -2 & -2 &  0 &  1 &  2 &0\\
+    $\chi_{S^{{(4,2)}}}$       &  9 &  3 &  3 &  0 &  1 &  1 & -1 &  0 &  3 & 1\\ 
+    $\chi_{S^{{(2,2,1,1)}}}$    &  9 & -3 & -3 &  0 &  1 &  1 &  1 &  0 & -3 & 1\\   
+    $\chi_{S^{{(3,3)}}}$       &  5 &  1 &  1 & -1 &  1 &  1 & -1 &  1 & -3 &-1\\
+    $\chi_{S^{{(2,2,2)}}}$      &  5 & -1 & -1 & -1 &  1 &  1 &  1 & -1 &  3 &-1\\
+    $\chi_{S^{{(3,2,1)}}}$      & 16 &  0 &  0 & -2 &  0 &  0 &  0 &  0 &  0 &0 \\
+    \hline
+    $\chi_{V_{2}}$        & 1 & 1 & -1 & 1 & 1 & -1 &-1 & 1 & 1 & -1 \\
+  \end{tabular}}
+
+\caption{Caracteres de $S_{6}$ restringidos a $H_{2}$ y carácter de $V_{2}$}
+\label{tab:clanes-H_2-6}
+\end{table}
+
+\begin{equation}
+  C_{2}(K(M_{6}))\cong S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
+  \label{C2-KM6}
+\end{equation}
+\begin{figure}[!hbtp]
+  \tiny{
+    \centering
+    \[
+    \begin{CD}
+      0 @>{\partial_{3}}>> C_{2}(K(M_{6})) @>{\partial_{2}}>> C_{1}(K(M_{6})) @>{\partial_{1}}>> C_{0}(K(M_{6})) @>{\varepsilon}>> \mathbb{C}\\
+      @VVV   @Vf_{2}VV   @Vf_{1}VV   @Vf_{0}VV   @VVV    \\
+      0  @>{\widehat\partial_{3}}>> S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)} @>{\widehat\partial_{2}}>>
+      S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus
+      S^{(2,2,2)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>>
+      \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)} @>{\widehat
+        \varepsilon}>> \mathbb{C}
+    \end{CD}
+    \]
+  }
+  
+  \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{6})$}
+  \label{fig:diagrama-conmutativo-clanes6}
+\end{figure}
+
+  $\widetilde H_{0}(K(M_{6}))=\ker\widehat\varepsilon/\im\widehat\partial_{1}=0$, pues
+  $K(M_{6})$ es conexo, así que
+  $\ker\widehat\varepsilon\cong\im\widehat\partial_{1}$
+
+  $\ker\widehat\varepsilon$ puede ser $S^{(4,2)}\oplus S^{(2,2,2)}$ o $
+  \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)}$ y $\mathbb{C}$ no
+  pertenece a $\im\widehat\partial_{1}$
+  
+  \begin{align*}
+    %\label{eq:1}
+      \im\widehat\partial_{1}&=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus S^{(2,2,2)}\oplus S^{(3,2,1)}/\ker\widehat\partial_{1}\\
+      &=S^{(4,2)}\oplus S^{(2,2,2)}
+  \end{align*}
+ lo que $\Rightarrow$ 
+ $$\boldsymbol{\ker\widehat\partial_{1}}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}$$
+
+ $0=\widetilde H_{2}(K(M_{6}))=\ker\widehat\partial_{2}/\im\widehat\partial_{3}$
+
+ $\im\widehat\partial_{3}=0$ pues $C_{3}(K(M_{6}))=0$ lo cual
+ $\Rightarrow$ $\ker\widehat\partial_{2}=0$
+ \begin{align*}
+   %\label{eq:5}
+   \boldsymbol{\im\widehat\partial_{2}}&=S^{(2,1,1,1,1)}\oplus
+   S^{(3,1,1,1)}/\ker\widehat\partial_{2}\\
+   %&=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}/0\\
+   &=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
+ \end{align*}
+
+ Así que
+ \begin{align*}
+    \widetilde H_{1}(K(M_{6}))&=\ker\widehat\partial_{1}/\im\widehat\partial_{2}\\
+    &=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}/S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\\
+    &=S^{(3,2,1)}
+\end{align*}
+\end{example}
 %Vamos a citar \cite{MR0225619}
 
 \bibliographystyle{plain}
