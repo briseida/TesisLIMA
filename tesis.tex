@@ -27,6 +27,17 @@
 \usepackage{babelbib}
 \usepackage{rotating}
 
+\usepackage{changepage}                 % adjust margins for selected portions
+
+% wide page for side by side figures, tables, etc
+% http://tex.stackexchange.com/a/154766/250
+\newlength{\offsetpage}
+\setlength{\offsetpage}{2.0cm}
+\newenvironment{widepage}{\begin{adjustwidth}{-\offsetpage}{-\offsetpage}%
+    \addtolength{\textwidth}{2\offsetpage}}%
+{\end{adjustwidth}}
+
+
 \usetikzlibrary{positioning,shapes,fit,arrows,decorations.pathmorphing}
 \definecolor{myblue}{RGB}{56,94,141}
 
@@ -2342,19 +2353,21 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=
 
   \begin{figure}[h]
     \centering
-    \scriptsize{
-      \[
-      \begin{CD}
-        0 @>{\partial_{3}}>> C_{2}(M_{6}) @>{\partial_{2}}>> C_{1}(M_{6}) @>{\partial_{1}}>> C_{0}(M_{6}) @>{\varepsilon}>> \mathbb{C}\\
-        @VVV @Vf_{2}VV   @Vf_{1}VV  @Vf_{0}VV  @VVV    \\
-        0 @>{\widehat\partial_{3}}>> S^{(4,1,1)}\oplus S^{(3,3)} @>{\widehat\partial_{2}}>>
-        S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus
-        S^{(3,2,1)} @>{\widehat\partial_{1}}>> \mathbb{C} \oplus
-    S^{(5,1)}\oplus S^{(4,2)} @>{\widehat \varepsilon}>> \mathbb{C}
-  \end{CD}
-  \]
-}
-
+    \begin{widepage}
+      \scriptsize{
+        \[
+        \begin{CD}
+          0 @>{\partial_{3}}>> C_{2}(M_{6}) @>{\partial_{2}}>> C_{1}(M_{6}) @>{\partial_{1}}>> C_{0}(M_{6}) @>{\varepsilon}>> \mathbb{C}\\
+          @VVV @Vf_{2}VV   @Vf_{1}VV  @Vf_{0}VV  @VVV    \\
+          0 @>{\widehat\partial_{3}}>> S^{(4,1,1)}\oplus S^{(3,3)}
+          @>{\widehat\partial_{2}}>> S^{(5,1)}\oplus S^{(4,1,1)}\oplus
+          S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}
+          @>{\widehat\partial_{1}}>> \mathbb{C} \oplus S^{(5,1)}\oplus
+          S^{(4,2)} @>{\widehat \varepsilon}>> \mathbb{C}
+        \end{CD}
+        \]
+      }
+    \end{widepage}
 \caption{Diagrama conmutativo de los complejos de cadenas de $M_{6}$}
 \label{fig:emparejamiento-6}
 \end{figure}
