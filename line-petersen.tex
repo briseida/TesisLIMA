@@ -37,6 +37,24 @@
   \AssignVertexLabel{w}{\textsl{$(\overline{13},\overline{24})$},\textsl{$(\overline{14},\overline{25})$},\textsl{$(\overline{15},\overline{34})$},\textsl{$(\overline{12},\overline{35})$},\textsl{$(\overline{23},\overline{45})$}}
   \AssignVertexLabel{a}{\textsl{$(\overline{14},\overline{23})$},\textsl{$(\overline{15},\overline{24})$},\textsl{$(\overline{14},\overline{35})$},\textsl{$(\overline{15},\overline{23})$},\textsl{$(\overline{24},\overline{35})$}}
 \end{tikzpicture}
+
+\begin{center}
+  \begin{tikzpicture}[scale=.6]
+    \GraphInit[vstyle=Normal] \SetVertexNoLabel
+    \grStar[RA=3.5,Math]{7}%
+    \grEmptyCycle[RA=8,prefix=c]{24} \EdgeInGraphMod*{a}{6}{1}{0}{2}
+    \EdgeInGraphMod*{c}{24}{1}{0}{2} \EdgeFromOneToSeq{a}{c}{1}{2}{5}
+    \EdgeFromOneToSeq{a}{c}{2}{6}{9}
+    \EdgeFromOneToSeq{a}{c}{3}{10}{13}
+    \EdgeFromOneToSeq{a}{c}{4}{14}{17}
+    \EdgeFromOneToSeq{a}{c}{5}{18}{21}
+    \EdgeFromOneToSeq{a}{c}{0}{22}{23}
+    \EdgeFromOneToSeq{a}{c}{0}{0}{1}
+    \AssignVertexLabel{a}{\textsl{$a_{15}$},\textsl{$a_{10}$},\textsl{$a_{13}$},\textsl{$a_{12}$},\textsl{$a_{14}$},\textsl{$a_{11}$},\textsl{$a_{1}$}}
+    \AssignVertexLabel{c}{\textsl{$a_{7}$},\textsl{$a_{2}$},\textsl{$a_{8}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{4}$},\textsl{$a_{9}$},\textsl{$a_{2}$},\textsl{$a_{6}$},\textsl{$a_{5}$},\textsl{$a_{7}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{2}$},\textsl{$a_{7}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{3}$}}
+  \end{tikzpicture}
+\end{center}
+
 %\begin{center}
  % \begin{tikzpicture}
   %  \grEmptyCycle[RA=2,prefix=v,rotation=180,Math]{3} 
@@ -45,6 +63,38 @@
     %\Edge(a)(b)
   %\end{tikzpicture}
 %\end{center}
+
+\begin{center}
+     \begin{tikzpicture}
+       \GraphInit[vstyle=Shade]
+       \Vertex[x=0,y=0,Math]{a}
+       \grEmptyCycle[RA=2,prefix=b]{6}
+       \grEmptyCycle[RA=4.5,prefix=c]{24}
+       \EdgeFromOneToAll{a}{b}{}{6}
+       \EdgeInGraphMod*{b}{6}{1}{0}{2}
+       \EdgeInGraphMod*{c}{24}{1}{0}{2}
+       \EdgeFromOneToSeq{b}{c}{1}{2}{5}
+       \EdgeFromOneToSeq{b}{c}{2}{6}{9}
+       \EdgeFromOneToSeq{b}{c}{3}{10}{13}
+       \EdgeFromOneToSeq{b}{c}{4}{14}{17}
+       \EdgeFromOneToSeq{b}{c}{5}{18}{21}
+       \EdgeFromOneToSeq{b}{c}{0}{22}{23}
+       \EdgeFromOneToSeq{b}{c}{0}{0}{1}
+     \end{tikzpicture}
+\end{center}
+
+\begin{center}
+  \begin{tikzpicture}
+    \GraphInit[vstyle=Normal]
+    %\SetVertexNoLabel
+    \grCycle[RA=1,prefix=a,rotation=-90]{3}
+    \grEmptyCycle[RA=3,prefix=b,rotation=-10]{12}
+    \EdgeInGraphMod*{b}{12}{1}{0}{2}
+    \EdgeFromOneToSeq{a}{b}{1}{0}{3}
+    \EdgeFromOneToSeq{a}{b}{2}{4}{7}
+    \EdgeFromOneToSeq{a}{b}{0}{8}{11}
+  \end{tikzpicture}
+\end{center}
 
 \begin{center}
   \begin{tikzpicture}
@@ -64,12 +114,13 @@
   \begin{tikzpicture}
     \draw[help lines] (-2,0);% grid (2,3);
     %\SetGraphUnit{2}
-    \GraphInit[vstyle=Classic]
+    \GraphInit[vstyle=Normal]
+    \SetUpVertex[MinSize=0.5pt]
     \tikzset{VertexStyle/.style = {%
         shape= circle,
         shading= ball,
         ball color= green!40!black,%
-        minimum size = 2pt,draw}}
+        minimum size = 20pt,draw}}
     \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180,]{v_{0}}
     \Vertex[x=2,y=0,Math]{v_{1}}
     \Vertex[x=0,y=2.5,Math]{v_{2}}
@@ -80,24 +131,12 @@
 \end{center}
 
 \begin{tikzpicture}[scale=.6]
-  %\GraphInit[vstyle=Shade]
-  %\renewcommand*{\VertexInnerSep}{4pt}
-  \SetVertexNoLabel
   \GraphInit[vstyle=Classic]
-    \tikzset{VertexStyle/.style = {%
-        shape= circle,
-        shading= ball,
-        ball color= green!40!black,%
-        minimum size = 2pt,draw}}
-  %\SetGraphShadeColor{red!50}{black}{red}
+  \SetVertexNoLabel
+  \SetVertexMath
+  \SetUpVertex[MinSize=30pt]
   \grTetrahedral[RA=4]
+  \AssignVertexLabel{a}{\textsl{$v_{0}$},\textsl{$v_{1}$},\textsl{$v_{2}$},\textsl{$v_{3}$}}
 \end{tikzpicture}
-
-%\begin{center}
-  %\begin{tikzpicture}
-    %\grCycle[RA=3, style={thick,->}]
-%    \Edge(a)(b)
- % \end{tikzpicture}
-%\end{center}
 
 \end{document}

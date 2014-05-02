@@ -64,7 +64,7 @@ cuales son representaciones irreducibles de $S_{n}$. blah blah...........
   Una \textit{partición} de un entero positivo $n$ es una secuencia de
   enteros positivos
   $\lambda=(\lambda_{1},\lambda_{2},\ldots,\lambda_{l})$ que satisface
-  $\lambda_{1}\geq\lambda_{2}\geq\cdots\geq\lambda_{l}>0$ y
+  $\lambda_{1}\geq \lambda_{2}\geq\cdots\geq\lambda_{l}>0$ y
   $n=\sum^{m}_{i=1}\lambda_{i}$. Para indicar que  $\lambda$ es una partición de
   $n$ lo denotamos como $\lambda\vdash n$.
 \end{definition}
@@ -147,7 +147,30 @@ los diagramas de Young de tamaño $n$.
 
 El número de representaciones irreducibles de un grupo finito es igual
 al número de sus clases de conjugación. Así que nuestra meta es
-construir una representaciones irreducibles de $S_{n}$ correspondiente a cada diagrama de Young.
+construir una representaciones irreducibles de $S_{n}$ correspondiente
+a cada diagrama de Young.
+
+El grupo $S_{n}$ actúa en el conjunto de tableros de Young de manera
+obvia: para un tablero $t$ de tamaño $n$ y una permutación $\sigma\in
+S_{n}$ el tablero $\sigma t$ es el tablero que coloca el número $\pi(i)$
+en la caja donde $t$ coloca a $i$. Por ejemplo, 
+\begin{center}(123)(45)
+  \begin{small}
+    \begin{ytableau}
+      1 & 2 & 4 & 5 \\
+      3 & 6\\
+      7
+    \end{ytableau}
+  \end{small}=
+  \begin{small}
+    \begin{ytableau}
+      2 & 3 & 5 & 4 \\
+      1 & 6\\
+      7
+    \end{ytableau}
+  \end{small}
+\end{center}
+
 
 
 
@@ -170,7 +193,6 @@ representación signo
 representación estándar
 \end{center}
 
-
 \begin{theorem}{(Fórmula Hook-length).} 
   Sea $\lambda\vdash n$ sea un diagrama de Young. Entonces
   $$\dim S^{\lambda}=\frac{n!}{\prod_{u\in \lambda}h_{\lambda}(u)}.$$
@@ -187,6 +209,7 @@ representación estándar
   el auto-conjugado de $\lambda$ y rango $n-2k$ (el cual puede ser
   obtenido de la fórmula de Hook-length).
 \end{theorem}
+
 
 
 % \bibliographystyle{plain}
