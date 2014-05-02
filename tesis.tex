@@ -25,6 +25,7 @@
 \geometry{bindingoffset=1cm}
 
 \usepackage{babelbib}
+\usepackage{rotating}
 
 \usetikzlibrary{positioning,shapes,fit,arrows,decorations.pathmorphing}
 \definecolor{myblue}{RGB}{56,94,141}
@@ -1981,9 +1982,9 @@ conmutativo de los complejos de cadena de $K(M_{5})$, donde $f_{0}$,
 $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
 \ref{C0-KM5}, \ref{C1-KM5} y \ref{C2-KM5}.
 
-\begin{figure}[h]
-  \centering
-  {\tiny
+\begin{sidewaysfigure}%[h]
+  %\centering
+  {\small
   \[
   \begin{CD}
     0 @>{\partial_{3}}>> C_{2}(K(M_{5})) @>{\partial_{2}}>> C_{1}(K(M_{5})) @>{\partial_{1}}>> C_{0}(K(M_{5})) @>{\varepsilon}>> \mathbb{C}\\
@@ -1999,7 +2000,7 @@ $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
   
   \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{5})$}
   \label{fig:diagrama-conmutativo-clanes5}
-\end{figure}
+\end{sidewaysfigure}
 
 Calculemos las homologías reducidas $\widetilde H_{0}(K(M_{5}))$,
 $\widetilde H_{1}(K(M_{5}))$ y $\widetilde H_{2}(K(M_{5}))$.
