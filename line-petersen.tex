@@ -57,12 +57,13 @@
 
 \begin{figure}[h]
   \centering
-  \begin{tikzpicture}[scale=.5]
-    \GraphInit[vstyle=Normal] %\SetVertexNoLabel
-    \grStar[RA=3,Math,rotation=270]{4}
-    \grEmptyCycle[RA=6,Math,prefix=b]{6} 
-    \grEmptyCycle[RA=9,Math,prefix=c,rotation=-15]{12} 
-    \grEmptyCycle[RA=12,Math,prefix=d,rotation=-22]{24} 
+  \begin{tikzpicture}[scale=.4]
+    \SetVertexNoLabel
+    \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+    \grStar[RA=2,Math,rotation=270]{4}
+    \grEmptyCycle[RA=4,Math,prefix=b]{6} 
+    \grEmptyCycle[RA=6,Math,prefix=c,rotation=-15]{12} 
+    \grEmptyCycle[RA=8,Math,prefix=d,rotation=-22]{24} 
     \EdgeFromOneToSeq{a}{b}{1}{0}{1}
     \EdgeFromOneToSeq{a}{b}{2}{2}{3}
     \EdgeFromOneToSeq{a}{b}{0}{4}{5}
