@@ -2073,7 +2073,7 @@ De las ecuaciones \ref{ker1-KM5} y \ref{im2-KM5} tenemos:
 \end{eqnarray*}
 
 Anteriormente usamos el hecho de que $M_{5}\simeq K(M_{5})$  para
-concluir que $\widetilde H_{0}(K(M_{5}))=\widetilde H_{0}(M_{5})=0$, sin embargo veamos que no es necesario, por lo que
+concluir que $\widetilde H_{2}(K(M_{5}))=\widetilde H_{2}(M_{5})=0$, sin embargo veamos que no es necesario, por lo que
 necesitamos calcular $\im \widehat\partial_{2}$. 
 
 Verifiquemos primero que $\dim(\im \partial_{2})=10$. Del teorema
@@ -2471,12 +2471,11 @@ Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
 \end{example}
 
 \begin{example}
-
-\label{ejemploKM6}
+  \label{ejemploKM6}
   Consideremos el complejo de clanes de la gráfica de emparejamiento
   $M_{6}$, al que denotamos como $K(M_{6})$, que está dado por el
   conjunto de vértices (triángulos de la gráfica de
-  $M_{5}$):
+  $M_{6}$):
 
 \begin{center}
   \begin{tabular}[h]{lll}
@@ -2491,12 +2490,18 @@ Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
 el conjunto $1$-simplejos:
 \begin{center}
   \begin{tabular}[h]{llll}
-    $b_{1}=(a_{1},a_{2})$ & $b_{7}=(a_{2},a_{3})$ & $b_{13}=(a_{3},a_{8})$ & $b_{19}=(a_{8},a_{11})$ \\     
-    $b_{2}=(a_{1},a_{3})$ & $b_{8}=(a_{2},a_{5})$ & $b_{14}=(a_{3},a_{11})$ & $b_{20}=(a_{9},a_{14})$ \\     
-    $b_{3}=(a_{1},a_{4})$ & $b_{9}=(a_{2},a_{9})$ & $b_{15}=(a_{3},a_{13})$ & $b_{21}=(a_{12},a_{15})$ \\     
-    $b_{4}=(a_{1},a_{7})$ & $b_{10}=(a_{2},a_{10})$ & $b_{16}=(a_{4},a_{7})$ &  \\     
-    $b_{5}=(a_{1},a_{12})$ & $b_{11}=(a_{2},a_{14})$ & $b_{17}=(a_{5},a_{10})$ &  \\     
-    $b_{6}=(a_{1},a_{15})$ & $b_{12}=(a_{3},a_{6})$ & $b_{18}=(a_{6},a_{13})$ & \\     
+    $b_{1}=(a_{1},a_{2})$ & $b_{13}=(a_{3},a_{8})$ & $b_{25}=(a_{4},a_{14})$ & $b_{37}=(a_{9},a_{12})$ \\     
+    $b_{2}=(a_{1},a_{3})$ & $b_{14}=(a_{3},a_{11})$ &$b_{26}=(a_{5},a_{8})$ & $b_{38}=(a_{10},a_{11})$\\     
+    $b_{3}=(a_{1},a_{4})$ & $b_{15}=(a_{3},a_{13})$ & $b_{27}=(a_{5},a_{6})$&$b_{39}=(a_{10},a_{12})$\\     
+    $b_{4}=(a_{1},a_{7})$ & $b_{16}=(a_{4},a_{7})$ & $b_{28}=(a_{5},a_{15})$& $b_{40}=(a_{10},a_{13})$ \\     
+    $b_{5}=(a_{1},a_{12})$ & $b_{17}=(a_{5},a_{10})$ & $b_{29}=(a_{6},a_{9})$& $b_{41}=(a_{11},a_{12})$\\     
+    $b_{6}=(a_{1},a_{15})$ & $b_{18}=(a_{6},a_{13})$ & $b_{30}=(a_{6},a_{12})$&$b_{42}=(a_{11},a_{14})$\\ 
+    $b_{7}=(a_{2},a_{3})$ & $b_{19}=(a_{8},a_{11})$ & $b_{31}=(a_{7},a_{8})$&$b_{43}=(a_{13},a_{14})$\\
+    $b_{8}=(a_{2},a_{5})$ & $b_{20}=(a_{9},a_{14})$ & $b_{32}=(a_{7},a_{9})$&$b_{44}=(a_{13},a_{15})$\\
+    $b_{9}=(a_{2},a_{9})$ & $b_{21}=(a_{12},a_{15})$ & $b_{33}=(a_{7},a_{10})$&$b_{45}=(a_{14},a_{15})$\\
+    $b_{10}=(a_{2},a_{10})$ & $b_{22}=(a_{4},a_{5})$ & $b_{34}=(a_{7},a_{13})$&\\
+    $b_{11}=(a_{2},a_{14})$ & $b_{23}=(a_{4},a_{6})$ & $b_{35}=(a_{8},a_{9})$&\\
+    $b_{12}=(a_{3},a_{6})$ & $b_{24}=(a_{4},a_{11})$ & $b_{36}=(a_{8},a_{15})$&
   \end{tabular}
 \end{center}
 
@@ -2511,60 +2516,28 @@ y los $2$-simplejos:
   \end{tabular}
 \end{center}
 
-\begin{align*}
-  \partial(c_{1})&=a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2} \\
-  \partial(c_{2})&=a_{4}a_{7}-a_{1}a_{7}+a_{1}a_{4} \\
-  \partial(c_{3})&=a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12} \\
-  \partial(c_{4})&=a_{5}a_{10}-a_{2}a_{10}+a_{2}a_{5} \\
-  \partial(c_{5})&=a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9} \\
-  \partial(c_{6})&=a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6} \\
-  \partial(c_{7})&=a_{8}a_{11}-a_{3}a_{11}+a_{3}a_{8} \\
-  \partial(c_{8})&=a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5} \\
-  \partial(c_{9})&=a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8} \\
-  \partial(c_{10})&=a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11} \\
-  \partial(c_{11})&=a_{14}a_{15}-a_{13}a_{15}+a_{13}a_{14} \\
-  \partial(c_{12})&=a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10} \\
-  \partial(c_{13})&=a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11} \\
-  \partial(c_{14})&=a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8} \\
-  \partial(c_{15})&=a_{9}a_{12}-a_{6}a_{12}+a_{6}a_{9} 
-  \end{align*}
-
-\begin{align*}
-  \partial(c_{1})&=\lambda_{1}(a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2}) \\
-  \partial(c_{2})&=\lambda_{2}(a_{4}a_{7}-a_{1}a_{7}+a_{1}a_{4}) \\
-  \partial(c_{3})&=\lambda_{3}(a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12}) \\
-  \partial(c_{4})&=\lambda_{4}(a_{5}a_{10}-a_{2}a_{10}+a_{2}a_{5}) \\
-  \partial(c_{5})&=\lambda_{5}(a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9}) \\
-  \partial(c_{6})&=\lambda_{6}(a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6}) \\
-  \partial(c_{7})&=\lambda_{7}(a_{8}a_{11}-a_{3}a_{11}+a_{3}a_{8}) \\
-  \partial(c_{8})&=\lambda_{8}(a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5}) \\
-  \partial(c_{9})&=\lambda_{9}(a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8}) \\
-  \partial(c_{10})&=\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11}) \\
-  \partial(c_{11})&=\lambda_{11}(a_{14}a_{15}-a_{13}a_{15}+a_{13}a_{14}) \\
-  \partial(c_{12})&=\lambda_{12}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10}) \\
-  \partial(c_{13})&=\lambda_{13}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11}) \\
-  \partial(c_{14})&=\lambda_{14}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8}) \\
-  \partial(c_{15})&=\lambda_{15}(a_{9}a_{12}-a_{6}a_{12}+a_{6}a_{9}) 
-  \end{align*}
-
-\begin{center}
-  \begin{tikzpicture}[scale=.85]
-    \GraphInit[vstyle=Normal]
-    \SetVertexNoLabel
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=.8]
+    \GraphInit[vstyle=Normal] \SetVertexNoLabel
     \grCycle[RA=1,prefix=a,rotation=-90]{3}
     \grEmptyCycle[RA=3,prefix=b,rotation=-10]{12}
-    \EdgeInGraphMod*{b}{12}{1}{0}{2}
-    \EdgeFromOneToSeq{a}{b}{1}{0}{3}
-    \EdgeFromOneToSeq{a}{b}{2}{4}{7}
-    \EdgeFromOneToSeq{a}{b}{0}{8}{11}
+    \EdgeInGraphMod*{b}{12}{1}{0}{2} \EdgeFromOneToSeq{a}{b}{1}{0}{3}
+    \EdgeFromOneToSeq{a}{b}{2}{4}{7} \EdgeFromOneToSeq{a}{b}{0}{8}{11}
     \AssignVertexLabel{a}{\textsl{$a_{2}$},\textsl{$a_{1}$},\textsl{$a_{3}$}}
     \AssignVertexLabel{b}{\textsl{$a_{7}$},\textsl{$a_{4}$},\textsl{$a_{15}$},\textsl{$a_{12}$},\textsl{$a_{6}$},\textsl{$a_{13}$},\textsl{$a_{11}$},\textsl{$a_{8}$},\textsl{$a_{10}$},\textsl{$a_{5}$},\textsl{$a_{14}$},\textsl{$a_{9}$}}
   \end{tikzpicture}
-\end{center}
+  
+  \caption{Gráfica de clanes $K(M_{6})$}
+  \label{fig:KM6}
+\end{figure}
 
+A continuación obtendremos la descomposición de los espacios de
+cadenas $C_{0}(K(M_{6}))$, $C_{1}(K(M_{6}))$ y $C_{2}(K(M_{6}))$ en
+módulos de Specht por medio de el teorema de la reciprocidad de Frobenius.
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)}
 
-
-
+Consideremos:
   $$V_{0}=\langle a_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle$$
   \begin{footnotesize}
     \begin{align*}
@@ -2604,11 +2577,13 @@ y los $2$-simplejos:
     \caption{Caracteres de $S_{6}$ restringidos a $H_{0}$ y carácter de $V_{0}$}
     \label{tab:clanes-H_0-6}
   \end{table}
-
+  Con los productos internos calculados a partir de la tabla
+  \ref{tab:clanes-H_0-6} obtenemos:
   \begin{equation}
     C_{0}(K(M_{6}))\cong \mathbb{C}\oplus S^{(4,2)}\oplus S^{(2,2,2)}
     \label{C0-KM6}
   \end{equation}
+Consideremos los siguientes conjuntos:
   $$V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46})\rangle$$
   \begin{footnotesize}
     \begin{align*}
@@ -2617,7 +2592,7 @@ y los $2$-simplejos:
       &\qquad{}(12)(35)(46),(12)(36)(45),(12)(3564),(12)(3465),(3564),(3465)\}
     \end{align*}
   \end{footnotesize}
-
+  Los conjuntos $V_{1}$ y $H_{1}$ nos ayudan a construir la tabla \ref{tab:clanes-H_1-6}.
   
   \begin{table}[!hbtp]
     \centering
@@ -2643,14 +2618,16 @@ y los $2$-simplejos:
     \caption{Caracteres de $S_{6}$ restringidos a $H_{1}$ y carácter de $V_{1}$}
     \label{tab:clanes-H_1-6}
   \end{table}
-
+  Después de calcular los productos internos por medio de la tabla
+  anterior resulta:
   \begin{equation}
     C_{1}(K(M_{6}))\cong S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus
     S^{(4,2)} \oplus S^{(2,2,2)}\oplus S^{(3,2,1)}
     \label{C1-KM6}
   \end{equation}
-$$V_{2}=\langle c_{1}\rangle=\langle
-(a_{1},a_{2},a_{3})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46}),(\overline{12},\overline{36},\overline{45})\rangle$$
+  Ahora tomemos los siguientes conjuntos:
+  $$V_{2}=\langle c_{1}\rangle=\langle
+  (a_{1},a_{2},a_{3})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46}),(\overline{12},\overline{36},\overline{45})\rangle$$
 
 \begin{footnotesize}
   \begin{align*}
@@ -2690,13 +2667,20 @@ $$V_{2}=\langle c_{1}\rangle=\langle
 \label{tab:clanes-H_2-6}
 \end{table}
 
+De donde obtenemos:
+
 \begin{equation}
   C_{2}(K(M_{6}))\cong S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
   \label{C2-KM6}
 \end{equation}
-\begin{figure}[!hbtp]
-  \tiny{
-    \centering
+
+En la figura \ref{fig:diagrama-conmutativo-clanes5} se muestra el diagrama
+conmutativo de los complejos de cadena de $K(M_{6})$, donde $f_{0}$,
+$f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
+\ref{C0-KM6}, \ref{C1-KM6} y \ref{C2-KM6}.
+
+\begin{sidewaysfigure}%[h]
+  {\small
     \[
     \begin{CD}
       0 @>{\partial_{3}}>> C_{2}(K(M_{6})) @>{\partial_{2}}>> C_{1}(K(M_{6})) @>{\partial_{1}}>> C_{0}(K(M_{6})) @>{\varepsilon}>> \mathbb{C}\\
@@ -2712,42 +2696,127 @@ $$V_{2}=\langle c_{1}\rangle=\langle
   
   \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{6})$}
   \label{fig:diagrama-conmutativo-clanes6}
-\end{figure}
+\end{sidewaysfigure}
 
-  $\widetilde H_{0}(K(M_{6}))=\ker\widehat\varepsilon/\im\widehat\partial_{1}=0$, pues
-  $K(M_{6})$ es conexo, así que
-  $\ker\widehat\varepsilon\cong\im\widehat\partial_{1}$
+Calculemos las homologías reducidas $\widetilde H_{0}(K(M_{6}))$,
+$\widetilde H_{1}(K(M_{6}))$ y $\widetilde H_{2}(K(M_{6}))$.
 
-  $\ker\widehat\varepsilon$ puede ser $S^{(4,2)}\oplus S^{(2,2,2)}$ o $
-  \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)}$ y $\mathbb{C}$ no
-  pertenece a $\im\widehat\partial_{1}$
+Como $\widehat\varepsilon$ es suprayectiva y por el teorema
+\ref{teorema-isomorfismo-mod} tenemos:
+
+
+
+\begin{equation*}
+  (\mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
+\end{equation*}
+así que
+\begin{equation*}
+  \label{ker0-KM6}
+  \ker\widehat\varepsilon\cong S^{(4,2)}\oplus S^{(2,2,2)}
+\end{equation*}
+Sabemos que $\widetilde H_{0}(K(M_{6}))=\ker \widehat\varepsilon/\im
+\widehat\partial_{1}=0$ pues $K(M_{6})$ es conexo, se sigue que $\ker \widehat\varepsilon\cong
+\im\widehat\partial_{1}$, con lo cual:
+\begin{equation}
+  \label{im1-KM6}
+  \im \widehat\partial_{1}\cong S^{(4,2)}\oplus S^{(2,2,2)}
+\end{equation}
+
+Además el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-KM6} se tiene:
+$$(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus
+      S^{(2,2,2)}\oplus S^{(3,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
+De lo anterior y la proposición \ref{modulos-iguales} tenemos:
+\begin{equation}
+\label{ker1-KM6}
+\ker \widehat\partial_{1}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}
+\end{equation}
+Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
+\begin{equation*}
+\im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
+\label{im3-KM6}
+\end{equation*}
+Como $M_{6}\simeq K(M_{6})$
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)} por el teorema
+\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)} tenemos que
+$\widetilde H_{2}(M_{6})=\widetilde H_{2}(K(M_{6}))$ y  $\widetilde
+H_{2}(M_{6})=0$, así que:
+
+\begin{equation*}
+\widetilde H_{2}(K(M_{6}))=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0.
+\end{equation*}
+por lo que $\ker \widehat\partial_{2}=0$. De el teorema
+\ref{teorema-isomorfismo-mod} tenemos:
+$$(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})/\ker \widehat\partial_{2}\cong \im
+\widehat\partial_{2}$$
+De lo anterior y la proposición \ref{modulos-iguales} tenemos:
+\begin{equation}
+\im \widehat\partial_{2}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
+\label{im2-KM6}
+\end{equation}
+
+De las ecuaciones \ref{ker1-KM6} y \ref{im2-KM6} tenemos:
+
+\begin{eqnarray*}
+  \widetilde H_{1}(K(M_{6}))&=&\ker \widehat\partial_{1}/\im
+  \widehat\partial_{2}\\
+  &=&(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus
+  S^{(3,2,1)})/(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})\\
+  &=&S^{(3,2,1)}
+\end{eqnarray*}
+
+
+
+
+Anteriormente usamos el hecho de que $M_{6}\simeq K(M_{6})$  para
+concluir que $\widetilde H_{2}(K(M_{6}))=\widetilde H_{2}(M_{6})=0$, sin embargo veamos que no es necesario, por lo que
+necesitamos calcular $\im \widehat\partial_{2}$. 
+
+Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
+\ref{imT}, sabemos que
+$\im \partial_{2}=\langle\partial_{2}(c_{1}),\ldots,\partial_{2}(c_{15})\rangle$,
+veamos que el número de vectores linealmente independientes de la
+$\im \partial_{2}$ es 15, es
+decir, si
+$$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{15}\partial_{2}(c_{15})=0$$
+así que:
+
+
+
+
   
+
+
+
+\begin{footnotesize}
   \begin{align*}
-    %\label{eq:1}
-      \im\widehat\partial_{1}&=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus S^{(2,2,2)}\oplus S^{(3,2,1)}/\ker\widehat\partial_{1}\\
-      &=S^{(4,2)}\oplus S^{(2,2,2)}
+    &\lambda_{1}(a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2})+\lambda_{2}(a_{4}a_{7}-a_{1}a_{7}+a_{1}a_{4})+\lambda_{3}(a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12})\\
+    &+\lambda_{4}(a_{5}a_{10}-a_{2}a_{10}+a_{2}a_{5})+\lambda_{5}(a_{9}a_{14}-a_{2}a_{14}+a_{2}a_{9})+\lambda_{6}(a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6})\\
+    &+\lambda_{7}(a_{8}a_{11}-a_{3}a_{11}+a_{3}a_{8})+\lambda_{8}(a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5})+\lambda_{9}(a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8})\\
+    &+\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11})+\lambda_{11}(a_{14}a_{15}-a_{13}a_{15}+a_{13}a_{14})\\
+    &+\lambda_{12}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10})+\lambda_{13}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11})\\
+    &+\lambda_{14}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8})\lambda_{15}(a_{9}a_{12}-a_{6}a_{12}+a_{6}a_{9})\\
+    &=0
   \end{align*}
- lo que $\Rightarrow$ 
- $$\boldsymbol{\ker\widehat\partial_{1}}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}$$
+\end{footnotesize}
 
- $0=\widetilde H_{2}(K(M_{6}))=\ker\widehat\partial_{2}/\im\widehat\partial_{3}$
 
- $\im\widehat\partial_{3}=0$ pues $C_{3}(K(M_{6}))=0$ lo cual
- $\Rightarrow$ $\ker\widehat\partial_{2}=0$
- \begin{align*}
-   %\label{eq:5}
-   \boldsymbol{\im\widehat\partial_{2}}&=S^{(2,1,1,1,1)}\oplus
-   S^{(3,1,1,1)}/\ker\widehat\partial_{2}\\
-   %&=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}/0\\
-   &=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
- \end{align*}
+Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{15}=0$,
+intuituvamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
+Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
+de $b_{j}$ no pertenece a ningún otro triángulo distinto de $c_{i}$, por
+lo tanto $\partial_{2}(c_{j})$ no es combinación lineal de las fronteras
+$\partial_{2}(c_{i})$ con $i\neq j$.
 
- Así que
- \begin{align*}
-    \widetilde H_{1}(K(M_{6}))&=\ker\widehat\partial_{1}/\im\widehat\partial_{2}\\
-    &=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}/S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\\
-    &=S^{(3,2,1)}
-\end{align*}
+Así que $\dim(\im\partial_{2})=15$, lo cual implica que
+$\dim(\im\widehat\partial_{2})=15$ (se sigue de la definición de
+$\widehat\partial_{2}$).
+
+Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
+  $$\widehat\partial_{2}(S^{(2,1,1,1,1)})=S^{(2,1,1,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(2,1,1,1,1)})=0$$
+  $$\widehat\partial_{2}(S^{(3,1,1,1)})=S^{(3,1,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1,1)})=0$$
+Además $\dim(S^{(2,1,1,1,1)})=5$ y $\dim(S^{(3,1,1,1)})=10$, entonces:
+$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}$$
+
 \end{example}
 %Vamos a citar \cite{MR0225619}
 
