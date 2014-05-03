@@ -2169,7 +2169,7 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=
     \AssignVertexLabel{c}{\textsl{$a_{7}$},\textsl{$a_{2}$},\textsl{$a_{8}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{4}$},\textsl{$a_{9}$},\textsl{$a_{2}$},\textsl{$a_{6}$},\textsl{$a_{5}$},\textsl{$a_{7}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{2}$},\textsl{$a_{7}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{3}$}}
   \end{tikzpicture}
   
-  \caption{Gráfica de emparejamiento $M_{6}$}
+  \caption{Gráfica de emparejamiento $G_{6}$}
   \label{fig:emparejamiento6}
 \end{figure}
 
@@ -2400,6 +2400,71 @@ De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \label{ker1-M6}
 \ker \widehat\partial_{1}=S^{(4,1,1)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}
 \end{equation}
+\begin{figure}[h]
+  \centering
+  \begin{center}
+    \begin{minipage}{0.45\linewidth}
+      % \centering
+      % \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}[scale=.3]
+        \SetVertexNoLabel \GraphInit[vstyle=Classic]
+        \SetUpVertex[MinSize=1pt] \grStar[RA=4,Math]{7}
+        \grEmptyCycle[RA=8,prefix=c]{24}
+        \EdgeInGraphMod*{a}{6}{1}{0}{2}
+        \EdgeInGraphMod*{c}{24}{1}{0}{2}
+        \EdgeFromOneToSeq{a}{c}{1}{2}{5}
+        \EdgeFromOneToSeq{a}{c}{2}{6}{9}
+        \EdgeFromOneToSeq{a}{c}{3}{10}{13}
+        \EdgeFromOneToSeq{a}{c}{4}{14}{17}
+        \EdgeFromOneToSeq{a}{c}{5}{18}{21}
+        \EdgeFromOneToSeq{a}{c}{0}{22}{23}
+        \EdgeFromOneToSeq{a}{c}{0}{0}{1}
+      \end{tikzpicture}
+
+      \caption{$G_{6}$}
+      \label{fig:emparejamiento6-1}
+      % \end{figure}
+    \end{minipage}%\quad
+    \begin{minipage}{0.45\linewidth}
+      % \begin{figure}[h]
+      \centering
+      \begin{tikzpicture}[scale=.3]
+        \SetVertexNoLabel \GraphInit[vstyle=Classic]
+        \SetUpVertex[MinSize=1pt] \grStar[RA=2,Math,rotation=270]{4}
+        \grEmptyCycle[RA=4,Math,prefix=b]{6}
+        \grEmptyCycle[RA=6,Math,prefix=c,rotation=-15]{12}
+        \grEmptyCycle[RA=8,Math,prefix=d,rotation=-22]{24}
+        \EdgeFromOneToSeq{a}{b}{1}{0}{1}
+        \EdgeFromOneToSeq{a}{b}{2}{2}{3}
+        \EdgeFromOneToSeq{a}{b}{0}{4}{5}
+        \EdgeFromOneToSeq{b}{c}{0}{0}{1}
+        \EdgeFromOneToSeq{b}{c}{1}{2}{3}
+        \EdgeFromOneToSeq{b}{c}{2}{4}{5}
+        \EdgeFromOneToSeq{b}{c}{3}{6}{7}
+        \EdgeFromOneToSeq{b}{c}{4}{8}{9}
+        \EdgeFromOneToSeq{b}{c}{5}{10}{11}
+        \EdgeFromOneToSeq{c}{d}{0}{0}{1}
+        \EdgeFromOneToSeq{c}{d}{1}{2}{3}
+        \EdgeFromOneToSeq{c}{d}{2}{4}{5}
+        \EdgeFromOneToSeq{c}{d}{3}{6}{7}
+        \EdgeFromOneToSeq{c}{d}{4}{8}{9}
+        \EdgeFromOneToSeq{c}{d}{5}{10}{11}
+        \EdgeFromOneToSeq{c}{d}{6}{12}{13}
+        \EdgeFromOneToSeq{c}{d}{7}{14}{15}
+        \EdgeFromOneToSeq{c}{d}{8}{16}{17}
+        \EdgeFromOneToSeq{c}{d}{9}{18}{19}
+        \EdgeFromOneToSeq{c}{d}{10}{20}{21}
+        \EdgeFromOneToSeq{c}{d}{11}{22}{23}
+      \end{tikzpicture}
+
+      \caption{Gráfica de .....}
+      \label{grafica-contraible-M6}
+      % \end{figure};
+    \end{minipage}
+  \end{center}
+\end{figure}
+
 Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
 \begin{equation*}
 \im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
