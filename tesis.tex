@@ -1110,13 +1110,19 @@ En esta sección $I$ denota el intervalo $[0,1]$.
 
 \begin{definition}
   Sean $X$, $Y$ espacios topológico, dos funciones continuas
-  $h,k:X\rightarrow Y$ son homotópicas si existe una función continua
+  $h,k:X\rightarrow Y$ son \textbf{homotópicas} si existe una función continua
   $$F:X\times I\rightarrow Y,$$
   tal que $F(x,0)=h(x)$ y $F(x,1)=k(x)$ para todo $x\in X.$ Si $h$ y
   $k$ son homotópicas, lo denotamos como $h\simeq k$. Pensamos a $F$
   como una forma de ``deformar'' a $h$ continuamente en $k$, conforme
   $t$ varía de $0$ a $1$.
 \end{definition}
+
+\begin{theorem}
+  Si $h,k:|K|\rightarrow |L|$ son homotópicas, entonces
+  $h_{*},k_{*}:H_{p}(K)\rightarrow H_{p}(L)$ son iguales. El mismo
+  resultado se preserva para homologías reducidas.
+\end{theorem}
 
 \chapter{Gráficas}
 %\label{cha:primer-capitulo}
