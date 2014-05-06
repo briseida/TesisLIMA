@@ -1131,26 +1131,102 @@ En esta sección $I$ denota el intervalo $[0,1]$.
   tales que $g\circ f\simeq i_{X}$ y $f\circ g\simeq i_{Y}$.
 
   Si $X$ es homotópico a un punto, se dice que $X$ es
-  \textbf{contraible}.
+  \textbf{contraíble}.
 \end{definition}
 
-\chapter{Gráficas}
+\chapter{Gráfica de clanes}
 %\label{cha:primer-capitulo}
-% Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V$
-% de $p$ \emph{vértices} junto con un conjunto preescrito $X$ de $q$ pares no
-% ordenados de puntos distintos de $V$. Cada par $x=\{u,v\}$ de puntos
-% en $X$ es una \emph{arista} de $G$, y se dice que $x$ une a $u$ y a
-% $v$. Escribimos a $x=uv$ y decimos que $u$ y $v$ son vértices
-% adyacentes.
+\section{Gráficas}
 
-% Completa, maximal
-% \begin{definition}
-%   Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
-%   subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
-%   \textbf{gráfica de intersección} de $F$ es denotada
-% \end{definition}
+\begin{definition}
+  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V(G)$
+  de $p$ \emph{vértices} junto con un conjunto $E(G)$ de $q$ pares no
+  ordenados de vértices distintos de $V$. Cada par $e=\{u,v\}$ de vértices
+  en $E$ es una \emph{arista} de $G$, y se dice que $e$ une a $u$ y
+  $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \emph{vértices
+    adyacentes}; un vértice $u$ y una arista $e$ son \emph{incidentes}
+  si $u\in e$. Dos aristas $e$ y $f$ son \emph{aristas adyacentes}
+  si $e\cap f\neq\emptyset$. Una gráfica con $p$ vértices y $q$
+  aristas es llamada una $(p,q)$ gráfica.
 
-\section{Gráficas de Clanes}
+  Una manera natural de ver una gráfica es poner puntos para los
+  vértices y una línea entre dos puntos si los vértices correspondientes
+  son adyacentes.
+\end{definition}
+
+\begin{definition}
+  Decimos que $G$ es una gráfica \textbf{completa} si para todos
+  $u,v\in G$ con $u\neq v$ se tiene que $uv$. Una grafica completa con
+  $n$ vértices se denota como $K_{n}$.
+\end{definition}
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[rotate=90,scale=.8]
+    \GraphInit[vstyle=Classic] 
+    \SetUpVertex[MinSize=1pt]
+    \SetVertexNoLabel 
+    \grComplete[RA=2.5]{5}
+  \end{tikzpicture}
+  
+  \caption{$K_{5}$}
+\label{fig:K5}
+\end{figure}
+
+\begin{definition}
+  Una gráfica $H$ se llama \textbf{subgráfica} de $G$ si tiene todos
+  sus vértices y aristas en $G$, es decir, $V(H)\subseteq V (G)$ y
+  $E(H)\subseteq E(G)$. 
+\end{definition}
+
+\section{Gráfica de intersección}
+
+\begin{definition}
+  Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
+  subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
+  \textbf{gráfica de intersección} de $F$ es denotada por $\Omega(F)$
+  y definida por $V(\Omega(F))=F$, con $S_{i}$ y $S_{j}$ adyacentes
+  siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$
+\end{definition}
+
+\begin{definition}
+  Un \textbf{clan} de una gráfica es una subgráfica completa.  Un clan
+  es \textbf{maximal} si no es subconjunto propio de ningún
+  otro clan.
+\end{definition}
+
+\begin{definition}
+  La \textbf{gráfica de clanes} de una gráfica dada $G$ es la gráfica
+  de intersección de la familia de clanes maximales de $G$. Denotemos a la
+  gráfica de clanes de $G$ como $K(G)$. Por ejemplo la gráfica $K_{4}$
+  de la figura \ref{KG} es la gráfica de clanes de $G$ de la figura
+  \ref{G}.
+\end{definition}
+
+\begin{center}
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.45\linewidth}
+      \centering
+      \begin{tikzpicture}[scale=.8]
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \SetVertexNoLabel \grTriangularGrid[prefix=G,Math,RA=1.5]{3}%
+      \end{tikzpicture}
+
+      \caption{$G$}
+      \label{G}
+    \end{minipage}
+    \begin{minipage}[h]{0.45\linewidth}
+      \centering
+      \begin{tikzpicture}[scale=.8]
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \SetVertexNoLabel \grTetrahedral[RA=1.75]
+      \end{tikzpicture}
+    
+      \caption{$K(G)$}
+      \label{KG}
+    \end{minipage}
+  \end{figure}
+\end{center}
 
 \chapter{Homologías del complejo de emparejamiento}
 %\label{cha:primer-capitulo}
