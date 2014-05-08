@@ -887,6 +887,7 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
   \mathbb{C}.$$
   Así $\widetilde H_{0}(\Delta)=0$ si $\Delta$ es conexo.
 \end{theorem}
+La demostración puede ser encontrada en \cite{munkres1984elements}.
 
 \begin{example}
   Calculemos para $n=0, 1, 2$ los espacios $Z_{n}(\Delta)$,
@@ -1118,22 +1119,35 @@ En esta sección $I$ denota el intervalo $[0,1]$.
   $t$ varía de $0$ a $1$.
 \end{definition}
 
-\begin{theorem}
-  Si $h,k:|K|\rightarrow |L|$ son homotópicas, entonces
-  $h_{*},k_{*}:H_{p}(K)\rightarrow H_{p}(L)$ son iguales. El mismo
-  resultado se preserva para homologías reducidas.
-\end{theorem}
+% \begin{theorem}
+%   Si $h,k:|K|\rightarrow |L|$ son homotópicas, entonces
+%   $h_{*},k_{*}:H_{p}(K)\rightarrow H_{p}(L)$ son iguales. El mismo
+%   resultado se preserva para homologías reducidas.
+% \end{theorem}
 
+Si dos espacios son homeomorfos, tienen homologías isomorfas. Una
+condición más débil que homeomorfismo que implica el mismo resultado,
+es la de equivalencia homotópica.
+ 
 \begin{definition}
-  Dos espacios topológicos $X$ y $Y$ se dicen \textbf{homotópicos}, si
+  Dos espacios topológicos $X$ y $Y$ se dicen \textbf{equivalentes homotópicos}, si
   existen las funciones
   $$f:X\rightarrow Y \quad \mbox{ y }\quad g:Y\rightarrow X$$
-  tales que $g\circ f\simeq i_{X}$ y $f\circ g\simeq i_{Y}$.
-
-  Si $X$ es homotópico a un punto, se dice que $X$ es
-  \textbf{contraíble}.
+  tales que $g\circ f\simeq i_{X}$ y $f\circ g\simeq i_{Y}$. Las
+  funciones $f$ y $g$ son llamadas\textbf{ equivalencias homotópicas},
+  y $g$ es la inversa homotópica de $f$. 
 \end{definition}
+Si $X$ es homotópico a un punto, se dice que $X$ es
+\textbf{contraíble}.
 
+\begin{theorem}
+  Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son equivalentes
+  homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
+  H_{n}(Y)$. En particular, si $X$ es contraíble, entonces $\widetilde
+  H_{n}(X)=0$ para $n\geq 1$.
+\end{theorem}
+La demostración se encuentra en \cite{munkres1984elements}.
+ 
 \chapter{Gráfica de clanes}
 %\label{cha:primer-capitulo}
 \section{Gráficas}
