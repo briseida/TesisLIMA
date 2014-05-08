@@ -1233,7 +1233,7 @@ La demostración se encuentra en \cite{munkres1984elements}.
       \centering
       \begin{tikzpicture}[scale=.8]
         \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-        \SetVertexNoLabel \grTetrahedral[RA=1.75]
+        \SetVertexNoLabel \grTetrahedral[RA=1.9]
       \end{tikzpicture}
     
       \caption{$K(G)$}
@@ -1241,6 +1241,12 @@ La demostración se encuentra en \cite{munkres1984elements}.
     \end{minipage}
   \end{figure}
 \end{center}
+
+\begin{definition}
+  La \textbf{gráfica bipartita clánica} de $G$ es definida como la gráfica
+  $BK(G)$ con $V(BK(G))=V(G)\cup V(K(G))$, donde $x\in V(G)$,
+  $c\in (K(G))$ son adyacentes si $x\in c$.
+\end{definition}
 
 \chapter{Homologías del complejo de emparejamiento}
 %\label{cha:primer-capitulo}
