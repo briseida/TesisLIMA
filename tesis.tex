@@ -1145,6 +1145,7 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
   homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
   H_{n}(Y)$. En particular, si $X$ es contraíble, entonces $\widetilde
   H_{n}(X)=0$ para $n\geq 1$.
+  \label{esp-homotopicos-homologias-iso}
 \end{theorem}
 La demostración se encuentra en \cite{munkres1984elements}.
  
@@ -2607,7 +2608,7 @@ De lo anterior y la proposición \ref{modulos-iguales} tenemos:
         \EdgeFromOneToSeq{c}{d}{11}{22}{23}
       \end{tikzpicture}
 
-      \caption{Gráfica de .....}
+      \caption{$BK(G_{6})$}
       \label{grafica-contraible-M6}
       % \end{figure};
     \end{minipage}
@@ -2619,12 +2620,21 @@ Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
 \im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
 \label{im3-KM5}
 \end{equation*}
-También de
-\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia[Bouc]????)} sabemos:
+Observando la figura \ref{fig:emparejamiento6-1} contrayendo los
+triángulos, se encuentra que $G_{6}$ es homotópica a $BK(G_{6})$ esto
+puede demostrarse formalmente ocupando los resultados que aparecen en
+\cite{LPV08a} y \cite{Pri92}. Así que, por el teorema
+\ref{esp-homotopicos-homologias-iso} tenemos $\widetilde
+H_{2}(M_{6})\cong\widetilde H_{2}(\Delta(BK(G_{6})))$. Además
+$\widetilde H_{2}(\Delta(BK(G_{6})))=0$ pues en $BK(G_{6})$ no existen $2$-simplejos.
+%$$G_{6}\simeq
+%H(G_{6})=\varepsilon(BK(G_{6}))=L(BK(G_{6}))=K(BK(G_{6}))\simeq BK(G_{6})$$
+
+Por lo que:
 \begin{equation*}
 \widetilde H_{2}(M_{6})=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0.
 \end{equation*}
-por lo que $\ker \widehat\partial_{2}=0$. De el teorema
+por lo que $\im \widehat\partial_{3}=\ker \widehat\partial_{2}$. De el teorema
 \ref{teorema-isomorfismo-mod} tenemos:
 $$(S^{(4,1,1)}\oplus S^{(3,3)})/\ker \widehat\partial_{2}\cong \im \widehat\partial_{2}$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
@@ -2643,8 +2653,7 @@ De las ecuaciones \ref{ker1-M6}, \ref{im2-M6} y la proposición
   &=&S^{(3,2,1)}
 \end{eqnarray*}
 
-En lo anterior usamos el hecho de que $\widetilde H_{2}(M_{6})=0$ de el
-resultado de \setlength{\fboxsep}{0pt}\colorbox{green}{(referencia[Bouc]????)}, sin embargo veamos que no es necesario, por lo que
+En lo anterior usamos el  hecho que $G_{6}\simeq BK(G_{6})$ por lo que $\widetilde H_{2}(M_{6})\cong\widetilde H_{2}(\Delta(BK(G_{6})))=0$, sin embargo veamos que no es necesario, por lo que
 necesitamos calcular $\im \widehat\partial_{2}$. 
 
 Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
