@@ -1127,24 +1127,23 @@ En esta sección $I$ denota el intervalo $[0,1]$.
 
 Si dos espacios son homeomorfos, tienen homologías isomorfas. Una
 condición más débil que homeomorfismo que implica el mismo resultado,
-es la de equivalencia homotópica.
+es el de homotópicamente equivalentes.
  
 \begin{definition}
-  Dos espacios topológicos $X$ y $Y$ se dicen \textbf{equivalentes homotópicos}, si
-  existen las funciones
+  Dos espacios topológicos $X$ y $Y$ se dicen \textbf{homotópicamente
+    equivalentes} o bien \textbf{homotópicos}, si existen las funciones
   $$f:X\rightarrow Y \quad \mbox{ y }\quad g:Y\rightarrow X$$
   tales que $g\circ f\simeq i_{X}$ y $f\circ g\simeq i_{Y}$. Las
   funciones $f$ y $g$ son llamadas\textbf{ equivalencias homotópicas},
-  y $g$ es la inversa homotópica de $f$. 
+  y $g$ es la \textbf{inversa homotópica} de $f$. 
 \end{definition}
 Si $X$ es homotópico a un punto, se dice que $X$ es
 \textbf{contraíble}.
 
 \begin{theorem}
-  Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son equivalentes
-  homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
-  H_{n}(Y)$. En particular, si $X$ es contraíble, entonces $\widetilde
-  H_{n}(X)=0$ para $n\geq 1$.
+  Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
+  H_{n}(Y)$ para $n>0$. En particular, si $X$ es contraíble, entonces $\widetilde
+  H_{n}(X)=0$ para $n>0$.
   \label{esp-homotopicos-homologias-iso}
 \end{theorem}
 La demostración se encuentra en \cite{munkres1984elements}.
@@ -1205,18 +1204,17 @@ La demostración se encuentra en \cite{munkres1984elements}.
 \end{definition}
 
 \begin{definition}
-  Un \textbf{clan} de una gráfica es una subgráfica completa.  Un clan
-  es \textbf{maximal} si no es subconjunto propio de ningún
-  otro clan.
+  Un \textbf{clan} de una gráfica es una subgráfica completa
+  maximal, es decir, no está contenida en ninguna otra subgráfica completa.
 \end{definition}
 
 \begin{definition}
   La \textbf{gráfica de clanes} de una gráfica dada $G$ es la gráfica
-  de intersección de la familia de clanes maximales de $G$. Denotemos a la
-  gráfica de clanes de $G$ como $K(G)$. Por ejemplo la gráfica $K_{4}$
-  de la figura \ref{KG} es la gráfica de clanes de $G$ de la figura
-  \ref{G}.
+  de intersección de la familia de clanes de $G$. Denotemos a la
+  gráfica de clanes de $G$ como $K(G)$. 
 \end{definition}
+Por ejemplo la gráfica $K_{4}$ de la figura \ref{KG} es la gráfica de
+clanes de $G$ de la figura \ref{G}.
 
 \begin{center}
   \begin{figure}[h]
@@ -1248,6 +1246,30 @@ La demostración se encuentra en \cite{munkres1984elements}.
   $BK(G)$ con $V(BK(G))=V(G)\cup V(K(G))$, donde $x\in V(G)$,
   $c\in (K(G))$ son adyacentes si $x\in c$.
 \end{definition}
+Por ejemplo, la gráfica bipartita clánica de la figura \ref{G} aparece
+en la figura \ref{BKG}.
+ 
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=.4]
+    \SetVertexNoLabel \GraphInit[vstyle=Classic]
+    \SetUpVertex[MinSize=1pt] \grStar[RA=2,Math,rotation=270]{4}
+    \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
+    \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
+    \EdgeFromOneToSeq{b}{a}{0}{1}{2} \EdgeFromOneToSeq{a}{b}{2}{1}{1}
+    \EdgeFromOneToSeq{a}{b}{0}{1}{1} \EdgeFromOneToSeq{b}{a}{2}{0}{1}
+    \EdgeIdentity{b}{c}{3}
+  \end{tikzpicture}
+  
+  \caption{$BK(G)$}
+\label{BKG}
+\end{figure}
+
+A cada gráfica $G$ se le asocia un espacio topológico por
+medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
+las subgráficas completas. Si $G$ tiene una acción del grupo simétrico
+$S_{n}$, entonces las homologías de $G$ son representaciones
+de $S_{n}$.
 
 \chapter{Homologías del complejo de emparejamiento}
 %\label{cha:primer-capitulo}
@@ -2621,7 +2643,7 @@ Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
 \im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
 \label{im3-KM5}
 \end{equation*}
-Observando la figura \ref{fig:emparejamiento6-1} contrayendo los
+Considerando la figura \ref{fig:emparejamiento6-1}. Se observa que contrayendo los
 triángulos, se encuentra que $G_{6}$ es homotópica a $BK(G_{6})$ esto
 puede demostrarse formalmente ocupando los resultados que aparecen en
 \cite{LPV08a} y \cite{Pri92}. Así que, por el teorema
