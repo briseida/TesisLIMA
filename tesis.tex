@@ -5,6 +5,7 @@
 \usepackage{amssymb,latexsym}
 \usepackage{graphicx}
 
+
 \usepackage[spanish,mexico,es-nolayout]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{amsmath,amscd}
@@ -14,6 +15,7 @@
 \usepackage{color}
 \usepackage{tikz}
 \usepackage{tkz-berge}
+\usetikzlibrary{positioning,backgrounds}
 \usepackage{makeidx}
 \usepackage{url}
 \usepackage{xspace}
@@ -1107,6 +1109,21 @@ Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
 isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 \section{Homomorfismos inducidos por mapas homotópicos}
+
+Es posible definir la homología de un espacio topológico general por
+medio de la \emph{homología singular}. Por otro lado, a cada complejo
+simplicial $\Delta$ se le puede asociar un espacio denotado $|\Delta|$
+llamado la \textbf{realización geométrica} de $\Delta$, dado por:
+
+$$|\Delta|=\{\alpha:V(\Delta)\rightarrow I\mid\alpha^{-1}(0,1]\in
+\Delta, \sum _{v\in V(\Delta)}\alpha(v)=1\}$$
+Ahora a $|\Delta|$ le vamos a dar la topología generada por la métrica
+\begin{equation*}
+  \label{metrica}
+  d:|\Delta|\times |\Delta|\rightarrow  \mathbb{R} \quad \mbox{tal
+    que}\quad d(\alpha,\beta)=\sqrt{\sum _{v\in V(\Delta)}(\alpha(v)-\beta(v))^{2}}.
+\end{equation*}
+
 En esta sección $I$ denota el intervalo $[0,1]$.
 
 \begin{definition}
@@ -1140,12 +1157,12 @@ es el de homotópicamente equivalentes.
 Si $X$ es homotópico a un punto, se dice que $X$ es
 \textbf{contraíble}.
 
-\begin{theorem}
-  Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
-  H_{n}(Y)$ para $n>0$. En particular, si $X$ es contraíble, entonces $\widetilde
-  H_{n}(X)=0$ para $n>0$.
-  \label{esp-homotopicos-homologias-iso}
-\end{theorem}
+% \begin{theorem}
+%   Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
+%   H_{n}(Y)$ para $n>0$. En particular, si $X$ es contraíble, entonces $\widetilde
+%   H_{n}(X)=0$ para $n>0$.
+%   \label{esp-homotopicos-homologias-iso}
+% \end{theorem}
 La demostración se encuentra en \cite{munkres1984elements}.
  
 \chapter{Gráfica de clanes}
@@ -1264,12 +1281,6 @@ en la figura \ref{BKG}.
   \caption{$BK(G)$}
 \label{BKG}
 \end{figure}
-
-A cada gráfica $G$ se le asocia un espacio topológico por
-medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
-las subgráficas completas. Si $G$ tiene una acción del grupo simétrico
-$S_{n}$, entonces las homologías de $G$ son representaciones
-de $S_{n}$.
 
 \chapter{Homologías del complejo de emparejamiento}
 %\label{cha:primer-capitulo}
