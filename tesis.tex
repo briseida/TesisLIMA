@@ -1124,10 +1124,8 @@ Ahora a $|\Delta|$ le vamos a dar la topología generada por la métrica
     que}\quad d(\alpha,\beta)=\sqrt{\sum _{v\in V(\Delta)}(\alpha(v)-\beta(v))^{2}}.
 \end{equation*}
 
-En esta sección $I$ denota el intervalo $[0,1]$.
-
 \begin{definition}
-  Sean $X$, $Y$ espacios topológico, dos funciones continuas
+  Sea $I$ el intervalo $[0,1]$ y $X$, $Y$ espacios topológicos, dos funciones continuas
   $h,k:X\rightarrow Y$ son \textbf{homotópicas} si existe una función continua
   $$F:X\times I\rightarrow Y,$$
   tal que $F(x,0)=h(x)$ y $F(x,1)=k(x)$ para todo $x\in X.$ Si $h$ y
@@ -1169,7 +1167,16 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
 %   H_{n}(X)=0$ para $n>0$.
 %   \label{esp-homotopicos-homologias-iso}
 % \end{theorem}
-La demostración se encuentra en \cite{munkres1984elements}.
+
+\begin{theorem}
+  Sea $\Delta$ un complejo simplicial, entonces la homología
+  simplicial de $\Delta$ es isomorfa a la homología singular de su
+  realización geométrica $|\Delta|$.
+  \label{homologia-realizacion}
+\end{theorem}
+Las demostraciones de los teoremas
+\ref{esp-homotopicos-homologias-iso} y \ref{homologia-realizacion} se
+encuentran en \cite{munkres1984elements}.
  
 \chapter{Gráfica de clanes}
 %\label{cha:primer-capitulo}
