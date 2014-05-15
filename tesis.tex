@@ -1124,6 +1124,10 @@ Ahora a $|\Delta|$ le vamos a dar la topología generada por la métrica
     que}\quad d(\alpha,\beta)=\sqrt{\sum _{v\in V(\Delta)}(\alpha(v)-\beta(v))^{2}}.
 \end{equation*}
 
+A los complejos simpliciales se les asocian conceptos topológicos por
+medio de la realización geométrica. Por ejemplo, dos complejos se
+dicen homeomorfos si las realizaciones geométricas los son.
+
 \begin{definition}
   Sea $I$ el intervalo $[0,1]$ y $X$, $Y$ espacios topológicos, dos funciones continuas
   $h,k:X\rightarrow Y$ son \textbf{homotópicas} si existe una función continua
@@ -1156,17 +1160,11 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
 \textbf{contraíble}.
 
 \begin{theorem}
-  Si $|X|$ y $|Y|$ son homotópicos, entonces $\widetilde H_{n}(|X|)\cong \widetilde
-  H_{n}(|Y|)$ para $n>0$. En particular, si $|X|$ es contraíble, entonces $\widetilde
-  H_{n}(|X|)=0$ para $n>0$.
+  Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
+  H_{n}(Y)$ para $n>0$. En particular, si $X$ es contraíble, entonces $\widetilde
+  H_{n}(X)=0$ para $n>0$.
   \label{esp-homotopicos-homologias-iso}
 \end{theorem}
-% \begin{theorem}
-%   Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
-%   H_{n}(Y)$ para $n>0$. En particular, si $X$ es contraíble, entonces $\widetilde
-%   H_{n}(X)=0$ para $n>0$.
-%   \label{esp-homotopicos-homologias-iso}
-% \end{theorem}
 
 \begin{theorem}
   Sea $\Delta$ un complejo simplicial, entonces la homología
@@ -1278,32 +1276,62 @@ clanes de $G$ de la figura \ref{G}.
 \end{definition}
 Por ejemplo, la gráfica bipartita clánica de la figura \ref{G} aparece
 en la figura \ref{BKG}.
+
+% \begin{figure}[h]
+%   \centering
+%   \begin{tikzpicture}[scale=.4]
+%     \SetVertexNoLabel 
+%     \GraphInit[vstyle=Classic]
+%     \SetUpVertex[MinSize=1pt] \grStar[RA=2,Math,rotation=270]{4}
+%     \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
+%     \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
+%     \EdgeFromOneToSeq{b}{a}{0}{1}{2} \EdgeFromOneToSeq{a}{b}{2}{1}{1}
+%     \EdgeFromOneToSeq{a}{b}{0}{1}{1} \EdgeFromOneToSeq{b}{a}{2}{0}{1}
+%     \EdgeIdentity{b}{c}{3}
+%   \end{tikzpicture}
+  
+%   \caption{$BK(G)$}
+% \label{BKG1}
+% \end{figure}
  
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}[scale=.4]
-    \SetVertexNoLabel \GraphInit[vstyle=Classic]
-    \SetUpVertex[MinSize=1pt] \grStar[RA=2,Math,rotation=270]{4}
-    \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
+    \SetVertexNoLabel 
+    \GraphInit[vstyle=Classic]
+    \SetUpVertex[MinSize=1pt] 
+    \grStar[RA=2,Math,rotation=270]{4}
+    \begin{scope}[rotate=90]
+      \Vertices[unit=2]{circle}{x,y,z}
+    \end{scope}
     \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
-    \EdgeFromOneToSeq{b}{a}{0}{1}{2} \EdgeFromOneToSeq{a}{b}{2}{1}{1}
-    \EdgeFromOneToSeq{a}{b}{0}{1}{1} \EdgeFromOneToSeq{b}{a}{2}{0}{1}
-    \EdgeIdentity{b}{c}{3}
+    \EdgeFromOneToSeq{x}{a}{}{1}{2}
+    \Edge(y)(a0)
+    \Edge(y)(a2)
+    \EdgeFromOneToSeq{z}{a}{}{0}{1}
+    \Edge(x)(c0)
+    \Edge(y)(c1)
+    \Edge(z)(c2)
+    \AddVertexColor{gray}{x,y,z}
   \end{tikzpicture}
   
   \caption{$BK(G)$}
 \label{BKG}
 \end{figure}
 
-A cada gráfica $G$ se le asocia un espacio topológico por
+A cada gráfica $G$ finita se le asocia un espacio topológico por
 medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
-las subgráficas completas. Si $G$ tiene una acción del grupo simétrico
+las subgráficas completas. Entonces a $G$ le podemos asociar conceptos topológicos por
+medio de $\Delta(G)$. Por ejemplo, escribiremos $G_{1}\simeq G_{2}$ si
+se tiene que $\Delta(G_{1})\simeq\Delta(G_{2})$.
+
+Por otro lado si $G$ tiene una acción del grupo simétrico
 $S_{n}$, entonces las homologías de $G$ son representaciones
 de $S_{n}$.
 
-Nuevamente tomemos la gráfica $G$ de la figura \ref{G}, entonces
+Para ejemplificar los conceptos antes expuestos tomemos la gráfica $G$ de la figura \ref{G}, entonces
 $\Delta(G)$ consta de los subconjuntos no vacíos de $\{1,2,4\}$,
-$\{2,3,5\}$,$\{2,4,5\}$, $\{4,5,6\}$. Un dibujo de $|\Delta(G)|$ se
+$\{2,3,5\}$, $\{2,4,5\}$, $\{4,5,6\}$. Un dibujo de $|\Delta(G)|$ se
 observa en \ref{fig:realizacion-geometrica}.
 
 \begin{figure}[h]
@@ -1363,6 +1391,7 @@ $n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
 \begin{enumerate}
   \item Su conjunto de vértices $V$ consta de las aristas de la gráfica
   $K_{n}$. 
+
   \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
   $V$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $M_{n}$ si $v_{i}$
   y $v_{j}$ son ajenas.
@@ -1428,7 +1457,7 @@ La \textbf{gráfica de emparejamiento} de $K_{n}$ será denotada por $G_{n}$.
   % \end{minipage}
 \end{center}
 
-El siguiente teorema nos muestra la descomposición de las homologías
+El teorema \ref{bouc} nos muestra la descomposición de las homologías
 reducidas de complejos de emparejamiento en módulos de Specht. En los
 siguientes ejemplos se presentan las homologías reducidas de $M_{4}$,
 $M_{5}$, $M_{6}$ y de sus respectivos complejos simpliciales asociados
@@ -1443,6 +1472,7 @@ todo $n\geq1$ y $k\in \mathbb{Z}$,
   \widetilde H_{k-1}(M_{n};\mathbb{C})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
       \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda}.
 \end{equation*}
+\label{bouc}
 \end{theorem}
 
 A continuación, obtendremos las homologías reducidas de $M_{4}$ con
