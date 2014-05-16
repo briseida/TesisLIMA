@@ -218,6 +218,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 \end{definition}
 
 \begin{definition}
+  \label{suma-directa}
   Un espacio vectorial $V$ es la \textbf{suma directa de $W_{1}$ y
   $W_{2}$}, denotada como $V=W_{1}\oplus W_{2}$, si $W_{1}$ y $W_{2}$
 son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$ 
@@ -453,36 +454,67 @@ espacios vectoriales complejos y de dimensión finita.
   $\sgn:\mathcal{S}_{n} \rightarrow\{\pm1\}$ mediante $$\sgn(\pi):=(-1)^{k}.$$
 \end{example}
 
-\begin{example}(\textbf{Representación regular})
-  Sea $G$ cualquier grupo de orden $n$ y sea V el espacio vectorial de
-  dimensión $n$ con base $\mathcal{B}=\{v_{g}\}_{g\in G}$ indexada por
-  los elementos del grupos. Para cada $\sigma\in G$ definamos la función
-  $\rho(\sigma):\mathcal{B}\rightarrow \mathcal{B}$ mediante $\rho(\sigma)(v_{g})=v_{\sigma g}$.
-  Mostremos que la función $$\rho:G\rightarrow GL(V)$$ dada por
-  $\sigma\mapsto\rho(\sigma)$ es un homomorfismo. Si $\sigma,\tau \in G$
-  y si $v_{g}\in \mathcal{B}$, entonces $$\rho(\sigma
-  \tau)v_{g}=v_{(\sigma\tau)g}=v_{\sigma(\tau g)}=\rho(\sigma)v_{\tau
-    g}=\rho(\sigma)(\rho(\tau)v_{g})=\rho(\sigma)\rho(\tau)v_{g} $$
-  así que $\rho(\sigma\tau)=\rho(\sigma)\rho(\tau)$. Por definición el 
-  grado de la representación es el orden de $G$.
+\begin{example}
+  \label{CS}
+  Sea $G$ un grupo, es posible tomar un conjunto en el cual actúe $G$
+  y resulte un $G$-módulo, como lo hacemos a continuación. Sea
+  $S=\{s_{1},s_{2},\ldots,s_{n}\}$ y $\mathbb{C}\boldsymbol{S}=\mathbb{C}\{s_{1},s_{2},\ldots,s_{n}\}$ denote el
+  espacio vectorial generado por $S$ sobre $\mathbb{C}$; es decir,
+  $\mathbb{C}\boldsymbol{S}$ consiste de todas las combinaciones lineales
+  \begin{equation*}
+    c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n}
+  \end{equation*}
+  donde $c_{i}\in\mathbb{C}$. La adición y multiplicación por escalar
+  en $\mathbb{C}\boldsymbol{S}$ está definida por
+  \begin{eqnarray*}
+    (c_{1}s_{1}+c_{2}s_{2}+\cdots
+    +c_{n}s_{n})+(d_{1}s_{1}+d_{2}s_{2}+\cdots +d_{n}s_{n})\\
+    =(c_{1}+d_{1})s_{1}+(c_{2}+d_{2})s_{2}+\cdots +(c_{n}+d_{n})s_{n}
+  \end{eqnarray*}
+  y
+  \begin{eqnarray*}
+    c(c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n})=(cc_{1})s_{1}+(cc_{2})s_{2}+\cdots +(cc_{n})s_{n},
+  \end{eqnarray*}
+  respectivamente. Ahora la acción de $G$ en $S$ se puede extender
+  linealmente a la acción en $\mathbb{C}\boldsymbol{S}$:
+  \begin{equation*}
+    g(c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n})=c_{1}(gs_{1})+c_{2}(gs_{2})+\cdots +c_{n}(gs_{n})
+  \end{equation*}
+  para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{S}$ resulta ser un $G$-módulo
+  de dimensión $|S|$.
 \end{example}
 
-\section{Módulos irreducibles y submódulos}
-\label{mod-irr-submodulos}
+% \begin{example}(\textbf{Representación regular})
+%   Sea $G$ cualquier grupo de orden $n$ y sea V el espacio vectorial de
+%   dimensión $n$ con base $\mathcal{B}=\{v_{g}\}_{g\in G}$ indexada por
+%   los elementos del grupos. Para cada $\sigma\in G$ definamos la función
+%   $\rho(\sigma):\mathcal{B}\rightarrow \mathcal{B}$ mediante $\rho(\sigma)(v_{g})=v_{\sigma g}$.
+%   Mostremos que la función $$\rho:G\rightarrow GL(V)$$ dada por
+%   $\sigma\mapsto\rho(\sigma)$ es un homomorfismo. Si $\sigma,\tau \in G$
+%   y si $v_{g}\in \mathcal{B}$, entonces $$\rho(\sigma
+%   \tau)v_{g}=v_{(\sigma\tau)g}=v_{\sigma(\tau g)}=\rho(\sigma)v_{\tau
+%     g}=\rho(\sigma)(\rho(\tau)v_{g})=\rho(\sigma)\rho(\tau)v_{g} $$
+%   así que $\rho(\sigma\tau)=\rho(\sigma)\rho(\tau)$. Por definición el 
+%   grado de la representación es el orden de $G$.
+% \end{example}
+
+\section{Reducibilidad}%Módulos irreducibles}
+\label{reducibilidad}
+
 Denote $G$ un grupo y $V$ un espacio vectorial sobre
 el campo de los complejos. 
 
 \begin{definition}
-  Sea $V$ un $G$-módulo no trivial. Decimos que $V$ es \textbf{irreducible} si
-  los únicos submódulos de $V$ son $0$ y $V$.
-\end{definition}
-
-\begin{definition}
-  Sea $V$ un $G$-módulo. Un \textbf{submódulo} de $V$ es un subespacio
+  Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o \textbf{submódulo} de $V$ es un subespacio
   $W$ que es invariante bajo la acción de $G$, es decir, $ gw\in W$
   para todos $w\in W$, $g\in G$, tal que $W$ junto con la acción de
   $G$ es en sí mismo un $G$-módulo. Escribiremos $W\leq V$ si $W$ es
   submódulo de $V$. 
+\end{definition}
+
+\begin{definition}
+  Sea $V$ un $G$-módulo no trivial. Decimos que $V$ es \textbf{irreducible} si
+  los únicos submódulos de $V$ son $0$ y $V$.
 \end{definition}
 
 \begin{theorem}
@@ -496,7 +528,8 @@ el campo de los complejos.
   elementos de $W$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
 \end{definition}
 
-Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma directa} de
+Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma
+  directa externa} de
 $U$ y $V$ al conjunto $U\times V=\{(u,v):u\in U,v\in V\}$ con las operaciones
 $$(u,v)+(u_{1},v_{1})=(u+u_{1},v+v_{1})$$
 $$k(u,v)=(ku,kv),$$
@@ -565,6 +598,41 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
  sea $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
  que $S\cap S^{'}=S^{'}$, con lo que $S=S^{'}$ como se quería demostrar.
 \end{proof}
+
+De la definición \ref{suma-directa} (suma directa), si $V$ es un
+$G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
+que son \textbf{complementos.}  \setlength{\fboxsep}{0pt}\colorbox{green}{???}
+
+\begin{theorem}
+  \label{maschke}
+  Sea $G$ un grupo finito y $V$ un $G$-módulo no cero. Entonces $V$ es
+  \textbf{completamente reducible}, es decir
+  \begin{equation*}
+    V=W^{(1)}\oplus W^{(2)}\oplus\cdots \oplus W^{(k)},
+  \end{equation*}
+  donde los $W^{i}$ son $G$-submódulos irreducibles de $V$.
+\end{theorem}
+
+\section{G-homomorfismo y lemma de Schur}
+\label{schur}
+
+\begin{definition}
+  Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-homomorfismo} (o simplemente
+  un \textbf{homomorfismo}) es una transformación lineal $\theta:V\rightarrow
+  W$ tal que
+  \begin{equation*}
+    \theta(gv)=g\theta(v),
+  \end{equation*}
+para todo $g\in G$ y $v\in V$. Decimos que $\theta$ \emph{preserva} la acción
+de $G$.
+\end{definition}
+
+\begin{definition}
+  Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-isomorfismo} es un
+  $G$-homomorfismo $\theta:V\rightarrow W$ el cual es biyectivo. En
+  este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos}, o
+  $G$\textbf{-equivalentes}, y lo denotaremos como $V\cong W$.
+\end{definition}
 
 \begin{theorem}[Lema de Schur]
   \label{lema-schur}
