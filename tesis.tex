@@ -167,8 +167,26 @@ En el primer capítulo...
 En este capítulo se revisan algunos resultados de álgebra lineal, las
 pruebas se omiten pero se puede consultar algún texto de álgebra
 lineal como \cite{friedberg1982algebra}
-  para más  detalles. En este trabajo todos los espacios vectoriales
-  considerados serán dimensionalmente finitos y sobre los complejos.
+para más  detalles. En este trabajo todos los espacios vectoriales
+considerados serán dimensionalmente finitos y sobre los complejos.
+
+\begin{theorem}
+  \label{clunica}
+  Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
+  subconjunto de $V$. Luego $\beta$ es una base de $V$ si y solo si
+  cada vector $y\in V$ puede ser expresado de manera única como una
+  combinación lineal de vectores de $\beta$, es decir, puede ser
+  expresado de la forma
+  $$y=a_{1}v_{1}+\ldots+a_{n}v_{n}$$
+  para escalares únicos $a_{1},\ldots,a_{n}.$
+\end{theorem}
+
+\begin{theorem}
+  \label{esp-iguales}
+  Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
+  $n$. Entonces, $W$ es dimensionalmente finito y $\dim(W)\leq
+  n$. Además, si $\dim(W)=n$, entonces $W=V$.
+\end{theorem}
 
 \begin{definition}
   Sea $W$ un subespacio de un espacio vectorial $V$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
@@ -228,24 +246,6 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
   Sean $W_{1}$ y $W_{2}$ subespacios de $V$ tales que
   $V=W_{1}+W_{2}$. Luego, $V=W_{1}\oplus W_{2}$ si y solo si 
   $$\dim(V)=\dim(W_{1})+\dim(W_{2}).$$
-\end{theorem}
-
-\begin{theorem}
-  \label{clunica}
-  Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
-  subconjunto de $V$. Luego $\beta$ es una base de $V$ si y solo si
-  cada vector $y\in V$ puede ser expresado de manera única como una
-  combinación lineal de vectores de $\beta$, es decir, puede ser
-  expresado de la forma
-  $$y=a_{1}v_{1}+\ldots+a_{n}v_{n}$$
-  para escalares únicos $a_{1},\ldots,a_{n}.$
-\end{theorem}
-
-\begin{theorem}
-  \label{esp-iguales}
-  Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
-  $n$. Entonces, $W$ es dimensionalmente finito y $\dim(W)\leq
-  n$. Además, si $\dim(W)=n$, entonces $W=V$.
 \end{theorem}
 
 \section{Transformaciones lineales}
@@ -324,17 +324,17 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 
 La demostración del teorema anterior es elemental, por lo tanto la omitiremos.
 
-\begin{definition}
-  Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
-  diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
-  $G$ y $H$ son grupos  \textbf{isomorfos} cuando exista un
-    isomorfismo entre ellos, usaremos la notación $G\cong H$.
-\end{definition}
+% \begin{definition}
+%   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
+%   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
+%   $G$ y $H$ son grupos  \textbf{isomorfos} cuando exista un
+%     isomorfismo entre ellos, usaremos la notación $G\cong H$.
+% \end{definition}
 
-\begin{theorem}
-  Supongamos que $G$ y $H$ son grupos y sea $\phi:G\rightarrow H$ un
-  homomorfismo. Entonces $$G/\ker \phi\cong \im \phi$$ 
-\end{theorem}
+% \begin{theorem}
+%   Supongamos que $G$ y $H$ son grupos y sea $\phi:G\rightarrow H$ un
+%   homomorfismo. Entonces $$G/\ker \phi\cong \im \phi$$ 
+% \end{theorem}
 
   Denotemos $GL(n,\mathbb{C})$ al grupo de matrices
   invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
@@ -456,10 +456,10 @@ espacios vectoriales complejos y de dimensión finita.
 
 \begin{example}
   \label{CS}
-  Sea $G$ un grupo, es posible tomar un conjunto en el cual actúe $G$
+  Sea $G$ un grupo. Es posible tomar un conjunto en el cual actúe $G$
   y resulte un $G$-módulo, como lo hacemos a continuación. Sea
   $S=\{s_{1},s_{2},\ldots,s_{n}\}$ y $\mathbb{C}\boldsymbol{S}=\mathbb{C}\{s_{1},s_{2},\ldots,s_{n}\}$ denote el
-  espacio vectorial generado por $S$ sobre $\mathbb{C}$; es decir,
+  espacio vectorial generado por $S$ sobre $\mathbb{C}$. Es decir,
   $\mathbb{C}\boldsymbol{S}$ consiste de todas las combinaciones lineales
   \begin{equation*}
     c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n}
@@ -601,11 +601,11 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
 
 De la definición \ref{suma-directa} (suma directa), si $V$ es un
 $G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
-que son \textbf{complementos.}  \setlength{\fboxsep}{0pt}\colorbox{green}{???}
+que son \textbf{complemento directo.} 
 
-\begin{theorem}
+\begin{theorem}[Teorema de Maschke]
   \label{maschke}
-  Sea $G$ un grupo finito y $V$ un $G$-módulo no cero. Entonces $V$ es
+  Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
   \textbf{completamente reducible}, es decir
   \begin{equation*}
     V=W^{(1)}\oplus W^{(2)}\oplus\cdots \oplus W^{(k)},
@@ -613,26 +613,48 @@ que son \textbf{complementos.}  \setlength{\fboxsep}{0pt}\colorbox{green}{???}
   donde los $W^{i}$ son $G$-submódulos irreducibles de $V$.
 \end{theorem}
 
-\section{G-homomorfismo y lemma de Schur}
+\section{$G$-homomorfismo y lema de Schur} 
 \label{schur}
 
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-homomorfismo} (o simplemente
-  un \textbf{homomorfismo}) es una transformación lineal $\theta:V\rightarrow
+  un \textbf{homomorfismo}) es una transformación lineal $\phi:V\rightarrow
   W$ tal que
   \begin{equation*}
-    \theta(gv)=g\theta(v),
+    \phi(gv)=g\phi(v),
   \end{equation*}
-para todo $g\in G$ y $v\in V$. Decimos que $\theta$ \emph{preserva} la acción
+para todo $g\in G$ y $v\in V$. Decimos que $\phi$ \emph{preserva} la acción
 de $G$.
 \end{definition}
 
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-isomorfismo} es un
-  $G$-homomorfismo $\theta:V\rightarrow W$ el cual es biyectivo. En
+  $G$-homomorfismo $\phi:V\rightarrow W$ el cual es biyectivo. En
   este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos}, o
   $G$\textbf{-equivalentes}, y lo denotaremos como $V\cong W$.
 \end{definition}
+
+Si $W$ es submódulo de $V$, entonces en el espacio vectorial cociente
+$V/W$ puede darse una acción de $G$ como $g(v+W)=gv+W$, la cual está
+bien definida (pues $W$ es invariante bajo la acción de $G$), y
+satisface los axiomas \setlength{\fboxsep}{0pt}\colorbox{green}{axiomas???} de módulo sobre
+$G$, por lo que obtenemos una estructura de $G$-módulo en $V/W$
+llamada \textbf{módulo cociente}.
+
+\begin{proposition}
+  Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces
+  \begin{enumerate}
+  \item $\ker\phi$ es un $G$-submódulo de $V$, y
+  \item $\im\phi$ es un $G$-submódulo de $W$.
+  \end{enumerate}
+\end{proposition}
+
+\begin{theorem}[Teorema de isomorfismo de módulos]
+  \label{teorema-isomorfismo-mod}
+  Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces el
+  módulo cociente $V/ker\phi$ es isomorfo a $\im\phi$ por medio de
+  $v+\ker\phi\mapsto\phi(v)$.
+\end{theorem}
 
 \begin{theorem}[Lema de Schur]
   \label{lema-schur}
@@ -668,11 +690,181 @@ de $G$.
   Por otro lado, si $\ker(f\circ i)=S$, tenemos
   $$0=S/S\cong\im(f\circ i)=f(S)$$
 \end{proof}
-\bigskip
-\begin{theorem}[Teorema de isomorfismo de módulos]
-  \label{teorema-isomorfismo-mod}
-  Sean.....
+
+\begin{theorem}
+  Sea $V$ un $G$ módulo tal que
+  \begin{equation*}
+    V\cong m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus
+    m_{k}V^{(k)},
+  \end{equation*}
+  donde para cada $V^{(i)}$ y $V^{(j)}$ con $i\neq j$ son submódulos irreducibles no isomorfos y $\dim
+  V^{(i)}=d_{i}$. Entonces $\dim V=m_{1}d_{1}+m_{2}d_{2}+\cdots+m_{k}d_{k}.$
 \end{theorem}
+
+\section{Caracteres de representaciones}
+\label{caracteres}
+
+Mucha información contenida en una representación puede ser obtenida
+de la traza de sus correspondientes matrices. De esto se ocupa la
+teoría de caracteres.
+
+\begin{definition}
+  ....caracter
+\end{definition}
+
+Parte de la terminología utilizada para representaciones se
+usará para los caracteres. ......
+
+deefinicion conjugación
+\begin{definition}
+  Dos elementos $g,g_{1}\in G$ están \emph{conjugados} si
+  \begin{equation*}
+  g=hg_{1}h^{-1}
+\end{equation*}
+para algún $h\in G$. El conjunto de todos los elementos conjugados
+dado $g$ es llamado \textbf{clase de conjugación} de $g$ y es
+denotado por $K_{g}$.
+\end{definition}
+
+\begin{proposition}
+  Sea $G$ un grupo finito y sea $\chi$ el carácter de una
+  representación $\rho:G\rightarrow GL(V)$ de grado $n$. Entonces,
+  \begin{enumerate}
+  \item $\chi(1)=n$.
+  \item Si $K$ es una clase de conjugación de $G$, entonces $\chi(g)=\chi(g)$ para $g,h\in K$. 
+  \end{enumerate}
+\end{proposition}
+
+\begin{definition}
+  Una \textbf{función de clase} es una función
+  $\theta:G\rightarrow\mathbb{C}$ que es constante en clases de
+  conjugación de $G$, es decir, si $K$ es una clase de conjugación de
+  $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
+  todas las funciones de clase en $G$ es denotado por $R(G)$.
+\end{definition}
+$R(G)$ es un espacio vectorial sobre el campo de los números
+complejos. $R(G)$ tiene una base natural
+..... \setlength{\fboxsep}{0pt}\colorbox{green}{notas villa y sagan,zaldivar}
+\begin{equation}
+  \label{dim-fun-clase}
+  \dim R(G)=\mbox{ número de clases de conjugación de } G 
+\end{equation}
+\begin{theorem}
+  Sea $G$ un grupo finito. Entonces,
+  \begin{enumerate}
+  \item Los caracteres irreducibles
+    $\chi_{1},\chi_{2},\ldots,\chi_{r}$ de $G$ forman una base del
+    espacio de funciones de clase $R(G)$.
+    \item El número de representaciones irreducibles de $G$, salvo
+      isomorfismos, es igual al número de clases de conjugación de $G$.
+  \end{enumerate}
+\end{theorem}
+Si $K$ es una clase de conjungación y $\chi$ es una carácter, podemos
+definir $\chi_{K}$ es el valor del carácter en la clase dada.
+\begin{equation*}
+  \chi_{K}=\chi(g)
+\end{equation*}
+para cualquier $g\in K$. \setlength{\fboxsep}{0pt}\colorbox{green}{Esto nos trae
+  (bring us)} definición de tabla de caracteres de
+un grupo. 
+\begin{definition}
+  Sea $G$ un grupo finito. La \textbf{tabla de caracteres} de $G$ es
+  una tabla cuyos renglones están indizados \setlength{\fboxsep}{0pt}\colorbox{green}{indexados} por los caracteres de $G$
+  y las columnas indizadas por las clases de conjugación. La entrada
+  de la tabla en el renglón $\chi$ y la columna $K$ es
+\end{definition}
+
+\begin{center}
+  \begin{tabular}{c |c c c}
+    & $\cdots$ & $K$ & $\cdots$\\
+    \hline
+    $\vdots$ & $\vdots$ &   \\
+    $\chi$   & $\cdots$ & $\chi_{K}$  \\
+    $\vdots$ &          &   
+  \end{tabular}
+\end{center}
+Por convención, el primer rengón corresponde al caracter trivial, y la
+primera columna corresponde a la clase de la identidad, $K=(1)$.
+
+\section{Producto interno de caracteres}
+\label{producto-interno}
+
+Choro....
+
+\begin{definition}
+  Sean $\chi$, $\psi$ los caracteres de dos representaciones de grupo un
+  $G$, entonces definimos el producto interno de $\chi$ y $\psi$ como:
+  \begin{equation*}
+    \langle\chi,\psi\rangle=\frac{1}{|G|}\sum_{g\in G}\chi(g)\overline{\psi(g)}.
+  \end{equation*}
+\end{definition}
+
+\begin{theorem}
+  Sean $X$ y $Y$ representaciones irreducibles de un grupo $G$ con
+  caracteres $\chi$, $\psi$ respectivamente. Entonces
+  \begin{equation}
+    \langle\chi,\psi\rangle=\delta_{\chi\psi}:=\{1, \mbox{ si } X\cong Y  0,
+    \mbox{ en otro caso.}
+    \end{equation}
+\end{theorem}
+
+\begin{corollary}
+  Sea $X$ una representación de $G$ con carácter $\chi$, 
+  \begin{equation*}
+    X\cong m_{1}X^{(1)}\oplus m_{2}X^{(2)}\oplus\cdots\oplus
+    m_{k}X^{(k)},
+  \end{equation*}
+  % \begin{equation*}
+  %   V\cong m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus
+  %   m_{k}V^{(k)},
+  % \end{equation*}
+donde $m_{i}$ es la multiplicidad con la que aparece el módulo
+irreducible $X^{(i)}\ncong X^{(j)}$, $i\neq j$. Entonces
+\begin{enumerate}
+\item $\chi=m_{1}\chi^{(1)}+m_{2}\chi^{(2)}+\cdots+m_{k}\chi^{(k)}$.
+\item $\langle\chi,\chi^{(j)}\rangle=m_{j}$ para cada $j$.
+\item $\langle\chi,\chi\rangle=m_{1}^{2}+m_{2}^{2}+\cdots+m_{k}^{2}$.
+\item $X$ es irreducible si y solo si $\langle\chi,\chi\rangle=1$.
+\item Sea $Y$ otra representación de $G$ con carácter $\psi$ . Entonces 
+  $$X\cong Y \mbox{ si y solo si } \chi(g)=\psi(g)$$
+  para cada $g\in G$.
+\end{enumerate}
+\end{corollary}
+
+\section{Representaciones restringidas e inducidas}
+\label{repr-restr-induc}
+
+Dado un grupo $G$, sea $H\leq G$ hay una forma de obtener
+reppresentaciones de $G$ a partir de $H$ usando operaciones de
+restrincción e inducción.
+\begin{definition}
+  Considere $H\leq G$ y $X$ una matriz de representación de $G$. La
+  \textbf{restricción} de $X$ a $H$, $X\downarrow^{G}_{H}$, está dado
+  por
+  \begin{equation*}
+    X\downarrow^{G}_{H}(h)=X(h)
+  \end{equation*}
+para todo $h\in H$. Si el $X$ tiene carácter $\chi$, entonces denote
+el carácter de $X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$
+\end{definition}
+
+\begin{definition}
+  Sea $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ una función. Definimos la
+  función $\theta\uparrow^{G}_{H}:G\rightarrow \mathbb{C}$ como:
+  \begin{equation*}
+    \theta\uparrow^{G}_{H}(g)=\frac{1}{|H|}\sum_{\substack{x\in
+        G\\x^{-1}gx\in H}}\theta(x^{-1}gx).
+  \end{equation*}
+  Decimos que la función $\theta\uparrow^{G}_{H}$ es \textbf{inducida}
+  por la función $\theta$.
+\end{definition}
+Sea $T$ una \emph{transversal izquierda} de $H$ en $G$, es decir, una
+colección de representantes de las clases laterales izquierdas de $H$,
+de modo que si $T=\{t_{1},\ldots,t_{s}\}$ entonces
+$G=t_{1}H\cup\cdots\cup t_{s}H$. 
+\begin{theorem}[Reciprocidad de Frobenius]
+\end{theorem}
+
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
 
