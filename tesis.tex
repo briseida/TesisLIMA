@@ -191,43 +191,6 @@ números complejos.
 \end{theorem}
 
 \begin{definition}
-  Sea $W$ un subespacio de un espacio vectorial $V$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
-  llama \textbf{clase lateral de $W$ que contiene a $v$}. Es frecuente
-  expresar esta clase lateral como $v+W$ en vez de $\{v\}+W$. 
-\end{definition}
-
-Se puede demostrar lo siguiente:
- 
-$v_{1}+W=v_{2}+W$ si y solo si $v_{1}-v_{2}\in W.$
-
-La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
-V\}$ de todos las clases laterales de $W$ como: 
-
-$(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para toda $v_{1}$, $v_{2}\in V$ y
-
-$a(v+W)=av+W$ para toda $v\in V$ y $a\in \mathbb{C}$.
-
-Se puede demostrar que las operaciones anteriores están bien definidas.
-
-\begin{definition}
-  El conjunto $S$ es un espacio vectorial bajo las operaciones
-  definidas anteriormente y se llama \textbf{espacio cociente de $V$ módulo $W$} y se denota mediante $V/W$. 
-\end{definition}
-
-\begin{theorem}
-  \label{dim-esp-coc}
-  Sea $(V/W)$ el espacio cociente de $V$ módulo $W$, se tiene:
-  $$\dim(V/W)=\dim(V)-\dim(W)$$
-\end{theorem}
-
-\begin{theorem}
-  \label{dim-esp-vec}
-  Sean $W_{1}$ y $W_{2}$ subespacios de un espacio vectorial
-  $V$. Entonces, 
-  $$\dim(W_{1}+W_{2})=\dim(W_{1})+\dim(W_{2})-\dim(W_{1}\cap W_{2}).$$ 
-\end{theorem}
-
-\begin{definition}
   Si $W_{1}$ y $W_{2}$ son dos subconjuntos no vacíos de un espacio
   vectorial $V$, entonces la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
   expresa como $W_{1}+W_{2}$, es el conjunto $\{x+y:x\in W_{1}$ y $y\in
@@ -249,6 +212,42 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
   $V=W_{1}+W_{2}$. Luego, $V=W_{1}\oplus W_{2}$ si y solo si 
   $$\dim(V)=\dim(W_{1})+\dim(W_{2}).$$
 \end{theorem}
+
+\begin{definition}
+  Sea $W$ un subespacio de un espacio vectorial $V$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
+  llama \textbf{clase lateral de $W$ que contiene a $v$}. Es frecuente
+  expresar esta clase lateral como $v+W$ en vez de $\{v\}+W$. 
+\end{definition}
+
+Se puede demostrar lo siguiente:
+\begin{itemize}
+\item $v_{1}+W=v_{2}+W$ si y solo si $v_{1}-v_{2}\in W.$
+\end{itemize}
+La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
+V\}$ de todos las clases laterales de $W$ como: 
+\begin{itemize}
+\item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$,
+\item $v_{2}\in V$ y $a(v+W)=av+W$ para todo $v\in V$ y $a\in \mathbb{C}$.
+\end{itemize}
+Se puede demostrar que las operaciones anteriores están bien definidas.
+
+\begin{definition}
+  El conjunto $S$ es un espacio vectorial bajo las operaciones
+  definidas anteriormente y se llama \textbf{espacio cociente de $V$ módulo $W$} y se denota mediante $V/W$. 
+\end{definition}
+
+\begin{theorem}
+  \label{dim-esp-coc}
+  Sea $(V/W)$ el espacio cociente de $V$ módulo $W$, se tiene:
+  $$\dim(V/W)=\dim(V)-\dim(W)$$
+\end{theorem}
+
+% \begin{theorem}
+%   \label{dim-esp-vec}
+%   Sean $W_{1}$ y $W_{2}$ subespacios de un espacio vectorial
+%   $V$. Entonces, 
+%   $$\dim(W_{1}+W_{2})=\dim(W_{1})+\dim(W_{2})-\dim(W_{1}\cap W_{2}).$$ 
+% \end{theorem}
 
 \section{Transformaciones lineales}
 
@@ -291,6 +290,9 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 
 \section{Grupos}
 
+\setlength{\fboxsep}{0pt}\colorbox{green}{ref a grupos y
+  representaciones} 
+
 \begin{definition}
   Una \textbf{operación binaria} en un conjunto $G$ es una función
   de la forma $G  \times G \rightarrow G$. Para cada $(a,b)\in G
@@ -298,7 +300,7 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 \end{definition} 
 
 \begin{definition} 
-  Un \textbf{grupo} es un conjunto no vacío $G$, junto con una
+  Un \textbf{grupo} es un conjunto $G$, junto con una
   \textbf{operación binaria} $*$ que satisface las siguientes condiciones:
     \begin{enumerate}
     \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
@@ -311,8 +313,8 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
 
 \begin{definition}
   Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de $G$
-  en $H$ es una función $\phi:G\rightarrow H$ la cual
-  satisface $$\phi(ab)=\phi(a)\phi(b)$$ para todo $a,b \in G$
+  en $H$ es una función $\rho:G\rightarrow H$ la cual
+  satisface $$\rho(ab)=\rho(a)\rho(b)$$ para todo $a,b \in G$
 \end{definition}
 
 \begin{theorem}
@@ -323,8 +325,6 @@ son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$
     \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
   \end{enumerate}
 \end{theorem}
-
-La demostración del teorema anterior es elemental, por lo tanto la omitiremos.
 
 % \begin{definition}
 %   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
@@ -337,12 +337,18 @@ La demostración del teorema anterior es elemental, por lo tanto la omitiremos.
 %   Supongamos que $G$ y $H$ son grupos y sea $\phi:G\rightarrow H$ un
 %   homomorfismo. Entonces $$G/\ker \phi\cong \im \phi$$ 
 % \end{theorem}
+Denotemos $GL(n,\mathbb{C})$ al grupo de matrices
+invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
+Y a $GL(V)$ a los operadores lineales invertibles en un
+$\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
+Además existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
+\setlength{\fboxsep}{0pt}\colorbox{green}{grupo de matrices o espacio
+  de matrices???} 
 
-  Denotemos $GL(n,\mathbb{C})$ al grupo de matrices
-  invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
-  Y a $GL(V)$ a los operadores lineales invertibles en un
-  $\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
-  Además $GL(n,\mathbb{C})\cong GL(V)$ es un isomorfismo de grupos.
+\setlength{\fboxsep}{0pt}\colorbox{green}{transformaciones lineales en
+lugar de operadores} 
+
+\setlength{\fboxsep}{0pt}\colorbox{green}{isomorfismo de que???} 
 
 \section{Acciones de grupos}
 
@@ -357,8 +363,9 @@ La demostración del teorema anterior es elemental, por lo tanto la omitiremos.
    abuso de notación, en lugar de $g*x$ usaremos la notación $gx.$
 \end{definition}
 
-\begin{definition}\textbf{Acciones lineales.}
-  Sea $G$ un grupo. Una acción de $G$ en un $K$-espacio
+\begin{definition}[Acciones lineales]
+  \label{Gmodulo}
+  Sea $G$ un grupo. Una acción de $G$ en un $\mathbb{C}$-espacio
   vectorial $V$ de dimensión finita es una función
  $$*:G\times V \rightarrow V $$
 que satisface los axiomas:
@@ -367,20 +374,20 @@ que satisface los axiomas:
 \item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
   $g_{1},g_{2}\in G$.
 \item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
-\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in K$,
+\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in \mathbb{C}$,
   $v\in V$ y $g_{1}\in G.$
 \end{enumerate}
-Diremos que la acción es $G$-lineal y que $V$ es un $G$-espacio
-vectorial.
+Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
 \end{definition} 
 
 \begin{theorem}
   Existe una correspondencia biyectiva entre el conjunto de acciones
-  lineales de un grupo $G$ en un $K$-espacio vectorial $V$ y el conjunto
-  de homomorfismos de $G$ en $GL(V)$
+  lineales de un grupo $G$ en un $\mathbb{C}$-espacio vectorial $V$ y el conjunto
+  de homomorfismos de $G$ en $GL(V)$.
 \end{theorem}
 
-  \textit{Demostración.} Supongamos primero que se tiene una acción lineal 
+\begin{proof}[Demostración]
+  Supongamos primero que se tiene una acción lineal
   $$*:G\times V \rightarrow V$$
   para cada $g\in G$, usando esta acción definamos la función $\rho
   g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.
@@ -396,67 +403,158 @@ vectorial.
   invertible. Sean $v,w \in V$, $\lambda \in K$.
 
   \begin{flalign*}
-   &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w\\
-   &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)       
+    &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w\\
+    &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)
   \end{flalign*}
 
   Así que $\rho g$ es lineal, ahora veamos que es invertible. Como $G$
   es un grupo, existe $g^{-1}\in G$.
 
-  \begin{eqnarray*}
-     ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v\\
-     ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v
-   \end{eqnarray*}
+  \begin{footnotesize}
+    \begin{eqnarray*}
+      ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v\\
+      ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v
+    \end{eqnarray*}
+  \end{footnotesize}
 
-Suponga ahora que se tiene un homomorfismo de grupos $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define un
-acción lineal de $G$ en $V$. 
 
-\begin{enumerate} 
-   \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=id_{V}=v$$ para
-     todo $v\in V$. 
-   \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho
-     g \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
-   \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=(\rho g)(v+w)=(\rho g)v+(\rho g)w=gv+gw$$
-   \item Para $\lambda\in K$, $v\in V$ y $g\in G$, 
+  Suponga ahora que se tiene un homomorfismo de grupos
+  $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define
+  un acción lineal de $G$ en $V$.
+
+  \begin{enumerate}
+  \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=id_{V}=v$$
+    para todo $v\in V$.
+  \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho g
+    \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
+  \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=(\rho g)(v+w)=(\rho
+    g)v+(\rho g)w=gv+gw$$
+  \item Para $\lambda\in K$, $v\in V$ y $g\in G$,
     $$g(\lambda v)=(\rho g)(\lambda v)=\lambda((\rho g)v)=\lambda(gv)$$
-\end{enumerate}
-
-$\qed$
+  \end{enumerate}
+\end{proof}
 
 \section{Representaciones de grupos}
 
 \begin{definition}
-  Si $G$ es un grupo y $V$ es un $K$-espacio vectorial, una
-  \textbf{representación lineal} de $G$ en $V$ es un homomorfismo 
+  \label{representacion}
+  Si $G$ es un grupo y $V$ es un $\mathbb{C}$-espacio vectorial, una
+  \textbf{representación} de $G$ en $V$ es un homomorfismo 
      $$\rho:G\rightarrow GL(V).$$
-  Se denotará $(\rho,V)$ para enfatizar el hecho de que la
-  representación $\rho$ de $G$  es sobre el espacio lineal $V$. A
-  dicho espacio lineal $V$ se le llamará \emph{espacio de representación} y a
-  su dimensión el \emph{grado} de la representación 
 \end{definition}
+\begin{definition}
+  Llamemos \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{representación
+     de la matriz} o matriz de la representación ???} al homomorfismo
+   de la definición \ref{representacion}, es decir, 
+   $$X:G\rightarrow GL(n,\mathbb{C})$$
+   simplemente para resaltar que $X(g)\in GL(n,\mathbb{C})$ para cada $g\in G$.
+\end{definition}
+Se denotará $(\rho,V)$ para enfatizar el hecho de que la
+representación $\rho$ de $G$  es sobre el espacio $V$. A
+dicho espacio $V$ se le llamará \emph{espacio de representación} y a
+su dimensión el \emph{grado} de la representación 
+Estudiar las representaciones de un grupo $G$ en un espacio
+vectorial $V$, es equivalente a estudiar los $G$-módulos de $V$. 
 
-Estudiar las representaciones lineales de un grupo $G$ en un espacio
-vectorial $V$, es equivalente a estudiar las acciones lineales de $G$
-en $V$. 
-
-En este trabajo estudiaremos representaciones de grupos finitos en
-espacios vectoriales complejos y de dimensión finita. 
-
-\begin{example}(\textbf{Representación trivial})
+\begin{example}[Representación trivial]
   La representación trivial de un grupo $G$ es el homomorfismo
   $\rho:G\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo
-  $g\in G$.
+  $g\in G$, ésta es una representación de grado $1$.
 \end{example}
 
-\begin{example}(\textbf{Representación signo})
+\begin{example}[Representación signo]
   El grupo simétrico sobre $\mathbb{I}_{n}=\{1,2,\ldots,n\}$, denotado
-  por $\mathcal{S}_{n}$ es el grupo de todas las permutaciones de $\mathbb{I}_{n}$ 
+  por $S_{n}$ es el grupo de todas las permutaciones de $\mathbb{I}_{n}$ 
   Si $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones, definimos la función signo
-  $\sgn:\mathcal{S}_{n} \rightarrow\{\pm1\}$ mediante $$\sgn(\pi):=(-1)^{k}.$$
+  $\sgn:S_{n} \rightarrow\{\pm1\}$
+  mediante $$\sgn(\pi):=(-1)^{k}.$$
+  Ésta representación tiene grado $1$.
 \end{example}
 
-\begin{example}
+\begin{example}[Representación regular]
+\label{rep-regular}
+Sea $S_{n}$ el grupo simétrico. Tomemos $V=\mathbb{C}^{n}=\{(x_{1},x_{2},\ldots,x_{n})\mid x_{i}\in
+\mathbb{C}, i=1,2,\ldots,n\}$ y la acción de $S_{n}$ en $V$ está dada
+por 
+\begin{equation*}
+  \pi(x_{1},x_{2},\ldots,x_{n})=(x_{\pi(1)},x_{\pi(2)},\ldots,x_{\pi(n)}),
+\end{equation*}
+donde $\pi\in S_{n}$, lo cual define un homomorfismo de grupos
+$S_{n}\rightarrow GL(\mathbb{C}^{n})$ conocida como \emph{representación
+regular}, que convierte a
+$V=\mathbb{C}^{n}$ en un $S_{n}$-módulo. Un submódulo importante de
+dimensión $n-1$ \setlength{\fboxsep}{0pt}\colorbox{green}{dim n-1???}de $\mathbb{C}^{n}$ es:
+\begin{equation*}
+  E=\Big\{(x_{1},x_{2},\ldots,x_{n})\in \mathbb{C}^{n}\mid\sum^{n}_{i=1}x_{i}=0\Big\}.
+\end{equation*}
+La representación asociada a éste submódulo se llama
+\textbf{representación estándar}.
+
+Denotemos a $F$ como la representación trivial. Notemos que
+\begin{equation*}
+  \mathbb{C}^{n}=E\oplus F
+\end{equation*}
+
+Ahora daremos un ejemplo en particular de la representación regular,
+consideremos $S_{3}$, sea $\mathbb{C}^{3}=\langle x_{1},x_{2},x_{3}\rangle$, donde
+
+\begin{center}
+  $x_{1}=\begin{pmatrix}
+    1 \\
+    0 \\
+    0
+  \end{pmatrix}$, $x_{2}=\begin{pmatrix}
+    0 \\
+    1 \\
+    0
+  \end{pmatrix}$, $x_{3}=\begin{pmatrix}
+    0 \\
+    0 \\
+    1
+  \end{pmatrix}$.
+\end{center}
+Las matrices \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}} de la representación regular son:
+\begin{center}
+  $X(1)=\begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+  \end{pmatrix}$,\quad
+  $X((12))=\begin{pmatrix}
+    0 & 1 & 0 \\
+    1 & 0 & 0 \\
+    0 & 0 & 1 \\
+  \end{pmatrix}$,
+\end{center}
+
+\begin{center}
+  $X((13))=\begin{pmatrix}
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+    1 & 0 & 0 \\
+  \end{pmatrix}$,\quad 
+  $X((23))=\begin{pmatrix}
+    1 & 0 & 0 \\
+    0 & 0 & 1 \\
+    0 & 1 & 0 \\
+  \end{pmatrix}$,
+\end{center}
+
+\begin{center}
+  $X((123))=\begin{pmatrix}
+    0 & 0 & 1 \\
+    1 & 0 & 0 \\
+    0 & 1 & 0 \\
+  \end{pmatrix}$,\quad $X((132))=\begin{pmatrix}
+    0 & 1 & 0 \\
+    0 & 0 & 1 \\
+    1 & 0 & 0 \\
+  \end{pmatrix}$.
+\end{center}
+\end{example}
+
+\begin{example}[Representación permutación]
   \label{CS}
   Sea $G$ un grupo. Es posible tomar un conjunto en el cual actúe $G$
   y resulte un $G$-módulo, como lo hacemos a continuación. Sea
@@ -483,28 +581,43 @@ espacios vectoriales complejos y de dimensión finita.
     g(c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n})=c_{1}(gs_{1})+c_{2}(gs_{2})+\cdots +c_{n}(gs_{n})
   \end{equation*}
   para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{S}$ resulta ser un $G$-módulo
-  de dimensión $|S|$.
-\end{example}
+  de dimensión $|S|$. A $\mathbb{C}\boldsymbol{S}$ le llamamos
+  \emph{representación permutación} asociada a $S$. Los elementos de
+  $S$ forman una base para $\mathbb{C}\boldsymbol{S}$ llamada la
+  \emph{base estándar}.
 
-% \begin{example}(\textbf{Representación regular})
-%   Sea $G$ cualquier grupo de orden $n$ y sea V el espacio vectorial de
-%   dimensión $n$ con base $\mathcal{B}=\{v_{g}\}_{g\in G}$ indexada por
-%   los elementos del grupos. Para cada $\sigma\in G$ definamos la función
-%   $\rho(\sigma):\mathcal{B}\rightarrow \mathcal{B}$ mediante $\rho(\sigma)(v_{g})=v_{\sigma g}$.
-%   Mostremos que la función $$\rho:G\rightarrow GL(V)$$ dada por
-%   $\sigma\mapsto\rho(\sigma)$ es un homomorfismo. Si $\sigma,\tau \in G$
-%   y si $v_{g}\in \mathcal{B}$, entonces $$\rho(\sigma
-%   \tau)v_{g}=v_{(\sigma\tau)g}=v_{\sigma(\tau g)}=\rho(\sigma)v_{\tau
-%     g}=\rho(\sigma)(\rho(\tau)v_{g})=\rho(\sigma)\rho(\tau)v_{g} $$
-%   así que $\rho(\sigma\tau)=\rho(\sigma)\rho(\tau)$. Por definición el 
-%   grado de la representación es el orden de $G$.
-% \end{example}
+  Consideremos el grupo simétrico $S_{n}$ actuando en
+  $S=\{1,2,\ldots,n\}$. Ahora
+  \begin{equation*}
+    \mathbb{C}\boldsymbol{S}=\{c_{1}1+c_{2}2+\cdots+c_{n}n\mid c_{i}\in\mathbb{C}\}
+  \end{equation*}
+  con la acción
+  \begin{equation*}
+    \pi(c_{1}1+c_{2}2+\cdots+c_{n}n)=c_{1}\pi(1)+c_{2}\pi(2)+\cdots+c_{n}\pi(n)
+  \end{equation*}
+Consideremos un caso específico. Sea $S_{3}$, determinemos las
+matrices asociadas respecto a la base estándar $\{1,2,3\}$. Para
+$\pi=(12)$, calculamos
+\begin{center}
+  (12)1=2; \qquad (12)2=1; \qquad (12)3=3
+\end{center}
+así que
+\begin{center}
+  $X((12))=\begin{pmatrix}
+    0 & 1 & 0 \\
+    1 & 0 & 0 \\
+    0 & 0 & 1 \\
+  \end{pmatrix}$,
+\end{center}
+Notemos que las matrices restantes son las mismas que las de la
+representación regular del ejemplo \ref{rep-regular}. Se puede
+demostrar que esto es cierto para cualquier $n$. \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}}
+\end{example}
 
 \section{Reducibilidad}%Módulos irreducibles}
 \label{reducibilidad}
 
-Denote $G$ un grupo y $V$ un espacio vectorial sobre
-el campo de los complejos. 
+En ésta sección $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
 
 \begin{definition}
   Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o \textbf{submódulo} de $V$ es un subespacio
@@ -540,7 +653,7 @@ operaciones $U\times V$ es un espacio vectorial, que designaremos por
 $$U\oplus V.$$
 
 Así que dados $V$ y $W$ $G$-módulos, podemos formar un tercer módulo a partir
-de la suma directa $V\oplus W$, definiendo la acción como
+de la suma directa externa $V\oplus W$, definiendo la acción como
 $a(v,w)=(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
 cantidad finita de $G$-módulos.
 
@@ -601,7 +714,9 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
  que $S\cap S^{'}=S^{'}$, con lo que $S=S^{'}$ como se quería demostrar.
 \end{proof}
 
-De la definición \ref{suma-directa} (suma directa), si $V$ es un
+De la definición \ref{suma-directa} (suma directa)
+\setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{suma directa y suma
+    directa externa ???}}, si $V$ es un
 $G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
 que son \textbf{complemento directo.} 
 
@@ -632,16 +747,9 @@ de $G$.
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-isomorfismo} es un
   $G$-homomorfismo $\phi:V\rightarrow W$ el cual es biyectivo. En
-  este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos}, o
+  este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} o
   $G$\textbf{-equivalentes}, y lo denotaremos como $V\cong W$.
 \end{definition}
-
-Si $W$ es submódulo de $V$, entonces en el espacio vectorial cociente
-$V/W$ puede darse una acción de $G$ como $g(v+W)=gv+W$, la cual está
-bien definida (pues $W$ es invariante bajo la acción de $G$), y
-satisface los axiomas \setlength{\fboxsep}{0pt}\colorbox{green}{axiomas???} de módulo sobre
-$G$, por lo que obtenemos una estructura de $G$-módulo en $V/W$
-llamada \textbf{módulo cociente}.
 
 \begin{proposition}
   Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces
@@ -650,6 +758,12 @@ llamada \textbf{módulo cociente}.
   \item $\im\phi$ es un $G$-submódulo de $W$.
   \end{enumerate}
 \end{proposition}
+
+Si $W$ es submódulo de $V$, entonces en el espacio vectorial cociente
+$V/W$ puede darse una acción de $G$ como $g(v+W)=gv+W$, la cual está
+bien definida (pues $W$ es invariante bajo la acción de $G$), y
+satisface los axiomas de módulo sobre $G$, por lo que obtenemos una
+estructura de $G$-módulo en $V/W$ llamada \textbf{módulo cociente}.
 
 \begin{theorem}[Teorema de isomorfismo de módulos]
   \label{teorema-isomorfismo-mod}
@@ -707,17 +821,32 @@ llamada \textbf{módulo cociente}.
 \label{caracteres}
 
 Mucha información contenida en una representación puede ser obtenida
-de la traza de sus correspondientes matrices. De esto se ocupa la
+de la traza de sus correspondientes matrices
+\setlength{\fboxsep}{0pt}\colorbox{green}{representaciones de matrices???}. De esto se ocupa la
 teoría de caracteres.
-
 \begin{definition}
-  ....caracter
+  Sea una \setlength{\fboxsep}{0pt}\colorbox{green}{representación de
+    la matriz} $X(g)$, $g\in G$. Entonces el \textbf{carácter} de $X$ es
+  \begin{equation*}
+    \chi(g)=\tr X(g),
+  \end{equation*}
+  donde $\tr$ denota la traza de una matriz dada. Dicho de otro modo,
+  $\chi$ es la función
+\begin{equation*}
+  G\stackrel{\tr X}{\rightarrow}\mathbb{C}.
+\end{equation*}
+Si $V$ es un $G$ módulo, su carácter es el carácter de la \setlength{\fboxsep}{0pt}\colorbox{green}{representación de
+  la matriz} $X$ correspondiente a $V$. En ocasiones para resaltar
+que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 \end{definition}
 
 Parte de la terminología utilizada para representaciones se
-usará para los caracteres. ......
+usará para los correspondientes caracteres. Por ejemplo si $X$ tiene
+caracter $\chi$, diremos que $\chi$ es irreducible siempre que $X$ lo
+sea, etc.
 
-deefinicion conjugación
+\setlength{\fboxsep}{0pt}\colorbox{green}{Decir que los ejemplos
+  vienen después}
 \begin{definition}
   Dos elementos $g,g_{1}\in G$ están \emph{conjugados} si
   \begin{equation*}
@@ -733,9 +862,10 @@ denotado por $K_{g}$.
   representación $\rho:G\rightarrow GL(V)$ de grado $n$. Entonces,
   \begin{enumerate}
   \item $\chi(1)=n$.
-  \item Si $K$ es una clase de conjugación de $G$, entonces $\chi(g)=\chi(g)$ para $g,h\in K$. 
+  \item Si $K$ es una clase de conjugación de $G$, entonces $\chi(g)=\chi(h)$ para $g,h\in K$. 
   \end{enumerate}
 \end{proposition}
+
 
 \begin{definition}
   Una \textbf{función de clase} es una función
@@ -744,14 +874,18 @@ denotado por $K_{g}$.
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
 \end{definition}
-$R(G)$ es un espacio vectorial sobre el campo de los números
-complejos. $R(G)$ tiene una base natural
-..... \setlength{\fboxsep}{0pt}\colorbox{green}{notas villa y sagan,zaldivar}
-\begin{equation}
-  \label{dim-fun-clase}
-  \dim R(G)=\mbox{ número de clases de conjugación de } G 
-\end{equation}
+La suma de dos funciones de clase es una función de clase y el
+producto por escalar por una función de clase es una función de clase
+y la función constante cero $0:G\rightarrow \mathbb{C}$ está en
+$R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
+del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
+tanto podemos considerar el producto de funciones de clase, es decir,
+si $\psi$, $\theta$ son funciones de clase, podemos definir
+$\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
+  G}\psi(g)\theta(g)$, el cual se puede demostrar que es un producto
+interno en el espacio de funciones de clase. 
 \begin{theorem}
+  \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
   \begin{enumerate}
   \item Los caracteres irreducibles
@@ -761,13 +895,17 @@ complejos. $R(G)$ tiene una base natural
       isomorfismos, es igual al número de clases de conjugación de $G$.
   \end{enumerate}
 \end{theorem}
+En general no se logra una correspondencia biyectiva natural entre las
+representaciones de $G$ y las clases de conjugación. Sin embargo, en
+el siguiente capítulo observamos que en el caso del grupo simétrico sí se cuenta con
+esta correspondencia.
+
 Si $K$ es una clase de conjungación y $\chi$ es una carácter, podemos
 definir $\chi_{K}$ es el valor del carácter en la clase dada.
 \begin{equation*}
   \chi_{K}=\chi(g)
 \end{equation*}
-para cualquier $g\in K$. \setlength{\fboxsep}{0pt}\colorbox{green}{Esto nos trae
-  (bring us)} definición de tabla de caracteres de
+para cualquier $g\in K$. Esto sugiere la definición de tabla de caracteres de
 un grupo. 
 \begin{definition}
   Sea $G$ un grupo finito. La \textbf{tabla de caracteres} de $G$ es
@@ -786,13 +924,88 @@ un grupo.
   \end{tabular}
 \end{center}
 Por convención, el primer rengón corresponde al caracter trivial, y la
-primera columna corresponde a la clase de la identidad, $K=(1)$.
+primera columna corresponde a la clase identidad $K=(1)$.
+
+\begin{example}
+  Sea $S_{3}$ el grupo simétrico con 3 elementos. Calcularemos el
+  carácter $\chi_{V}(g)$ para tres $S_{3}$-módulos $V$ y elementos
+  $g\in S_{3}$. Basta calcular $\chi_{V}:S_{3}\rightarrow\mathbb{C}$
+  en representantes de cada clase de conjugación de $S_{3}$, como $(1)$,
+  $(12)$ y $(123)$.
+  
+  Primero consideremos $V=\mathbb{C}$, la representación trivial. El
+  espacio $V$ es de dimensión $1$ (por lo que $\chi_{V}$ es la traza de
+  la matriz $1\times 1$) y tiene a $1\in \mathbb{C}$ como
+  base. Tenemos que $(1)1=1$, por lo que $\chi_{V}((1))=1$, así también
+  $(12)1=1$ y $(123)1=1$, se sigue que $\chi_{V}((12))=1$ y
+  $\chi_{V}((123))=1$.
+
+  Ahora sea $V=\mathbb{\hat C}$, la representación signo. Nuevamente
+  $\dim V=1$, pero $(1)1=1$, $(12)1=-1$ y $(123)1=1$, por lo que
+  $\chi_{V}((1))=1$,  $\chi_{V}((12))=-1$ y  $\chi_{V}((123))=1$.
+
+  Por último sea $V=E$, la representación estándar. Es decir,
+  \begin{equation*}
+    E=\{(x_{1},x_{2},x_{3})\in \mathbb{C}^{3}\mid x_{1}+x_{2}+x_{3}=0\}
+  \end{equation*}
+  En este caso, $\dim V=2$, y una base de $E$ es
+  $\beta=\{(1,-1,0),(1,0,-1)\}$. Si $g=(1)$, entonces la matriz
+  asociada a $g_{V}$ en la base dada es la matriz identidad $2\times
+  2$, por lo que $\chi_{V}((1))=2$.
+  
+  Por otro lado, si $g=(12)$, tenemos:
+  \begin{eqnarray*}
+    (12)(1,-1,0)=(-1,1,0)=-1(1,-1,0)+0(1,0,-1),\\
+    (12)(1,0,-1)=(0,1,-1)=-1(1,-1,0)+1(1,0,-1)
+  \end{eqnarray*} 
+  por lo que 
+  \begin{center}
+  $[g_{V}]_{\beta}=
+  \begin{pmatrix}
+    -1 & -1 \\
+    0 & 1 
+  \end{pmatrix}$,
+\end{center}
+así que $\chi_{V}((12))=0$.
+
+Finalmente, si $g=(123)$, tenemos:
+\begin{eqnarray*}
+  (123)(1,-1,0)=(0,1,-1)=-1(1,-1,0)+1(1,0,-1),\\
+  (123)(1,0,-1)=(-1,1,0)=-1(1,-1,0)+0(1,0,-1)
+\end{eqnarray*} 
+ por lo que 
+  \begin{center}
+  $[g_{V}]_{\beta}=
+  \begin{pmatrix}
+    -1 & -1 \\
+    1 & 0 
+  \end{pmatrix}$,
+\end{center}
+así que $\chi_{V}((123))=-1$.
+
+Con los cálculos realizado podemos obtener la tabla de caracteres de
+$S_{3}$. El primer renglón indica el número de elementos en cada clase de
+conjugación, y en el segundo renglón se coloca un elemento representativo de cada
+clase de conjugación.
+\begin{center}
+  \begin{tabular}{ c| c c c}
+    & 1 & 3 & 2 \\
+    $S_{3}$ & (1) & (12) & (123) \\
+    \hline
+    $\chi_{\mathbb{C}}$ & 1 & 1 & 1 \\
+    $\chi_{\mathbb{\hat C}}$ & 1 & -1 & 1 \\
+    $\chi_{E}$ & 2 & 0 & -1 
+  \end{tabular}  
+\end{center}
+Las tablas de caracteres que utilizaremos en el capitulo \setlength{\fboxsep}{0pt}\colorbox{green}{ref}
+se encuentran en \setlength{\fboxsep}{0pt}\colorbox{green}{ref liebeck}.
+\end{example}
 
 \section{Producto interno de caracteres}
 \label{producto-interno}
 
-Choro....
-
+Mediante el producto interno de caracteres  podemos determinar si una
+representación es irreducible o cuando dos representaciones son equivalentes.
 \begin{definition}
   Sean $\chi$, $\psi$ los caracteres de dos representaciones de grupo un
   $G$, entonces definimos el producto interno de $\chi$ y $\psi$ como:
@@ -804,10 +1017,13 @@ Choro....
 \begin{theorem}
   Sean $X$ y $Y$ representaciones irreducibles de un grupo $G$ con
   caracteres $\chi$, $\psi$ respectivamente. Entonces
-  \begin{equation}
-    \langle\chi,\psi\rangle=\delta_{\chi\psi}:=\{1, \mbox{ si } X\cong Y  0,
-    \mbox{ en otro caso.}
-    \end{equation}
+  \[
+  \langle\chi,\psi\rangle=\delta_{\chi\psi}:=
+  \begin{cases}
+    1, & \text{ si }  X\cong Y \\
+    0, & \text{ en otro caso. } 
+  \end{cases}
+  \]
 \end{theorem}
 
 \begin{corollary}
@@ -821,7 +1037,7 @@ Choro....
   %   m_{k}V^{(k)},
   % \end{equation*}
 donde $m_{i}$ es la multiplicidad con la que aparece el módulo
-irreducible $X^{(i)}\ncong X^{(j)}$, $i\neq j$. Entonces
+irreducible $X^{(i)}\ncong~X^{(j)}$, $i\neq j$. Entonces
 \begin{enumerate}
 \item $\chi=m_{1}\chi^{(1)}+m_{2}\chi^{(2)}+\cdots+m_{k}\chi^{(k)}$.
 \item $\langle\chi,\chi^{(j)}\rangle=m_{j}$ para cada $j$.
@@ -833,21 +1049,23 @@ irreducible $X^{(i)}\ncong X^{(j)}$, $i\neq j$. Entonces
 \end{enumerate}
 \end{corollary}
 
-\section{Representaciones restringidas e inducidas}
-\label{repr-restr-induc}
+\section{Carateres y módulos inducidos}
+\label{carac-induc}
 
 Dado un grupo $G$, sea $H\leq G$ hay una forma de obtener
-reppresentaciones de $G$ a partir de $H$ usando operaciones de
+representaciones de $G$ a partir de $H$ usando operaciones de
 restrincción e inducción.
 \begin{definition}
   Considere $H\leq G$ y $X$ una matriz de representación de $G$. La
-  \textbf{restricción} de $X$ a $H$, $X\downarrow^{G}_{H}$, está dado
+  \textbf{restricción} de $X$ a $H$, $X\downarrow^{G}_{H}$, está dada
   por
   \begin{equation*}
     X\downarrow^{G}_{H}(h)=X(h)
   \end{equation*}
 para todo $h\in H$. Si el $X$ tiene carácter $\chi$, entonces denote
-el carácter de $X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$
+el carácter de $X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$.
+\setlength{\fboxsep}{0pt}\colorbox{green}{definición de restricción
+  como abajo para función.}
 \end{definition}
 
 \begin{definition}
