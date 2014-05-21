@@ -21,6 +21,8 @@
 \usepackage{xspace}
 \usepackage{tocbibind}
 \usepackage{rotating}
+\usepackage{young}
+\usepackage{ytableau}
 % ver http://gilmation.com/articles/latex-margins-for-book-binding/
 % y http://tex.stackexchange.com/questions/50258/margins-of-book-class
 \usepackage[margin=3.5cm]{geometry}
@@ -226,7 +228,7 @@ Se puede demostrar lo siguiente:
 La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
 V\}$ de todos las clases laterales de $W$ como: 
 \begin{itemize}
-\item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$,
+\item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
 \item $v_{2}\in V$ y $a(v+W)=av+W$ para todo $v\in V$ y $a\in \mathbb{C}$.
 \end{itemize}
 Se puede demostrar que las operaciones anteriores están bien definidas.
@@ -264,7 +266,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
   $F$). Entonces $V$ es isomorfo a $W$ si y solo si $\dim (V)=\dim(W).$ 
 \end{theorem}
 
-\begin{theorem}{(\textbf{Teorema de Isomorfismo})}
+\begin{theorem}[Teorema de Isomorfismo]
   \label{teorema-isomorfismo-esp}
   Si $f:V\rightarrow W$ es una transformación lineal, el espacio
   cociente $V/\ker(f)\cong \im(f)$. Un isomorfismo entre estos dos
@@ -1096,6 +1098,672 @@ el carácter de $X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$.
     \langle\theta\uparrow^{G}_{H},\phi\rangle=\langle\theta,\phi\downarrow^{G}_{H}\rangle.
   \end{equation*}
 \end{theorem}
+
+\begin{corollary}
+  \label{car-inducido}
+  Si $H\leq G$, y $\theta:H\rightarrow \mathbb{C}$ es un carácter
+  entonces $\theta\uparrow^{G}_{H}:G\rightarrow \mathbb{C}$ es un carácter.
+\end{corollary}
+ 
+Supondremos en lo que resta de esta sección que $G$ es un grupo, $H$ un subgrupo de
+$G$  y $T$ una \emph{transversal izquierda} de $H$ en $G$, es decir, una
+colección de representantes de las clases laterales izquierdas de $H$,
+de modo que si $T=\{t_{1},\ldots,t_{s}\}$ entonces
+$G=t_{1}H\cup\cdots\cup t_{s}H$. 
+
+Si $W$ es un $H$-módulo, el corolario \ref{car-inducido} implica que
+$(\chi_{W})\uparrow^{G}_{H}$ es un carácter. Queremos encontrar un
+$G$-módulo $V$ tal que $\chi_{V}=(\chi_{W})\uparrow^{G}_{H}$.
+\begin{definition}
+  Sea $V$ un $G$-módulo, $W$ un subespacio de $V$ tal que $\{g\in
+  G\mid gW=W\}=H$ (de modo que $W$ es un $H$-módulo). Decimos que el
+  $G$-módulo $V$ es \textbf{inducido} por el $H$-módulo $W$ si
+  $V=\bigoplus^{s}_{i=1}t_{i}W$ como espacio vectorial.
+\end{definition}
+
+\begin{proposition}
+  \label{car-ind-W-V}
+  Si el $G$-módulo $V$ es inducido por el $H$-módulo $W$, entonces
+  $\chi_{V}=(\chi_{W})\uparrow^{G}_{H}$.
+\end{proposition}
+
+\chapter{Tableros de Young y representaciones del grupo simétrico.}
+%\label{repr-grupo-simetrico}
+
+En este capítulo, estudiamos la relación entre representaciones del
+grupo simétrico $S_{n}$ y objetos combinatorios llamados tableros de
+Young. Definimos tablero de Young en la sección \ref{tablero}, por
+ahora es suficiente decir que es el llenado de cierta configuración de cajas
+con entradas de $\{1,2,\ldots,n\}$, un ejemplo se muestra a
+continuación:
+
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.3em}
+  \begin{ytableau}
+    1 & 2 & 4 \\
+    3 & 5 & 6 \\
+    7 & 8 \\
+    9
+  \end{ytableau} 
+\end{center}
+
+Hay una elegante descripción de representaciones irreducibles de
+$S_{n}$ mediante los tableros de Young. Recordemos que hay tres representaciones irreducibles de
+$S_{3}$. Resulta que pueden ser descritas usando el conjunto de diagramas de
+Young con tres cajas. La correspondencia es ilustrada abajo.
+
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  \begin{minipage}[h]{0.3\linewidth}
+    \centering
+    \ydiagram{3} 
+
+    representación trivial
+  \end{minipage}
+  \begin{minipage}[h]{0.3\linewidth}
+    \centering
+    \ydiagram{1,1,1}
+
+    representación signo
+  \end{minipage}
+  \begin{minipage}[h]{0.3\linewidth}
+    \centering
+    \ydiagram{2,1}
+
+    representación estándar
+  \end{minipage}
+\end{center}
+
+En general las representaciones irreducibles de $S_{n}$ pueden ser
+descritas usando diagramas de Young de $n$ cajas. Además, podemos dar
+una base para cada representación irreducible usando tableros
+Young estándar, los cuales consisten en numerar las cajas de un diagrama de
+Young con $1,2,\ldots,n$ tal que los renglones y columnas son
+crecientes. Por ejemplo, las base de la representación estándar de
+$S_{3}$ corresponde a los siguientes dos tableros estándar:
+
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  \begin{ytableau}
+    1 & 2\\
+    3
+  \end{ytableau} \qquad
+  \begin{ytableau}
+    1 & 3\\
+    2
+  \end{ytableau}
+\end{center}
+
+En éste capítulo, describimos la relación entre los tableros de Young
+y representaciones de $S_{n}$. Las pruebas son omitidas, pueden
+encontrarse en {\setlength{\fboxsep}{0pt}\colorbox{green}{Sagan}}.
+
+En la sección \ref{tablero} introducimos diagramas de Young y tableros
+de Young. En la sección \ref{modulo-permutacion}, introducimos los
+tabloides y los usamos para construir una representación de $S_{n}$
+conocida como módulo de permutación $M^{\lambda}$. Sin embargo, los
+módulos de permutación son generalmente reducibles. En la sección
+\ref{modulo-specht} construimos representaciones irreducibles de
+$S_{n}$ conocidos como módulos de Specht $S^{\lambda}$. Los módulos de
+Specht $S^{\lambda}$ corresponden biyectivamente a los diagramas de
+Young $\lambda$ y los cuales forman una lista completa de
+representaciones irreducibles. 
+
+\section{Tablero de Young}
+\label{tablero}
+
+Primero necesitamos establecer algunas definiciones y notaciones
+considerando particiones y diagramas de Young.
+
+\begin{definition}
+  Una \textbf{partición} de un entero positivo $n$ es una secuencia de
+  enteros positivos
+  $\lambda=(\lambda_{1},\lambda_{2},\ldots,\lambda_{l})$ que satisface
+  $\lambda_{1}\geq\lambda_{2}\geq\cdots\geq\lambda_{l}>0$ y
+  $n=\lambda_{1}+\lambda_{2}+\cdots+\lambda_{l}$. Escribimos
+  $\lambda\vdash n$ para denotar que $\lambda$ es una partición de $n$.
+\end{definition}
+
+Por ejemplo, el número $4$ tiene cinco particiones:$(4)$, $(3,1)$,
+$(2,2)$, $(2,1,1)$, $(1,1,1,1)$. Podemos también representar
+particiones usando diagramas de Young como sigue.
+
+\begin{definition}
+  Si $\lambda=(\lambda_{1},\lambda_{2},\ldots,\lambda_{l})$ es una
+  partición de $n$, entonces el \textbf{diagrama de Young} de $\lambda$
+  consiste de $n$ cajas colocadas en $l$ renglones donde el $i$-ésimo
+  renglón tiene  $\lambda_{i}$ cajas.
+\end{definition}
+
+Por ejemplo, los diagramas de Young correspondientes a las particiones
+del $4$ son: 
+
+\begin{center}
+  %\ytableausetup{smalltableaux}
+  \ytableausetup{mathmode, boxsize=1em}
+  \begin{minipage}[h]{0.2\linewidth}
+    \centering \ydiagram{4}\bigskip
+
+    (4)
+  \end{minipage}
+  \begin{minipage}[h]{0.15\linewidth}
+    \centering \ydiagram{3,1}\medskip
+
+    (3,1)
+  \end{minipage}
+  \begin{minipage}[h]{0.15\linewidth}
+    \centering \ydiagram{2,2}\medskip
+
+    (2,2)
+  \end{minipage}
+  \begin{minipage}[h]{0.15\linewidth}
+    \centering \ydiagram{2,1,1}\smallskip
+
+    (2,1,1)
+  \end{minipage}
+  \begin{minipage}[h]{0.15\linewidth}
+    \centering \ydiagram{1,1,1,1}\smallskip
+
+    (1,1,1,1)
+  \end{minipage}
+\end{center}
+
+Existe una correspondencia biyectiva entre particiones y diagramas
+de Young, usamos los dos términos indistintamente.
+
+Un tablero Young es obtenido llenando las cajas de una diagrama de
+Young con números.
+
+\begin{definition}
+  Sea $\lambda\vdash n$. Un \textbf{tablero $\boldsymbol{t}$ (de Young) de forma
+    $\boldsymbol{\lambda}$}, se obtiene llenando las cajas de un
+  diagrama de Young para $\lambda$ con $1,2,\ldots,n$, los cuales
+  aparecen exactamente una vez. En este caso, decimos que $t$ es un
+  $\lambda$-tablero.
+
+\end{definition}
+
+Por ejemplo, aquí están todos los tableros correspondientes a la
+partición $(2,1)$:
+
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  \begin{ytableau}
+    1 & 2\\
+    3
+  \end{ytableau} \quad
+  \begin{ytableau}
+    2 & 1\\
+    3
+  \end{ytableau}\quad
+  \begin{ytableau}
+    1 & 3\\
+    2
+  \end{ytableau}\quad
+  \begin{ytableau}
+    3 & 1\\
+    2
+  \end{ytableau}\quad
+  \begin{ytableau}
+    2 & 3\\
+    1
+  \end{ytableau}\quad
+  \begin{ytableau}
+    3 & 2\\
+    1
+  \end{ytableau}
+\end{center}
+
+\begin{definition}
+  Un \textbf{tablero (de Young) estándar} es un tablero de Young cuyas
+  entradas son crecientes en cada renglón y columna.
+\end{definition}
+Los únicos tableros estándar para $(2,1)$ son
+
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  \begin{ytableau}
+    1 & 2\\
+    3
+  \end{ytableau}\quad y \quad
+  \begin{ytableau}
+    1 & 3\\
+    2
+  \end{ytableau}
+\end{center}
+Aquí está otro ejemplo de un tablero estándar:
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  \begin{ytableau}
+    1 & 2 & 4\\
+    3 & 5 & 6\\
+    7 & 8\\
+    9
+  \end{ytableau}
+\end{center}
+
+Antes de seguir adelante, permitenos recordar algunos hechos básicos
+sobre permutaciones. Cada permutación $\pi \in S_{n}$ tiene una
+descomposición en ciclos disjuntos. Por ejemplo $(123)(45)$ denota la
+permutación que manda $1\rightarrow 2 \rightarrow 3 \rightarrow 1$  e
+intercambia al $4$ y $5$ (si $n>5$, entonces por convención los otros
+elementos fijos por $\pi$). La \textbf{estructura cíclica} de $\pi$ es la
+partición de las longitudes de los ciclos en la
+descomposición. Así que $(123)(45)\in S_{5}$ tiene la estructura
+cíclica (3,2). Dos elementos de $S_{n}$ están conjugados si y solo si
+tienen la misma estructura cíclica. % La forma mas fácil de ver esto es
+% considerar la conjugación simplemente como una reetiquetación de los
+% elementos cuando la permutación es escrita en notación cíclica. En
+% efecto, si $$\pi=(a_{1},a_{2},\ldots,a_{k})(b_{1},b_{2},\ldots,b_{l})\cdots,$$
+% y $\sigma$ manda $x$ a $x^{'}$, entonces
+% $$\sigma\pi\sigma^{-1}=(a^{'}_{1},a^{'}_{2},\ldots,a^{'}_{k})(b^{'}_{1},b^{'}_{2},\ldots,b^{'}_{l})\cdots.$$
+Esto significa que las clases de conjugación de $S_{n}$ están
+caracterizadas por la estructura cíclica, y en consecuencia
+corresponden a las particiones de $n$, los cuales son equivalentes a
+los diagramas de Young de tamaño $n$. Recordemos de el teorema
+\ref{no-rep-irr-no-cla-conj} que el número de representaciones irreducibles de un
+grupo finito es igual al número de sus clases de conjugación. Así que
+nuestro objetivo en las próximas dos secciones es construir una
+representación irreducible de $S_{n}$ correspondiente a cada diagrama
+de Young.
+
+\section{Tabloides y módulo de permutación $M^{\lambda}$}
+\label{modulo-permutacion}
+
+En esta sección, construimos representaciones de $S_{n}$ usando clases
+de equivalencia de los tableros, conocidas como tabloides.
+
+\begin{definition}
+  Dos $\lambda$-tableros $t_{1}$ y $t_{2}$ son \textbf{equivalentes
+    por renglones}, denotado como $t_{1}\sim t_{2}$, si los
+  correspondientes renglones de los dos tableros contienen los mismos
+  elementos. Un \textbf{tabloide} de forma $\lambda$, o
+  $\lambda$-tabloide es la clase de equivalencia
+  $$\{t\}=\{t_{1}\mid t_{1}\sim t\}$$
+  El tabloide $\{t\}$ es dibujado como el tablero $t$ sin las barras
+  verticales.
+\end{definition}
+Por ejemplo, si
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  $t=$
+  \begin{ytableau}
+    1 & 2  \\
+    3
+  \end{ytableau}
+\end{center}
+entonces $\{t\}$ es el tabloide dibujado como
+
+\begin{center}
+  \ytableausetup{mathmode,tabloids,boxsize=1.2em}
+  \ytableaushort{12,3}
+\end{center}
+
+el cual representa la clase de equivalencia que contiene a los
+siguientes tableros:
+\begin{center}  
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  \begin{ytableau}
+    1 & 2  \\
+    3
+  \end{ytableau}\qquad
+  \begin{ytableau}
+    2 & 1  \\
+    3
+  \end{ytableau}
+\end{center}
+
+El orden de las entradas entre cada renglón es irrelevante. Por
+ejemplo:
+
+\begin{center}
+  \ytableausetup{mathmode,tabloids,boxsize=1.2em}
+  \ytableaushort{145,23}\quad$=$\quad
+  \ytableaushort{451,32}\quad$\neq$\quad
+  \ytableaushort{521,34}
+\end{center}
+
+Pretendemos definir una representación de $S_{n}$ en un espacio
+vectorial cuya base es exactamente el conjunto de tabloides de una
+forma dada. Necesitamos una forma para que los elementos de $S_{n}$
+actúen en los tabloides, lo cual se logra dejando que la permutaciones intercambien las entradas del
+tabloide.
+
+Por ejemplo, el ciclo $(123)\in S_{3}$ actúa en el tabloide
+reemplazando el 1 por el 2, el 2 por el 3 y el 3 por el 1, como se
+muestra abajo:
+\begin{center}
+  \ytableausetup{mathmode,tabloids,boxsize=1.2em}
+  $(123)$
+  \ytableaushort{12,3}\quad$=$\quad
+  \ytableaushort{23,1}
+\end{center}
+
+Debemos checar que esta acción está bien definida, esto es, si $t_{1}$
+y $t_{2}$ son equivalentes por renglones, es decir,
+$\{t_{1}\}=\{t_{2}\}$, entonces el resultado de la permitación debe
+ser el mismo, esto es, $\pi\{t_{1}\}=\pi\{t_{2}\}$. Esto es claro,
+pues $\pi$ simplemente da la instrucción de mover algún número de un
+renglón a otro.
+
+Ahora que definimos una forma para que $S_{n}$ actúe en los tabloides,
+podemos definir una representación de $S_{n}$. Recordemos que una
+representación de un grupo $G$ en un espacio vectorial $V$ sobre el
+campo de los números complejos es equivalente a extender a $V$ a un $G$-módulo,
+así que usamos el término módulo para describir representaciones.
+
+\begin{definition}
+  Sea $\lambda\vdash n$. $M^{\lambda}$ denota el espacio vectorial
+  cuya base es el conjunto de $\lambda$-tabloides. Entonces
+  $M^{\lambda}$ es una representación de $S_{n}$ conocida como \textbf{módulo
+  de permutación correspondiente a $\boldsymbol{\lambda}$.}
+\end{definition}
+
+Mostraremos algunos ejemplos de los módulos de
+permutación. $M^{\lambda}$ corresponde a los siguientes diagramas de
+Young son de hecho representaciones conocidas.
+
+\begin{center}
+  \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+  \ydiagram{4} \qquad
+  \ydiagram{1,1,1,1}\qquad
+  \ydiagram{3,1}
+\end{center}
+
+\begin{example}
+  Consideremos $\lambda=(n)$. Así que $M^{\lambda}$ es el espacio
+  vectorial generado po un solo tabloide 
+  \begin{center}
+    \ytableausetup{mathmode,tabloids}    
+    \ytableaushort{1 2\cdots n} 
+  \end{center}
+Donde el tabloide está fijo por $S_{n}$, por lo que $M^{\lambda}$ es
+una representación trivial de dimensión uno.
+\end{example}
+
+\begin{example}
+  Consideremos $\lambda=(1^{n})=(1,1,\ldots,1)$. Entonces un $\lambda$-tabloide es
+  simplemente una permutación $\{1,2,\ldots,n\}$ en $n$ renglones y $S_{n}$ actúa en los
+  tabloides haciendo actuar la correspondiente permutación. Se sigue que $M^{(1,1,\ldots,1)}$ es
+  isomorfo a la representación regular de $S_{n}$.
+\end{example}
+
+\begin{example}
+  \label{tabloides-ejemplo}
+  Consideremos
+  $\lambda=(n-1,1)$. Sea $\{t_{i}\}$
+  un $\lambda$-tabloide con $i$ en
+  el segundo renglón. Entonces
+  $M^{\lambda}$ tiene base
+  $\{t_{1}\},\{t_{2}\},\ldots,\{t_{n}\}$. También,
+  note que la acción de $\pi\in
+  S_{n}$ envía $t_{i}$ a $t_{\pi(i)}$. Así que
+  $M^{(n-1,1)}$ es isomorfo a la
+  representación $\mathbb{C}\{1,2,\ldots,n\}$. 
+
+  Por ejemplo, si $n=4$, la
+  representación $M^{(3,1)}$ tiene
+  la siguiente base:
+  \begin{center}
+    \ytableausetup{mathmode,tabloids,boxsize=1.2em}    
+    $t_{1}=$\ytableaushort{234,1}\qquad 
+    $t_{2}=$\ytableaushort{134,2} \qquad
+    $t_{3}=$\ytableaushort{124,3} \qquad
+    $t_{4}=$\ytableaushort{123,4} \qquad
+  \end{center}
+\end{example}
+{\setlength{\fboxsep}{0pt}\colorbox{green}{son representaciones
+    isomorfas por que tienen la misma dimensión???}}
+
+\section{Módulo de Specht}
+\label{modulo-specht}
+En la sección previa, construimos $S_{n}$-módulos $M^{\lambda}$
+conocidos como modulos de permutación. En esta sección, consideramos
+submódulos irreducibles de $M^{\lambda}$ que corresponden únicamente a
+$\lambda$. 
+
+El grupo $S_{n}$ actúa en el conjunto de tableros de Young de manera
+natural: para un tablero $t$ de tamaño $n$ y una permutación $\sigma\in
+S_{n}$ el tablero $\sigma t$ es el tablero que coloca el número $\sigma(i)$
+en la caja donde $t$ coloca a $i$. Por ejemplo, 
+
+\begin{center}(123)(45)
+  \begin{ytableau}
+    1 & 2 & 4 & 5 \\
+    3 & 6\\
+    7
+  \end{ytableau}
+  =
+  \begin{ytableau}
+    2 & 3 & 5 & 4 \\
+    1 & 6\\
+    7
+  \end{ytableau}
+\end{center}
+
+Observe que un tabloide está fijo por las permutaciones las cuales
+solo permuta las entradas de los renglones entre ellos mismos. Estas
+permutaciones forman un subgrupo de $S_{n}$, al cual llamamos grupo
+renglón. Similarmente definimos al grupo columna.
+
+\begin{definition}
+  Para un tablero $t$ de tamaño $n$, el \textbf{grupo renglón} de $t$,
+  denotado por $R_{t}$, es el subgrupo de $S_{n}$ que consiste de las
+  permutaciones que solo permutan elementos entre cada renglón
+  de $t$. Similarmente, el \textbf{grupo columna} $C_{t}$ es el
+  subgrupo de $S_{n}$ que consiste de las permutaciones las cuales
+  solo permutan los elementos entre cada columna de $t$.
+\end{definition}
+
+Por ejemplo, si
+\begin{center}$t=$
+  \ytableausetup{mathmode} %,boxsize=1 
+  \begin{ytableau}
+    4 & 1 & 2\\
+    3 & 5
+  \end{ytableau}
+\end{center}
+entonces
+$$R_{t}=S_{\{1,2,4\}}\times S_{\{3,5\}}, \quad \mbox{ y } \quad C_{t}= S_{\{3,4\}}\times
+S_{\{1,5\}}\times S_{\{2\}}.$$
+Seleccionaremos ciertos elementos de el espacio $M^{\lambda}$
+que usaremos para generar un subespacio.
+
+\begin{definition}
+  Si $t$ es un tablero, entonces el \textbf{politabloide} asociado es
+  $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
+\end{definition}
+Así que podemos encontrar $e_{t}$ sumando todos los tabloides que
+resultan de las permutaciones columna de $t$, teniendo en cuenta el
+signo de la permutación columna. Por ejemplo, si
+
+\begin{center}$t=$
+  \ytableausetup{mathmode} %, boxsize=1em
+  \begin{ytableau}
+    4 & 1 & 2\\
+    3 & 5
+  \end{ytableau}
+\end{center}
+entonces
+\begin{center}
+  $e_{t}=$
+  \ytableausetup{mathmode,tabloids} %boxsize=1em,
+  \ytableaushort{412,35}
+  \quad $-$ \quad \ytableaushort{312,45}
+  \quad $-$ \quad \ytableaushort{452,31}
+  \quad $+$ \quad \ytableaushort{352,41}
+\end{center}
+
+Ahora, mediante el siguiente lema, vemos que $S_{n}$ actúa en el
+conjunto de politabloides.
+\begin{lemma}
+  \label{lema}
+  Sea $t$ un tablero y $\pi$ una permutación. Entonces $e_{\pi t}=\pi e_{t}$.
+\end{lemma}
+
+Ahora podemos obtener un submódulo irreducible de
+$M^{\lambda}$.
+\begin{definition}
+  Para cualquier partición $\lambda$, el correspondiente
+  \textbf{módulo de Specht}, denotado como $S^{\lambda}$, es el submódulo
+  de $M^{\lambda}$ generado por los todos los politabloides $e_{t}$ de
+  forma $\lambda$.
+\end{definition}
+% Mostraremos algunos ejemplos. Los módulos
+% de Specht correspondientes a los siguientes diagramas de Young resultan
+% familiares a las representaciones irreducibles. 
+% \begin{center}
+%   \ytableausetup{notabloids}  
+%   \begin{minipage}[h]{0.2\linewidth}
+%     \ydiagram{4}
+%   \end{minipage}%\quad
+%   \begin{minipage}[h]{0.15\linewidth}
+%     \centering
+%     \ydiagram{1,1,1,1}
+%   \end{minipage}%\quad
+%   \begin{minipage}[h]{0.2\linewidth}
+%     \ydiagram{3,1}
+%   \end{minipage}
+% \end{center}
+\begin{example}
+  \label{n}
+  Considere $\lambda=(n)$, sólo hay un único politablide, el cual es
+  \begin{center}
+    \ytableausetup{mathmode,tabloids}    
+    \ytableaushort{1 2\cdots n} 
+  \end{center}
+Donde el politabloide está fijo por $S_{n}$, así que $S^{(n)}$ es la
+representación trivial de dimensión uno. 
+\end{example}
+
+\begin{example}
+  \label{1n} 
+  Considere $\lambda=(1^{n})=(1,1,\ldots,1)$. Sea
+  
+  \begin{center}
+    \begin{minipage}[h]{0.1\linewidth}
+      $t\quad=$
+    \end{minipage}
+    \begin{minipage}[h]{0.2\linewidth}
+      \ytableausetup{mathmode,notabloids}
+      \begin{ytableau}
+        1\\
+        2\\
+        \vdots\\
+        n
+      \end{ytableau}
+    \end{minipage}
+  \end{center}
+
+  Observe que $e_{t}$ es la suma de todos los $\lambda$-tabloides
+  multiplicados por el signo de permutación desarrollar esto resulta
+  {\setlength{\fboxsep}{0pt}\colorbox{green}{nos tardaremos en
+      desarrollar esto}}. Para cualquier $\lambda$-tablero $t^{'}$,
+  tenemos $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenido de $t$ mediante una
+  permutación par, o $e_{t}=-e_{t^{'}}$ su $t^{'}$ es obtenido de $t$
+  mediante una permutación impar. Así que $S^{\lambda}$ es una
+  representación de dimensión uno. Del lema \ref{lema} tenemos $\pi
+  e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. De esto vemos que
+  $S^{(1,1,\ldots,1)}$ es la representación signo.
+  {\setlength{\fboxsep}{0pt}\colorbox{green}{????}}
+\end{example}
+
+\begin{example}
+  \label{n-1}
+  Considere $\lambda=(n-1,1)$. Continuando con
+  la notación del ejemplo \ref{tabloides-ejemplo} donde usamos
+  $\{t_{i}\}$ para denotar el $\lambda$-tabloide con $i$ en el segundo
+  renglón, vemos que los politabloides tienen la forma  $\{t_{i}\}-
+  \{t_{j}\}$. En efecto, el politabloide construido de el tablero
+
+\begin{center}$t=$
+   \ytableausetup{mathmode, boxsize=1.5em,notabloids}
+    \begin{ytableau}
+      j & a & b & \cdots\\
+      i\\
+    \end{ytableau}
+  \end{center}
+es igual a $\{t_{i}\}- \{t_{j}\}$. Usemos temporalmente
+$\boldsymbol{e_{i}}$ para denotar el tabloide $\{t_{i}\}$. Entonces
+$S^{\lambda}$ es generado por los elementos de la forma
+$\boldsymbol{e_{i}}-\boldsymbol{e_{j}}$, y se sigue que
+$$S^{(n-1,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+\cdots+c_{n}\boldsymbol{e_{n}}\mid
+c_{1}+c_{2}+\cdots+c_{n}=0\}$$ 
+Esta es la representación estándar y es irreducible. La suma directa de las representaciones estándar y la
+representación trivial nos da la representación $\mathbb{C}\{1,2,\ldots,n\}$, esto es
+$S^{(n-1,1)}\oplus S^{(n)}=M^{(n-1,1)}$.
+\end{example}
+
+Sabemos que $S_{3}$ tiene tres representaciones irreducibles: trivial,
+signo y estándar. Estas son exactamente las descritas anteriormente. Además,
+hay exactamente tres particiones del $3$: $(3)$, $(1,1,1)$,
+$(2,1)$. Así que en este caso, las representaciones irreducibles son
+exactamente los módulos de Specht, esto es cierto en general.
+
+\begin{theorem}
+  Los módulos de Specht $S^{\lambda}$ para $\lambda\vdash n$ forman
+  una lista completa de representaciones irreducibles de $S_{n}$ sobre
+  $\mathbb{C}$.
+  \label{todas-repr-irre}
+\end{theorem}
+
+La prueba puede ser encontrada en {\setlength{\fboxsep}{0pt}\colorbox{green}{Sagan}}. Recordemos que al final de la
+sección \ref{tablero} notamos que el número de representaciones
+irreducibles de $S_{n}$ es igual al número de diagramas de Young
+con $n$ cajas. Este teorema da una biyección entre estos dos
+conjuntos.
+
+Note que los politabloides son generalmente linealmente dependientes. Por
+ejemplo, como vimos en el ejemplo \ref{1n}, cualquier par de
+politabloides en $S^{(1,1,\ldots,1)}$ son de hecho linealmente
+dependientes. Ya que sabemos que $S^{\lambda}$ es generado por los
+politabloides, podemos preguntarnos cómo seleccionar una base. El
+siguiente teorema nos da la respuesta.
+
+\begin{theorem}
+  \label{base-S}
+  Sea $\lambda$ cualquier partición. El conjunto
+  \begin{equation*}
+    \{e_{t}\mid \mbox{t es un $\lambda$-tablero estándar}\}
+  \end{equation*}
+  es una base para $S^{\lambda}$ como espacio vectorial.
+\end{theorem}
+
+La demostración puede ser encontrada en
+{\setlength{\fboxsep}{0pt}\colorbox{green}{Sagan}}.
+
+Enseguida se enuncian dos definiciones que usaremos en el capitulo
+{\setlength{\fboxsep}{0pt}\colorbox{green}{referencia último
+    capítulo}} relacionados con la fórmula de Bouc.
+% Enseguida se enuncian algunos resultados como consecuencia de el
+% teorema \ref{base-S}. Sea $f^{\lambda}$ el número de
+% $\lambda$-tableros estándar.
+% \begin{corollary}
+%   \label{dimS}
+%   Sea $\lambda\vdash n$, entonces $\dim S^{\lambda}=f^{\lambda}$.
+% \end{corollary}
+\begin{definition}
+  Sea $\lambda\vdash n$. El \textbf{conjugado} de $\lambda$ es la
+  partición que se obtiene listando el número de cajas en cada columna
+  del diagrama de Young asociado a la $\lambda$. El conjugado de
+  $\lambda$ se denota como $\lambda^{'}$. 
+\end{definition}
+
+\begin{definition}
+  Sea $\lambda\vdash n$. Llamemos \textbf{diagonal} de el
+  $\lambda$-tablero y lo denotamos como $d(\lambda)$ al número de
+  cajas en la diagonal de el correspondiente tablero de forma $\lambda$.
+\end{definition}
+
+\begin{example}
+  Sea $\lambda=(4,2,1)$, así que $\lambda^{'}=(3,2,1,1)$
+  \begin{equation*}
+    \ytableausetup{notabloids,boxsize=1.2em} 
+    \lambda=\ydiagram{4,2,1} \qquad
+    \lambda^{'}=\ydiagram{3,2,1,1}
+  \end{equation*}
+  En este caso $d(\lambda)=d(\lambda^{'})=2$.
+\end{example}
 
 \chapter{Homología de complejos simpliciales}
 %\label{cha:primer-capitulo}
