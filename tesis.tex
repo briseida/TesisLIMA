@@ -128,7 +128,7 @@
 \end{flushleft}
 
 El presente trabajo tiene como objetivo analizar la estructura de
-la homología de complejos simpliciales construidos a partir de una
+la homología de ciertos complejos simpliciales construidos a partir de una
 gráfica simple finita en donde actúa el grupo simétrico $S_{n}$.
 
 Se define la gráfica $M(G)$ de emparejamientos de la gráfica simple
@@ -139,8 +139,8 @@ lo que sus homologías con coeficientes complejos definen
 representaciones de $S_{n}$. 
 
 La descomposición en irreducibles de tales homologías ha sido exhibida
-por Bouc (1992). En el presente trabajo se muestra el resultado
-correspondiente para la gráfica de clanes $K(G_{6})$.
+por Bouc (1984). En éste trabajo se muestra el resultado correspondiente para la
+gráfica de clanes $K(G_{n})$, donde $n\leq 6$.
 
 \vspace{2cm}
 
@@ -156,7 +156,6 @@ blah blah blah blah blah blah blah blah blah.
 
 (Resumen extendido)
 
-En el primer capítulo...
 
 \tableofcontents
 
@@ -290,10 +289,12 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 \chapter{Representaciones de grupos}
 \label{Representaciones de grupos}
 
-\section{Grupos}
+Las demostraciones de los resultados de grupos y de representaciones
+de grupos que no incluiremos explícitamente se pueden encontrar en
+\cite{fraleigh} y \cite{james2001representations} respectivamente.
 
-\setlength{\fboxsep}{0pt}\colorbox{green}{ref a grupos y
-  representaciones} 
+\section{Grupos}
+\label{grupos}
 
 \begin{definition}
   Una \textbf{operación binaria} en un conjunto $G$ es una función
@@ -469,9 +470,19 @@ vectorial $V$, es equivalente a estudiar los $G$-módulos de $V$.
   por $S_{n}$ es el grupo de todas las permutaciones de $\mathbb{I}_{n}$ 
   Si $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones, definimos la función signo
-  $\sgn:S_{n} \rightarrow\{\pm1\}$
+  $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
   mediante $$\sgn(\pi):=(-1)^{k}.$$
-  Ésta representación tiene grado $1$.
+  $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
+  \[
+  \pi v=
+  \begin{cases}
+    v, & \text{ si } \pi \text{ es par,}\\
+    -v, & \text{ si } \pi \text{ es impar,}
+  \end{cases}
+  \]
+  para $\pi\in S_{n}$, $v\in \mathbb{C}$. Cuando hablemos de
+  $\mathbb{C}$ como un $S_{n}$-módulo lo denotaremos con
+  $\widehat{\mathbb{C}}$. Ésta representación tiene grado $1$.
 \end{example}
 
 \begin{example}[Representación regular]
@@ -847,8 +858,8 @@ usará para los correspondientes caracteres. Por ejemplo si $X$ tiene
 caracter $\chi$, diremos que $\chi$ es irreducible siempre que $X$ lo
 sea, etc.
 
-\setlength{\fboxsep}{0pt}\colorbox{green}{Decir que los ejemplos
-  vienen después}
+Se muestra un ejemplo de cómo calcular caracteres para tres
+representaciones específicas al final de ésta sección.
 \begin{definition}
   Dos elementos $g,g_{1}\in G$ están \emph{conjugados} si
   \begin{equation*}
@@ -920,7 +931,7 @@ un grupo.
   \begin{tabular}{c |c c c}
     & $\cdots$ & $K$ & $\cdots$\\
     \hline
-    $\vdots$ & $\vdots$ &   \\
+    $\vdots$ &  & $\vdots$  \\
     $\chi$   & $\cdots$ & $\chi_{K}$  \\
     $\vdots$ &          &   
   \end{tabular}
@@ -957,8 +968,8 @@ primera columna corresponde a la clase identidad $K=(1)$.
   
   Por otro lado, si $g=(12)$, tenemos:
   \begin{eqnarray*}
-    (12)(1,-1,0)=(-1,1,0)=-1(1,-1,0)+0(1,0,-1),\\
-    (12)(1,0,-1)=(0,1,-1)=-1(1,-1,0)+1(1,0,-1)
+    (12)(1,-1,0)&=&(-1,1,0)=-1(1,-1,0)+0(1,0,-1),\\
+    (12)(1,0,-1)&=&(0,1,-1)=-1(1,-1,0)+1(1,0,-1)
   \end{eqnarray*} 
   por lo que 
   \begin{center}
@@ -972,8 +983,8 @@ así que $\chi_{V}((12))=0$.
 
 Finalmente, si $g=(123)$, tenemos:
 \begin{eqnarray*}
-  (123)(1,-1,0)=(0,1,-1)=-1(1,-1,0)+1(1,0,-1),\\
-  (123)(1,0,-1)=(-1,1,0)=-1(1,-1,0)+0(1,0,-1)
+  (123)(1,-1,0)&=&(0,1,-1)=-1(1,-1,0)+1(1,0,-1),\\
+  (123)(1,0,-1)&=&(-1,1,0)=-1(1,-1,0)+0(1,0,-1)
 \end{eqnarray*} 
  por lo que 
   \begin{center}
@@ -999,8 +1010,8 @@ clase de conjugación.
     $\chi_{E}$ & 2 & 0 & -1 
   \end{tabular}  
 \end{center}
-Las tablas de caracteres que utilizaremos en el capitulo \setlength{\fboxsep}{0pt}\colorbox{green}{ref}
-se encuentran en \setlength{\fboxsep}{0pt}\colorbox{green}{ref liebeck}.
+Las tablas de caracteres que utilizaremos en el capitulo \ref{cha:hom-com-emp}
+se encuentran en \cite{liebeck}.
 \end{example}
 
 \section{Producto interno de caracteres}
@@ -1029,6 +1040,7 @@ representación es irreducible o cuando dos representaciones son equivalentes.
 \end{theorem}
 
 \begin{corollary}
+  \label{multiplicidad}
   Sea $X$ una representación de $G$ con carácter $\chi$, 
   \begin{equation*}
     X\cong m_{1}X^{(1)}\oplus m_{2}X^{(2)}\oplus\cdots\oplus
@@ -1196,7 +1208,7 @@ $S_{3}$ corresponde a los siguientes dos tableros estándar:
 
 En éste capítulo, describimos la relación entre los tableros de Young
 y representaciones de $S_{n}$. Las pruebas son omitidas, pueden
-encontrarse en {\setlength{\fboxsep}{0pt}\colorbox{green}{Sagan}}.
+encontrarse en el segundo capítulo de \cite{sagan2001symmetric}.
 
 En la sección \ref{tablero} introducimos diagramas de Young y tableros
 de Young. En la sección \ref{modulo-permutacion}, introducimos los
@@ -1707,11 +1719,10 @@ exactamente los módulos de Specht, esto es cierto en general.
   \label{todas-repr-irre}
 \end{theorem}
 
-La prueba puede ser encontrada en {\setlength{\fboxsep}{0pt}\colorbox{green}{Sagan}}. Recordemos que al final de la
-sección \ref{tablero} notamos que el número de representaciones
-irreducibles de $S_{n}$ es igual al número de diagramas de Young
-con $n$ cajas. Este teorema da una biyección entre estos dos
-conjuntos.
+Recordemos que al final de la sección \ref{tablero} notamos que el
+número de representaciones irreducibles de $S_{n}$ es igual al número
+de diagramas de Young con $n$ cajas. Este teorema da una biyección
+entre estos dos conjuntos.
 
 Note que los politabloides son generalmente linealmente dependientes. Por
 ejemplo, como vimos en el ejemplo \ref{1n}, cualquier par de
@@ -1728,13 +1739,6 @@ siguiente teorema nos da la respuesta.
   \end{equation*}
   es una base para $S^{\lambda}$ como espacio vectorial.
 \end{theorem}
-
-La demostración puede ser encontrada en
-{\setlength{\fboxsep}{0pt}\colorbox{green}{Sagan}}.
-
-Enseguida se enuncian dos definiciones que usaremos en el capitulo
-{\setlength{\fboxsep}{0pt}\colorbox{green}{referencia último
-    capítulo}} relacionados con la fórmula de Bouc.
 % Enseguida se enuncian algunos resultados como consecuencia de el
 % teorema \ref{base-S}. Sea $f^{\lambda}$ el número de
 % $\lambda$-tableros estándar.
@@ -1742,6 +1746,9 @@ Enseguida se enuncian dos definiciones que usaremos en el capitulo
 %   \label{dimS}
 %   Sea $\lambda\vdash n$, entonces $\dim S^{\lambda}=f^{\lambda}$.
 % \end{corollary}
+
+Enseguida se enuncian dos definiciones que usaremos en el capitulo \ref{cha:hom-com-emp}
+relacionados con la fórmula de Bouc.
 \begin{definition}
   Sea $\lambda\vdash n$. El \textbf{conjugado} de $\lambda$ es la
   partición que se obtiene listando el número de cajas en cada columna
@@ -1766,9 +1773,13 @@ Enseguida se enuncian dos definiciones que usaremos en el capitulo
 \end{example}
 
 \chapter{Homología de complejos simpliciales}
-%\label{cha:primer-capitulo}
+\label{cha:hom-com-sim}
+
+Las demostraciones que se omiten se pueden encontrar en
+\cite{munkres1984elements}.
 
 \section{Complejos simpliciales abstractos}
+\label{com-sim-abs}
 
 \begin{definition}
 Un \textbf{complejo simplicial abstracto} es una colección finita
@@ -1804,11 +1815,12 @@ subcolección de $\Delta$, que es a su vez es un complejo, se llama
 Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
 \textbf{0-simplejo orientado} es un punto $v$. Un \textbf{1-simplejo
   orientado} es un segmento de línea dirigido $v_{1}v_{2}$ uniendo los
-puntos $v_{1}$ y $v_{2}$ en dirección de $v_{1}$ a $v_{2}$ ver \setlength{\fboxsep}{0pt}\colorbox{green}{FIGURA(referencia)}, así que
+puntos $v_{1}$ y $v_{2}$ en dirección de $v_{1}$ a $v_{2}$ como se
+ilustra en la figura \ref{fig:1-simplejo}, así que
 $v_{1}v_{2}\neq v_{2}v_{1}$, pero estaremos de acuerdo en que
 $v_{1}v_{2}=-v_{2}v_{1}$. Un \textbf{2-simplejo orientado} es una
 región triangular $v_{1}v_{2}v_{3}$ con dirección de $v_{1}$ a $v_{2}$
-a $v_{3}$ ver \setlength{\fboxsep}{0pt}\colorbox{green}{FIGURA(referencia)}, claramente $v_{1}v_{2}v_{3}$ tiene el mismo orden que
+a $v_{3}$ como se aprecia en la figura \ref{fig:2-simplejo}, claramente $v_{1}v_{2}v_{3}$ tiene el mismo orden que
 $v_{2}v_{3}v_{1}$ y $v_{3}v_{1}v_{2}$, pero con orientación opuesta a
 $v_{1}v_{3}v_{2}$, $v_{3}v_{2}v_{1}$ y $v_{2}v_{1}v_{3}$, es decir, estaremos de acuerdo que:
 $$v_{1}v_{2}v_{3}=v_{2}v_{3}v_{1}=v_{3}v_{1}v_{2}=-v_{1}v_{3}v_{2}=-v_{3}v_{2}v_{1}=-v_{2}v_{1}v_{3}$$
@@ -1827,11 +1839,56 @@ permutación es impar.
 
 Un \textbf{3-simplejo orientado} está dado por una secuencia ordenada
 $v_{1}v_{2}v_{3}v_{4}$ de cuatro vértices de un tetraedro sólido
-ver \setlength{\fboxsep}{0pt}\colorbox{green}{FIGURA(referencia)} y
+como se observa en la figura \ref{fig:3-simplejo} y
 acordaremos que $v_{1}v_{2}v_{3}v_{4}=\pm v_{i}v_{j}v_{r}v_{s}$,
 dependiendo si la permutación es par o impar. Así que dos
 \emph{n-simplejos}, son equivalentes si difieren el uno del otro
 por una permutación par. 
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=.8]
+    \GraphInit[vstyle=Classic] 
+    \SetUpVertex[MinSize=1pt]
+    \Vertex[x=0,y=0,Math]{v_{0}} 
+    \Vertex[x=1.5,y=1.5,Math]{v_{1}}
+    \Edge[style={->}](v_{0})(v_{1})
+  \end{tikzpicture}
+  
+  \caption{1-simplejo}
+  \label{fig:1-simplejo}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=0.8]
+    \tikzstyle{circ} = [circle, minimum width=1mm, inner
+    sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm] 
+    \node[circ](a) at (0,0){}; 
+    \node[circ] (b) at (2,0){}; 
+    \node[circ] (c) at (1,2){};
+    \begin{pgfonlayer}{background}
+      \fill[draw, line width=0.3mm,top color=black!30,bottom
+      color=gray!30] (a.center)node[num]{$v_{0}$} -- (b.center)
+      node[num]{$v_{1}$} -- (c.center) node[num]{$v_{2}$} --
+      (a.center);
+    \end{pgfonlayer}
+  \end{tikzpicture}
+  
+  \caption{2-simplejo}
+\label{fig:2-simplejo}
+\end{figure}
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=.3]
+    \SetVertexNoLabel 
+    \GraphInit[vstyle=Classic]
+    \SetUpVertex[MinSize=1pt] 
+    \grTetrahedral[RA=4]
+  \end{tikzpicture}
+  
+  \caption{3-simplejo}
+\label{fig:3-simplejo}
+\end{figure}
 
 \begin{center}
   \begin{tikzpicture}
@@ -1854,6 +1911,7 @@ por una permutación par.
 \begin{tikzpicture}[scale=.25]
   \SetVertexNoLabel
   \GraphInit[vstyle=Classic]
+   \SetUpVertex[MinSize=1pt]
   \grTetrahedral[RA=4]
 \end{tikzpicture}
 \end{center}
@@ -1903,15 +1961,17 @@ nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
    correspondientes cadenas elementales como elementos de la base.
 \end{lemma}
 
-\textit{Demostración.} Orientando (arbitrariamente) a cada
-\emph{p}-simplejo de $\Delta$, toda \emph{p}-cadena se puede escribir
-de manera única como una combinación lineal finita
+\begin{proof}[Demostración]
+  Orientando (arbitrariamente) a cada \emph{p}-simplejo de $\Delta$,
+  toda \emph{p}-cadena se puede escribir de manera única como una
+  combinación lineal finita
 $$c=\sum n_{i}\sigma_{i},$$
-de las correspondientes cadenas elementales $\sigma_{i}$. La
-cadena $c$ asigna el valor $(n_{i})$ al \emph{p}-simplejo orientado
+de las correspondientes cadenas elementales $\sigma_{i}$. La cadena
+$c$ asigna el valor $(n_{i})$ al \emph{p}-simplejo orientado
 $\sigma_{i}$ , el valor $(-n_{i})$ a la orientación opuesta de
 $\sigma_{i}$ y el valor $0$ a todo \emph{p}-simplejo orientado que no
-aparece en la suma, se sigue del teorema $\ref{clunica}$. $\qed$
+aparece en la suma, se sigue del teorema $\ref{clunica}$.
+\end{proof}
 
 \begin{corollary}
   Toda función $f$ de los p-simplejos orientados de $\Delta$ en
@@ -1965,7 +2025,7 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
   \end{enumerate}
 \end{example}
 
-\section{$\partial^{2}=0$ y Homología simplicial}
+\section{Homología simplicial}
 
 \begin{definition}
    El kernel de $\partial_{p}:C_{p}(\Delta)\rightarrow
@@ -1990,15 +2050,17 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
   $\partial_{p-1}\circ\partial_{p}=0$ para cualquier $p$ y también $\varepsilon\circ\partial_{1}=0$.
 \end{theorem}
 
-\textit{Demostración.} Calculamos 
-\begin{align*}
-  \partial_{p-1}\partial_{p}(v_{0}\ldots
-  v_{p})&=\sum_{i=0}^{p}(-1)^{i}\partial_{p-1}(v_{0}\ldots \widehat v_{i}\ldots v_{p})\\
-  &=\sum_{j<i}(-1)^{i}(-1)^{j}(\ldots \widehat v_{j} \ldots \widehat v_{i} \ldots)\\
-  &+\sum_{j>i}(-1)^{i}(-1)^{j-1}(\ldots\widehat v_{i}\ldots \widehat v_{j}\ldots).
-\end{align*}
-
-Los términos de estas dos sumas se cancelan a pares. $\qed$
+\begin{proof}[Demostración]
+  Calculamos
+  \begin{align*}
+    \partial_{p-1}\partial_{p}(v_{0}\ldots
+    v_{p})&=\sum_{i=0}^{p}(-1)^{i}\partial_{p-1}(v_{0}\ldots \widehat v_{i}\ldots v_{p})\\
+    &=\sum_{j<i}(-1)^{i}(-1)^{j}(\ldots \widehat v_{j} \ldots \widehat v_{i} \ldots)\\
+    &+\sum_{j>i}(-1)^{i}(-1)^{j-1}(\ldots\widehat v_{i}\ldots \widehat
+    v_{j}\ldots).
+  \end{align*}
+  Los términos de estas dos sumas se cancelan a pares.
+\end{proof}
 
 \begin{corollary}
   $B_{p}(\Delta)$ es subespacio de $Z_{p}(\Delta)$.
@@ -2052,7 +2114,7 @@ La demostración puede ser encontrada en \cite{munkres1984elements}.
 
 \begin{example}
   Calculemos para $n=0, 1, 2$ los espacios $Z_{n}(\Delta)$,
-  $B_{n}(\Delta)$ y $H_{n}$ para la superficie $\Delta$ del tetraedro.
+  $B_{n}(\Delta)$ y $H_{n}(\Delta)$ para la superficie $\Delta$ del tetraedro.
 
   Como $C_{-1}(\Delta)=0$ por definición, se sigue que
   $$\boldsymbol{Z_{0}(\Delta)}=C_{0}(\Delta)$$
@@ -2267,7 +2329,7 @@ La demostración puede ser encontrada en \cite{munkres1984elements}.
 Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
 isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
-\section{Homomorfismos inducidos por mapas homotópicos}
+\section{Homomorfismos inducidos por funciones homotópicas}
 
 Es posible definir la homología de un espacio topológico general por
 medio de la \emph{homología singular}. Por otro lado, a cada complejo
@@ -2336,8 +2398,15 @@ Las demostraciones de los teoremas
 encuentran en \cite{munkres1984elements}.
  
 \chapter{Gráfica de clanes}
-%\label{cha:primer-capitulo}
+\label{cha:grafica-clanes}
+
+La finalidad de éste capítulo es definir gráfica de clanes y gráfica
+bipartita clánica para lo cual necesitamos algunas definiciones previas. Las definiciones aquí
+escritas se pueden consultar en \cite{harary} y \cite{LPV08a}. Además
+a las gráficas les asociamos complejos simpliciales.
+
 \section{Gráficas}
+\label{graficas}
 
 \begin{definition}
   Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V(G)$
@@ -2387,7 +2456,7 @@ encuentran en \cite{munkres1984elements}.
   subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
   \textbf{gráfica de intersección} de $F$ es denotada por $\Omega(F)$
   y definida por $V(\Omega(F))=F$, con $S_{i}$ y $S_{j}$ adyacentes
-  siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$
+  siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$.
 \end{definition}
 
 \begin{definition}
@@ -2434,44 +2503,25 @@ clanes de $G$ de la figura \ref{G}.
   $c\in (K(G))$ son adyacentes si $x\in c$.
 \end{definition}
 Por ejemplo, la gráfica bipartita clánica de la figura \ref{G} aparece
-en la figura \ref{BKG}.
+en la figura \ref{BKG}, donde los vértices en color gris corresponden a los
+clanes de la figura \ref{G} y los vértices restantes son los vértices
+de la gráfica de la figura \ref{G}.
 
-% \begin{figure}[h]
-%   \centering
-%   \begin{tikzpicture}[scale=.4]
-%     \SetVertexNoLabel 
-%     \GraphInit[vstyle=Classic]
-%     \SetUpVertex[MinSize=1pt] \grStar[RA=2,Math,rotation=270]{4}
-%     \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
-%     \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
-%     \EdgeFromOneToSeq{b}{a}{0}{1}{2} \EdgeFromOneToSeq{a}{b}{2}{1}{1}
-%     \EdgeFromOneToSeq{a}{b}{0}{1}{1} \EdgeFromOneToSeq{b}{a}{2}{0}{1}
-%     \EdgeIdentity{b}{c}{3}
-%   \end{tikzpicture}
-  
-%   \caption{$BK(G)$}
-% \label{BKG1}
-% \end{figure}
- 
 \begin{figure}[h]
   \centering
-  \begin{tikzpicture}[scale=.4]
+  \begin{tikzpicture}[scale=.45]
     \SetVertexNoLabel 
     \GraphInit[vstyle=Classic]
     \SetUpVertex[MinSize=1pt] 
     \grStar[RA=2,Math,rotation=270]{4}
-    \begin{scope}[rotate=90]
-      \Vertices[unit=2]{circle}{x,y,z}
-    \end{scope}
+    \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
     \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
-    \EdgeFromOneToSeq{x}{a}{}{1}{2}
-    \Edge(y)(a0)
-    \Edge(y)(a2)
-    \EdgeFromOneToSeq{z}{a}{}{0}{1}
-    \Edge(x)(c0)
-    \Edge(y)(c1)
-    \Edge(z)(c2)
-    \AddVertexColor{gray}{x,y,z}
+    \EdgeFromOneToSeq{b}{a}{0}{1}{2} 
+    \EdgeFromOneToSeq{a}{b}{2}{1}{1}
+    \EdgeFromOneToSeq{a}{b}{0}{1}{1} 
+    \EdgeFromOneToSeq{b}{a}{2}{0}{1}
+    \EdgeIdentity{b}{c}{3}
+    \AddVertexColor{gray}{a3,b0,b1,b2}
   \end{tikzpicture}
   
   \caption{$BK(G)$}
@@ -2536,15 +2586,23 @@ observa en \ref{fig:realizacion-geometrica}.
 Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
 \mid |x|\leq 1\}$. 
 
-\chapter{Homologías del complejo de emparejamiento}
-%\label{cha:primer-capitulo}
-\section{Complejo de emparejamiento}
+\chapter{Homologías del complejo de emparejamientos}
+\label{cha:hom-com-emp}
 
+En éste capítulo se utilizarán todos los conceptos y resultados
+presentados en los capítulos anteriores. Se definirá el complejo de
+emparejamientos y finalmente conoceremos lo que quiere decir la
+fórmula de Bouc. Además calculamos las homologías reducidas de los
+complejos de emparejamietos y de sus respectivas gráficas de clanes para
+$n\leq 6$.
+
+\section{Complejo de emparejamientos}
+\label{complejo-emparejamientos}
 \begin{definition}
 Consideremos la gráfica completa de $n$ vértices $K_{n}$, tales
 vértices son etiquetados como $1,2,\ldots,n$, además
 $\overline{ij}$ denotará la arista que une al vértice $i$ con el
-vértice $j$ (donde $\overline{ij}=\overline{ji}$). Llamaremos \textbf{complejo de emparejamiento} de orden
+vértice $j$ (donde $\overline{ij}=\overline{ji}$). Llamaremos \textbf{complejo de emparejamientos} de orden
 $n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
 
 \begin{enumerate}
@@ -2555,13 +2613,13 @@ $n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
   $V$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $M_{n}$ si $v_{i}$
   y $v_{j}$ son ajenas.
 \end{enumerate} 
-La \textbf{gráfica de emparejamiento} de $K_{n}$ será denotada por $G_{n}$.
+La \textbf{gráfica de emparejamientos} de $K_{n}$ será denotada por $G_{n}$.
 \end{definition}
 
 \begin{example}
   \label{ejemploM4}
   Considérese la gráfica $K_{4}$; construiremos el complejo de
-  emparejamiento $M_{4}$ dado por el conjunto de vértices
+  emparejamientos $M_{4}$ dado por el conjunto de vértices
   $$V=\{\overline{12},\overline{13},\overline{14},\overline{23},\overline{24},\overline{34}\},$$
   que es el conjunto de aristas de la gráfica de $K_{4}$. La familia de
   $1$-simplejos estará dada por el siguiente conjunto:
@@ -2617,7 +2675,7 @@ La \textbf{gráfica de emparejamiento} de $K_{n}$ será denotada por $G_{n}$.
 \end{center}
 
 El teorema \ref{bouc} nos muestra la descomposición de las homologías
-reducidas de complejos de emparejamiento en módulos de Specht. En los
+reducidas de complejos de emparejamientos en módulos de Specht. En los
 siguientes ejemplos se presentan las homologías reducidas de $M_{4}$,
 $M_{5}$, $M_{6}$ y de sus respectivos complejos simpliciales asociados
 a sus correspondientes gráficas de clanes.
@@ -2654,10 +2712,9 @@ Sean
 Consideremos a $\beta_{0}=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6}\}$ y
 $\beta_{1}=\{b_{1},b_{2},b_{3}\}$ como las bases de $C_{0}(M_{4})$ y
 $C_{1}(M_{4})$ respectivamente. Notemos que $\dim C_{0}(M_{4})=6$ y
-$\dim C_{1}(M_{4})=3$. A continuación se tiene la acción un
-representante de cada clase de conjugación del grupo
-simétrico $S_{4}$ sobre los elementos de la base de $C_{0}(M_{4})$ y
-$C_{1}(M_{4})$.
+$\dim C_{1}(M_{4})=3$. A continuación hacemos actuar un representante de cada
+clase de conjugación del grupo simétrico $S_{4}$ sobre los elementos
+de la base de $C_{0}(M_{4})$ y $C_{1}(M_{4})$.
 \begin{center}
   \begin{tabular}{llll}
     $(12)a_{1}=a_{1}$ & $(123)a_{1}=a_{4}$ & $(1234)a_{1}=a_{4}$ & $(12)(34)a_{1}=a_{1}$ \\
@@ -2798,9 +2855,7 @@ $S_{4}$ tenemos:
 Queremos escribir a $C_{0}(M_{4})$ como suma directa de módulos
 irreducibles de $S_{4}$, así que calculemos el producto interno de $\chi_{C_{0}(M_{4})}$ con los
 caracteres de los módulos irreducibles de $S_{4}$ para conocer la
-multiplicidad con la que aparecen estos últimos.
-(\setlength{\fboxsep}{0pt}\colorbox{green}{COROLARIO(referencia)todavía
-no escrito})
+multiplicidad con la que aparecen estos últimos (corolario \ref{multiplicidad}).
 \begin{align*}
   \langle\chi_{C_{0}(M_{4})},\chi_{\mathbb{C}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(1\cdot2)+(8)(1\cdot0)+(6)(1\cdot0)+(3)(1\cdot2))\\
   &=\frac{1}{24}(6+12+6)=1\\
@@ -2941,7 +2996,7 @@ Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
 
 \begin{example}
   \label{ejemploM5}
-  Considérese el complejo de emparejamiento $M_{5}$, que
+  Considérese el complejo de emparejamientos $M_{5}$, que
   está dado por el conjunto de vértices (aristas de la gráfica de $K_{5}$):
   $$V=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6},a_{7},a_{8},a_{9},a_{10}\}$$
   donde
@@ -2973,7 +3028,7 @@ Entonces la familia de $1$-simplejos orientados estará dada por:
     \AssignVertexLabel{b}{\textsl{$\overline{35}$},\textsl{$\overline{25}$},\textsl{$\overline{24}$},\textsl{$\overline{14}$},\textsl{$\overline{13}$}}
   \end{tikzpicture}
   
-  \caption{Gráfica de emparejamiento $G_{5}$}
+  \caption{Gráfica de emparejamientos $G_{5}$}
   \label{fig:G_5}
 \end{figure}
 \begin{table}[!hbtp]
@@ -2997,11 +3052,10 @@ Entonces la familia de $1$-simplejos orientados estará dada por:
   \label{tab:S_5}
 \end{table}
 
-Con el teorema de la reciprocidad de Frobenius
-\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)} obtendremos la
-descomposición de los espacios de cadenas $C_{0}(M_{5})$ y
-$C_{1}(M_{5})$ en módulos de Specht con un menor
-número de cálculos. 
+Con el teorema de la reciprocidad de Frobenius (teorema
+\ref{frobenius}) obtendremos la descomposición de los espacios de
+cadenas $C_{0}(M_{5})$ y $C_{1}(M_{5})$ en módulos de Specht con un
+menor número de cálculos. 
 
 Consideremos:
 \begin{eqnarray*}
@@ -3247,7 +3301,7 @@ $$\im\widehat\partial_{1}=\widehat\partial_{1}(S^{(4,1)}\oplus S^{(3,1,1)}\oplus
 
 \begin{example}
   \label{ejemploKM5}
-  Consideremos el complejo de clanes de la gráfica de emparejamiento
+  Consideremos el complejo de clanes de la gráfica de emparejamientos
   $M_{5}$, al que denotamos como $K(M_{5})$, que está dado por el
   conjunto de vértices (aristas de la gráfica de
   $M_{5}$):
@@ -3304,8 +3358,7 @@ Los $2$-simplejos orientados son:
 
 A continuación obtendremos la descomposición de los espacios de
 cadenas $C_{0}(K(M_{5}))$, $C_{1}(K(M_{5}))$ y $C_{2}(K(M_{5}))$ en
-módulos de Specht por medio de el teorema de la reciprocidad de Frobenius.
-\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)}
+módulos de Specht por medio de el teorema \ref{frobenius} de la reciprocidad de Frobenius.
 
 Consideremos:
 \begin{eqnarray*}
@@ -3573,7 +3626,7 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=
 
 \begin{example}
   \label{ejemploM6}
-  Consideremos el complejo de emparejamiento $M_{6}$, que está dado
+  Consideremos el complejo de emparejamientos $M_{6}$, que está dado
   por el conjunto de vértices (aristas de la gráfica de $K_{6}$):
   \begin{center}
     \begin{tabular}[h]{lllll}
@@ -3627,7 +3680,7 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=
     \AssignVertexLabel{c}{\textsl{$a_{7}$},\textsl{$a_{2}$},\textsl{$a_{8}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{4}$},\textsl{$a_{9}$},\textsl{$a_{2}$},\textsl{$a_{6}$},\textsl{$a_{5}$},\textsl{$a_{7}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{4}$},\textsl{$a_{8}$},\textsl{$a_{2}$},\textsl{$a_{7}$},\textsl{$a_{5}$},\textsl{$a_{9}$},\textsl{$a_{3}$},\textsl{$a_{6}$},\textsl{$a_{3}$}}
   \end{tikzpicture}
   
-  \caption{Gráfica de emparejamiento $G_{6}$}
+  \caption{Gráfica de emparejamientos $G_{6}$}
   \label{fig:emparejamiento6}
 \end{figure}
 
@@ -4003,7 +4056,7 @@ Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
 
 \begin{example}
   \label{ejemploKM6}
-  Consideremos el complejo de clanes de la gráfica de emparejamiento
+  Consideremos el complejo de clanes de la gráfica de emparejamientos
   $M_{6}$, al que denotamos como $K(M_{6})$, que está dado por el
   conjunto de vértices (triángulos de la gráfica de
   $M_{6}$):
@@ -4065,8 +4118,7 @@ y los $2$-simplejos:
 
 A continuación obtendremos la descomposición de los espacios de
 cadenas $C_{0}(K(M_{6}))$, $C_{1}(K(M_{6}))$ y $C_{2}(K(M_{6}))$ en
-módulos de Specht por medio de el teorema de la reciprocidad de Frobenius.
-\setlength{\fboxsep}{0pt}\colorbox{green}{(referencia)}
+módulos de Specht por medio de el teorema \ref{frobenius} de la reciprocidad de Frobenius.
 
 Consideremos:
   $$V_{0}=\langle a_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle$$
