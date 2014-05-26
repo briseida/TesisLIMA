@@ -164,7 +164,6 @@ the clique graph $K(G_{n})$, where $n\leq 6$.
 
 \chapter*{Introducción}
 
-(Resumen extendido)
 
 \tableofcontents
 
@@ -189,8 +188,8 @@ números complejos.
   cada vector $y\in V$ puede ser expresado de manera única como una
   combinación lineal de vectores de $\beta$, es decir, puede ser
   expresado de la forma
-  $$y=a_{1}v_{1}+\ldots+a_{n}v_{n}$$
-  para escalares únicos $a_{1},\ldots,a_{n}.$
+  $$y=\lambda_{1}v_{1}+\ldots+\lambda_{n}v_{n}$$
+  para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
 \end{theorem}
 
 \begin{theorem}
@@ -354,13 +353,6 @@ invertibles  $n \times n$ con entradas en $\mathbb{C}$.
 Y a $GL(V)$ a los operadores lineales invertibles en un
 $\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
 Además existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
-\setlength{\fboxsep}{0pt}\colorbox{green}{grupo de matrices o espacio
-  de matrices???} 
-
-\setlength{\fboxsep}{0pt}\colorbox{green}{transformaciones lineales en
-lugar de operadores} 
-
-\setlength{\fboxsep}{0pt}\colorbox{green}{isomorfismo de que???} 
 
 \section{Acciones de grupos}
 
@@ -429,7 +421,6 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
     \end{eqnarray*}
   \end{footnotesize}
 
-
   Suponga ahora que se tiene un homomorfismo de grupos
   $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define
   un acción lineal de $G$ en $V$.
@@ -455,8 +446,7 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
      $$\rho:G\rightarrow GL(V).$$
 \end{definition}
 \begin{definition}
-  Llamemos \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{representación
-     de la matriz} o matriz de la representación ???} al homomorfismo
+  Llamemos \textbf{representación matricial} al homomorfismo
    de la definición \ref{representacion}, es decir, 
    $$X:G\rightarrow GL(n,\mathbb{C})$$
    simplemente para resaltar que $X(g)\in GL(n,\mathbb{C})$ para cada $g\in G$.
@@ -494,146 +484,247 @@ vectorial $V$, es equivalente a estudiar los $G$-módulos de $V$.
   $\widehat{\mathbb{C}}$. Ésta representación tiene grado $1$.
 \end{example}
 
-\begin{example}[Representación regular]
-\label{rep-regular}
-Sea $S_{n}$ el grupo simétrico. Tomemos $V=\mathbb{C}^{n}=\{(x_{1},x_{2},\ldots,x_{n})\mid x_{i}\in
-\mathbb{C}, i=1,2,\ldots,n\}$ y la acción de $S_{n}$ en $V$ está dada
-por 
-\begin{equation*}
-  \pi(x_{1},x_{2},\ldots,x_{n})=(x_{\pi(1)},x_{\pi(2)},\ldots,x_{\pi(n)}),
-\end{equation*}
-donde $\pi\in S_{n}$, lo cual define un homomorfismo de grupos
-$S_{n}\rightarrow GL(\mathbb{C}^{n})$ conocida como \emph{representación
-regular}, que convierte a
-$V=\mathbb{C}^{n}$ en un $S_{n}$-módulo. Un submódulo importante de
-dimensión $n-1$ \setlength{\fboxsep}{0pt}\colorbox{green}{dim n-1???}de $\mathbb{C}^{n}$ es:
-\begin{equation*}
-  E=\Big\{(x_{1},x_{2},\ldots,x_{n})\in \mathbb{C}^{n}\mid\sum^{n}_{i=1}x_{i}=0\Big\}.
-\end{equation*}
-La representación asociada a éste submódulo se llama
-\textbf{representación estándar}.
+% \begin{example}[Representación defining]
+% \label{rep-defining}
+% Sea $S_{n}$ el grupo simétrico. Tomemos $V=\mathbb{C}^{n}=\{(x_{1},x_{2},\ldots,x_{n})\mid x_{i}\in
+% \mathbb{C}, i=1,2,\ldots,n\}$ y la acción de $S_{n}$ en $V$ está dada
+% por 
+% \begin{equation*}
+%   \pi(x_{1},x_{2},\ldots,x_{n})=(x_{\pi(1)},x_{\pi(2)},\ldots,x_{\pi(n)}),
+% \end{equation*}
+% donde $\pi\in S_{n}$, lo cual define un homomorfismo de grupos
+% $S_{n}\rightarrow GL(\mathbb{C}^{n})$ conocida como \emph{representación
+% defining}, que convierte a
+% $V=\mathbb{C}^{n}$ en un $S_{n}$-módulo. Un submódulo importante de
+% dimensión $n-1$ \setlength{\fboxsep}{0pt}\colorbox{green}{dim n-1???}de $\mathbb{C}^{n}$ es:
+% \begin{equation*}
+%   E=\Big\{(x_{1},x_{2},\ldots,x_{n})\in \mathbb{C}^{n}\mid\sum^{n}_{i=1}x_{i}=0\Big\}.
+% \end{equation*}
+% La representación asociada a éste submódulo se llama
+% \textbf{representación estándar}.
 
-Denotemos a $F$ como la representación trivial. Notemos que
-\begin{equation*}
-  \mathbb{C}^{n}=E\oplus F
-\end{equation*}
+% Sea $\mathbb{C}$ la representación trivial. Notemos que
+% \begin{equation*}
+%   \mathbb{C}^{n}=E\oplus \mathbb{C}
+% \end{equation*}
 
-Ahora daremos un ejemplo en particular de la representación regular,
-consideremos $S_{3}$, sea $\mathbb{C}^{3}=\langle x_{1},x_{2},x_{3}\rangle$, donde
+% Ahora daremos un ejemplo en particular de la representación defining,
+% consideremos $S_{3}$, sea $\mathbb{C}^{3}=\langle x_{1},x_{2},x_{3}\rangle$, donde
 
-\begin{center}
-  $x_{1}=\begin{pmatrix}
-    1 \\
-    0 \\
-    0
-  \end{pmatrix}$, $x_{2}=\begin{pmatrix}
-    0 \\
-    1 \\
-    0
-  \end{pmatrix}$, $x_{3}=\begin{pmatrix}
-    0 \\
-    0 \\
-    1
-  \end{pmatrix}$.
-\end{center}
-Las matrices \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}} de la representación regular son:
-\begin{center}
-  $X(1)=\begin{pmatrix}
-    1 & 0 & 0 \\
-    0 & 1 & 0 \\
-    0 & 0 & 1 \\
-  \end{pmatrix}$,\quad
-  $X((12))=\begin{pmatrix}
-    0 & 1 & 0 \\
-    1 & 0 & 0 \\
-    0 & 0 & 1 \\
-  \end{pmatrix}$,
-\end{center}
+% \begin{center}
+%   $x_{1}=\begin{pmatrix}
+%     1 \\
+%     0 \\
+%     0
+%   \end{pmatrix}$, $x_{2}=\begin{pmatrix}
+%     0 \\
+%     1 \\
+%     0
+%   \end{pmatrix}$, $x_{3}=\begin{pmatrix}
+%     0 \\
+%     0 \\
+%     1
+%   \end{pmatrix}$.
+% \end{center}
+% Las matrices \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}} de la representación regular son:
+% \begin{center}
+%   $X(1)=\begin{pmatrix}
+%     1 & 0 & 0 \\
+%     0 & 1 & 0 \\
+%     0 & 0 & 1 \\
+%   \end{pmatrix}$,\quad
+%   $X((12))=\begin{pmatrix}
+%     0 & 1 & 0 \\
+%     1 & 0 & 0 \\
+%     0 & 0 & 1 \\
+%   \end{pmatrix}$,
+% \end{center}
 
-\begin{center}
-  $X((13))=\begin{pmatrix}
-    0 & 0 & 1 \\
-    0 & 1 & 0 \\
-    1 & 0 & 0 \\
-  \end{pmatrix}$,\quad 
-  $X((23))=\begin{pmatrix}
-    1 & 0 & 0 \\
-    0 & 0 & 1 \\
-    0 & 1 & 0 \\
-  \end{pmatrix}$,
-\end{center}
+% \begin{center}
+%   $X((13))=\begin{pmatrix}
+%     0 & 0 & 1 \\
+%     0 & 1 & 0 \\
+%     1 & 0 & 0 \\
+%   \end{pmatrix}$,\quad 
+%   $X((23))=\begin{pmatrix}
+%     1 & 0 & 0 \\
+%     0 & 0 & 1 \\
+%     0 & 1 & 0 \\
+%   \end{pmatrix}$,
+% \end{center}
 
-\begin{center}
-  $X((123))=\begin{pmatrix}
-    0 & 0 & 1 \\
-    1 & 0 & 0 \\
-    0 & 1 & 0 \\
-  \end{pmatrix}$,\quad $X((132))=\begin{pmatrix}
-    0 & 1 & 0 \\
-    0 & 0 & 1 \\
-    1 & 0 & 0 \\
-  \end{pmatrix}$.
-\end{center}
-\end{example}
+% \begin{center}
+%   $X((123))=\begin{pmatrix}
+%     0 & 0 & 1 \\
+%     1 & 0 & 0 \\
+%     0 & 1 & 0 \\
+%   \end{pmatrix}$,\quad $X((132))=\begin{pmatrix}
+%     0 & 1 & 0 \\
+%     0 & 0 & 1 \\
+%     1 & 0 & 0 \\
+%   \end{pmatrix}$.
+% \end{center}
+%\end{example}
 
-\begin{example}[Representación permutación]
+% \begin{example}[Representación permutación]
+%   %\label{CS}
+%   Sea $G$ un grupo. Es posible tomar un conjunto en el cual actúe $G$
+%   y resulte un $G$-módulo, como lo hacemos a continuación. Sea
+%   $S=\{s_{1},s_{2},\ldots,s_{n}\}$ y $\mathbb{C}\boldsymbol{S}=\mathbb{C}\{s_{1},s_{2},\ldots,s_{n}\}$ denote el
+%   espacio vectorial generado por $S$ sobre $\mathbb{C}$. Es decir,
+%   $\mathbb{C}\boldsymbol{S}$ consiste de todas las combinaciones lineales
+%   \begin{equation*}
+%     \lambda_{1}s_{1}+\lambda_{2}s_{2}+\cdots +\lambda_{n}s_{n}
+%   \end{equation*}
+%   donde $\lambda_{i}\in\mathbb{C}$. La adición y multiplicación por escalar
+%   en $\mathbb{C}\boldsymbol{S}$ está definida por
+%   \begin{eqnarray*}
+%     (\lambda_{1}s_{1}+\lambda_{2}s_{2}+\cdots
+%     +\lambda_{n}s_{n})+(\lambda^{'}_{1}s_{1}+\lambda^{'}_{2}s_{2}+\cdots +\lambda^{'}_{n}s_{n})\\
+%     =(\lambda_{1}+\lambda^{'}_{1})s_{1}+(\lambda_{2}+\lambda^{'}_{2})s_{2}+\cdots
+%     +(\lambda_{n}+\lambda^{'}_{n})s_{n}
+%   \end{eqnarray*}
+%   y
+%   \begin{eqnarray*}
+%     c(\lambda_{1}s_{1}+\lambda_{2}s_{2}+\cdots +\lambda_{n}s_{n})=(c\lambda_{1})s_{1}+(c\lambda_{2})s_{2}+\cdots +(c\lambda_{n})s_{n},
+%   \end{eqnarray*}
+%   respectivamente. Ahora la acción de $G$ en $S$ se puede extender
+%   linealmente a la acción en $\mathbb{C}\boldsymbol{S}$:
+%   \begin{equation*}
+%     g(\lambda_{1}s_{1}+\lambda_{2}s_{2}+\cdots +\lambda_{n}s_{n})=\lambda_{1}(gs_{1})+\lambda_{2}(gs_{2})+\cdots +\lambda_{n}(gs_{n})
+%   \end{equation*}
+%   para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{S}$ resulta ser un $G$-módulo
+%   de dimensión $|S|$. A $\mathbb{C}\boldsymbol{S}$ le llamamos
+%   \emph{representación permutación} asociada a $S$. Los elementos de
+%   $S$ forman una base para $\mathbb{C}\boldsymbol{S}$ llamada la
+%   \emph{base estándar}.
+
+%   Consideremos el grupo simétrico $S_{n}$ actuando en
+%   $S=\{1,2,\ldots,n\}$. Ahora
+%   \begin{equation*}
+%     \mathbb{C}\boldsymbol{S}=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid \lambda_{i}\in\mathbb{C}\}
+%   \end{equation*}
+%   con la acción
+%   \begin{equation*}
+%     \pi(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)=\lambda_{1}\pi(1)+\lambda_{2}\pi(2)+\cdots+\lambda_{n}\pi(n)
+%   \end{equation*}
+% Consideremos un caso específico. Sea $S_{3}$, determinemos las
+% matrices asociadas respecto a la base estándar $\{1,2,3\}$. Para
+% $\pi=(12)$, calculamos
+% \begin{center}
+%   (12)1=2; \qquad (12)2=1; \qquad (12)3=3
+% \end{center}
+% así que
+% \begin{center}
+%   $X((12))=\begin{pmatrix}
+%     0 & 1 & 0 \\
+%     1 & 0 & 0 \\
+%     0 & 0 & 1 \\
+%   \end{pmatrix}$,
+% \end{center}
+% Notemos que las matrices restantes son las mismas que las de la
+% representación regular del ejemplo \ref{rep-regular}. Se puede
+% demostrar que esto es cierto para cualquier $n$. \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}}
+% \end{example}
+\begin{example}[Módulo de permutaciones]
   \label{CS}
   Sea $G$ un grupo. Es posible tomar un conjunto en el cual actúe $G$
   y resulte un $G$-módulo, como lo hacemos a continuación. Sea
-  $S=\{s_{1},s_{2},\ldots,s_{n}\}$ y $\mathbb{C}\boldsymbol{S}=\mathbb{C}\{s_{1},s_{2},\ldots,s_{n}\}$ denote el
-  espacio vectorial generado por $S$ sobre $\mathbb{C}$. Es decir,
-  $\mathbb{C}\boldsymbol{S}$ consiste de todas las combinaciones lineales
+  $Y=\{y_{1},y_{2},\ldots,y_{n}\}$ y $\mathbb{C}\boldsymbol{Y}=\mathbb{C}\{y_{1},y_{2},\ldots,y_{n}\}$ denote el
+  espacio vectorial generado por $Y$ sobre $\mathbb{C}$. Es decir,
+  $\mathbb{C}\boldsymbol{Y}$ consiste de todas las combinaciones lineales
   \begin{equation*}
-    c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n}
+    V=\mathbb{C}\boldsymbol{Y}=\{\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
+    +\lambda_{n}y_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}
   \end{equation*}
-  donde $c_{i}\in\mathbb{C}$. La adición y multiplicación por escalar
-  en $\mathbb{C}\boldsymbol{S}$ está definida por
+  donde $\lambda_{i}\in\mathbb{C}$. La adición y multiplicación por escalar
+  en $\mathbb{C}\boldsymbol{Y}$ está definida por
   \begin{eqnarray*}
-    (c_{1}s_{1}+c_{2}s_{2}+\cdots
-    +c_{n}s_{n})+(d_{1}s_{1}+d_{2}s_{2}+\cdots +d_{n}s_{n})\\
-    =(c_{1}+d_{1})s_{1}+(c_{2}+d_{2})s_{2}+\cdots +(c_{n}+d_{n})s_{n}
+    (\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
+    +\lambda_{n}y_{n})+(\lambda^{'}_{1}y_{1}+\lambda^{'}_{2}y_{2}+\cdots +\lambda^{'}_{n}y_{n})\\
+    =(\lambda_{1}+\lambda^{'}_{1})y_{1}+(\lambda_{2}+\lambda^{'}_{2})y_{2}+\cdots
+    +(\lambda_{n}+\lambda^{'}_{n})y_{n}
   \end{eqnarray*}
   y
   \begin{eqnarray*}
-    c(c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n})=(cc_{1})s_{1}+(cc_{2})s_{2}+\cdots +(cc_{n})s_{n},
+    c(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=(c\lambda_{1})y_{1}+(c\lambda_{2})y_{2}+\cdots +(c\lambda_{n})y_{n},
   \end{eqnarray*}
-  respectivamente. Ahora la acción de $G$ en $S$ se puede extender
-  linealmente a la acción en $\mathbb{C}\boldsymbol{S}$:
+  respectivamente. Si $v\in V$
   \begin{equation*}
-    g(c_{1}s_{1}+c_{2}s_{2}+\cdots +c_{n}s_{n})=c_{1}(gs_{1})+c_{2}(gs_{2})+\cdots +c_{n}(gs_{n})
+    g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n})
   \end{equation*}
-  para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{S}$ resulta ser un $G$-módulo
-  de dimensión $|S|$. A $\mathbb{C}\boldsymbol{S}$ le llamamos
-  \emph{representación permutación} asociada a $S$. Los elementos de
-  $S$ forman una base para $\mathbb{C}\boldsymbol{S}$ llamada la
+  para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
+  de dimensión $|Y|$. A $\mathbb{C}\boldsymbol{Y}$ le llamamos
+  \emph{módulo de permutaciones}. Los elementos de
+  $Y$ forman una base para $\mathbb{C}\boldsymbol{Y}$ llamada
   \emph{base estándar}.
 
-  Consideremos el grupo simétrico $S_{n}$ actuando en
-  $S=\{1,2,\ldots,n\}$. Ahora
+  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $S=\{1,2,\ldots,n\}$. Ahora
   \begin{equation*}
-    \mathbb{C}\boldsymbol{S}=\{c_{1}1+c_{2}2+\cdots+c_{n}n\mid c_{i}\in\mathbb{C}\}
+    \mathbb{C}\boldsymbol{S}=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid \lambda_{i}\in\mathbb{C}\}
   \end{equation*}
   con la acción
   \begin{equation*}
-    \pi(c_{1}1+c_{2}2+\cdots+c_{n}n)=c_{1}\pi(1)+c_{2}\pi(2)+\cdots+c_{n}\pi(n)
+    \pi(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)=\lambda_{1}\pi(1)+\lambda_{2}\pi(2)+\cdots+\lambda_{n}\pi(n)
   \end{equation*}
-Consideremos un caso específico. Sea $S_{3}$, determinemos las
-matrices asociadas respecto a la base estándar $\{1,2,3\}$. Para
-$\pi=(12)$, calculamos
-\begin{center}
-  (12)1=2; \qquad (12)2=1; \qquad (12)3=3
-\end{center}
-así que
-\begin{center}
-  $X((12))=\begin{pmatrix}
-    0 & 1 & 0 \\
-    1 & 0 & 0 \\
-    0 & 0 & 1 \\
-  \end{pmatrix}$,
-\end{center}
-Notemos que las matrices restantes son las mismas que las de la
-representación regular del ejemplo \ref{rep-regular}. Se puede
-demostrar que esto es cierto para cualquier $n$. \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}}
+
+  Un submódulo importante de dimensión $n-1$ de
+  $\mathbb{C}\boldsymbol{S}$ es:
+  \begin{equation*}
+    E=\Big\{(x_{1},x_{2},\ldots,x_{n})\in \mathbb{C}\boldsymbol{S}\mid\sum^{n}_{i=1}x_{i}=0\Big\}.
+  \end{equation*}
+  La representación asociada a éste submódulo se llama
+  \textbf{representación estándar}.
+  
+  Sea $\mathbb{C}$ la representación trivial. Notemos que
+  \begin{equation*}
+    \mathbb{C}\boldsymbol{S}=E\oplus \mathbb{C}
+  \end{equation*}
+  
+  Consideremos un caso específico. Sea $S_{3}$, determinemos las
+  matrices asociadas respecto a la base estándar $\{1,2,3\}$. Para
+  $\pi=(12)$, calculamos
+  \begin{center}
+    (12)1=2; \qquad (12)2=1; \qquad (12)3=3
+  \end{center}
+  así que
+  \begin{center}
+    $X((12))=\begin{pmatrix}
+      0 & 1 & 0 \\
+      1 & 0 & 0 \\
+      0 & 0 & 1 \\
+    \end{pmatrix}$,
+  \end{center}
+  las demás representaciones matriciales $X(\pi)$, con $\pi\in S_{3}$ son:
+  \begin{center}
+    $X(1)=\begin{pmatrix}
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+      0 & 0 & 1 \\
+    \end{pmatrix}$,\quad  
+    $X((13))=\begin{pmatrix}
+      0 & 0 & 1 \\
+      0 & 1 & 0 \\
+      1 & 0 & 0 \\
+    \end{pmatrix}$,\quad 
+    $X((23))=\begin{pmatrix}
+      1 & 0 & 0 \\
+      0 & 0 & 1 \\
+      0 & 1 & 0 \\
+    \end{pmatrix}$,
+  \end{center}
+  
+  \begin{center}
+    $X((123))=\begin{pmatrix}
+      0 & 0 & 1 \\
+      1 & 0 & 0 \\
+      0 & 1 & 0 \\
+    \end{pmatrix}$,\quad $X((132))=\begin{pmatrix}
+      0 & 1 & 0 \\
+      0 & 0 & 1 \\
+      1 & 0 & 0 \\
+    \end{pmatrix}$.
+  \end{center}
 \end{example}
 
 \section{Reducibilidad}%Módulos irreducibles}
@@ -653,6 +744,22 @@ En ésta sección $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
   Sea $V$ un $G$-módulo no trivial. Decimos que $V$ es \textbf{irreducible} si
   los únicos submódulos de $V$ son $0$ y $V$.
 \end{definition}
+
+% De la definición \ref{suma-directa} (suma directa) si $V$ es un
+% $G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
+% que $W_{1}$ es \textbf{complemento directo} de $W_{2}$. 
+
+\begin{theorem}[Teorema de Maschke]
+  \label{maschke}
+  Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
+  \textbf{completamente reducible}, es decir
+  \begin{equation*}
+    V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
+  \end{equation*}
+donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
+irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
+decir la cantidad $W^{(i)}$.
+\end{theorem}
 
 \begin{theorem}
   \label{interseccion-submodulos}
@@ -684,10 +791,11 @@ $W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$. Ésta definic
 colección arbitraria $\{W_{i}\}_{i\in I}$ es
 decir, $\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
 
-
 \textbf{\emph{Observación:}} En el caso de que $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
-$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
+$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por lo tanto escribiremos $V=W_{1}\oplus W_{2}$
+aunque estrictamente hablando es $V\cong W_{1}\oplus W_{2}$. En adelante no distinguiremos
+entre suma directa y suma directa externa.
 
 % dado por el siguiente isomorfismo:
 % \begin{align*}
@@ -735,22 +843,6 @@ $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.
  sea $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
  que $S\cap S^{'}=S^{'}$, con lo que $S=S^{'}$ como se quería demostrar.
 \end{proof}
-
-De la definición \ref{suma-directa} (suma directa)
-\setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{suma directa y suma
-    directa externa ???}}, si $V$ es un
-$G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
-que son \textbf{complemento directo.} 
-
-\begin{theorem}[Teorema de Maschke]
-  \label{maschke}
-  Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
-  \textbf{completamente reducible}, es decir
-  \begin{equation*}
-    V=W^{(1)}\oplus W^{(2)}\oplus\cdots \oplus W^{(k)},
-  \end{equation*}
-  donde los $W^{i}$ son $G$-submódulos irreducibles de $V$.
-\end{theorem}
 
 \section{$G$-homomorfismo y lema de Schur} 
 \label{schur}
@@ -842,13 +934,13 @@ estructura de $G$-módulo en $V/W$ llamada \textbf{módulo cociente}.
 \section{Caracteres de representaciones}
 \label{caracteres}
 
-Mucha información contenida en una representación puede ser obtenida
-de la traza de sus correspondientes matrices
-\setlength{\fboxsep}{0pt}\colorbox{green}{representaciones de matrices???}. De esto se ocupa la
-teoría de caracteres.
+Mucha información contenida en una representación $X:G\rightarrow
+GL(n,\mathbb{C})$ puede ser obtenida de la traza de sus
+correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
+esto se ocupa la teoría de caracteres.
+
 \begin{definition}
-  Sea una \setlength{\fboxsep}{0pt}\colorbox{green}{representación de
-    la matriz} $X(g)$, $g\in G$. Entonces el \textbf{carácter} de $X$ es
+  Sea una representación matricial $X(g)$, $g\in G$. Entonces el \textbf{carácter} de $X$ es
   \begin{equation*}
     \chi(g)=\tr X(g),
   \end{equation*}
@@ -857,8 +949,8 @@ teoría de caracteres.
 \begin{equation*}
   G\stackrel{\tr X}{\rightarrow}\mathbb{C}.
 \end{equation*}
-Si $V$ es un $G$ módulo, su carácter es el carácter de la \setlength{\fboxsep}{0pt}\colorbox{green}{representación de
-  la matriz} $X$ correspondiente a $V$. En ocasiones para resaltar
+Si $V$ es un $G$ módulo, su carácter es el carácter de la
+representación matricial $X$ correspondiente a $V$. En ocasiones para resaltar
 que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 \end{definition}
 
@@ -931,8 +1023,8 @@ para cualquier $g\in K$. Esto sugiere la definición de tabla de caracteres de
 un grupo. 
 \begin{definition}
   Sea $G$ un grupo finito. La \textbf{tabla de caracteres} de $G$ es
-  una tabla cuyos renglones están indizados \setlength{\fboxsep}{0pt}\colorbox{green}{indexados} por los caracteres de $G$
-  y las columnas indizadas por las clases de conjugación. La entrada
+  una tabla cuyos renglones están indexados por los caracteres de $G$
+  y las columnas indexadas por las clases de conjugación. La entrada
   de la tabla en el renglón $\chi$ y la columna $K$ es
 \end{definition}
 
@@ -1020,7 +1112,7 @@ clase de conjugación.
   \end{tabular}  
 \end{center}
 Las tablas de caracteres que utilizaremos en el capitulo \ref{cha:hom-com-emp}
-se encuentran en \cite{liebeck}.
+se encuentran en~\cite{liebeck}.
 \end{example}
 
 \section{Producto interno de caracteres}
