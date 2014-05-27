@@ -164,6 +164,67 @@ the clique graph $K(G_{n})$, where $n\leq 6$.
 
 \chapter*{Introducción}
 
+La idea de la presente tesis surge a partir del teorema de Bouc
+\cite{MR756517}. 
+\begin{equation*}
+  \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
+      \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda}.
+\end{equation*}
+para todo $n\geq1$ y $k\in \mathbb{Z}$. El cual describe la descomposición en módulos irreducibles del
+$S_{n}$-módulo $\widetilde H_{k-1}(M_{n})$, donde $\widetilde
+H_{k-1}(M_{n})$ es la homología reducida de complejos simpliciales
+construidos a partir gráficas de emparejamientos en donde actúa el
+grupo simétrico $S_{n}$.
+
+Se define la gráfica de emparejamientos $M(G)$ de la gráfica simple
+$G$ como la gráfica cuyos vértices son las aristas de $G$ y dos
+vértices son adyacentes si las correspondientes aristas son
+ajenas. Denotemos por $K_{n}$ a la gráfica completa con $n$ vértices. En
+la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de manera natural, por
+lo que sus homologías con coeficientes complejos definen
+representaciones de $S_{n}$. 
+
+
+
+
+Un clan es una subgráfica completa maximal. La gráfica de clanes
+$K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
+de $G$ y dos vértices son adyacentes si los correspondientes clanes se
+intersectan.
+
+
+
+La descomposición en irreducibles de tales homologías ha sido exhibida
+por Bouc (1984). En éste trabajo se muestra el resultado correspondiente para la
+gráfica de clanes $K(G_{n})$, donde $n\leq 6$.
+
+Algunos argumentos que ocupamos para calcular ..... usamos conceptos
+topologicos y representaciones de grupos ....
+
+A cada gráfica $G$ finita se le asocia un espacio topológico por
+medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
+las subgráficas completas. 
+
+A su vez a los complejos simpliciales se les asocian conceptos topológicos por
+medio de la realización geométrica.
+
+Entonces a $G$ le podemos asociar conceptos topológicos por
+medio de $\Delta(G)$. Por ejemplo, escribiremos $G_{1}\simeq G_{2}$ si
+se tiene que $\Delta(G_{1})\simeq\Delta(G_{2})$.
+
+Por ejemplo, dos complejos se dicen homeomorfos si las realizaciones
+geométricas los son.
+
+Por ejemplo, las gráficas $G_{1}$ y $G_{2}$, diremos que $G_{1}\simeq
+G_{2}$ si $\Delta(G_{1})\simeq\Delta(G_{2})$ y $|\Delta(G_{1})|\simeq|\Delta(G_{2})|$......
+
+
+En el primer capítulo...
+
+En el segundo capítulo estudiamos la relación entre tableros de Young
+y representaciones del grupo simétrico. Describimos la construcción de
+módulos de Specht los cuales son representaciones irreducibles de
+$S_{n}$.
 
 \tableofcontents
 
@@ -186,7 +247,7 @@ números complejos.
   Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
   subconjunto de $V$. Luego $\beta$ es una base de $V$ si y solo si
   cada vector $y\in V$ puede ser expresado de manera única como una
-  combinación lineal de vectores de $\beta$, es decir, puede ser
+  combinación lineal de vectores de~$\beta$, es decir, puede ser
   expresado de la forma
   $$y=\lambda_{1}v_{1}+\ldots+\lambda_{n}v_{n}$$
   para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
@@ -211,9 +272,10 @@ números complejos.
 
 \begin{definition}
   \label{suma-directa}
-  Un espacio vectorial $V$ es la \textbf{suma directa de $W_{1}$ y
-  $W_{2}$}, denotada como $V=W_{1}\oplus W_{2}$, si $W_{1}$ y $W_{2}$
-son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y $W_{1}+W_{2}=V.$ 
+  Un espacio vectorial $V$ es la \textbf{suma directa} de $W_{1}$ y
+  $W_{2}$, denotada como $V=W_{1}\oplus W_{2}$, si $W_{1}$ y $W_{2}$
+  son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y
+  $W_{1}+W_{2}=V.$ 
 \end{definition}
 
 \begin{theorem}
@@ -269,8 +331,9 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 
 \begin{theorem}
   \label{esp-isomorfos}
-  Sean $V$ y $W$ espacios vectoriales (sobre el mismo campo
-  $F$). Entonces $V$ es isomorfo a $W$ si y solo si $\dim (V)=\dim(W).$ 
+  Sean $V$ y $W$ espacios vectoriales (sobre el mismo
+  campo~$F$). Entonces $V$ es isomorfo a $W$ si y solo si $\dim
+  (V)=\dim(W).$ 
 \end{theorem}
 
 \begin{theorem}[Teorema de Isomorfismo]
@@ -758,7 +821,7 @@ En ésta sección $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
   \end{equation*}
 donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
 irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
-decir la cantidad $W^{(i)}$.
+decir la cantidad de $W^{(i)}$.
 \end{theorem}
 
 \begin{theorem}
@@ -1121,7 +1184,7 @@ se encuentran en~\cite{liebeck}.
 Mediante el producto interno de caracteres  podemos determinar si una
 representación es irreducible o cuando dos representaciones son equivalentes.
 \begin{definition}
-  Sean $\chi$, $\psi$ los caracteres de dos representaciones de grupo un
+  Sean $\chi$, $\psi$ los caracteres de dos representaciones de un grupo
   $G$, entonces definimos el producto interno de $\chi$ y $\psi$ como:
   \begin{equation*}
     \langle\chi,\psi\rangle=\frac{1}{|G|}\sum_{g\in G}\chi(g)\overline{\psi(g)}.
@@ -1129,12 +1192,12 @@ representación es irreducible o cuando dos representaciones son equivalentes.
 \end{definition}
 
 \begin{theorem}
-  Sean $X$ y $Y$ representaciones irreducibles de un grupo $G$ con
+  Sean $V$ y $W$ representaciones irreducibles de un grupo $G$ con
   caracteres $\chi$, $\psi$ respectivamente. Entonces
   \[
   \langle\chi,\psi\rangle=\delta_{\chi\psi}:=
   \begin{cases}
-    1, & \text{ si }  X\cong Y \\
+    1, & \text{ si }  V\cong W \\
     0, & \text{ en otro caso. } 
   \end{cases}
   \]
@@ -1142,24 +1205,21 @@ representación es irreducible o cuando dos representaciones son equivalentes.
 
 \begin{corollary}
   \label{multiplicidad}
-  Sea $X$ una representación de $G$ con carácter $\chi$, 
+  Sea $V$ un $G$-módulo con carácter $\chi_{V}$ y supongamos que 
   \begin{equation*}
-    X\cong m_{1}X^{(1)}\oplus m_{2}X^{(2)}\oplus\cdots\oplus
-    m_{k}X^{(k)},
+    V\cong m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus
+    m_{k}V^{(k)},
   \end{equation*}
-  % \begin{equation*}
-  %   V\cong m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus
-  %   m_{k}V^{(k)},
-  % \end{equation*}
-donde $m_{i}$ es la multiplicidad con la que aparece el módulo
-irreducible $X^{(i)}\ncong~X^{(j)}$, $i\neq j$. Entonces
+donde $V^{(1)},\ldots,V^{(k)}$ son $G$-módulos
+irreducibles no isomorfos entre sí y $m_{i}$ denota la multiplicidad
+de $V^{(i)}$. Entonces
 \begin{enumerate}
-\item $\chi=m_{1}\chi^{(1)}+m_{2}\chi^{(2)}+\cdots+m_{k}\chi^{(k)}$.
-\item $\langle\chi,\chi^{(j)}\rangle=m_{j}$ para cada $j$.
-\item $\langle\chi,\chi\rangle=m_{1}^{2}+m_{2}^{2}+\cdots+m_{k}^{2}$.
-\item $X$ es irreducible si y solo si $\langle\chi,\chi\rangle=1$.
-\item Sea $Y$ otra representación de $G$ con carácter $\psi$ . Entonces 
-  $$X\cong Y \mbox{ si y solo si } \chi(g)=\psi(g)$$
+\item $\chi_{V}=m_{1}\chi_{V^{(1)}}+m_{2}\chi_{V^{(2)}}+\cdots+m_{k}\chi_{V^{(k)}}$.
+\item $\langle\chi_{V},\chi_{V^{(j)}}\rangle=m_{j}$ para cada $j$.
+\item $\langle\chi_{V},\chi_{V}\rangle=m_{1}^{2}+m_{2}^{2}+\cdots+m_{k}^{2}$.
+\item $V$ es un $G$-módulo irreducible si y solo si $\langle\chi_{V},\chi_{V}\rangle=1$.
+\item Sea $W$ otro $G$-módulo con carácter $\chi_{W}$ . Entonces 
+  $$V\cong W \mbox{ si y solo si } \chi_{V}(g)=\chi_{W}(g)$$
   para cada $g\in G$.
 \end{enumerate}
 \end{corollary}
@@ -1170,17 +1230,36 @@ irreducible $X^{(i)}\ncong~X^{(j)}$, $i\neq j$. Entonces
 Dado un grupo $G$, sea $H\leq G$ hay una forma de obtener
 representaciones de $G$ a partir de $H$ usando operaciones de
 restrincción e inducción.
+
+\begin{proposition}
+\label{fun-cla-caracter}
+Una función de clase $\theta:G\rightarrow\mathbb{C}$ es un carácter si
+y solo si $\theta\neq 0$ y $\langle\theta,\chi\rangle$ es un entero no
+negativo para todo carácter irreducible~$\chi$ de $G$. 
+\end{proposition}
+\begin{proof}[Demostración]
+Si $\theta$ es un carácter, entonces $\theta(1)>0$, por lo tanto
+$\theta\neq 0$. Además $\langle\theta,\chi\rangle$ es un entero no
+negativo si $\chi$ es irreducible por el inciso $2$ de el corolario
+\ref{multiplicidad}.
+
+Supongamos ahora $\langle\theta,\chi_{j}\rangle=a_{j}$ para
+$j=1,\ldots,k$, donde $\chi_{1},\chi_{2},\ldots,\chi_{k}$ forman una
+colección completa de caracteres irreducibles y $a_{j}$ es un entero
+no negativo. Entonces $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde
+$\theta$ es el carácter del módulo $m_{1}V^{(1)}\oplus
+m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}\neq 0$. 
+\end{proof}
+
 \begin{definition}
-  Considere $H\leq G$ y $X$ una matriz de representación de $G$. La
-  \textbf{restricción} de $X$ a $H$, $X\downarrow^{G}_{H}$, está dada
-  por
+  Considere $H\leq G$ y $X:G\rightarrow GL(n,\mathbb{C})$ una
+  representación matricial de $G$. La \textbf{restricción} de $X$ a
+  $H$, $X\downarrow^{G}_{H}$, está dada por
   \begin{equation*}
     X\downarrow^{G}_{H}(h)=X(h)
   \end{equation*}
-para todo $h\in H$. Si el $X$ tiene carácter $\chi$, entonces denote
-el carácter de $X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$.
-\setlength{\fboxsep}{0pt}\colorbox{green}{definición de restricción
-  como abajo para función.}
+  para todo $h\in H$. Si el $X$ tiene carácter $\chi$, entonces denote
+  el carácter de~$X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$.
 \end{definition}
 
 \begin{definition}
@@ -1198,31 +1277,87 @@ el carácter de $X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$.
   Si $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ es una función de
   clase, entonces $\theta\uparrow^{G}_{H}:G\rightarrow \mathbb{C}$ es
   una función de clase. 
-  \setlength{\fboxsep}{0pt}\colorbox{green}{demostrar que la
-    restricción es función de clase???}
 \end{proposition}
-
+\begin{proof}[Demostración]
+  Para $g,y\in G$ tenemos que
+  \begin{align*}
+    \theta\uparrow^{G}_{H}(ygy^{-1})&=\frac{1}{|H|}\sum_{\substack{x\in
+        G\\x(ygy^{-1})x^{-1}\in H}}\theta(xygy^{-1}x^{-1})\\
+    &=\frac{1}{|H|}\sum_{\substack{x\in
+        G\\(xy)g(xy)^{-1}\in H}}\theta((xy)g(xy)^{-1})\\
+    &=\frac{1}{|H|}\sum_{\substack{uy^{-1}\in
+        G\\ugu^{-1}\in H}}\theta(ugu^{-1})\\
+     &=\frac{1}{|H|}\sum_{\substack{u\in
+        G\\ugu^{-1}\in H}}\theta(ugu^{-1})\\
+    &=\theta\uparrow^{G}_{H}(g)
+  \end{align*}
+se hizo el cambio de variable $u=xy$ (esto es $x=uy^{-1}$), y notamos
+que~$uy^{-1}\in G$ si y solo si $u\in G$.
+\end{proof}
 \begin{theorem}[Reciprocidad de Frobenius]
   \label{frobenius}
-  Sea $H\leq G$, y sean $\theta:H\rightarrow \mathbb{C}$,
+  Sea $H\leq G$ y $\theta:H\rightarrow\mathbb{C}$,
   $\phi:G\rightarrow \mathbb{C}$ funciones de
   clase. Entonces
   \begin{equation*}
     \langle\theta\uparrow^{G}_{H},\phi\rangle=\langle\theta,\phi\downarrow^{G}_{H}\rangle.
   \end{equation*}
 \end{theorem}
+\begin{proof}[Demostración]
+  Tenemos que 
+  \begin{align*}
+    \langle\theta\uparrow^{G}_{H},\phi\rangle&=\frac{1}{|G|}\sum_{g\in
+    G}\theta\uparrow^{G}_{H}(g)\overline{\phi(g)}\\
+  &=\frac{1}{|G|}\sum_{g\in G}\Bigg(\frac{1}{|H|}\sum_{\substack{x\in
+        G\\xgx^{-1}\in H}}\theta(xgx^{-1})\Bigg)\overline{\phi(g)}\\
+    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g\in G,xgx^{-1}\in H\}}\theta(xgx^{-1})\overline{\phi(g)}\\
+ \end{align*}
+ hacemos el cambio $u=xgx^{-1}$, entonces $g=x^{-1}ux$,
+\begin{align*}
+  &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(x^{-1}ux,x)\mid x^{-1}ux\in G,u\in H\}}\theta(u)\overline{\phi(x^{-1}ux)}\\
+  &=\frac{1}{|G|}\frac{1}{|H|}|G|\sum_{u\in
+    H}\theta(u)\overline{\phi(u)}\\
+  &\text{pues si } u\in H, x^{-1}ux\in G \text{ para todo} x\in G,\text{ además} \phi(x^{-1}ux)=\phi(u)\\
+   &=\langle\theta,\phi\downarrow^{G}_{H}\rangle
+ \end{align*}
+\end{proof}
 
 \begin{corollary}
   \label{car-inducido}
-  Si $H\leq G$, y $\theta:H\rightarrow \mathbb{C}$ es un carácter
-  entonces $\theta\uparrow^{G}_{H}:G\rightarrow \mathbb{C}$ es un carácter.
+  Si $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ un carácter
+  entonces $\theta\uparrow^{G}_{H}:~G\rightarrow~\mathbb{C}$ es un carácter.
 \end{corollary}
- 
-Supondremos en lo que resta de esta sección que $G$ es un grupo, $H$ un subgrupo de
-$G$  y $T$ una \emph{transversal izquierda} de $H$ en $G$, es decir, una
+\begin{proof}[Demostración]
+  Ya sabemos que $\theta\uparrow^{G}_{H}$ es una función de
+  clase. Aplicamos el criterio de la proposición
+  \ref{fun-cla-caracter}. Tenemos que
+  $\theta\uparrow^{G}_{H}(1)=[G:H]\chi(1)>0$ y si $\chi$ es un
+  carácter irreducible de $G$, entonces
+  \begin{equation*}
+    \langle\theta\uparrow^{G}_{H},\chi\rangle=\langle\theta,\chi\downarrow^{G}_{H}\rangle,
+  \end{equation*}
+  el cual es un entero no negativo, pues es el producto interno de dos
+  caracteres. %(ver teorema \ref{}). 
+  El resultado se sigue entonces de la proposición
+  \ref{fun-cla-caracter}.
+\end{proof}
+Observemos que si $H\leq G$, y $x,g\in G$ son tales que $x^{-1}gx\in
+H$, entonces para todo $h\in H$ se tiene que
+$(xh)^{-1}g(xh)=h^{-1}(x^{-1}gx)h\in H$. Si $\theta$ es una función de
+clase, además tenemos que
+$\theta(h^{-1}(x^{-1}gx)h)=\theta(x^{-1}gx)$. Sea $T$ una \emph{transversal izquierda} de $H$ en $G$, es decir, una
 colección de representantes de las clases laterales izquierdas de $H$,
 de modo que si $T=\{t_{1},\ldots,t_{s}\}$ entonces
-$G=t_{1}H\cup\cdots\cup t_{s}H$. 
+$G=t_{1}H\cup\cdots\cup t_{s}H$. Por lo tanto, si
+$\theta:H\rightarrow\mathbb{C}$ es una función de clase, podemos
+calcular a $\theta\uparrow^{G}_{H}$ por medio de la fórmula:
+\begin{equation}
+  \label{fun-ind-trans}
+  \theta\uparrow^{G}_{H}(g)=\sum_{\substack{x\in T,\\x^{-1}gx\in H}}\theta(x^{-1}gx).
+\end{equation}
+
+Supondremos en lo que resta de esta sección que $G$ es un grupo, $H$ un subgrupo de
+$G$  y $T$ una transversal izquierda de $H$ en $G$.
 
 Si $W$ es un $H$-módulo, el corolario \ref{car-inducido} implica que
 $(\chi_{W})\uparrow^{G}_{H}$ es un carácter. Queremos encontrar un
@@ -1233,12 +1368,26 @@ $G$-módulo $V$ tal que $\chi_{V}=(\chi_{W})\uparrow^{G}_{H}$.
   $G$-módulo $V$ es \textbf{inducido} por el $H$-módulo $W$ si
   $V=\bigoplus^{s}_{i=1}t_{i}W$ como espacio vectorial.
 \end{definition}
-
+Notemos que la definición no depende de la transversal escogida, pues
+si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
 \begin{proposition}
   \label{car-ind-W-V}
   Si el $G$-módulo $V$ es inducido por el $H$-módulo $W$, entonces
   $\chi_{V}=(\chi_{W})\uparrow^{G}_{H}$.
 \end{proposition}
+\begin{proof}[Demostración]
+  Su $\beta$ es base de $W$, entonces $\bigcup^{s}_{j=1}t_{j}\beta$ es
+  base de $V$, por lo que dado $g\in G$ calcularemos $\chi_{V}(g)$
+  usando esa base. Tenemos entonces que:
+  \begin{equation*}
+    \chi_{V}(g)=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr(g\mid t_{j}W),
+  \end{equation*}
+  y $gt_{j}W\leq t_{j}W$ si y solo si $t^{-1}_{j}gt_{j}W\leq W$, si y
+  solo si $t^{-1}_{j}gt_{j}\in H$. Es inmediato que
+  $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, por lo que $\tr(g\mid
+  t_{j}W)=\chi_{V}(t^{-1}_{j}gt_{j})$, y por la ecuacion \ref{fun-ind-trans}, queda
+  demostrado.
+\end{proof}
 
 \chapter{Tableros de Young y representaciones del grupo simétrico.}
 %\label{repr-grupo-simetrico}
@@ -1397,7 +1546,7 @@ Young con números.
 \end{definition}
 
 Por ejemplo, aquí están todos los tableros correspondientes a la
-partición $(2,1)$:
+partición~$(2,1)$:
 
 \begin{center}
   \ytableausetup{mathmode,notabloids,boxsize=1.2em}
@@ -1625,14 +1774,12 @@ una representación trivial de dimensión uno.
     $t_{4}=$\ytableaushort{123,4} \qquad
   \end{center}
 \end{example}
-{\setlength{\fboxsep}{0pt}\colorbox{green}{son representaciones
-    isomorfas por que tienen la misma dimensión???}}
 
 \section{Módulo de Specht}
 \label{modulo-specht}
 En la sección previa, construimos $S_{n}$-módulos $M^{\lambda}$
 conocidos como modulos de permutación. En esta sección, consideramos
-submódulos irreducibles de $M^{\lambda}$ que corresponden únicamente a
+submódulos irreducibles de~$M^{\lambda}$ que corresponden únicamente a
 $\lambda$. 
 
 El grupo $S_{n}$ actúa en el conjunto de tableros de Young de manera
@@ -1740,7 +1887,7 @@ $M^{\lambda}$.
 % \end{center}
 \begin{example}
   \label{n}
-  Considere $\lambda=(n)$, sólo hay un único politablide, el cual es
+  Considere $\lambda=(n)$, sólo hay un único politabloide, el cual es
   \begin{center}
     \ytableausetup{mathmode,tabloids}    
     \ytableaushort{1 2\cdots n} 
@@ -1769,16 +1916,14 @@ representación trivial de dimensión uno.
   \end{center}
 
   Observe que $e_{t}$ es la suma de todos los $\lambda$-tabloides
-  multiplicados por el signo de permutación desarrollar esto resulta
-  {\setlength{\fboxsep}{0pt}\colorbox{green}{nos tardaremos en
-      desarrollar esto}}. Para cualquier $\lambda$-tablero $t^{'}$,
+  multiplicados por el signo de permutación, desarrollar ésto nos
+  tomaría tiempo. En su lugar veamos el siguiente análisis. Para cualquier $\lambda$-tablero $t^{'}$,
   tenemos $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenido de $t$ mediante una
-  permutación par, o $e_{t}=-e_{t^{'}}$ su $t^{'}$ es obtenido de $t$
+  permutación par, o $e_{t}=-e_{t^{'}}$ si $t^{'}$ es obtenido de $t$
   mediante una permutación impar. Así que $S^{\lambda}$ es una
   representación de dimensión uno. Del lema \ref{lema} tenemos $\pi
-  e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. De esto vemos que
+  e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. De lo cual vemos que
   $S^{(1,1,\ldots,1)}$ es la representación signo.
-  {\setlength{\fboxsep}{0pt}\colorbox{green}{????}}
 \end{example}
 
 \begin{example}
@@ -1902,7 +2047,7 @@ subcolección de $\Delta$, que es a su vez es un complejo, se llama
 \begin{definition}
   El subcomplejo de $\Delta$ que consiste de todos los simplejos de
   $\Delta$ de dimensión a lo más $p$, se llama \textbf{$\boldsymbol{p}$-esqueleto} de
-  $\Delta$ y se denota por $\Delta^{(p)}$. El $1$-esqueleto
+  $\Delta$ y se denota por~$\Delta^{(p)}$. El $1$-esqueleto
   $\Delta^{1}$ de cualquier complejo simplicial de $\Delta$ es una
   gráfica.
 \end{definition}
@@ -1954,25 +2099,29 @@ por una permutación par.
     \Vertex[x=0,y=0,Math]{v_{0}} 
     \Vertex[x=1.5,y=1.5,Math]{v_{1}}
     \Edge[style={->}](v_{0})(v_{1})
+    \AddVertexColor{black}{v_{0},v_{1}}
   \end{tikzpicture}
   
   \caption{1-simplejo}
   \label{fig:1-simplejo}
 \end{figure}
+
 \begin{figure}[h]
   \centering
   \begin{tikzpicture}[scale=0.8]
-    \tikzstyle{circ} = [circle, minimum width=1mm, inner
+    \tikzstyle{circ} = [circle, minimum width=1.2mm, inner
     sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm] 
     \node[circ](a) at (0,0){}; 
     \node[circ] (b) at (2,0){}; 
     \node[circ] (c) at (1,2){};
     \begin{pgfonlayer}{background}
-      \fill[draw, line width=0.3mm,top color=black!30,bottom
-      color=gray!30] (a.center)node[num]{$v_{0}$} -- (b.center)
-      node[num]{$v_{1}$} -- (c.center) node[num]{$v_{2}$} --
-      (a.center);
+      \fill[draw,line width=0.3mm,top color=black!30,bottom
+      color=gray!30] 
+      (a.center)node[num]{$v_{0}$} -- (b.center)node[num]{$v_{1}$} -- (c.center) node[num]{$v_{2}$} --(a.center);
     \end{pgfonlayer}
+    \draw[>=latex,->] (0,0) -- (2,0);
+    \draw[>=latex,->] (2,0) -- (1,2);
+    \draw[>=latex,->] (1,2) -- (0,0);
   \end{tikzpicture}
   
   \caption{2-simplejo}
@@ -1991,32 +2140,6 @@ por una permutación par.
 \label{fig:3-simplejo}
 \end{figure}
 
-\begin{center}
-  \begin{tikzpicture}
-    \GraphInit[vstyle=Classic][scale=.2]
-    \Vertex[x=0,y=0,Math]{v_{0}}
-    \Vertex[x=1.5,y=1.5,Math]{v_{1}}
-    \Edge[style={->}](v_{0})(v_{1})
-  \end{tikzpicture}\quad
-  \begin{tikzpicture}[scale=.6]
-    \draw[help lines] (-2,0);% grid (2,3);
-    \SetGraphUnit{2}
-    \GraphInit[vstyle=Classic]
-    \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180,]{v_{0}}
-    \Vertex[x=2,y=0,Math]{v_{1}}
-    \Vertex[x=0,y=2.5,Math]{v_{2}}
-    \Edge[style={->}](v_{0})(v_{1})
-    \Edge[style={->}](v_{1})(v_{2})
-    \Edge[style={->}](v_{2})(v_{0})
- \end{tikzpicture}\qquad
-\begin{tikzpicture}[scale=.25]
-  \SetVertexNoLabel
-  \GraphInit[vstyle=Classic]
-   \SetUpVertex[MinSize=1pt]
-  \grTetrahedral[RA=4]
-\end{tikzpicture}
-\end{center}
-
 \begin{definition}
   Sea $\Delta$ un complejo simplicial. Una \textbf{\emph{p}-cadena} en
   $\Delta$ es una función $c$ de el conjunto de $p$-simplejos de
@@ -2034,7 +2157,7 @@ conjunto de vértices es finito, la segunda condición no se aplica.
 
 Sumamos $p$-cadenas sumando sus valores; el $\mathbb{C}$-espacio vectorial resultante es
 denotado por $C_{p}(\Delta)$ y es llamado el \textbf{espacio de
-  \emph{p}-cadenas (orientadas)} de $\Delta$. Si $p<0$ o $p>dim \Delta$,
+  \emph{p}-cadenas (orientadas)} de $\Delta$. Si $p<0$ o $p>\dim \Delta$,
 $C_{p}(\Delta)$ denota al espacio trivial.
 
 \begin{definition}
@@ -2078,7 +2201,7 @@ aparece en la suma, se sigue del teorema $\ref{clunica}$.
   Toda función $f$ de los p-simplejos orientados de $\Delta$ en
   un espacio vectorial $V$ puede extenderse de manera única a una
   trasformación lineal de $C_{p}(\Delta)\rightarrow V$, tal que $f(-
-  \sigma)=-f(\sigma)$ para todo p-simplejo orientado $\sigma$.
+  \sigma)=-f(\sigma)$ para todo p-simplejo orientado~$\sigma$.
 \end{corollary}
 
 \begin{definition}
@@ -2491,7 +2614,7 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
 \begin{theorem}
   Sea $\Delta$ un complejo simplicial, entonces la homología
   simplicial de $\Delta$ es isomorfa a la homología singular de su
-  realización geométrica $|\Delta|$.
+  realización geométrica~$|\Delta|$.
   \label{homologia-realizacion}
 \end{theorem}
 Las demostraciones de los teoremas
