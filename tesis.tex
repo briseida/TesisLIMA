@@ -170,41 +170,50 @@ La idea de la presente tesis surge a partir del teorema de Bouc
   \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
       \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda}.
 \end{equation*}
-para todo $n\geq1$ y $k\in \mathbb{Z}$. El cual describe la descomposición en módulos irreducibles del
-$S_{n}$-módulo $\widetilde H_{k-1}(M_{n})$, donde $\widetilde
-H_{k-1}(M_{n})$ es la homología reducida de complejos simpliciales
-construidos a partir gráficas de emparejamientos en donde actúa el
-grupo simétrico $S_{n}$.
+para todo $n,k\geq1$. Tal teorema describe la descomposición en
+submódulos irreducibles del $S_{n}$-módulo $\widetilde
+H_{k-1}(M_{n})$, donde $\widetilde H_{k-1}(M_{n})$ es la homología
+reducida de complejos simpliciales construidos a partir de ciertas
+gráficas, (llamadas \emph{gráficas de emparejamientos}) en donde actúa
+el grupo simétrico~$S_{n}$.
 
 Se define la gráfica de emparejamientos $M(G)$ de la gráfica simple
 $G$ como la gráfica cuyos vértices son las aristas de $G$ y dos
 vértices son adyacentes si las correspondientes aristas son
-ajenas. Denotemos por $K_{n}$ a la gráfica completa con $n$ vértices. En
-la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de manera natural, por
-lo que sus homologías con coeficientes complejos definen
-representaciones de $S_{n}$. 
+ajenas. Denotemos por $K_{n}$ a la gráfica completa con $n$
+vértices. En la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de
+manera natural, por lo que sus homologías con coeficientes en el campo
+de los números complejos definen representaciones de $S_{n}$.
 
-Obtenemos el mismo resultado de Bouc para $n\leq 6$ por medio de
-argumentos de representaciones de grupos y topología. Así mismo
+En la tesis reproducimos el resultado de Bouc para $n\leq 6$ por medio de
+argumentos elementales de representaciones de grupos y topología. Así mismo
 calculamos la descomposición en módulos irreducibles de las homologías
-reducidas de complejos simpliciales obtenidos a partir de la
+reducidas de los complejos simpliciales inducidos a partir de la
 gráfica de clanes $K(G_{n})$ en donde también actúa el grupo simétrico
 $S_{n}$, con $n\leq 6$.
 
 Un clan es una subgráfica completa maximal. La gráfica de clanes
 $K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
 de $G$ y dos vértices son adyacentes si los correspondientes clanes se
-intersectan.
+intersecan.
 
-Hablamos de complejos simpliciales obtenidos a partir de gráficas. Es
-decir, a cada gráfica $G$ finita se le asocia un espacio topológico
-por medio del complejo simplicial $\Delta(G)$ cuyos simplejos son las
-subgráficas completas. A su vez a los complejos simpliciales se les
-asocian conceptos topológicos por medio de la realización
-geométrica. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas finitas,
-escribiremos $G_{1}\simeq G_{2}$ si se tiene que
-$\Delta(G_{1})\simeq\Delta(G_{2})$, así mismo tenemos que
-$|\Delta(G_{1})|\simeq|\Delta(G_{2})|$.
+Un complejo simplicial $\Delta$ está formado por un conjunto de
+vértices y una colección de subconjuntos de vértices, llamados
+\emph{simplejos}, tal que la colección es cerrada bajo tomar
+subconjuntos. A cada complejo simplicial se le puede asociar un
+espacio topológico $|\Delta|$, llamado su \emph{realización
+  geométrica}. Los complejos simpliciales son una herramienta
+fundamental para introducir conceptos topológicos dentro de la
+combinatoria. 
+
+Considereraremos complejos simpliciales obtenidos a partir de
+gráficas. Es decir, a cada gráfica $G$ simple finita se le asocia un
+espacio topológico por medio del complejo simplicial $\Delta(G)$, cuyos
+simplejos son las subgráficas completas. Por lo tanto, a la gráfica
+$G$ se le asocian conceptos topológicos por medio de
+$|\Delta(G)|$. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas finitas,
+diremos que $G_{1}$ y $G_{2}$ son homeomorfas si $|\Delta(G_{1})|$
+$|\Delta(G_{2})|$ lo son.
 
 En el primer capítulo se enuncian algunas definiciones y teoremas de
 álgebra lineal que usaremos en el desarrollo de éste
@@ -1405,7 +1414,7 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   demostrado.
 \end{proof}
 
-\chapter{Tableros de Young y representaciones del grupo simétrico.}
+\chapter[Representaciones del grupo simétrico]{Tableros de Young y representaciones del grupo simétrico.}
 %\label{repr-grupo-simetrico}
 
 En este capítulo, estudiamos la relación entre representaciones del
@@ -2569,7 +2578,7 @@ La demostración puede ser encontrada en \cite{munkres1984elements}.
 Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
 isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
-\section{Homomorfismos inducidos por funciones homotópicas}
+\section[Homomorfismos inducidos]{Homomorfismos inducidos por funciones homotópicas}
 
 Es posible definir la homología de un espacio topológico general por
 medio de la \emph{homología singular}. Por otro lado, a cada complejo
@@ -2859,7 +2868,7 @@ La \textbf{gráfica de emparejamientos} de $K_{n}$ será denotada por $G_{n}$.
 Tenemos que $M_{n}=\Delta(G_{n})$. Como $S_{n}$ actúa de manera
 natural en $G_{n}$ los espacios $C_{p}(M_{n})$, $Z_{p}(M_{n})$,
 $B_{p}(M_{n})$ (y por lo tanto $\widetilde H_{p}(M_{n})$) se convierten en
-$S_{n}$-módulos sobre $\mathbb{C}$. En el éste capítulo consideramos
+$S_{n}$-módulos sobre $\mathbb{C}$. En éste capítulo consideramos
 la descomposición en módulos irreducibles de
 $\widetilde H_{p}(M_{n})=\widetilde H_{p}(\Delta(G_{n}))$ y
 $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
