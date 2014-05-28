@@ -184,47 +184,62 @@ la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de manera natural, por
 lo que sus homologías con coeficientes complejos definen
 representaciones de $S_{n}$. 
 
-
-
+Obtenemos el mismo resultado de Bouc para $n\leq 6$ por medio de
+argumentos de representaciones de grupos y topología. Así mismo
+calculamos la descomposición en módulos irreducibles de las homologías
+reducidas de complejos simpliciales obtenidos a partir de la
+gráfica de clanes $K(G_{n})$ en donde también actúa el grupo simétrico
+$S_{n}$, con $n\leq 6$.
 
 Un clan es una subgráfica completa maximal. La gráfica de clanes
 $K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
 de $G$ y dos vértices son adyacentes si los correspondientes clanes se
 intersectan.
 
+Hablamos de complejos simpliciales obtenidos a partir de gráficas. Es
+decir, a cada gráfica $G$ finita se le asocia un espacio topológico
+por medio del complejo simplicial $\Delta(G)$ cuyos simplejos son las
+subgráficas completas. A su vez a los complejos simpliciales se les
+asocian conceptos topológicos por medio de la realización
+geométrica. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas finitas,
+escribiremos $G_{1}\simeq G_{2}$ si se tiene que
+$\Delta(G_{1})\simeq\Delta(G_{2})$, así mismo tenemos que
+$|\Delta(G_{1})|\simeq|\Delta(G_{2})|$.
 
+En el primer capítulo se enuncian algunas definiciones y teoremas de
+álgebra lineal que usaremos en el desarrollo de éste
+trabajo. Entre las definiciones que usamos constantemente son la de suma directa de
+espacios vectoriales y espacio cociente. El teorema de isomorfismo
+jugará un papel importante en el calculo de nuestras particulares homologías.
 
-La descomposición en irreducibles de tales homologías ha sido exhibida
-por Bouc (1984). En éste trabajo se muestra el resultado correspondiente para la
-gráfica de clanes $K(G_{n})$, donde $n\leq 6$.
+En el segundo capítulo ....Representaciones de grupos
+% \begin{theorem}[Teorema de Maschke]
+%     Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
+%   \textbf{completamente reducible}, es decir
+%   \begin{equation*}
+%     V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
+%   \end{equation*}
+% donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
+% irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
+% decir la cantidad de $W^{(i)}$.
+% \end{theorem}
 
-Algunos argumentos que ocupamos para calcular ..... usamos conceptos
-topologicos y representaciones de grupos ....
-
-A cada gráfica $G$ finita se le asocia un espacio topológico por
-medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
-las subgráficas completas. 
-
-A su vez a los complejos simpliciales se les asocian conceptos topológicos por
-medio de la realización geométrica.
-
-Entonces a $G$ le podemos asociar conceptos topológicos por
-medio de $\Delta(G)$. Por ejemplo, escribiremos $G_{1}\simeq G_{2}$ si
-se tiene que $\Delta(G_{1})\simeq\Delta(G_{2})$.
-
-Por ejemplo, dos complejos se dicen homeomorfos si las realizaciones
-geométricas los son.
-
-Por ejemplo, las gráficas $G_{1}$ y $G_{2}$, diremos que $G_{1}\simeq
-G_{2}$ si $\Delta(G_{1})\simeq\Delta(G_{2})$ y $|\Delta(G_{1})|\simeq|\Delta(G_{2})|$......
-
-
-En el primer capítulo...
-
-En el segundo capítulo estudiamos la relación entre tableros de Young
+En el tercer capítulo estudiamos la relación entre tableros de Young
 y representaciones del grupo simétrico. Describimos la construcción de
 módulos de Specht los cuales son representaciones irreducibles de
 $S_{n}$.
+
+En el cuarto capítulo .....
+
+En el capítulo 5 se define gráfica de clanes y gráfica
+bipartita clánica. Asimismo a las gráficas finitas se les asocia complejos
+simpliciales.
+
+Finalmente en el capítulo 6 se utilizará la teoría presentada en los
+anteriores capítulos. Se define el complejo de emparejamientos y se
+enuncia el teorema de Bouc.  Además calculamos las homologías
+reducidas de complejos de emparejamiento $M_{n}$ y de complejos
+simpliciales obtenidos de las gráficas de clanes $K(M_{n})$, con $n\leq 6$.
 
 \tableofcontents
 
@@ -232,7 +247,8 @@ $S_{n}$.
  \newpage \thispagestyle{empty}
 
 \chapter{Repaso de álgebra lineal}
-%\label{cha:repaso-algebra-line}
+\label{cha:repaso-algebra-lineal}
+
 \section{Espacios vectoriales}
 
 En este capítulo se revisan algunos resultados de álgebra lineal, las
@@ -1224,7 +1240,7 @@ de $V^{(i)}$. Entonces
 \end{enumerate}
 \end{corollary}
 
-\section{Carateres y módulos inducidos}
+\section{Caracteres y módulos inducidos}
 \label{carac-induc}
 
 Dado un grupo $G$, sea $H\leq G$ hay una forma de obtener
