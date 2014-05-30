@@ -213,42 +213,49 @@ simplejos son las subgráficas completas. Por lo tanto, a la gráfica
 $G$ se le asocian conceptos topológicos por medio de
 $|\Delta(G)|$. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas finitas,
 diremos que $G_{1}$ y $G_{2}$ son homeomorfas si $|\Delta(G_{1})|$
-$|\Delta(G_{2})|$ lo son.
+y $|\Delta(G_{2})|$ lo son.
 
-En el primer capítulo se enuncian algunas definiciones y teoremas de
-álgebra lineal que usaremos en el desarrollo de éste
-trabajo. Entre las definiciones que usamos constantemente son la de suma directa de
-espacios vectoriales y espacio cociente. El teorema de isomorfismo
-jugará un papel importante en el calculo de nuestras particulares homologías.
+En el primer capítulo se enuncian algunas definiciones y teoremas
+de espacios vectoriales y transformaciones lineales que usaremos en el
+desarrollo de éste trabajo. Entre las definiciones que utilizamos
+frecuentemente son la de suma directa de espacios vectoriales y
+espacio cociente. 
 
-En el segundo capítulo ....Representaciones de grupos
-% \begin{theorem}[Teorema de Maschke]
-%     Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
-%   \textbf{completamente reducible}, es decir
-%   \begin{equation*}
-%     V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
-%   \end{equation*}
-% donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
-% irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
-% decir la cantidad de $W^{(i)}$.
-% \end{theorem}
+En el segundo capítulo se presenta la teoría de representaciones de
+grupos. Estudiar representaciones de un grupo $G$ en un espacio
+vectorial $V$ resulta equivalente a estudiar $G$-módulos $V$. Se
+discute el teorema de Maschke que enuncia que cualquier $G$-módulo $V$
+se puede descomponer como suma directa de $G$-submódulos
+irreducibles. Por otra parte los caracteres de una
+representación y el producto interno de caracteres nos proporcionan información
+acerca las representaciones. El capítulo termina con la sección de
+caracteres y módulos inducidos.
 
 En el tercer capítulo estudiamos la relación entre tableros de Young
 y representaciones del grupo simétrico. Describimos la construcción de
 módulos de Specht los cuales son representaciones irreducibles de
 $S_{n}$.
 
-En el cuarto capítulo .....
+Las homologías de complejos simpliciales son el tema del capítulo 4.
+En la sección \ref{com-sim-abs} se desarrollan conceptos como:
+complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$, el
+operador frontera $\partial_{p}$. En la sección \ref{hom-simp} se
+define homología  y homología reducida de un complejo simplicial. Se
+presentan los complejos de cadenas en la sección \ref{com-cad} y por
+último en la sección \ref{hom-ind} se definen espacios topológicos
+homotópicos y resulta que las homologías de tales espacios son
+isomorfas.
 
 En el capítulo 5 se define gráfica de clanes y gráfica
 bipartita clánica. Asimismo a las gráficas finitas se les asocia complejos
 simpliciales.
 
 Finalmente en el capítulo 6 se utilizará la teoría presentada en los
-anteriores capítulos. Se define el complejo de emparejamientos y se
+capítulos anteriores. Se define el complejo de emparejamientos y se
 enuncia el teorema de Bouc.  Además calculamos las homologías
-reducidas de complejos de emparejamiento $M_{n}$ y de complejos
-simpliciales obtenidos de las gráficas de clanes $K(M_{n})$, con $n\leq 6$.
+reducidas de complejos de emparejamientos $M_{n}$ y de los complejos
+simpliciales obtenidos de las gráficas de clanes $K(G_{n})$, para
+$n\leq 6$.
 
 \tableofcontents
 
@@ -260,10 +267,10 @@ simpliciales obtenidos de las gráficas de clanes $K(M_{n})$, con $n\leq 6$.
 
 \section{Espacios vectoriales}
 
-En este capítulo se revisan algunos resultados de álgebra lineal, las
+En éste capítulo se revisan algunos resultados de álgebra lineal, las
 pruebas se omiten pero se puede consultar algún texto de álgebra
 lineal como \cite{friedberg1982algebra}
-para más  detalles. En este trabajo todos los espacios vectoriales
+para más  detalles. En éste trabajo todos los espacios vectoriales
 considerados serán dimensionalmente finitos y sobre el campo de los
 números complejos.
 
@@ -389,6 +396,29 @@ Las demostraciones de los resultados de grupos y de representaciones
 de grupos que no incluiremos explícitamente se pueden encontrar en
 \cite{fraleigh} y \cite{james2001representations} respectivamente.
 
+En la primera sección se desarrollan conceptos básicos de grupos. En
+la sección \ref{acc-grup} y  \ref{rep-grup} observamos que estudiar
+representaciones de un grupo $G$ en un espacio vectorial $V$ es
+equivalente a estudiar $G$-módulos $V$. Se discute el teorema de
+Maschke que enuncia que cualquier $G$-módulo $V$ se puede descomponer
+como suma directa de $G$-submódulos irreducibles en la sección~\ref{reducibilidad}. 
+
+Consideramos el lema de Schur, pues su demostración es similar a
+cierta proposición posterior que encontramos al final de la sección
+\ref{schur}. Por otra parte los caracteres de una representación nos
+proporcionan información acerca de ésta, se describe con detalle en la
+sección \ref{caracteres}. Además por medio de el producto interno de
+caracteres podemos determinar algunos resultados como: si una
+representación es irreducible, cuándo dos representaciones son
+equivalentes, la mulplicidad de cierto submódulo irreducible dada la
+descomposición del $G$-módulo, entre otros resultados que vemos en la
+sección~\ref{producto-interno}. 
+
+El capítulo termina con la sección de caracteres y módulos inducidos,
+en donde se expone la reciprocidad de Frobenius y si $V$ es un
+$G$-módulo inducido por el $H$-módulo $W$ sus respectivos caracteres
+son iguales.
+
 \section{Grupos}
 \label{grupos}
 
@@ -425,6 +455,37 @@ de grupos que no incluiremos explícitamente se pueden encontrar en
   \end{enumerate}
 \end{theorem}
 
+Estudiar las representaciones de un grupo $G$ en un espacio
+vectorial $V$, es equivalente a estudiar los $G$-módulos $V$.
+
+\begin{definition}
+  Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o \textbf{submódulo} de $V$ es un subespacio
+  $W$ que es invariante bajo la acción de $G$, es decir, $ gw\in W$
+  para todos $w\in W$, $g\in G$, tal que $W$ junto con la acción de
+  $G$ es en sí mismo un $G$-módulo. Escribiremos $W\leq V$ si $W$ es
+  submódulo de $V$. 
+\end{definition}
+
+\begin{theorem}[Teorema de Maschke]
+    Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
+  \textbf{completamente reducible}, es decir
+  \begin{equation*}
+    V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
+  \end{equation*}
+donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
+irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
+decir la cantidad de $W^{(i)}$.
+\end{theorem}
+
+\begin{proposition}
+   Si $V$ y $W$ son $G$-módulos, $f:V\rightarrow W$ un morfismo de $G$-módulos, $S\leq V$ con $S$
+  irreducible, entonces $f(S)\cong S$ o $f(S)=0$.
+\end{proposition}
+
+
+Mediante el producto interno de caracteres  podemos determinar si una
+representación es irreducible o cuando dos representaciones son equivalentes.
+
 % \begin{definition}
 %   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
 %   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
@@ -443,6 +504,7 @@ $\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
 Además existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 
 \section{Acciones de grupos}
+\label{acc-grup}
 
 \begin{definition}
   Sea $G$ un grupo y $Y$ un conjunto no vacío. Una  \textbf{acción de $G$
@@ -473,6 +535,7 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
 \end{definition} 
 
 \begin{theorem}
+  \label{rep-mod}
   Existe una correspondencia biyectiva entre el conjunto de acciones
   lineales de un grupo $G$ en un $\mathbb{C}$-espacio vectorial $V$ y el conjunto
   de homomorfismos de $G$ en $GL(V)$.
@@ -526,6 +589,7 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
 \end{proof}
 
 \section{Representaciones de grupos}
+\label{rep-grup}
 
 \begin{definition}
   \label{representacion}
@@ -533,6 +597,8 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   \textbf{representación} de $G$ en $V$ es un homomorfismo 
      $$\rho:G\rightarrow GL(V).$$
 \end{definition}
+Así que el teorema \ref{rep-mod} nos dice que estudiar las representaciones de $G$
+en $V$, es equivalente a estudiar $G$-módulos $V$.
 \begin{definition}
   Llamemos \textbf{representación matricial} al homomorfismo
    de la definición \ref{representacion}, es decir, 
@@ -542,9 +608,7 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
 Se denotará $(\rho,V)$ para enfatizar el hecho de que la
 representación $\rho$ de $G$  es sobre el espacio $V$. A
 dicho espacio $V$ se le llamará \emph{espacio de representación} y a
-su dimensión el \emph{grado} de la representación 
-Estudiar las representaciones de un grupo $G$ en un espacio
-vectorial $V$, es equivalente a estudiar los $G$-módulos de $V$. 
+su dimensión el \emph{grado} de la representación. 
 
 \begin{example}[Representación trivial]
   La representación trivial de un grupo $G$ es el homomorfismo
@@ -815,7 +879,7 @@ vectorial $V$, es equivalente a estudiar los $G$-módulos de $V$.
   \end{center}
 \end{example}
 
-\section{Reducibilidad}%Módulos irreducibles}
+\section{Reducibilidad}
 \label{reducibilidad}
 
 En ésta sección $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
@@ -1207,7 +1271,8 @@ se encuentran en~\cite{liebeck}.
 \label{producto-interno}
 
 Mediante el producto interno de caracteres  podemos determinar si una
-representación es irreducible o cuando dos representaciones son equivalentes.
+representación es irreducible o cuándo dos representaciones son
+equivalentes. Además de otros resultados que veremos a continuación.
 \begin{definition}
   Sean $\chi$, $\psi$ los caracteres de dos representaciones de un grupo
   $G$, entonces definimos el producto interno de $\chi$ y $\psi$ como:
@@ -1417,7 +1482,7 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
 \chapter[Representaciones del grupo simétrico]{Tableros de Young y representaciones del grupo simétrico.}
 %\label{repr-grupo-simetrico}
 
-En este capítulo, estudiamos la relación entre representaciones del
+En éste capítulo, estudiamos la relación entre representaciones del
 grupo simétrico $S_{n}$ y objetos combinatorios llamados tableros de
 Young. Definimos tablero de Young en la sección \ref{tablero}, por
 ahora es suficiente decir que es el llenado de cierta configuración de cajas
@@ -1511,7 +1576,7 @@ considerando particiones y diagramas de Young.
   $\lambda\vdash n$ para denotar que $\lambda$ es una partición de $n$.
 \end{definition}
 
-Por ejemplo, el número $4$ tiene cinco particiones:$(4)$, $(3,1)$,
+Por ejemplo, el número $4$ tiene cinco particiones: $(4)$, $(3,1)$,
 $(2,2)$, $(2,1,1)$, $(1,1,1,1)$. Podemos también representar
 particiones usando diagramas de Young como sigue.
 
@@ -2046,6 +2111,25 @@ relacionados con la fórmula de Bouc.
 \chapter{Homología de complejos simpliciales}
 \label{cha:hom-com-sim}
 
+En éste capítulo se define homología  y homología reducida de un
+complejo simplicial, para lo cual requerimos conceptos previos como:
+complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$ y el
+operador frontera $\partial_{p}$ descritos en la sección
+\ref{com-sim-abs}. 
+
+Se presentan los complejos de cadenas en la sección \ref{com-cad} y se
+establece cierto diagrama conmutativo de los complejos de cadenas en donde
+se define una trasformación lineal entre los espacios de tales
+complejos de cadenas la cual induce una transformación lineal de las homologías
+de los correspondientes espacios.
+
+Por último en la sección \ref{hom-ind}, a los complejos simpliciales
+$\Delta$ se les asocian conceptos topológicos por medio de su
+realización geométrica $|\Delta|$. Por otra parte, si dos espacios son
+homeomorfos, tienen homologías isomorfas. Una condición más débil que
+homeomorfismo que implica el mismo resultado, es el de espacios
+homotópicos.
+
 Las demostraciones que se omiten se pueden encontrar en
 \cite{munkres1984elements}.
 
@@ -2275,6 +2359,7 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
 \end{example}
 
 \section{Homología simplicial}
+\label{hom-simp}
 
 \begin{definition}
    El kernel de $\partial_{p}:C_{p}(\Delta)\rightarrow
@@ -2488,6 +2573,7 @@ La demostración puede ser encontrada en \cite{munkres1984elements}.
 \end{example}
 
 \section{Complejo de cadenas}
+\label{com-cad}
 
 \begin{definition}
   Un \textbf{complejo de cadenas} $(A,\partial)$ es una secuencia
@@ -2576,9 +2662,10 @@ La demostración puede ser encontrada en \cite{munkres1984elements}.
   linealidad de $f$.
 \end{proof}
 Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
-isomorfismo $f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
+isomorfismo~$f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 \section[Homomorfismos inducidos]{Homomorfismos inducidos por funciones homotópicas}
+\label{hom-ind}
 
 Es posible definir la homología de un espacio topológico general por
 medio de la \emph{homología singular}. Por otro lado, a cada complejo
@@ -2835,7 +2922,7 @@ observa en \ref{fig:realizacion-geometrica}.
 Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
 \mid |x|\leq 1\}$. 
 
-\chapter{Homologías del complejo de emparejamientos}
+\chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías de el complejo de emparejamientos}
 \label{cha:hom-com-emp}
 
 En éste capítulo se utilizarán todos los conceptos y resultados
@@ -2935,9 +3022,9 @@ El teorema \ref{bouc} que se enuncia a continuación, nos muestra la descomposic
 Specht de las homologías reducidas de complejos de emparejamientos $(\widetilde H_{p}(M_{n}))$. 
 
 \begin{theorem}[Teorema de Bouc]
-La descomposición en módulos irreducibles del $S_{n}$-módulo $\widetilde
+La descomposición en submódulos irreducibles del $S_{n}$-módulo $\widetilde
 H_{k-1}(M_{n})$ sobre $\mathbb{C}$, fue dada por Bouc en \cite{MR756517}. Para
-todo $n\geq1$ y $k\in \mathbb{Z}$,
+todo $n,k\geq1$,
 \begin{equation*}
   % \label{eq:6}
   \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
