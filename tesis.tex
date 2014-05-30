@@ -265,14 +265,15 @@ $n\leq 6$.
 \chapter{Repaso de álgebra lineal}
 \label{cha:repaso-algebra-lineal}
 
-\section{Espacios vectoriales}
-
 En éste capítulo se revisan algunos resultados de álgebra lineal, las
 pruebas se omiten pero se puede consultar algún texto de álgebra
 lineal como \cite{friedberg1982algebra}
 para más  detalles. En éste trabajo todos los espacios vectoriales
 considerados serán dimensionalmente finitos y sobre el campo de los
 números complejos.
+
+\section{Espacios vectoriales}
+\label{esp-vec}
 
 \begin{theorem}
   \label{clunica}
@@ -353,6 +354,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 % \end{theorem}
 
 \section{Transformaciones lineales}
+\label{trasn-lin}
 
 \begin{theorem}
   \label{imT}
@@ -4658,8 +4660,6 @@ $\widetilde H_{1}(K(M_{6}))$ y $\widetilde H_{2}(K(M_{6}))$.
 Como $\widehat\varepsilon$ es suprayectiva y por el teorema
 \ref{teorema-isomorfismo-mod} tenemos:
 
-
-
 \begin{equation*}
   (\mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
 \end{equation*}
@@ -4717,9 +4717,6 @@ De las ecuaciones \ref{ker1-KM6} y \ref{im2-KM6} tenemos:
   &=&S^{(3,2,1)}
 \end{eqnarray*}
 
-
-
-
 Anteriormente usamos el hecho de que $M_{6}\simeq K(M_{6})$  para
 concluir que $\widetilde H_{2}(K(M_{6}))=\widetilde H_{2}(M_{6})=0$, sin embargo veamos que no es necesario, por lo que
 necesitamos calcular $\im \widehat\partial_{2}$. 
@@ -4733,13 +4730,6 @@ decir, si
 $$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{15}\partial_{2}(c_{15})=0$$
 así que:
 
-
-
-
-  
-
-
-
 \begin{footnotesize}
   \begin{align*}
     &\lambda_{1}(a_{2}a_{3}-a_{1}a_{3}+a_{1}a_{2})+\lambda_{2}(a_{4}a_{7}-a_{1}a_{7}+a_{1}a_{4})+\lambda_{3}(a_{12}a_{15}-a_{1}a_{15}+a_{1}a_{12})\\
@@ -4751,7 +4741,6 @@ así que:
     &=0
   \end{align*}
 \end{footnotesize}
-
 
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{15}=0$,
 intuituvamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
@@ -4769,6 +4758,19 @@ Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
   $$\widehat\partial_{2}(S^{(3,1,1,1)})=S^{(3,1,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1,1)})=0$$
 Además $\dim(S^{(2,1,1,1,1)})=5$ y $\dim(S^{(3,1,1,1)})=10$, entonces:
 $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}$$
+
+\chapter*{Conclusiones}
+ 
+Describimos la descomposición en submódulos irreducibles del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$, donde $\widetilde
+H_{k}(M_{n})$ es la homología reducida de los complejos simpliciales
+de emparejamientos, para $n\leq 6$.
+
+Por otro lado, también calculamos la descomposición en módulos
+irreducibles de $\widetilde H_{k}(K(M_{n}))$, es decir, de las
+homologías reducidas de los complejos simpliciales inducidos a partir
+de la gráfica de clanes $K(G_{n})$, con $n\leq 6$.
+
+El artículo \cite{larrion2009clique}....
 
 \bibliographystyle{plain}
 \bibliography{labiblio}
