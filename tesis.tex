@@ -457,37 +457,6 @@ son iguales.
   \end{enumerate}
 \end{theorem}
 
-Estudiar las representaciones de un grupo $G$ en un espacio
-vectorial $V$, es equivalente a estudiar los $G$-módulos $V$.
-
-\begin{definition}
-  Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o \textbf{submódulo} de $V$ es un subespacio
-  $W$ que es invariante bajo la acción de $G$, es decir, $ gw\in W$
-  para todos $w\in W$, $g\in G$, tal que $W$ junto con la acción de
-  $G$ es en sí mismo un $G$-módulo. Escribiremos $W\leq V$ si $W$ es
-  submódulo de $V$. 
-\end{definition}
-
-\begin{theorem}[Teorema de Maschke]
-    Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
-  \textbf{completamente reducible}, es decir
-  \begin{equation*}
-    V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
-  \end{equation*}
-donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
-irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
-decir la cantidad de $W^{(i)}$.
-\end{theorem}
-
-\begin{proposition}
-   Si $V$ y $W$ son $G$-módulos, $f:V\rightarrow W$ un morfismo de $G$-módulos, $S\leq V$ con $S$
-  irreducible, entonces $f(S)\cong S$ o $f(S)=0$.
-\end{proposition}
-
-
-Mediante el producto interno de caracteres  podemos determinar si una
-representación es irreducible o cuando dos representaciones son equivalentes.
-
 % \begin{definition}
 %   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
 %   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
@@ -1374,17 +1343,17 @@ m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}\neq 0$.
   Para $g,y\in G$ tenemos que
   \begin{align*}
     \theta\uparrow^{G}_{H}(ygy^{-1})&=\frac{1}{|H|}\sum_{\substack{x\in
-        G\\x(ygy^{-1})x^{-1}\in H}}\theta(xygy^{-1}x^{-1})\\
+        G\\x^{-1}(ygy^{-1})x\in H}}\theta(x^{-1}ygy^{-1}x)\\
     &=\frac{1}{|H|}\sum_{\substack{x\in
-        G\\(xy)g(xy)^{-1}\in H}}\theta((xy)g(xy)^{-1})\\
-    &=\frac{1}{|H|}\sum_{\substack{uy^{-1}\in
-        G\\ugu^{-1}\in H}}\theta(ugu^{-1})\\
+        G\\(y^{-1}x)^{-1}g(y^{-1}x)\in H}}\theta((y^{-1}x)^{-1}g(y^{-1}x))\\
+    &=\frac{1}{|H|}\sum_{\substack{yu\in
+        G\\u^{-1}gu\in H}}\theta(u^{-1}gu)\\
      &=\frac{1}{|H|}\sum_{\substack{u\in
-        G\\ugu^{-1}\in H}}\theta(ugu^{-1})\\
+        G\\u^{-1}gu\in H}}\theta(u^{-1}gu)\\
     &=\theta\uparrow^{G}_{H}(g)
   \end{align*}
-se hizo el cambio de variable $u=xy$ (esto es $x=uy^{-1}$), y notamos
-que~$uy^{-1}\in G$ si y solo si $u\in G$.
+en donde se hizo el cambio de variable $u=y^{-1}x$ (esto es $x=yu$), y notamos
+que $yu\in G$ si y solo si $u\in G$.
 \end{proof}
 \begin{theorem}[Reciprocidad de Frobenius]
   \label{frobenius}
@@ -1401,15 +1370,16 @@ que~$uy^{-1}\in G$ si y solo si $u\in G$.
     \langle\theta\uparrow^{G}_{H},\phi\rangle&=\frac{1}{|G|}\sum_{g\in
     G}\theta\uparrow^{G}_{H}(g)\overline{\phi(g)}\\
   &=\frac{1}{|G|}\sum_{g\in G}\Bigg(\frac{1}{|H|}\sum_{\substack{x\in
-        G\\xgx^{-1}\in H}}\theta(xgx^{-1})\Bigg)\overline{\phi(g)}\\
-    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g\in G,xgx^{-1}\in H\}}\theta(xgx^{-1})\overline{\phi(g)}\\
+        G\\x^{-1}gx\in H}}\theta(x^{-1}gx)\Bigg)\overline{\phi(g)}\\
+    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g,x\in G,x^{-1}gx\in H\}}\theta(x^{-1}gx)\overline{\phi(g)}\\
  \end{align*}
- hacemos el cambio $u=xgx^{-1}$, entonces $g=x^{-1}ux$,
+ hacemos el cambio $u=x^{-1}gx$, entonces $g=xux^{-1}$,
 \begin{align*}
-  &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(x^{-1}ux,x)\mid x^{-1}ux\in G,u\in H\}}\theta(u)\overline{\phi(x^{-1}ux)}\\
+  &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in G,u\in H\}}\theta(u)\overline{\phi(xux^{-1})}\\
   &=\frac{1}{|G|}\frac{1}{|H|}|G|\sum_{u\in
     H}\theta(u)\overline{\phi(u)}\\
-  &\text{pues si } u\in H, x^{-1}ux\in G \text{ para todo} x\in G,\text{ además} \phi(x^{-1}ux)=\phi(u)\\
+  &\text{pues } u\in H\text{, } xux^{-1}\in G \text{ para todo } x\in
+  G,\text{ además } \phi(xux^{-1})=\phi(u)\\
    &=\langle\theta,\phi\downarrow^{G}_{H}\rangle
  \end{align*}
 \end{proof}
