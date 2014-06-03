@@ -2238,12 +2238,12 @@ cada subconjunto no vacío de $A$ pertenece a $\Delta$.
 \end{definition}
 
 El elemento $A$ de $\Delta$ es llamado \textbf{simplejo} de
-$\Delta$; Si $A$ tiene $p+1$ elementos, decimos que $A$ es un
+$\Delta$. Si $A$ tiene $p+1$ elementos, decimos que $A$ es un
 \emph{p-simplejo} y su dimensión es $p$. La dimensión de $\Delta$
 es el máximo de las dimensiones de los simplejos de $\Delta$. Cada
 subconjunto no vacío de $A$ es llamado \textbf{cara} de $A$. El
-conjunto \textbf{vértices} $V$ de $\Delta$ es la unión de los
-elementos de un punto de $\Delta$; no hacemos distinción entre los
+conjunto de \textbf{vértices} $V$ de $\Delta$ es la unión de los
+elementos de un punto de $\Delta$. No haremos distinción entre los
 vértices~$v\in V$ y los $0$-simplejos $\{v\}\in \Delta$. Una
 subcolección de $\Delta$, que es a su vez es un complejo, se llama
 \textbf{subcomplejo} de $\Delta$.
@@ -2252,14 +2252,14 @@ subcolección de $\Delta$, que es a su vez es un complejo, se llama
   El subcomplejo de $\Delta$ que consiste de todos los simplejos de
   $\Delta$ de dimensión a lo más $p$, se llama \textbf{$\boldsymbol{p}$-esqueleto} de
   $\Delta$ y se denota por~$\Delta^{(p)}$. El $1$-esqueleto
-  $\Delta^{1}$ de cualquier complejo simplicial de $\Delta$ es una
+  $\Delta^{(1)}$ de cualquier complejo simplicial de $\Delta$ es una
   gráfica.
 \end{definition}
 
 \begin{definition}
   Un complejo simplicial $\Delta$ es \textbf{conexo} si
-  $\Delta^{1}$ es una gráfica conexa, es decir, si existe un camino en
-  $\Delta^{1}$  para cualquiera dos vértices.
+  $\Delta^{(1)}$ es una gráfica conexa, es decir, si existe un camino en
+  $\Delta^{(1)}$  para cualquiera dos vértices.
 \end{definition}
 
 Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
@@ -2290,8 +2290,9 @@ Un \textbf{3-simplejo orientado} está dado por una secuencia ordenada
 $v_{1}v_{2}v_{3}v_{4}$ de cuatro vértices de un tetraedro sólido
 como se observa en la figura \ref{fig:3-simplejo} y
 acordaremos que $v_{1}v_{2}v_{3}v_{4}=\pm v_{i}v_{j}v_{r}v_{s}$,
-dependiendo si la permutación es par o impar. Así que dos
-\emph{n-simplejos}, son equivalentes si difieren el uno del otro
+dependiendo si la permutación es par o impar. Así que dos maneras
+de enumerar los vértices de un $n$-simplejo se considerarán
+equivalentes, o producen la misma orientación si difieren una de la otra
 por una permutación par. 
 
 \begin{figure}[h]
@@ -2360,18 +2361,15 @@ por una permutación par.
 
 \begin{definition}
   Sea $\Delta$ un complejo simplicial. Una \textbf{\emph{p}-cadena} en
-  $\Delta$ es una función $c$ de el conjunto de $p$-simplejos de
-  $\Delta$ a los complejos, tal que:
-  \begin{enumerate}
-    \item $c(\sigma)=-c(\sigma^{'})$ si $\sigma$ y $\sigma^{'}$ tienen
-      direcciones opuestas del mismo simplejo.
-    \item $c(\sigma)=0$ para todo $p$-simplejo orientado $\sigma$,
-      excepto en un número finito de ellos.
-  \end{enumerate} 
+  $\Delta$ es una función $c$ de el conjunto de $p$-simplejos
+  orientados de
+  $\Delta$ al campo de los números complejos, tal que:
+    $c(\sigma)=-c(\sigma^{'})$ si $\sigma$ y $\sigma^{'}$ son
+      orientaciones opuestas del mismo simplejo.
 \end{definition}
 
-Dado que en nuestro caso sólo estudiamos complejos simpliciales cuyo
-conjunto de vértices es finito, la segunda condición no se aplica.
+% Dado que en nuestro caso sólo estudiamos complejos simpliciales cuyo
+% conjunto de vértices es finito, la segunda condición no se aplica.
 
 Sumamos $p$-cadenas sumando sus valores; el $\mathbb{C}$-espacio vectorial resultante es
 denotado por $C_{p}(\Delta)$ y es llamado el \textbf{espacio de
@@ -2412,23 +2410,24 @@ de las correspondientes cadenas elementales $\sigma_{i}$. La cadena
 $c$ asigna el valor~$n_{i}$ al \emph{p}-simplejo orientado
 $\sigma_{i}$ , el valor $(-n_{i})$ a la orientación opuesta de
 $\sigma_{i}$ y el valor $0$ a todo \emph{p}-simplejo orientado que no
-aparece en la suma, se sigue del teorema $\ref{clunica}$.
+aparece en la suma. Entonces la afirmación se sigue del teorema $\ref{clunica}$.
 \end{proof}
 
 \begin{corollary}
-  Toda función $f$ de los p-simplejos orientados de $\Delta$ en
-  un espacio vectorial $V$ puede extenderse de manera única a una
-  trasformación lineal de $C_{p}(\Delta)\rightarrow V$, tal que $f(-
-  \sigma)=-f(\sigma)$ para todo p-simplejo orientado~$\sigma$.
+  Toda función $f$ de los p-simplejos orientados de $\Delta$ en un
+  espacio vectorial $V$ , tal que $f(-\sigma)=-f(\sigma)$ para todo
+  p-simplejo orientado~$\sigma$ puede extenderse de manera única a una
+  trasformación lineal de $C_{p}(\Delta)\rightarrow V$
 \end{corollary}
+
 La prueba se puede consultar en el corolario 5.2 de \cite{munkres1984elements}.
+
 \begin{definition}
   Sea $\sigma=(v_{0},\ldots ,v_{p})$ un simplejo orientado con $p>0$
   (sin embargo también será denotado como $\sigma=v_{0}\ldots v_{p}$
   cuando no tengamos problemas de confusión),
   definimos la trasformación lineal
-  $\partial_{p}:C_{p}(\Delta)\rightarrow~C_{p-1}(\Delta)$ como:
-
+  $\partial_{p}:C_{p}(\Delta)\rightarrow~C_{p-1}(\Delta)$ por medio de:
   \begin{equation}
     \label{ofrontera}
     \partial_{p}(\sigma)=\partial_{p}(v_{0}\ldots
@@ -2450,10 +2449,10 @@ $$\partial_{p}(v_{0}\ldots v_{j} v_{j+1} \ldots v_{p}) \mbox{ y } \partial_{p}(v
 Para $i\neq j$, $j+1$, el $i$-ésimo término de estas dos expresiones
 difieren precisamente por un signo; los términos son idénticos,
 excepto que $v_{j}$ y~$v_{j+1}$ aparecen intercambiados. Veamos que
-sucede sobre el i-ésimo término cuando $i=j$ y $i=j+1$. En la primera
-expresión tenemos que:
+sucede sobre el $i$-ésimo término cuando $i=j$ y $i=j+1$. En la primera
+expresión obtenemos:
 $$(-1)^{j}(\ldots v_{j-1} \widehat v_{j}v_{j+1}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j}\widehat v_{j+1}v_{j+2}\ldots).$$
-en la segunda expresión tenemos:
+mientras que en la segunda expresión tenemos:
 $$(-1)^{j}(\ldots v_{j-1}\widehat v_{j+1}v_{j}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j+1}\widehat v_{j}v_{j+2}\ldots).$$
 Comparando éstas dos expresiones observamos que solo difieren por un signo.
 
@@ -2533,9 +2532,9 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 %     que $ac\in C_{n+1}(\Delta)$, así que $ab\in B_{n}(\Delta)$ pues $ab=a\partial_{n+1}(c)=\partial_{n+1}(ac)$.
 % \end{enumerate}
 \begin{definition}
-   Definimos al espacio
+   El espacio
    $$H_{p}(\Delta)=Z_{p}(\Delta)/B_{p}(\Delta)$$
-   al cual llamamos la \textbf{\emph{p}-ésima homología de $\Delta$}
+   se llama la \textbf{\emph{p}-ésima homología de $\Delta$}
 \end{definition}
 
 \begin{definition}
@@ -2549,10 +2548,10 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 \end{definition}
 
 \begin{theorem}
-  Sea $\Delta$ un complejo simplicial no vacío,
-  $$\widetilde H_{0}(\Delta)\cong \widetilde H_{0}(\Delta)\oplus
+  Sea $\Delta$ un complejo simplicial no vacío, entonces
+  $$H_{0}(\Delta)\cong \widetilde H_{0}(\Delta)\oplus
   \mathbb{C}.$$
-  Así $\widetilde H_{0}(\Delta)=0$ si $\Delta$ es conexo.
+  Además, $\widetilde H_{0}(\Delta)=0$ si $\Delta$ es conexo.
 \end{theorem}
 La demostración se encuentra en \cite{munkres1984elements}, en el
 teorema 7.2.
@@ -2573,7 +2572,7 @@ teorema 7.2.
     &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0}\rangle
   \end{align} 
   pues los vectores $v_{2}-v_{1}, v_{3}-v_{1}, v_{3}-v_{2}$ son
-  combinación lineal de los vectores de $\ref{frontera0}$, es decir:
+  combinación lineal de los vectores de $\ref{frontera0}$, ya que:
   $$v_{2}-v_{1}=(v_{2}-v_{0})-(v_{1}-v_{0})$$
   $$v_{3}-v_{1}=(v_{3}-v_{0})-(v_{1}-v_{0})$$
   $$v_{3}-v_{2}=(v_{3}-v_{0})-(v_{2}-v_{0})$$
@@ -2665,7 +2664,7 @@ teorema 7.2.
  Los simplejos de dimensión más alta son los \emph{2-simplejos}, así
  que $C_{3}(\Delta)=0$ por lo que 
  $$\boldsymbol{B_{2}(\Delta)}=\partial_{3}[C_{3}(\Delta)]=0$$ 
- Por determinar $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir 
+Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir 
  $$c=n_{1}v_{0}v_{1}v_{2}+n_{2}v_{0}v_{2}v_{3}+n_{3}v_{0}v_{1}v_{3}+n_{4}v_{1}v_{2}v_{3}$$
  tal que
  \begin{align*}
@@ -2687,15 +2686,14 @@ teorema 7.2.
 \label{com-cad}
 
 \begin{definition}
-  Un \textbf{complejo de cadenas} $(A,\partial)$ es una secuencia
+  Un \textbf{complejo de cadenas} $(A,\partial)$ es una sucesión
   $$A=\{\cdots,A_{2},A_{1},A_{0},A_{-1},A_{-2},\cdots\}$$
   de espacios vectoriales $A_{k}$, junto con una colección
   $\partial=\{\partial_{k}\mid k \in \mathbb{Z}\}$ de transformaciones
   lineales tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$ y
   $\partial_{k-1}\partial_{k}=0.$
-
-  Al complejo de cadenas en donde $A_{-1}=\mathbb{C}$ y $\partial_{0}=\varepsilon$,
-  donde $\varepsilon$ es la función aumento, le llamamos \textbf{complejo de cadenas aumentado}.
+  % Al complejo de cadenas en donde $A_{-1}=\mathbb{C}$ y $\partial_{0}=\varepsilon$,
+  % donde $\varepsilon$ es la función aumento, le llamamos \textbf{complejo de cadenas aumentado}.
 \end{definition}
 
 \begin{theorem}
@@ -2723,7 +2721,7 @@ teorema 7.2.
   kernel~$Z_{k}(A)$ de $\partial_{k}$ es el\textbf{ espacio de}
   $\boldsymbol{k}$\textbf{-ciclos,} y la imagen $B_{k}(A)=\partial_{k+1}[A_{k+1}]$ es el \textbf{espacio
     de} $\boldsymbol{k}$\textbf{-fronteras.} El espacio cociente $H_{k}(A)=Z_{k}(A)/B_{k}(A)$
-  es la $\boldsymbol{k}$\textbf{-ésima homología de A.}
+  es la $\boldsymbol{k}$\textbf{-ésima homología de $A$.}
 \end{definition}
 
 \begin{theorem}
@@ -2737,7 +2735,7 @@ teorema 7.2.
     \cdots @>{\partial^{'}_{k+2}}>> A^{'}_{k+1} @>{\partial^{'}_{k+1}}>> A^{'}_{k} @>{\partial^{'}_{k}}>> A^{'}_{k-1} @>{\partial^{'}_{k-1}}>> \cdots
   \end{CD}
   \]
-  Además para todo $k$ se tiene
+  Además, supongamos que para todo $k$ se tiene
   $$f_{k-1}\partial_{k}=\partial^{'}_{k}f_{k}$$
   Entonces $f_{k}$ induce una transformación lineal
   $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'}).$
@@ -2765,21 +2763,22 @@ teorema 7.2.
   $$f_{k}(z_{1})\in (f_{k}(z)+B_{k}(A^{'}))$$
   Así dos representantes de la misma clase lateral en
   $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son enviados en representantes de la misma
-  clase lateral en $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'}).$ Esto muestra
+  clase lateral en el subespacio $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'})$. Esto muestra
   que $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ está bien definida por
   la ecuación~$(\ref{trans-lin-homologias})$.
   
   Demostrar que $f_{*k}$ es una transformación lineal se sigue de la
-  linealidad de $f$.
+  linealidad de $f_{k}$.
 \end{proof}
+
 Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
 isomorfismo~$f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 \section[Homomorfismos inducidos]{Homomorfismos inducidos por funciones homotópicas}
 \label{hom-ind}
 
-Es posible definir la homología de un espacio topológico general por
-medio de la \emph{homología singular}. Por otro lado, a cada complejo
+Es posible definir homología de un espacio topológico general por
+medio del concepto de la \emph{homología singular}. Por otro lado, a cada complejo
 simplicial $\Delta$ se le puede asociar un espacio denotado $|\Delta|$
 llamado la \textbf{realización geométrica} de $\Delta$, dado por:
 
@@ -2842,8 +2841,8 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
 \end{theorem}
 Las demostraciones de los teoremas
 \ref{esp-homotopicos-homologias-iso} y \ref{homologia-realizacion} se
-encuentran en \cite{munkres1984elements}, en 19.5 y
-{\setlength{\fboxsep}{0pt}\colorbox{green}{??}} respectivamente.
+encuentran en \cite{munkres1984elements}, en el teorema 19.5 y
+el teorema 34.3.
  
 \chapter{Gráfica de clanes}
 \label{cha:grafica-clanes}
