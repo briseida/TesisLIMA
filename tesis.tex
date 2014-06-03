@@ -134,8 +134,8 @@ gráfica simple finita en donde actúa el grupo simétrico $S_{n}$.
 Se define la gráfica de emparejamientos $M(G)$ de la gráfica simple
 $G$ como la gráfica cuyos vértices son las aristas de $G$ y dos
 vértices son adyacentes si las correspondientes aristas son ajenas. En
-la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de manera natural, por
-lo que sus homologías con coeficientes complejos definen
+la gráfica $G_{n}=M(K_{n})$, el grupo~$S_{n}$ actúa de manera natural, por
+lo que sus homologías con coeficientes en el campo de los números complejos definen
 representaciones de $S_{n}$. 
 
 La descomposición en irreducibles de tales homologías ha sido exhibida
@@ -148,18 +148,18 @@ gráfica de clanes $K(G_{n})$, donde $n\leq 6$.
   {\bfseries\Large Abstract}
 \end{flushleft}
 
-In this thesis seeks to analyze the structure of the homology of
+In this thesis we seek to analyze the structure of the homology of
 certain simplicial complexes built from a finite graph where the
-symmetric group $S_{n}$ acts. 
+symmetric group~$S_{n}$ acts. 
 
 We define the matching graph $M(G)$ from a simple graph $G$ as 
 the graph whose vertices are the edges of $G$ and two vertices are
 adjacent if the corresponding edges are disjoint. In the graph
-$G_{n}=M(K_{n})$, the group $S_{n}$ acts naturally, so their homology
-with complex coefficients define representations of $S_{n}$. 
+$G_{n}=M(K_{n})$, the group~$S_{n}$ acts naturally, so their homology
+with coefficients in the field of complex numbers define representations of $S_{n}$. 
 
-The decomposition into irreducible such homologies has been exhibited 
-by Bouc (1984). In this thesis, we show the corresponding result for
+The decomposition into irreducibles of such homologies has been shown
+by Bouc (1984). In this thesis, we show the corresponding calculations for
 the clique graph $K(G_{n})$, where $n\leq 6$.
 
 \chapter*{Introducción}
@@ -173,7 +173,7 @@ La idea de la presente tesis surge a partir del teorema de Bouc
 para todo $n,k\geq1$. Tal teorema describe la descomposición en
 submódulos irreducibles del $S_{n}$-módulo $\widetilde
 H_{k-1}(M_{n})$, donde $\widetilde H_{k-1}(M_{n})$ es la homología
-reducida de complejos simpliciales construidos a partir de ciertas
+reducida de complejos simpliciales $M_{n}$ construidos a partir de ciertas
 gráficas, (llamadas \emph{gráficas de emparejamientos}) en donde actúa
 el grupo simétrico~$S_{n}$.
 
@@ -182,20 +182,7 @@ $G$ como la gráfica cuyos vértices son las aristas de $G$ y dos
 vértices son adyacentes si las correspondientes aristas son
 ajenas. Denotemos por $K_{n}$ a la gráfica completa con $n$
 vértices. En la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de
-manera natural, por lo que sus homologías con coeficientes en el campo
-de los números complejos definen representaciones de $S_{n}$.
-
-En la tesis reproducimos el resultado de Bouc para $n\leq 6$ por medio de
-argumentos elementales de representaciones de grupos y topología. Así mismo
-calculamos la descomposición en módulos irreducibles de las homologías
-reducidas de los complejos simpliciales inducidos a partir de la
-gráfica de clanes $K(G_{n})$ en donde también actúa el grupo simétrico
-$S_{n}$, con $n\leq 6$.
-
-Un clan es una subgráfica completa maximal. La gráfica de clanes
-$K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
-de $G$ y dos vértices son adyacentes si los correspondientes clanes se
-intersecan.
+manera natural.
 
 Un complejo simplicial $\Delta$ está formado por un conjunto de
 vértices y una colección de subconjuntos de vértices, llamados
@@ -215,6 +202,23 @@ $|\Delta(G)|$. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas finitas,
 diremos que $G_{1}$ y $G_{2}$ son homeomorfas si $|\Delta(G_{1})|$
 y $|\Delta(G_{2})|$ lo son.
 
+Se define entonces el complejo simplicial $M_{n}$ como
+$M_{n}=\Delta(G_{n})$. Puesto que $S_{n}$ actúa en $M_{n}$, las
+homologías de $\Delta(G_{n})$ con coeficientes en el campo de los
+números complejos definen representaciones de $S_{n}$.
+
+En la tesis reproducimos el resultado de Bouc para $n\leq 6$ por medio de
+argumentos elementales de representaciones de grupos y topología. Así mismo
+calculamos la descomposición en módulos irreducibles de las homologías
+reducidas de los complejos simpliciales obtenidos a partir de la
+gráfica de clanes $K(G_{n})$ en donde también actúa el grupo simétrico
+$S_{n}$, con $n\leq 6$.
+
+Un clan es una subgráfica completa maximal. La gráfica de clanes
+$K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
+de $G$ y dos vértices son adyacentes si los correspondientes clanes se
+intersecan.
+
 En el primer capítulo se enuncian algunas definiciones y teoremas
 de espacios vectoriales y transformaciones lineales que usaremos en el
 desarrollo de éste trabajo. Entre las definiciones que utilizamos
@@ -233,7 +237,7 @@ caracteres y módulos inducidos.
 
 En el tercer capítulo estudiamos la relación entre tableros de Young
 y representaciones del grupo simétrico. Describimos la construcción de
-módulos de Specht los cuales son representaciones irreducibles de
+módulos de Specht los cuales dan una lista completa de las representaciones irreducibles de
 $S_{n}$.
 
 Las homologías de complejos simpliciales son el tema del capítulo 4.
@@ -241,9 +245,9 @@ En la sección \ref{com-sim-abs} se desarrollan conceptos como:
 complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$, el
 operador frontera $\partial_{p}$. En la sección \ref{hom-simp} se
 define homología  y homología reducida de un complejo simplicial. Se
-presentan los complejos de cadenas en la sección \ref{com-cad} y por
+presentan los complejos de cadenas abstractos en la sección \ref{com-cad} y por
 último en la sección \ref{hom-ind} se definen espacios topológicos
-homotópicos y resulta que las homologías de tales espacios son
+homotópicos y se menciona que las homologías de espacios homotópicos son
 isomorfas.
 
 En el capítulo 5 se define gráfica de clanes y gráfica
@@ -282,7 +286,7 @@ números complejos.
   cada vector $y\in V$ puede ser expresado de manera única como una
   combinación lineal de vectores de~$\beta$, es decir, puede ser
   expresado de la forma
-  $$y=\lambda_{1}v_{1}+\ldots+\lambda_{n}v_{n}$$
+  $$y=\lambda_{1}v_{1}+\cdots+\lambda_{n}v_{n}$$
   para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
 \end{theorem}
 
@@ -298,10 +302,13 @@ números complejos.
   vectorial $V$, entonces la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
   expresa como $W_{1}+W_{2}$, es el conjunto $\{x+y:x\in W_{1}$ y $y\in
   W_{_2}\}$. La suma de cualquier número finito de subconjuntos no
-  vacíos de $V$, $W_{1},\cdots,W_{n}$, se define análogamente como el
+  vacíos de $V$: $W_{1},\ldots,W_{n}$, se define análogamente como el
   conjunto
-  $$W_{1}+\ldots+W_{n}=\{x_{1}+\ldots+x_{n}: x_{i}\in W_{i} \mbox{ para }i=1,2,\ldots,n\}$$
+  $$W_{1}+\cdots+W_{n}=\{x_{1}+\cdots+x_{n}: x_{i}\in W_{i} \mbox{ para }i=1,2,\ldots,n\}$$
 \end{definition}
+
+Se tiene en general que si $W_{1}$ y $W_{2}$ son subespacios de $V$,
+entonces $W_{1}+W_{2}$ es subespacio de $V$.
 
 \begin{definition}
   \label{suma-directa}
@@ -413,15 +420,14 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
 
 \begin{theorem}
   \label{esp-isomorfos}
-  Sean $V$ y $W$ espacios vectoriales (sobre el mismo
-  campo~$F$). Entonces $V$ es isomorfo a $W$ si y solo si $\dim
-  (V)=\dim(W).$ 
+  Sean $V$ y $W$ espacios vectoriales. Entonces $V$ es isomorfo a $W$
+  si y solo si $\dim (V)=\dim(W).$
 \end{theorem}
 
-\begin{theorem}[Teorema de Isomorfismo]
+\begin{theorem}[Teorema de isomorfismo]
   \label{teorema-isomorfismo-esp}
   Si $f:V\rightarrow W$ es una transformación lineal, el espacio
-  cociente $V/\ker(f)\cong \im(f)$. Un isomorfismo entre estos dos
+  cociente $V/\ker(f)$ es isomorfo a $\im(f)$. Un isomorfismo entre estos dos
   espacios es el siguiente:
   $$\phi:V/\ker(f)\rightarrow \im(f)$$
   definido por $\phi(v+\ker(f))=f(v).$
@@ -444,7 +450,7 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
 
 Las demostraciones de los resultados de grupos y de representaciones
 de grupos que no incluiremos explícitamente se pueden encontrar en
-\cite{fraleigh} y \cite{james2001representations} respectivamente.
+\cite{fraleigh} y \cite{liebeck} respectivamente.
 
 En la primera sección se desarrollan conceptos básicos de grupos. En
 la sección \ref{acc-grup} y  \ref{rep-grup} observamos que estudiar
@@ -460,14 +466,17 @@ proporcionan información acerca de ésta, se describe con detalle en la
 sección \ref{caracteres}. Además por medio de el producto interno de
 caracteres podemos determinar algunos resultados como: si una
 representación es irreducible, cuándo dos representaciones son
-equivalentes, la mulplicidad de cierto submódulo irreducible dada la
+equivalentes, la multiplicidad de cierto submódulo irreducible dada la
 descomposición del $G$-módulo, entre otros resultados que vemos en la
 sección~\ref{producto-interno}. 
 
 El capítulo termina con la sección de caracteres y módulos inducidos,
-en donde se expone la reciprocidad de Frobenius y si $V$ es un
-$G$-módulo inducido por el $H$-módulo $W$ sus respectivos caracteres
-son iguales.
+en donde se exponen la reciprocidad de Frobenius y la fórmula para
+obtener el carácter de una representación inducida.
+
+%  $V$ es un
+% $G$-módulo inducido por el $H$-módulo $W$ sus respectivos caracteres
+% son iguales.
 
 \section{Grupos}
 \label{grupos}
@@ -485,8 +494,8 @@ son iguales.
     \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
     \item Existe un elemento neutro $1 \in G$ que
       satisface $$a1=1a=a$$ para todo $a \in G$.
-    \item Para cada elemento $a \in G$ existe otro elemento $a' \in G$
-      tal que $$aa'=a'a=1$$ Al elemento $a'$ se le llama inverso del elemento $a$.
+    \item Para cada elemento $a \in G$ existe otro elemento $a^{-1} \in G$
+      tal que $$aa^{-1}=a^{-1}a=1$$ Al elemento $a^{-1}$ se le llama inverso del elemento $a$.
     \end{enumerate}
 \end{definition}
 
@@ -532,7 +541,7 @@ Además existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 \item $1*x=x$ para todo $x\in Y.$
 \item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in Y$ y $g_{1},g_{2}\in G.$
 \end{enumerate}
-   Bajo estas condiciones, $Y$ es un $G$-conjunto. En ocasiones, por
+   Bajo estas condiciones, también decimos que $Y$ es un \textbf{$G$-conjunto}. En ocasiones, por
    abuso de notación, en lugar de $g*x$ usaremos la notación $gx.$
 \end{definition}
 
@@ -566,16 +575,8 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   para cada $g\in G$, usando esta acción definamos la función $\rho
   g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.
 
-  Primero observemos que la función $\rho:G\rightarrow GL(V)$ es un
-  homomorfismo de grupos ya que si $g,h\in G$, entonces para todo
-  $v\in V$:
-
-  $$(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho g \circ \rho h)v$$
-  por lo que $\rho(gh)=\rho g \circ \rho h$
-
-  Ahora demostremos que $\rho g$ es una transformación lineal
-  invertible. Sean $v,w \in V$, $\lambda \in K$.
-
+  Demostremos que $\rho g$ es una transformación lineal
+  invertible. Sean $v,w \in V$, $\lambda \in K$, entonces:
   \begin{flalign*}
     &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w\\
     &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)
@@ -583,20 +584,27 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
 
   Así que $\rho g$ es lineal, ahora veamos que es invertible. Como $G$
   es un grupo, existe $g^{-1}\in G$.
-
   \begin{footnotesize}
     \begin{eqnarray*}
       ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v\\
-      ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v
+      ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v,
     \end{eqnarray*}
   \end{footnotesize}
+  por lo que $\rho g$ tiene como inversa a $\rho g^{-1}$.
+
+  Ahora, observemos que la función $\rho:G\rightarrow GL(V)$ es un
+  homomorfismo de grupos. Si $g,h\in G$, entonces para todo
+  $v\in V$:
+
+  $$(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho g \circ \rho h)v$$
+  por lo que $\rho(gh)=\rho g \circ \rho h$
 
   Suponga ahora que se tiene un homomorfismo de grupos
-  $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define
+  $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$ define
   un acción lineal de $G$ en $V$.
 
   \begin{enumerate}
-  \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=id_{V}=v$$
+  \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=1_{V}(v)=v$$
     para todo $v\in V$.
   \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho g
     \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
@@ -1581,9 +1589,10 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
 
 En éste capítulo, estudiamos la relación entre representaciones del
 grupo simétrico $S_{n}$ y objetos combinatorios llamados tableros de
-Young. Definimos tablero de Young en la sección \ref{tablero}, por
+Young. Definiremos los tableros de Young en la sección \ref{tablero},
+pero por
 ahora es suficiente decir que es el llenado de cierta configuración de cajas
-con entradas de $\{1,2,\ldots,n\}$, un ejemplo se muestra a
+con elementos del conjunto $\{1,2,\ldots,n\}$. Un ejemplo se muestra a
 continuación:
 
 \begin{center}
@@ -1644,7 +1653,7 @@ $S_{3}$ corresponde a los siguientes dos tableros estándar:
 \end{center}
 
 En éste capítulo, describimos la relación entre los tableros de Young
-y representaciones de $S_{n}$. Las pruebas son omitidas, pueden
+y representaciones de $S_{n}$. Las pruebas son omitidas, pero pueden
 encontrarse en el segundo capítulo de \cite{sagan2001symmetric}.
 
 En la sección \ref{tablero} introducimos diagramas de Young y tableros
@@ -1653,10 +1662,11 @@ tabloides y los usamos para construir una representación de $S_{n}$
 conocida como módulo de permutación $M^{\lambda}$. Sin embargo, los
 módulos de permutación son generalmente reducibles. En la sección
 \ref{modulo-specht} construimos representaciones irreducibles de
-$S_{n}$ conocidos como módulos de Specht $S^{\lambda}$. Los módulos de
+$S_{n}$ conocidos como módulos de Specht $S^{\lambda}$, los cuales son
+subespacios del correspondiente $M^{\lambda}$. Los módulos de
 Specht $S^{\lambda}$ corresponden biyectivamente a los diagramas de
-Young $\lambda$ y los cuales forman una lista completa de
-representaciones irreducibles. 
+Young $\lambda$ y forman una lista completa de
+representaciones irreducibles de $S^{n}$.
 
 \section{Tablero de Young}
 \label{tablero}
@@ -1718,7 +1728,7 @@ del $4$ son:
 \end{center}
 
 Existe una correspondencia biyectiva entre particiones y diagramas
-de Young, usamos los dos términos indistintamente.
+de Young, y nosotros usaremos los dos términos indistintamente.
 
 Un tablero Young es obtenido llenando las cajas de una diagrama de
 Young con números.
@@ -1791,15 +1801,15 @@ Aquí está otro ejemplo de un tablero estándar:
   \end{ytableau}
 \end{center}
 
-Antes de seguir adelante, permitenos recordar algunos hechos básicos
+Antes de seguir adelante, recordaremos algunos hechos básicos
 sobre permutaciones. Cada permutación $\pi \in S_{n}$ tiene una
 descomposición en ciclos disjuntos. Por ejemplo $(123)(45)$ denota la
 permutación que envía $1\rightarrow 2 \rightarrow 3 \rightarrow 1$  e
 intercambia al $4$ y $5$ (si $n>5$, entonces por convención los otros
-elementos fijos por $\pi$). La \textbf{estructura cíclica} de $\pi$ es la
-partición de las longitudes de los ciclos en la
+elementos fijos por $\pi$). La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la
+partición de $n$ formada por las longitudes de los ciclos en la
 descomposición. Así que $(123)(45)\in S_{5}$ tiene la estructura
-cíclica (3,2). Dos elementos de $S_{n}$ están conjugados si y solo si
+cíclica (3,2). Dos elementos de $S_{n}$ son conjugados si y solo si
 tienen la misma estructura cíclica. % La forma mas fácil de ver esto es
 % considerar la conjugación simplemente como una reetiquetación de los
 % elementos cuando la permutación es escrita en notación cíclica. En
@@ -1909,7 +1919,7 @@ así que usamos el término módulo para describir representaciones.
 \end{definition}
 
 Mostraremos algunos ejemplos de los módulos de
-permutación. $M^{\lambda}$ corresponde a los siguientes diagramas de
+permutación $M^{\lambda}$. Los módulos obtenidos a partir de los siguientes diagramas de
 Young son de hecho representaciones conocidas.
 
 \begin{center}
@@ -1921,7 +1931,7 @@ Young son de hecho representaciones conocidas.
 
 \begin{example}
   Consideremos $\lambda=(n)$. Así que $M^{\lambda}$ es el espacio
-  vectorial generado po un solo tabloide 
+  vectorial generado por un solo tabloide 
   \begin{center}
     \ytableausetup{mathmode,tabloids}    
     \ytableaushort{1 2\cdots n} 
@@ -2013,7 +2023,7 @@ Por ejemplo, si
 entonces
 $$R_{t}=S_{\{1,2,4\}}\times S_{\{3,5\}}, \quad \mbox{ y } \quad C_{t}= S_{\{3,4\}}\times
 S_{\{1,5\}}\times S_{\{2\}}.$$
-Seleccionaremos ciertos elementos de el espacio $M^{\lambda}$
+Seleccionaremos ciertos elementos del espacio $M^{\lambda}$
 que usaremos para generar un subespacio.
 
 \begin{definition}
@@ -2104,10 +2114,11 @@ representación trivial de dimensión uno.
     \end{minipage}
   \end{center}
 
-  Observe que $e_{t}$ es la suma de todos los $\lambda$-tabloides
-  multiplicados por el signo de permutación, desarrollar ésto nos
-  tomaría tiempo. En su lugar veamos el siguiente análisis. Para cualquier $\lambda$-tablero $t^{'}$,
-  tenemos $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenido de $t$ mediante una
+  % Observe que $e_{t}$ es la suma de todos los $\lambda$-tabloides
+  % multiplicados por el signo de permutación, desarrollar ésto nos
+  % tomaría tiempo. En su lugar veamos el siguiente análisis.
+  Para cualquier $\lambda$-tablero $t^{'}$,
+  resulta que $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenido de $t$ mediante una
   permutación par, o $e_{t}=-e_{t^{'}}$ si $t^{'}$ es obtenido de $t$
   mediante una permutación impar. Así que $S^{\lambda}$ es una
   representación de dimensión uno. Del lema \ref{lema} tenemos $\pi
@@ -2145,7 +2156,7 @@ Sabemos que $S_{3}$ tiene tres representaciones irreducibles: trivial,
 signo y estándar. Estas son exactamente las descritas anteriormente. Además,
 hay exactamente tres particiones del $3$: $(3)$, $(1,1,1)$,
 $(2,1)$. Así que en este caso, las representaciones irreducibles son
-exactamente los módulos de Specht, esto es cierto en general.
+exactamente los módulos de Specht. Esto es cierto en general.
 
 \begin{theorem}
   Los módulos de Specht $S^{\lambda}$ para $\lambda\vdash n$ forman
@@ -2185,8 +2196,9 @@ siguiente teorema nos da la respuesta.
 La demostración aparece en el teorema 2.5.2 de
 \cite{sagan2001symmetric}.
 
-Enseguida se enuncian dos definiciones que usaremos en el capitulo \ref{cha:hom-com-emp}
+Enseguida se enuncian dos definiciones que usaremos en el capítulo \ref{cha:hom-com-emp}
 relacionados con la fórmula de Bouc.
+
 \begin{definition}
   Sea $\lambda\vdash n$. El \textbf{conjugado} de $\lambda$ es la
   partición que se obtiene listando el número de cajas en cada columna
