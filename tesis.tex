@@ -286,7 +286,7 @@ números complejos.
   cada vector $y\in V$ puede ser expresado de manera única como una
   combinación lineal de vectores de~$\beta$, es decir, puede ser
   expresado de la forma
-  $$y=\lambda_{1}v_{1}+\ldots+\lambda_{n}v_{n}$$
+  $$y=\lambda_{1}v_{1}+\cdots+\lambda_{n}v_{n}$$
   para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
 \end{theorem}
 
@@ -302,10 +302,13 @@ números complejos.
   vectorial $V$, entonces la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
   expresa como $W_{1}+W_{2}$, es el conjunto $\{x+y:x\in W_{1}$ y $y\in
   W_{_2}\}$. La suma de cualquier número finito de subconjuntos no
-  vacíos de $V$, $W_{1},\cdots,W_{n}$, se define análogamente como el
+  vacíos de $V$: $W_{1},\ldots,W_{n}$, se define análogamente como el
   conjunto
-  $$W_{1}+\ldots+W_{n}=\{x_{1}+\ldots+x_{n}: x_{i}\in W_{i} \mbox{ para }i=1,2,\ldots,n\}$$
+  $$W_{1}+\cdots+W_{n}=\{x_{1}+\cdots+x_{n}: x_{i}\in W_{i} \mbox{ para }i=1,2,\ldots,n\}$$
 \end{definition}
+
+Se tiene en general que si $W_{1}$ y $W_{2}$ son subespacios de $V$,
+entonces $W_{1}+W_{2}$ es subespacio de $V$.
 
 \begin{definition}
   \label{suma-directa}
@@ -417,15 +420,14 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
 
 \begin{theorem}
   \label{esp-isomorfos}
-  Sean $V$ y $W$ espacios vectoriales (sobre el mismo
-  campo~$F$). Entonces $V$ es isomorfo a $W$ si y solo si $\dim
-  (V)=\dim(W).$ 
+  Sean $V$ y $W$ espacios vectoriales. Entonces $V$ es isomorfo a $W$
+  si y solo si $\dim (V)=\dim(W).$
 \end{theorem}
 
-\begin{theorem}[Teorema de Isomorfismo]
+\begin{theorem}[Teorema de isomorfismo]
   \label{teorema-isomorfismo-esp}
   Si $f:V\rightarrow W$ es una transformación lineal, el espacio
-  cociente $V/\ker(f)\cong \im(f)$. Un isomorfismo entre estos dos
+  cociente $V/\ker(f)$ es isomorfo a $\im(f)$. Un isomorfismo entre estos dos
   espacios es el siguiente:
   $$\phi:V/\ker(f)\rightarrow \im(f)$$
   definido por $\phi(v+\ker(f))=f(v).$
