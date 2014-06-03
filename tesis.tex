@@ -466,14 +466,17 @@ proporcionan información acerca de ésta, se describe con detalle en la
 sección \ref{caracteres}. Además por medio de el producto interno de
 caracteres podemos determinar algunos resultados como: si una
 representación es irreducible, cuándo dos representaciones son
-equivalentes, la mulplicidad de cierto submódulo irreducible dada la
+equivalentes, la multiplicidad de cierto submódulo irreducible dada la
 descomposición del $G$-módulo, entre otros resultados que vemos en la
 sección~\ref{producto-interno}. 
 
 El capítulo termina con la sección de caracteres y módulos inducidos,
-en donde se expone la reciprocidad de Frobenius y si $V$ es un
-$G$-módulo inducido por el $H$-módulo $W$ sus respectivos caracteres
-son iguales.
+en donde se exponen la reciprocidad de Frobenius y la fórmula para
+obtener el carácter de una representación inducida.
+
+%  $V$ es un
+% $G$-módulo inducido por el $H$-módulo $W$ sus respectivos caracteres
+% son iguales.
 
 \section{Grupos}
 \label{grupos}
@@ -491,8 +494,8 @@ son iguales.
     \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
     \item Existe un elemento neutro $1 \in G$ que
       satisface $$a1=1a=a$$ para todo $a \in G$.
-    \item Para cada elemento $a \in G$ existe otro elemento $a' \in G$
-      tal que $$aa'=a'a=1$$ Al elemento $a'$ se le llama inverso del elemento $a$.
+    \item Para cada elemento $a \in G$ existe otro elemento $a^{-1} \in G$
+      tal que $$aa^{-1}=a^{-1}a=1$$ Al elemento $a^{-1}$ se le llama inverso del elemento $a$.
     \end{enumerate}
 \end{definition}
 
@@ -538,7 +541,7 @@ Además existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 \item $1*x=x$ para todo $x\in Y.$
 \item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in Y$ y $g_{1},g_{2}\in G.$
 \end{enumerate}
-   Bajo estas condiciones, $Y$ es un $G$-conjunto. En ocasiones, por
+   Bajo estas condiciones, también decimos que $Y$ es un \textbf{$G$-conjunto}. En ocasiones, por
    abuso de notación, en lugar de $g*x$ usaremos la notación $gx.$
 \end{definition}
 
@@ -572,16 +575,8 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   para cada $g\in G$, usando esta acción definamos la función $\rho
   g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.
 
-  Primero observemos que la función $\rho:G\rightarrow GL(V)$ es un
-  homomorfismo de grupos ya que si $g,h\in G$, entonces para todo
-  $v\in V$:
-
-  $$(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho g \circ \rho h)v$$
-  por lo que $\rho(gh)=\rho g \circ \rho h$
-
-  Ahora demostremos que $\rho g$ es una transformación lineal
-  invertible. Sean $v,w \in V$, $\lambda \in K$.
-
+  Demostremos que $\rho g$ es una transformación lineal
+  invertible. Sean $v,w \in V$, $\lambda \in K$, entonces:
   \begin{flalign*}
     &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w\\
     &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)
@@ -589,20 +584,27 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
 
   Así que $\rho g$ es lineal, ahora veamos que es invertible. Como $G$
   es un grupo, existe $g^{-1}\in G$.
-
   \begin{footnotesize}
     \begin{eqnarray*}
       ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v\\
-      ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v
+      ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v,
     \end{eqnarray*}
   \end{footnotesize}
+  por lo que $\rho g$ tiene como inversa a $\rho g^{-1}$.
+
+  Ahora, observemos que la función $\rho:G\rightarrow GL(V)$ es un
+  homomorfismo de grupos. Si $g,h\in G$, entonces para todo
+  $v\in V$:
+
+  $$(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho g \circ \rho h)v$$
+  por lo que $\rho(gh)=\rho g \circ \rho h$
 
   Suponga ahora que se tiene un homomorfismo de grupos
-  $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$, define
+  $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$ define
   un acción lineal de $G$ en $V$.
 
   \begin{enumerate}
-  \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=id_{V}=v$$
+  \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=1_{V}(v)=v$$
     para todo $v\in V$.
   \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho g
     \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
