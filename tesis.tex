@@ -356,6 +356,54 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 \section{Transformaciones lineales}
 \label{trasn-lin}
 
+\begin{definition}
+  \label{vec-coor}
+  Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base para un espacio
+  vectorial~$V$. Para $v\in V$ definimos al \textbf{vector coordenado de $v$
+  relativo a $\beta$}, denotado por $[v]_{\beta}$, mediante
+  \begin{center}
+    $[v]_{\beta}=\begin{pmatrix}
+      \lambda_{1}  \\
+      \vdots  \\
+      \lambda_{n}  
+    \end{pmatrix}$
+  \end{center}
+donde
+\begin{equation*}
+  v=\sum^{n}_{i=1}\lambda_{i}v_{i}.
+\end{equation*}
+\end{definition}
+
+\begin{definition}
+  \label{matr-rep-T}
+  Sean $\beta=\{v_{1},\ldots,v_{n}\}$ y
+  $\gamma=\{w_{1},\ldots,w_{m}\}$ las bases de los espacios
+  vectoriales $V$ y $W$ respectivamente. Sea $T:V\rightarrow W$ una
+  transformación lineal. La \textbf{matriz que representa a $T$}
+  en las bases $\beta$ y $\gamma$, denotada como
+  $[T]^{\gamma}_{\beta}$, se define como la matriz $m\times n$:
+  \begin{equation*}
+    [T]^{\gamma}_{\beta}=([T(v_{1})]_{\gamma},[T(v_{2})]_{\gamma},\cdots,[T(v_{n})]_{\gamma})
+  \end{equation*}
+  En otras palabras, si
+  $T(u_{j})=\lambda_{1j}w_{1}+\lambda_{2j}w_{2}+\cdots+\lambda_{mj}w_{m}$,
+  entonces
+\begin{center}
+    $[T(v_{j})]_{\gamma}=\begin{pmatrix}
+      \lambda_{1j}\\
+      \lambda_{2j}\\
+      \vdots\\
+      \lambda_{mj}
+    \end{pmatrix}$,\quad y \quad $[T]^{\gamma}_{\beta}=\begin{pmatrix}
+      \lambda_{11} & \lambda_{12} & \cdots & \lambda_{1n} \\
+      \lambda_{21} & \lambda_{22} & \cdots & \lambda_{2n} \\
+      \vdots & \vdots & \ddots & \vdots \\ 
+      \lambda_{m1} & \lambda_{m2} & \cdots & \lambda_{mn} \\
+    \end{pmatrix}$.
+  \end{center}
+Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
+\end{definition}
+
 \begin{theorem}
   \label{imT}
   Sean $V$ y $W$ espacios vectoriales y sea $T:V \rightarrow W$
@@ -456,7 +504,7 @@ son iguales.
     \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
   \end{enumerate}
 \end{theorem}
-
+La demostración aparece en el teorema 13.12 de \cite{fraleigh}.
 % \begin{definition}
 %   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
 %   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
@@ -1333,7 +1381,28 @@ m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}\neq 0$.
   Decimos que la función $\theta\uparrow^{G}_{H}$ es \textbf{inducida}
   por la función $\theta$.
 \end{definition}
-
+Observemos que si $H\leq G$, y $x,g\in G$ son tales que $x^{-1}gx\in
+H$, entonces para todo $h\in H$ se tiene que
+$(xh)^{-1}g(xh)=h^{-1}(x^{-1}gx)h\in H$. Si $\theta$ es una función de
+clase, además tenemos que
+$\theta(h^{-1}(x^{-1}gx)h)=\theta(x^{-1}gx)$. Sea $T$ una \emph{transversal izquierda} de $H$ en $G$, es decir, una
+colección de representantes de las clases laterales izquierdas de $H$,
+de modo que si $T=\{t_{1},\ldots,t_{s}\}$ entonces
+$G=t_{1}H\cup\cdots\cup t_{s}H$. Por lo tanto, si
+$\theta:H\rightarrow\mathbb{C}$ es una función de clase, podemos
+calcular a $\theta\uparrow^{G}_{H}$ por medio de la fórmula:
+\begin{equation}
+  \label{fun-ind-trans}
+  \theta\uparrow^{G}_{H}(g)=\sum_{\substack{x\in T,\\x^{-1}gx\in H}}\theta(x^{-1}gx).
+\end{equation}
+Por otro lado, notemos:
+\begin{equation*}
+  \theta\uparrow^{G}_{H}(1)=\sum_{\substack{x\in T,\\x^{-1}1x\in
+      H}}\theta(x^{-1}1x)=\sum_{\substack{x\in T,\\1\in
+      H}}\theta(1)=|T|\theta(1)=[G:H]\theta(1).\\
+\end{equation*}
+donde $[G:H]$ es el número de clases laterales de $H$ en $G$, llamado
+el \emph{índice} de $H$ en $G$.
 \begin{proposition}
   Si $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ es una función de
   clase, entonces $\theta\uparrow^{G}_{H}:G\rightarrow \mathbb{C}$ es
@@ -1368,20 +1437,19 @@ que $yu\in G$ si y solo si $u\in G$.
   Tenemos que 
   \begin{align*}
     \langle\theta\uparrow^{G}_{H},\phi\rangle&=\frac{1}{|G|}\sum_{g\in
-    G}\theta\uparrow^{G}_{H}(g)\overline{\phi(g)}\\
-  &=\frac{1}{|G|}\sum_{g\in G}\Bigg(\frac{1}{|H|}\sum_{\substack{x\in
+      G}\theta\uparrow^{G}_{H}(g)\overline{\phi(g)}\\
+    &=\frac{1}{|G|}\sum_{g\in G}\Bigg(\frac{1}{|H|}\sum_{\substack{x\in
         G\\x^{-1}gx\in H}}\theta(x^{-1}gx)\Bigg)\overline{\phi(g)}\\
-    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g,x\in G,x^{-1}gx\in H\}}\theta(x^{-1}gx)\overline{\phi(g)}\\
- \end{align*}
- hacemos el cambio $u=x^{-1}gx$, entonces $g=xux^{-1}$,
-\begin{align*}
-  &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in G,u\in H\}}\theta(u)\overline{\phi(xux^{-1})}\\
-  &=\frac{1}{|G|}\frac{1}{|H|}|G|\sum_{u\in
-    H}\theta(u)\overline{\phi(u)}\\
-  &\text{pues } u\in H\text{, } xux^{-1}\in G \text{ para todo } x\in
-  G,\text{ además } \phi(xux^{-1})=\phi(u)\\
-   &=\langle\theta,\phi\downarrow^{G}_{H}\rangle
- \end{align*}
+    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g,x\in G,x^{-1}gx\in
+      H\}}\theta(x^{-1}gx)\overline{\phi(g)}\\
+    \intertext{hacemos el cambio $u=x^{-1}gx$, entonces $g=xux^{-1}$,}
+    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in G,u\in H\}}\theta(u)\overline{\phi(xux^{-1})}\\
+    &=\frac{1}{|G|}\frac{1}{|H|}|G|\sum_{u\in
+      H}\theta(u)\overline{\phi(u)}\\
+    \intertext{pues $u\in H$, $xux^{-1}\in G$ para todo $x\in G$,
+      además $\phi(xux^{-1})=\phi(u)$}
+    &=\langle\theta,\phi\downarrow^{G}_{H}\rangle
+ \end{align*} 
 \end{proof}
 
 \begin{corollary}
@@ -1403,23 +1471,9 @@ que $yu\in G$ si y solo si $u\in G$.
   El resultado se sigue entonces de la proposición
   \ref{fun-cla-caracter}.
 \end{proof}
-Observemos que si $H\leq G$, y $x,g\in G$ son tales que $x^{-1}gx\in
-H$, entonces para todo $h\in H$ se tiene que
-$(xh)^{-1}g(xh)=h^{-1}(x^{-1}gx)h\in H$. Si $\theta$ es una función de
-clase, además tenemos que
-$\theta(h^{-1}(x^{-1}gx)h)=\theta(x^{-1}gx)$. Sea $T$ una \emph{transversal izquierda} de $H$ en $G$, es decir, una
-colección de representantes de las clases laterales izquierdas de $H$,
-de modo que si $T=\{t_{1},\ldots,t_{s}\}$ entonces
-$G=t_{1}H\cup\cdots\cup t_{s}H$. Por lo tanto, si
-$\theta:H\rightarrow\mathbb{C}$ es una función de clase, podemos
-calcular a $\theta\uparrow^{G}_{H}$ por medio de la fórmula:
-\begin{equation}
-  \label{fun-ind-trans}
-  \theta\uparrow^{G}_{H}(g)=\sum_{\substack{x\in T,\\x^{-1}gx\in H}}\theta(x^{-1}gx).
-\end{equation}
-
 Supondremos en lo que resta de esta sección que $G$ es un grupo, $H$ un subgrupo de
-$G$  y $T$ una transversal izquierda de $H$ en $G$.
+$G$  y $T=\{t_{1},t_{2},\ldots,t_{s}\}$ una transversal izquierda de
+$H$ en $G$ fija, donde $t_{1}=1$.
 
 Si $W$ es un $H$-módulo, el corolario \ref{car-inducido} implica que
 $(\chi_{W})\uparrow^{G}_{H}$ es un carácter. Queremos encontrar un
@@ -1438,21 +1492,61 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   $\chi_{V}=(\chi_{W})\uparrow^{G}_{H}$.
 \end{proposition}
 \begin{proof}[Demostración]
-  Su $\beta$ es base de $W$, entonces $\bigcup^{s}_{j=1}t_{j}\beta$ es
+  % Si $\beta=\{w_{1},w_{2},\ldots,w_{r}\}$ es base de $W$, entonces $\gamma=\bigcup^{s}_{j=1}t_{j}\beta$ es
+  % base de $V$, por lo que dado $g\in G$ calcularemos $\chi_{V}(g)$
+  % usando esa base. Tenemos entonces que:
+  % \begin{equation*}
+  %   \chi_{V}(g)=\tr([g]_{\gamma})=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr(g\mid t_{j}W),
+  % \end{equation*}
+  % y $gt_{j}W\leq t_{j}W$ si y solo si $t^{-1}_{j}gt_{j}W\leq W$, si y
+  % solo si $t^{-1}_{j}gt_{j}\in H$. Es inmediato que
+  % $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, por lo que $\tr(g\mid
+  % t_{j}W)=\chi_{V}(t^{-1}_{j}gt_{j})$, y por la ecuación \ref{fun-ind-trans}, queda
+  % demostrado.
+
+  Si $\beta=\{w_{1},w_{2},\ldots,w_{r}\}$ es base de $W$, entonces $\gamma=\bigcup^{s}_{j=1}t_{j}\beta$ es
   base de $V$, por lo que dado $g\in G$ calcularemos $\chi_{V}(g)$
   usando esa base. Tenemos entonces que:
+  \begin{equation}
+    \label{car-base-tjb}    
+    \chi_{V}(g)=\tr([g]_{\gamma})=\sum^{s}_{j=1}\tr([g]_{t_{j}\beta})
+  \end{equation}
+  Veamos que $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, tomemos
+  $w_{k}\in \beta$, así que:
   \begin{equation*}
-    \chi_{V}(g)=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr(g\mid t_{j}W),
+    gt_{j}w_{k}=\lambda_{1}gt_{j}w_{1}+\cdots+\lambda_{r}gt_{j}w_{r}
   \end{equation*}
-  y $gt_{j}W\leq t_{j}W$ si y solo si $t^{-1}_{j}gt_{j}W\leq W$, si y
-  solo si $t^{-1}_{j}gt_{j}\in H$. Es inmediato que
-  $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, por lo que $\tr(g\mid
-  t_{j}W)=\chi_{V}(t^{-1}_{j}gt_{j})$, y por la ecuacion \ref{fun-ind-trans}, queda
-  demostrado.
+  de modo que
+  \begin{equation*}
+    t^{-1}_{j}gt_{j}w_{k}=\lambda_{1}t^{-1}_{j}gt_{j}w_{1}+\cdots+\lambda_{r}t^{-1}_{j}gt_{j}w_{r}\\
+  \end{equation*}
+  por tanto
+   \begin{center}
+    $[g(w_{k})]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}(w_{k})]_{\beta}=\begin{pmatrix}
+      \lambda_{1}  \\
+      \vdots  \\
+      \lambda_{r}  
+    \end{pmatrix}$.
+  \end{center}
+  De donde
+  \begin{equation*}
+    [t^{-1}_{j}gt_{j}]_{\beta}=[g]_{t_{j}\beta}.
+  \end{equation*}
+  Por lo anterior tenemos que
+  \begin{equation*}
+    \tr([t^{-1}_{j}gt_{j}]_{\beta})=\tr([g]_{t_{j}\beta})=\chi_{W}(t^{-1}_{j}gt_{j})\\
+  \end{equation*}
+  Continuando la ecuación \ref{car-base-tjb}, 
+  \begin{align*}
+    \chi_{V}(g)&=\tr([g]_{\gamma})=\sum^{s}_{j=1}\tr([g]_{t_{j}\beta})\\
+    \intertext{se sigue de la ecuación \ref{fun-ind-trans}, lo siguiente}
+    &=\sum_{\substack{t_{j}\in T,\\t^{-1}_{j}gt_{j}\in H}}\chi_{W}(t^{-1}_{j}gt_{j})=(\chi_{W})\uparrow^{G}_{H}
+  \end{align*}
+  $t^{-1}_{j}gt_{j}\in H$ {\setlength{\fboxsep}{0pt}\colorbox{green}{???}}
 \end{proof}
 
-\chapter[Representaciones del grupo simétrico]{Tableros de Young y representaciones del grupo simétrico.}
-%\label{repr-grupo-simetrico}
+\chapter[Representaciones del grupo simétrico]{Tableros de Young y representaciones del grupo simétrico}
+\label{repr-grupo-simetrico}
 
 En éste capítulo, estudiamos la relación entre representaciones del
 grupo simétrico $S_{n}$ y objetos combinatorios llamados tableros de
@@ -2174,51 +2268,66 @@ por una permutación par.
 
 \begin{figure}[h]
   \centering
-  \begin{tikzpicture}[scale=.8]
-    \GraphInit[vstyle=Classic] 
-    \SetUpVertex[MinSize=1pt]
-    \Vertex[x=0,y=0,Math]{v_{0}} 
-    \Vertex[x=1.5,y=1.5,Math]{v_{1}}
-    \Edge[style={->}](v_{0})(v_{1})
-    \AddVertexColor{black}{v_{0},v_{1}}
-  \end{tikzpicture}
+  \begin{minipage}[h]{0.45\linewidth}
+    \centering
+    \begin{tikzpicture}[scale=.8]
+      \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+      \Vertex[x=0,y=0,Math]{v_{0}} \Vertex[x=1.5,y=1.5,Math]{v_{1}}
+      \Edge[style={->}](v_{0})(v_{1})
+      \AddVertexColor{black}{v_{0},v_{1}}
+    \end{tikzpicture}
   
-  \caption{1-simplejo}
-  \label{fig:1-simplejo}
+    \caption{1-simplejo}
+    \label{fig:1-simplejo}
+  \end{minipage}
+  \begin{minipage}[h]{0.45\linewidth}
+    \centering
+    \begin{tikzpicture}[scale=0.8]
+      \tikzstyle{circ} = [circle, minimum width=1.2mm, inner
+      sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm] \node[circ](a)
+      at (0,0){}; \node[circ] (b) at (2,0){}; \node[circ] (c) at
+      (1,2){};
+      \begin{pgfonlayer}{background}
+        \fill[draw,line width=0.3mm,top color=black!30,bottom
+        color=gray!30] (a.center)node[num]{$v_{0}$} --
+        (b.center)node[num]{$v_{1}$} -- (c.center) node[num]{$v_{2}$}
+        --(a.center);
+      \end{pgfonlayer}
+      \draw[>=latex,->] (0,0) -- (2,0); \draw[>=latex,->] (2,0) --
+      (1,2); \draw[>=latex,->] (1,2) -- (0,0);
+    \end{tikzpicture}
+  
+    \caption{2-simplejo}
+    \label{fig:2-simplejo}
+  \end{minipage}
 \end{figure}
 
 \begin{figure}[h]
   \centering
-  \begin{tikzpicture}[scale=0.8]
-    \tikzstyle{circ} = [circle, minimum width=1.2mm, inner
-    sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm] 
-    \node[circ](a) at (0,0){}; 
-    \node[circ] (b) at (2,0){}; 
-    \node[circ] (c) at (1,2){};
+  \begin{tikzpicture}[scale=1]%[x=0.5 cm,y=1cm]
+    \tikzstyle{circ} = [circle, minimum width=1mm, inner
+    sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm] \node[circ]
+    (a) at (0,0) {}; \node[circ] (b) at (2,0) {}; \node[circ] (c) at
+    (1,1.7) {}; \node[circ] (d) at (1,0.5) {};
     \begin{pgfonlayer}{background}
-      \fill[draw,line width=0.3mm,top color=black!30,bottom
-      color=gray!30] 
-      (a.center)node[num]{$v_{0}$} -- (b.center)node[num]{$v_{1}$} -- (c.center) node[num]{$v_{2}$} --(a.center);
+      \fill[draw, line width=0.3mm,top color=black!30,bottom
+      color=gray!30] (a.center)node[num]{} -- (b.center) node[num]{}
+      -- (d.center) node[num]{} --(a.center);
     \end{pgfonlayer}
-    \draw[>=latex,->] (0,0) -- (2,0);
-    \draw[>=latex,->] (2,0) -- (1,2);
-    \draw[>=latex,->] (1,2) -- (0,0);
-  \end{tikzpicture}
-  
-  \caption{2-simplejo}
-\label{fig:2-simplejo}
-\end{figure}
-\begin{figure}[h]
-  \centering
-  \begin{tikzpicture}[scale=.3]
-    \SetVertexNoLabel 
-    \GraphInit[vstyle=Classic]
-    \SetUpVertex[MinSize=1pt] 
-    \grTetrahedral[RA=4]
+    \begin{pgfonlayer}{background}
+      \fill[draw, line width=0.3mm,top color=black!30,bottom
+      color=gray!30] (a.center)node[num]{} -- (d.center) node[num]{}
+      -- (c.center) node[num]{} --(a.center);
+    \end{pgfonlayer}
+    \begin{pgfonlayer}{background}
+      \fill[draw, line width=0.3mm,top color=black!30,bottom
+      color=gray!30](b.center)node[num]{} -- (c.center) node[num]{}
+      -- (d.center) node[num]{} --(b.center);
+    \end{pgfonlayer}
   \end{tikzpicture}
   
   \caption{3-simplejo}
-\label{fig:3-simplejo}
+  \label{fig:3-simplejo}
 \end{figure}
 
 \begin{definition}
@@ -4731,9 +4840,9 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1
 
 \chapter*{Conclusiones}
  
-Describimos la descomposición en submódulos irreducibles del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$, donde $\widetilde
+Describimos la descomposición en submódulos irreducibles del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$, para $n\leq 6$, donde $\widetilde
 H_{k}(M_{n})$ es la homología reducida de los complejos simpliciales
-de emparejamientos, para $n\leq 6$.
+de emparejamientos.
 
 Por otro lado, también calculamos la descomposición en módulos
 irreducibles de $\widetilde H_{k}(K(M_{n}))$, es decir, de las
