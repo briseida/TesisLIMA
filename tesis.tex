@@ -2875,15 +2875,16 @@ a las gráficas les asociamos complejos simpliciales.
 \label{graficas}
 
 \begin{definition}
-  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V(G)$
-  de $p$ \emph{vértices} junto con un conjunto $E(G)$ de $q$ pares no
+  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V=V(G)$
+  de $p$ \emph{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
   ordenados de vértices distintos de $V$. Cada par $e=\{u,v\}$ de vértices
   en $E$ es una \emph{arista} de $G$, y se dice que $e$ une a $u$ y
   $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \emph{vértices
     adyacentes}; un vértice $u$ y una arista $e$ son \emph{incidentes}
   si $u\in e$. Dos aristas $e$ y $f$ son \emph{aristas adyacentes}
-  si $e\cap f\neq\emptyset$. Una gráfica con $p$ vértices y $q$
-  aristas es llamada una $(p,q)$ gráfica.
+  si $e\cap f\neq\emptyset$.
+  % Una gráfica con $p$ vértices y $q$
+  % aristas es llamada una $(p,q)$ gráfica.
 
   Una manera natural de ver una gráfica es poner puntos para los
   vértices y una línea entre dos puntos si los vértices correspondientes
@@ -2891,7 +2892,8 @@ a las gráficas les asociamos complejos simpliciales.
 \end{definition}
 
 \begin{definition}
-  Decimos que $G$ es una gráfica \textbf{completa} si para todos~$u,v\in G$ con $u\neq v$ se tiene que $uv$. Una grafica completa con
+  Decimos que $G$ es una gráfica \textbf{completa} si para
+  todos~$u,v\in G$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
   $n$ vértices se denota como $K_{n}$.
 \end{definition}
 
