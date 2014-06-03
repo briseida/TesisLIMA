@@ -931,7 +931,7 @@ donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
 irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
 decir la cantidad de $W^{(i)}$.
 \end{theorem}
-
+La demostración de el teorema de Maschke se encuentra en el teorema~1.5.3 de \cite{sagan2001symmetric}.
 \begin{theorem}
   \label{interseccion-submodulos}
   Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
@@ -1037,13 +1037,16 @@ de $G$.
 \end{definition}
 
 \begin{proposition}
+  \label{ker-im-sub}
   Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces
   \begin{enumerate}
   \item $\ker\phi$ es un $G$-submódulo de $V$, y
   \item $\im\phi$ es un $G$-submódulo de $W$.
   \end{enumerate}
 \end{proposition}
-
+En la proposición 1.7.9 de \cite{sagan2001symmetric} se encuentra la
+demostración de la proposición \ref{ker-im-sub}.
+  
 Si $W$ es submódulo de $V$, entonces en el espacio vectorial cociente
 $V/W$ puede darse una acción de $G$ como $g(v+W)=gv+W$, la cual está
 bien definida (pues $W$ es invariante bajo la acción de $G$), y
@@ -1150,7 +1153,7 @@ denotado por $K_{g}$.
   \item Si $K$ es una clase de conjugación de $G$, entonces $\chi(g)=\chi(h)$ para $g,h\in K$. 
   \end{enumerate}
 \end{proposition}
-
+Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}.
 
 \begin{definition}
   Una \textbf{función de clase} es una función
@@ -1180,6 +1183,9 @@ interno en el espacio de funciones de clase.
       isomorfismos, es igual al número de clases de conjugación de $G$.
   \end{enumerate}
 \end{theorem}
+Se puede consultar la demostración en 1.10.2 de
+\cite{sagan2001symmetric}.
+
 En general no se logra una correspondencia biyectiva natural entre las
 representaciones de $G$ y las clases de conjugación. Sin embargo, en
 el siguiente capítulo observamos que en el caso del grupo simétrico sí se cuenta con
@@ -1311,7 +1317,8 @@ equivalentes. Además de otros resultados que veremos a continuación.
   \end{cases}
   \]
 \end{theorem}
-
+El teorema 1.9.3 de \cite{sagan2001symmetric} muestra la prueba del el
+teorema anterior.
 \begin{corollary}
   \label{multiplicidad}
   Sea $V$ un $G$-módulo con carácter $\chi_{V}$ y supongamos que 
@@ -1332,6 +1339,8 @@ de $V^{(i)}$. Entonces
   para cada $g\in G$.
 \end{enumerate}
 \end{corollary}
+La demostración aparece en el teorema 1.9.4 de
+\cite{sagan2001symmetric}.
 
 \section{Caracteres y módulos inducidos}
 \label{carac-induc}
@@ -1467,7 +1476,7 @@ que $yu\in G$ si y solo si $u\in G$.
     \langle\theta\uparrow^{G}_{H},\chi\rangle=\langle\theta,\chi\downarrow^{G}_{H}\rangle,
   \end{equation*}
   el cual es un entero no negativo, pues es el producto interno de dos
-  caracteres. %(ver teorema \ref{}). 
+  caracteres. {\setlength{\fboxsep}{0pt}\colorbox{green}{??notas teo 3.11}}%(ver teorema \ref{}). 
   El resultado se sigue entonces de la proposición
   \ref{fun-cla-caracter}.
 \end{proof}
@@ -2016,6 +2025,8 @@ conjunto de politabloides.
   \label{lema}
   Sea $t$ un tablero y $\pi$ una permutación. Entonces $e_{\pi t}=\pi e_{t}$.
 \end{lemma}
+Se puede hallar la demostración en el lema 2.3.3 de
+\cite{sagan2001symmetric}.
 
 Ahora podemos obtener un submódulo irreducible de
 $M^{\lambda}$.
@@ -2120,7 +2131,8 @@ exactamente los módulos de Specht, esto es cierto en general.
   $\mathbb{C}$.
   \label{todas-repr-irre}
 \end{theorem}
-
+La prueba se encuentra en \cite{sagan2001symmetric} en el teorema 2.4.6.
+ 
 Recordemos que al final de la sección \ref{tablero} notamos que el
 número de representaciones irreducibles de $S_{n}$ es igual al número
 de diagramas de Young con $n$ cajas. Este teorema da una biyección
@@ -2148,6 +2160,8 @@ siguiente teorema nos da la respuesta.
 %   \label{dimS}
 %   Sea $\lambda\vdash n$, entonces $\dim S^{\lambda}=f^{\lambda}$.
 % \end{corollary}
+La demostración aparece en el teorema 2.5.2 de
+\cite{sagan2001symmetric}.
 
 Enseguida se enuncian dos definiciones que usaremos en el capitulo \ref{cha:hom-com-emp}
 relacionados con la fórmula de Bouc.
@@ -2270,7 +2284,7 @@ por una permutación par.
   \centering
   \begin{minipage}[h]{0.45\linewidth}
     \centering
-    \begin{tikzpicture}[scale=.8]
+    \begin{tikzpicture}[scale=1.2]
       \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
       \Vertex[x=0,y=0,Math]{v_{0}} \Vertex[x=1.5,y=1.5,Math]{v_{1}}
       \Edge[style={->}](v_{0})(v_{1})
@@ -2304,7 +2318,7 @@ por una permutación par.
 
 \begin{figure}[h]
   \centering
-  \begin{tikzpicture}[scale=1]%[x=0.5 cm,y=1cm]
+  \begin{tikzpicture}[scale=1.1]%[x=0.5 cm,y=1cm]
     \tikzstyle{circ} = [circle, minimum width=1mm, inner
     sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm] \node[circ]
     (a) at (0,0) {}; \node[circ] (b) at (2,0) {}; \node[circ] (c) at
@@ -2393,7 +2407,7 @@ aparece en la suma, se sigue del teorema $\ref{clunica}$.
   trasformación lineal de $C_{p}(\Delta)\rightarrow V$, tal que $f(-
   \sigma)=-f(\sigma)$ para todo p-simplejo orientado~$\sigma$.
 \end{corollary}
-
+La prueba se puede consultar en el corolario 5.2 de \cite{munkres1984elements}.
 \begin{definition}
   Sea $\sigma=(v_{0},\ldots ,v_{p})$ un simplejo orientado con $p>0$
   (sin embargo también será denotado como $\sigma=v_{0}\ldots v_{p}$
@@ -2525,7 +2539,8 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
   \mathbb{C}.$$
   Así $\widetilde H_{0}(\Delta)=0$ si $\Delta$ es conexo.
 \end{theorem}
-La demostración puede ser encontrada en \cite{munkres1984elements}.
+La demostración se encuentra en \cite{munkres1984elements}, en el
+teorema 7.2.
 
 \begin{example}
   Calculemos para $n=0, 1, 2$ los espacios $Z_{n}(\Delta)$,
@@ -2812,7 +2827,8 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
 \end{theorem}
 Las demostraciones de los teoremas
 \ref{esp-homotopicos-homologias-iso} y \ref{homologia-realizacion} se
-encuentran en \cite{munkres1984elements}.
+encuentran en \cite{munkres1984elements}, en 19.5 y
+{\setlength{\fboxsep}{0pt}\colorbox{green}{??}} respectivamente.
  
 \chapter{Gráfica de clanes}
 \label{cha:grafica-clanes}
