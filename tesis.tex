@@ -1173,16 +1173,16 @@ Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
 \end{definition}
-La suma de dos funciones de clase es una función de clase y el
-producto por escalar por una función de clase es una función de clase
-y la función constante cero $0:G\rightarrow \mathbb{C}$ está en
-$R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
-del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
-tanto podemos considerar el producto de funciones de clase, es decir,
-si $\psi$, $\theta$ son funciones de clase, podemos definir
-$\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
-  G}\psi(g)\theta(g)$, el cual se puede demostrar que es un producto
-interno en el espacio de funciones de clase. 
+% La suma de dos funciones de clase es una función de clase y el
+% producto por escalar por una función de clase es una función de clase
+% y la función constante cero $0:G\rightarrow \mathbb{C}$ está en
+% $R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
+% del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
+% tanto podemos considerar el producto de funciones de clase, es decir,
+% si $\psi$, $\theta$ son funciones de clase, podemos definir
+% $\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
+%   G}\psi(g)\overline{\theta(g)}$, el cual se puede demostrar que es un producto
+% interno en el espacio de funciones de clase. 
 \begin{theorem}
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
@@ -1311,13 +1311,15 @@ representación es irreducible o cuándo dos representaciones son
 equivalentes. Además de otros resultados que veremos a continuación.
 \begin{definition}
   Sean $\chi$, $\psi$ los caracteres de dos representaciones de un grupo
-  $G$, entonces definimos el producto interno de $\chi$ y $\psi$ como:
+  $G$, entonces definimos el producto interno de $\chi$ y $\psi$ sobre
+  el espacio de funciones de $G$ en $\mathbb{C}$ como:
   \begin{equation*}
     \langle\chi,\psi\rangle=\frac{1}{|G|}\sum_{g\in G}\chi(g)\overline{\psi(g)}.
   \end{equation*}
 \end{definition}
 
 \begin{theorem}
+  \label{prod-car-irr}
   Sean $V$ y $W$ representaciones irreducibles de un grupo $G$ con
   caracteres $\chi$, $\psi$ respectivamente. Entonces
   \[
@@ -1352,6 +1354,24 @@ de $V^{(i)}$. Entonces
 \end{corollary}
 La demostración aparece en el teorema 1.9.4 de
 \cite{sagan2001symmetric}.
+\begin{corollary}
+  \label{prod-car-pos}
+  Sean $V$ y $W$ $G$-módulos, entonces $\langle\chi_{V},\chi_{W}\rangle$ es un número entero no negativo.
+\end{corollary}
+\begin{proof}[Demostración]
+  Sea $\{V^{(1)},V^{(2)},\ldots,V^{(k)}\}$ una lista completa de $G$-submódulos
+  irreducibles. Escribimos a $V$ como $V\cong
+  m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}$ y a $W$ como $W\cong
+  r_{1}V^{(1)}\oplus r_{2}V^{(2)}\oplus\cdots\oplus r_{k}V^{(k)}$ por el
+  teorema de Maschke, donde $m_{i}$ y $r_{i}$ es la multiplicidad de el módulo
+  irreducible $V^{(i)}$, se sigue que
+  \begin{equation*}
+    \langle\chi_{V},\chi_{W}\rangle=\sum m_{i}r_{j}\langle\chi_{V_{i}},\chi_{V_{j}}\rangle\\
+  \end{equation*}
+  así que  $\langle\chi_{V},\chi_{W}\rangle$ es un entero no
+  negativo puesto que el producto interno de $\langle\chi_{V_{i}},\chi_{V_{j}}\rangle$ es
+  0 o 1 por el teorema \ref{prod-car-irr}. 
+\end{proof}
 
 \section{Caracteres y módulos inducidos}
 \label{carac-induc}
@@ -1562,7 +1582,6 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
     \intertext{se sigue de la ecuación \ref{fun-ind-trans}, lo siguiente}
     &=\sum_{\substack{t_{j}\in T,\\t^{-1}_{j}gt_{j}\in H}}\chi_{W}(t^{-1}_{j}gt_{j})=(\chi_{W})\uparrow^{G}_{H}
   \end{align*}
-  $t^{-1}_{j}gt_{j}\in H$ {\setlength{\fboxsep}{0pt}\colorbox{green}{???}}
 \end{proof}
 
 \chapter[Representaciones del grupo simétrico]{Tableros de Young y representaciones del grupo simétrico}
