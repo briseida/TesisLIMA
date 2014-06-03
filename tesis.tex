@@ -290,7 +290,7 @@ números complejos.
   \label{esp-iguales}
   Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
   $n$. Entonces, $W$ es dimensionalmente finito y $\dim(W)\leq
-  n$. Además, si $\dim(W)=n$, entonces $W=V$.
+  n$. Además, si~$\dim(W)=n$, entonces $W=V$.
 \end{theorem}
 
 \begin{definition}
@@ -320,7 +320,7 @@ números complejos.
 \begin{definition}
   Sea $W$ un subespacio de un espacio vectorial $V$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
   llama \textbf{clase lateral de $W$ que contiene a $v$}. Es frecuente
-  expresar esta clase lateral como $v+W$ en vez de $\{v\}+W$. 
+  expresar a ésta clase lateral como~$v+W$ en vez de $\{v\}+W$. 
 \end{definition}
 
 Se puede demostrar lo siguiente:
@@ -427,12 +427,12 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
   definido por $\phi(v+\ker(f))=f(v).$
 \end{theorem}
 \begin{proof}[Demostración.]
-  Hay que demostrar que $\phi$ está bien definida, es decir, que si
+  Hay que demostrar que $\phi$ está bien definida, es decir, si
+  tenemos que
   $v_1+\ker(f)=v_2+\ker(f)$, entonces
-  $f(v_1)=f(v_{2}).$ Pero
-  $v_1+\ker(f)=v_2+\ker(f)$ si y sólo si
-  $v_{1}-v_{2}\in \ker(f)$, es decir,
-  $f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
+  $f(v_1)=f(v_{2}).$ Sabemos que 
+  $v_1+\ker(f)=v_2+\ker(f)$ si y solo si
+  $v_{1}-v_{2}\in \ker(f)$, es decir,~$f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
   como se quería. Queda por demostrar de forma directa que $\phi$ es
   una transformación lineal; y para demostrar que es isomorfismo falta
   demostrar que es inyectiva y sobreyectiva, lo cual también se hace
@@ -448,7 +448,7 @@ de grupos que no incluiremos explícitamente se pueden encontrar en
 
 En la primera sección se desarrollan conceptos básicos de grupos. En
 la sección \ref{acc-grup} y  \ref{rep-grup} observamos que estudiar
-representaciones de un grupo $G$ en un espacio vectorial $V$ es
+representaciones de un grupo~$G$ en un espacio vectorial $V$ es
 equivalente a estudiar $G$-módulos $V$. Se discute el teorema de
 Maschke que enuncia que cualquier $G$-módulo $V$ se puede descomponer
 como suma directa de $G$-submódulos irreducibles en la sección~\ref{reducibilidad}. 
@@ -475,7 +475,7 @@ son iguales.
 \begin{definition}
   Una \textbf{operación binaria} en un conjunto $G$ es una función
   de la forma $G  \times G \rightarrow G$. Para cada $(a,b)\in G
-  \times G$, denotaremos al elemento $*((a,b))\in G$ por $ab$. 
+  \times G$, denotaremos al elemento~$*((a,b))\in G$ por $ab$. 
 \end{definition} 
 
 \begin{definition} 
@@ -491,7 +491,7 @@ son iguales.
 \end{definition}
 
 \begin{definition}
-  Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de $G$
+  Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
   en $H$ es una función $\rho:G\rightarrow H$ la cual
   satisface $$\rho(ab)=\rho(a)\rho(b)$$ para todo $a,b \in G$
 \end{definition}
@@ -631,18 +631,21 @@ su dimensión el \emph{grado} de la representación.
 
 \begin{example}[Representación trivial]
   La representación trivial de un grupo $G$ es el homomorfismo
-  $\rho:G\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo
-  $g\in G$, ésta es una representación de grado $1$.
+  $\rho:G\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo~$g\in G$, ésta es una representación de grado $1$.
 \end{example}
 
 \begin{example}[Representación signo]
-  El grupo simétrico sobre $\mathbb{I}_{n}=\{1,2,\ldots,n\}$, denotado
-  por $S_{n}$ es el grupo de todas las permutaciones de $\mathbb{I}_{n}$ 
-  Si $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
+  Sea $n$ un número entero positivo y~$\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
+  Una función biyectiva $\pi:\mathbb{I}_{n}\rightarrow\mathbb{I}_{n}$
+  se llamará una permutación de $\mathbb{I}_{n}$. El grupo simétrico
+  $S_{n}$ es el conjunto de todas las
+  permutaciones de $\mathbb{I}_{n}$, con la operación
+  dada por la composición de permutaciones. 
+  Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones, definimos la función signo
   $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
   mediante $$\sgn(\pi):=(-1)^{k}.$$
-  $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
+  así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
   \[
   \pi v=
   \begin{cases}
@@ -825,7 +828,7 @@ su dimensión el \emph{grado} de la representación.
     g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n})
   \end{equation*}
   para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
-  de dimensión $|Y|$. A $\mathbb{C}\boldsymbol{Y}$ le llamamos
+  de dimensión $|Y|$. A~$\mathbb{C}\boldsymbol{Y}$ le llamamos
   \emph{módulo de permutaciones}. Los elementos de
   $Y$ forman una base para $\mathbb{C}\boldsymbol{Y}$ llamada
   \emph{base estándar}.
@@ -954,15 +957,15 @@ $$U\oplus V.$$
 
 Así que dados $V$ y $W$ $G$-módulos, podemos formar un tercer módulo a partir
 de la suma directa externa $V\oplus W$, definiendo la acción como
-$a(v,w)=(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
+$a(v,w)=~(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
 cantidad finita de $G$-módulos.
 
 Por otro lado, si $V$ es un $G$-módulo, se llama la \textbf{suma} de $W_{1}$ y $W_{2}$ y se denota con
 $W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$. Ésta definición se puede extender a una
 colección arbitraria $\{W_{i}\}_{i\in I}$ es
-decir, $\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
+decir,~$\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
 
-\textbf{\emph{Observación:}} En el caso de que $W_{1}$ y $W_{2}$ son
+\textbf{\emph{Observación:}} Si $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
 $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por lo tanto escribiremos $V=W_{1}\oplus W_{2}$
 aunque estrictamente hablando es $V\cong W_{1}\oplus W_{2}$. En adelante no distinguiremos
@@ -994,8 +997,8 @@ entre suma directa y suma directa externa.
 % $w_{1}=w^{'}_{1}$ y $w^{'}_{2}=w_{2}$.
 \begin{proposition}
   \label{modulos-iguales}
-  Supongamos que $S\leq M$, $S$ irreducible, si $M=S\oplus T$ donde $S$
-  tiene multiplicidad uno y sea $S^{'}\leq M$, tal que $S^{'}\cong S$, entonces $S=S^{'}$.
+  Supongamos que $S\leq M$, además $S$ es irreducible, si~$M=S\oplus T$ donde $S$
+  tiene multiplicidad 1 y sea $S^{'}\leq M$, tal que $S^{'}\cong S$, entonces~$S=S^{'}$.
 \end{proposition}
 
 \begin{proof}[Demostración.]
@@ -1010,9 +1013,9 @@ entre suma directa y suma directa externa.
   
  Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap
  S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$ así que
- $\dim(S)=\dim(S^{'})$. Por lo tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
+ $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
  sea $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
- que $S\cap S^{'}=S^{'}$, con lo que $S=S^{'}$ como se quería demostrar.
+ que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería demostrar.
 \end{proof}
 
 \section{$G$-homomorfismo y lema de Schur} 
@@ -1033,7 +1036,7 @@ de $G$.
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-isomorfismo} es un
   $G$-homomorfismo $\phi:V\rightarrow W$ el cual es biyectivo. En
   este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} o
-  $G$\textbf{-equivalentes}, y lo denotaremos como $V\cong W$.
+  $G$\textbf{-equivalentes}, y lo denotaremos como~$V\cong W$.
 \end{definition}
 
 \begin{proposition}
@@ -1051,7 +1054,7 @@ Si $W$ es submódulo de $V$, entonces en el espacio vectorial cociente
 $V/W$ puede darse una acción de $G$ como $g(v+W)=gv+W$, la cual está
 bien definida (pues $W$ es invariante bajo la acción de $G$), y
 satisface los axiomas de módulo sobre $G$, por lo que obtenemos una
-estructura de $G$-módulo en $V/W$ llamada \textbf{módulo cociente}.
+estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 
 \begin{theorem}[Teorema de isomorfismo de módulos]
   \label{teorema-isomorfismo-mod}
@@ -1068,7 +1071,7 @@ estructura de $G$-módulo en $V/W$ llamada \textbf{módulo cociente}.
 
 \begin{proof}[Demostración.]
   Como $\ker \phi\leq V$, y $V$ es irreducible, entonces $\ker \phi=0$
-  o $\ker\phi=V$, pero  $\ker\phi\neq V$ pues $\phi$ es no trivial,
+  o~$\ker\phi=V$, pero  $\ker\phi\neq V$ pues $\phi$ es no trivial,
   así que $\ker \phi=0$ y por lo tanto $\phi$ es inyectiva. 
 
   Análogamente, $\im\phi\leq W$ y $\im \phi\neq 0$, así que $\im
@@ -1130,7 +1133,7 @@ que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 
 Parte de la terminología utilizada para representaciones se
 usará para los correspondientes caracteres. Por ejemplo si $X$ tiene
-caracter $\chi$, diremos que $\chi$ es irreducible siempre que $X$ lo
+caracter $\chi$, diremos que~$\chi$ es irreducible siempre que $X$ lo
 sea, etc.
 
 Se muestra un ejemplo de cómo calcular caracteres para tres
@@ -1192,7 +1195,7 @@ el siguiente capítulo observamos que en el caso del grupo simétrico sí se cue
 esta correspondencia.
 
 Si $K$ es una clase de conjungación y $\chi$ es una carácter, podemos
-definir $\chi_{K}$ es el valor del carácter en la clase dada.
+definir~$\chi_{K}$ es el valor del carácter en la clase dada.
 \begin{equation*}
   \chi_{K}=\chi(g)
 \end{equation*}
@@ -1365,7 +1368,7 @@ Supongamos ahora $\langle\theta,\chi_{j}\rangle=a_{j}$ para
 $j=1,\ldots,k$, donde $\chi_{1},\chi_{2},\ldots,\chi_{k}$ forman una
 colección completa de caracteres irreducibles y $a_{j}$ es un entero
 no negativo. Entonces $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde
-$\theta$ es el carácter del módulo $m_{1}V^{(1)}\oplus
+$\theta$ es el carácter del módulo~$m_{1}V^{(1)}\oplus
 m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}\neq 0$. 
 \end{proof}
 
@@ -1772,7 +1775,7 @@ Aquí está otro ejemplo de un tablero estándar:
 Antes de seguir adelante, permitenos recordar algunos hechos básicos
 sobre permutaciones. Cada permutación $\pi \in S_{n}$ tiene una
 descomposición en ciclos disjuntos. Por ejemplo $(123)(45)$ denota la
-permutación que manda $1\rightarrow 2 \rightarrow 3 \rightarrow 1$  e
+permutación que envía $1\rightarrow 2 \rightarrow 3 \rightarrow 1$  e
 intercambia al $4$ y $5$ (si $n>5$, entonces por convención los otros
 elementos fijos por $\pi$). La \textbf{estructura cíclica} de $\pi$ es la
 partición de las longitudes de los ciclos en la
@@ -2109,13 +2112,13 @@ representación trivial de dimensión uno.
     \end{ytableau}
   \end{center}
 es igual a $\{t_{i}\}- \{t_{j}\}$. Usemos temporalmente
-$\boldsymbol{e_{i}}$ para denotar el tabloide $\{t_{i}\}$. Entonces
+$\boldsymbol{e_{i}}$ para denotar el tabloide~$\{t_{i}\}$. Entonces
 $S^{\lambda}$ es generado por los elementos de la forma
 $\boldsymbol{e_{i}}-\boldsymbol{e_{j}}$, y se sigue que
 $$S^{(n-1,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+\cdots+c_{n}\boldsymbol{e_{n}}\mid
 c_{1}+c_{2}+\cdots+c_{n}=0\}$$ 
 Esta es la representación estándar y es irreducible. La suma directa de las representaciones estándar y la
-representación trivial nos da la representación $\mathbb{C}\{1,2,\ldots,n\}$, esto es
+representación trivial nos da la representación~$\mathbb{C}\{1,2,\ldots,n\}$, esto es
 $S^{(n-1,1)}\oplus S^{(n)}=M^{(n-1,1)}$.
 \end{example}
 
@@ -2229,7 +2232,7 @@ es el máximo de las dimensiones de los simplejos de $\Delta$. Cada
 subconjunto no vacío de $A$ es llamado \textbf{cara} de $A$. El
 conjunto \textbf{vértices} $V$ de $\Delta$ es la unión de los
 elementos de un punto de $\Delta$; no hacemos distinción entre los
-vértices $v\in V$ y los $0$-simplejos $\{v\}\in \Delta$. Una
+vértices~$v\in V$ y los $0$-simplejos $\{v\}\in \Delta$. Una
 subcolección de $\Delta$, que es a su vez es un complejo, se llama
 \textbf{subcomplejo} de $\Delta$.
 
@@ -2252,10 +2255,9 @@ Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
   orientado} es un segmento de línea dirigido $v_{1}v_{2}$ uniendo los
 puntos $v_{1}$ y $v_{2}$ en dirección de $v_{1}$ a $v_{2}$ como se
 ilustra en la figura \ref{fig:1-simplejo}, así que
-$v_{1}v_{2}\neq v_{2}v_{1}$, pero estaremos de acuerdo en que
-$v_{1}v_{2}=-v_{2}v_{1}$. Un \textbf{2-simplejo orientado} es una
+$v_{1}v_{2}\neq v_{2}v_{1}$, pero estaremos de acuerdo en que~$v_{1}v_{2}=-v_{2}v_{1}$. Un \textbf{2-simplejo orientado} es una
 región triangular $v_{1}v_{2}v_{3}$ con dirección de $v_{1}$ a $v_{2}$
-a $v_{3}$ como se aprecia en la figura \ref{fig:2-simplejo}, claramente $v_{1}v_{2}v_{3}$ tiene el mismo orden que
+a $v_{3}$ como se aprecia en la figura \ref{fig:2-simplejo}, claramente~$v_{1}v_{2}v_{3}$ tiene el mismo orden que
 $v_{2}v_{3}v_{1}$ y $v_{3}v_{1}v_{2}$, pero con orientación opuesta a
 $v_{1}v_{3}v_{2}$, $v_{3}v_{2}v_{1}$ y $v_{2}v_{1}v_{3}$, es decir, estaremos de acuerdo que:
 $$v_{1}v_{2}v_{3}=v_{2}v_{3}v_{1}=v_{3}v_{1}v_{2}=-v_{1}v_{3}v_{2}=-v_{3}v_{2}v_{1}=-v_{2}v_{1}v_{3}$$
@@ -2395,7 +2397,7 @@ nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
   combinación lineal finita
 $$c=\sum n_{i}\sigma_{i},$$
 de las correspondientes cadenas elementales $\sigma_{i}$. La cadena
-$c$ asigna el valor $(n_{i})$ al \emph{p}-simplejo orientado
+$c$ asigna el valor~$n_{i}$ al \emph{p}-simplejo orientado
 $\sigma_{i}$ , el valor $(-n_{i})$ a la orientación opuesta de
 $\sigma_{i}$ y el valor $0$ a todo \emph{p}-simplejo orientado que no
 aparece en la suma, se sigue del teorema $\ref{clunica}$.
@@ -2412,8 +2414,8 @@ La prueba se puede consultar en el corolario 5.2 de \cite{munkres1984elements}.
   Sea $\sigma=(v_{0},\ldots ,v_{p})$ un simplejo orientado con $p>0$
   (sin embargo también será denotado como $\sigma=v_{0}\ldots v_{p}$
   cuando no tengamos problemas de confusión),
-  definimos la trasformación lineal $\partial_{p}:C_{p}(\Delta)\rightarrow
-  C_{p-1}(\Delta)$ como:
+  definimos la trasformación lineal
+  $\partial_{p}:C_{p}(\Delta)\rightarrow~C_{p-1}(\Delta)$ como:
 
   \begin{equation}
     \label{ofrontera}
@@ -2428,20 +2430,20 @@ Puesto que $C_{p}(\Delta)$ es el espacio trivial para $p<0$, diremos
 que $\partial_{p}$ es la \textit{trasformación cero} para $p\leq
 0$. Mostremos ahora que $\partial_{p}$ está bien definido y que
 $\partial_{p}(-\sigma)=-\partial_{p}(\sigma)$. Para esto es suficiente
-mostrar que la ecuación $(\ref{ofrontera})$ cambia de signo si intercambiamos dos
-vértices adyacentes en el orden $v_{0}\ldots v_{p}$, entonces,
+mostrar que la ecuación (\ref{ofrontera}) cambia de signo si intercambiamos dos
+vértices adyacentes en el orden~$v_{0}\ldots v_{p}$, entonces,
 debemos comparar las expresiones:
 $$\partial_{p}(v_{0}\ldots v_{j} v_{j+1} \ldots v_{p}) \mbox{ y } \partial_{p}(v_{0}\ldots v_{j+1} v_{j} \ldots v_{p}).$$
 
 Para $i\neq j$, $j+1$, el $i$-ésimo término de estas dos expresiones
 difieren precisamente por un signo; los términos son idénticos,
-excepto que $v_{j}$ y $v_{j+1}$ aparecen intercambiados. Veamos que
+excepto que $v_{j}$ y~$v_{j+1}$ aparecen intercambiados. Veamos que
 sucede sobre el i-ésimo término cuando $i=j$ y $i=j+1$. En la primera
 expresión tenemos que:
 $$(-1)^{j}(\ldots v_{j-1} \widehat v_{j}v_{j+1}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j}\widehat v_{j+1}v_{j+2}\ldots).$$
 en la segunda expresión tenemos:
 $$(-1)^{j}(\ldots v_{j-1}\widehat v_{j+1}v_{j}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j+1}\widehat v_{j}v_{j+2}\ldots).$$
-Comparando estas dos expresiones observamos que solo difieren por un signo.
+Comparando éstas dos expresiones observamos que solo difieren por un signo.
 
 \begin{example}
   De acuerdo a lo anterior, tenemos que
@@ -2471,7 +2473,7 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
   $\varepsilon(c)$ es igual a la suma de los valores de $c$ en los
   vértices de $\Delta$, es decir:
   $$\varepsilon(\sum \lambda_{i}v_{i})=\sum\lambda_{i}$$
-  $\varepsilon$ es llamada la \textbf{función aumento} para
+  llamaremos a $\varepsilon$ la \textbf{función aumento} para
   $C_{0}(\Delta)$.
 \end{definition}
 
@@ -2495,9 +2497,10 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
   $B_{p}(\Delta)$ es subespacio de $Z_{p}(\Delta)$.
 \end{corollary}
 
-\textit{Demostración.} Primero veamos que $B_{n}(\Delta)\subseteq Z_{n}(\Delta)$, tenemos que
+\textit{Demostración.} Primero veamos que $B_{n}(\Delta)$ es
+subconjunto de $Z_{n}(\Delta)$, tenemos que
 $B_{n}(\Delta)=\partial[C_{n+1}(\Delta)]$, si $b\in B_{n}(\Delta)$,
-podemos escribir a $b$ como $b=\partial_{n+1}(c)$ para algún $c\in
+podemos escribir a $b$ como~$b=\partial_{n+1}(c)$ para algún $c\in
 C_{n+1}(\Delta)$. Así que
 $$\partial_{n}(b)=\partial_{n}(\partial_{n+1}(c))=0$$
 por lo tanto $b\in Z_{n}(\Delta)$.
@@ -2544,7 +2547,7 @@ teorema 7.2.
 
 \begin{example}
   Calculemos para $n=0, 1, 2$ los espacios $Z_{n}(\Delta)$,
-  $B_{n}(\Delta)$ y $H_{n}(\Delta)$ para la superficie $\Delta$ del tetraedro.
+  $B_{n}(\Delta)$ y~$H_{n}(\Delta)$ para la superficie $\Delta$ del tetraedro.
 
   Como $C_{-1}(\Delta)=0$ por definición, se sigue que
   $$\boldsymbol{Z_{0}(\Delta)}=C_{0}(\Delta)$$
@@ -2564,7 +2567,7 @@ teorema 7.2.
   $$v_{3}-v_{2}=(v_{3}-v_{0})-(v_{2}-v_{0})$$
   Así que $\dim(B_{0}(\Delta))=3$, además $C_{0}(\Delta)=\langle
   v_{0},v_{1},v_{2},v_{3}\rangle$, por lo que la
-  $\dim(Z_{0}(\Delta))=\dim(C_{0}(\Delta))=4$, luego de el teorema
+ $\dim(Z_{0}(\Delta))=\dim(C_{0}(\Delta))=4$, luego de el teorema
   $\ref{dim-esp-coc}$ tenemos que
   $\dim(Z_{0}(\Delta)/B_{0}(\Delta))=1$, así mismo la
   $\dim(\mathbb{C})=1$, por el resultado $\ref{esp-isomorfos}$ se sigue
@@ -2704,9 +2707,9 @@ teorema 7.2.
 \end{proof}
 
 \begin{definition}
-  Si $(A,\partial)$ es un complejo de cadenas, entonces el kernel
-  $Z_{k}(A)$ de $\partial_{k}$ es el\textbf{ espacio de} $\boldsymbol{k}$\textbf{-ciclos,} y
-  la imagen $B_{k}(A)=\partial_{k+1}[A_{k+1}]$ es el \textbf{espacio
+  Si $(A,\partial)$ es un complejo de cadenas, entonces el
+  kernel~$Z_{k}(A)$ de $\partial_{k}$ es el\textbf{ espacio de}
+  $\boldsymbol{k}$\textbf{-ciclos,} y la imagen $B_{k}(A)=\partial_{k+1}[A_{k+1}]$ es el \textbf{espacio
     de} $\boldsymbol{k}$\textbf{-fronteras.} El espacio cociente $H_{k}(A)=Z_{k}(A)/B_{k}(A)$
   es la $\boldsymbol{k}$\textbf{-ésima homología de A.}
 \end{definition}
@@ -2722,9 +2725,9 @@ teorema 7.2.
     \cdots @>{\partial^{'}_{k+2}}>> A^{'}_{k+1} @>{\partial^{'}_{k+1}}>> A^{'}_{k} @>{\partial^{'}_{k}}>> A^{'}_{k-1} @>{\partial^{'}_{k-1}}>> \cdots
   \end{CD}
   \]
-  Supongamos, además que
+  Además para todo $k$ se tiene
   $$f_{k-1}\partial_{k}=\partial^{'}_{k}f_{k}$$
-  para todo $k$. Entonces $f_{k}$ induce una transformación lineal
+  Entonces $f_{k}$ induce una transformación lineal
   $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'}).$
 \end{theorem}
 \begin{proof}[Demostración.]
@@ -2752,7 +2755,7 @@ teorema 7.2.
   $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son enviados en representantes de la misma
   clase lateral en $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'}).$ Esto muestra
   que $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ está bien definida por
-  la ecuación $(\ref{trans-lin-homologias})$.
+  la ecuación~$(\ref{trans-lin-homologias})$.
   
   Demostrar que $f_{*k}$ es una transformación lineal se sigue de la
   linealidad de $f$.
@@ -2858,8 +2861,7 @@ a las gráficas les asociamos complejos simpliciales.
 \end{definition}
 
 \begin{definition}
-  Decimos que $G$ es una gráfica \textbf{completa} si para todos
-  $u,v\in G$ con $u\neq v$ se tiene que $uv$. Una grafica completa con
+  Decimos que $G$ es una gráfica \textbf{completa} si para todos~$u,v\in G$ con $u\neq v$ se tiene que $uv$. Una grafica completa con
   $n$ vértices se denota como $K_{n}$.
 \end{definition}
 
@@ -2888,7 +2890,7 @@ a las gráficas les asociamos complejos simpliciales.
   Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
   subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
   \textbf{gráfica de intersección} de $F$ es denotada por $\Omega(F)$
-  y definida por $V(\Omega(F))=F$, con $S_{i}$ y $S_{j}$ adyacentes
+  y definida por $V(\Omega(F))=F$, con~$S_{i}$ y $S_{j}$ adyacentes
   siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$.
 \end{definition}
 
@@ -2938,7 +2940,7 @@ clanes de $G$ de la figura \ref{G}.
 Por ejemplo, la gráfica bipartita clánica de la figura \ref{G} aparece
 en la figura \ref{BKG}, donde los vértices en color gris corresponden a los
 clanes de la figura \ref{G} y los vértices restantes son los vértices
-de la gráfica de la figura \ref{G}.
+de la gráfica de la figura~\ref{G}.
 
 \begin{figure}[h]
   \centering
@@ -2960,7 +2962,7 @@ de la gráfica de la figura \ref{G}.
   \caption{$BK(G)$}
 \label{BKG}
 \end{figure}
-
+\bigskip
 A cada gráfica $G$ finita se le asocia un espacio topológico por
 medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
 las subgráficas completas. Entonces a $G$ le podemos asociar conceptos topológicos por
@@ -3413,7 +3415,7 @@ entonces
 \end{equation}
 
 Por otra parte tenemos que $\im\widehat\partial_{1}\cong S^{(3,1)}$ o $\im\widehat\partial_{1}=0$ por
-la proposición \ref{im-mod-irreducible}
+la proposición~\ref{im-mod-irreducible}
 
 Como $\partial_{1}((\overline{12},\overline{34}))=\overline{34}-\overline{12}$
 tenemos que $\im\partial_{1}\neq 0$ (en general $\partial_{k}\neq 0$
@@ -3450,7 +3452,7 @@ entonces
 \label{ker-1-4}
 \end{equation}
 
-$\widehat\partial_{2}$ es un morfismo de módulos, así que
+Como $\widehat\partial_{2}$ es un morfismo de módulos, tenemos
 \begin{equation}
 \im\widehat\partial_{2}=\widehat\partial_{2}(0)=0
 \label{im-2-4}
@@ -3554,7 +3556,7 @@ Consideremos:
 \label{tab:restriccion-H_0}
 \end{table}
 
-{\scriptsize
+%{\scriptsize
   \begin{align*}
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\ 
     &=\frac{1}{12}(1+1+3+3+2+2)=1\\ 
@@ -3570,7 +3572,8 @@ Consideremos:
     &=\frac{1}{12}(5+1+3+3-2+2)=1 \\
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
     &=\frac{1}{12}(5-1-3+3-2-2)=0 
-  \end{align*}}
+  \end{align*}
+%}
 
 De los productos internos calculados anteriormente obtenemos:
 \begin{equation}
@@ -3607,7 +3610,7 @@ reciprocidad de Frobenius.
     \label{tab:restriccion-H_1}
   \end{table}
 
-{\scriptsize
+%{\scriptsize
   \begin{align*}
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(1+2-2-2+1)=0\\
@@ -3623,7 +3626,8 @@ reciprocidad de Frobenius.
     &=\frac{1}{8}(5+2+2-2+1)=1 \\
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(5-2-2-2+1)=0
-  \end{align*}}
+  \end{align*}
+%}
 
 De donde obtenemos:
 \begin{equation}
@@ -3632,8 +3636,7 @@ De donde obtenemos:
 \end{equation}
 En la figura \ref{fig:diagrama-conmutativo5} se muestra el diagrama
 conmutativo de los complejos de cadena de $M_{5}$, donde $f_{0}$ y
-$f_{1}$ son los isomorfismos obtenidos de las expresiones
-\ref{eq:C0-M5} y \ref{eq:C1-M5}
+$f_{1}$ son los isomorfismos obtenidos de las expresiones~\ref{eq:C0-M5} y \ref{eq:C1-M5}
 
 \begin{figure}[h]
   \centering
@@ -3665,7 +3668,7 @@ así que
 \end{equation*}
 Sabemos que $\widetilde H_{0}(M_{5})=\ker \widehat\varepsilon/\im
 \widehat\partial_{1}=0$ pues $M_{5}$  es
-conexo, se sigue que $\ker \widehat\varepsilon\cong
+conexo, se sigue que~$\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
 \label{im1-5}
@@ -4272,7 +4275,7 @@ y los $2$-simplejos:
     \caption{Caracteres de $S_{6}$ restringidos a $H_{1}$ y carácter de $V_{1}$}
     \label{tab:restriccion-H-1-M-6}
   \end{table}  
-  \begin{footnotesize}
+  %\begin{footnotesize}
     De donde obtenemos:
     \begin{equation}
       C_{1}(M_{6})=S^{(5,1)}\oplus S^{{(4,1,1)}} \oplus S^{{(4,2)}}
@@ -4283,7 +4286,7 @@ y los $2$-simplejos:
     \begin{equation*}
       V_{2}=\langle c_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle
     \end{equation*}
-  \end{footnotesize}
+  %\end{footnotesize}
   \begin{tiny}
     \begin{align*}
       H_{2}=&\{g\in S_{6}\mid
@@ -4366,7 +4369,7 @@ así que
   \ker\widehat\varepsilon\cong  S^{(5,1)}\oplus S^{(4,2)} 
 \end{equation*}
 Sabemos que $\widetilde H_{0}(M_{6})=\ker \widehat\varepsilon/\im
-\widehat\partial_{1}=0$ pues $M_{6}$ es conexo, se sigue que $\ker \widehat\varepsilon\cong
+\widehat\partial_{1}=0$ pues $M_{6}$ es conexo, se sigue que~$\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
   \label{im1-M6}
@@ -4453,10 +4456,9 @@ Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
 Considerando la figura \ref{fig:emparejamiento6-1}. Se observa que contrayendo los
 triángulos, se encuentra que $G_{6}$ es homotópica a $BK(G_{6})$ esto
 puede demostrarse formalmente ocupando los resultados que aparecen en
-\cite{LPV08a} y \cite{Pri92}. Así que, por el teorema
-\ref{esp-homotopicos-homologias-iso} tenemos $\widetilde
+\cite{LPV08a} y \cite{Pri92}. Por el teorema~\ref{esp-homotopicos-homologias-iso} tenemos $\widetilde
 H_{2}(M_{6})\cong\widetilde H_{2}(\Delta(BK(G_{6})))$. Además
-$\widetilde H_{2}(\Delta(BK(G_{6})))=0$ pues en $BK(G_{6})$ no existen $2$-simplejos.
+$\widetilde H_{2}(\Delta(BK(G_{6})))=0$ pues en~$BK(G_{6})$ no existen $2$-simplejos.
 %$$G_{6}\simeq
 %H(G_{6})=\varepsilon(BK(G_{6}))=L(BK(G_{6}))=K(BK(G_{6}))\simeq BK(G_{6})$$
 
@@ -4469,7 +4471,7 @@ por lo que $\im \widehat\partial_{3}=\ker \widehat\partial_{2}$. De el teorema
 $$(S^{(4,1,1)}\oplus S^{(3,3)})/\ker \widehat\partial_{2}\cong \im \widehat\partial_{2}$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
-\im \widehat\partial_{2}=S^{(4,1,1)}\oplus S^{(3,3)}
+\im \widehat\partial_{2}=S^{(4,1,1)}\oplus S^{(3,3)}.
 \label{im2-M6}
 \end{equation}
 
@@ -4483,7 +4485,8 @@ De las ecuaciones \ref{ker1-M6}, \ref{im2-M6} y la proposición
   &=&S^{(3,2,1)}
 \end{eqnarray*}
 
-En lo anterior usamos el  hecho que $G_{6}\simeq BK(G_{6})$ por lo que $\widetilde H_{2}(M_{6})\cong\widetilde H_{2}(\Delta(BK(G_{6})))=0$, sin embargo veamos que no es necesario, por lo que
+En lo anterior usamos el hecho de que $G_{6}\simeq BK(G_{6})$, de donde
+se sigue que $\widetilde H_{2}(M_{6})\cong\widetilde H_{2}(\Delta(BK(G_{6})))=0$, sin embargo veamos que no es necesario, por lo que
 necesitamos calcular $\im \widehat\partial_{2}$. 
 
 Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
@@ -4771,7 +4774,7 @@ Sabemos que $\widetilde H_{0}(K(M_{6}))=\ker \widehat\varepsilon/\im
   \im \widehat\partial_{1}\cong S^{(4,2)}\oplus S^{(2,2,2)}
 \end{equation}
 
-Además el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-KM6} se tiene:
+Además de el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-KM6} se tiene:
 $$(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus
       S^{(2,2,2)}\oplus S^{(3,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
@@ -4784,9 +4787,8 @@ Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
 \im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
 \label{im3-KM6}
 \end{equation*}
-En \cite{larrion2009clique} encontramos que $M_{6}\simeq K(M_{6})$,
-por el teorema \ref{esp-homotopicos-homologias-iso} tenemos que
-$\widetilde H_{2}(M_{6})\cong \widetilde H_{2}(K(M_{6}))$ y  $\widetilde
+De \cite{larrion2009clique} sabemos $M_{6}\simeq K(M_{6})$,
+por el teorema \ref{esp-homotopicos-homologias-iso} se sigue $\widetilde H_{2}(M_{6})\cong~\widetilde H_{2}(K(M_{6}))$ y  $\widetilde
 H_{2}(M_{6})=0$, así que:
 
 \begin{equation*}
@@ -4803,7 +4805,6 @@ De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \end{equation}
 
 De las ecuaciones \ref{ker1-KM6} y \ref{im2-KM6} tenemos:
-
 \begin{eqnarray*}
   \widetilde H_{1}(K(M_{6}))&=&\ker \widehat\partial_{1}/\im
   \widehat\partial_{2}\\
