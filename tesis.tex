@@ -819,7 +819,7 @@ su dimensión el \emph{grado} de la representación.
     V=\mathbb{C}\boldsymbol{Y}=\{\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
     +\lambda_{n}y_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}
   \end{equation*}
-  donde $\lambda_{i}\in\mathbb{C}$. La adición y multiplicación por escalar
+  La adición y multiplicación por escalar
   en $\mathbb{C}\boldsymbol{Y}$ está definida por
   \begin{eqnarray*}
     (\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
@@ -831,11 +831,13 @@ su dimensión el \emph{grado} de la representación.
   \begin{eqnarray*}
     c(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=(c\lambda_{1})y_{1}+(c\lambda_{2})y_{2}+\cdots +(c\lambda_{n})y_{n},
   \end{eqnarray*}
-  respectivamente. Si $v\in V$
+  respectivamente. Sean $v\in V$, con
+  $v=\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots+\lambda_{n}y_{n}$ y
+  $g\in G$ entonces la acción de $G$ en $V$ está dada por
   \begin{equation*}
-    g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n})
+    gv=g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n})
   \end{equation*}
-  para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
+  Así que $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
   de dimensión $|Y|$. A~$\mathbb{C}\boldsymbol{Y}$ le llamamos
   \emph{módulo de permutaciones}. Los elementos de
   $Y$ forman una base para $\mathbb{C}\boldsymbol{Y}$ llamada
@@ -907,6 +909,20 @@ su dimensión el \emph{grado} de la representación.
       1 & 0 & 0 \\
     \end{pmatrix}$.
   \end{center}
+\end{example}
+
+\begin{example}[Representación regular]
+  Sea $G$ un grupo. Procedamos como en el ejemplo \ref{CS}, pero ahora $G$
+  actúa sobre sí mismo. Sean $Y=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
+  \begin{equation*}
+    V=\mathbb{C}\boldsymbol{G}=\{\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
+    +\lambda_{n}g_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}.
+  \end{equation*}
+ Sean $v\in V$ con $v=\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
+ +\lambda_{n}g_{n}$ y $g\in G$, entonces la acción de $G$ en $V$ está dada por
+  \begin{equation*}
+    gv=g(\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots +\lambda_{n}g_{n})=\lambda_{1}(gg_{1})+\lambda_{2}(gg_{2})+\cdots +\lambda_{n}(gg_{n})
+  \end{equation*}  
 \end{example}
 
 \section{Reducibilidad}
@@ -1507,8 +1523,7 @@ que $yu\in G$ si y solo si $u\in G$.
     \langle\theta\uparrow^{G}_{H},\chi\rangle=\langle\theta,\chi\downarrow^{G}_{H}\rangle,
   \end{equation*}
   el cual es un entero no negativo, pues es el producto interno de dos
-  caracteres. {\setlength{\fboxsep}{0pt}\colorbox{green}{??notas teo 3.11}}%(ver teorema \ref{}). 
-  El resultado se sigue entonces de la proposición
+  caracteres (ver corolario \ref{prod-car-pos}). El resultado se sigue entonces de la proposición
   \ref{fun-cla-caracter}.
 \end{proof}
 Supondremos en lo que resta de esta sección que $G$ es un grupo, $H$ un subgrupo de
