@@ -630,7 +630,8 @@ en $V$, es equivalente a estudiar $G$-módulos $V$.
   Llamemos \textbf{representación matricial} al homomorfismo
    de la definición \ref{representacion}, es decir, 
    $$X:G\rightarrow GL(n,\mathbb{C})$$
-   simplemente para resaltar que $X(g)\in GL(n,\mathbb{C})$ para cada $g\in G$.
+   simplemente para resaltar que para cada $g\in G$, $X(g)$  es una
+   matriz invertible $n \times n$ con entradas en $\mathbb{C}$. 
 \end{definition}
 Se denotará $(\rho,V)$ para enfatizar el hecho de que la
 representación $\rho$ de $G$  es sobre el espacio $V$. A
@@ -879,7 +880,7 @@ su dimensión el \emph{grado} de la representación.
       0 & 0 & 1 \\
     \end{pmatrix}$,
   \end{center}
-  las demás representaciones matriciales $X(\pi)$, con $\pi\in S_{3}$ son:
+  las otras representaciones matriciales $X(\pi)$, con $\pi\in S_{3}$ son:
   \begin{center}
     $X(1)=\begin{pmatrix}
       1 & 0 & 0 \\
@@ -912,7 +913,7 @@ su dimensión el \emph{grado} de la representación.
 \end{example}
 
 \begin{example}[Representación regular]
-  Sea $G$ un grupo. Procedamos como en el ejemplo \ref{CS}, pero ahora $G$
+  Sea $G$ un grupo. Procedemos como en el ejemplo \ref{CS}, pero ahora $G$
   actúa sobre sí mismo. Sean $Y=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
   \begin{equation*}
     V=\mathbb{C}\boldsymbol{G}=\{\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
@@ -1188,17 +1189,7 @@ Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}
   conjugación de $G$, es decir, si $K$ es una clase de conjugación de
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
-\end{definition}
-% La suma de dos funciones de clase es una función de clase y el
-% producto por escalar por una función de clase es una función de clase
-% y la función constante cero $0:G\rightarrow \mathbb{C}$ está en
-% $R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
-% del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
-% tanto podemos considerar el producto de funciones de clase, es decir,
-% si $\psi$, $\theta$ son funciones de clase, podemos definir
-% $\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
-%   G}\psi(g)\overline{\theta(g)}$, el cual se puede demostrar que es un producto
-% interno en el espacio de funciones de clase. 
+\end{definition} 
 \begin{theorem}
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
@@ -1480,6 +1471,17 @@ el \emph{índice} de $H$ en $G$.
 en donde se hizo el cambio de variable $u=y^{-1}x$ (esto es $x=yu$), y notamos
 que $yu\in G$ si y solo si $u\in G$.
 \end{proof}
+
+La suma de dos funciones de clase es una función de clase y el
+producto por escalar por una función de clase es una función de clase
+y la función constante cero $0:G\rightarrow \mathbb{C}$ está en el conjunto de todas las funciones de clase en $G$
+que anteriormente denotamos como $R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
+del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
+tanto podemos considerar el producto de funciones de clase, es decir,
+si $\psi$, $\theta$ son funciones de clase, podemos definir
+$\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
+  G}\psi(g)\overline{\theta(g)}$, el cual se puede demostrar que es un producto
+interno en el espacio de funciones de clase.
 \begin{theorem}[Reciprocidad de Frobenius]
   \label{frobenius}
   Sea $H\leq G$ y $\theta:H\rightarrow\mathbb{C}$,
