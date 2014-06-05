@@ -3084,7 +3084,7 @@ observa en \ref{fig:realizacion-geometrica}.
 Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
 \mid |x|\leq 1\}$. 
 
-\chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías de el complejo de emparejamientos}
+\chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías del complejo de emparejamientos}
 \label{cha:hom-com-emp}
 
 En éste capítulo se utilizarán todos los conceptos y resultados
@@ -3097,24 +3097,28 @@ $n\leq 6$.
 \section{Complejo de emparejamientos}
 \label{complejo-emparejamientos}
 \begin{definition}
-Consideremos la gráfica completa de $n$ vértices $K_{n}$, tales
-vértices son etiquetados como $1,2,\ldots,n$, además
+Consideremos la gráfica completa de $n$ vértices $K_{n}$ cuyos
+vértices están etiquetados como $1,2,\ldots,n$. Además
 $\overline{ij}$ denotará la arista que une al vértice $i$ con el
-vértice $j$ (donde $\overline{ij}=\overline{ji}$). Llamaremos \textbf{complejo de emparejamientos} de orden
-$n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
+vértice $j$ (donde $\overline{ij}=\overline{ji}$).
+
+Llamaremos \textbf{gráfica de emparejamientos} de orden $n$ a la
+gráfica $G_{n}$ tal que
 
 \begin{enumerate}
-  \item Su conjunto de vértices $V$ consta de las aristas de la gráfica
+  \item Su conjunto de vértices $V(G_{n})$ consta de las aristas de la gráfica
   $K_{n}$. 
 
   \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
-  $V$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $M_{n}$ si $v_{i}$
+  $V(G_{n})$, $\{v_{i},v_{j}\}$ es una arista en $E(G_{n})$ si $v_{i}$
   y $v_{j}$ son ajenas.
 \end{enumerate} 
-La \textbf{gráfica de emparejamientos} de $K_{n}$ será denotada por $G_{n}$.
+
+El \textbf{complejo de emparejamientos} de $K_{n}$ será denotado
+entonces por $M_{n}$, y se define como $M_{n}=\Delta(G_{n})$
 \end{definition}
 
-Tenemos que $M_{n}=\Delta(G_{n})$. Como $S_{n}$ actúa de manera
+Puesto que $S_{n}$ actúa de manera
 natural en $G_{n}$ los espacios $C_{p}(M_{n})$, $Z_{p}(M_{n})$,
 $B_{p}(M_{n})$ (y por lo tanto $\widetilde H_{p}(M_{n})$) se convierten en
 $S_{n}$-módulos sobre $\mathbb{C}$. En éste capítulo consideramos
