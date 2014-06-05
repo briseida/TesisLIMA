@@ -2343,12 +2343,12 @@ cada subconjunto no vacío de $A$ pertenece a $\Delta$.
 \end{definition}
 
 El elemento $A$ de $\Delta$ es llamado \textbf{simplejo} de
-$\Delta$; Si $A$ tiene $p+1$ elementos, decimos que $A$ es un
+$\Delta$. Si $A$ tiene $p+1$ elementos, decimos que $A$ es un
 \emph{p-simplejo} y su dimensión es $p$. La dimensión de $\Delta$
 es el máximo de las dimensiones de los simplejos de $\Delta$. Cada
 subconjunto no vacío de $A$ es llamado \textbf{cara} de $A$. El
-conjunto \textbf{vértices} $V$ de $\Delta$ es la unión de los
-elementos de un punto de $\Delta$; no hacemos distinción entre los
+conjunto de \textbf{vértices} $V$ de $\Delta$ es la unión de los
+elementos de un punto de $\Delta$. No haremos distinción entre los
 vértices~$v\in V$ y los $0$-simplejos $\{v\}\in \Delta$. Una
 subcolección de $\Delta$, que es a su vez es un complejo, se llama
 \textbf{subcomplejo} de $\Delta$.
@@ -2357,14 +2357,14 @@ subcolección de $\Delta$, que es a su vez es un complejo, se llama
   El subcomplejo de $\Delta$ que consiste de todos los simplejos de
   $\Delta$ de dimensión a lo más $p$, se llama \textbf{$\boldsymbol{p}$-esqueleto} de
   $\Delta$ y se denota por~$\Delta^{(p)}$. El $1$-esqueleto
-  $\Delta^{1}$ de cualquier complejo simplicial de $\Delta$ es una
+  $\Delta^{(1)}$ de cualquier complejo simplicial de $\Delta$ es una
   gráfica.
 \end{definition}
 
 \begin{definition}
   Un complejo simplicial $\Delta$ es \textbf{conexo} si
-  $\Delta^{1}$ es una gráfica conexa, es decir, si existe un camino en
-  $\Delta^{1}$  para cualquiera dos vértices.
+  $\Delta^{(1)}$ es una gráfica conexa, es decir, si existe un camino en
+  $\Delta^{(1)}$  para cualquiera dos vértices.
 \end{definition}
 
 Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
@@ -2395,8 +2395,9 @@ Un \textbf{3-simplejo orientado} está dado por una secuencia ordenada
 $v_{1}v_{2}v_{3}v_{4}$ de cuatro vértices de un tetraedro sólido
 como se observa en la figura \ref{fig:3-simplejo} y
 acordaremos que $v_{1}v_{2}v_{3}v_{4}=\pm v_{i}v_{j}v_{r}v_{s}$,
-dependiendo si la permutación es par o impar. Así que dos
-\emph{n-simplejos}, son equivalentes si difieren el uno del otro
+dependiendo si la permutación es par o impar. Así que dos maneras
+de enumerar los vértices de un $n$-simplejo se considerarán
+equivalentes, o producen la misma orientación si difieren una de la otra
 por una permutación par. 
 
 \begin{figure}[h]
@@ -2465,18 +2466,15 @@ por una permutación par.
 
 \begin{definition}
   Sea $\Delta$ un complejo simplicial. Una \textbf{\emph{p}-cadena} en
-  $\Delta$ es una función $c$ de el conjunto de $p$-simplejos de
-  $\Delta$ a los complejos, tal que:
-  \begin{enumerate}
-    \item $c(\sigma)=-c(\sigma^{'})$ si $\sigma$ y $\sigma^{'}$ tienen
-      direcciones opuestas del mismo simplejo.
-    \item $c(\sigma)=0$ para todo $p$-simplejo orientado $\sigma$,
-      excepto en un número finito de ellos.
-  \end{enumerate} 
+  $\Delta$ es una función $c$ de el conjunto de $p$-simplejos
+  orientados de
+  $\Delta$ al campo de los números complejos, tal que:
+    $c(\sigma)=-c(\sigma^{'})$ si $\sigma$ y $\sigma^{'}$ son
+      orientaciones opuestas del mismo simplejo.
 \end{definition}
 
-Dado que en nuestro caso sólo estudiamos complejos simpliciales cuyo
-conjunto de vértices es finito, la segunda condición no se aplica.
+% Dado que en nuestro caso sólo estudiamos complejos simpliciales cuyo
+% conjunto de vértices es finito, la segunda condición no se aplica.
 
 Sumamos $p$-cadenas sumando sus valores; el $\mathbb{C}$-espacio vectorial resultante es
 denotado por $C_{p}(\Delta)$ y es llamado el \textbf{espacio de
@@ -2517,23 +2515,24 @@ de las correspondientes cadenas elementales $\sigma_{i}$. La cadena
 $c$ asigna el valor~$n_{i}$ al \emph{p}-simplejo orientado
 $\sigma_{i}$ , el valor $(-n_{i})$ a la orientación opuesta de
 $\sigma_{i}$ y el valor $0$ a todo \emph{p}-simplejo orientado que no
-aparece en la suma, se sigue del teorema $\ref{clunica}$.
+aparece en la suma. Entonces la afirmación se sigue del teorema $\ref{clunica}$.
 \end{proof}
 
 \begin{corollary}
-  Toda función $f$ de los p-simplejos orientados de $\Delta$ en
-  un espacio vectorial $V$ puede extenderse de manera única a una
-  trasformación lineal de $C_{p}(\Delta)\rightarrow V$, tal que $f(-
-  \sigma)=-f(\sigma)$ para todo p-simplejo orientado~$\sigma$.
+  Toda función $f$ de los p-simplejos orientados de $\Delta$ en un
+  espacio vectorial $V$ , tal que $f(-\sigma)=-f(\sigma)$ para todo
+  p-simplejo orientado~$\sigma$ puede extenderse de manera única a una
+  trasformación lineal de $C_{p}(\Delta)\rightarrow V$
 \end{corollary}
+
 La prueba se puede consultar en el corolario 5.2 de \cite{munkres1984elements}.
+
 \begin{definition}
   Sea $\sigma=(v_{0},\ldots ,v_{p})$ un simplejo orientado con $p>0$
   (sin embargo también será denotado como $\sigma=v_{0}\ldots v_{p}$
   cuando no tengamos problemas de confusión),
   definimos la trasformación lineal
-  $\partial_{p}:C_{p}(\Delta)\rightarrow~C_{p-1}(\Delta)$ como:
-
+  $\partial_{p}:C_{p}(\Delta)\rightarrow~C_{p-1}(\Delta)$ por medio de:
   \begin{equation}
     \label{ofrontera}
     \partial_{p}(\sigma)=\partial_{p}(v_{0}\ldots
@@ -2555,10 +2554,10 @@ $$\partial_{p}(v_{0}\ldots v_{j} v_{j+1} \ldots v_{p}) \mbox{ y } \partial_{p}(v
 Para $i\neq j$, $j+1$, el $i$-ésimo término de estas dos expresiones
 difieren precisamente por un signo; los términos son idénticos,
 excepto que $v_{j}$ y~$v_{j+1}$ aparecen intercambiados. Veamos que
-sucede sobre el i-ésimo término cuando $i=j$ y $i=j+1$. En la primera
-expresión tenemos que:
+sucede sobre el $i$-ésimo término cuando $i=j$ y $i=j+1$. En la primera
+expresión obtenemos:
 $$(-1)^{j}(\ldots v_{j-1} \widehat v_{j}v_{j+1}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j}\widehat v_{j+1}v_{j+2}\ldots).$$
-en la segunda expresión tenemos:
+mientras que en la segunda expresión tenemos:
 $$(-1)^{j}(\ldots v_{j-1}\widehat v_{j+1}v_{j}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j+1}\widehat v_{j}v_{j+2}\ldots).$$
 Comparando éstas dos expresiones observamos que solo difieren por un signo.
 
@@ -2638,9 +2637,9 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 %     que $ac\in C_{n+1}(\Delta)$, así que $ab\in B_{n}(\Delta)$ pues $ab=a\partial_{n+1}(c)=\partial_{n+1}(ac)$.
 % \end{enumerate}
 \begin{definition}
-   Definimos al espacio
+   El espacio
    $$H_{p}(\Delta)=Z_{p}(\Delta)/B_{p}(\Delta)$$
-   al cual llamamos la \textbf{\emph{p}-ésima homología de $\Delta$}
+   se llama la \textbf{\emph{p}-ésima homología de $\Delta$}
 \end{definition}
 
 \begin{definition}
@@ -2654,10 +2653,10 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 \end{definition}
 
 \begin{theorem}
-  Sea $\Delta$ un complejo simplicial no vacío,
-  $$\widetilde H_{0}(\Delta)\cong \widetilde H_{0}(\Delta)\oplus
+  Sea $\Delta$ un complejo simplicial no vacío, entonces
+  $$H_{0}(\Delta)\cong \widetilde H_{0}(\Delta)\oplus
   \mathbb{C}.$$
-  Así $\widetilde H_{0}(\Delta)=0$ si $\Delta$ es conexo.
+  Además, $\widetilde H_{0}(\Delta)=0$ si $\Delta$ es conexo.
 \end{theorem}
 La demostración se encuentra en \cite{munkres1984elements}, en el
 teorema 7.2.
@@ -2678,7 +2677,7 @@ teorema 7.2.
     &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0}\rangle
   \end{align} 
   pues los vectores $v_{2}-v_{1}, v_{3}-v_{1}, v_{3}-v_{2}$ son
-  combinación lineal de los vectores de $\ref{frontera0}$, es decir:
+  combinación lineal de los vectores de $\ref{frontera0}$, ya que:
   $$v_{2}-v_{1}=(v_{2}-v_{0})-(v_{1}-v_{0})$$
   $$v_{3}-v_{1}=(v_{3}-v_{0})-(v_{1}-v_{0})$$
   $$v_{3}-v_{2}=(v_{3}-v_{0})-(v_{2}-v_{0})$$
@@ -2770,7 +2769,7 @@ teorema 7.2.
  Los simplejos de dimensión más alta son los \emph{2-simplejos}, así
  que $C_{3}(\Delta)=0$ por lo que 
  $$\boldsymbol{B_{2}(\Delta)}=\partial_{3}[C_{3}(\Delta)]=0$$ 
- Por determinar $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir 
+Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir 
  $$c=n_{1}v_{0}v_{1}v_{2}+n_{2}v_{0}v_{2}v_{3}+n_{3}v_{0}v_{1}v_{3}+n_{4}v_{1}v_{2}v_{3}$$
  tal que
  \begin{align*}
@@ -2792,15 +2791,14 @@ teorema 7.2.
 \label{com-cad}
 
 \begin{definition}
-  Un \textbf{complejo de cadenas} $(A,\partial)$ es una secuencia
+  Un \textbf{complejo de cadenas} $(A,\partial)$ es una sucesión
   $$A=\{\cdots,A_{2},A_{1},A_{0},A_{-1},A_{-2},\cdots\}$$
   de espacios vectoriales $A_{k}$, junto con una colección
   $\partial=\{\partial_{k}\mid k \in \mathbb{Z}\}$ de transformaciones
   lineales tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$ y
   $\partial_{k-1}\partial_{k}=0.$
-
-  Al complejo de cadenas en donde $A_{-1}=\mathbb{C}$ y $\partial_{0}=\varepsilon$,
-  donde $\varepsilon$ es la función aumento, le llamamos \textbf{complejo de cadenas aumentado}.
+  % Al complejo de cadenas en donde $A_{-1}=\mathbb{C}$ y $\partial_{0}=\varepsilon$,
+  % donde $\varepsilon$ es la función aumento, le llamamos \textbf{complejo de cadenas aumentado}.
 \end{definition}
 
 \begin{theorem}
@@ -2828,7 +2826,7 @@ teorema 7.2.
   kernel~$Z_{k}(A)$ de $\partial_{k}$ es el\textbf{ espacio de}
   $\boldsymbol{k}$\textbf{-ciclos,} y la imagen $B_{k}(A)=\partial_{k+1}[A_{k+1}]$ es el \textbf{espacio
     de} $\boldsymbol{k}$\textbf{-fronteras.} El espacio cociente $H_{k}(A)=Z_{k}(A)/B_{k}(A)$
-  es la $\boldsymbol{k}$\textbf{-ésima homología de A.}
+  es la $\boldsymbol{k}$\textbf{-ésima homología de $A$.}
 \end{definition}
 
 \begin{theorem}
@@ -2842,7 +2840,7 @@ teorema 7.2.
     \cdots @>{\partial^{'}_{k+2}}>> A^{'}_{k+1} @>{\partial^{'}_{k+1}}>> A^{'}_{k} @>{\partial^{'}_{k}}>> A^{'}_{k-1} @>{\partial^{'}_{k-1}}>> \cdots
   \end{CD}
   \]
-  Además para todo $k$ se tiene
+  Además, supongamos que para todo $k$ se tiene
   $$f_{k-1}\partial_{k}=\partial^{'}_{k}f_{k}$$
   Entonces $f_{k}$ induce una transformación lineal
   $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'}).$
@@ -2870,21 +2868,22 @@ teorema 7.2.
   $$f_{k}(z_{1})\in (f_{k}(z)+B_{k}(A^{'}))$$
   Así dos representantes de la misma clase lateral en
   $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son enviados en representantes de la misma
-  clase lateral en $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'}).$ Esto muestra
+  clase lateral en el subespacio $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'})$. Esto muestra
   que $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ está bien definida por
   la ecuación~$(\ref{trans-lin-homologias})$.
   
   Demostrar que $f_{*k}$ es una transformación lineal se sigue de la
-  linealidad de $f$.
+  linealidad de $f_{k}$.
 \end{proof}
+
 Notemos que si $f_{k}$ es un isomorfismo, entonces $f_{k}$ induce un
 isomorfismo~$f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 \section[Homomorfismos inducidos]{Homomorfismos inducidos por funciones homotópicas}
 \label{hom-ind}
 
-Es posible definir la homología de un espacio topológico general por
-medio de la \emph{homología singular}. Por otro lado, a cada complejo
+Es posible definir homología de un espacio topológico general por
+medio del concepto de la \emph{homología singular}. Por otro lado, a cada complejo
 simplicial $\Delta$ se le puede asociar un espacio denotado $|\Delta|$
 llamado la \textbf{realización geométrica} de $\Delta$, dado por:
 
@@ -2947,8 +2946,8 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
 \end{theorem}
 Las demostraciones de los teoremas
 \ref{esp-homotopicos-homologias-iso} y \ref{homologia-realizacion} se
-encuentran en \cite{munkres1984elements}, en 19.5 y
-{\setlength{\fboxsep}{0pt}\colorbox{green}{??}} respectivamente.
+encuentran en \cite{munkres1984elements}, en el teorema 19.5 y
+el teorema 34.3.
  
 \chapter{Gráfica de clanes}
 \label{cha:grafica-clanes}
@@ -2962,15 +2961,16 @@ a las gráficas les asociamos complejos simpliciales.
 \label{graficas}
 
 \begin{definition}
-  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V(G)$
-  de $p$ \emph{vértices} junto con un conjunto $E(G)$ de $q$ pares no
+  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V=V(G)$
+  de $p$ \emph{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
   ordenados de vértices distintos de $V$. Cada par $e=\{u,v\}$ de vértices
   en $E$ es una \emph{arista} de $G$, y se dice que $e$ une a $u$ y
   $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \emph{vértices
     adyacentes}; un vértice $u$ y una arista $e$ son \emph{incidentes}
   si $u\in e$. Dos aristas $e$ y $f$ son \emph{aristas adyacentes}
-  si $e\cap f\neq\emptyset$. Una gráfica con $p$ vértices y $q$
-  aristas es llamada una $(p,q)$ gráfica.
+  si $e\cap f\neq\emptyset$.
+  % Una gráfica con $p$ vértices y $q$
+  % aristas es llamada una $(p,q)$ gráfica.
 
   Una manera natural de ver una gráfica es poner puntos para los
   vértices y una línea entre dos puntos si los vértices correspondientes
@@ -2978,7 +2978,8 @@ a las gráficas les asociamos complejos simpliciales.
 \end{definition}
 
 \begin{definition}
-  Decimos que $G$ es una gráfica \textbf{completa} si para todos~$u,v\in G$ con $u\neq v$ se tiene que $uv$. Una grafica completa con
+  Decimos que $G$ es una gráfica \textbf{completa} si para
+  todos~$u,v\in G$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
   $n$ vértices se denota como $K_{n}$.
 \end{definition}
 
@@ -3138,7 +3139,7 @@ observa en \ref{fig:realizacion-geometrica}.
 Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
 \mid |x|\leq 1\}$. 
 
-\chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías de el complejo de emparejamientos}
+\chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías del complejo de emparejamientos}
 \label{cha:hom-com-emp}
 
 En éste capítulo se utilizarán todos los conceptos y resultados
@@ -3151,24 +3152,28 @@ $n\leq 6$.
 \section{Complejo de emparejamientos}
 \label{complejo-emparejamientos}
 \begin{definition}
-Consideremos la gráfica completa de $n$ vértices $K_{n}$, tales
-vértices son etiquetados como $1,2,\ldots,n$, además
+Consideremos la gráfica completa de $n$ vértices $K_{n}$ cuyos
+vértices están etiquetados como $1,2,\ldots,n$. Además
 $\overline{ij}$ denotará la arista que une al vértice $i$ con el
-vértice $j$ (donde $\overline{ij}=\overline{ji}$). Llamaremos \textbf{complejo de emparejamientos} de orden
-$n$ al complejo simplicial $M_{n}$ de dimensión $n$ tal que:
+vértice $j$ (donde $\overline{ij}=\overline{ji}$).
+
+Llamaremos \textbf{gráfica de emparejamientos} de orden $n$ a la
+gráfica $G_{n}$ tal que
 
 \begin{enumerate}
-  \item Su conjunto de vértices $V$ consta de las aristas de la gráfica
+  \item Su conjunto de vértices $V(G_{n})$ consta de las aristas de la gráfica
   $K_{n}$. 
 
   \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
-  $V$, $\{v_{i},v_{j}\}$ es  un 1-simplejo de $M_{n}$ si $v_{i}$
+  $V(G_{n})$, $\{v_{i},v_{j}\}$ es una arista en $E(G_{n})$ si $v_{i}$
   y $v_{j}$ son ajenas.
 \end{enumerate} 
-La \textbf{gráfica de emparejamientos} de $K_{n}$ será denotada por $G_{n}$.
+
+El \textbf{complejo de emparejamientos} de $K_{n}$ será denotado
+entonces por $M_{n}$, y se define como $M_{n}=\Delta(G_{n})$
 \end{definition}
 
-Tenemos que $M_{n}=\Delta(G_{n})$. Como $S_{n}$ actúa de manera
+Puesto que $S_{n}$ actúa de manera
 natural en $G_{n}$ los espacios $C_{p}(M_{n})$, $Z_{p}(M_{n})$,
 $B_{p}(M_{n})$ (y por lo tanto $\widetilde H_{p}(M_{n})$) se convierten en
 $S_{n}$-módulos sobre $\mathbb{C}$. En éste capítulo consideramos
@@ -3190,7 +3195,7 @@ $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
 \end{equation*}
 
 \begin{center}
-  \begin{minipage}{0.3\linewidth}
+  \begin{minipage}{0.26\linewidth}
     \centering
     \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
       \draw[help lines] (-2,0);% grid (0,2);
@@ -3204,7 +3209,7 @@ $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
   
     $K_{4}$
   \end{minipage}
-  \begin{minipage}{0.3\linewidth}
+  \begin{minipage}{0.26\linewidth}
     \centering
     \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
       \draw[help lines] (-2,0);% grid (0,2);
@@ -3220,16 +3225,22 @@ $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
   
     $G_{4}$
   \end{minipage}
-  \begin{minipage}{0.3\linewidth}
+  \begin{minipage}{0.38\linewidth}
     \centering
+    \newcommand{\arista}[2]{$\overline{#1},\overline{#2}$}
+
     \begin{tikzpicture}[x=1 cm,y=0.8 cm]
       \draw[help lines] (-2,0);% grid (2,0);
       \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-      \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34} 
-      \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90]{24,13} 
-      \Vertex[x=2,y=0,Math,LabelOut,Lpos=-90]{14,23}
+      \SetVertexNoLabel
+      \Vertex[x=-2,y=0]{x}
+      \Vertex[x=0,y=0]{y} 
+      \Vertex[x=2,y=0]{z}
+      \draw (x) node[below=3pt]{\arista{12}{34}};
+      \draw (y) node[below=3pt]{\arista{13}{24}};
+      \draw (z) node[below=3pt]{\arista{14}{24}};
     \end{tikzpicture}
-  
+
     $K(G_{4})$
   \end{minipage}
 \end{center}
@@ -3237,10 +3248,8 @@ $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
 El teorema \ref{bouc} que se enuncia a continuación, nos muestra la descomposición en módulos de
 Specht de las homologías reducidas de complejos de emparejamientos $(\widetilde H_{p}(M_{n}))$. 
 
-\begin{theorem}[Teorema de Bouc]
-La descomposición en submódulos irreducibles del $S_{n}$-módulo $\widetilde
-H_{k-1}(M_{n})$ sobre $\mathbb{C}$, fue dada por Bouc en \cite{MR756517}. Para
-todo $n,k\geq1$,
+\begin{theorem}[Teorema de Bouc, \cite{MR756517}]
+Para todos $n,k\geq1$:
 \begin{equation*}
   % \label{eq:6}
   \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
@@ -3276,9 +3285,11 @@ todo $n,k\geq1$,
         \lambda=\lambda^{'}\\d(\lambda)=6-2(2)=2}} S^{\lambda}=S^{(3,2,1)}=S^{\,\ydiagram{3,2,1}}.
   \end{equation*}
 \end{example}
-En los ejemplos de las próximas secciones se calcula $\widetilde
-H_{p}(M_{4})$, $\widetilde H_{p}(M_{5})$, $\widetilde H_{p}(M_{6})$ y
-$\widetilde H_{p}(\Delta(G_{5}))$, $\widetilde H_{p}(\Delta(G_{6}))$.
+
+En los ejemplos de las próximas secciones se calculan explícitamente
+por métodos elementales las siguientes homologías: $\widetilde
+H_{p}(M_{4})$, $\widetilde H_{p}(M_{5})$, $\widetilde H_{p}(M_{6})$,
+$\widetilde H_{p}(\Delta(K(G_{5})))$, $\widetilde H_{p}(\Delta(K(G_{6})))$.
 
 \section{Homologías reducidas de $M_{4}$}
 \label{hom-red-M4}
@@ -3324,7 +3335,7 @@ de la base de $C_{0}(M_{4})$ y $C_{1}(M_{4})$.
   \end{tabular}
 \end{center}
 Entonces tenemos las representaciones $\theta_{1}$ y $\theta_{2}$ de
-$S_{4}$ en $C_{0}(M_{4})$ y $C_{1}(M_{4})$ respectivamente como se
+$S_{4}$ en $C_{0}(M_{4})$ y $C_{1}(M_{4})$ definidas respectivamente como se
 muestra enseguida:
 
 \begin{center}
@@ -3368,7 +3379,7 @@ muestra enseguida:
       0 & 0 & 0 & 1 & 0 & 0\\
       0 & 0 & 1 & 0 & 0 & 0\\
       0 & 1 & 0 & 0 & 0 & 0\\
-      0 & 0 & 0 & 1 & 0 & 1\\
+      0 & 0 & 0 & 0 & 0 & 1\\
     \end{array} 
   \right)$ 
 \end{center}
@@ -3421,7 +3432,8 @@ de tal forma que
 \medskip
 
 Añadiendo estos dos últimos caracteres a la tabla de caracteres de
-$S_{4}$ tenemos:
+$S_{4}$ tenemos la tabla~\ref{tab:S_4}.
+
 \begin{table}[htpb]
   \centering
   \begin{tabular}{c|r r r r r}
@@ -3578,14 +3590,14 @@ Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
 \ref{ker-1-4} y \ref{im-2-4} obtenemos:
 \begin{align*}
 \widetilde H_{0}(M_{4})&=\ker \widehat\varepsilon/\im
-\widehat\partial_{1}=S^{(3,1)}\oplus S^{(2,2)}/S^{(3,1)}=S^{(2,2)},\\
+\widehat\partial_{1}=(S^{(3,1)}\oplus S^{(2,2)})/S^{(3,1)}=S^{(2,2)},\\
 \widetilde H_{1}(M_{4})&=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=0/0=0.
 \end{align*}
 
 \section{Homologías reducidas de $M_{5}$}
 \label{hom-red-M5}
 
-Considérese el complejo de emparejamientos $M_{5}$, que
+Consideremos ahora la gráfica $G_{5}$ (ver figura~\ref{fig:G_5}) y el complejo de emparejamientos $M_{5}$, que
 está dado por el conjunto de vértices (aristas de la gráfica de $K_{5}$):
 $$V=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6},a_{7},a_{8},a_{9},a_{10}\}$$
 donde
@@ -3652,19 +3664,21 @@ Consideremos:
   H_{0}&=&\{g\in S_{5}\mid gV_{0}=V_{0}\}=\{\langle(1),(12),(123),(45),(12)(45),(123)(45)\rangle\}\\
 \end{eqnarray*}
 
+Entonces $C_{0}(M_{5})=V_{0}\uparrow^{S_{5}}_{H_0}$, por lo que:
+
 \begin{table}[!hbtp]
   \centering
     \begin{tabular}{c |r r r r r r}
       No. Elementos& 1 & 1 & 3 & 3 & 2 & 2 \\
       Clase & (1) & (45) & (12) & (12)(45) & (123) & (123)(45) \\
       \hline
-      $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 & 1 \\
-      $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 & -1 \\
-      $\chi_{S^{(4,1)}}$      & 4 & 2 & 2 & 0 & 1 & -1 \\
-      $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & -2 & 0 & 1 & 1 \\
-      $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & 0 & 0 \\
-      $\chi_{S^{(3,2)}}$      & 5 & 1 & 1 & 1 & -1 & 1 \\
-      $\chi_{S^{(2,2,1)}}$    & 5 & -1 & -1 & 1 & -1 & -1 \\
+      $\chi_{S^{(5)}\downarrow_{H_{0}}}$       & 1 & 1 & 1 & 1 & 1 & 1 \\
+      $\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{0}}}$ & 1 & -1 & -1 & 1 & 1 & -1 \\
+      $\chi_{S^{(4,1)}\downarrow_{H_{0}}}$      & 4 & 2 & 2 & 0 & 1 & -1 \\
+      $\chi_{S^{(2,1,1,1)}\downarrow_{H_{0}}}$   & 4 & -2 & -2 & 0 & 1 & 1 \\
+      $\chi_{S^{(3,1,1)}\downarrow_{H_{0}}}$     & 6 & 0 & 0 & -2 & 0 & 0 \\
+      $\chi_{S^{(3,2)}\downarrow_{H_{0}}}$      & 5 & 1 & 1 & 1 & -1 & 1 \\
+      $\chi_{S^{(2,2,1)}\downarrow_{H_{0}}}$    & 5 & -1 & -1 & 1 & -1 & -1 \\
       \hline
       $\chi_{V_{0}}$ & 1 & 1 & 1 & 1 & 1 & 1 \\
     \end{tabular}
@@ -3675,19 +3689,19 @@ Consideremos:
 
 %{\scriptsize
   \begin{align*}
-    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\ 
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\ 
     &=\frac{1}{12}(1+1+3+3+2+2)=1\\ 
-    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
     &=\frac{1}{12}(1-1-3+3+2-2)=0 \\
-    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
     &=\frac{1}{12}(4+2+6+0+2-2)=1 \\
-    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
     &=\frac{1}{12}(4-2-6+0+2+2)=0 \\
-    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
     &=\frac{1}{12}(6+0+0-6+0+0)=0 \\
-    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
     &=\frac{1}{12}(5+1+3+3-2+2)=1 \\
-    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}\\
+    \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
     &=\frac{1}{12}(5-1-3+3-2-2)=0 
   \end{align*}
 %}
@@ -3711,13 +3725,13 @@ reciprocidad de Frobenius.
         & & (24) & (1432) & (14)(23) & \\
         Elementos & (1) & (13) & (1234) & (12)(34) & (13)(24) \\
         \hline
-        $\chi_{S^{(5)}}$       & 1 & 1 & 1 & 1 & 1 \\
-        $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 \\
-        $\chi_{S^{(4,1)}}$      & 4 & 2 & 0 & 0 & 0 \\
-        $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & 0 & 0 & 0 \\
-        $\chi_{S^{(3,1,1)}}$     & 6 & 0 & 0 & -2 & -2 \\
-        $\chi_{S^{(3,2)}}$      & 5 & 1 & -1 & 1 & 1 \\
-        $\chi_{S^{(2,2,1)}}$    & 5 & -1 & 1 & 1 & 1 \\
+        $\chi_{S^{(5)}\downarrow_{H_{1}}}$       & 1 & 1 & 1 & 1 & 1 \\
+        $\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{1}}}$ & 1 & -1 & -1 & 1 & 1 \\
+        $\chi_{S^{(4,1)}\downarrow_{H_{1}}}$      & 4 & 2 & 0 & 0 & 0 \\
+        $\chi_{S^{(2,1,1,1)}\downarrow_{H_{1}}}$   & 4 & -2 & 0 & 0 & 0 \\
+        $\chi_{S^{(3,1,1)}\downarrow_{H_{1}}}$     & 6 & 0 & 0 & -2 & -2 \\
+        $\chi_{S^{(3,2)}\downarrow_{H_{1}}}$      & 5 & 1 & -1 & 1 & 1 \\
+        $\chi_{S^{(2,2,1)}\downarrow_{H_{1}}}$    & 5 & -1 & 1 & 1 & 1 \\
         \hline
         $\chi_{V_{1}}$ & 1 & 1 & -1 & -1 & 1 \\
       \end{tabular}
@@ -3729,19 +3743,19 @@ reciprocidad de Frobenius.
 
 %{\scriptsize
   \begin{align*}
-    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(1+2-2-2+1)=0\\
-    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(1-2+2-2+1)=0 \\
-    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(4+4+0+0+0)=1 \\
-    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(4-4+0+0+0)=0 \\
-    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(6+0+0+4-2)=1 \\
-    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(5+2+2-2+1)=1 \\
-    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}\\
+    \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
     &=\frac{1}{8}(5-2-2-2+1)=0
   \end{align*}
 %}
@@ -3785,7 +3799,7 @@ así que
 \end{equation*}
 Sabemos que $\widetilde H_{0}(M_{5})=\ker \widehat\varepsilon/\im
 \widehat\partial_{1}=0$ pues $M_{5}$  es
-conexo, se sigue que~$\ker \widehat\varepsilon\cong
+conexo. Se sigue entonces que~$\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
 \label{im1-5}
@@ -3812,9 +3826,10 @@ De las ecuaciones \ref{ker1-5} y \ref{im-2-4} concluimos:
   \widetilde H_{1}(M_{5})=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=S^{(3,1,1)}/0=S^{(3,1,1)}.
 \end{equation*}
  
-Anteriormente usamos el hecho de que $M_{5}$ es conexo para concluir que $\widetilde
-H_{0}(M_{5})=0$, sin embargo notemos que no es necesario, por lo que
-necesitamos calcular $\im \widehat\partial_{1}$. 
+Anteriormente usamos el hecho de que $M_{5}$ es conexo para concluir
+por medio de un teorema de topología algebraica que $\widetilde
+H_{0}(M_{5})=0$. Veamos ahora, sin embargo, que es posible
+calcular $\im \widehat\partial_{1}$ por métodos elementales.
 
 Verifiquemos primero que $\dim(\im \partial_{1})=9$. Del teorema
 \ref{imT}, sabemos que
@@ -3823,7 +3838,7 @@ veamos que el número de vectores linealmente independientes de la
 $\im \partial_{1}$ es 9, es
 decir, si
 $$\lambda_{1}\partial_{1}(b_{1})+\lambda_{2}\partial_{1}(b_{2})+\ldots+\lambda_{15}\partial_{1}(b_{15})=0$$
-así que:
+entonces:
 \begin{align*}
   &\lambda_{1}(a_{8}-a_{1})+\lambda_{2}(a_{9}-a_{1})+\lambda_{3}(a_{10}-a_{1})+\lambda_{4}(a_{6}-a_{2})+\lambda_{5}(a_{7}-a_{2})\\
   &\qquad
@@ -3862,7 +3877,7 @@ al que representamos en su forma matricial:
     0  & 0  & 1  & 0  & 0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0 
   \end{tabular}
 \right)\] 
-lo llevamos a su forma escalonada reducida:
+lo llevamos a su forma escalonada:
 \[ \left(
   \begin{tabular}{rrrrrrrrrrrrrrr}
     1 & 1 & 1 & 0 & 0 & 0 & 0 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0  \\
@@ -3877,7 +3892,7 @@ lo llevamos a su forma escalonada reducida:
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0 
   \end{tabular}
 \right)\]
-Por lo tanto $\dim(\im\partial_{1})=9$, lo cual implica que
+Como el rango de la matriz es 9, obtenemos $\dim(\im\partial_{1})=9$, lo cual implica que
 $\dim(\im\widehat\partial_{1})=9$ (se sigue de la definición de
 $\widehat\partial_{1}$).
 
@@ -3891,10 +3906,10 @@ $$\im\widehat\partial_{1}=\widehat\partial_{1}(S^{(4,1)}\oplus S^{(3,1,1)}\oplus
 \section{Homologías reducidas de $K(M_{5})$}
 \label{hom-red-KM5}
 
-Consideremos el complejo de clanes de la gráfica de emparejamientos
-$M_{5}$, al que denotamos como $K(M_{5})$, que está dado por el
-conjunto de vértices (aristas de la gráfica de
-$M_{5}$):
+La gráfica de clanes de $G_{5}$ se muestra en la figura~\ref{fig:KG_5}.
+Consideremos ahora su complejo de completas $\Delta(K(G_{5}))$
+al que denotaremos simplemente como~$K(M_{5})$. Este complejo tiene como
+vértices (aristas de la gráfica de~$M_{5}$):
 \begin{center}
   \begin{tabular}[h]{lll}
     $a_{1}=(\overline{12},\overline{34})$ & $a_{6}=(\overline{13},\overline{45})$ & $a_{11}=(\overline{15},\overline{24})$  \\
@@ -3957,6 +3972,8 @@ V_{0}=\langle a_{1}\rangle=\langle
 H_{0}=\{g\in S_{5}\mid gV_{0}=V_{0}\}
 \end{eqnarray*}
 
+Entonces $C_{0}(K(M_{5}))=V_{0}\uparrow^{S_{5}}_{H_0}$ y:
+
   \begin{table}[!hbtp]
     \centering
     \resizebox*{!}{5.2cm}{
@@ -3965,13 +3982,13 @@ H_{0}=\{g\in S_{5}\mid gV_{0}=V_{0}\}
       &     & (12) & (1324) & (13)(24) \\
       Elementos & (1) & (34) & (1423) & (14)(23) \\
       \hline
-      $\chi_{S^{(5)}}$       & 1 & 1  & 1  & 1  \\
-      $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1  \\
-      $\chi_{S^{(4,1)}}$      & 4 & 2  & 0  & 0  \\
-      $\chi_{S^{(2,1,1,1)}}$   & 4 & -2 & 0  & 0  \\
-      $\chi_{S^{(3,1,1)}}$    & 6 & 0  & 0  & -2 \\
-      $\chi_{S^{(3,2)}}$     & 5 & 1  & -1  & 1  \\
-      $\chi_{S^{(2,2,1)}}$   & 5 & -1  & 1  & 1  \\
+      $\chi_{S^{(5)}\downarrow_{H_{0}}}$       & 1 & 1  & 1  & 1  \\
+      $\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{0}}}$ & 1 & -1 & -1 & 1  \\
+      $\chi_{S^{(4,1)}\downarrow_{H_{0}}}$      & 4 & 2  & 0  & 0  \\
+      $\chi_{S^{(2,1,1,1)}\downarrow_{H_{0}}}$   & 4 & -2 & 0  & 0  \\
+      $\chi_{S^{(3,1,1)}\downarrow_{H_{0}}}$    & 6 & 0  & 0  & -2 \\
+      $\chi_{S^{(3,2)}\downarrow_{H_{0}}}$     & 5 & 1  & -1  & 1  \\
+      $\chi_{S^{(2,2,1)}\downarrow_{H_{0}}}$   & 5 & -1  & 1  & 1  \\
       \hline
       $\chi_{V_{0}}$ & 1 & 1 & 1 & 1 
     \end{tabular}}
@@ -3981,13 +3998,13 @@ H_{0}=\{g\in S_{5}\mid gV_{0}=V_{0}\}
   \end{table}
 
 \begin{eqnarray*}
-  \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
- \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=0\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=0\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=0\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}}\downarrow_{H_{0}}\rangle_{H_{0}}=1\\
+  \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
+ \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
 \end{eqnarray*}
 Con los productos internos calculados obtenemos:
 \begin{equation}
@@ -3995,7 +4012,7 @@ C_{0}(K(M_{5}))\cong \mathbb{C}\oplus S^{(4,1)}\oplus S^{(3,2)}\oplus
 S^{(2,2,1)}
 \label{C0-KM5}
 \end{equation}
-Consideremos los siguientes conjuntos:
+Consideremos ahora los siguientes conjuntos:
 \begin{eqnarray*}
 V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle((\overline{12},\overline{34}),(\overline{12},\overline{35}))\rangle\\
 H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}=\{(1),(12),(45),(12)(45)\}
@@ -4011,13 +4028,13 @@ H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}=\{(1),(12),(45),(12)(45)\}
   \begin{tabular}{c |r r r r}
     Elementos & (1) & (12) & (45) & (12)(45) \\
     \hline
-    $\chi_{S^{(5)}}$ & 1 & 1  & 1  & 1 \\
-    $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1  \\
-    $\chi_{S^{(4,1)}}$ & 4 & 2  & 2  & 0  \\
-    $\chi_{S^{(2,1,1,1)}}$ & 4 & -2 & -2 & 0  \\
-    $\chi_{S^{(3,1,1)}}$ & 6 & 0  & 0  & -2 \\
-    $\chi_{S^{(3,2)}}$ & 5 & 1  & 1  & 1  \\
-    $\chi_{S^{(2,2,1)}}$ & 5 & -1 & -1 & 1  \\
+    $\chi_{S^{(5)}\downarrow_{H_{1}}}$ & 1 & 1  & 1  & 1 \\
+    $\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{1}}}$ & 1 & -1 & -1 & 1  \\
+    $\chi_{S^{(4,1)}\downarrow_{H_{1}}}$ & 4 & 2  & 2  & 0  \\
+    $\chi_{S^{(2,1,1,1)}\downarrow_{H_{1}}}$ & 4 & -2 & -2 & 0  \\
+    $\chi_{S^{(3,1,1)}\downarrow_{H_{1}}}$ & 6 & 0  & 0  & -2 \\
+    $\chi_{S^{(3,2)}\downarrow_{H_{1}}}$ & 5 & 1  & 1  & 1  \\
+    $\chi_{S^{(2,2,1)}\downarrow_{H_{1}}}$ & 5 & -1 & -1 & 1  \\
     \hline
     $\chi_{V_{1}}$ & 1 & 1 & -1 & -1 \\
   \end{tabular}
@@ -4028,13 +4045,13 @@ H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}=\{(1),(12),(45),(12)(45)\}
 
 De la tabla \ref{tab:clanes-H_1-5} calculamos los productos internos:
 \begin{eqnarray*}
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}}\downarrow_{H_{1}}\rangle_{H_{1}}=0\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=0\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=2\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}}\downarrow_{H_{1}}\rangle_{H_{1}}=1
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}\downarrow_{H_{1}}}\rangle_{H_{1}}=0\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=0\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=2\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1
 \end{eqnarray*}
 De donde resulta:
 \begin{equation}
@@ -4056,13 +4073,13 @@ Con lo cual conseguimos la tabla \ref{tab:clanes-H_2-5}.
     &     &      & (35) & (12)(35) & (345) & (12)(345) \\
     Elementos & (1) & (12) & (45) & (12)(45) & (354) & (12)(354) \\
     \hline
-    $\chi_{S^{(5)}}$ & 1 & 1  & 1  & 1 & 1 & 1 \\
-    $\chi_{S^{(1,1,1,1,1)}}$ & 1 & -1 & -1 & 1 & 1 & -1\\
-    $\chi_{S^{(4,1)}}$ & 4 & 2  & 2  & 0 & 1 & -1\\
-    $\chi_{S^{(2,1,1,1)}}$ & 4 & -2 & -2 & 0 & 1 & 1\\
-    $\chi_{S^{(3,1,1)}}$ & 6 & 0  & 0  & -2& 0 & 0\\
-    $\chi_{S^{(3,2)}}$ & 5 & 1  & 1  & 1 & -1& 1\\
-    $\chi_{S^{(2,2,1)}}$ & 5 & -1 & -1 & 1 & -1& -1\\
+    $\chi_{S^{(5)}\downarrow_{H_{2}}}$ & 1 & 1  & 1  & 1 & 1 & 1 \\
+    $\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{2}}}$ & 1 & -1 & -1 & 1 & 1 & -1\\
+    $\chi_{S^{(4,1)}\downarrow_{H_{2}}}$ & 4 & 2  & 2  & 0 & 1 & -1\\
+    $\chi_{S^{(2,1,1,1)}\downarrow_{H_{2}}}$ & 4 & -2 & -2 & 0 & 1 & 1\\
+    $\chi_{S^{(3,1,1)}\downarrow_{H_{2}}}$ & 6 & 0  & 0  & -2& 0 & 0\\
+    $\chi_{S^{(3,2)}\downarrow_{H_{2}}}$ & 5 & 1  & 1  & 1 & -1& 1\\
+    $\chi_{S^{(2,2,1)}\downarrow_{H_{2}}}$ & 5 & -1 & -1 & 1 & -1& -1\\
     \hline
     $\chi_{V_{2}}$ & 1 & 1 & -1 & -1& 1 & 1\\
   \end{tabular}
@@ -4073,13 +4090,13 @@ Con lo cual conseguimos la tabla \ref{tab:clanes-H_2-5}.
 
 La cual nos ayuda a calcular los siguientes productos internos:
 \begin{eqnarray*}
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(5)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(1,1,1,1,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(4,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,1,1,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=1\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,1,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=1\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,2)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,2,1)}}\downarrow_{H_{2}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(5)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(4,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=1\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=1\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,2)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,2,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
 \end{eqnarray*}
 
 De donde obtenemos:
@@ -4127,7 +4144,7 @@ así que
   \ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}\oplus S^{(2,2,1)}
 \end{equation*}
 Sabemos que $\widetilde H_{0}(K(M_{5}))=\ker \widehat\varepsilon/\im
-\widehat\partial_{1}=0$ pues $K(M_{5})$ es conexo, se sigue que $\ker \widehat\varepsilon\cong
+\widehat\partial_{1}=0$ pues $K(M_{5})$ es conexo. Se sigue que $\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
   \label{im1-KM5}
@@ -4174,8 +4191,9 @@ De las ecuaciones \ref{ker1-KM5} y \ref{im2-KM5} tenemos:
 \end{eqnarray*}
 
 Anteriormente usamos el hecho de que $M_{5}\simeq K(M_{5})$  para
-concluir que $\widetilde H_{2}(K(M_{5}))=\widetilde H_{2}(M_{5})=0$, sin embargo veamos que no es necesario, por lo que
-necesitamos calcular $\im \widehat\partial_{2}$. 
+concluir que $\widetilde H_{2}(K(M_{5}))=\widetilde
+H_{2}(M_{5})=0$. Sin embargo veamos que 
+es posible calcular $\im \widehat\partial_{2}$ por métodos elementales.
 
 Verifiquemos primero que $\dim(\im \partial_{2})=10$. Del teorema
 \ref{imT}, sabemos que
@@ -4215,8 +4233,10 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=
 \section{Homologías reducidas de $M_{6}$}
 \label{hom-red-M6}
 
-Consideremos el complejo de emparejamientos $M_{6}$, que está dado
-por el conjunto de vértices (aristas de la gráfica de $K_{6}$):
+Consideremos el complejo de emparejamientos $M_{6}$, que se obtiene de
+la gráfica $G_{6}$ que se muestra en~\ref{fig:emparejamiento6}. El
+complejo $M_{6}$ tiene
+el conjunto de vértices (aristas de la gráfica de $K_{6}$):
 \begin{center}
   \begin{tabular}[h]{lllll}
     $a_{1}=\overline{12}$ & $a_{4}=\overline{15}$ & $a_{7}=\overline{24}$ & $a_{10}=\overline{34}$ & $a_{13}=\overline{45}$  \\
@@ -4324,17 +4344,17 @@ y los $2$-simplejos:
       No. de Elementos  & 1 & 7 & 8 & 9 & 6 & 8 & 3 & 6  \\
       Clase&(1)& (2) & (3) & (2,2) & (4)& (3,2) & (2,2,2) & (4,2)\\
       \hline
-      $\chi_{S^{{(6)}}}$         & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 \\
-      $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1  & 1 & -1&-1 &-1 & 1 \\
-      $\chi_{S^{{(5,1)}}}$       & 5 & 3  & 2  & 1 & 1 & 0 &-1 &-1 \\
-      $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3 &  2 & 1 &-1 & 0 & 1 &-1  \\
-      $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & 1  & -2& 0 &-1 &-2 & 0  \\
-      $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2  & 1  &-2 & 0 & 1 & 2 & 0 \\
-      $\chi_{S^{{(4,2)}}}$       & 9 & 3  & 0  & 1 & -1& 0 & 3 & 1 \\
-      $\chi_{S^{{(2,2,1,1)}}}$    & 9 & -3 & 0  & 1 & 1 & 0 &-3 & 1 \\
-      $\chi_{S^{{(3,3)}}}$       & 5 & 1  & -1  & 1 &-1 &1 & -3& -1 \\
-      $\chi_{S^{{(2,2,2)}}}$     & 5  & -1& -1  & 1 & 1 & -1& 3 & -1 \\
-      $\chi_{S^{{(3,2,1)}}}$     & 16 & 0 & -2  & 0 & 0 & 0 & 0 & 0 \\
+      $\chi_{S^{{(6)}}\downarrow_{H_{0}}}$         & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 \\
+      $\chi_{S^{{(1,1,1,1,1,1)}}\downarrow_{H_{0}}}$ & 1 & -1 & 1  & 1 & -1&-1 &-1 & 1 \\
+      $\chi_{S^{{(5,1)}}\downarrow_{H_{0}}}$       & 5 & 3  & 2  & 1 & 1 & 0 &-1 &-1 \\
+      $\chi_{S^{{(2,1,1,1,1)}}\downarrow_{H_{0}}}$  & 5 & -3 &  2 & 1 &-1 & 0 & 1 &-1  \\
+      $\chi_{S^{{(4,1,1)}}\downarrow_{H_{0}}}$     & 10& 2  & 1  & -2& 0 &-1 &-2 & 0  \\
+      $\chi_{S^{{(3,1,1,1)}}\downarrow_{H_{0}}}$    & 10&-2  & 1  &-2 & 0 & 1 & 2 & 0 \\
+      $\chi_{S^{{(4,2)}}\downarrow_{H_{0}}}$       & 9 & 3  & 0  & 1 & -1& 0 & 3 & 1 \\
+      $\chi_{S^{{(2,2,1,1)}}\downarrow_{H_{0}}}$    & 9 & -3 & 0  & 1 & 1 & 0 &-3 & 1 \\
+      $\chi_{S^{{(3,3)}}\downarrow_{H_{0}}}$       & 5 & 1  & -1  & 1 &-1 &1 & -3& -1 \\
+      $\chi_{S^{{(2,2,2)}}\downarrow_{H_{0}}}$     & 5  & -1& -1  & 1 & 1 & -1& 3 & -1 \\
+      $\chi_{S^{{(3,2,1)}}\downarrow_{H_{0}}}$     & 16 & 0 & -2  & 0 & 0 & 0 & 0 & 0 \\
       \hline
       $\chi_{V_{0}}$        & 1 & 1 & 1 & 1 & 1 & 1 &1 & 1  \\
     \end{tabular}
@@ -4374,17 +4394,17 @@ y los $2$-simplejos:
         &   & (34) & (12)(56) &(13)(24)  &             & (13)(24)(56) & (2314)& (2314)(56)\\
         Elementos &(1)& (56) & (34)(56) & (14)(23) & (12)(34)(56)& (14)(23)(56) &(2413)&(2413)(56)\\
         \hline
-        $\chi_{S^{{(6)}}}$           & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 \\
-        $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1  & 1 &-1 &-1 &-1 & 1  \\
-        $\chi_{S^{{(5,1)}}}$         & 5 & 3  & 1  & 1 &-1 &-1 & 1 &-1  \\
-        $\chi_{S^{{(2,1,1,1,1)}}}$   & 5 & -3 &  1 & 1 & 1 & 1 &-1 &-1  \\
-        $\chi_{S^{{(4,1,1)}}}$       & 10& 2  & -2 & -2&-2 &-2 & 0 & 0  \\
-        $\chi_{S^{{(3,1,1,1)}}}$     & 10&-2  & -2 &-2 & 2 & 2 & 0 & 0  \\
-        $\chi_{S^{{(4,2)}}}$         & 9 & 3  & 1  & 1 & 3 &3  &-1 & 1  \\
-        $\chi_{S^{{(2,2,1,1)}}}$     & 9 & -3 & 1  & 1 & -3&-3 & 1 & 1  \\
-        $\chi_{S^{{(3,3)}}}$         & 5 & 1  & 1  & 1 &-3 &-3 &-1 & -1 \\
-        $\chi_{S^{{(2,2,2)}}}$       & 5 & -1 & 1  & 1 & 3 & 3 & 1 & -1 \\
-        $\chi_{S^{{(3,2,1)}}}$       & 16& 0  & 0  & 0 & 0 & 0 & 0 &  0 \\
+        $\chi_{S^{{(6)}}\downarrow_{H_{1}}}$           & 1 & 1  & 1  & 1 & 1 & 1 & 1 & 1 \\
+        $\chi_{S^{{(1,1,1,1,1,1)}}\downarrow_{H_{1}}}$ & 1 & -1 & 1  & 1 &-1 &-1 &-1 & 1  \\
+        $\chi_{S^{{(5,1)}}\downarrow_{H_{1}}}$         & 5 & 3  & 1  & 1 &-1 &-1 & 1 &-1  \\
+        $\chi_{S^{{(2,1,1,1,1)}}\downarrow_{H_{1}}}$   & 5 & -3 &  1 & 1 & 1 & 1 &-1 &-1  \\
+        $\chi_{S^{{(4,1,1)}}\downarrow_{H_{1}}}$       & 10& 2  & -2 & -2&-2 &-2 & 0 & 0  \\
+        $\chi_{S^{{(3,1,1,1)}}\downarrow_{H_{1}}}$     & 10&-2  & -2 &-2 & 2 & 2 & 0 & 0  \\
+        $\chi_{S^{{(4,2)}}\downarrow_{H_{1}}}$         & 9 & 3  & 1  & 1 & 3 &3  &-1 & 1  \\
+        $\chi_{S^{{(2,2,1,1)}}\downarrow_{H_{1}}}$     & 9 & -3 & 1  & 1 & -3&-3 & 1 & 1  \\
+        $\chi_{S^{{(3,3)}}\downarrow_{H_{1}}}$         & 5 & 1  & 1  & 1 &-3 &-3 &-1 & -1 \\
+        $\chi_{S^{{(2,2,2)}}\downarrow_{H_{1}}}$       & 5 & -1 & 1  & 1 & 3 & 3 & 1 & -1 \\
+        $\chi_{S^{{(3,2,1)}}\downarrow_{H_{1}}}$       & 16& 0  & 0  & 0 & 0 & 0 & 0 &  0 \\
         \hline
         $\chi_{V_{1}}$            & 1 & 1  & 1  & -1& 1 & -1&-1 &-1  \\
       \end{tabular}}
@@ -4422,17 +4442,17 @@ y los $2$-simplejos:
         No. de Elementos  & 1 & 3 & 3 & 6 & 6 & 1 & 6 & 8 & 6 & 8 \\
         Clase &(1)& (2) & (2,2) & (2,2) & (4)& (2,2,2) & (2,2,2) & (3,3) & (4,2) & (6)\\
         \hline
-        $\chi_{S^{{(6)}}}$         & 1 & 1  & 1  & 1 & 1 &1  & 1 & 1 & 1 & 1 \\
-        $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1  & 1 & -1&-1 &-1 & 1 & 1 & -1 \\
-        $\chi_{S^{{(5,1)}}}$       & 5 & 3  & 1  & 1 & 1 &-1 &-1 &-1 &-1 & -1 \\
-        $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3 &  1 & 1 &-1 & 1 & 1 &-1  &-1 & 1 \\
-        $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & -2 & -2& 0 &-2 &-2 & 1  & 0 & 1 \\
-        $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2  & -2 &-2 & 0 & 2 & 2 & 1 & 0 & -1 \\
-        $\chi_{S^{{(4,2)}}}$       & 9 & 3  & 1  & 1 & -1& 3 & 3 & 0 & 1 &  0 \\
-        $\chi_{S^{{(2,2,1,1)}}}$    & 9 & -3 & 1  & 1 & 1 &-3 &-3 & 0 & 1 &  0 \\
-        $\chi_{S^{{(3,3)}}}$       & 5 & 1  & 1  & 1 &-1 &-3 & -3& 2 &-1 &  0 \\
-        $\chi_{S^{{(2,2,2)}}}$     & 5  & -1& 1  & 1 & 1 & 3 & 3 & 2 & -1 & 0 \\
-        $\chi_{S^{{(3,2,1)}}}$     & 16 & 0 & 0  & 0 & 0 & 0 & 0 & -2 & 0 & 0 \\
+        $\chi_{S^{{(6)}}\downarrow_{H_{2}}}$         & 1 & 1  & 1  & 1 & 1 &1  & 1 & 1 & 1 & 1 \\
+        $\chi_{S^{{(1,1,1,1,1,1)}}\downarrow_{H_{2}}}$ & 1 & -1 & 1  & 1 & -1&-1 &-1 & 1 & 1 & -1 \\
+        $\chi_{S^{{(5,1)}}\downarrow_{H_{2}}}$       & 5 & 3  & 1  & 1 & 1 &-1 &-1 &-1 &-1 & -1 \\
+        $\chi_{S^{{(2,1,1,1,1)}}\downarrow_{H_{2}}}$  & 5 & -3 &  1 & 1 &-1 & 1 & 1 &-1  &-1 & 1 \\
+        $\chi_{S^{{(4,1,1)}}\downarrow_{H_{2}}}$     & 10& 2  & -2 & -2& 0 &-2 &-2 & 1  & 0 & 1 \\
+        $\chi_{S^{{(3,1,1,1)}}\downarrow_{H_{2}}}$    & 10&-2  & -2 &-2 & 0 & 2 & 2 & 1 & 0 & -1 \\
+        $\chi_{S^{{(4,2)}}\downarrow_{H_{2}}}$       & 9 & 3  & 1  & 1 & -1& 3 & 3 & 0 & 1 &  0 \\
+        $\chi_{S^{{(2,2,1,1)}}\downarrow_{H_{2}}}$    & 9 & -3 & 1  & 1 & 1 &-3 &-3 & 0 & 1 &  0 \\
+        $\chi_{S^{{(3,3)}}\downarrow_{H_{2}}}$       & 5 & 1  & 1  & 1 &-1 &-3 & -3& 2 &-1 &  0 \\
+        $\chi_{S^{{(2,2,2)}}\downarrow_{H_{2}}}$     & 5  & -1& 1  & 1 & 1 & 3 & 3 & 2 & -1 & 0 \\
+        $\chi_{S^{{(3,2,1)}}\downarrow_{H_{2}}}$     & 16 & 0 & 0  & 0 & 0 & 0 & 0 & -2 & 0 & 0 \\
         \hline
         $\chi_{V_{2}}$ & 1 & 1 & 1 & -1 & -1 & 1 &-1 & 1 &- 1 & 1  \\
       \end{tabular}}
@@ -4603,8 +4623,9 @@ De las ecuaciones \ref{ker1-M6}, \ref{im2-M6} y la proposición
 \end{eqnarray*}
 
 En lo anterior usamos el hecho de que $G_{6}\simeq BK(G_{6})$, de donde
-se sigue que $\widetilde H_{2}(M_{6})\cong\widetilde H_{2}(\Delta(BK(G_{6})))=0$, sin embargo veamos que no es necesario, por lo que
-necesitamos calcular $\im \widehat\partial_{2}$. 
+se sigue que $\widetilde H_{2}(M_{6})\cong\widetilde
+H_{2}(\Delta(BK(G_{6})))=0$. Veamos ahora
+que podemos calcular $\im \widehat\partial_{2}$ por métodos elementales.
 
 Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
 \ref{imT}, sabemos que $\im \partial_{2}=\langle\partial_{2}(c_{1}),\ldots,\partial_{2}(c_{15})\rangle$,
@@ -4730,17 +4751,17 @@ Consideremos:
       No. de Elementos  & 1 & 3 & 9 & 6 & 7 & 8 & 6 & 8  \\
       Clase&(1)& (2) & (2,2) & (4) & (2,2,2)& (3,3) & (4,2) & (6)\\
       \hline
-      $\chi_{S^{{(6)}}}$         & 1 & 1  & 1 & 1 & 1 & 1 & 1 & 1\\
-      $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1 & 1 & -1&-1 & 1 & 1 &-1\\
-      $\chi_{S^{{(5,1)}}}$       & 5 & 3  & 1 & 1 &-1 &-1 &-1 &-1\\
-      $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3 & 1 &-1 & 1 &-1  &-1 & 1\\
-      $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & -2& 0 &-2 & 1  & 0 & 1\\
-      $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2  &-2 & 0 & 2 & 1 & 0 &-1\\
-      $\chi_{S^{{(4,2)}}}$       & 9 & 3  & 1 & -1& 3 & 0 & 1 & 0\\
-      $\chi_{S^{{(2,2,1,1)}}}$    & 9 & -3 & 1 & 1 &-3 & 0 & 1 & 0\\
-      $\chi_{S^{{(3,3)}}}$       & 5 & 1  & 1 &-1 & -3& 2 & -1& 0\\
-      $\chi_{S^{{(2,2,2)}}}$     & 5  & -1 & 1 & 1 & 3 & 2 &-1& 0\\
-      $\chi_{S^{{(3,2,1)}}}$     & 16 & 0  & 0 & 0 & 0 &-2 & 0& 0\\
+      $\chi_{S^{{(6)}}\downarrow_{H_{0}}}$         & 1 & 1  & 1 & 1 & 1 & 1 & 1 & 1\\
+      $\chi_{S^{{(1,1,1,1,1,1)}}\downarrow_{H_{0}}}$ & 1 & -1 & 1 & -1&-1 & 1 & 1 &-1\\
+      $\chi_{S^{{(5,1)}}\downarrow_{H_{0}}}$       & 5 & 3  & 1 & 1 &-1 &-1 &-1 &-1\\
+      $\chi_{S^{{(2,1,1,1,1)}}\downarrow_{H_{0}}}$  & 5 & -3 & 1 &-1 & 1 &-1  &-1 & 1\\
+      $\chi_{S^{{(4,1,1)}}\downarrow_{H_{0}}}$     & 10& 2  & -2& 0 &-2 & 1  & 0 & 1\\
+      $\chi_{S^{{(3,1,1,1)}}\downarrow_{H_{0}}}$    & 10&-2  &-2 & 0 & 2 & 1 & 0 &-1\\
+      $\chi_{S^{{(4,2)}}\downarrow_{H_{0}}}$       & 9 & 3  & 1 & -1& 3 & 0 & 1 & 0\\
+      $\chi_{S^{{(2,2,1,1)}}\downarrow_{H_{0}}}$    & 9 & -3 & 1 & 1 &-3 & 0 & 1 & 0\\
+      $\chi_{S^{{(3,3)}}\downarrow_{H_{0}}}$       & 5 & 1  & 1 &-1 & -3& 2 & -1& 0\\
+      $\chi_{S^{{(2,2,2)}}\downarrow_{H_{0}}}$     & 5  & -1 & 1 & 1 & 3 & 2 &-1& 0\\
+      $\chi_{S^{{(3,2,1)}}\downarrow_{H_{0}}}$     & 16 & 0  & 0 & 0 & 0 &-2 & 0& 0\\
       \hline
       $\chi_{V_{0}}$        & 1 & 1 & 1 & 1 & 1 & 1 &1 & 1  \\
     \end{tabular}
@@ -4771,17 +4792,17 @@ Consideremos los siguientes conjuntos:
       No. de Elementos  & 1 & 1 & 2 & 3 & 2 & 2 & 2 & 3  \\
       Clase&(1)& (2) & (2) & (2,2) & (2,2)& (4) & (4,2) & (2,2,2)\\
       \hline
-      $\chi_{S^{{(6)}}}$         & 1 & 1 &1  & 1 & 1 & 1 & 1 & 1\\
-      $\chi_{S^{{(1,1,1,1,1,1)}}}$ & 1 & -1&-1 & 1 & 1 &-1 & 1 &-1\\
-      $\chi_{S^{{(5,1)}}}$       & 5 & 3 & 3 & 1 & 1 & 1 &-1 &-1\\
-      $\chi_{S^{{(2,1,1,1,1)}}}$  & 5 & -3& -3 & 1 &1 &-1 &-1 & 1\\
-      $\chi_{S^{{(4,1,1)}}}$     & 10& 2  & 2 &-2 &-2& 0 & 0 & -2\\
-      $\chi_{S^{{(3,1,1,1)}}}$    & 10&-2 & -2&-2 & -2& 0 & 0 &2\\
-      $\chi_{S^{{(4,2)}}}$       & 9 & 3 & 3 & 1 & 1 & -1& 1 & 3\\
-      $\chi_{S^{{(2,2,1,1)}}}$    & 9 &-3 & -3&1  & 1 & 1 & 1 & -3\\
-      $\chi_{S^{{(3,3)}}}$       & 5 & 1 & 1 &1  &1  & -1& -1& -3\\
-      $\chi_{S^{{(2,2,2)}}}$     & 5 &-1 & -1&1  & 1 & 1 &-1& 3\\
-      $\chi_{S^{{(3,2,1)}}}$     & 16 &0 &0  & 0 & 0 & 0 & 0& 0\\
+      $\chi_{S^{{(6)}}\downarrow_{H_{1}}}$         & 1 & 1 &1  & 1 & 1 & 1 & 1 & 1\\
+      $\chi_{S^{{(1,1,1,1,1,1)}}\downarrow_{H_{1}}}$ & 1 & -1&-1 & 1 & 1 &-1 & 1 &-1\\
+      $\chi_{S^{{(5,1)}}\downarrow_{H_{1}}}$       & 5 & 3 & 3 & 1 & 1 & 1 &-1 &-1\\
+      $\chi_{S^{{(2,1,1,1,1)}}\downarrow_{H_{1}}}$  & 5 & -3& -3 & 1 &1 &-1 &-1 & 1\\
+      $\chi_{S^{{(4,1,1)}}\downarrow_{H_{1}}}$     & 10& 2  & 2 &-2 &-2& 0 & 0 & -2\\
+      $\chi_{S^{{(3,1,1,1)}}\downarrow_{H_{1}}}$    & 10&-2 & -2&-2 & -2& 0 & 0 &2\\
+      $\chi_{S^{{(4,2)}}\downarrow_{H_{1}}}$       & 9 & 3 & 3 & 1 & 1 & -1& 1 & 3\\
+      $\chi_{S^{{(2,2,1,1)}}\downarrow_{H_{1}}}$    & 9 &-3 & -3&1  & 1 & 1 & 1 & -3\\
+      $\chi_{S^{{(3,3)}}\downarrow_{H_{1}}}$       & 5 & 1 & 1 &1  &1  & -1& -1& -3\\
+      $\chi_{S^{{(2,2,2)}}\downarrow_{H_{1}}}$     & 5 &-1 & -1&1  & 1 & 1 &-1& 3\\
+      $\chi_{S^{{(3,2,1)}}\downarrow_{H_{1}}}$     & 16 &0 &0  & 0 & 0 & 0 & 0& 0\\
       \hline
       $\chi_{V_{1}}$        & 1 & 1 & -1 & 1 & -1 & -1 &-1 & 1  \\
     \end{tabular}
@@ -4819,17 +4840,17 @@ Consideremos los siguientes conjuntos:
     No. de Elementos  & 1 & 1 & 6 & 8 & 3 & 6 & 6 & 8 & 3 & 6  \\
     Clase &(1)& (2) & (2) & (3) & (2,2)& (2,2) & (4) & (3,2) & (2,2,2) & (4,2)\\
     \hline
-    $\chi_{S^{{(6)}}}$         &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 \\ 
-    $\chi_{S^{{(1,1,1,1,1,1)}}}$ &  1 & -1 & -1 &  1 &  1 &  1 & -1 & -1 & -1& 1\\ 
-    $\chi_{S^{{(5,1)}}}$       &  5 &  3 &  3 &  2 &  1 &  1 &  1 &  0 & -1&-1\\
-    $\chi_{S^{{(2,1,1,1,1)}}}$  &  5 & -3 & -3 &  2 &  1 &  1 & -1 &  0 &  1&-1\\  
-    $\chi_{S^{{(4,1,1)}}}$     & 10 &  2 &  2 &  1 & -2 & -2 &  0 & -1 & -2 &0\\
-    $\chi_{S^{{(3,1,1,1)}}}$    & 10 & -2 & -2 &  1 & -2 & -2 &  0 &  1 &  2 &0\\
-    $\chi_{S^{{(4,2)}}}$       &  9 &  3 &  3 &  0 &  1 &  1 & -1 &  0 &  3 & 1\\ 
-    $\chi_{S^{{(2,2,1,1)}}}$    &  9 & -3 & -3 &  0 &  1 &  1 &  1 &  0 & -3 & 1\\   
-    $\chi_{S^{{(3,3)}}}$       &  5 &  1 &  1 & -1 &  1 &  1 & -1 &  1 & -3 &-1\\
-    $\chi_{S^{{(2,2,2)}}}$      &  5 & -1 & -1 & -1 &  1 &  1 &  1 & -1 &  3 &-1\\
-    $\chi_{S^{{(3,2,1)}}}$      & 16 &  0 &  0 & -2 &  0 &  0 &  0 &  0 &  0 &0 \\
+    $\chi_{S^{{(6)}}\downarrow_{H_{2}}}$         &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 &  1 \\ 
+    $\chi_{S^{{(1,1,1,1,1,1)}}\downarrow_{H_{2}}}$ &  1 & -1 & -1 &  1 &  1 &  1 & -1 & -1 & -1& 1\\ 
+    $\chi_{S^{{(5,1)}}\downarrow_{H_{2}}}$       &  5 &  3 &  3 &  2 &  1 &  1 &  1 &  0 & -1&-1\\
+    $\chi_{S^{{(2,1,1,1,1)}}\downarrow_{H_{2}}}$  &  5 & -3 & -3 &  2 &  1 &  1 & -1 &  0 &  1&-1\\  
+    $\chi_{S^{{(4,1,1)}}\downarrow_{H_{2}}}$     & 10 &  2 &  2 &  1 & -2 & -2 &  0 & -1 & -2 &0\\
+    $\chi_{S^{{(3,1,1,1)}}\downarrow_{H_{2}}}$    & 10 & -2 & -2 &  1 & -2 & -2 &  0 &  1 &  2 &0\\
+    $\chi_{S^{{(4,2)}}\downarrow_{H_{2}}}$       &  9 &  3 &  3 &  0 &  1 &  1 & -1 &  0 &  3 & 1\\ 
+    $\chi_{S^{{(2,2,1,1)}}\downarrow_{H_{2}}}$    &  9 & -3 & -3 &  0 &  1 &  1 &  1 &  0 & -3 & 1\\   
+    $\chi_{S^{{(3,3)}}\downarrow_{H_{2}}}$       &  5 &  1 &  1 & -1 &  1 &  1 & -1 &  1 & -3 &-1\\
+    $\chi_{S^{{(2,2,2)}}\downarrow_{H_{2}}}$      &  5 & -1 & -1 & -1 &  1 &  1 &  1 & -1 &  3 &-1\\
+    $\chi_{S^{{(3,2,1)}}\downarrow_{H_{2}}}$      & 16 &  0 &  0 & -2 &  0 &  0 &  0 &  0 &  0 &0 \\
     \hline
     $\chi_{V_{2}}$        & 1 & 1 & -1 & 1 & 1 & -1 &-1 & 1 & 1 & -1 \\
   \end{tabular}}
@@ -4931,8 +4952,8 @@ De las ecuaciones \ref{ker1-KM6} y \ref{im2-KM6} tenemos:
 \end{eqnarray*}
 
 Anteriormente usamos el hecho de que $M_{6}\simeq K(M_{6})$  para
-concluir que $\widetilde H_{2}(K(M_{6}))=\widetilde H_{2}(M_{6})=0$, sin embargo veamos que no es necesario, por lo que
-necesitamos calcular $\im \widehat\partial_{2}$. 
+concluir que $\widetilde H_{2}(K(M_{6}))=\widetilde H_{2}(M_{6})=0$, sin embargo veamos que 
+es posibe calcular $\im \widehat\partial_{2}$ por medio de cálculos elementales.
 
 Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
 \ref{imT}, sabemos que
