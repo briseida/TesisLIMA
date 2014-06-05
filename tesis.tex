@@ -2234,7 +2234,8 @@ relacionados con la fórmula de Bouc.
   Sea $\lambda\vdash n$. El \textbf{conjugado} de $\lambda$ es la
   partición que se obtiene listando el número de cajas en cada columna
   del diagrama de Young asociado a la $\lambda$. El conjugado de
-  $\lambda$ se denota como $\lambda^{'}$. 
+  $\lambda$ se denota como $\lambda^{'}$. Si $\lambda=\lambda^{'}$ se
+  dice que~$\lambda$ es \textbf{autoconjugada}.
 \end{definition}
 
 \begin{definition}
@@ -2251,6 +2252,60 @@ relacionados con la fórmula de Bouc.
     \lambda^{'}=\ydiagram{3,2,1,1}
   \end{equation*}
   En este caso $d(\lambda)=d(\lambda^{'})=2$.
+\end{example}
+
+\begin{example}Las particiones de el número 3 son:
+  \begin{center}
+    \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+    \begin{minipage}[h]{0.3\linewidth}
+      \centering \ydiagram{3}
+
+      (3)
+    \end{minipage}
+    \begin{minipage}[h]{0.3\linewidth}
+      \centering \ydiagram{1,1,1}
+
+      (1,1,1)
+    \end{minipage}
+    \begin{minipage}[h]{0.3\linewidth}
+      \centering \ydiagram{2,1}
+      
+      (2,1)
+    \end{minipage}
+  \end{center}
+ La única partición de 3 que es autoconjugada es $\lambda=(2,1)=\lambda^{'}$
+\end{example}
+
+\begin{example}Las particiones de el número 4 son:
+  \begin{center}
+    \ytableausetup{mathmode,notabloids,boxsize=1.2em}
+    \begin{minipage}[h]{0.2\linewidth}
+      \centering \ydiagram{4}
+
+      (4)
+    \end{minipage}
+    \begin{minipage}[h]{0.15\linewidth}
+      \centering \ydiagram{1,1,1,1}
+
+      (1,1,1,1)
+    \end{minipage}
+    \begin{minipage}[h]{0.2\linewidth}
+      \centering \ydiagram{3,1}
+      
+      (3,1)
+    \end{minipage}
+    \begin{minipage}[h]{0.2\linewidth}
+      \centering \ydiagram{2,1,1}
+      
+      (2,1,1)
+    \end{minipage}
+    \begin{minipage}[h]{0.2\linewidth}
+      \centering \ydiagram{2,2}
+      
+      (2,2)
+    \end{minipage}
+  \end{center}
+ La única partición de 4 que es autoconjugada es $\lambda=(2,2)=\lambda^{'}$
 \end{example}
 
 \chapter{Homología de complejos simpliciales}
@@ -4919,8 +4974,9 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1
 
 \chapter*{Conclusiones}
  
-Describimos la descomposición en submódulos irreducibles del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$, para $n\leq 6$, donde $\widetilde
-H_{k}(M_{n})$ es la homología reducida de los complejos simpliciales
+En ésta tesis describimos la descomposición en submódulos irreducibles
+del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$, para $n\leq 6$, donde
+$\widetilde H_{k}(M_{n})$ es la homología reducida de los complejos simpliciales
 de emparejamientos.
 
 Por otro lado, también calculamos la descomposición en módulos
@@ -4928,12 +4984,31 @@ irreducibles de $\widetilde H_{k}(K(M_{n}))$, es decir, de las
 homologías reducidas de los complejos simpliciales inducidos a partir
 de la gráfica de clanes $K(G_{n})$, con $n\leq 6$.
 
-El artículo \cite{larrion2009clique} nos garantiza que $G_{n}\simeq
-K(G_{n})$ para $n\leq 8$, así que por el teorema
-\ref{esp-homotopicos-homologias-iso} tendríamos $\widetilde
-H_{k}(G_{n})\cong \widetilde H_{k}(K(G_{n}))$ para $k>0$ y $n\leq
-8$. Sin embargo para el caso $n=9$ ..... 
+Además resulta que $\widetilde H_{k}(G_{n})\cong \widetilde H_{k}(K(G_{n}))$ para
+$n\leq 6$ y $k>0$. Enseguida se muestran tales homologías reducidas
+las que son distintas de cero.
+\ytableausetup{boxsize=0.2em}
+\begin{equation*}
+  \widetilde H_{0}(M_{4})\cong_{S_{4}} S^{(2,2)}=S^{\,\ydiagram{2,2}}.
+\end{equation*}
+\begin{equation*}
+  \widetilde H_{1}(M_{5})\cong\widetilde H_{1}(K(M_{5}))\cong_{S_{5}} S^{(3,1,1)}=S^{\,\ydiagram{3,1,1}}.
+\end{equation*}
+\begin{equation*}
+  \widetilde H_{1}(M_{6})\cong\widetilde H_{1}(K(M_{6}))\cong_{S_{6}} S^{(3,2,1)}=S^{\,\ydiagram{3,2,1}}.
+\end{equation*}
 
+En el artículo \cite{larrion2009clique} se demuestra que $G_{n}\simeq
+K(G_{n})$ para $n\leq 8$. Esto implica por el teorema \ref{esp-homotopicos-homologias-iso} que
+\begin{equation*}
+  \widetilde H_{k}(G_{n})\cong \widetilde H_{k}(K(G_{n}))
+\end{equation*}
+para tales valores de $n$ y $k>0$ pero el isomorfismo es de espacios
+vectoriales. Sin embargo para el caso $n=9$ ..... 
+
+Surge la pregunta interesante si también se da el isomorfismo entre
+$\widetilde H_{k}(G_{n})$ y $\widetilde H_{k}(K(G_{n}))$ como
+$S_{n}$-módulos, para $n>8$.
 
 \bibliographystyle{plain}
 \bibliography{labiblio}
