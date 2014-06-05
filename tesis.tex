@@ -630,7 +630,8 @@ en $V$, es equivalente a estudiar $G$-módulos $V$.
   Llamemos \textbf{representación matricial} al homomorfismo
    de la definición \ref{representacion}, es decir, 
    $$X:G\rightarrow GL(n,\mathbb{C})$$
-   simplemente para resaltar que $X(g)\in GL(n,\mathbb{C})$ para cada $g\in G$.
+   simplemente para resaltar que para cada $g\in G$, $X(g)$  es una
+   matriz invertible $n \times n$ con entradas en $\mathbb{C}$. 
 \end{definition}
 Se denotará $(\rho,V)$ para enfatizar el hecho de que la
 representación $\rho$ de $G$  es sobre el espacio $V$. A
@@ -819,7 +820,7 @@ su dimensión el \emph{grado} de la representación.
     V=\mathbb{C}\boldsymbol{Y}=\{\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
     +\lambda_{n}y_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}
   \end{equation*}
-  donde $\lambda_{i}\in\mathbb{C}$. La adición y multiplicación por escalar
+  La adición y multiplicación por escalar
   en $\mathbb{C}\boldsymbol{Y}$ está definida por
   \begin{eqnarray*}
     (\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
@@ -831,11 +832,13 @@ su dimensión el \emph{grado} de la representación.
   \begin{eqnarray*}
     c(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=(c\lambda_{1})y_{1}+(c\lambda_{2})y_{2}+\cdots +(c\lambda_{n})y_{n},
   \end{eqnarray*}
-  respectivamente. Si $v\in V$
+  respectivamente. Sean $v\in V$, con
+  $v=\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots+\lambda_{n}y_{n}$ y
+  $g\in G$ entonces la acción de $G$ en $V$ está dada por
   \begin{equation*}
-    g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n})
+    gv=g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n})
   \end{equation*}
-  para todo $g\in G$. Así que $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
+  Así que $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
   de dimensión $|Y|$. A~$\mathbb{C}\boldsymbol{Y}$ le llamamos
   \emph{módulo de permutaciones}. Los elementos de
   $Y$ forman una base para $\mathbb{C}\boldsymbol{Y}$ llamada
@@ -877,7 +880,7 @@ su dimensión el \emph{grado} de la representación.
       0 & 0 & 1 \\
     \end{pmatrix}$,
   \end{center}
-  las demás representaciones matriciales $X(\pi)$, con $\pi\in S_{3}$ son:
+  las otras representaciones matriciales $X(\pi)$, con $\pi\in S_{3}$ son:
   \begin{center}
     $X(1)=\begin{pmatrix}
       1 & 0 & 0 \\
@@ -907,6 +910,20 @@ su dimensión el \emph{grado} de la representación.
       1 & 0 & 0 \\
     \end{pmatrix}$.
   \end{center}
+\end{example}
+
+\begin{example}[Representación regular]
+  Sea $G$ un grupo. Procedemos como en el ejemplo \ref{CS}, pero ahora $G$
+  actúa sobre sí mismo. Sean $Y=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
+  \begin{equation*}
+    V=\mathbb{C}\boldsymbol{G}=\{\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
+    +\lambda_{n}g_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}.
+  \end{equation*}
+ Sean $v\in V$ con $v=\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
+ +\lambda_{n}g_{n}$ y $g\in G$, entonces la acción de $G$ en $V$ está dada por
+  \begin{equation*}
+    gv=g(\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots +\lambda_{n}g_{n})=\lambda_{1}(gg_{1})+\lambda_{2}(gg_{2})+\cdots +\lambda_{n}(gg_{n})
+  \end{equation*}  
 \end{example}
 
 \section{Reducibilidad}
@@ -1016,7 +1033,7 @@ entre suma directa y suma directa externa.
   Si $S\cap S^{'}=0$, consideremos $U$ el submódulo generado por $S\cup S'$ al cual
   denotamos como $S+S^{'}$ y como $S\cap S^{'}=0$, entonces
   $S+S^{'}\cong S\oplus S^{'}$ como notamos en la observación anterior,
-  así que $M$ tendría un submódulo isomorfo a dos copias de S, lo cual
+  así que $M$ tendría un submódulo isomorfo a dos copias de $S$, lo cual
   no es posible por hipótesis. 
   
  Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap
@@ -1043,7 +1060,7 @@ de $G$.
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-isomorfismo} es un
   $G$-homomorfismo $\phi:V\rightarrow W$ el cual es biyectivo. En
-  este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} o
+  éste caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} o
   $G$\textbf{-equivalentes}, y lo denotaremos como~$V\cong W$.
 \end{definition}
 
@@ -1122,7 +1139,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 Mucha información contenida en una representación $X:G\rightarrow
 GL(n,\mathbb{C})$ puede ser obtenida de la traza de sus
 correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
-esto se ocupa la teoría de caracteres.
+ésto se ocupa la teoría de caracteres.
 
 \begin{definition}
   Sea una representación matricial $X(g)$, $g\in G$. Entonces el \textbf{carácter} de $X$ es
@@ -1138,14 +1155,13 @@ Si $V$ es un $G$ módulo, su carácter es el carácter de la
 representación matricial $X$ correspondiente a $V$. En ocasiones para resaltar
 que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 \end{definition}
-
 Parte de la terminología utilizada para representaciones se
 usará para los correspondientes caracteres. Por ejemplo si $X$ tiene
 caracter $\chi$, diremos que~$\chi$ es irreducible siempre que $X$ lo
-sea, etc.
+sea.
 
-Se muestra un ejemplo de cómo calcular caracteres para tres
-representaciones específicas al final de ésta sección.
+Se muestra al final de ésta sección, un ejemplo de cómo calcular caracteres de la representación
+trivial, signo y estándar con la acción de $S_{3}$.
 \begin{definition}
   Dos elementos $g,g_{1}\in G$ están \emph{conjugados} si
   \begin{equation*}
@@ -1172,17 +1188,7 @@ Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}
   conjugación de $G$, es decir, si $K$ es una clase de conjugación de
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
-\end{definition}
-% La suma de dos funciones de clase es una función de clase y el
-% producto por escalar por una función de clase es una función de clase
-% y la función constante cero $0:G\rightarrow \mathbb{C}$ está en
-% $R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
-% del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
-% tanto podemos considerar el producto de funciones de clase, es decir,
-% si $\psi$, $\theta$ son funciones de clase, podemos definir
-% $\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
-%   G}\psi(g)\overline{\theta(g)}$, el cual se puede demostrar que es un producto
-% interno en el espacio de funciones de clase. 
+\end{definition} 
 \begin{theorem}
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
@@ -1199,7 +1205,7 @@ Se puede consultar la demostración en 1.10.2 de
 
 En general no se logra una correspondencia biyectiva natural entre las
 representaciones de $G$ y las clases de conjugación. Sin embargo, en
-el siguiente capítulo observamos que en el caso del grupo simétrico sí se cuenta con
+el siguiente capítulo observamos que en el caso de el grupo simétrico sí se cuenta con
 esta correspondencia.
 
 Si $K$ es una clase de conjungación y $\chi$ es una carácter, podemos
@@ -1225,12 +1231,13 @@ un grupo.
     $\vdots$ &          &   
   \end{tabular}
 \end{center}
-Por convención, el primer rengón corresponde al caracter trivial, y la
+Por convención, el primer renglón corresponde al carácter trivial, y la
 primera columna corresponde a la clase identidad $K=(1)$.
 
 \begin{example}
-  Sea $S_{3}$ el grupo simétrico con 3 elementos. Calcularemos el
-  carácter $\chi_{V}(g)$ para tres $S_{3}$-módulos $V$ y elementos
+  \label{caracteres-S3}
+  Sea $G=S_{3}$. A continuación calcularemos el
+  carácter $\chi_{V}(g)$ de tres $S_{3}$-módulos $V$ y elementos
   $g\in S_{3}$. Basta calcular $\chi_{V}:S_{3}\rightarrow\mathbb{C}$
   en representantes de cada clase de conjugación de $S_{3}$, como $(1)$,
   $(12)$ y $(123)$.
@@ -1285,19 +1292,25 @@ Finalmente, si $g=(123)$, tenemos:
 \end{center}
 así que $\chi_{V}((123))=-1$.
 
-Con los cálculos realizado podemos obtener la tabla de caracteres de
+Con los cálculos realizados podemos obtener la tabla de caracteres de
 $S_{3}$. El primer renglón indica el número de elementos en cada clase de
 conjugación, y en el segundo renglón se coloca un elemento representativo de cada
 clase de conjugación.
 \begin{center}
-  \begin{tabular}{ c| c c c}
-    & 1 & 3 & 2 \\
-    $S_{3}$ & (1) & (12) & (123) \\
-    \hline
-    $\chi_{\mathbb{C}}$ & 1 & 1 & 1 \\
-    $\chi_{\mathbb{\hat C}}$ & 1 & -1 & 1 \\
-    $\chi_{E}$ & 2 & 0 & -1 
-  \end{tabular}  
+  \begin{figure}[h]
+    \centering
+    \begin{tabular}{ c| c c c}
+      & 1 & 3 & 2 \\
+      $S_{3}$ & (1) & (12) & (123) \\
+      \hline
+      $\chi_{\mathbb{C}}$ & 1 & 1 & 1 \\
+      $\chi_{\mathbb{\hat C}}$ & 1 & -1 & 1 \\
+      $\chi_{E}$ & 2 & 0 & -1 
+    \end{tabular}
+    
+  \caption{Tabla de caracteres de $S_{3}$}
+  \label{tabla-car-S3}
+\end{figure}
 \end{center}
 Las tablas de caracteres que utilizaremos en el capitulo \ref{cha:hom-com-emp}
 se encuentran en~\cite{liebeck}.
@@ -1372,6 +1385,14 @@ La demostración aparece en el teorema 1.9.4 de
   negativo puesto que el producto interno de $\langle\chi_{V_{i}},\chi_{V_{j}}\rangle$ es
   0 o 1 por el teorema \ref{prod-car-irr}. 
 \end{proof}
+\textbf{\emph{Nota:}} Por el teorema \ref{prod-car-irr}, las
+representaciones de el ejemplo \ref{caracteres-S3} son irreducibles,
+es decir, basta calcular los siguientes productos internos:
+\begin{align*}
+  \langle\chi_{\mathbb{C}},\chi_{\mathbb{C}}\rangle&=\frac{1}{6}(1(1)(1)+3(1)(1)+2(1)(1))=1  \\
+  \langle\chi_{\widehat{\mathbb{C}}},\chi_{\widehat{\mathbb{C}}}\rangle&=\frac{1}{6}(1(1)(1)+3(-1)(-1)+2(1)(1))=1  \\
+  \langle\chi_{E},\chi_{E}\rangle&=\frac{1}{6}(1(2)(2)+3(0)(0)+2(-1)(-1))=1  \\
+\end{align*}
 
 \section{Caracteres y módulos inducidos}
 \label{carac-induc}
@@ -1464,6 +1485,17 @@ el \emph{índice} de $H$ en $G$.
 en donde se hizo el cambio de variable $u=y^{-1}x$ (esto es $x=yu$), y notamos
 que $yu\in G$ si y solo si $u\in G$.
 \end{proof}
+
+La suma de dos funciones de clase es una función de clase y el
+producto por escalar por una función de clase es una función de clase
+y la función constante cero $0:G\rightarrow \mathbb{C}$ está en el conjunto de todas las funciones de clase en $G$
+que anteriormente denotamos como $R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
+del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
+tanto podemos considerar el producto de funciones de clase, es decir,
+si $\psi$, $\theta$ son funciones de clase, podemos definir
+$\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
+  G}\psi(g)\overline{\theta(g)}$, el cual se puede demostrar que es un producto
+interno en el espacio de funciones de clase.
 \begin{theorem}[Reciprocidad de Frobenius]
   \label{frobenius}
   Sea $H\leq G$ y $\theta:H\rightarrow\mathbb{C}$,
@@ -1507,8 +1539,7 @@ que $yu\in G$ si y solo si $u\in G$.
     \langle\theta\uparrow^{G}_{H},\chi\rangle=\langle\theta,\chi\downarrow^{G}_{H}\rangle,
   \end{equation*}
   el cual es un entero no negativo, pues es el producto interno de dos
-  caracteres. {\setlength{\fboxsep}{0pt}\colorbox{green}{??notas teo 3.11}}%(ver teorema \ref{}). 
-  El resultado se sigue entonces de la proposición
+  caracteres (ver corolario \ref{prod-car-pos}). El resultado se sigue entonces de la proposición
   \ref{fun-cla-caracter}.
 \end{proof}
 Supondremos en lo que resta de esta sección que $G$ es un grupo, $H$ un subgrupo de
