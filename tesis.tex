@@ -4995,22 +4995,19 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1
 
 \chapter*{Conclusiones}
  
-En ésta tesis describimos la descomposición en submódulos irreducibles
-del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$, para $n\leq 6$, donde
+En ésta tesis, para $n\leq 6$, describimos la descomposición 
+del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$ en submódulos irreducibles, donde
 $\widetilde H_{k}(M_{n})$ es la homología reducida de los complejos simpliciales
 de emparejamientos.
 
 Por otro lado, también calculamos la descomposición en módulos
 irreducibles de $\widetilde H_{k}(K(M_{n}))$, es decir, de las
-homologías reducidas de los complejos simpliciales inducidos a partir
-de la gráfica de clanes $K(G_{n})$, con $n\leq 6$.
+homologías reducidas de los complejos simpliciales determinados por
+la gráfica de clanes $K(G_{n})$, con $n\leq 6$.
 
-Además resulta que $\widetilde H_{k}(G_{n})\cong \widetilde H_{k}(K(G_{n}))$ para
-$n\leq 6$ y $k>0$. Enseguida se muestran las homologías reducidas que son distintas de cero.
+Encontramos que $\widetilde H_{k}(M_{n})\cong_{S_n} \widetilde H_{k}(K(M_{n}))$ para
+$n=5,6$ y $k\geq0$. Enseguida se muestran las homologías reducidas que son distintas de cero.
 \ytableausetup{boxsize=0.2em}
-\begin{equation*}
-  \widetilde H_{0}(M_{4})\cong_{S_{4}} S^{(2,2)}=S^{\,\ydiagram{2,2}}.
-\end{equation*}
 \begin{equation*}
   \widetilde H_{1}(M_{5})\cong\widetilde H_{1}(K(M_{5}))\cong_{S_{5}} S^{(3,1,1)}=S^{\,\ydiagram{3,1,1}}.
 \end{equation*}
@@ -5019,16 +5016,27 @@ $n\leq 6$ y $k>0$. Enseguida se muestran las homologías reducidas que son disti
 \end{equation*}
 
 En el artículo \cite{larrion2009clique} se demuestra que $G_{n}\simeq
-K(G_{n})$ para $n\leq 8$. Esto implica por el teorema \ref{esp-homotopicos-homologias-iso} que
-\begin{equation*}
-  \widetilde H_{k}(G_{n})\cong \widetilde H_{k}(K(G_{n}))
-\end{equation*}
-para tales valores de $n$ y $k>0$ pero el isomorfismo es de espacios
-vectoriales. Sin embargo para el caso $n=9$ ..... 
+K(G_{n})$ para $n\leq 8$. Esto implica, por el teorema
+\ref{esp-homotopicos-homologias-iso}, que
+se tiene el siguiente isomorfismo como espacios vectoriales:
+\begin{equation}
+  \label{equ:iso}
+  \widetilde H_{k}(M_{n})\cong \widetilde H_{k}(K(M_{n}))
+\end{equation}
 
 Surge la pregunta interesante si también se da el isomorfismo entre
-$\widetilde H_{k}(G_{n})$ y $\widetilde H_{k}(K(G_{n}))$ como
-$S_{n}$-módulos, para $n>8$.
+$\widetilde H_{k}(M_{n})$ y $\widetilde H_{k}(K(M_{n}))$ como
+$S_{n}$-módulos, para $n=7,8$. De los cálculos que se muestran en la
+tesis, se ve que para tales casos las complicaciones aumentarían
+significativamente, por lo que no es práctico efectuarlos
+directamente. Un posible camino es utilizar software especializado
+para tales cálculos. 
+
+Se sabe, sin embargo, que la ecuación~\ref{equ:iso} no es válida para
+$n\geq 9$. Por lo que otro problema interesante es encontrar una
+fórmula análoga a la de Bouc que muestre la descomposición de las
+homologías de $K(M_{n})$ en submódulos irreducibles.
+
 
 \bibliographystyle{plain}
 \bibliography{labiblio}
