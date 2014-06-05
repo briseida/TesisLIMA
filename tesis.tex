@@ -3140,7 +3140,7 @@ $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
 \end{equation*}
 
 \begin{center}
-  \begin{minipage}{0.3\linewidth}
+  \begin{minipage}{0.26\linewidth}
     \centering
     \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
       \draw[help lines] (-2,0);% grid (0,2);
@@ -3154,7 +3154,7 @@ $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
   
     $K_{4}$
   \end{minipage}
-  \begin{minipage}{0.3\linewidth}
+  \begin{minipage}{0.26\linewidth}
     \centering
     \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
       \draw[help lines] (-2,0);% grid (0,2);
@@ -3170,16 +3170,22 @@ $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
   
     $G_{4}$
   \end{minipage}
-  \begin{minipage}{0.3\linewidth}
+  \begin{minipage}{0.38\linewidth}
     \centering
+    \newcommand{\arista}[2]{$\overline{#1},\overline{#2}$}
+
     \begin{tikzpicture}[x=1 cm,y=0.8 cm]
       \draw[help lines] (-2,0);% grid (2,0);
       \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-      \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90]{12,34} 
-      \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90]{24,13} 
-      \Vertex[x=2,y=0,Math,LabelOut,Lpos=-90]{14,23}
+      \SetVertexNoLabel
+      \Vertex[x=-2,y=0]{x}
+      \Vertex[x=0,y=0]{y} 
+      \Vertex[x=2,y=0]{z}
+      \draw (x) node[below=3pt]{\arista{12}{34}};
+      \draw (y) node[below=3pt]{\arista{13}{24}};
+      \draw (z) node[below=3pt]{\arista{14}{24}};
     \end{tikzpicture}
-  
+
     $K(G_{4})$
   \end{minipage}
 \end{center}
