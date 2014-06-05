@@ -193,7 +193,7 @@ espacio topológico $|\Delta|$, llamado su \emph{realización
 fundamental para introducir conceptos topológicos dentro de la
 combinatoria. 
 
-Considereraremos complejos simpliciales obtenidos a partir de
+Consideraremos complejos simpliciales obtenidos a partir de
 gráficas. Es decir, a cada gráfica $G$ simple finita se le asocia un
 espacio topológico por medio del complejo simplicial $\Delta(G)$, cuyos
 simplejos son las subgráficas completas. Por lo tanto, a la gráfica
@@ -1084,7 +1084,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 \begin{theorem}[Teorema de isomorfismo de módulos]
   \label{teorema-isomorfismo-mod}
   Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces el
-  módulo cociente $V/ker\phi$ es isomorfo a $\im\phi$ por medio de
+  módulo cociente $V/\ker\phi$ es isomorfo a $\im\phi$ por medio de
   $v+\ker\phi\mapsto\phi(v)$.
 \end{theorem}
 
@@ -1100,7 +1100,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
   así que $\ker \phi=0$ y por lo tanto $\phi$ es inyectiva. 
 
   Análogamente, $\im\phi\leq W$ y $\im \phi\neq 0$, así que $\im
-  \phi=W$ y entonces $\phi$ es suprayectiva.
+  \phi=W$ y entonces $\phi$ es sobreyectiva.
 \end{proof}
 
 \begin{proposition}
@@ -1157,7 +1157,7 @@ que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 \end{definition}
 Parte de la terminología utilizada para representaciones se
 usará para los correspondientes caracteres. Por ejemplo si $X$ tiene
-caracter $\chi$, diremos que~$\chi$ es irreducible siempre que $X$ lo
+carácter $\chi$, diremos que~$\chi$ es irreducible siempre que $X$ lo
 sea.
 
 Se muestra al final de ésta sección, un ejemplo de cómo calcular caracteres de la representación
@@ -1208,7 +1208,7 @@ representaciones de $G$ y las clases de conjugación. Sin embargo, en
 el siguiente capítulo observamos que en el caso de el grupo simétrico sí se cuenta con
 esta correspondencia.
 
-Si $K$ es una clase de conjungación y $\chi$ es una carácter, podemos
+Si $K$ es una clase de conjugación y $\chi$ es una carácter, podemos
 definir~$\chi_{K}$ es el valor del carácter en la clase dada.
 \begin{equation*}
   \chi_{K}=\chi(g)
@@ -1399,7 +1399,7 @@ es decir, basta calcular los siguientes productos internos:
 
 Dado un grupo $G$, sea $H\leq G$ hay una forma de obtener
 representaciones de $G$ a partir de $H$ usando operaciones de
-restrincción e inducción.
+restricción e inducción.
 
 \begin{proposition}
 \label{fun-cla-caracter}
@@ -1929,9 +1929,9 @@ muestra abajo:
   \ytableaushort{23,1}
 \end{center}
 
-Debemos checar que esta acción está bien definida, esto es, si $t_{1}$
+Debemos comprobar que esta acción está bien definida, esto es, si $t_{1}$
 y $t_{2}$ son equivalentes por renglones, es decir,
-$\{t_{1}\}=\{t_{2}\}$, entonces el resultado de la permitación debe
+$\{t_{1}\}=\{t_{2}\}$, entonces el resultado de la permutación debe
 ser el mismo, esto es, $\pi\{t_{1}\}=\pi\{t_{2}\}$. Esto es claro,
 pues $\pi$ simplemente da la instrucción de mover algún número de un
 renglón a otro.
@@ -2006,7 +2006,7 @@ una representación trivial de dimensión uno.
 \section{Módulo de Specht}
 \label{modulo-specht}
 En la sección previa, construimos $S_{n}$-módulos $M^{\lambda}$
-conocidos como modulos de permutación. En esta sección, consideramos
+conocidos como módulos de permutación. En esta sección, consideramos
 submódulos irreducibles de~$M^{\lambda}$ que corresponden únicamente a
 $\lambda$. 
 
@@ -3146,7 +3146,7 @@ En éste capítulo se utilizarán todos los conceptos y resultados
 presentados en los capítulos anteriores. Se definirá el complejo de
 emparejamientos y finalmente conoceremos lo que quiere decir la
 fórmula de Bouc. Además calculamos las homologías reducidas de los
-complejos de emparejamietos y de sus respectivas gráficas de clanes para
+complejos de emparejamientos y de sus respectivas gráficas de clanes para
 $n\leq 6$.
 
 \section{Complejo de emparejamientos}
@@ -3495,7 +3495,7 @@ operadores frontera y la función aumento:
     \end{array} 
     \]
   \end{small}
-Sean $f_{0}$ y $f_{1}$ los isomorfimos obtenidos de las expresiones
+Sean $f_{0}$ y $f_{1}$ los isomorfismos obtenidos de las expresiones
 \ref{eq:C_0(M_4)}, \ref{eq:C_1(M_4)} respectivamente, y definimos en
 general al morfismo $\widehat\partial_{k}$ como
 $\widehat\partial_{k}=f_{k-1}\circ \partial_{k}\circ f^{-1}_{k}$, con
@@ -3535,7 +3535,7 @@ Ahora calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
 $\widetilde H_{1}(M_{4})$.
 
 Por el teorema \ref{teorema-isomorfismo-mod} y como
-$\widehat\varepsilon$ es suprayectiva tenemos:
+$\widehat\varepsilon$ es sobreyectiva tenemos:
 $$(\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)})/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
 entonces
 \begin{equation}
@@ -3789,7 +3789,7 @@ $f_{1}$ son los isomorfismos obtenidos de las expresiones~\ref{eq:C0-M5} y \ref{
 Calculemos las homologías reducidas $\widetilde H_{0}(M_{4})$ y
 $\widetilde H_{1}(M_{4})$.
 
-Como $\widehat\varepsilon$ es suprayectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
+Como $\widehat\varepsilon$ es sobreyectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
 $$(\mathbb{C}\oplus S^{(4,1)} \oplus
 S^{(3,2)})/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
 así que
@@ -4133,7 +4133,7 @@ $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
 Calculemos las homologías reducidas $\widetilde H_{0}(K(M_{5}))$,
 $\widetilde H_{1}(K(M_{5}))$ y $\widetilde H_{2}(K(M_{5}))$.
 
-Como $\widehat\varepsilon$ es suprayectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
+Como $\widehat\varepsilon$ es sobreyectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
 \begin{equation*}
   (\mathbb{C}\oplus S^{(4,1)}\oplus S^{(3,2)}\oplus
   S^{(2,2,1)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
@@ -4214,7 +4214,7 @@ así que:
   \end{align*}
 \end{footnotesize}
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{10}=0$,
-intuituvamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
+intuitivamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
 Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
 de $b_{j}$ no pertenece a ningún otro triángulo distinto de $c_{i}$, por
 lo tanto $\partial_{2}(c_{j})$ no es combinación lineal de las fronteras
@@ -4495,7 +4495,7 @@ y los $2$-simplejos:
 Por calcular las homologías reducidas $\widetilde
 H_{0}(M_{6})$, $\widetilde H_{1}(M_{6})$ y $\widetilde H_{2}(M_{6})$.
 
-Como $\widehat\varepsilon$ es suprayectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
+Como $\widehat\varepsilon$ es sobreyectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
 \begin{equation*}
   (\mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
 \end{equation*}
@@ -4645,7 +4645,7 @@ así que:
   \end{align*}
 \end{footnotesize}
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{15}=0$,
-intuituvamente esto se puede deducir de la gráfica
+intuitivamente esto se puede deducir de la gráfica
 \ref{fig:emparejamiento6}. Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
 de $b_{j}$ no pertenece a ningún otro triángulo distinto de $c_{i}$, por
 lo tanto $\partial_{2}(c_{j})$ no es combinación lineal de las fronteras
@@ -4893,7 +4893,7 @@ $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
 Calculemos las homologías reducidas $\widetilde H_{0}(K(M_{6}))$,
 $\widetilde H_{1}(K(M_{6}))$ y $\widetilde H_{2}(K(M_{6}))$.
 
-Como $\widehat\varepsilon$ es suprayectiva y por el teorema
+Como $\widehat\varepsilon$ es sobreyectiva y por el teorema
 \ref{teorema-isomorfismo-mod} tenemos:
 
 \begin{equation*}
@@ -4953,7 +4953,7 @@ De las ecuaciones \ref{ker1-KM6} y \ref{im2-KM6} tenemos:
 
 Anteriormente usamos el hecho de que $M_{6}\simeq K(M_{6})$  para
 concluir que $\widetilde H_{2}(K(M_{6}))=\widetilde H_{2}(M_{6})=0$, sin embargo veamos que 
-es posibe calcular $\im \widehat\partial_{2}$ por medio de cálculos elementales.
+es posible calcular $\im \widehat\partial_{2}$ por medio de cálculos elementales.
 
 Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
 \ref{imT}, sabemos que
@@ -4977,7 +4977,7 @@ así que:
 \end{footnotesize}
 
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{15}=0$,
-intuituvamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
+intuitivamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
 Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
 de $b_{j}$ no pertenece a ningún otro triángulo distinto de $c_{i}$, por
 lo tanto $\partial_{2}(c_{j})$ no es combinación lineal de las fronteras
