@@ -261,6 +261,9 @@ reducidas de complejos de emparejamientos $M_{n}$ y de los complejos
 simpliciales obtenidos de las gráficas de clanes $K(G_{n})$, para
 $n\leq 6$.
 
+Esta tesis amplía los resultados de~\cite{robles08:_repres}.
+
+
 \tableofcontents
 
 
@@ -462,12 +465,12 @@ como suma directa de $G$-submódulos irreducibles en la sección~\ref{reducibili
 Consideramos el lema de Schur, pues su demostración es similar a
 cierta proposición posterior que encontramos al final de la sección
 \ref{schur}. Por otra parte los caracteres de una representación nos
-proporcionan información acerca de ésta, se describe con detalle en la
-sección \ref{caracteres}. Además por medio de el producto interno de
+proporcionan información acerca de ésta, lo cual se describe con detalle en la
+sección \ref{caracteres}. Además por medio del producto interno de
 caracteres podemos determinar algunos resultados como: si una
 representación es irreducible, cuándo dos representaciones son
-equivalentes, la multiplicidad de cierto submódulo irreducible dada la
-descomposición del $G$-módulo, entre otros resultados que vemos en la
+equivalentes, la multiplicidad de cierto submódulo irreducible en la
+descomposición de un $G$-módulo, entre otros resultados que vemos en la
 sección~\ref{producto-interno}. 
 
 El capítulo termina con la sección de caracteres y módulos inducidos,
@@ -624,27 +627,33 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   \textbf{representación} de $G$ en $V$ es un homomorfismo 
      $$\rho:G\rightarrow GL(V).$$
 \end{definition}
+
 Así que el teorema \ref{rep-mod} nos dice que estudiar las representaciones de $G$
-en $V$, es equivalente a estudiar $G$-módulos $V$.
-\begin{definition}
-  Llamemos \textbf{representación matricial} al homomorfismo
-   de la definición \ref{representacion}, es decir, 
-   $$X:G\rightarrow GL(n,\mathbb{C})$$
-   simplemente para resaltar que para cada $g\in G$, $X(g)$  es una
-   matriz invertible $n \times n$ con entradas en $\mathbb{C}$. 
-\end{definition}
-Se denotará $(\rho,V)$ para enfatizar el hecho de que la
-representación $\rho$ de $G$  es sobre el espacio $V$. A
+en $V$, es equivalente a estudiar $G$-módulos $V$.  A
 dicho espacio $V$ se le llamará \emph{espacio de representación} y a
 su dimensión el \emph{grado} de la representación. 
 
+\begin{definition}
+  Si fijamos una base de $V$, entonces toda transformación lineal
+  $V\to V$
+  determina una matriz asociada a la transformación lineal. Llamemos \textbf{representación matricial} al homomorfismo
+  obtenido a partir de la definición \ref{representacion}, es decir, 
+  $$X:G\rightarrow GL(n,\mathbb{C})$$
+  simplemente para resaltar que para cada $g\in G$, $X(g)$  es la
+  matriz invertible~$n \times n$ con entradas en $\mathbb{C}$ asociada
+  a $\rho(g)$.
+\end{definition}
+
+% Se denotará $(\rho,V)$ para enfatizar el hecho de que la
+% representación $\rho$ de $G$  es sobre el espacio $V$.
+
 \begin{example}[Representación trivial]
   La representación trivial de un grupo $G$ es el homomorfismo
-  $\rho:G\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo~$g\in G$, ésta es una representación de grado $1$.
+  $\rho:G\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo~$g\in G$. Ésta es una representación de grado $1$.
 \end{example}
 
 \begin{example}[Representación signo]
-  Sea $n$ un número entero positivo y~$\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
+  Sean $n$ un número entero positivo e~$\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
   Una función biyectiva $\pi:\mathbb{I}_{n}\rightarrow\mathbb{I}_{n}$
   se llamará una permutación de $\mathbb{I}_{n}$. El grupo simétrico
   $S_{n}$ es el conjunto de todas las
@@ -663,7 +672,7 @@ su dimensión el \emph{grado} de la representación.
   \end{cases}
   \]
   para $\pi\in S_{n}$, $v\in \mathbb{C}$. Cuando hablemos de
-  $\mathbb{C}$ como un $S_{n}$-módulo lo denotaremos con
+  $\mathbb{C}$ como un $S_{n}$-módulo por ésta acción lo denotaremos con
   $\widehat{\mathbb{C}}$. Ésta representación tiene grado $1$.
 \end{example}
 
@@ -861,12 +870,16 @@ su dimensión el \emph{grado} de la representación.
   La representación asociada a éste submódulo se llama
   \textbf{representación estándar}.
   
-  Sea $\mathbb{C}$ la representación trivial. Notemos que
+  Sea $\mathbb{C}\cong
+  \{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
+  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ subespacio de
+  $E$. Se obtiene que es isomorfo a la representación trivial, y que:
   \begin{equation*}
     \mathbb{C}\boldsymbol{S}=E\oplus \mathbb{C}
   \end{equation*}
   
-  Consideremos un caso específico. Sea $S_{3}$, determinemos las
+  Consideremos un caso específico, el de $S_{3}$ actuando en
+  $\{1,2,3\}$. Determinemos las
   matrices asociadas respecto a la base estándar $\{1,2,3\}$. Para
   $\pi=(12)$, calculamos
   \begin{center}
@@ -914,7 +927,7 @@ su dimensión el \emph{grado} de la representación.
 
 \begin{example}[Representación regular]
   Sea $G$ un grupo. Procedemos como en el ejemplo \ref{CS}, pero ahora $G$
-  actúa sobre sí mismo. Sean $Y=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
+  actúa sobre sí mismo por el producto usual de grupo. Sean $Y=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
   \begin{equation*}
     V=\mathbb{C}\boldsymbol{G}=\{\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
     +\lambda_{n}g_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}.
@@ -968,7 +981,7 @@ La demostración de el teorema de Maschke se encuentra en el teorema~1.5.3 de \c
 
 \begin{definition}
   Sea $V$ un $G$-módulo. Al submódulo de $V$ generado por las combinaciones lineales de los
-  elementos de $W$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
+  elementos de un $W\subseteq V$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
 \end{definition}
 
 Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma
@@ -1022,8 +1035,9 @@ entre suma directa y suma directa externa.
 % $w_{1}=w^{'}_{1}$ y $w^{'}_{2}=w_{2}$.
 \begin{proposition}
   \label{modulos-iguales}
-  Supongamos que $S\leq M$, además $S$ es irreducible, si~$M=S\oplus T$ donde $S$
-  tiene multiplicidad 1 y sea $S^{'}\leq M$, tal que $S^{'}\cong S$, entonces~$S=S^{'}$.
+  Supongamos que $S\leq M$, donde $S$ es irreducible. Supongamos
+  además que $S$ aparece con multiplicidad 1 en la descomposición en
+  irreducibles de $M$, y sea $S^{'}\leq M$, tal que $S^{'}\cong S$. Entonces~$S=S^{'}$.
 \end{proposition}
 
 \begin{proof}[Demostración.]
@@ -1031,7 +1045,7 @@ entre suma directa y suma directa externa.
   S^{'}=S$, pues $S$ es irreducible.
 
   Si $S\cap S^{'}=0$, consideremos $U$ el submódulo generado por $S\cup S'$ al cual
-  denotamos como $S+S^{'}$ y como $S\cap S^{'}=0$, entonces
+  denotamos como $S+S^{'}$. Puesto que $S\cap S^{'}=0$, entonces
   $S+S^{'}\cong S\oplus S^{'}$ como notamos en la observación anterior,
   así que $M$ tendría un submódulo isomorfo a dos copias de $S$, lo cual
   no es posible por hipótesis. 
@@ -1039,7 +1053,7 @@ entre suma directa y suma directa externa.
  Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap
  S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$ así que
  $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
- sea $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
+ dado que $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
  que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería demostrar.
 \end{proof}
 
@@ -1099,7 +1113,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
   o~$\ker\phi=V$, pero  $\ker\phi\neq V$ pues $\phi$ es no trivial,
   así que $\ker \phi=0$ y por lo tanto $\phi$ es inyectiva. 
 
-  Análogamente, $\im\phi\leq W$ y $\im \phi\neq 0$, así que $\im
+  Análogamente, $\im\phi\leq W$ e $\im \phi\neq 0$, así que $\im
   \phi=W$ y entonces $\phi$ es sobreyectiva.
 \end{proof}
 
@@ -1123,15 +1137,15 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
   $$0=S/S\cong\im(f\circ i)=f(S)$$
 \end{proof}
 
-\begin{theorem}
-  Sea $V$ un $G$ módulo tal que
-  \begin{equation*}
-    V\cong m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus
-    m_{k}V^{(k)},
-  \end{equation*}
-  donde para cada $V^{(i)}$ y $V^{(j)}$ con $i\neq j$ son submódulos irreducibles no isomorfos y $\dim
-  V^{(i)}=d_{i}$. Entonces $\dim V=m_{1}d_{1}+m_{2}d_{2}+\cdots+m_{k}d_{k}.$
-\end{theorem}
+% \begin{theorem}
+%   Sea $V$ un $G$ módulo tal que
+%   \begin{equation*}
+%     V\cong m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus
+%     m_{k}V^{(k)},
+%   \end{equation*}
+%   donde para cada $V^{(i)}$ y $V^{(j)}$ con $i\neq j$ son submódulos irreducibles no isomorfos y $\dim
+%   V^{(i)}=d_{i}$. Entonces $\dim V=m_{1}d_{1}+m_{2}d_{2}+\cdots+m_{k}d_{k}.$
+% \end{theorem}
 
 \section{Caracteres de representaciones}
 \label{caracteres}
@@ -1151,10 +1165,12 @@ correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
 \begin{equation*}
   G\stackrel{\tr X}{\rightarrow}\mathbb{C}.
 \end{equation*}
-Si $V$ es un $G$ módulo, su carácter es el carácter de la
-representación matricial $X$ correspondiente a $V$. En ocasiones para resaltar
+Si $V$ es un $G$ módulo, su carácter es el carácter de alguna
+representación matricial $X$ correspondiente a $V$ (por propiedades de
+la traza, el carácter no depende de la base de $V$ escogida). En ocasiones para resaltar
 que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 \end{definition}
+
 Parte de la terminología utilizada para representaciones se
 usará para los correspondientes caracteres. Por ejemplo si $X$ tiene
 carácter $\chi$, diremos que~$\chi$ es irreducible siempre que $X$ lo
@@ -1312,7 +1328,7 @@ clase de conjugación.
   \label{tabla-car-S3}
 \end{figure}
 \end{center}
-Las tablas de caracteres que utilizaremos en el capitulo \ref{cha:hom-com-emp}
+Las tablas de caracteres que utilizaremos en el capítulo \ref{cha:hom-com-emp}
 se encuentran en~\cite{liebeck}.
 \end{example}
 
@@ -1323,9 +1339,11 @@ Mediante el producto interno de caracteres  podemos determinar si una
 representación es irreducible o cuándo dos representaciones son
 equivalentes. Además de otros resultados que veremos a continuación.
 \begin{definition}
-  Sean $\chi$, $\psi$ los caracteres de dos representaciones de un grupo
-  $G$, entonces definimos el producto interno de $\chi$ y $\psi$ sobre
-  el espacio de funciones de $G$ en $\mathbb{C}$ como:
+  % Sean $\chi$, $\psi$ los caracteres de dos representaciones de un grupo
+  % $G$, entonces definimos el producto interno de $\chi$ y $\psi$ sobre
+  % el espacio de funciones de $G$ en $\mathbb{C}$ como:
+  Si $\chi$, $\psi$ son funciones de $G$ en $\mathbb{C}$, definimos el
+  producto interno de $\chi$ y $\psi$ como:
   \begin{equation*}
     \langle\chi,\psi\rangle=\frac{1}{|G|}\sum_{g\in G}\chi(g)\overline{\psi(g)}.
   \end{equation*}
@@ -1385,7 +1403,7 @@ La demostración aparece en el teorema 1.9.4 de
   negativo puesto que el producto interno de $\langle\chi_{V_{i}},\chi_{V_{j}}\rangle$ es
   0 o 1 por el teorema \ref{prod-car-irr}. 
 \end{proof}
-\textbf{\emph{Nota:}} Por el teorema \ref{prod-car-irr}, las
+\textbf{\emph{Nota:}} Por el corolario \ref{multiplicidad}, las
 representaciones de el ejemplo \ref{caracteres-S3} son irreducibles,
 es decir, basta calcular los siguientes productos internos:
 \begin{align*}
@@ -1397,9 +1415,20 @@ es decir, basta calcular los siguientes productos internos:
 \section{Caracteres y módulos inducidos}
 \label{carac-induc}
 
-Dado un grupo $G$, sea $H\leq G$ hay una forma de obtener
-representaciones de $G$ a partir de $H$ usando operaciones de
+Dados un grupo $G$ con subgrupo $H\leq G$, hay una forma de obtener
+representaciones de $G$ a partir de representaciones de $H$ usando operaciones de
 restricción e inducción.
+
+\begin{definition}
+  Considere $H\leq G$ y $X:G\rightarrow GL(n,\mathbb{C})$ una
+  representación matricial de $G$. La \textbf{restricción} de $X$ a
+  $H$, $X\downarrow^{G}_{H}$, está dada por
+  \begin{equation*}
+    X\downarrow^{G}_{H}(h)=X(h)
+  \end{equation*}
+  para todo $h\in H$. Si el $X$ tiene carácter $\chi$, entonces denote
+  el carácter de~$X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$.
+\end{definition}
 
 \begin{proposition}
 \label{fun-cla-caracter}
@@ -1420,17 +1449,6 @@ no negativo. Entonces $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde
 $\theta$ es el carácter del módulo~$m_{1}V^{(1)}\oplus
 m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}\neq 0$. 
 \end{proof}
-
-\begin{definition}
-  Considere $H\leq G$ y $X:G\rightarrow GL(n,\mathbb{C})$ una
-  representación matricial de $G$. La \textbf{restricción} de $X$ a
-  $H$, $X\downarrow^{G}_{H}$, está dada por
-  \begin{equation*}
-    X\downarrow^{G}_{H}(h)=X(h)
-  \end{equation*}
-  para todo $h\in H$. Si el $X$ tiene carácter $\chi$, entonces denote
-  el carácter de~$X\downarrow^{G}_{H}$ por $\chi\downarrow^{G}_{H}$.
-\end{definition}
 
 \begin{definition}
   Sea $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ una función. Definimos la
