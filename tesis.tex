@@ -1165,7 +1165,7 @@ correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
 \begin{equation*}
   G\stackrel{\tr X}{\rightarrow}\mathbb{C}.
 \end{equation*}
-Si $V$ es un $G$ módulo, su carácter es el carácter de alguna
+Si $V$ es un $G$-módulo, su carácter es el carácter de alguna
 representación matricial $X$ correspondiente a $V$ (por propiedades de
 la traza, el carácter no depende de la base de $V$ escogida). En ocasiones para resaltar
 que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
@@ -1403,7 +1403,7 @@ La demostración aparece en el teorema 1.9.4 de
   negativo puesto que el producto interno de $\langle\chi_{V_{i}},\chi_{V_{j}}\rangle$ es
   0 o 1 por el teorema \ref{prod-car-irr}. 
 \end{proof}
-\textbf{\emph{Nota:}} Por el corolario \ref{multiplicidad}, las
+\textbf{\emph{Nota:}} Por el corolario \ref{multiplicidad}, las 
 representaciones de el ejemplo \ref{caracteres-S3} son irreducibles,
 es decir, basta calcular los siguientes productos internos:
 \begin{align*}
@@ -1418,6 +1418,43 @@ es decir, basta calcular los siguientes productos internos:
 Dados un grupo $G$ con subgrupo $H\leq G$, hay una forma de obtener
 representaciones de $G$ a partir de representaciones de $H$ usando operaciones de
 restricción e inducción.
+
+\begin{definition}
+  Dada una función $f:A\rightarrow B$ y un subconjunto $C\subseteq A$,
+  la restricción de $f$ al conjunto $C$ es la función
+  $f_{|C}:C\rightarrow B$, dada por: 
+  \begin{equation*}
+    \label{eq:restriccion}
+    f_{|C}(x)=f(x), \quad\mbox{para cada } x \in C
+  \end{equation*}
+\end{definition}
+
+\begin{definition}
+  Sea $V$ un $G$-módulo y $f:H\rightarrow G$ un homomorfismo de
+  grupos. Tenemos una composición:
+  \begin{equation*}
+    H\stackrel{f}{\rightarrow}G \rightarrow GL(V),
+  \end{equation*}
+  que induce una estructura de $H$-módulo en $V$. La acción de $H$ en
+  $V$ está determinada por:
+  \begin{equation*}
+    hv=f(h)v,
+  \end{equation*}
+  para $h\in H$, $v\in V$, donde en el lado derecho de la ecuación hemos
+  utilizado la acción ya definida de $G$ en $V$. 
+\end{definition}
+
+\begin{definition}
+  Sea $H$ un subgrupo de $G$ y $f:H\rightarrow G$ el morfismo
+  inclusión. Sea $V$ un $G$-módulo. El $H$-modulo obtenido por el
+  procedimiento anterior se denota con $V\downarrow^{G}_{H}$ y se
+  le llama \textbf{restricción} de $V$ de $G$ a $H$.
+\end{definition}
+
+Si el carácter de el $G$-módulo $V$ es $\chi_{V}$, entonces
+denotaremos al carácter de $V\downarrow^{G}_{H}$ como
+$\chi_{V}\downarrow^{G}_{H}$. Además notemos que
+$\chi_{V}\downarrow^{G}_{H}=\chi_{V\downarrow^{G}_{H}}$.
 
 \begin{definition}
   Considere $H\leq G$ y $X:G\rightarrow GL(n,\mathbb{C})$ una
