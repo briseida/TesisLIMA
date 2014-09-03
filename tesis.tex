@@ -204,7 +204,7 @@ y $|\Delta(G_{2})|$ lo son.
 
 Se define entonces el complejo simplicial $M_{n}$ como
 $M_{n}=\Delta(G_{n})$. Puesto que $S_{n}$ actúa en $M_{n}$, las
-homologías de $\Delta(G_{n})$ con coeficientes en el campo de los
+homologías de $M_{n}$ con coeficientes en el campo de los
 números complejos definen representaciones de $S_{n}$.
 
 En la tesis reproducimos el resultado de Bouc para $n\leq 6$ por medio de
@@ -346,7 +346,7 @@ La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
 V\}$ de todos las clases laterales de $W$ como: 
 \begin{itemize}
 \item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
-\item $v_{2}\in V$ y $a(v+W)=av+W$ para todo $v\in V$ y $a\in \mathbb{C}$.
+\item $a(v+W)=av+W$ para todo $v\in V$ y $a\in \mathbb{C}$.
 \end{itemize}
 Se puede demostrar que las operaciones anteriores están bien definidas.
 
@@ -401,7 +401,7 @@ donde
     [T]^{\gamma}_{\beta}=([T(v_{1})]_{\gamma},[T(v_{2})]_{\gamma},\cdots,[T(v_{n})]_{\gamma})
   \end{equation*}
   En otras palabras, si
-  $T(u_{j})=\lambda_{1j}w_{1}+\lambda_{2j}w_{2}+\cdots+\lambda_{mj}w_{m}$,
+  $T(v_{j})=\lambda_{1j}w_{1}+\lambda_{2j}w_{2}+\cdots+\lambda_{mj}w_{m}$,
   entonces
 \begin{center}
     $[T(v_{j})]_{\gamma}=\begin{pmatrix}
@@ -491,7 +491,7 @@ obtener el carácter de una representación inducida.
 
 \begin{definition}
   Una \textbf{operación binaria} en un conjunto $G$ es una función
-  de la forma $G  \times G \rightarrow G$. Para cada $(a,b)\in G
+  de la forma $*:G  \times G \rightarrow G$. Para cada $(a,b)\in G
   \times G$, denotaremos al elemento~$*((a,b))\in G$ por $ab$. 
 \end{definition} 
 
@@ -583,8 +583,8 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   para cada $g\in G$, usando esta acción definamos la función $\rho
   g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.
 
-  Demostremos que $\rho g$ es una transformación lineal
-  invertible. Sean $v,w \in V$, $\lambda \in K$, entonces:
+  Enseguida demostraremos que $\rho g$ es una transformación lineal
+  invertible. Sean $v,w\in V$, $\lambda \in \mathbb{C}$, entonces:
   \begin{flalign*}
     &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w\\
     &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)
@@ -618,7 +618,7 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
     \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
   \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=(\rho g)(v+w)=(\rho
     g)v+(\rho g)w=gv+gw$$
-  \item Para $\lambda\in K$, $v\in V$ y $g\in G$,
+  \item Para $\lambda\in \mathbb{C}$, $v\in V$ y $g\in G$,
     $$g(\lambda v)=(\rho g)(\lambda v)=\lambda((\rho g)v)=\lambda(gv)$$
   \end{enumerate}
 \end{proof}
@@ -873,7 +873,7 @@ su dimensión el \emph{grado} de la representación.
     E=\Big\{(x_{1},x_{2},\ldots,x_{n})\in \mathbb{C}\boldsymbol{S}\mid\sum^{n}_{i=1}x_{i}=0\Big\}.
   \end{equation*}
   La representación asociada a éste submódulo se llama
-  \textbf{representación estándar}.
+  \textbf{representación estándar}. 
   
   Sea $\mathbb{C}\cong
   \{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
@@ -932,7 +932,7 @@ su dimensión el \emph{grado} de la representación.
 
 \begin{example}[Representación regular]
   Sea $G$ un grupo. Procedemos como en el ejemplo \ref{CS}, pero ahora $G$
-  actúa sobre sí mismo por el producto usual de grupo. Sean $Y=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
+  actúa sobre sí mismo con el producto usual de grupo. Sean $Y=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
   \begin{equation*}
     V=\mathbb{C}\boldsymbol{G}=\{\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
     +\lambda_{n}g_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}.
@@ -1094,7 +1094,7 @@ de $G$.
 En la proposición 1.7.9 de \cite{sagan2001symmetric} se encuentra la
 demostración de la proposición \ref{ker-im-sub}.
   
-Si $W$ es submódulo de $V$, entonces en el espacio vectorial cociente
+Si $W$ es submódulo de $V$, entonces en el espacio cociente
 $V/W$ puede darse una acción de $G$ como $g(v+W)=gv+W$, la cual está
 bien definida (pues $W$ es invariante bajo la acción de $G$), y
 satisface los axiomas de módulo sobre $G$, por lo que obtenemos una
