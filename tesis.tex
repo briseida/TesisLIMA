@@ -265,7 +265,7 @@ En \cite{robles08:_repres} se describe la descomposición de
 $\widetilde H_{k}(M_{n})$ en submódulos irreducibles, para $n\leq
 5$. Ésta tesis amplía los resultados de \cite{robles08:_repres}, pues
 de forma análoga se calcula la descomposición en módulos
-irreducibles de $\widetilde H_{k}(M_{6})$, asimismo se calculan las
+irreducibles de $\widetilde H_{k}(M_{6})$, así mismo se calculan las
 homologías reducidas  de los complejos simpliciales obtenidos de las
 gráficas de clanes $K(G_{n})$, para $n\leq 6$.
 
@@ -870,15 +870,15 @@ su dimensión el \emph{grado} de la representación.
   Un submódulo importante de dimensión $n-1$ de
   $\mathbb{C}\boldsymbol{S}$ es:
   \begin{equation*}
-    E=\Big\{(x_{1},x_{2},\ldots,x_{n})\in \mathbb{C}\boldsymbol{S}\mid\sum^{n}_{i=1}x_{i}=0\Big\}.
+    E=\Big\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\in \mathbb{C}\boldsymbol{S}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
   \end{equation*}
   La representación asociada a éste submódulo se llama
   \textbf{representación estándar}. 
   
   Sea $\mathbb{C}\cong
   \{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
-  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ subespacio de
-  $E$. Se obtiene que es isomorfo a la representación trivial, y que:
+  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ submódulo de
+  $\mathbb{C}\boldsymbol{S}$. Se obtiene que es isomorfo a la representación trivial, y que:
   \begin{equation*}
     \mathbb{C}\boldsymbol{S}=E\oplus \mathbb{C}
   \end{equation*}
@@ -1109,8 +1109,8 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 
 \begin{theorem}[Lema de Schur]
   \label{lema-schur}
-  Si $V$ y $W$ son $G$-módulos irreducibles, y $\phi:V\rightarrow W$
-  es un morfismo de $G$-módulos no trivial, entonces $\phi$ es un isomorfismo.
+  Si $V$ y $W$ son $G$-módulos irreducibles, y~$\phi:V\rightarrow W$
+  es un $G$-homomorfismo no trivial, entonces $\phi$ es un isomorfismo.
 \end{theorem}
 
 \begin{proof}[Demostración.]
@@ -1124,16 +1124,18 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 
 \begin{proposition}
   \label{im-mod-irreducible}
-   Si $V$ y $W$ son $G$-módulos, $f:V\rightarrow W$ un morfismo de $G$-módulos, $S\leq V$ con $S$
-  irreducible, entonces $f(S)\cong S$ o $f(S)=0$.
+  Si $V$, $W$ son $G$-módulos y $f:V\rightarrow W$ un
+  $G$-homomorfismo, $S\leq V$ con $S$ irreducible, entonces $f(S)\cong
+  S$ o $f(S)=0$.
 \end{proposition}
 
 \begin{proof}[Demostración.]
-  Tomemos el siguiente morfismo de módulos
-  $S\stackrel{i}{\hookrightarrow} V\stackrel{f}{\rightarrow}W$ donde
-  $i$ es la función inclusión. Así que $S/\ker(f\circ i)\cong\im(f\circ
-  i)$ por el teorema \ref{teorema-isomorfismo-mod}. Como $\ker(f\circ
-  i)\leq S$ entonces $\ker(f\circ i)=0$ o $\ker(f\circ i)=S$, pues $S$ es irreducible.
+  Tomemos el siguiente $G$-homomorfismo
+  $S\stackrel{i}{\hookrightarrow} V\stackrel{f}{\rightarrow}W$
+  donde~$i$ es la función inclusión. Así que $S/\ker(f\circ
+  i)\cong\im(f\circ i)$ por el teorema \ref{teorema-isomorfismo-mod}. Como $\ker(f\circ
+  i)\leq S$ entonces $\ker(f\circ i)=0$ o $\ker(f\circ i)=S$, pues $S$
+  es irreducible.
 
   Si $\ker(f\circ i)=0$, se sigue que
   $$S\cong S/0\cong\im(f\circ i)=f(S)$$
@@ -1238,9 +1240,9 @@ para cualquier $g\in K$. Esto sugiere la definición de tabla de caracteres de
 un grupo. 
 \begin{definition}
   Sea $G$ un grupo finito. La \textbf{tabla de caracteres} de $G$ es
-  una tabla cuyos renglones están indexados por los caracteres de $G$
-  y las columnas indexadas por las clases de conjugación. La entrada
-  de la tabla en el renglón $\chi$ y la columna $K$ es
+  una tabla cuyos renglones están indexados por los caracteres
+  irreducibles de~$G$ y las columnas indexadas por las clases de
+  conjugación. La entrada de la tabla en el renglón $\chi$ y la columna $K$ es
 \end{definition}
 
 \begin{center}
@@ -1276,7 +1278,7 @@ primera columna corresponde a la clase identidad $K=(1)$.
 
   Por último sea $V=E$, la representación estándar. Es decir,
   \begin{equation*}
-    E=\{(x_{1},x_{2},x_{3})\in \mathbb{C}^{3}\mid x_{1}+x_{2}+x_{3}=0\}
+    E\cong\{(x_{1},x_{2},x_{3})\in \mathbb{C}^{3}\mid x_{1}+x_{2}+x_{3}=0\}
   \end{equation*}
   En este caso, $\dim V=2$, y una base de $E$ es
   $\beta=\{(1,-1,0),(1,0,-1)\}$. Si $g=(1)$, entonces la matriz
@@ -1401,12 +1403,14 @@ La demostración aparece en el teorema 1.9.4 de
   r_{1}V^{(1)}\oplus r_{2}V^{(2)}\oplus\cdots\oplus r_{k}V^{(k)}$ por el
   teorema de Maschke, donde $m_{i}$ y $r_{i}$ es la multiplicidad de el módulo
   irreducible $V^{(i)}$, se sigue que
-  \begin{equation*}
-    \langle\chi_{V},\chi_{W}\rangle=\sum m_{i}r_{j}\langle\chi_{V_{i}},\chi_{V_{j}}\rangle\\
-  \end{equation*}
+  \begin{align*}
+    %\langle\chi_{V},\chi_{W}\rangle=\sum m_{i}r_{j}\langle\chi_{V_{i}},\chi_{V_{j}}\rangle\\
+    \langle\chi_{V},\chi_{W}\rangle&=\langle\chi_{V},r_{1}\chi_{V^{(1)}}+r_{2}\chi_{V^{(2)}}+\cdots+r_{k}\chi_{V^{(k)}}\rangle\\
+    &=r_{1}\langle\chi_{V},\chi_{V^{(1)}}\rangle+r_{2}\langle\chi_{V},\chi_{V^{(2)}}\rangle+\cdots+r_{k}\langle\chi_{V},\chi_{V^{(k)}}\rangle\\
+    &=r_{1}m_{1}+r_{2}m_{2}+\cdots+r_{k}m_{k},
+  \end{align*}
   así que  $\langle\chi_{V},\chi_{W}\rangle$ es un entero no
-  negativo puesto que el producto interno de $\langle\chi_{V_{i}},\chi_{V_{j}}\rangle$ es
-  0 o 1 por el teorema \ref{prod-car-irr}. 
+  negativo. 
 \end{proof}
 \textbf{\emph{Nota:}} Por el corolario \ref{multiplicidad}, las 
 representaciones de el ejemplo \ref{caracteres-S3} son irreducibles,
@@ -1414,7 +1418,7 @@ es decir, basta calcular los siguientes productos internos:
 \begin{align*}
   \langle\chi_{\mathbb{C}},\chi_{\mathbb{C}}\rangle&=\frac{1}{6}(1(1)(1)+3(1)(1)+2(1)(1))=1  \\
   \langle\chi_{\widehat{\mathbb{C}}},\chi_{\widehat{\mathbb{C}}}\rangle&=\frac{1}{6}(1(1)(1)+3(-1)(-1)+2(1)(1))=1  \\
-  \langle\chi_{E},\chi_{E}\rangle&=\frac{1}{6}(1(2)(2)+3(0)(0)+2(-1)(-1))=1  \\
+  \langle\chi_{E},\chi_{E}\rangle&=\frac{1}{6}(1(2)(2)+3(0)(0)+2(-1)(-1))=1.
 \end{align*}
 
 \section{Caracteres y módulos inducidos}
@@ -1487,8 +1491,8 @@ Supongamos ahora $\langle\theta,\chi_{j}\rangle=a_{j}$ para
 $j=1,\ldots,k$, donde $\chi_{1},\chi_{2},\ldots,\chi_{k}$ forman una
 colección completa de caracteres irreducibles y $a_{j}$ es un entero
 no negativo. Entonces $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde
-$\theta$ es el carácter del módulo~$m_{1}V^{(1)}\oplus
-m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}\neq 0$. 
+$\theta$ es el carácter del módulo~$a_{1}V^{(1)}\oplus
+a_{2}V^{(2)}\oplus\cdots\oplus a_{k}V^{(k)}\neq 0$. 
 \end{proof}
 
 \begin{definition}
@@ -1574,12 +1578,14 @@ interno en el espacio de funciones de clase.
     &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g,x\in G,x^{-1}gx\in
       H\}}\theta(x^{-1}gx)\overline{\phi(g)}\\
     \intertext{hacemos el cambio $u=x^{-1}gx$, entonces $g=xux^{-1}$,}
-    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in G,u\in H\}}\theta(u)\overline{\phi(xux^{-1})}\\
+    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in
+      G,u\in H\}}\theta(u)\overline{\phi(xux^{-1})}\\
+    &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in G,u\in H\}}\theta(u)\overline{\phi(u)}\\
     &=\frac{1}{|G|}\frac{1}{|H|}|G|\sum_{u\in
       H}\theta(u)\overline{\phi(u)}\\
     \intertext{pues $u\in H$, $xux^{-1}\in G$ para todo $x\in G$,
       además $\phi(xux^{-1})=\phi(u)$}
-    &=\langle\theta,\phi\downarrow^{G}_{H}\rangle
+    &=\langle\theta,\phi\downarrow^{G}_{H}\rangle.
  \end{align*} 
 \end{proof}
 
@@ -1592,7 +1598,7 @@ interno en el espacio de funciones de clase.
   Ya sabemos que $\theta\uparrow^{G}_{H}$ es una función de
   clase. Aplicamos el criterio de la proposición
   \ref{fun-cla-caracter}. Tenemos que
-  $\theta\uparrow^{G}_{H}(1)=[G:H]\chi(1)>0$ y si $\chi$ es un
+  $\theta\uparrow^{G}_{H}(1)=[G:H]\theta(1)>0$ y si $\chi$ es un
   carácter irreducible de $G$, entonces
   \begin{equation*}
     \langle\theta\uparrow^{G}_{H},\chi\rangle=\langle\theta,\chi\downarrow^{G}_{H}\rangle,
@@ -1633,44 +1639,44 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   % $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, por lo que $\tr(g\mid
   % t_{j}W)=\chi_{V}(t^{-1}_{j}gt_{j})$, y por la ecuación \ref{fun-ind-trans}, queda
   % demostrado.
-
   Si $\beta=\{w_{1},w_{2},\ldots,w_{r}\}$ es base de $W$, entonces $\gamma=\bigcup^{s}_{j=1}t_{j}\beta$ es
   base de $V$, por lo que dado $g\in G$ calcularemos $\chi_{V}(g)$
   usando esa base. Tenemos entonces que:
   \begin{equation}
     \label{car-base-tjb}    
-    \chi_{V}(g)=\tr([g]_{\gamma})=\sum^{s}_{j=1}\tr([g]_{t_{j}\beta})
+    \chi_{V}(g)=\tr([g]_{\gamma})=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr([g]_{t_{j}\beta})
   \end{equation}
-  Veamos que $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, tomemos
-  $w_{k}\in \beta$, así que:
+  Veamos que $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, si
+  $t^{-1}_{j}gt_{j}\in H$.  Tomemos $w_{k}\in \beta$, escribimos a~
+  $gt_{j}w_{k}$ como:
   \begin{equation*}
-    gt_{j}w_{k}=\lambda_{1}gt_{j}w_{1}+\cdots+\lambda_{r}gt_{j}w_{r}
+    gt_{j}w_{k}=\lambda_{1}t_{j}w_{1}+\cdots+\lambda_{r}t_{j}w_{r}
   \end{equation*}
   de modo que
   \begin{equation*}
-    t^{-1}_{j}gt_{j}w_{k}=\lambda_{1}t^{-1}_{j}gt_{j}w_{1}+\cdots+\lambda_{r}t^{-1}_{j}gt_{j}w_{r}\\
+    t^{-1}_{j}gt_{j}w_{k}=\lambda_{1}w_{1}+\cdots+\lambda_{r}w_{r}\\
   \end{equation*}
   por tanto
    \begin{center}
-    $[g(w_{k})]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}(w_{k})]_{\beta}=\begin{pmatrix}
+    $[g(t_{j}w_{k})]_{t_{j}\beta}=\begin{pmatrix}
       \lambda_{1}  \\
       \vdots  \\
       \lambda_{r}  
-    \end{pmatrix}$.
+    \end{pmatrix}=[t^{-1}_{j}gt_{j}(w_{k})]_{\beta}$.
   \end{center}
   De donde
   \begin{equation*}
-    [t^{-1}_{j}gt_{j}]_{\beta}=[g]_{t_{j}\beta}.
+    [g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}.
   \end{equation*}
   Por lo anterior tenemos que
   \begin{equation*}
-    \tr([t^{-1}_{j}gt_{j}]_{\beta})=\tr([g]_{t_{j}\beta})=\chi_{W}(t^{-1}_{j}gt_{j})\\
+    \tr([g]_{t_{j}\beta})=\tr([t^{-1}_{j}gt_{j}]_{\beta})=\chi_{W}(t^{-1}_{j}gt_{j})\\
   \end{equation*}
   Continuando la ecuación \ref{car-base-tjb}, 
   \begin{align*}
-    \chi_{V}(g)&=\tr([g]_{\gamma})=\sum^{s}_{j=1}\tr([g]_{t_{j}\beta})\\
-    \intertext{se sigue de la ecuación \ref{fun-ind-trans}, lo siguiente}
-    &=\sum_{\substack{t_{j}\in T,\\t^{-1}_{j}gt_{j}\in H}}\chi_{W}(t^{-1}_{j}gt_{j})=(\chi_{W})\uparrow^{G}_{H}
+    \chi_{V}(g)&=\tr([g]_{\gamma})=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr([g]_{t_{j}\beta})\\
+    %\intertext{se sigue de la ecuación \ref{fun-ind-trans}, lo siguiente}
+    &=\sum_{\substack{t_{j}\in T,\\t^{-1}_{j}gt_{j}\in H}}\chi_{W}(t^{-1}_{j}gt_{j})=(\chi_{W})\uparrow^{G}_{H}(g).
   \end{align*}
 \end{proof}
 
@@ -1756,7 +1762,7 @@ $S_{n}$ conocidos como módulos de Specht $S^{\lambda}$, los cuales son
 subespacios del correspondiente $M^{\lambda}$. Los módulos de
 Specht $S^{\lambda}$ corresponden biyectivamente a los diagramas de
 Young $\lambda$ y forman una lista completa de
-representaciones irreducibles de $S^{n}$.
+representaciones irreducibles de $S_{n}$.
 
 \section{Tablero de Young}
 \label{tablero}
@@ -2376,6 +2382,9 @@ complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$ y el
 operador frontera $\partial_{p}$ descritos en la sección
 \ref{com-sim-abs}. 
 
+En la sección \ref{hom-simp} se introducen los conceptos de ciclos, fronteras y la
+función aumento, para definir homología y homología reducida.
+
 Se presentan los complejos de cadenas en la sección \ref{com-cad} y se
 establece cierto diagrama conmutativo de los complejos de cadenas en donde
 se define una trasformación lineal entre los espacios de tales
@@ -2406,9 +2415,9 @@ $\Delta$. Si $A$ tiene $p+1$ elementos, decimos que $A$ es un
 \emph{p-simplejo} y su dimensión es $p$. La dimensión de $\Delta$
 es el máximo de las dimensiones de los simplejos de $\Delta$. Cada
 subconjunto no vacío de $A$ es llamado \textbf{cara} de $A$. El
-conjunto de \textbf{vértices} $V$ de $\Delta$ es la unión de los
+conjunto de \textbf{vértices} $V(\Delta)$ de $\Delta$ es la unión de los
 elementos de un punto de $\Delta$. No haremos distinción entre los
-vértices~$v\in V$ y los $0$-simplejos $\{v\}\in \Delta$. Una
+vértices~$v\in V(\Delta)$ y los $0$-simplejos $\{v\}\in \Delta$. Una
 subcolección de $\Delta$, que es a su vez es un complejo, se llama
 \textbf{subcomplejo} de $\Delta$.
 
@@ -2428,32 +2437,32 @@ subcolección de $\Delta$, que es a su vez es un complejo, se llama
 
 Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
 \textbf{0-simplejo orientado} es un punto $v$. Un \textbf{1-simplejo
-  orientado} es un segmento de línea dirigido $v_{1}v_{2}$ uniendo los
-puntos $v_{1}$ y $v_{2}$ en dirección de $v_{1}$ a $v_{2}$ como se
+  orientado} es un segmento de línea dirigido $v_{0}v_{1}$ uniendo los
+puntos $v_{0}$ y $v_{1}$ en dirección de $v_{0}$ a $v_{1}$ como se
 ilustra en la figura \ref{fig:1-simplejo}, así que
-$v_{1}v_{2}\neq v_{2}v_{1}$, pero estaremos de acuerdo en que~$v_{1}v_{2}=-v_{2}v_{1}$. Un \textbf{2-simplejo orientado} es una
-región triangular $v_{1}v_{2}v_{3}$ con dirección de $v_{1}$ a $v_{2}$
-a $v_{3}$ como se aprecia en la figura \ref{fig:2-simplejo}, claramente~$v_{1}v_{2}v_{3}$ tiene el mismo orden que
-$v_{2}v_{3}v_{1}$ y $v_{3}v_{1}v_{2}$, pero con orientación opuesta a
-$v_{1}v_{3}v_{2}$, $v_{3}v_{2}v_{1}$ y $v_{2}v_{1}v_{3}$, es decir, estaremos de acuerdo que:
-$$v_{1}v_{2}v_{3}=v_{2}v_{3}v_{1}=v_{3}v_{1}v_{2}=-v_{1}v_{3}v_{2}=-v_{3}v_{2}v_{1}=-v_{2}v_{1}v_{3}$$
+$v_{0}v_{1}\neq v_{1}v_{0}$, pero estaremos de acuerdo en que~$v_{0}v_{1}=-v_{1}v_{0}$. Un \textbf{2-simplejo orientado} es una
+región triangular $v_{0}v_{1}v_{2}$ con dirección de $v_{0}$ a $v_{1}$
+a $v_{2}$ como se aprecia en la figura \ref{fig:2-simplejo}, claramente~$v_{0}v_{1}v_{2}$ tiene el mismo orden que
+$v_{1}v_{2}v_{0}$ y $v_{2}v_{0}v_{1}$, pero con orientación opuesta a
+$v_{0}v_{2}v_{1}$, $v_{2}v_{1}v_{0}$ y $v_{1}v_{0}v_{2}$, es decir, estaremos de acuerdo que:
+$$v_{0}v_{1}v_{2}=v_{1}v_{2}v_{0}=v_{2}v_{0}v_{1}=-v_{0}v_{2}v_{1}=-v_{2}v_{1}v_{0}=-v_{1}v_{0}v_{2}$$
 
-Note que $v_{i}v_{j}v_{k}$ es igual a $v_{1}v_{2}v_{3}$ si
+Note que $v_{i}v_{j}v_{k}$ es igual a $v_{0}v_{1}v_{2}$ si
 
 \[ \left(
   \begin{array}{ccc}
-    1 & 2 & 3 \\
+    0 & 1 & 2 \\
     i & j & k 
   \end{array} 
 \right)\] 
 
-es una permutación par y es igual a $-v_{1}v_{2}v_{3}$ si la
+es una permutación par y es igual a $-v_{0}v_{1}v_{2}$ si la
 permutación es impar.
 
 Un \textbf{3-simplejo orientado} está dado por una secuencia ordenada
-$v_{1}v_{2}v_{3}v_{4}$ de cuatro vértices de un tetraedro sólido
+$v_{0}v_{1}v_{2}v_{3}$ de cuatro vértices de un tetraedro sólido
 como se observa en la figura \ref{fig:3-simplejo} y
-acordaremos que $v_{1}v_{2}v_{3}v_{4}=\pm v_{i}v_{j}v_{r}v_{s}$,
+acordaremos que $v_{0}v_{1}v_{2}v_{3}=\pm v_{i}v_{j}v_{r}v_{s}$,
 dependiendo si la permutación es par o impar. Así que dos maneras
 de enumerar los vértices de un $n$-simplejo se considerarán
 equivalentes, o producen la misma orientación si difieren una de la otra
@@ -2535,7 +2544,8 @@ por una permutación par.
 % Dado que en nuestro caso sólo estudiamos complejos simpliciales cuyo
 % conjunto de vértices es finito, la segunda condición no se aplica.
 
-Sumamos $p$-cadenas sumando sus valores; el $\mathbb{C}$-espacio vectorial resultante es
+Sumamos $p$-cadenas sumando sus valores y producto por escalar de una
+$p$-cadena es la multiplicación de su valor por un elemento $\lambda\in\mathbb{C}$; el $\mathbb{C}$-espacio vectorial resultante es
 denotado por $C_{p}(\Delta)$ y es llamado el \textbf{espacio de
   \emph{p}-cadenas (orientadas)} de $\Delta$. Si $p<0$ o $p>\dim \Delta$,
 $C_{p}(\Delta)$ denota al espacio trivial.
@@ -2943,7 +2953,7 @@ isomorfismo~$f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 
 Es posible definir homología de un espacio topológico general por
 medio del concepto de la \emph{homología singular}. Por otro lado, a cada complejo
-simplicial $\Delta$ se le puede asociar un espacio denotado $|\Delta|$
+simplicial $\Delta$ se le puede asociar un espacio topológico denotado $|\Delta|$
 llamado la \textbf{realización geométrica} de $\Delta$, dado por:
 
 $$|\Delta|=\{\alpha:V(\Delta)\rightarrow I\mid\alpha^{-1}(0,1]\in
@@ -3022,7 +3032,7 @@ a las gráficas les asociamos complejos simpliciales.
 \begin{definition}
   Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V=V(G)$
   de $p$ \emph{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
-  ordenados de vértices distintos de $V$. Cada par $e=\{u,v\}$ de vértices
+  ordenados de vértices distintos pertenecientes al conjunto $V(G)$. Cada par $e=\{u,v\}$ de vértices
   en $E$ es una \emph{arista} de $G$, y se dice que $e$ une a $u$ y
   $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \emph{vértices
     adyacentes}; un vértice $u$ y una arista $e$ son \emph{incidentes}
@@ -3038,7 +3048,7 @@ a las gráficas les asociamos complejos simpliciales.
 
 \begin{definition}
   Decimos que $G$ es una gráfica \textbf{completa} si para
-  todos~$u,v\in G$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
+  todos~$u,v\in V(G)$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
   $n$ vértices se denota como $K_{n}$.
 \end{definition}
 
@@ -3535,7 +3545,8 @@ De lo anterior se sigue:
 C_{0}(M_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}
 \end{equation}
 De la tabla \ref{tab:S_4}
-podemos observar que $\chi_{C_{1}(M_{4})}=\chi_{S^{(3,1)}}$, así que  
+podemos observar que $\chi_{C_{1}(M_{4})}=\chi_{S^{(3,1)}}$, así que
+por el Corolario \ref{multiplicidad} inciso 5 tenemos: 
 \begin{equation}
 \label{eq:C_1(M_4)}
 C_{1}(M_{4})\cong S^{(3,1)}
@@ -3876,11 +3887,11 @@ De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 Por otro lado
 \begin{equation}
 \im\widehat\partial_{2}=\widehat\partial_{2}(0)=0
-\label{im-2-4}
+\label{im-2-5}
 \end{equation}
 pues $\widehat\partial_{2}$ es un morfismo de módulos.
 
-De las ecuaciones \ref{ker1-5} y \ref{im-2-4} concluimos:
+De las ecuaciones \ref{ker1-5} y \ref{im-2-5} concluimos:
 \begin{equation*}
   \widetilde H_{1}(M_{5})=\ker \widehat\partial_{1}/\im \widehat\partial_{2}=S^{(3,1,1)}/0=S^{(3,1,1)}.
 \end{equation*}
@@ -3965,8 +3976,8 @@ $$\im\widehat\partial_{1}=\widehat\partial_{1}(S^{(4,1)}\oplus S^{(3,1,1)}\oplus
 \section{Homologías reducidas de $K(M_{5})$}
 \label{hom-red-KM5}
 
-La gráfica de clanes de $G_{5}$ se muestra en la figura~\ref{fig:KG_5}.
-Consideremos ahora su complejo de completas $\Delta(K(G_{5}))$
+La gráfica de clanes de $G_{5}$, es decir $K(G_{5})$, se muestra en la figura~\ref{fig:KG_5}.
+Consideremos ahora su complejo de subgráficas completas $\Delta(K(G_{5}))$
 al que denotaremos simplemente como~$K(M_{5})$. Este complejo tiene como
 vértices (aristas de la gráfica de~$M_{5}$):
 \begin{center}
@@ -4226,7 +4237,7 @@ Por otro lado
 pues $\widehat\partial_{3}$ es un morfismo de módulos. Ya que
 $M_{5}\simeq K(M_{5})$ (resultado de \cite{larrion2009clique}), por el teorema
 \ref{esp-homotopicos-homologias-iso} tenemos que $\widetilde
-H_{2}(M_{5})=\widetilde H_{2}(K(M_{5}))$ y  $\widetilde H_{2}(M_{5})=0$, así que:
+H_{2}(M_{5})\cong\widetilde H_{2}(K(M_{5}))$ y  $\widetilde H_{2}(M_{5})=0$, así que:
 
 \begin{equation*}
 \widetilde H_{2}(K(M_{5}))=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0.
