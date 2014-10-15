@@ -194,11 +194,11 @@ usamos en este trabajo es la homología singular,...
 
 
 
-La idea de la presente tesis surge a partir del teorema de Bouc
-\cite{MR756517}. 
+La idea de la presente tesis surge a partir del Teorema de Bouc
+\cite{MR756517}: 
 \begin{equation*}
   \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
-      \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda}.
+      \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda},
 \end{equation*}
 para todo $n,k\geq1$. Tal teorema describe la descomposición en
 submódulos irreducibles del $S_{n}$-módulo $\widetilde
@@ -238,8 +238,8 @@ homologías de $M_{n}$ con coeficientes en el campo de los
 números complejos definen representaciones de $S_{n}$.
 
 En la tesis reproducimos el resultado de Bouc para $n\leq 6$ por medio de
-argumentos elementales de representaciones de grupos y topología. Así mismo
-calculamos la descomposición en módulos irreducibles de las homologías
+argumentos elementales de representaciones de grupos y
+topología. Además se calcula la descomposición en módulos irreducibles de las homologías
 reducidas de los complejos simpliciales obtenidos a partir de la
 gráfica de clanes $K(G_{n})$ en donde también actúa el grupo simétrico
 $S_{n}$, con $n\leq 6$.
@@ -249,23 +249,23 @@ $K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
 de $G$ y dos vértices son adyacentes si los correspondientes clanes se
 intersecan.
 
-En el primer capítulo se enuncian algunas definiciones y teoremas
+En el primer capítulo, se enuncian algunas definiciones y teoremas
 de espacios vectoriales y transformaciones lineales que usaremos en el
 desarrollo de éste trabajo. Entre las definiciones que utilizamos
-frecuentemente son la de suma directa de espacios vectoriales y
+frecuentemente son la suma directa de espacios vectoriales y
 espacio cociente. 
 
-En el segundo capítulo se presenta la teoría de representaciones de
+En el segundo capítulo, se presenta la teoría de representaciones de
 grupos. Estudiar representaciones de un grupo $G$ en un espacio
 vectorial $V$ resulta equivalente a estudiar $G$-módulos $V$. Se
 discute el teorema de Maschke que enuncia que cualquier $G$-módulo $V$
 se puede descomponer como suma directa de $G$-submódulos
-irreducibles. Por otra parte los caracteres de una
+irreducibles. Por otra parte, los caracteres de una
 representación y el producto interno de caracteres nos proporcionan información
 acerca las representaciones. El capítulo termina con la sección de
 caracteres y módulos inducidos.
 
-En el tercer capítulo estudiamos la relación entre tableros de Young
+En el tercer capítulo, estudiamos la relación entre tableros de Young
 y representaciones del grupo simétrico. Describimos la construcción de
 módulos de Specht los cuales dan una lista completa de las representaciones irreducibles de
 $S_{n}$.
@@ -273,25 +273,25 @@ $S_{n}$.
 Las homologías de complejos simpliciales son el tema del capítulo 4.
 En la sección \ref{com-sim-abs} se desarrollan conceptos como:
 complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$, el
-operador frontera $\partial_{p}$. En la sección \ref{hom-simp} se
+operador frontera $\partial_{p}$. En la sección \ref{hom-simp}, se
 define homología  y homología reducida de un complejo simplicial. Se
 presentan los complejos de cadenas abstractos en la sección \ref{com-cad} y por
-último en la sección \ref{hom-ind} se definen espacios topológicos
+último, en la sección \ref{hom-ind}, se definen espacios topológicos
 homotópicos y se menciona que las homologías de espacios homotópicos son
 isomorfas.
 
-En el capítulo 5 se define gráfica de clanes y gráfica
-bipartita clánica. Asimismo a las gráficas finitas se les asocia complejos
+En el capítulo 5, se define gráfica de clanes y gráfica
+bipartita clánica. Asimismo, a las gráficas finitas se les asocia complejos
 simpliciales.
 
-Finalmente en el capítulo 6 se utilizará la teoría presentada en los
+Finalmente, en el capítulo 6 se utilizará la teoría presentada en los
 capítulos anteriores. Se define el complejo de emparejamientos y se
-enuncia el teorema de Bouc.  Además calculamos las homologías
+enuncia el teorema de Bouc.  Además, calculamos las homologías
 reducidas de complejos de emparejamientos $M_{n}$ y de los complejos
 simpliciales obtenidos de las gráficas de clanes $K(G_{n})$, para
 $n\leq 6$.
 
-En \cite{robles08:_repres} se describe la descomposición de
+En \cite{robles08:_repres}, se describe la descomposición de
 $\widetilde H_{k}(M_{n})$ en submódulos irreducibles, para $n\leq
 5$. Ésta tesis amplía los resultados de \cite{robles08:_repres}, pues
 de forma análoga se calcula la descomposición en módulos
@@ -317,7 +317,7 @@ números complejos.
 \section{Espacios vectoriales}
 \label{esp-vec}
 
-\begin{theorem}
+\begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.9, p.42]}.
   \label{clunica}
   Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
   subconjunto de $V$. Luego $\beta$ es una base de $V$ si y solo si
@@ -328,7 +328,7 @@ números complejos.
   para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.12, p.50]}.
   \label{esp-iguales}
   Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
   $n$. Entonces, $W$ es dimensionalmente finito y $\dim(W)\leq
@@ -356,7 +356,7 @@ entonces $W_{1}+W_{2}$ es subespacio de $V$.
   $W_{1}+W_{2}=V.$ 
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}{[\cite{friedberg1982algebra}, corolario 1.13, p.53]}.
   Sean $W_{1}$ y $W_{2}$ subespacios de $V$ tales que
   $V=W_{1}+W_{2}$. Luego, $V=W_{1}\oplus W_{2}$ si y solo si 
   $$\dim(V)=\dim(W_{1})+\dim(W_{2}).$$
@@ -449,14 +449,14 @@ donde
 Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}{[\cite{friedberg1982algebra}, corolario 2.3, p.69]}.
   \label{imT}
   Sean $V$ y $W$ espacios vectoriales y sea $T:V \rightarrow W$
   lineal. Si $V$ tiene una base $\beta=\{v_{1},\ldots,v_{n}\}$,
   entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}{[\cite{friedberg1982algebra}, teorema 2.22, p.98]}.
   \label{esp-isomorfos}
   Sean $V$ y $W$ espacios vectoriales. Entonces $V$ es isomorfo a $W$
   si y solo si $\dim (V)=\dim(W).$
@@ -499,10 +499,10 @@ como suma directa de $G$-submódulos irreducibles en la sección~\ref{reducibili
 
 Consideramos el lema de Schur, pues su demostración es similar a
 cierta proposición posterior que encontramos al final de la sección
-\ref{schur}. Por otra parte los caracteres de una representación nos
+\ref{schur}. Por otra parte, los caracteres de una representación nos
 proporcionan información acerca de ésta, lo cual se describe con detalle en la
-sección \ref{caracteres}. Además por medio del producto interno de
-caracteres podemos determinar algunos resultados como: si una
+sección \ref{caracteres}. Además, por medio del producto interno de
+caracteres podemos determinar si una
 representación es irreducible, cuándo dos representaciones son
 equivalentes, la multiplicidad de cierto submódulo irreducible en la
 descomposición de un $G$-módulo, entre otros resultados que vemos en la
@@ -531,7 +531,7 @@ obtener el carácter de una representación inducida.
     \begin{enumerate}
     \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
     \item Existe un elemento neutro $1 \in G$ que
-      satisface $$a1=1a=a$$ para todo $a \in G$.
+      satisface: $$a1=1a=a$$ para todo $a \in G$.
     \item Para cada elemento $a \in G$ existe otro elemento $a^{-1} \in G$
       tal que $$aa^{-1}=a^{-1}a=1$$ Al elemento $a^{-1}$ se le llama inverso del elemento $a$.
     \end{enumerate}
@@ -543,7 +543,7 @@ obtener el carácter de una representación inducida.
   satisface $$\rho(ab)=\rho(a)\rho(b)$$ para todo $a,b \in G$
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}{[\cite{fraleigh}, teorema 13.2, p.128]}.
   Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
   \begin{enumerate}
     \item $\rho(1)=1^{'}$, donde $1\in G$ y  $1^{'}\in G^{'}$ son los
@@ -551,7 +551,7 @@ obtener el carácter de una representación inducida.
     \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
   \end{enumerate}
 \end{theorem}
-La demostración aparece en el teorema 13.12 de \cite{fraleigh}.
+%La demostración aparece en el teorema 13.12 de \cite{fraleigh}.
 % \begin{definition}
 %   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
 %   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
@@ -567,7 +567,7 @@ Denotemos $GL(n,\mathbb{C})$ al grupo de matrices
 invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
 Y a $GL(V)$ a los operadores lineales invertibles en un
 $\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
-Además existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
+Además, existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 
 \section{Acciones de grupos}
 \label{acc-grup}
@@ -616,15 +616,15 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   Enseguida demostraremos que $\rho g$ es una transformación lineal
   invertible. Sean $v,w\in V$, $\lambda \in \mathbb{C}$, entonces:
   \begin{flalign*}
-    &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w\\
-    &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v)
+    &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w,\\
+    &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v).
   \end{flalign*}
 
   Así que $\rho g$ es lineal, ahora veamos que es invertible. Como $G$
   es un grupo, existe $g^{-1}\in G$.
   \begin{footnotesize}
     \begin{eqnarray*}
-      ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v\\
+      ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v,\\
       ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v,
     \end{eqnarray*}
   \end{footnotesize}
@@ -635,10 +635,10 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   $v\in V$:
 
   $$(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho g \circ \rho h)v$$
-  por lo que $\rho(gh)=\rho g \circ \rho h$
+  por lo que $\rho(gh)=\rho g \circ \rho h$.
 
   Suponga ahora que se tiene un homomorfismo de grupos
-  $\rho:G\rightarrow GL(V)$, por demostrar que $gv:=(\rho g)v$ define
+  $\rho:G\rightarrow GL(V)$. Demostraremos que $gv:=(\rho g)v$ define
   un acción lineal de $G$ en $V$.
 
   \begin{enumerate}
@@ -663,7 +663,7 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
      $$\rho:G\rightarrow GL(V).$$
 \end{definition}
 
-Así que el teorema \ref{rep-mod} nos dice que estudiar las representaciones de $G$
+Así, el teorema \ref{rep-mod} nos dice que estudiar las representaciones de $G$
 en $V$, es equivalente a estudiar $G$-módulos $V$.  A
 dicho espacio $V$ se le llamará \emph{espacio de representación} y a
 su dimensión el \emph{grado} de la representación. 
@@ -857,12 +857,12 @@ su dimensión el \emph{grado} de la representación.
   \label{CS}
   Sea $G$ un grupo. Es posible tomar un conjunto en el cual actúe $G$
   y resulte un $G$-módulo, como lo hacemos a continuación. Sea
-  $Y=\{y_{1},y_{2},\ldots,y_{n}\}$ y $\mathbb{C}\boldsymbol{Y}=\mathbb{C}\{y_{1},y_{2},\ldots,y_{n}\}$ denote el
+  $Y=\{y_{1},y_{2},\ldots,y_{n}\}$ y $\mathbb{C}\boldsymbol{Y}=\mathbb{C}\{y_{1},y_{2},\ldots,y_{n}\}$ el
   espacio vectorial generado por $Y$ sobre $\mathbb{C}$. Es decir,
   $\mathbb{C}\boldsymbol{Y}$ consiste de todas las combinaciones lineales
   \begin{equation*}
     V=\mathbb{C}\boldsymbol{Y}=\{\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
-    +\lambda_{n}y_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}
+    +\lambda_{n}y_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}.
   \end{equation*}
   La adición y multiplicación por escalar
   en $\mathbb{C}\boldsymbol{Y}$ está definida por
@@ -880,21 +880,21 @@ su dimensión el \emph{grado} de la representación.
   $v=\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots+\lambda_{n}y_{n}$ y
   $g\in G$ entonces la acción de $G$ en $V$ está dada por
   \begin{equation*}
-    gv=g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n})
+    gv=g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n}).
   \end{equation*}
-  Así que $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
+  Así, $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
   de dimensión $|Y|$. A~$\mathbb{C}\boldsymbol{Y}$ le llamamos
   \emph{módulo de permutaciones}. Los elementos de
   $Y$ forman una base para $\mathbb{C}\boldsymbol{Y}$ llamada
   \emph{base estándar}.
 
-  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $S=\{1,2,\ldots,n\}$. Ahora
+  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $S=\{1,2,\ldots,n\}$. Ahora,
   \begin{equation*}
     \mathbb{C}\boldsymbol{S}=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid \lambda_{i}\in\mathbb{C}\}
   \end{equation*}
   con la acción
   \begin{equation*}
-    \pi(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)=\lambda_{1}\pi(1)+\lambda_{2}\pi(2)+\cdots+\lambda_{n}\pi(n)
+    \pi(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)=\lambda_{1}\pi(1)+\lambda_{2}\pi(2)+\cdots+\lambda_{n}\pi(n).
   \end{equation*}
 
   Un submódulo importante de dimensión $n-1$ de
@@ -910,7 +910,7 @@ su dimensión el \emph{grado} de la representación.
   \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ submódulo de
   $\mathbb{C}\boldsymbol{S}$. Se obtiene que es isomorfo a la representación trivial, y que:
   \begin{equation*}
-    \mathbb{C}\boldsymbol{S}=E\oplus \mathbb{C}
+    \mathbb{C}\boldsymbol{S}=E\oplus \mathbb{C}.
   \end{equation*}
   
   Consideremos un caso específico, el de $S_{3}$ actuando en
@@ -970,14 +970,14 @@ su dimensión el \emph{grado} de la representación.
  Sean $v\in V$ con $v=\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
  +\lambda_{n}g_{n}$ y $g\in G$, entonces la acción de $G$ en $V$ está dada por
   \begin{equation*}
-    gv=g(\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots +\lambda_{n}g_{n})=\lambda_{1}(gg_{1})+\lambda_{2}(gg_{2})+\cdots +\lambda_{n}(gg_{n})
+    gv=g(\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots +\lambda_{n}g_{n})=\lambda_{1}(gg_{1})+\lambda_{2}(gg_{2})+\cdots +\lambda_{n}(gg_{n}).
   \end{equation*}  
 \end{example}
 
 \section{Reducibilidad}
 \label{reducibilidad}
 
-En ésta sección $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
+En esta sección, $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
 
 \begin{definition}
   Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o \textbf{submódulo} de $V$ es un subespacio
@@ -996,18 +996,19 @@ En ésta sección $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
 % $G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
 % que $W_{1}$ es \textbf{complemento directo} de $W_{2}$. 
 
-\begin{theorem}[Teorema de Maschke]
+\begin{theorem}[Teorema de Maschke][\cite{sagan2001symmetric}, teorema
+  1.5.3, p.16], [\cite{fulton1991representation}, proposición 1.8, p.7].
   \label{maschke}
   Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
   \textbf{completamente reducible}, es decir
   \begin{equation*}
     V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
   \end{equation*}
-donde para cada $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
+donde $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
 irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
 decir la cantidad de $W^{(i)}$.
 \end{theorem}
-La demostración de el teorema de Maschke se encuentra en el teorema~1.5.3 de \cite{sagan2001symmetric}.
+%La demostración de el teorema de Maschke se encuentra en el teorema~1.5.3 de \cite{sagan2001symmetric}.
 \begin{theorem}
   \label{interseccion-submodulos}
   Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
@@ -1022,25 +1023,25 @@ La demostración de el teorema de Maschke se encuentra en el teorema~1.5.3 de \c
 Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma
   directa externa} de
 $U$ y $V$ al conjunto $U\times V=\{(u,v):u\in U,v\in V\}$ con las operaciones
-$$(u,v)+(u_{1},v_{1})=(u+u_{1},v+v_{1})$$
+$$(u,v)+(u_{1},v_{1})=(u+u_{1},v+v_{1}),$$
 $$k(u,v)=(ku,kv),$$
 donde $u,u_{1}\in U$, $v,v_{1}\in V$ y $k\in \mathbb{C}$. Con estas
 operaciones $U\times V$ es un espacio vectorial, que designaremos por
 $$U\oplus V.$$
 
-Así que dados $V$ y $W$ $G$-módulos, podemos formar un tercer módulo a partir
+Así, dados $V$ y $W$ $G$-módulos, podemos formar un tercer módulo a partir
 de la suma directa externa $V\oplus W$, definiendo la acción como
 $a(v,w)=~(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
 cantidad finita de $G$-módulos.
 
 Por otro lado, si $V$ es un $G$-módulo, se llama la \textbf{suma} de $W_{1}$ y $W_{2}$ y se denota con
 $W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$. Ésta definición se puede extender a una
-colección arbitraria $\{W_{i}\}_{i\in I}$ es
+colección arbitraria $\{W_{i}\}_{i\in I}$, es
 decir,~$\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
 
 \textbf{\emph{Observación:}} Si $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
-$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por lo tanto escribiremos $V=W_{1}\oplus W_{2}$
+$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por lo tanto, escribiremos $V=W_{1}\oplus W_{2}$
 aunque estrictamente hablando es $V\cong W_{1}\oplus W_{2}$. En adelante no distinguiremos
 entre suma directa y suma directa externa.
 
@@ -1084,12 +1085,12 @@ entre suma directa y suma directa externa.
   $S+S^{'}\cong S\oplus S^{'}$ como notamos en la observación anterior,
   así que $M$ tendría un submódulo isomorfo a dos copias de $S$, lo cual
   no es posible por hipótesis. 
-  
- Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap
- S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$ así que
- $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
- dado que $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales} tenemos
- que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería demostrar.
+
+  Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$, así
+  $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
+  dado que $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales}, tenemos
+  que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería
+  demostrar.
 \end{proof}
 
 \section{$G$-homomorfismo y lema de Schur} 
@@ -1113,17 +1114,14 @@ de $G$.
   $G$\textbf{-equivalentes}, y lo denotaremos como~$V\cong W$.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}{[\cite{sagan2001symmetric}, proposición 1.7.9, p.21]}.
   \label{ker-im-sub}
   Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces
   \begin{enumerate}
   \item $\ker\phi$ es un $G$-submódulo de $V$, y
   \item $\im\phi$ es un $G$-submódulo de $W$.
   \end{enumerate}
-\end{proposition}
-En la proposición 1.7.9 de \cite{sagan2001symmetric} se encuentra la
-demostración de la proposición \ref{ker-im-sub}.
-  
+\end{proposition}  
 Si $W$ es submódulo de $V$, entonces en el espacio cociente
 $V/W$ puede darse una acción de $G$ como $g(v+W)=gv+W$, la cual está
 bien definida (pues $W$ es invariante bajo la acción de $G$), y
@@ -1132,7 +1130,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 
 \begin{theorem}[Teorema de isomorfismo de módulos]
   \label{teorema-isomorfismo-mod}
-  Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces el
+  Sea $\phi:V\rightarrow W$ un $G$-homomorfismo. Entonces el
   módulo cociente $V/\ker\phi$ es isomorfo a $\im\phi$ por medio de
   $v+\ker\phi\mapsto\phi(v)$.
 \end{theorem}
@@ -1146,7 +1144,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 \begin{proof}[Demostración.]
   Como $\ker \phi\leq V$, y $V$ es irreducible, entonces $\ker \phi=0$
   o~$\ker\phi=V$, pero  $\ker\phi\neq V$ pues $\phi$ es no trivial,
-  así que $\ker \phi=0$ y por lo tanto $\phi$ es inyectiva. 
+  así que $\ker \phi=0$ y por lo tanto, $\phi$ es inyectiva. 
 
   Análogamente, $\im\phi\leq W$ e $\im \phi\neq 0$, así que $\im
   \phi=W$ y entonces $\phi$ es sobreyectiva.
@@ -1162,18 +1160,17 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 \begin{proof}[Demostración.]
   Tomemos el siguiente $G$-homomorfismo
   $S\stackrel{i}{\hookrightarrow} V\stackrel{f}{\rightarrow}W$
-  donde~$i$ es la función inclusión. Así que $S/\ker(f\circ
-  i)\cong\im(f\circ i)$ por el teorema \ref{teorema-isomorfismo-mod}. Como $\ker(f\circ
+  donde~$i$ es la función inclusión. Así, por el teorema \ref{teorema-isomorfismo-mod}, $S/\ker(f\circ
+  i)\cong\im(f\circ i)$. Como $\ker(f\circ
   i)\leq S$ entonces $\ker(f\circ i)=0$ o $\ker(f\circ i)=S$, pues $S$
   es irreducible.
 
   Si $\ker(f\circ i)=0$, se sigue que
-  $$S\cong S/0\cong\im(f\circ i)=f(S)$$
+  $$S\cong S/0\cong\im(f\circ i)=f(S).$$
 
   Por otro lado, si $\ker(f\circ i)=S$, tenemos
-  $$0=S/S\cong\im(f\circ i)=f(S)$$
+  $$0=S/S\cong\im(f\circ i)=f(S).$$
 \end{proof}
-
 % \begin{theorem}
 %   Sea $V$ un $G$ módulo tal que
 %   \begin{equation*}
@@ -1183,7 +1180,6 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 %   donde para cada $V^{(i)}$ y $V^{(j)}$ con $i\neq j$ son submódulos irreducibles no isomorfos y $\dim
 %   V^{(i)}=d_{i}$. Entonces $\dim V=m_{1}d_{1}+m_{2}d_{2}+\cdots+m_{k}d_{k}.$
 % \end{theorem}
-
 \section{Caracteres de representaciones}
 \label{caracteres}
 
@@ -1193,7 +1189,7 @@ correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
 ésto se ocupa la teoría de caracteres.
 
 \begin{definition}
-  Sea una representación matricial $X(g)$, $g\in G$. Entonces el \textbf{carácter} de $X$ es
+  Sea $X(g)$ una representación matricial con $g\in G$. Entonces el \textbf{carácter} de $X$ es
   \begin{equation*}
     \chi(g)=\tr X(g),
   \end{equation*}
@@ -1204,12 +1200,12 @@ correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
 \end{equation*}
 Si $V$ es un $G$-módulo, su carácter es el carácter de alguna
 representación matricial $X$ correspondiente a $V$ (por propiedades de
-la traza, el carácter no depende de la base de $V$ escogida). En ocasiones para resaltar
+la traza, el carácter no depende de la base de $V$ escogida). En ocasiones, para resaltar
 que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 \end{definition}
 
 Parte de la terminología utilizada para representaciones se
-usará para los correspondientes caracteres. Por ejemplo si $X$ tiene
+usará para los correspondientes caracteres. Por ejemplo, si $X$ tiene
 carácter $\chi$, diremos que~$\chi$ es irreducible siempre que $X$ lo
 sea.
 
@@ -1225,7 +1221,7 @@ dado $g$ es llamado \textbf{clase de conjugación} de $g$ y es
 denotado por $K_{g}$.
 \end{definition}
 
-\begin{proposition}
+\begin{proposition}{[\cite{sagan2001symmetric}, proposición 1.8.5, p.32]}.
   Sea $G$ un grupo finito y sea $\chi$ el carácter de una
   representación $\rho:G\rightarrow GL(V)$ de grado $n$. Entonces,
   \begin{enumerate}
@@ -1233,8 +1229,7 @@ denotado por $K_{g}$.
   \item Si $K$ es una clase de conjugación de $G$, entonces $\chi(g)=\chi(h)$ para $g,h\in K$. 
   \end{enumerate}
 \end{proposition}
-Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}.
-
+%Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}.
 \begin{definition}
   Una \textbf{función de clase} es una función
   $\theta:G\rightarrow\mathbb{C}$ que es constante en clases de
@@ -1242,7 +1237,7 @@ Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
 \end{definition} 
-\begin{theorem}
+\begin{theorem}{[\cite{sagan2001symmetric}, proposición 1.10.1, p.40]}, {[\cite{sagan2001symmetric}, proposición 1.10.2, p.42]}.
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
   \begin{enumerate}
@@ -1253,16 +1248,14 @@ Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}
       isomorfismos, es igual al número de clases de conjugación de $G$.
   \end{enumerate}
 \end{theorem}
-Se puede consultar la demostración en 1.10.2 de
-\cite{sagan2001symmetric}.
-
+%Se puede consultar la demostración en 1.10.2 de \cite{sagan2001symmetric}.
 En general no se logra una correspondencia biyectiva natural entre las
 representaciones de $G$ y las clases de conjugación. Sin embargo, en
 el siguiente capítulo observamos que en el caso de el grupo simétrico sí se cuenta con
 esta correspondencia.
 
-Si $K$ es una clase de conjugación y $\chi$ es una carácter, podemos
-definir~$\chi_{K}$ es el valor del carácter en la clase dada.
+Si $K$ es una clase de conjugación y $\chi$ es una carácter, se define
+$\chi_{K}$ el valor del carácter en la clase dada.
 \begin{equation*}
   \chi_{K}=\chi(g)
 \end{equation*}
@@ -1308,7 +1301,7 @@ primera columna corresponde a la clase identidad $K=(1)$.
 
   Por último sea $V=E$, la representación estándar. Es decir,
   \begin{equation*}
-    E\cong\{(x_{1},x_{2},x_{3})\in \mathbb{C}^{3}\mid x_{1}+x_{2}+x_{3}=0\}
+    E\cong\{(x_{1},x_{2},x_{3})\in \mathbb{C}^{3}\mid x_{1}+x_{2}+x_{3}=0\}.
   \end{equation*}
   En este caso, $\dim V=2$, y una base de $E$ es
   $\beta=\{(1,-1,0),(1,0,-1)\}$. Si $g=(1)$, entonces la matriz
@@ -1335,8 +1328,8 @@ Finalmente, si $g=(123)$, tenemos:
   (123)(1,-1,0)&=&(0,1,-1)=-1(1,-1,0)+1(1,0,-1),\\
   (123)(1,0,-1)&=&(-1,1,0)=-1(1,-1,0)+0(1,0,-1)
 \end{eqnarray*} 
- por lo que 
-  \begin{center}
+por lo que 
+\begin{center}
   $[g_{V}]_{\beta}=
   \begin{pmatrix}
     -1 & -1 \\
@@ -1345,14 +1338,14 @@ Finalmente, si $g=(123)$, tenemos:
 \end{center}
 así que $\chi_{V}((123))=-1$.
 
-Con los cálculos realizados podemos obtener la tabla de caracteres de
-$S_{3}$. El primer renglón indica el número de elementos en cada clase de
-conjugación, y en el segundo renglón se coloca un elemento representativo de cada
-clase de conjugación.
-\begin{center}
-  \begin{figure}[h]
-    \centering
-    \begin{tabular}{ c| c c c}
+Con los cálculos realizados obtenemos la tabla de caracteres de
+$S_{3}$ (ver tabla \ref{tabla-car-S3}). El primer renglón indica el
+número de elementos en cada clase de conjugación, y en el segundo
+renglón se coloca un elemento representativo de cada clase de
+conjugación.
+\begin{table}[htpb]
+  \centering
+  \begin{tabular}{ c| c c c}
       & 1 & 3 & 2 \\
       $S_{3}$ & (1) & (12) & (123) \\
       \hline
@@ -1363,10 +1356,10 @@ clase de conjugación.
     
   \caption{Tabla de caracteres de $S_{3}$}
   \label{tabla-car-S3}
-\end{figure}
-\end{center}
-Las tablas de caracteres que utilizaremos en el capítulo \ref{cha:hom-com-emp}
-se encuentran en~\cite{liebeck}.
+\end{table}
+
+Las tablas de caracteres que utilizaremos en el capítulo
+\ref{cha:hom-com-emp} se encuentran en~\cite{liebeck}.
 \end{example}
 
 \section{Producto interno de caracteres}
@@ -1386,7 +1379,7 @@ equivalentes. Además de otros resultados que veremos a continuación.
   \end{equation*}
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}{[\cite{sagan2001symmetric}, teorema 1.9.3, p.35]}.
   \label{prod-car-irr}
   Sean $V$ y $W$ representaciones irreducibles de un grupo $G$ con
   caracteres $\chi$, $\psi$ respectivamente. Entonces
@@ -1398,9 +1391,7 @@ equivalentes. Además de otros resultados que veremos a continuación.
   \end{cases}
   \]
 \end{theorem}
-El teorema 1.9.3 de \cite{sagan2001symmetric} muestra la prueba del el
-teorema anterior.
-\begin{corollary}
+\begin{corollary}{[\cite{sagan2001symmetric}, corolario 1.9.4, p.37]}.
   \label{multiplicidad}
   Sea $V$ un $G$-módulo con carácter $\chi_{V}$ y supongamos que 
   \begin{equation*}
@@ -1420,8 +1411,6 @@ de $V^{(i)}$. Entonces
   para cada $g\in G$.
 \end{enumerate}
 \end{corollary}
-La demostración aparece en el teorema 1.9.4 de
-\cite{sagan2001symmetric}.
 \begin{corollary}
   \label{prod-car-pos}
   Sean $V$ y $W$ $G$-módulos, entonces $\langle\chi_{V},\chi_{W}\rangle$ es un número entero no negativo.
@@ -1431,7 +1420,7 @@ La demostración aparece en el teorema 1.9.4 de
   irreducibles. Escribimos a $V$ como $V\cong
   m_{1}V^{(1)}\oplus m_{2}V^{(2)}\oplus\cdots\oplus m_{k}V^{(k)}$ y a $W$ como $W\cong
   r_{1}V^{(1)}\oplus r_{2}V^{(2)}\oplus\cdots\oplus r_{k}V^{(k)}$ por el
-  teorema de Maschke, donde $m_{i}$ y $r_{i}$ es la multiplicidad de el módulo
+  teorema de Maschke (ver teorema \ref{maschke}), donde $m_{i}$ y $r_{i}$ es la multiplicidad de el módulo
   irreducible $V^{(i)}$, se sigue que
   \begin{align*}
     %\langle\chi_{V},\chi_{W}\rangle=\sum m_{i}r_{j}\langle\chi_{V_{i}},\chi_{V_{j}}\rangle\\
@@ -1491,7 +1480,7 @@ utilizado la acción ya definida de $G$ en $V$.
 
 Si el carácter de el $G$-módulo $V$ es $\chi_{V}$, entonces
 denotaremos al carácter de $V\downarrow^{G}_{H}$ como
-$\chi_{V}\downarrow^{G}_{H}$. Además notemos que
+$\chi_{V}\downarrow^{G}_{H}$. Además, notemos que
 $\chi_{V}\downarrow^{G}_{H}=\chi_{V\downarrow^{G}_{H}}$.
 
 % \begin{definition}
@@ -1513,9 +1502,9 @@ negativo para todo carácter irreducible~$\chi$ de $G$.
 \end{proposition}
 \begin{proof}[Demostración]
 Si $\theta$ es un carácter, entonces $\theta(1)>0$, por lo tanto
-$\theta\neq 0$. Además $\langle\theta,\chi\rangle$ es un entero no
-negativo si $\chi$ es irreducible por el inciso $2$ de el corolario
-\ref{multiplicidad}.
+$\theta\neq 0$. Además, por el inciso $2$ de el corolario
+\ref{multiplicidad}, $\langle\theta,\chi\rangle$ es un entero no
+negativo si $\chi$ es irreducible.
 
 Supongamos ahora $\langle\theta,\chi_{j}\rangle=a_{j}$ para
 $j=1,\ldots,k$, donde $\chi_{1},\chi_{2},\ldots,\chi_{k}$ forman una
@@ -1537,9 +1526,8 @@ a_{2}V^{(2)}\oplus\cdots\oplus a_{k}V^{(k)}\neq 0$.
 \end{definition}
 Observemos que si $H\leq G$, y $x,g\in G$ son tales que $x^{-1}gx\in
 H$, entonces para todo $h\in H$ se tiene que
-$(xh)^{-1}g(xh)=h^{-1}(x^{-1}gx)h\in H$. Si $\theta$ es una función de
-clase, además tenemos que
-$\theta(h^{-1}(x^{-1}gx)h)=\theta(x^{-1}gx)$. Sea $T$ una \emph{transversal izquierda} de $H$ en $G$, es decir, una
+$(xh)^{-1}g(xh)=h^{-1}(x^{-1}gx)h\in H$. Además, si $\theta$ es una función de
+clase, $\theta(h^{-1}(x^{-1}gx)h)=\theta(x^{-1}gx)$. Sea $T$ una \textbf{transversal izquierda} de $H$ en $G$, es decir, una
 colección de representantes de las clases laterales izquierdas de $H$,
 de modo que si $T=\{t_{1},\ldots,t_{s}\}$ entonces
 $G=t_{1}H\cup\cdots\cup t_{s}H$. Por lo tanto, si
@@ -1584,7 +1572,7 @@ producto por escalar por una función de clase es una función de clase
 y la función constante cero $0:G\rightarrow \mathbb{C}$ está en el conjunto de todas las funciones de clase en $G$
 que anteriormente denotamos como $R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
 del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
-tanto podemos considerar el producto de funciones de clase, es decir,
+tanto, podemos considerar el producto de funciones de clase, es decir,
 si $\psi$, $\theta$ son funciones de clase, podemos definir
 $\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
   G}\psi(g)\overline{\theta(g)}$, el cual se puede demostrar que es un producto
@@ -1606,7 +1594,7 @@ interno en el espacio de funciones de clase.
     &=\frac{1}{|G|}\sum_{g\in G}\Bigg(\frac{1}{|H|}\sum_{\substack{x\in
         G\\x^{-1}gx\in H}}\theta(x^{-1}gx)\Bigg)\overline{\phi(g)}\\
     &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g,x\in G,x^{-1}gx\in
-      H\}}\theta(x^{-1}gx)\overline{\phi(g)}\\
+      H\}}\theta(x^{-1}gx)\overline{\phi(g)},\\
     \intertext{hacemos el cambio $u=x^{-1}gx$, entonces $g=xux^{-1}$,}
     &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in
       G,u\in H\}}\theta(u)\overline{\phi(xux^{-1})}\\
@@ -1670,8 +1658,8 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   % t_{j}W)=\chi_{V}(t^{-1}_{j}gt_{j})$, y por la ecuación \ref{fun-ind-trans}, queda
   % demostrado.
   Si $\beta=\{w_{1},w_{2},\ldots,w_{r}\}$ es base de $W$, entonces $\gamma=\bigcup^{s}_{j=1}t_{j}\beta$ es
-  base de $V$, por lo que dado $g\in G$ calcularemos $\chi_{V}(g)$
-  usando esa base. Tenemos entonces que:
+  base de $V$. Dado $g\in G$, calcularemos $\chi_{V}(g)$
+  usando esa base. Así,
   \begin{equation}
     \label{car-base-tjb}    
     \chi_{V}(g)=\tr([g]_{\gamma})=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr([g]_{t_{j}\beta})
@@ -1682,11 +1670,11 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   \begin{equation*}
     gt_{j}w_{k}=\lambda_{1}t_{j}w_{1}+\cdots+\lambda_{r}t_{j}w_{r}
   \end{equation*}
-  de modo que
+  de modo que,
   \begin{equation*}
     t^{-1}_{j}gt_{j}w_{k}=\lambda_{1}w_{1}+\cdots+\lambda_{r}w_{r}\\
   \end{equation*}
-  por tanto
+  por tanto,
    \begin{center}
     $[g(t_{j}w_{k})]_{t_{j}\beta}=\begin{pmatrix}
       \lambda_{1}  \\
@@ -1698,9 +1686,9 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   \begin{equation*}
     [g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}.
   \end{equation*}
-  Por lo anterior tenemos que
+  Por lo anterior, tenemos que
   \begin{equation*}
-    \tr([g]_{t_{j}\beta})=\tr([t^{-1}_{j}gt_{j}]_{\beta})=\chi_{W}(t^{-1}_{j}gt_{j})\\
+    \tr([g]_{t_{j}\beta})=\tr([t^{-1}_{j}gt_{j}]_{\beta})=\chi_{W}(t^{-1}_{j}gt_{j}).\\
   \end{equation*}
   Continuando la ecuación \ref{car-base-tjb}, 
   \begin{align*}
@@ -1733,7 +1721,7 @@ continuación:
 
 Hay una elegante descripción de representaciones irreducibles de
 $S_{n}$ mediante los tableros de Young. Recordemos que hay tres representaciones irreducibles de
-$S_{3}$. Resulta que pueden ser descritas usando el conjunto de diagramas de
+$S_{3}$, resulta que pueden ser descritas usando el conjunto de diagramas de
 Young con tres cajas. La correspondencia es ilustrada abajo.
 
 \begin{center}
@@ -1758,11 +1746,11 @@ Young con tres cajas. La correspondencia es ilustrada abajo.
   \end{minipage}
 \end{center}
 
-En general las representaciones irreducibles de $S_{n}$ pueden ser
+En general, las representaciones irreducibles de $S_{n}$ pueden ser
 descritas usando diagramas de Young de $n$ cajas. Además, podemos dar
 una base para cada representación irreducible usando tableros
 Young estándar, los cuales consisten en numerar las cajas de un diagrama de
-Young con $1,2,\ldots,n$ tal que los renglones y columnas son
+Young con $1,2,\ldots,n$ tal que los renglones y las columnas sean
 crecientes. Por ejemplo, las base de la representación estándar de
 $S_{3}$ corresponde a los siguientes dos tableros estándar:
 
@@ -1782,7 +1770,7 @@ En éste capítulo, describimos la relación entre los tableros de Young
 y representaciones de $S_{n}$. Las pruebas son omitidas, pero pueden
 encontrarse en el segundo capítulo de \cite{sagan2001symmetric}.
 
-En la sección \ref{tablero} introducimos diagramas de Young y tableros
+En la sección \ref{tablero}, introducimos diagramas de Young y tableros
 de Young. En la sección \ref{modulo-permutacion}, introducimos los
 tabloides y los usamos para construir una representación de $S_{n}$
 conocida como módulo de permutación $M^{\lambda}$. Sin embargo, los
@@ -1791,13 +1779,13 @@ módulos de permutación son generalmente reducibles. En la sección
 $S_{n}$ conocidos como módulos de Specht $S^{\lambda}$, los cuales son
 subespacios del correspondiente $M^{\lambda}$. Los módulos de
 Specht $S^{\lambda}$ corresponden biyectivamente a los diagramas de
-Young $\lambda$ y forman una lista completa de
+Young de forma $\lambda$ y forman una lista completa de
 representaciones irreducibles de $S_{n}$.
 
 \section{Tablero de Young}
 \label{tablero}
 
-Primero necesitamos establecer algunas definiciones y notaciones
+Primero establecemos algunas definiciones y notaciones
 considerando particiones y diagramas de Young.
 
 \begin{definition}
@@ -1856,8 +1844,8 @@ del $4$ son:
 Existe una correspondencia biyectiva entre particiones y diagramas
 de Young, y nosotros usaremos los dos términos indistintamente.
 
-Un tablero Young es obtenido llenando las cajas de una diagrama de
-Young con números.
+Un tablero Young es obtenido llenando las cajas de un diagrama de
+Young con números naturales.
 
 \begin{definition}
   Sea $\lambda\vdash n$. Un \textbf{tablero $\boldsymbol{t}$ (de Young) de forma
@@ -1865,7 +1853,6 @@ Young con números.
   diagrama de Young para $\lambda$ con $1,2,\ldots,n$, los cuales
   aparecen exactamente una vez. En este caso, decimos que $t$ es un
   $\lambda$-tablero.
-
 \end{definition}
 
 Por ejemplo, aquí están todos los tableros correspondientes a la
@@ -1896,14 +1883,14 @@ partición~$(2,1)$:
   \begin{ytableau}
     3 & 2\\
     1
-  \end{ytableau}
+  \end{ytableau}\quad.
 \end{center}
 
 \begin{definition}
   Un \textbf{tablero (de Young) estándar} es un tablero de Young cuyas
   entradas son crecientes en cada renglón y columna.
 \end{definition}
-Los únicos tableros estándar para $(2,1)$ son
+Los únicos tableros estándar para $(2,1)$ son:
 
 \begin{center}
   \ytableausetup{mathmode,notabloids,boxsize=1.2em}
@@ -1914,9 +1901,9 @@ Los únicos tableros estándar para $(2,1)$ son
   \begin{ytableau}
     1 & 3\\
     2
-  \end{ytableau}
+  \end{ytableau}\quad .
 \end{center}
-Aquí está otro ejemplo de un tablero estándar:
+Otro ejemplo de un tablero estándar es:
 \begin{center}
   \ytableausetup{mathmode,notabloids,boxsize=1.2em}
   \begin{ytableau}
@@ -1929,12 +1916,12 @@ Aquí está otro ejemplo de un tablero estándar:
 
 Antes de seguir adelante, recordaremos algunos hechos básicos
 sobre permutaciones. Cada permutación $\pi \in S_{n}$ tiene una
-descomposición en ciclos disjuntos. Por ejemplo $(123)(45)$ denota la
+descomposición en ciclos disjuntos. Por ejemplo, $(123)(45)$ denota la
 permutación que envía $1\rightarrow 2 \rightarrow 3 \rightarrow 1$  e
 intercambia al $4$ y $5$ (si $n>5$, entonces por convención los otros
-elementos fijos por $\pi$). La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la
+elementos permanecen fijos por $\pi$). La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la
 partición de $n$ formada por las longitudes de los ciclos en la
-descomposición. Así que $(123)(45)\in S_{5}$ tiene la estructura
+descomposición. Así, $(123)(45)\in S_{5}$ tiene la estructura
 cíclica (3,2). Dos elementos de $S_{n}$ son conjugados si y solo si
 tienen la misma estructura cíclica. % La forma mas fácil de ver esto es
 % considerar la conjugación simplemente como una reetiquetación de los
@@ -1946,8 +1933,8 @@ Esto significa que las clases de conjugación de $S_{n}$ están
 caracterizadas por la estructura cíclica, y en consecuencia
 corresponden a las particiones de $n$, los cuales son equivalentes a
 los diagramas de Young de tamaño $n$. Recordemos de el teorema
-\ref{no-rep-irr-no-cla-conj} que el número de representaciones irreducibles de un
-grupo finito es igual al número de sus clases de conjugación. Así que
+\ref{no-rep-irr-no-cla-conj}, que el número de representaciones irreducibles de un
+grupo finito es igual al número de sus clases de conjugación. Así,
 nuestro objetivo en las próximas dos secciones es construir una
 representación irreducible de $S_{n}$ correspondiente a cada diagrama
 de Young.
@@ -1964,7 +1951,7 @@ de equivalencia de los tableros, conocidas como tabloides.
   correspondientes renglones de los dos tableros contienen los mismos
   elementos. Un \textbf{tabloide} de forma $\lambda$, o
   $\lambda$-tabloide es la clase de equivalencia
-  $$\{t\}=\{t_{1}\mid t_{1}\sim t\}$$
+  $$\{t\}=\{t_{1}\mid t_{1}\sim t\}.$$
   El tabloide $\{t\}$ es dibujado como el tablero $t$ sin las barras
   verticales.
 \end{definition}
@@ -1995,7 +1982,7 @@ siguientes tableros:
   \begin{ytableau}
     2 & 1  \\
     3
-  \end{ytableau}
+  \end{ytableau}\quad .
 \end{center}
 
 El orden de las entradas entre cada renglón es irrelevante. Por
@@ -2005,13 +1992,13 @@ ejemplo:
   \ytableausetup{mathmode,tabloids,boxsize=1.2em}
   \ytableaushort{145,23}\quad$=$\quad
   \ytableaushort{451,32}\quad$\neq$\quad
-  \ytableaushort{521,34}
+  \ytableaushort{521,34}\quad .
 \end{center}
 
 Pretendemos definir una representación de $S_{n}$ en un espacio
 vectorial cuya base es exactamente el conjunto de tabloides de una
 forma dada. Necesitamos una forma para que los elementos de $S_{n}$
-actúen en los tabloides, lo cual se logra dejando que la permutaciones intercambien las entradas del
+actúen en los tabloides, lo cual, se logra dejando que la permutaciones intercambien las entradas del
 tabloide.
 
 Por ejemplo, el ciclo $(123)\in S_{3}$ actúa en el tabloide
@@ -2021,7 +2008,7 @@ muestra abajo:
   \ytableausetup{mathmode,tabloids,boxsize=1.2em}
   $(123)$
   \ytableaushort{12,3}\quad$=$\quad
-  \ytableaushort{23,1}
+  \ytableaushort{23,1}\quad .
 \end{center}
 
 Debemos comprobar que esta acción está bien definida, esto es, si $t_{1}$
@@ -2031,11 +2018,11 @@ ser el mismo, esto es, $\pi\{t_{1}\}=\pi\{t_{2}\}$. Esto es claro,
 pues $\pi$ simplemente da la instrucción de mover algún número de un
 renglón a otro.
 
-Ahora que definimos una forma para que $S_{n}$ actúe en los tabloides,
+Ahora, que hemos definido una forma para que $S_{n}$ actúe en los tabloides,
 podemos definir una representación de $S_{n}$. Recordemos que una
 representación de un grupo $G$ en un espacio vectorial $V$ sobre el
 campo de los números complejos es equivalente a extender a $V$ a un $G$-módulo,
-así que usamos el término módulo para describir representaciones.
+por lo que usaremos el término módulo para describir representaciones.
 
 \begin{definition}
   Sea $\lambda\vdash n$. $M^{\lambda}$ denota el espacio vectorial
@@ -2082,7 +2069,7 @@ una representación trivial de dimensión uno.
   $M^{\lambda}$ tiene base
   $\{t_{1}\},\{t_{2}\},\ldots,\{t_{n}\}$. También,
   note que la acción de $\pi\in
-  S_{n}$ envía $t_{i}$ a $t_{\pi(i)}$. Así que
+  S_{n}$ envía $t_{i}$ a $t_{\pi(i)}$. Así,
   $M^{(n-1,1)}$ es isomorfo a la
   representación $\mathbb{C}\{1,2,\ldots,n\}$. 
 
@@ -2124,10 +2111,10 @@ en la caja donde $t$ coloca a $i$. Por ejemplo,
   \end{ytableau}
 \end{center}
 
-Observe que un tabloide está fijo por las permutaciones las cuales
+Observe que un tabloide está fijo por las permutaciones, las cuales
 solo permuta las entradas de los renglones entre ellos mismos. Estas
 permutaciones forman un subgrupo de $S_{n}$, al cual llamamos grupo
-renglón. Similarmente definimos al grupo columna.
+renglón. Similarmente, definimos al grupo columna.
 
 \begin{definition}
   Para un tablero $t$ de tamaño $n$, el \textbf{grupo renglón} de $t$,
@@ -2144,7 +2131,7 @@ Por ejemplo, si
   \begin{ytableau}
     4 & 1 & 2\\
     3 & 5
-  \end{ytableau}
+  \end{ytableau}\quad ,
 \end{center}
 entonces
 $$R_{t}=S_{\{1,2,4\}}\times S_{\{3,5\}}, \quad \mbox{ y } \quad C_{t}= S_{\{3,4\}}\times
@@ -2156,7 +2143,7 @@ que usaremos para generar un subespacio.
   Si $t$ es un tablero, entonces el \textbf{politabloide} asociado es
   $$e_{t}=\sum_{\pi\in C_{t}}\sgn(\pi)\pi\{t\}.$$
 \end{definition}
-Así que podemos encontrar $e_{t}$ sumando todos los tabloides que
+Entonces encontramos a $e_{t}$ sumando todos los tabloides que
 resultan de las permutaciones columna de $t$, teniendo en cuenta el
 signo de la permutación columna. Por ejemplo, si
 
@@ -2165,7 +2152,7 @@ signo de la permutación columna. Por ejemplo, si
   \begin{ytableau}
     4 & 1 & 2\\
     3 & 5
-  \end{ytableau}
+  \end{ytableau}\quad ,
 \end{center}
 entonces
 \begin{center}
@@ -2174,18 +2161,15 @@ entonces
   \ytableaushort{412,35}
   \quad $-$ \quad \ytableaushort{312,45}
   \quad $-$ \quad \ytableaushort{452,31}
-  \quad $+$ \quad \ytableaushort{352,41}
+  \quad $+$ \quad \ytableaushort{352,41}\quad .
 \end{center}
 
 Ahora, mediante el siguiente lema, vemos que $S_{n}$ actúa en el
 conjunto de politabloides.
-\begin{lemma}
+\begin{lemma}{[\cite{sagan2001symmetric}, lema 2.3.3, p.61]}.
   \label{lema}
   Sea $t$ un tablero y $\pi$ una permutación. Entonces $e_{\pi t}=\pi e_{t}$.
 \end{lemma}
-Se puede hallar la demostración en el lema 2.3.3 de
-\cite{sagan2001symmetric}.
-
 Ahora podemos obtener un submódulo irreducible de
 $M^{\lambda}$.
 \begin{definition}
@@ -2215,9 +2199,9 @@ $M^{\lambda}$.
   Considere $\lambda=(n)$, sólo hay un único politabloide, el cual es
   \begin{center}
     \ytableausetup{mathmode,tabloids}    
-    \ytableaushort{1 2\cdots n} 
+    \ytableaushort{1 2\cdots n} \quad .
   \end{center}
-Donde el politabloide está fijo por $S_{n}$, así que $S^{(n)}$ es la
+Donde el politabloide está fijo por $S_{n}$, así $S^{(n)}$ es la
 representación trivial de dimensión uno. 
 \end{example}
 
@@ -2229,15 +2213,15 @@ representación trivial de dimensión uno.
     \begin{minipage}[h]{0.1\linewidth}
       $t\quad=$
     \end{minipage}
-    \begin{minipage}[h]{0.2\linewidth}
+    \begin{minipage}[h]{0.05\linewidth}
       \ytableausetup{mathmode,notabloids}
       \begin{ytableau}
         1\\
         2\\
         \vdots\\
         n
-      \end{ytableau}
-    \end{minipage}
+      \end{ytableau} 
+    \end{minipage}.
   \end{center}
 
   % Observe que $e_{t}$ es la suma de todos los $\lambda$-tabloides
@@ -2246,16 +2230,15 @@ representación trivial de dimensión uno.
   Para cualquier $\lambda$-tablero $t^{'}$,
   resulta que $e_{t}=e_{t^{'}}$ si $t^{'}$ es obtenido de $t$ mediante una
   permutación par, o $e_{t}=-e_{t^{'}}$ si $t^{'}$ es obtenido de $t$
-  mediante una permutación impar. Así que $S^{\lambda}$ es una
-  representación de dimensión uno. Del lema \ref{lema} tenemos $\pi
-  e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. De lo cual vemos que
+  mediante una permutación impar. Así, $S^{\lambda}$ es una
+  representación de dimensión uno. Del lema \ref{lema}, $\pi e_{t}=e_{\pi t}=\sgn(\pi)e_{t}$. De lo cual, observamos que
   $S^{(1,1,\ldots,1)}$ es la representación signo.
 \end{example}
 
 \begin{example}
   \label{n-1}
   Considere $\lambda=(n-1,1)$. Continuando con
-  la notación del ejemplo \ref{tabloides-ejemplo} donde usamos
+  la notación del ejemplo \ref{tabloides-ejemplo}, donde usamos
   $\{t_{i}\}$ para denotar el $\lambda$-tabloide con $i$ en el segundo
   renglón, vemos que los politabloides tienen la forma  $\{t_{i}\}-
   \{t_{j}\}$. En efecto, el politabloide construido de el tablero
@@ -2272,26 +2255,24 @@ $\boldsymbol{e_{i}}$ para denotar el tabloide~$\{t_{i}\}$. Entonces
 $S^{\lambda}$ es generado por los elementos de la forma
 $\boldsymbol{e_{i}}-\boldsymbol{e_{j}}$, y se sigue que
 $$S^{(n-1,1)}=\{c_{1}\boldsymbol{e_{1}}+c_{2}\boldsymbol{e_{2}}+\cdots+c_{n}\boldsymbol{e_{n}}\mid
-c_{1}+c_{2}+\cdots+c_{n}=0\}$$ 
+c_{1}+c_{2}+\cdots+c_{n}=0\}.$$ 
 Esta es la representación estándar y es irreducible. La suma directa de las representaciones estándar y la
-representación trivial nos da la representación~$\mathbb{C}\{1,2,\ldots,n\}$, esto es
+representación trivial nos da la
+representación~$\mathbb{C}\{1,2,\ldots,n\}$, es decir,
 $S^{(n-1,1)}\oplus S^{(n)}=M^{(n-1,1)}$.
 \end{example}
 
 Sabemos que $S_{3}$ tiene tres representaciones irreducibles: trivial,
 signo y estándar. Estas son exactamente las descritas anteriormente. Además,
 hay exactamente tres particiones del $3$: $(3)$, $(1,1,1)$,
-$(2,1)$. Así que en este caso, las representaciones irreducibles son
+$(2,1)$ y en este caso, las representaciones irreducibles son
 exactamente los módulos de Specht. Esto es cierto en general.
 
-\begin{theorem}
+\begin{theorem}{[\cite{sagan2001symmetric}, teorema 2.4.6, p.66]}.
   Los módulos de Specht $S^{\lambda}$ para $\lambda\vdash n$ forman
-  una lista completa de representaciones irreducibles de $S_{n}$ sobre
-  $\mathbb{C}$.
+  una lista completa de representaciones irreducibles de $S_{n}$ sobre~$\mathbb{C}$.
   \label{todas-repr-irre}
 \end{theorem}
-La prueba se encuentra en \cite{sagan2001symmetric} en el teorema 2.4.6.
- 
 Recordemos que al final de la sección \ref{tablero} notamos que el
 número de representaciones irreducibles de $S_{n}$ es igual al número
 de diagramas de Young con $n$ cajas. Este teorema da una biyección
@@ -2304,7 +2285,7 @@ dependientes. Ya que sabemos que $S^{\lambda}$ es generado por los
 politabloides, podemos preguntarnos cómo seleccionar una base. El
 siguiente teorema nos da la respuesta.
 
-\begin{theorem}
+\begin{theorem}{[\cite{sagan2001symmetric}, teorema 2.5.2, p.67]}.
   \label{base-S}
   Sea $\lambda$ cualquier partición. El conjunto
   \begin{equation*}
@@ -2319,9 +2300,6 @@ siguiente teorema nos da la respuesta.
 %   \label{dimS}
 %   Sea $\lambda\vdash n$, entonces $\dim S^{\lambda}=f^{\lambda}$.
 % \end{corollary}
-La demostración aparece en el teorema 2.5.2 de
-\cite{sagan2001symmetric}.
-
 Enseguida se enuncian dos definiciones que usaremos en el capítulo \ref{cha:hom-com-emp}
 relacionados con la fórmula de Bouc.
 
@@ -2335,7 +2313,7 @@ relacionados con la fórmula de Bouc.
 
 \begin{definition}
   Sea $\lambda\vdash n$. Llamemos \textbf{diagonal} de el
-  $\lambda$-tablero y lo denotamos como $d(\lambda)$ al número de
+  $\lambda$-tablero, denotada por $d(\lambda)$ al número de
   cajas en la diagonal de el correspondiente tablero de forma $\lambda$.
 \end{definition}
 
@@ -2368,7 +2346,7 @@ relacionados con la fórmula de Bouc.
       (2,1)
     \end{minipage}
   \end{center}
- La única partición de 3 que es autoconjugada es $\lambda=(2,1)=\lambda^{'}$
+ La única partición de 3 que es autoconjugada es $\lambda=(2,1)=\lambda^{'}$.
 \end{example}
 
 \begin{example}Las particiones de el número 4 son:
@@ -2400,7 +2378,7 @@ relacionados con la fórmula de Bouc.
       (2,2)
     \end{minipage}
   \end{center}
- La única partición de 4 que es autoconjugada es $\lambda=(2,2)=\lambda^{'}$
+ La única partición de 4 que es autoconjugada es $\lambda=(2,2)=\lambda^{'}$.
 \end{example}
 
 \chapter{Homología de complejos simpliciales}
@@ -2475,10 +2453,9 @@ región triangular $v_{0}v_{1}v_{2}$ con dirección de $v_{0}$ a $v_{1}$
 a $v_{2}$ como se aprecia en la figura \ref{fig:2-simplejo}, claramente~$v_{0}v_{1}v_{2}$ tiene el mismo orden que
 $v_{1}v_{2}v_{0}$ y $v_{2}v_{0}v_{1}$, pero con orientación opuesta a
 $v_{0}v_{2}v_{1}$, $v_{2}v_{1}v_{0}$ y $v_{1}v_{0}v_{2}$, es decir, estaremos de acuerdo que:
-$$v_{0}v_{1}v_{2}=v_{1}v_{2}v_{0}=v_{2}v_{0}v_{1}=-v_{0}v_{2}v_{1}=-v_{2}v_{1}v_{0}=-v_{1}v_{0}v_{2}$$
+$$v_{0}v_{1}v_{2}=v_{1}v_{2}v_{0}=v_{2}v_{0}v_{1}=-v_{0}v_{2}v_{1}=-v_{2}v_{1}v_{0}=-v_{1}v_{0}v_{2}.$$
 
-Note que $v_{i}v_{j}v_{k}$ es igual a $v_{0}v_{1}v_{2}$ si
-
+Note que $v_{i}v_{j}v_{k}$ es igual a $v_{0}v_{1}v_{2}$, si
 \[ \left(
   \begin{array}{ccc}
     0 & 1 & 2 \\
@@ -2493,7 +2470,7 @@ Un \textbf{3-simplejo orientado} está dado por una secuencia ordenada
 $v_{0}v_{1}v_{2}v_{3}$ de cuatro vértices de un tetraedro sólido
 como se observa en la figura \ref{fig:3-simplejo} y
 acordaremos que $v_{0}v_{1}v_{2}v_{3}=\pm v_{i}v_{j}v_{r}v_{s}$,
-dependiendo si la permutación es par o impar. Así que dos maneras
+dependiendo si la permutación es par o impar. Así, dos maneras
 de enumerar los vértices de un $n$-simplejo se considerarán
 equivalentes, o producen la misma orientación si difieren una de la otra
 por una permutación par. 
@@ -2587,17 +2564,17 @@ $C_{p}(\Delta)$ denota al espacio trivial.
   \begin{array}{cl}
     c(\sigma)=1, & \\
     c(\sigma^{'})=-1 & \mbox{si $\sigma^{'}$ tiene orientación opuesta de $\sigma$}, \\
-    c(\tau)=0 & \mbox{para todos los otros simplejos orientados $\tau$}, 
+    c(\tau)=0 & \mbox{para todos los otros simplejos orientados $\tau$}. 
   \end{array}\] 
   \end{definition}
 
 Por abuso de notación, muchas veces usamos el símbolo $\sigma$ para
-denotar no solo a un simplejo, o a un simplejo orientado, también
-denotamos a la $p$-cadena elemental $c$ correspondiente al simplejo
-orientado $\sigma$. Con esta convención, si $\sigma$ y $\sigma^{'}$
-tienen orientaciones opuestas del mismo simplejo, entonces podemos
-escribir $\sigma^{'}=-\sigma$, pues ésta ecuación se mantiene cuando
-nos referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
+denotar no solo a un simplejo, o a un simplejo orientado, sino también
+a la $p$-cadena elemental $c$ correspondiente al simplejo orientado
+$\sigma$. Con esta convención, si $\sigma$ y $\sigma^{'}$ tienen
+orientaciones opuestas del mismo simplejo, entonces podemos escribir
+$\sigma^{'}=-\sigma$, pues ésta ecuación se mantiene cuando nos
+referimos a $\sigma$ y $\sigma^{'}$ como cadenas elementales.
 
 \begin{lemma}
    Una base para $C_{p}(\Delta)$ se puede obtener
@@ -2617,18 +2594,16 @@ $\sigma_{i}$ y el valor $0$ a todo \emph{p}-simplejo orientado que no
 aparece en la suma. Entonces la afirmación se sigue del teorema $\ref{clunica}$.
 \end{proof}
 
-\begin{corollary}
+\begin{corollary}{[\cite{munkres1984elements}, corolario 5.2, p.36]}.
   Toda función $f$ de los p-simplejos orientados de $\Delta$ en un
   espacio vectorial $V$ , tal que $f(-\sigma)=-f(\sigma)$ para todo
   p-simplejo orientado~$\sigma$ puede extenderse de manera única a una
-  trasformación lineal de $C_{p}(\Delta)\rightarrow V$
+  trasformación lineal de $C_{p}(\Delta)\rightarrow V$.
 \end{corollary}
-
-La prueba se puede consultar en el corolario 5.2 de \cite{munkres1984elements}.
 
 \begin{definition}
   Sea $\sigma=(v_{0},\ldots ,v_{p})$ un simplejo orientado con $p>0$
-  (sin embargo también será denotado como $\sigma=v_{0}\ldots v_{p}$
+  (sin embargo, también será denotado como $\sigma=v_{0}\ldots v_{p}$
   cuando no tengamos problemas de confusión),
   definimos la trasformación lineal
   $\partial_{p}:C_{p}(\Delta)\rightarrow~C_{p-1}(\Delta)$ por medio de:
@@ -2644,9 +2619,9 @@ La prueba se puede consultar en el corolario 5.2 de \cite{munkres1984elements}.
 Puesto que $C_{p}(\Delta)$ es el espacio trivial para $p<0$, diremos
 que $\partial_{p}$ es la \textit{trasformación cero} para $p\leq
 0$. Mostremos ahora que $\partial_{p}$ está bien definido y que
-$\partial_{p}(-\sigma)=-\partial_{p}(\sigma)$. Para esto es suficiente
+$\partial_{p}(-\sigma)=-\partial_{p}(\sigma)$. Es suficiente
 mostrar que la ecuación (\ref{ofrontera}) cambia de signo si intercambiamos dos
-vértices adyacentes en el orden~$v_{0}\ldots v_{p}$, entonces,
+vértices adyacentes en el orden $v_{0}\ldots v_{p}$, y para esto
 debemos comparar las expresiones:
 $$\partial_{p}(v_{0}\ldots v_{j} v_{j+1} \ldots v_{p}) \mbox{ y } \partial_{p}(v_{0}\ldots v_{j+1} v_{j} \ldots v_{p}).$$
 
@@ -2687,8 +2662,8 @@ Comparando éstas dos expresiones observamos que solo difieren por un signo.
   vértice $v\in \Delta$. Entonces si $c$ es una $0$-cadena,
   $\varepsilon(c)$ es igual a la suma de los valores de $c$ en los
   vértices de $\Delta$, es decir:
-  $$\varepsilon(\sum \lambda_{i}v_{i})=\sum\lambda_{i}$$
-  llamaremos a $\varepsilon$ la \textbf{función aumento} para
+  $$\varepsilon(\sum \lambda_{i}v_{i})=\sum\lambda_{i}.$$
+  Llamaremos a $\varepsilon$ la \textbf{función aumento} para
   $C_{0}(\Delta)$.
 \end{definition}
 
@@ -2711,17 +2686,16 @@ Comparando éstas dos expresiones observamos que solo difieren por un signo.
 \begin{corollary}
   $B_{p}(\Delta)$ es subespacio de $Z_{p}(\Delta)$.
 \end{corollary}
-
-\textit{Demostración.} Primero veamos que $B_{n}(\Delta)$ es
-subconjunto de $Z_{n}(\Delta)$, tenemos que
-$B_{n}(\Delta)=\partial[C_{n+1}(\Delta)]$, si $b\in B_{n}(\Delta)$,
-podemos escribir a $b$ como~$b=\partial_{n+1}(c)$ para algún $c\in
-C_{n+1}(\Delta)$. Así que
-$$\partial_{n}(b)=\partial_{n}(\partial_{n+1}(c))=0$$
-por lo tanto $b\in Z_{n}(\Delta)$.
-Las otras condiciones se siguen de que $\partial_{n+1}$ es una
-transformación lineal. $\qed$
-
+\begin{proof}[Demostración]
+  Primero veamos que $B_{n}(\Delta)$ es subconjunto de
+  $Z_{n}(\Delta)$, tenemos que
+  $B_{n}(\Delta)=\partial[C_{n+1}(\Delta)]$, si $b\in B_{n}(\Delta)$,
+  podemos escribir a $b$ como~$b=\partial_{n+1}(c)$ para algún $c\in
+  C_{n+1}(\Delta)$. Así,
+$$\partial_{n}(b)=\partial_{n}(\partial_{n+1}(c))=0.$$
+Por lo tanto, $b\in Z_{n}(\Delta)$.  Las otras condiciones se siguen
+de que $\partial_{n+1}$ es una transformación lineal.
+\end{proof}
 De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varepsilon)$.
 % \begin{enumerate}
 %   \item Tomemos $0\in C_{n+1}$, así que $\partial_{n+1}(0)=\widehat 0$,
@@ -2738,64 +2712,60 @@ De forma análoga se demuestra que $B_{0}(\Delta)$ es subespacio de $\ker(\varep
 \begin{definition}
    El espacio
    $$H_{p}(\Delta)=Z_{p}(\Delta)/B_{p}(\Delta)$$
-   se llama la \textbf{\emph{p}-ésima homología de $\Delta$}
+   se llama la \textbf{\emph{p}-ésima homología de $\Delta$}.
 \end{definition}
 
 \begin{definition}
   Definimos la \textbf{homología reducida} de $\Delta$ en
   dimensión~$0$, denotado por $\widetilde H_{0}(\Delta)$, como
   \begin{equation*}
-    \widetilde H_{0}(\Delta)=\ker\varepsilon/\im \partial_{1}
+    \widetilde H_{0}(\Delta)=\ker\varepsilon/\im \partial_{1}.
   \end{equation*}
   (Si $p>0$, $\widetilde H_{p}(\Delta)$ denota el espacio usual
   $H_{p}(\Delta)$.)
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}{[\cite{munkres1984elements}, teorema 7.2, p.43]}.
   Sea $\Delta$ un complejo simplicial no vacío, entonces
   $$H_{0}(\Delta)\cong \widetilde H_{0}(\Delta)\oplus
   \mathbb{C}.$$
   Además, $\widetilde H_{0}(\Delta)=0$ si $\Delta$ es conexo.
 \end{theorem}
-La demostración se encuentra en \cite{munkres1984elements}, en el
-teorema 7.2.
 
 \begin{example}
   Calculemos para $n=0, 1, 2$ los espacios $Z_{n}(\Delta)$,
   $B_{n}(\Delta)$ y~$H_{n}(\Delta)$ para la superficie $\Delta$ del tetraedro.
 
   Como $C_{-1}(\Delta)=0$ por definición, se sigue que
-  $$\boldsymbol{Z_{0}(\Delta)}=C_{0}(\Delta)$$
+  $$\boldsymbol{Z_{0}(\Delta)}=C_{0}(\Delta).$$
   Por otro lado, $C_{1}(\Delta)=\langle v_{0}v_{1},v_{0}v_{2},v_{0}v_{3},v_{1}v_{2},v_{1}v_{3},v_{2}v_{3}\rangle$,
-  así que por el teorema $\ref{imT}$ tenemos 
+  así que por el teorema $\ref{imT}$ tenemos, 
   \begin{align}
     \label{frontera0}
     \boldsymbol{B_{0}(\Delta)}=&\partial_{1}[C_{1}(\Delta)]\nonumber\\
     &=\langle \partial_{1}(v_{0}v_{1}),\partial_{1}(v_{0}v_{2}),\partial_{1}(v_{0}v_{3}),\partial_{1}(v_{1}v_{2}),\partial_{1}(v_{1}v_{3}),\partial_{1}(v_{2}v_{3})\rangle\nonumber\\
     &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0},v_{2}-v_{1},v_{3}-v_{1},v_{3}-v_{2}\rangle\nonumber\\
-    &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0}\rangle
+    &=\langle v_{1}-v_{0},v_{2}-v_{0},v_{3}-v_{0}\rangle,
   \end{align} 
   pues los vectores $v_{2}-v_{1}, v_{3}-v_{1}, v_{3}-v_{2}$ son
   combinación lineal de los vectores de $\ref{frontera0}$, ya que:
   $$v_{2}-v_{1}=(v_{2}-v_{0})-(v_{1}-v_{0})$$
   $$v_{3}-v_{1}=(v_{3}-v_{0})-(v_{1}-v_{0})$$
-  $$v_{3}-v_{2}=(v_{3}-v_{0})-(v_{2}-v_{0})$$
-  Así que $\dim(B_{0}(\Delta))=3$, además $C_{0}(\Delta)=\langle
-  v_{0},v_{1},v_{2},v_{3}\rangle$, por lo que la
- $\dim(Z_{0}(\Delta))=\dim(C_{0}(\Delta))=4$, luego de el teorema
-  $\ref{dim-esp-coc}$ tenemos que
-  $\dim(Z_{0}(\Delta)/B_{0}(\Delta))=1$, así mismo la
-  $\dim(\mathbb{C})=1$, por el resultado $\ref{esp-isomorfos}$ se sigue
-  que $Z_{0}(\Delta)/B_{0}(\Delta)\cong \mathbb{C}$
-
-  Por lo tanto:
-  $$\boldsymbol{H_{0}(\Delta)}=Z_{0}(\Delta)/B_{0}(\Delta)\cong \mathbb{C}$$
-  Un razonamiento similar se sigue para calcular las homologías restantes.
-  Ahora calculemos $B_{1}(\Delta)$. Sabemos que:
-  $$C_{2}(\Delta)=\langle
-  v_{0}v_{1}v_{2},v_{0}v_{2}v_{3},v_{0}v_{1}v_{3},v_{1}v_{2}v_{3}\rangle$$
-  Nuevamente por el teorema $\ref{imT}$ tenemos:
-  \begin{align}  
+  $$v_{3}-v_{2}=(v_{3}-v_{0})-(v_{2}-v_{0}),$$
+  Así, $\dim(B_{0}(\Delta))=3$, además $C_{0}(\Delta)=\langle
+  v_{0},v_{1},v_{2},v_{3}\rangle$, por lo que
+ $\dim(Z_{0}(\Delta))=\dim(C_{0}(\Delta))=4$. Luego de el teorema
+ \ref{dim-esp-coc}, $\dim(Z_{0}(\Delta)/B_{0}(\Delta))=1$, así mismo
+ la $\dim(\mathbb{C})=1$ y por el teorema \ref{esp-isomorfos}, se
+ sigue que $Z_{0}(\Delta)/B_{0}(\Delta)\cong \mathbb{C}$.
+ Por lo tanto:
+ $$\boldsymbol{H_{0}(\Delta)}=Z_{0}(\Delta)/B_{0}(\Delta)\cong \mathbb{C}.$$
+ Un razonamiento similar se sigue para calcular las homologías restantes.
+ Ahora calculemos $B_{1}(\Delta)$. Sabemos que:
+ $$C_{2}(\Delta)=\langle
+ v_{0}v_{1}v_{2},v_{0}v_{2}v_{3},v_{0}v_{1}v_{3},v_{1}v_{2}v_{3}\rangle.$$
+ Nuevamente por el teorema $\ref{imT}$ tenemos:
+ \begin{align}  
     \label{generadores-B1}
     &\boldsymbol{B_{1}(\Delta)}=\partial_{2}[C_{2}(\Delta)]=\langle\partial_{2}(v_{0}v_{1}v_{2}),\partial_{2}(v_{0}v_{2}v_{3}),\partial_{2}(v_{0}v_{1}v_{3}),\partial_{2}
     (v_{1}v_{2}v_{3})\rangle \nonumber\\
@@ -2814,14 +2784,14 @@ teorema 7.2.
    % \nonumber \\
    &=(-n_{1}-n_{2}-n_{3})v_{0}+(n_{1}-n_{4}-n_{5})v_{1}\\
    &\phantom{{}=-n_{1}}+(n_{2}+n_{4}-n_{6})v_{2}+(n_{3}+n_{5}+n_{6})v_{3}\\
-   &=0
+   &=0.
  \end{align*}
  Así que tenemos que resolver el siguiente sistema de ecuaciones:
  \[\begin{array}{rrrrr}
    -n_{1} & -n_{2} & -n_{3} & = & 0 \\
    n_{1} & -n_{4} & -n_{5} & = & 0 \\
    n_{2} & +n_{4} & -n_{6} & = & 0 \\
-   n_{3} & +n_{5} & +n_{6} & = & 0 
+   n_{3} & +n_{5} & +n_{6} & = & 0. 
  \end{array}\]
  Lo representamos en forma matricial.
  \[ \left(
@@ -2848,7 +2818,7 @@ teorema 7.2.
    % n_{1}& = & n_{4} & n_{5} & n_{6} \\  
    n_{1} & = & n_{4} & +n_{5} & \\
    n_{2} & = & -n_{4} &      &+n_{6} \\
-   n_{3} & = &        &-n_{5}&-n_{6} 
+   n_{3} & = &        &-n_{5}&-n_{6}. 
  \end{array}\]
  Entonces podemos escribir a $c\in Z_{1}(\Delta)$ como:
  \begin{align}
@@ -2856,18 +2826,17 @@ teorema 7.2.
    c&=(n_{4}+n_{5})v_{0}v_{1}+(-n_{4}+n_{6})v_{0}v_{2}+(-n_{5}-n_{6})v_{0}v_{3}\nonumber\\
    &\phantom{{}=n_{4}}+n_{4}v_{1}v_{2}+n_{5}v_{1}v_{3}+n_{6}v_{2}v_{3}\nonumber\\
    &=n_{4}(v_{0}v_{1}-v_{0}v_{2}+v_{1}v_{2})+n_{5}(v_{0}v_{1}-v_{0}v_{3}+v_{1}v_{3})\nonumber\\
-   &\phantom{{}=n_{4}}+n_{6}(v_{0}v_{2}-v_{0}v_{3}+v_{2}v_{3})
+   &\phantom{{}=n_{4}}+n_{6}(v_{0}v_{2}-v_{0}v_{3}+v_{2}v_{3}).
  \end{align}
- Por lo que de la ecuación anterior $\ref{generadores-Z1}$ tenemos:
- $$\boldsymbol{Z_{1}(\Delta)}=\langle v_{0}v_{1}-v_{0}v_{2}+v_{1}v_{2},v_{0}v_{1}-v_{0}v_{3}+v_{1}v_{3},v_{0}v_{2}-v_{0}v_{3}+v_{2}v_{3}\rangle$$
- Notemos de las ecuaciones $\ref{generadores-B1}$ y
- $\ref{generadores-Z1}$ que  $Z_{1}(\Delta)$ y $B_{1}(\Delta)$ tienen
+ Por tanto, de la ecuación \ref{generadores-Z1} tenemos:
+ $$\boldsymbol{Z_{1}(\Delta)}=\langle v_{0}v_{1}-v_{0}v_{2}+v_{1}v_{2},v_{0}v_{1}-v_{0}v_{3}+v_{1}v_{3},v_{0}v_{2}-v_{0}v_{3}+v_{2}v_{3}\rangle.$$
+ De las ecuaciones \ref{generadores-B1} y \ref{generadores-Z1}, obtenemos que  $Z_{1}(\Delta)$ y $B_{1}(\Delta)$ tienen
  el mismo conjunto generador, por lo tanto
  $Z_{1}(\Delta)=B_{1}(\Delta)$, en consecuencia,
- $$\boldsymbol{H_{1}(\Delta)}=Z_{1}(\Delta)/B_{1}(\Delta)=0$$
- Los simplejos de dimensión más alta son los \emph{2-simplejos}, así
- que $C_{3}(\Delta)=0$ por lo que 
- $$\boldsymbol{B_{2}(\Delta)}=\partial_{3}[C_{3}(\Delta)]=0$$ 
+ $$\boldsymbol{H_{1}(\Delta)}=Z_{1}(\Delta)/B_{1}(\Delta)=0.$$
+ Los simplejos de dimensión más alta son los 2-simplejos así
+ que $C_{3}(\Delta)=0$ por lo que,
+ $$\boldsymbol{B_{2}(\Delta)}=\partial_{3}[C_{3}(\Delta)]=0.$$ 
 Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir 
  $$c=n_{1}v_{0}v_{1}v_{2}+n_{2}v_{0}v_{2}v_{3}+n_{3}v_{0}v_{1}v_{3}+n_{4}v_{1}v_{2}v_{3}$$
  tal que
@@ -2880,9 +2849,9 @@ Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir
  \end{align*}
  entonces $n_{1}=n_{2}=-n_{3}=-n_{4}$, así que podemos escribir a $c$
  de la siguiente forma: 
- $$c=n_{1}(v_{0}v_{1}v_{2}+v_{0}v_{2}v_{3}-v_{0}v_{1}v_{3}-v_{1}v_{2}v_{3})$$
+ $$c=n_{1}(v_{0}v_{1}v_{2}+v_{0}v_{2}v_{3}-v_{0}v_{1}v_{3}-v_{1}v_{2}v_{3}),$$
  de donde vemos que
- $$Z_{2}(\Delta)=\langle v_{0}v_{1}v_{2}+v_{0}v_{2}v_{3}-v_{0}v_{1}v_{3}-v_{1}v_{2}v_{3}\rangle$$
+ $$Z_{2}(\Delta)=\langle v_{0}v_{1}v_{2}+v_{0}v_{2}v_{3}-v_{0}v_{1}v_{3}-v_{1}v_{2}v_{3}\rangle,$$
  es decir, $\boldsymbol{Z_{2}(\Delta)}\cong \mathbb{C}$. Luego  $\boldsymbol{H_{2}}(\Delta)=Z_{2}(\Delta)/B_{2}(\Delta)\cong\mathbb{C}$.
 \end{example}
 
@@ -2902,7 +2871,7 @@ Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir
 
 \begin{theorem}
   Si $(A,\partial)$ es un complejo de cadenas, entonces la imagen bajo
-  $\partial_{k}$ es un subespacio de el kernel de $\partial_{k-1}$
+  $\partial_{k}$ es un subespacio de el kernel de $\partial_{k-1}$.
 \end{theorem}
 \begin{proof}[Demostración.]
   Considere
@@ -2915,7 +2884,7 @@ Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir
     \]
   \end{small}
   $\partial_{k-1}\partial_{k}=0,$ pues $(A,\partial)$ es un complejo
-  de cadenas. Esto es $\partial_{k-1}[\partial_{k}[A_{k}]]=0.$ Así que
+  de cadenas. Esto es $\partial_{k-1}[\partial_{k}[A_{k}]]=0.$ Así,
   $\partial_{k}[A_{k}]$ está contenido en el kernel de
   $\partial_{k-1}$, como se quería demostrar.
 \end{proof}
@@ -2940,7 +2909,7 @@ Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir
   \end{CD}
   \]
   Además, supongamos que para todo $k$ se tiene
-  $$f_{k-1}\partial_{k}=\partial^{'}_{k}f_{k}$$
+  $$f_{k-1}\partial_{k}=\partial^{'}_{k}f_{k}.$$
   Entonces $f_{k}$ induce una transformación lineal
   $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'}).$
 \end{theorem}
@@ -2949,7 +2918,7 @@ Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir
   \begin{equation*}
     \partial^{'}_{k}(f_{k}(z))=f_{k-1}(\partial_{k}(z))=f_{k-1}(0)=0,
   \end{equation*}
-  así que $f_{k}(z)\in Z_{k}(A^{'})$. Definamos
+  así, $f_{k}(z)\in Z_{k}(A^{'})$. Definamos
   $f_{*k}:H_{k}(A)\rightarrow H_{k}(A^{'})$ por
   \begin{equation}
     \label{trans-lin-homologias}
@@ -2959,12 +2928,12 @@ Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir
   Primero debemos mostrar que $f_{*k}$ está bien definida, es decir,
   independientemente de la elección de un representante de
   $z+B_{k}(A).$ Supongamos que $z_{1}\in (z+B_{k}(A)).$ Entonces
-  $(z_{1}-z)\in B_{k}(A)$, así que existe $c\in A_{k+1}$ tal que
-  $z_{1}-z=\partial_{k+1}(c).$ Pero entonces
+  $(z_{1}-z)\in B_{k}(A)$, y existe $c\in A_{k+1}$ tal que
+  $z_{1}-z=\partial_{k+1}(c).$ Pero,
   $$f_{k}(z_{1})-f_{k}(z)=f_{k}(z_{1}-z)=f_{k}(\partial_{k+1}(c))=\partial^{'}_{k+1}(f_{k+1}(c))$$
-  este último término es un elemento de
+  y este último término es un elemento de
   $\partial^{'}_{k+1}[A^{'}_{k+1}]=B_{k}(A^{'}).$ Por lo tanto
-  $$f_{k}(z_{1})\in (f_{k}(z)+B_{k}(A^{'}))$$
+  $$f_{k}(z_{1})\in (f_{k}(z)+B_{k}(A^{'})).$$
   Así dos representantes de la misma clase lateral en
   $H_{k}(A)=Z_{k}(A)/B_{k}(A)$ son enviados en representantes de la misma
   clase lateral en el subespacio $H_{k}(A^{'})=Z_{k}(A^{'})/B_{k}(A^{'})$. Esto muestra
@@ -2981,13 +2950,13 @@ isomorfismo~$f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 \section[Homomorfismos inducidos]{Homomorfismos inducidos por funciones homotópicas}
 \label{hom-ind}
 
-Es posible definir homología de un espacio topológico general por
+En esta sección sea $I$ el intervalo $[0,1]$. Es posible definir homología de un espacio topológico general por
 medio del concepto de la \emph{homología singular}. Por otro lado, a cada complejo
 simplicial $\Delta$ se le puede asociar un espacio topológico denotado $|\Delta|$
 llamado la \textbf{realización geométrica} de $\Delta$, dado por:
 
 $$|\Delta|=\{\alpha:V(\Delta)\rightarrow I\mid\alpha^{-1}(0,1]\in
-\Delta, \sum _{v\in V(\Delta)}\alpha(v)=1\}$$
+\Delta, \sum _{v\in V(\Delta)}\alpha(v)=1\}.$$
 Ahora a $|\Delta|$ le vamos a dar la topología generada por la métrica
 \begin{equation*}
   \label{metrica}
@@ -3000,7 +2969,7 @@ medio de la realización geométrica. Por ejemplo, dos complejos se
 dicen homeomorfos si las realizaciones geométricas los son.
 
 \begin{definition}
-  Sea $I$ el intervalo $[0,1]$ y $X$, $Y$ espacios topológicos, dos funciones continuas
+  Sean $X$ y $Y$ espacios topológicos. Dos funciones continuas
   $h,k:X\rightarrow Y$ son \textbf{homotópicas} si existe una función continua
   $$F:X\times I\rightarrow Y,$$
   tal que $F(x,0)=h(x)$ y $F(x,1)=k(x)$ para todo $x\in X.$ Si $h$ y
@@ -3030,23 +2999,19 @@ es el de homotópicamente equivalentes.
 Si $X$ es homotópico a un punto, se dice que $X$ es
 \textbf{contraíble}.
 
-\begin{theorem}
+\begin{theorem}{[\cite{munkres1984elements}, teorema 19.5, p.108]}.
   Sean $X$, $Y$ espacios topológicos, si $X$ y $Y$ son homotópicos, entonces $\widetilde H_{n}(X)\cong \widetilde
   H_{n}(Y)$ para $n>0$. En particular, si $X$ es contraíble, entonces $\widetilde
   H_{n}(X)=0$ para $n>0$.
   \label{esp-homotopicos-homologias-iso}
 \end{theorem}
 
-\begin{theorem}
+\begin{theorem}{[\cite{munkres1984elements}, teorema 34.3, p.194]}.
   Sea $\Delta$ un complejo simplicial, entonces la homología
   simplicial de $\Delta$ es isomorfa a la homología singular de su
   realización geométrica~$|\Delta|$.
   \label{homologia-realizacion}
 \end{theorem}
-Las demostraciones de los teoremas
-\ref{esp-homotopicos-homologias-iso} y \ref{homologia-realizacion} se
-encuentran en \cite{munkres1984elements}, en el teorema 19.5 y
-el teorema 34.3.
  
 \chapter{Gráfica de clanes}
 \label{cha:grafica-clanes}
@@ -3244,7 +3209,7 @@ Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
 En éste capítulo se utilizarán todos los conceptos y resultados
 presentados en los capítulos anteriores. Se definirá el complejo de
 emparejamientos y finalmente conoceremos lo que quiere decir la
-fórmula de Bouc. Además calculamos las homologías reducidas de los
+fórmula de Bouc. Además, calculamos las homologías reducidas de los
 complejos de emparejamientos y de sus respectivas gráficas de clanes para
 $n\leq 6$.
 
@@ -3257,7 +3222,7 @@ $\overline{ij}$ denotará la arista que une al vértice $i$ con el
 vértice $j$ (donde $\overline{ij}=\overline{ji}$).
 
 Llamaremos \textbf{gráfica de emparejamientos} de orden $n$ a la
-gráfica $G_{n}$ tal que
+gráfica $G_{n}$ tal que:
 
 \begin{enumerate}
   \item Su conjunto de vértices $V(G_{n})$ consta de las aristas de la gráfica
@@ -3399,14 +3364,14 @@ notación de los $p$-simplejos orientados, los espacios de cadenas son:
   C_{0}(M_{4})=\langle(\overline{12}),(\overline{13}),(\overline{14}),(\overline{23}),(\overline{24}),(\overline{34})\rangle.
 \end{equation*}
 \begin{equation*}
- C_{1}(M_{4})=\langle(\overline{12},\overline{34}),(\overline{13},\overline{24}),(\overline{14},\overline{23})\rangle
+ C_{1}(M_{4})=\langle(\overline{12},\overline{34}),(\overline{13},\overline{24}),(\overline{14},\overline{23})\rangle.
 \end{equation*}
 Sean
 \begin{center}
   \begin{tabular}{ccc}
-    $a_{1}=\overline{12}$, & $a_{4}=\overline{23}$, & $b_{1}=(\overline{12},\overline{34})$,\\
-    $a_{2}=\overline{13}$, & $a_{5}=\overline{24}$, & $b_{2}=(\overline{13},\overline{24})$,\\
-    $a_{3}=\overline{14}$, & $a_{6}=\overline{34}$, & $b_{3}=(\overline{14},\overline{23})$,\\
+    $a_{1}=\overline{12}$ & $a_{4}=\overline{23}$ & $b_{1}=(\overline{12},\overline{34})$\\
+    $a_{2}=\overline{13}$ & $a_{5}=\overline{24}$ & $b_{2}=(\overline{13},\overline{24})$\\
+    $a_{3}=\overline{14}$ & $a_{6}=\overline{34}$ & $b_{3}=(\overline{14},\overline{23})$.\\
   \end{tabular}
 \end{center}
 Consideremos a $\beta_{0}=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6}\}$ y
@@ -3422,7 +3387,7 @@ de la base de $C_{0}(M_{4})$ y $C_{1}(M_{4})$.
     $(12)a_{3}=a_{5}$ & $(123)a_{3}=a_{5}$ & $(1234)a_{3}=a_{1}$ & $(12)(34)a_{3}=a_{4}$ \\
     $(12)a_{4}=a_{2}$ & $(123)a_{4}=a_{2}$ & $(1234)a_{4}=a_{6}$ & $(12)(34)a_{4}=a_{3}$ \\
     $(12)a_{5}=a_{3}$ & $(123)a_{5}=a_{6}$ & $(1234)a_{5}=a_{2}$ & $(12)(34)a_{5}=a_{2}$ \\
-    $(12)a_{6}=a_{6}$ & $(123)a_{6}=a_{3}$ & $(1234)a_{6}=a_{3}$ & $(12)(34)a_{6}=a_{6}$ \\
+    $(12)a_{6}=a_{6}$ & $(123)a_{6}=a_{3}$ & $(1234)a_{6}=a_{3}$ & $(12)(34)a_{6}=a_{6}$. \\
   \end{tabular}
 \end{center}
 
@@ -3430,7 +3395,7 @@ de la base de $C_{0}(M_{4})$ y $C_{1}(M_{4})$.
   \begin{tabular}{llll}
     $(12)b_{1}=b_{1}$  & $(123)b_{1}=-b_{3}$ & $(1234)b_{1}=-b_{3}$ & $(12)(34)b_{1}=b_{1}$ \\
     $(12)b_{2}=-b_{3}$ & $(123)b_{2}=b_{1}$  & $(1234)b_{2}=-b_{2}$ & $(12)(34)b_{2}=-b_{2}$ \\
-    $(12)b_{3}=-b_{2}$ & $(123)b_{3}=-b_{2}$ & $(1234)b_{3}=b_{1}$  & $(12)(34)b_{3}=-b_{3}$ \\
+    $(12)b_{3}=-b_{2}$ & $(123)b_{3}=-b_{2}$ & $(1234)b_{3}=b_{1}$  & $(12)(34)b_{3}=-b_{3}$. \\
   \end{tabular}
 \end{center}
 Entonces tenemos las representaciones $\theta_{1}$ y $\theta_{2}$ de
@@ -3447,7 +3412,7 @@ muestra enseguida:
       0 & 0 & 1 & 0 & 0 & 0\\
       0 & 0 & 0 & 0 & 0 & 1\\
     \end{array} 
-  \right)$\quad 
+  \right)$,\quad 
   $\theta_{1}(123)= \left(
     \begin{array}{rrrrrr}
       0 & 1 & 0 & 0 & 0 & 0\\
@@ -3457,7 +3422,7 @@ muestra enseguida:
       0 & 0 & 1 & 0 & 0 & 0\\
       0 & 0 & 0 & 0 & 1 & 0\\
     \end{array} 
-  \right)$
+  \right)$,
 \end{center}
 
 \begin{center}
@@ -3470,7 +3435,7 @@ muestra enseguida:
       0 & 1 & 0 & 0 & 0 & 0\\
       0 & 0 & 0 & 1 & 0 & 0\\
     \end{array} 
-  \right)$ \quad
+  \right)$, \quad
   $\theta_{1}(12)(34)= \left(
     \begin{array}{rrrrrr}
       1 & 0 & 0 & 0 & 0 & 0\\
@@ -3480,7 +3445,7 @@ muestra enseguida:
       0 & 1 & 0 & 0 & 0 & 0\\
       0 & 0 & 0 & 0 & 0 & 1\\
     \end{array} 
-  \right)$ 
+  \right)$, 
 \end{center}
 
 \begin{center}
@@ -3490,14 +3455,14 @@ muestra enseguida:
       0 & 0 & -1 \\
       0 & -1 & 0 \\
     \end{array} 
-  \right)$ \quad
+  \right)$, \quad
   $\theta_{2}(123)= \left(
     \begin{array}{rrr}
       0 & 1 & 0 \\
       0 & 0 & -1 \\
       -1 & 0 & 0 \\
     \end{array} 
-  \right)$
+  \right)$,
 \end{center}
 
 \begin{center}
@@ -3507,16 +3472,16 @@ muestra enseguida:
       0 & -1 & 0 \\
       -1 & 0 & 0 \\
     \end{array} 
-  \right)$ \quad
+  \right)$, \quad
   $\theta_{2}(12)(34)= \left(
     \begin{array}{rrr}
       1 & 0 & 0 \\
       0 & -1& 0 \\
       0 & 0 & -1 \\
     \end{array} 
-  \right)$
+  \right)$,
 \end{center}
-de tal forma que
+de tal forma que:
 
 \begin{tabular}{r r r}
   $\chi_{C_{0}(M_{4})}((1))=6$, & $\chi_{C_{0}(M_{4})}((12))=2$, & $\chi_{C_{0}(M_{4})}((123))=0$, \\
@@ -3559,27 +3524,27 @@ caracteres de los módulos irreducibles de $S_{4}$ para conocer la
 multiplicidad con la que aparecen estos últimos (corolario \ref{multiplicidad}).
 \begin{align*}
   \langle\chi_{C_{0}(M_{4})},\chi_{\mathbb{C}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(1\cdot2)+(8)(1\cdot0)+(6)(1\cdot0)+(3)(1\cdot2))\\
-  &=\frac{1}{24}(6+12+6)=1\\
+  &=\frac{1}{24}(6+12+6)=1,\\
   \langle\chi_{C_{0}(M_{4})},\chi_{S^{(1,1,1,1)}}\rangle &=\frac{1}{24}((1)(1\cdot6)+(6)(-1\cdot2)+(8)(1\cdot0)+(6)(-1\cdot0)+(3)(1\cdot2))\\
-  &=\frac{1}{24}(6-12+6)=0\\
+  &=\frac{1}{24}(6-12+6)=0,\\
   \langle\chi_{C_{0}(M_{4})},\chi_{S^{(3,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(1\cdot2)+(8)(0\cdot0)+(6)(-1\cdot0)+(3)(-1\cdot2))\\
-  &=\frac{1}{24}(18+12-6)=1\\
+  &=\frac{1}{24}(18+12-6)=1,\\
   \langle\chi_{C_{0}(M_{4})},\chi_{S^{(2,1,1)}}\rangle &=\frac{1}{24}((1)(3\cdot6)+(6)(-1\cdot2)+(8)(0\cdot0)+(6)(1\cdot0)+(3)(-1\cdot2))\\
-  &=\frac{1}{24}(18-12-6)=0\\
+  &=\frac{1}{24}(18-12-6)=0,\\
   \langle\chi_{C_{0}(M_{4})},\chi_{S^{(2,2)}}\rangle &=\frac{1}{24}((1)(2\cdot6)+(6)(0\cdot2)+(8)(-1\cdot0)+(6)(0\cdot0)+(3)(2\cdot2))\\
-  &=\frac{1}{24}(12+12)=1
+  &=\frac{1}{24}(12+12)=1.
 \end{align*}
 De lo anterior se sigue:
 \begin{equation}
-\label{eq:C_0(M_4)}
-C_{0}(M_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}
+  \label{eq:C_0(M_4)}
+  C_{0}(M_{4})\cong \mathbb{C}\oplus S^{(3,1)}\oplus S^{(2,2)}.
 \end{equation}
-De la tabla \ref{tab:S_4}
-podemos observar que $\chi_{C_{1}(M_{4})}=\chi_{S^{(3,1)}}$, así que
-por el Corolario \ref{multiplicidad} inciso 5 tenemos: 
+De la tabla \ref{tab:S_4},
+se observa que $\chi_{C_{1}(M_{4})}=\chi_{S^{(3,1)}}$, así que
+por el corolario \ref{multiplicidad} inciso 5 tenemos: 
 \begin{equation}
-\label{eq:C_1(M_4)}
-C_{1}(M_{4})\cong S^{(3,1)}
+  \label{eq:C_1(M_4)}
+  C_{1}(M_{4})\cong S^{(3,1)}.
 \end{equation}
 Con lo cual tenemos el siguiente complejo de cadenas aumentado
 donde $\partial_{1},\partial_{2},\varepsilon$ son los correspondientes
@@ -3636,21 +3601,19 @@ $\widetilde H_{1}(M_{4})$.
 
 Por el teorema \ref{teorema-isomorfismo-mod} y como
 $\widehat\varepsilon$ es sobreyectiva tenemos:
-$$(\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)})/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
+$$(\mathbb{C} \oplus S^{(3,1)}\oplus S^{(2,2)})/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C},$$
 entonces
 \begin{equation}
 \label{ker-0-4}
-\ker\widehat\varepsilon\cong S^{(3,1)}\oplus S^{(2,2)}
+\ker\widehat\varepsilon\cong S^{(3,1)}\oplus S^{(2,2)}.
 \end{equation}
+Por otra parte, de la proposición \ref{im-mod-irreducible}, $\im\widehat\partial_{1}\cong S^{(3,1)}$ o $\im\widehat\partial_{1}=0$.
 
-Por otra parte tenemos que $\im\widehat\partial_{1}\cong S^{(3,1)}$ o $\im\widehat\partial_{1}=0$ por
-la proposición~\ref{im-mod-irreducible}
-
-Como $\partial_{1}((\overline{12},\overline{34}))=\overline{34}-\overline{12}$
+Como $\partial_{1}((\overline{12},\overline{34}))=\overline{34}-\overline{12}$,
 tenemos que $\im\partial_{1}\neq 0$ (en general $\partial_{k}\neq 0$
 por definición del operador frontera), se sigue que
 $\im\widehat\partial_{1}\neq 0$ puesto que el diagrama es
-conmutativo. Por lo tanto 
+conmutativo. Por lo tanto, 
 
 % Si $\partial_{1}(C_{1}(M_{4}))=0$ entonces $f_{0}(\partial_{1}(C_{1}(M_{4})))=0$,
 % pues $f_{0}$ es morfismo, como el diagrama es conmutativo se tiene
@@ -3658,33 +3621,33 @@ conmutativo. Por lo tanto
 % además $\widehat\partial_{1}(f_{1}(C_{1}(M_{4})))=\widehat\partial_{1}(S^{(3,1)})$,
 % pues $f_{1}$ es suprayectiva, por lo tanto $\widehat\partial_{1}(S^{(3,1)})=0$.
 \begin{equation}
-\label{im-1-4}
-\im\widehat\partial_{1}\cong S^{(3,1)}
+  \label{im-1-4}
+  \im\widehat\partial_{1}\cong S^{(3,1)}.
 \end{equation}
 
 De las expresiones \ref{ker-0-4}, \ref{im-1-4} y de la
 proposición \ref{modulos-iguales} concluimos:
 \begin{equation}
-\label{ker-0-4=}
-\ker\widehat\varepsilon=S^{(3,1)}\oplus S^{(2,2)}
+  \label{ker-0-4=}
+  \ker\widehat\varepsilon=S^{(3,1)}\oplus S^{(2,2)}.
 \end{equation}
 \begin{equation}
 \label{im-1-4=}
-\im\widehat\partial_{1}=S^{(3,1)}
+\im\widehat\partial_{1}=S^{(3,1)}.
 \end{equation}
 
-Nuevamente por el teorema \ref{teorema-isomorfismo-mod}
-$$S^{(3,1)}/\ker\widehat\partial_{1}\cong\im\widehat\partial_{1}= S^{(3,1)} $$
+Nuevamente por el teorema \ref{teorema-isomorfismo-mod},
+$$S^{(3,1)}/\ker\widehat\partial_{1}\cong\im\widehat\partial_{1}= S^{(3,1)},$$
 entonces
 \begin{equation}
-\ker\widehat\partial_{1}=0
-\label{ker-1-4}
+  \ker\widehat\partial_{1}=0.
+  \label{ker-1-4}
 \end{equation}
 
 Como $\widehat\partial_{2}$ es un morfismo de módulos, tenemos
 \begin{equation}
-\im\widehat\partial_{2}=\widehat\partial_{2}(0)=0
-\label{im-2-4}
+  \im\widehat\partial_{2}=\widehat\partial_{2}(0)=0.
+  \label{im-2-4}
 \end{equation}
 Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
 \ref{ker-1-4} y \ref{im-2-4} obtenemos:
@@ -3699,13 +3662,13 @@ Por lo tanto, de la ecuaciones \ref{ker-0-4=}, \ref{im-1-4=},
 
 Consideremos ahora la gráfica $G_{5}$ (ver figura~\ref{fig:G_5}) y el complejo de emparejamientos $M_{5}$, que
 está dado por el conjunto de vértices (aristas de la gráfica de $K_{5}$):
-$$V=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6},a_{7},a_{8},a_{9},a_{10}\}$$
+$$V=\{a_{1},a_{2},a_{3},a_{4},a_{5},a_{6},a_{7},a_{8},a_{9},a_{10}\},$$
 donde
 \begin{table}[!hbtp]
   \centering
   \begin{tabular}{lllll}
     $a_{1}=\overline{12}$ & $a_{2}=\overline{13}$ & $a_{3}=\overline{14}$ & $a_{4}=\overline{15}$ & $a_{5}=\overline{23}$ \\
-    $a_{6}=\overline{24}$ & $a_{7}=\overline{25}$ & $a_{8}=\overline{34}$ & $a_{9}=\overline{35}$ & $a_{10}=\overline{45}$
+    $a_{6}=\overline{24}$ & $a_{7}=\overline{25}$ & $a_{8}=\overline{34}$ & $a_{9}=\overline{35}$ & $a_{10}=\overline{45}$.
   \end{tabular}
 \end{table}
 
@@ -3716,7 +3679,7 @@ Entonces la familia de $1$-simplejos orientados estará dada por:
     $b_{2}=(a_{1},a_{9})$ & $b_{7}=(a_{3},a_{5})$ & $b_{12}=(a_{4},a_{8})$  \\
     $b_{3}=(a_{1},a_{10})$ & $b_{8}=(a_{3},a_{7})$ & $b_{13}=(a_{5},a_{10})$  \\
     $b_{4}=(a_{2},a_{6})$ & $b_{9}=(a_{3},a_{9})$ & $b_{14}=(a_{6},a_{9})$  \\
-    $b_{5}=(a_{2},a_{7})$ & $b_{10}=(a_{4},a_{5})$ & $b_{15}=(a_{7},a_{8})$  
+    $b_{5}=(a_{2},a_{7})$ & $b_{10}=(a_{4},a_{5})$ & $b_{15}=(a_{7},a_{8})$.  
   \end{tabular}
 \end{center}
 \begin{figure}[!hbtp]
@@ -3790,32 +3753,32 @@ Entonces $C_{0}(M_{5})=V_{0}\uparrow^{S_{5}}_{H_0}$, por lo que:
 %{\scriptsize
   \begin{align*}
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\ 
-    &=\frac{1}{12}(1+1+3+3+2+2)=1\\ 
+    &=\frac{1}{12}(1+1+3+3+2+2)=1,\\ 
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
-    &=\frac{1}{12}(1-1-3+3+2-2)=0 \\
+    &=\frac{1}{12}(1-1-3+3+2-2)=0, \\
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
-    &=\frac{1}{12}(4+2+6+0+2-2)=1 \\
+    &=\frac{1}{12}(4+2+6+0+2-2)=1, \\
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
-    &=\frac{1}{12}(4-2-6+0+2+2)=0 \\
+    &=\frac{1}{12}(4-2-6+0+2+2)=0, \\
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
-    &=\frac{1}{12}(6+0+0-6+0+0)=0 \\
+    &=\frac{1}{12}(6+0+0-6+0+0)=0, \\
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
-    &=\frac{1}{12}(5+1+3+3-2+2)=1 \\
+    &=\frac{1}{12}(5+1+3+3-2+2)=1, \\
     \langle\chi_{C_{0}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}\\
-    &=\frac{1}{12}(5-1-3+3-2-2)=0 
+    &=\frac{1}{12}(5-1-3+3-2-2)=0. 
   \end{align*}
 %}
 
 De los productos internos calculados anteriormente obtenemos:
 \begin{equation}
   \label{eq:C0-M5}
-  C_{0}(M_{5})\cong \mathbb{C}\oplus S^{(4,1)} \oplus S^{(3,2)} 
+  C_{0}(M_{5})\cong \mathbb{C}\oplus S^{(4,1)} \oplus S^{(3,2)}. 
 \end{equation}
 Ahora consideremos los siguientes conjuntos, nuevamente para usar
 reciprocidad de Frobenius.
 \begin{eqnarray*}
-  V_{1}&=&\langle(\overline{13},\overline{24})\rangle\\
-  H_{1}&=&\{g\in S_{5}\mid gV_{1}=V_{1}\}
+  V_{1}&=&\langle(\overline{13},\overline{24})\rangle,\\
+  H_{1}&=&\{g\in S_{5}\mid gV_{1}=V_{1}\}.
 \end{eqnarray*}
 
   \begin{table}[!hbtp]
@@ -3844,30 +3807,30 @@ reciprocidad de Frobenius.
 %{\scriptsize
   \begin{align*}
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(5)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
-    &=\frac{1}{8}(1+2-2-2+1)=0\\
+    &=\frac{1}{8}(1+2-2-2+1)=0,\\
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
-    &=\frac{1}{8}(1-2+2-2+1)=0 \\
+    &=\frac{1}{8}(1-2+2-2+1)=0, \\
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(4,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
-    &=\frac{1}{8}(4+4+0+0+0)=1 \\
+    &=\frac{1}{8}(4+4+0+0+0)=1, \\
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
-    &=\frac{1}{8}(4-4+0+0+0)=0 \\
+    &=\frac{1}{8}(4-4+0+0+0)=0, \\
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
-    &=\frac{1}{8}(6+0+0+4-2)=1 \\
+    &=\frac{1}{8}(6+0+0+4-2)=1, \\
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(3,2)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
-    &=\frac{1}{8}(5+2+2-2+1)=1 \\
+    &=\frac{1}{8}(5+2+2-2+1)=1, \\
     \langle\chi_{C_{1}(M_{5})},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}&=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}\\
-    &=\frac{1}{8}(5-2-2-2+1)=0
+    &=\frac{1}{8}(5-2-2-2+1)=0.
   \end{align*}
 %}
 
 De donde obtenemos:
 \begin{equation}
   \label{eq:C1-M5}
-  C_{1}(M_{5})\cong S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)}
+  C_{1}(M_{5})\cong S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)}.
 \end{equation}
 En la figura \ref{fig:diagrama-conmutativo5} se muestra el diagrama
 conmutativo de los complejos de cadena de $M_{5}$, donde $f_{0}$ y
-$f_{1}$ son los isomorfismos obtenidos de las expresiones~\ref{eq:C0-M5} y \ref{eq:C1-M5}
+$f_{1}$ son los isomorfismos obtenidos de las expresiones~\ref{eq:C0-M5} y \ref{eq:C1-M5}.
 
 \begin{figure}[h]
   \centering
@@ -3894,30 +3857,30 @@ $$(\mathbb{C}\oplus S^{(4,1)} \oplus
 S^{(3,2)})/\ker\widehat\varepsilon\cong\im\widehat\varepsilon=\mathbb{C}$$
 así que
 \begin{equation*}
-\label{ker0-5}
-\ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}
+  \label{ker0-5}
+  \ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}.
 \end{equation*}
 Sabemos que $\widetilde H_{0}(M_{5})=\ker \widehat\varepsilon/\im
-\widehat\partial_{1}=0$ pues $M_{5}$  es
+\widehat\partial_{1}=0$, pues $M_{5}$  es
 conexo. Se sigue entonces que~$\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
-\label{im1-5}
-\im \widehat\partial_{1}\cong S^{(4,1)} \oplus S^{(3,2)}
+  \label{im1-5}
+  \im \widehat\partial_{1}\cong S^{(4,1)} \oplus S^{(3,2)}.
 \end{equation}
-Además el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-5} se tiene:
+Además de el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-5}, se tiene:
 $$(S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)})/\ker
-\widehat\partial_{1}\cong \im \widehat\partial_{1}$$
+\widehat\partial_{1}\cong \im \widehat\partial_{1}.$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
-\label{ker1-5}
-\ker \widehat\partial_{1}= S^{(3,1,1)}
+  \label{ker1-5}
+  \ker \widehat\partial_{1}= S^{(3,1,1)}.
 \end{equation}
 
-Por otro lado
+Por otro lado,
 \begin{equation}
-\im\widehat\partial_{2}=\widehat\partial_{2}(0)=0
-\label{im-2-5}
+  \im\widehat\partial_{2}=\widehat\partial_{2}(0)=0.
+  \label{im-2-5}
 \end{equation}
 pues $\widehat\partial_{2}$ es un morfismo de módulos.
 
@@ -3931,7 +3894,7 @@ por medio de un teorema de topología algebraica que $\widetilde
 H_{0}(M_{5})=0$. Veamos ahora, sin embargo, que es posible
 calcular $\im \widehat\partial_{1}$ por métodos elementales.
 
-Verifiquemos primero que $\dim(\im \partial_{1})=9$. Del teorema
+Verifiquemos primero que $\dim(\im \partial_{1})=9$. De el teorema
 \ref{imT}, sabemos que
 $\im \partial_{1}=\langle\partial_{1}(b_{1}),\ldots,\partial_{1}(b_{15})\rangle$,
 veamos que el número de vectores linealmente independientes de la
@@ -3947,7 +3910,7 @@ entonces:
   &=(-\lambda_{1}-\lambda_{2}-\lambda_{3})a_{1}+(-\lambda_{4}-\lambda_{5}-\lambda_{6})a_{2}+(-\lambda_{7}-\lambda_{8}-\lambda_{9})a_{3}\\
   &\qquad{}+(-\lambda_{10}-\lambda_{11}-\lambda_{12})a_{4}+(\lambda_{7}+\lambda_{10}-\lambda_{13})a_{5}+(\lambda_{4}+\lambda_{11}-\lambda_{14})a_{6}\\
   &\qquad{}+(\lambda_{5}+\lambda_{8}-\lambda_{15})a_{7}+(\lambda_{1}+\lambda_{12}+\lambda_{15})a_{8}+(\lambda_{2}+\lambda_{9}+\lambda_{14})a_{9}\\
-  &\qquad{}+(\lambda_{3}+\lambda_{6}+\lambda_{13})a_{10}=0
+  &\qquad{}+(\lambda_{3}+\lambda_{6}+\lambda_{13})a_{10}=0,
 \end{align*}
 con lo cual obtenemos el siguiente sistema de ecuaciones:
  \[\begin{array}{rrrrr}
@@ -3976,7 +3939,7 @@ al que representamos en su forma matricial:
     0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0  & 0  & 0  & 1  & 0  \\
     0  & 0  & 1  & 0  & 0  & 1  & 0  & 0  & 0  & 0  & 0  & 0  & 1  & 0  & 0 
   \end{tabular}
-\right)\] 
+\right),\] 
 lo llevamos a su forma escalonada:
 \[ \left(
   \begin{tabular}{rrrrrrrrrrrrrrr}
@@ -3991,7 +3954,7 @@ lo llevamos a su forma escalonada:
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  & 0  & 1  & 1  & 1  & 0  & 0  & 0  \\
     0 & 0 & 0 & 0 & 0 & 0 & 0 & 0  & 0  & 0  & 0  & 0  & 0  & 0  & 0 
   \end{tabular}
-\right)\]
+\right).\]
 Como el rango de la matriz es 9, obtenemos $\dim(\im\partial_{1})=9$, lo cual implica que
 $\dim(\im\widehat\partial_{1})=9$ (se sigue de la definición de
 $\widehat\partial_{1}$).
@@ -4001,7 +3964,7 @@ Por el teorema \ref{im-mod-irreducible} tenemos:
   $$\widehat\partial_{1}(S^{(3,1,1)})=0$$
   $$\widehat\partial_{1}(S^{(3,2)})=S^{(4,1)} \quad \mbox{o }\quad \widehat\partial_{1}(S^{(3,2)})=0$$
 además $\dim(S^{(4,1)})=4$ y $\dim(S^{(3,2)})=5$, luego
-$$\im\widehat\partial_{1}=\widehat\partial_{1}(S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)})=S^{(4,1)}\oplus S^{(3,2)}$$
+$$\im\widehat\partial_{1}=\widehat\partial_{1}(S^{(4,1)}\oplus S^{(3,1,1)}\oplus S^{(3,2)})=S^{(4,1)}\oplus S^{(3,2)}.$$
 
 \section{Homologías reducidas de $K(M_{5})$}
 \label{hom-red-KM5}
@@ -4028,7 +3991,7 @@ La familia de $1$-simplejos orientados estará dada por:
     $b_{3}=(a_{1},a_{12})$ & $b_{11}=(a_{4},a_{6})$ & $b_{19}=(a_{7},a_{9})$ & $b_{27}=(a_{10},a_{13})$ \\
     $b_{4}=(a_{1},a_{15})$ & $b_{12}=(a_{4},a_{11})$ & $b_{20}=(a_{7},a_{10})$ & $b_{28}=(a_{11},a_{12})$ \\
     $b_{5}=(a_{2},a_{3})$ & $b_{13}=(a_{4},a_{14})$ & $b_{21}=(a_{7},a_{13})$ & $b_{29}=(a_{11},a_{14})$ \\
-    $b_{6}=(a_{2},a_{9})$ & $b_{14}=(a_{5},a_{6})$ & $b_{22}=(a_{8},a_{9})$ & $b_{30}=(a_{12},a_{15})$ \\
+    $b_{6}=(a_{2},a_{9})$ & $b_{14}=(a_{5},a_{6})$ & $b_{22}=(a_{8},a_{9})$ & $b_{30}=(a_{12},a_{15})$. \\
     $b_{7}=(a_{2},a_{14})$ & $b_{15}=(a_{5},a_{8})$ & $b_{23}=(a_{8},a_{15})$ &  \\
     $b_{8}=(a_{3},a_{6})$ & $b_{16}=(a_{5},a_{15})$ & $b_{24}=(a_{9},a_{14})$ &
   \end{tabular}
@@ -4037,7 +4000,7 @@ Los $2$-simplejos orientados son:
 
 \begin{tabular}[h]{llll}
   $c_{1}=(a_{1},a_{2},a_{3})$ & $c_{4}=(a_{3},a_{6},a_{13})$ &$c_{7}=(a_{5},a_{8},a_{15})$ &$c_{9}=(a_{7},a_{10},a_{13})$ \\
-  $c_{2}=(a_{1},a_{12},a_{15})$ & $c_{5}=(a_{4},a_{5},a_{6})$ &$c_{8}=(a_{7},a_{8},a_{9})$ &$c_{10}=(a_{10},a_{11},a_{12})$ \\
+  $c_{2}=(a_{1},a_{12},a_{15})$ & $c_{5}=(a_{4},a_{5},a_{6})$ &$c_{8}=(a_{7},a_{8},a_{9})$ &$c_{10}=(a_{10},a_{11},a_{12})$. \\
   $c_{3}=(a_{2},a_{9},a_{14})$ & $c_{6}=(a_{4},a_{11},a_{14})$ &  &
 \end{tabular}
 
@@ -4068,8 +4031,8 @@ módulos de Specht por medio de el teorema \ref{frobenius} de la reciprocidad de
 Consideremos:
 \begin{eqnarray*}
 V_{0}=\langle a_{1}\rangle=\langle
-(\overline{12},\overline{34})\rangle\\
-H_{0}=\{g\in S_{5}\mid gV_{0}=V_{0}\}
+(\overline{12},\overline{34})\rangle,\\
+H_{0}=\{g\in S_{5}\mid gV_{0}=V_{0}\}.
 \end{eqnarray*}
 
 Entonces $C_{0}(K(M_{5}))=V_{0}\uparrow^{S_{5}}_{H_0}$ y:
@@ -4098,24 +4061,24 @@ Entonces $C_{0}(K(M_{5}))=V_{0}\uparrow^{S_{5}}_{H_0}$ y:
   \end{table}
 
 \begin{eqnarray*}
-  \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
- \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
-\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1\\
+  \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(5)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1,\\
+ \langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0,\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(4,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1,\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0,\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,1,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=0,\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(3,2)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1,\\
+\langle\chi_{C_{0}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}\uparrow^{S_{5}}_{H_0}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{0}},\chi_{S^{(2,2,1)}\downarrow_{H_{0}}}\rangle_{H_{0}}=1.\\
 \end{eqnarray*}
 Con los productos internos calculados obtenemos:
 \begin{equation}
-C_{0}(K(M_{5}))\cong \mathbb{C}\oplus S^{(4,1)}\oplus S^{(3,2)}\oplus
-S^{(2,2,1)}
-\label{C0-KM5}
+  C_{0}(K(M_{5}))\cong \mathbb{C}\oplus S^{(4,1)}\oplus
+  S^{(3,2)}\oplus S^{(2,2,1)}.
+  \label{C0-KM5}
 \end{equation}
 Consideremos ahora los siguientes conjuntos:
 \begin{eqnarray*}
-V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle((\overline{12},\overline{34}),(\overline{12},\overline{35}))\rangle\\
-H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}=\{(1),(12),(45),(12)(45)\}
+V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle((\overline{12},\overline{34}),(\overline{12},\overline{35}))\rangle,\\
+H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}=\{(1),(12),(45),(12)(45)\}.
 \end{eqnarray*}
 % \begin{align*}
 %   (1)b_{1}&=b_{1}\\
@@ -4145,25 +4108,25 @@ H_{1}=\{g\in S_{5}\mid gV_{1}=V_{1}\}=\{(1),(12),(45),(12)(45)\}
 
 De la tabla \ref{tab:clanes-H_1-5} calculamos los productos internos:
 \begin{eqnarray*}
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}\downarrow_{H_{1}}}\rangle_{H_{1}}=0\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=0\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=2\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1\\
-  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(5)}\downarrow_{H_{1}}}\rangle_{H_{1}}=0,\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=0,\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(4,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1,\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1,\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,1,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=2,\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(3,2)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1,\\
+  \langle\chi_{C_{1}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}\uparrow^{S_{5}}_{H_1}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{1}},\chi_{S^{(2,2,1)}\downarrow_{H_{1}}}\rangle_{H_{1}}=1.
 \end{eqnarray*}
 De donde resulta:
 \begin{equation}
-C_{1}(K(M_{5}))\cong S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus
-2S^{(3,1,1)}\oplus S^{(3,2)} \oplus S^{(2,2,1)}
-\label{C1-KM5}
+  C_{1}(K(M_{5}))\cong S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus
+  2S^{(3,1,1)}\oplus S^{(3,2)} \oplus S^{(2,2,1)}.
+  \label{C1-KM5}
 \end{equation}
 Ahora tomemos los siguientes conjuntos:
 \begin{eqnarray*}
 V_{2}=\langle c_{1}\rangle=\langle
-(a_{1},a_{2},a_{3})\rangle&=&\langle((\overline{12},\overline{34}),(\overline{12},\overline{35}),(\overline{12},\overline{45}))\rangle\\
-H_{2}&=&\{g\in S_{5}\mid gV_{2}=V_{2}\}
+(a_{1},a_{2},a_{3})\rangle&=&\langle((\overline{12},\overline{34}),(\overline{12},\overline{35}),(\overline{12},\overline{45}))\rangle,\\
+H_{2}&=&\{g\in S_{5}\mid gV_{2}=V_{2}\}.
 \end{eqnarray*}
 Con lo cual conseguimos la tabla \ref{tab:clanes-H_2-5}.
 \begin{table}[!hbtp]
@@ -4190,19 +4153,19 @@ Con lo cual conseguimos la tabla \ref{tab:clanes-H_2-5}.
 
 La cual nos ayuda a calcular los siguientes productos internos:
 \begin{eqnarray*}
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(5)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(4,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=1\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=1\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,2)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
-  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,2,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(5)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(5)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0,\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(1,1,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(1,1,1,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0,\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(4,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(4,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0,\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,1,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,1,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=1,\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,1,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,1,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=1,\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(3,2)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(3,2)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0,\\
+  \langle\chi_{C_{2}(K(M_{5}))},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}\uparrow^{S_{5}}_{H_{2}}},\chi_{S^{(2,2,1)}}\rangle_{S_{5}}=\langle\chi_{V_{2}},\chi_{S^{(2,2,1)}\downarrow_{H_{2}}}\rangle_{H_{2}}=0.\\
 \end{eqnarray*}
 
 De donde obtenemos:
 \begin{equation}
-\label{C2-KM5}
-C_{2}(K(M_{5}))\cong S^{(2,1,1,1)}\oplus S^{(3,1,1)}
+  \label{C2-KM5}
+  C_{2}(K(M_{5}))\cong S^{(2,1,1,1)}\oplus S^{(3,1,1)}.
 \end{equation}
 
 En la figura \ref{fig:diagrama-conmutativo-clanes5} se muestra el diagrama
@@ -4236,50 +4199,50 @@ $\widetilde H_{1}(K(M_{5}))$ y $\widetilde H_{2}(K(M_{5}))$.
 Como $\widehat\varepsilon$ es sobreyectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
 \begin{equation*}
   (\mathbb{C}\oplus S^{(4,1)}\oplus S^{(3,2)}\oplus
-  S^{(2,2,1)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
+  S^{(2,2,1)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C},
 \end{equation*}
 así que
 \begin{equation*}
   \label{ker0-KM5}
-  \ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}\oplus S^{(2,2,1)}
+  \ker\widehat\varepsilon\cong S^{(4,1)} \oplus S^{(3,2)}\oplus S^{(2,2,1)}.
 \end{equation*}
 Sabemos que $\widetilde H_{0}(K(M_{5}))=\ker \widehat\varepsilon/\im
-\widehat\partial_{1}=0$ pues $K(M_{5})$ es conexo. Se sigue que $\ker \widehat\varepsilon\cong
+\widehat\partial_{1}=0$, pues $K(M_{5})$ es conexo. Se sigue que $\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
   \label{im1-KM5}
-  \im \widehat\partial_{1}\cong S^{(4,1)} \oplus S^{(3,2)}\oplus S^{(2,2,1)}
+  \im \widehat\partial_{1}\cong S^{(4,1)} \oplus S^{(3,2)}\oplus S^{(2,2,1)}.
 \end{equation}
 
-Además el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-KM5} se tiene:
+Además de el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-KM5} se tiene:
 $$(S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus 2S^{(3,1,1)}\oplus S^{(3,2)}
-\oplus S^{(2,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
+\oplus S^{(2,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}.$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
-\label{ker1-KM5}
-\ker \widehat\partial_{1}=S^{(2,1,1,1)}\oplus 2S^{(3,1,1)}
+  \label{ker1-KM5}
+  \ker \widehat\partial_{1}=S^{(2,1,1,1)}\oplus 2S^{(3,1,1)}.
 \end{equation}
-Por otro lado
+Por otro lado,
 \begin{equation*}
-\im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
-\label{im3-KM5}
+  \im\widehat\partial_{3}=\widehat\partial_{3}(0)=0,
+  \label{im3-KM5}
 \end{equation*}
 pues $\widehat\partial_{3}$ es un morfismo de módulos. Ya que
 $M_{5}\simeq K(M_{5})$ (resultado de \cite{larrion2009clique}), por el teorema
-\ref{esp-homotopicos-homologias-iso} tenemos que $\widetilde
+\ref{esp-homotopicos-homologias-iso}, tenemos que $\widetilde
 H_{2}(M_{5})\cong\widetilde H_{2}(K(M_{5}))$ y  $\widetilde H_{2}(M_{5})=0$, así que:
 
 \begin{equation*}
-\widetilde H_{2}(K(M_{5}))=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0.
+\widetilde H_{2}(K(M_{5}))=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0,
 \end{equation*}
 por lo que $\ker \widehat\partial_{2}=0$. De el teorema
 \ref{teorema-isomorfismo-mod} tenemos:
 $$(S^{(2,1,1,1)}\oplus S^{(3,1,1)})/\ker \widehat\partial_{2}\cong \im
-\widehat\partial_{2}$$
+\widehat\partial_{2}.$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
-\im \widehat\partial_{2}=S^{(2,1,1,1)}\oplus S^{(3,1,1)}
-\label{im2-KM5}
+  \im \widehat\partial_{2}=S^{(2,1,1,1)}\oplus S^{(3,1,1)}.
+  \label{im2-KM5}
 \end{equation}
 
 De las ecuaciones \ref{ker1-KM5} y \ref{im2-KM5} tenemos:
@@ -4310,7 +4273,7 @@ así que:
     &+\lambda_{4}(a_{6}a_{13}-a_{3}a_{13}+a_{3}a_{6})+\lambda_{5}(a_{5}a_{6}-a_{4}a_{6}+a_{4}a_{5})+\lambda_{6}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11})\\
     &+\lambda_{7}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8})+\lambda_{8}(a_{8}a_{9}-a_{7}a_{9}+a_{7}a_{8})+\lambda_{9}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10})\\
     &+\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11})\\
-    &=0
+    &=0.
   \end{align*}
 \end{footnotesize}
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{10}=0$,
@@ -4325,10 +4288,13 @@ $\dim(\im\widehat\partial_{2})=10$ (se sigue de la definición de
 $\widehat\partial_{2}$).
 
 Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
-$$\widehat\partial_{2}(S^{(2,1,1,1)})=S^{(2,1,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(2,1,1,1)})=0$$
-$$\widehat\partial_{2}(S^{(3,1,1)})=S^{(3,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1)})=0$$
+\begin{align*}
+\widehat\partial_{2}(S^{(2,1,1,1)})=S^{(2,1,1,1)} \quad & \mbox{o }\quad \widehat\partial_{2}(S^{(2,1,1,1)})=0\\
+&\mbox{y}\\
+\widehat\partial_{2}(S^{(3,1,1)})=S^{(3,1,1)} \quad & \mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1)})=0.
+\end{align*}
 Además $\dim(S^{(2,1,1,1)})=4$ y $\dim(S^{(3,1,1)})=6$, entonces:
-$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(2,1,1,1)}\oplus S^{(3,1,1)}$$
+$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1)}\oplus S^{(3,1,1)})=S^{(2,1,1,1)}\oplus S^{(3,1,1)}.$$
 
 \section{Homologías reducidas de $M_{6}$}
 \label{hom-red-M6}
@@ -4355,7 +4321,7 @@ los $1$-simplejos:
     $b_{6}=(a_{1},a_{15})$ & $b_{18}=(a_{3},a_{15})$ & $b_{30}=(a_{5},a_{13})$ & $b_{42}=(a_{9},a_{13})$ \\
     $b_{7}=(a_{2},a_{7})$ & $b_{19}=(a_{4},a_{6})$ & $b_{31}=(a_{6},a_{13})$ & $b_{43}=(a_{10},a_{15})$ \\
     $b_{8}=(a_{2},a_{8})$ & $b_{20}=(a_{4},a_{7})$ & $b_{32}=(a_{6},a_{14})$ & $b_{44}=(a_{11},a_{14})$ \\
-    $b_{9}=(a_{2},a_{9})$ & $b_{21}=(a_{4},a_{9})$ & $b_{33}=(a_{6},a_{15})$ & $b_{45}=(a_{12},a_{13})$ \\
+    $b_{9}=(a_{2},a_{9})$ & $b_{21}=(a_{4},a_{9})$ & $b_{33}=(a_{6},a_{15})$ & $b_{45}=(a_{12},a_{13})$. \\
     $b_{10}=(a_{2},a_{13})$ & $b_{22}=(a_{4},a_{10})$ & $b_{34}=(a_{7},a_{11})$ &  \\
     $b_{11}=(a_{2},a_{14})$ & $b_{23}=(a_{4},a_{12})$ & $b_{35}=(a_{7},a_{12})$ &  \\
     $b_{12}=(a_{2},a_{15})$ & $b_{24}=(a_{4},a_{14})$ & $b_{36}=(a_{7},a_{15})$ &  
@@ -4368,7 +4334,7 @@ y los $2$-simplejos:
     $c_{2}=(a_{1},a_{11},a_{14})$ & $c_{7}=(a_{3},a_{6},a_{15})$ & $c_{12}=(a_{4},a_{9},a_{10})$  \\
     $c_{3}=(a_{1},a_{12},a_{13})$ & $c_{8}=(a_{3},a_{8},a_{12})$ & $c_{13}=(a_{5},a_{6},a_{13})$  \\
     $c_{4}=(a_{2},a_{7},a_{15})$ & $c_{9}=(a_{3},a_{9},a_{11})$ & $c_{14}=(a_{5},a_{7},a_{11})$  \\
-    $c_{5}=(a_{2},a_{8},a_{14})$ & $c_{10}=(a_{4},a_{6},a_{14})$ & $c_{15}=(a_{5},a_{8},a_{10})$  
+    $c_{5}=(a_{2},a_{8},a_{14})$ & $c_{10}=(a_{4},a_{6},a_{14})$ & $c_{15}=(a_{5},a_{8},a_{10})$.  
   \end{tabular}
 \end{center}
 
@@ -4424,7 +4390,7 @@ y los $2$-simplejos:
   módulos de Specht de forma análoga como se hizo en los ejemplos anteriores.
   
   Consideremos:
-  $$V_{0}=\langle a_{1}\rangle=\langle (\overline{12})\rangle$$
+  $$V_{0}=\langle a_{1}\rangle=\langle (\overline{12})\rangle,$$
 
   \begin{footnotesize}
     \begin{align*}
@@ -4434,7 +4400,7 @@ y los $2$-simplejos:
       &(12)(46),(12)(56),(34)(56),(35)(46),(36)(45),(3456),(3465),(3546),(3564),\\
       &(3645),(3654),(345)(12),(346)(12),(354)(12),(356)(12),(364)(12),(365)(12),\\
       &(456)(12),(465)(12),(12)(34)(56),(12)(35)(46),(12)(36)(45),(3456)(12),\\
-      &(3465)(12),(3546)(12),(3564)(12),(3645)(12),(3654)(12)\}
+      &(3465)(12),(3546)(12),(3564)(12),(3645)(12),(3654)(12)\}.
     \end{align*}
   \end{footnotesize}
 
@@ -4466,20 +4432,20 @@ y los $2$-simplejos:
   De los productos internos calculados a partir de la la tabla
   \ref{tab:restriccion-H_0-M-6} obtenemos:
   \begin{equation}
-    C_{0}(M_{6})\cong \mathbb{C}\oplus S^{(5,1)}\oplus S^{(4,2)}
+    C_{0}(M_{6})\cong \mathbb{C}\oplus S^{(5,1)}\oplus S^{(4,2)}.
     \label{C0-M6}
   \end{equation}
   Ahora tomemos:
   \begin{equation*}
     V_{1}=\langle b_{1}\rangle =\langle
-    (a_{1},a_{2})\rangle=\langle(\overline{12},\overline{34})\rangle
+    (a_{1},a_{2})\rangle=\langle(\overline{12},\overline{34})\rangle,
   \end{equation*}
   \begin{small}
     \begin{align*}
       H_{1}=&\{g \in S_{6}\mid
       gV_{1}=V_{1}\}=\{(1),(12),(34),(56),(12)(34),(12)(56),(34)(56),\\
       &(13)(24),(14)(23),(12)(34)(56),(13)(24)(56),(14)(23)(56),(2314),\\
-      &(2413),(2314)(56),(2413)(56)\}
+      &(2413),(2314)(56),(2413)(56)\}.
     \end{align*}
   \end{small}
   Con $V_{1}$ y $H_{1}$ construimos la tabla
@@ -4516,12 +4482,12 @@ y los $2$-simplejos:
     De donde obtenemos:
     \begin{equation}
       C_{1}(M_{6})=S^{(5,1)}\oplus S^{{(4,1,1)}} \oplus S^{{(4,2)}}
-      \oplus S^{{(3,3)}} \oplus S^{{(3,2,1)}}
+      \oplus S^{{(3,3)}} \oplus S^{{(3,2,1)}}.
       \label{C1-M6}
     \end{equation}
     Por último consideremos:
     \begin{equation*}
-      V_{2}=\langle c_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle
+      V_{2}=\langle c_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle,
     \end{equation*}
   %\end{footnotesize}
   \begin{tiny}
@@ -4531,7 +4497,7 @@ y los $2$-simplejos:
       &(35)(46),(36)(45),(12)(34)(56),(13)(24)(56),(14)(23)(56),(15)(26)(34),(16)(25)(34),(35)(46)(12),\\
       &(36)(45)(12),(2314),(2413),(1625),(1526),(3546),(3645),(2314)(56),(2413)(56),(1625)(34),(1526)(34),\\
       &(3546)(12),(3645)(12),(135)(246),(136)(245),(145)(236),(146)(235),(153)(264),(154)(263),(163)(254),\\
-      &(164)(253),(135246),(136245),(145236),(146235),(153264),(154263),(163254),(164253)\}
+      &(164)(253),(135246),(136245),(145236),(146235),(153264),(154263),(163254),(164253)\}.
     \end{align*}
   \end{tiny}
 
@@ -4562,7 +4528,7 @@ y los $2$-simplejos:
   \end{table}
   De la tabla \ref{tab:restriccion-H_2-M-6} obtenemos:
   \begin{equation}
-    C_{2}(M_{6})\cong S^{(4,1,1)}\oplus S^{(3,3)}
+    C_{2}(M_{6})\cong S^{(4,1,1)}\oplus S^{(3,3)}.
     \label{C2-M6}
   \end{equation}
 
@@ -4597,28 +4563,28 @@ H_{0}(M_{6})$, $\widetilde H_{1}(M_{6})$ y $\widetilde H_{2}(M_{6})$.
 
 Como $\widehat\varepsilon$ es sobreyectiva y por el teorema \ref{teorema-isomorfismo-mod} tenemos:
 \begin{equation*}
-  (\mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C}
+  (\mathbb{C} \oplus S^{(5,1)}\oplus S^{(4,2)})/\ker\widehat\varepsilon\cong \im \widehat\varepsilon=\mathbb{C},
 \end{equation*}
 
 así que
 \begin{equation*}
   \label{ker0-M6}
-  \ker\widehat\varepsilon\cong  S^{(5,1)}\oplus S^{(4,2)} 
+  \ker\widehat\varepsilon\cong  S^{(5,1)}\oplus S^{(4,2)}, 
 \end{equation*}
 Sabemos que $\widetilde H_{0}(M_{6})=\ker \widehat\varepsilon/\im
 \widehat\partial_{1}=0$ pues $M_{6}$ es conexo, se sigue que~$\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
   \label{im1-M6}
-  \im \widehat\partial_{1}\cong  S^{(5,1)}\oplus S^{(4,2)} 
+  \im \widehat\partial_{1}\cong  S^{(5,1)}\oplus S^{(4,2)}. 
 \end{equation}
 
 Además de el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-M6} se tiene:
 $$(S^{(5,1)}\oplus S^{(4,1,1)}\oplus S^{(4,2)}\oplus S^{(3,3)}\oplus S^{(3,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
-\label{ker1-M6}
-\ker \widehat\partial_{1}=S^{(4,1,1)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}
+  \label{ker1-M6}
+  \ker \widehat\partial_{1}=S^{(4,1,1)}\oplus S^{(3,3)}\oplus S^{(3,2,1)}.
 \end{equation}
 \begin{figure}[h]
   \centering
@@ -4687,25 +4653,25 @@ De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 
 Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
 \begin{equation*}
-\im\widehat\partial_{3}=\widehat\partial_{3}(0)=0
-\label{im3-KM5}
+  \im\widehat\partial_{3}=\widehat\partial_{3}(0)=0.
+  \label{im3-KM5}
 \end{equation*}
 Considerando la figura \ref{fig:emparejamiento6-1}. Se observa que contrayendo los
 triángulos, se encuentra que $G_{6}$ es homotópica a $BK(G_{6})$ esto
 puede demostrarse formalmente ocupando los resultados que aparecen en
-\cite{LPV08a} y \cite{Pri92}. Por el teorema~\ref{esp-homotopicos-homologias-iso} tenemos $\widetilde
+\cite{LPV08a} y \cite{Pri92}. Por el teorema~\ref{esp-homotopicos-homologias-iso}, $\widetilde
 H_{2}(M_{6})\cong\widetilde H_{2}(\Delta(BK(G_{6})))$. Además
-$\widetilde H_{2}(\Delta(BK(G_{6})))=0$ pues en~$BK(G_{6})$ no existen $2$-simplejos.
+$\widetilde H_{2}(\Delta(BK(G_{6})))=0$, pues en~$BK(G_{6})$ no existen $2$-simplejos.
 %$$G_{6}\simeq
 %H(G_{6})=\varepsilon(BK(G_{6}))=L(BK(G_{6}))=K(BK(G_{6}))\simeq BK(G_{6})$$
 
 Por lo que:
 \begin{equation*}
-\widetilde H_{2}(M_{6})=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0.
+  \widetilde H_{2}(M_{6})=\ker \widehat\partial_{2}/\im \widehat\partial_{3}=0,
 \end{equation*}
 por lo que $\im \widehat\partial_{3}=\ker \widehat\partial_{2}$. De el teorema
 \ref{teorema-isomorfismo-mod} tenemos:
-$$(S^{(4,1,1)}\oplus S^{(3,3)})/\ker \widehat\partial_{2}\cong \im \widehat\partial_{2}$$
+$$(S^{(4,1,1)}\oplus S^{(3,3)})/\ker \widehat\partial_{2}\cong \im \widehat\partial_{2}.$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
 \im \widehat\partial_{2}=S^{(4,1,1)}\oplus S^{(3,3)}.
@@ -4719,7 +4685,7 @@ De las ecuaciones \ref{ker1-M6}, \ref{im2-M6} y la proposición
   \widehat\partial_{2}\\
   &=&(S^{(4,1,1)}\oplus S^{(3,3)}\oplus
   S^{(3,2,1)})/(S^{(4,1,1)}\oplus S^{(3,3)})\\
-  &=&S^{(3,2,1)}
+  &=&S^{(3,2,1)}.
 \end{eqnarray*}
 
 En lo anterior usamos el hecho de que $G_{6}\simeq BK(G_{6})$, de donde
@@ -4732,8 +4698,7 @@ Verifiquemos primero que $\dim(\im \partial_{2})=15$. Del teorema
 veamos que el número de vectores linealmente independientes de la
 $\im \partial_{2}$ es 15, es decir, si
 $$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{15}\partial_{2}(c_{15})=0$$
-así que:
-
+entonces,
 \begin{footnotesize}
   \begin{align*}
     &\lambda_{1}(a_{10}a_{15}-a_{1}a_{15}+a_{1}a_{10})+\lambda_{2}(a_{11}a_{14}-a_{1}a_{14}+a_{1}a_{11})+\lambda_{3}(a_{12}a_{13}-a_{1}a_{13}+a_{1}a_{12})\\
@@ -4741,7 +4706,7 @@ así que:
     &+\lambda_{7}(a_{6}a_{15}-a_{3}a_{15}+a_{3}a_{6})+\lambda_{8}(a_{8}a_{12}-a_{3}a_{12}+a_{3}a_{8})+\lambda_{9}(a_{9}a_{11}-a_{3}a_{11}+a_{3}a_{9})\\
     &+\lambda_{10}(a_{6}a_{14}-a_{4}a_{14}+a_{4}a_{6})+\lambda_{11}(a_{7}a_{12}-a_{4}a_{12}+a_{4}a_{7})+\lambda_{12}(a_{9}a_{10}-a_{4}a_{10}+a_{4}a_{9})\\
     &+\lambda_{13}(a_{6}a_{13}-a_{5}a_{13}+a_{5}a_{6})+\lambda_{14}(a_{7}a_{11}-a_{5}a_{11}+a_{5}a_{7})+\lambda_{15}(a_{8}a_{10}-a_{5}a_{10}+a_{5}a_{8})\\
-    &=0
+    &=0.
   \end{align*}
 \end{footnotesize}
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{15}=0$,
@@ -4756,11 +4721,15 @@ $\dim(\im\widehat\partial_{2})=15$ (se sigue de la definición de
 $\widehat\partial_{2}$).
 
 Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
-  $$\widehat\partial_{2}(S^{(4,1,1)})=S^{(4,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(4,1,1)})=0$$
-  $$\widehat\partial_{2}(S^{(3,3)})=S^{(3,3)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,3)})=0$$
+\begin{align*}
+  \widehat\partial_{2}(S^{(4,1,1)})=S^{(4,1,1)} \quad &\mbox{o }\quad \widehat\partial_{2}(S^{(4,1,1)})=0\\
+  &\mbox{y}\\
+  \widehat\partial_{2}(S^{(3,3)})=S^{(3,3)} \quad &\mbox{o }\quad \widehat\partial_{2}(S^{(3,3)})=0
+\end{align*}
+
   Además $\dim(S^{(4,1,1)})=10$ y $\dim(S^{(3,3)})=5$, entonces:
   $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(4,1,1)}\oplus
-  S^{(3,3)})=S^{(4,1,1)}\oplus S^{(3,3)}$$
+  S^{(3,3)})=S^{(4,1,1)}\oplus S^{(3,3)}.$$
 
 \section{Homologías reducidas de $K(M_{6})$}
 \label{hom-red-KM6}
@@ -4776,7 +4745,7 @@ $M_{6}$):
     $a_{2}=(\overline{12},\overline{35},\overline{46})$&$a_{7}=(\overline{14},\overline{23},\overline{56})$&$a_{12}=(\overline{15},\overline{26},\overline{34})$  \\
     $a_{3}=(\overline{12},\overline{36},\overline{45})$&$a_{8}=(\overline{14},\overline{25},\overline{36})$&$a_{13}=(\overline{16},\overline{23},\overline{45})$  \\
     $a_{4}=(\overline{13},\overline{24},\overline{56})$&$a_{9}=(\overline{14},\overline{26},\overline{35})$&$a_{14}=(\overline{16},\overline{24},\overline{35})$ \\
-    $a_{5}=(\overline{13},\overline{25},\overline{46})$&$a_{10}=(\overline{15},\overline{23},\overline{46})$&$a_{15}=(\overline{16},\overline{25},\overline{34})$  
+    $a_{5}=(\overline{13},\overline{25},\overline{46})$&$a_{10}=(\overline{15},\overline{23},\overline{46})$&$a_{15}=(\overline{16},\overline{25},\overline{34}).$  
   \end{tabular}
 \end{center}
 
@@ -4791,7 +4760,7 @@ el conjunto $1$-simplejos:
     $b_{6}=(a_{1},a_{15})$ & $b_{18}=(a_{6},a_{13})$ & $b_{30}=(a_{6},a_{12})$&$b_{42}=(a_{11},a_{14})$\\ 
     $b_{7}=(a_{2},a_{3})$ & $b_{19}=(a_{8},a_{11})$ & $b_{31}=(a_{7},a_{8})$&$b_{43}=(a_{13},a_{14})$\\
     $b_{8}=(a_{2},a_{5})$ & $b_{20}=(a_{9},a_{14})$ & $b_{32}=(a_{7},a_{9})$&$b_{44}=(a_{13},a_{15})$\\
-    $b_{9}=(a_{2},a_{9})$ & $b_{21}=(a_{12},a_{15})$ & $b_{33}=(a_{7},a_{10})$&$b_{45}=(a_{14},a_{15})$\\
+    $b_{9}=(a_{2},a_{9})$ & $b_{21}=(a_{12},a_{15})$ & $b_{33}=(a_{7},a_{10})$&$b_{45}=(a_{14},a_{15})$.\\
     $b_{10}=(a_{2},a_{10})$ & $b_{22}=(a_{4},a_{5})$ & $b_{34}=(a_{7},a_{13})$&\\
     $b_{11}=(a_{2},a_{14})$ & $b_{23}=(a_{4},a_{6})$ & $b_{35}=(a_{8},a_{9})$&\\
     $b_{12}=(a_{3},a_{6})$ & $b_{24}=(a_{4},a_{11})$ & $b_{36}=(a_{8},a_{15})$&
@@ -4805,7 +4774,7 @@ y los $2$-simplejos:
     $c_{2}=(a_{1},a_{4},a_{7})$ & $c_{7}=(a_{3},a_{8},a_{11})$ & $c_{12}=(a_{7},a_{10},a_{13})$\\
     $c_{3}=(a_{1},a_{12},a_{15})$& $c_{8}=(a_{4},a_{5},a_{6})$ & $c_{13}=(a_{4},a_{11},a_{14})$\\
     $c_{4}=(a_{2},a_{5},a_{10})$& $c_{9}=(a_{7},a_{8},a_{9})$ & $c_{14}=(a_{5},a_{8},a_{15})$\\
-    $c_{5}=(a_{2},a_{9},a_{14})$& $c_{10}=(a_{10},a_{11},a_{12})$ & $c_{15}=(a_{6},a_{9},a_{12})$
+    $c_{5}=(a_{2},a_{9},a_{14})$& $c_{10}=(a_{10},a_{11},a_{12})$ & $c_{15}=(a_{6},a_{9},a_{12})$.
   \end{tabular}
 \end{center}
 
@@ -4830,7 +4799,7 @@ cadenas $C_{0}(K(M_{6}))$, $C_{1}(K(M_{6}))$ y $C_{2}(K(M_{6}))$ en
 módulos de Specht por medio de el teorema \ref{frobenius} de la reciprocidad de Frobenius.
 
 Consideremos:
-  $$V_{0}=\langle a_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle$$
+  $$V_{0}=\langle a_{1}\rangle=\langle(\overline{12},\overline{34},\overline{56})\rangle,$$
   \begin{footnotesize}
     \begin{align*}
       H_{0}=&\{g\in S_{6}\mid
@@ -4840,7 +4809,7 @@ Consideremos:
       &(35)(46)(12),(36)(45)(12),(153)(264),(135)(246),(145)(236),(154)(263),\\
       &(136)(245),(163)(254),(146)(235),(164)(253),(1423)(56),(1324)(56),(1625)(34),\\
       &(1526)(34),(3645)(12),(3546)(12),(135246),(136245),(145236),(146235),\\
-      &(153264),(154263),(163254),(164253)\}
+      &(153264),(154263),(163254),(164253)\}.
     \end{align*}
   \end{footnotesize}
 
@@ -4872,16 +4841,16 @@ Consideremos:
   Con los productos internos calculados a partir de la tabla
   \ref{tab:clanes-H_0-6} obtenemos:
   \begin{equation}
-    C_{0}(K(M_{6}))\cong \mathbb{C}\oplus S^{(4,2)}\oplus S^{(2,2,2)}
+    C_{0}(K(M_{6}))\cong \mathbb{C}\oplus S^{(4,2)}\oplus S^{(2,2,2)}.
     \label{C0-KM6}
   \end{equation}
 Consideremos los siguientes conjuntos:
-  $$V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46})\rangle$$
+  $$V_{1}=\langle b_{1}\rangle=\langle (a_{1},a_{2})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46})\rangle,$$
   \begin{footnotesize}
     \begin{align*}
       H_{1}&=\{g\in S_{6}\mid gV_{1}=V_{1}\}\\
       &=\{(1),(12),(36),(45),(12)(36),(12)(45),(34)(56),(35)(46),(36)(45),(12)(34)(56),\\
-      &\qquad{}(12)(35)(46),(12)(36)(45),(12)(3564),(12)(3465),(3564),(3465)\}
+      &\qquad{}(12)(35)(46),(12)(36)(45),(12)(3564),(12)(3465),(3564),(3465)\}.
     \end{align*}
   \end{footnotesize}
   Los conjuntos $V_{1}$ y $H_{1}$ nos ayudan a construir la tabla \ref{tab:clanes-H_1-6}.
@@ -4914,12 +4883,12 @@ Consideremos los siguientes conjuntos:
   anterior resulta:
   \begin{equation}
     C_{1}(K(M_{6}))\cong S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus
-    S^{(4,2)} \oplus S^{(2,2,2)}\oplus S^{(3,2,1)}
+    S^{(4,2)} \oplus S^{(2,2,2)}\oplus S^{(3,2,1)}.
     \label{C1-KM6}
   \end{equation}
   Ahora tomemos los siguientes conjuntos:
   $$V_{2}=\langle c_{1}\rangle=\langle
-  (a_{1},a_{2},a_{3})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46}),(\overline{12},\overline{36},\overline{45})\rangle$$
+  (a_{1},a_{2},a_{3})\rangle=\langle(\overline{12},\overline{34},\overline{56}),(\overline{12},\overline{35},\overline{46}),(\overline{12},\overline{36},\overline{45})\rangle,$$
 
 \begin{footnotesize}
   \begin{align*}
@@ -4929,7 +4898,7 @@ Consideremos los siguientes conjuntos:
     &(12)(46),(12)(56),(34)(56),(35)(46),(36)(45),(3456),(3465),(3546),(3564),\\
     &(3645),(3654),(345)(12),(346)(12),(354)(12),(356)(12),(364)(12),(365)(12),\\
     &(456)(12),(465)(12),(12)(34)(56),(12)(35)(46),(12)(36)(45),(3456)(12),\\
-    &(3465)(12),(3546)(12),(3564)(12),(3645)(12),(3654)(12)\}
+    &(3465)(12),(3546)(12),(3564)(12),(3645)(12),(3654)(12)\}.
   \end{align*}
 \end{footnotesize}
 
@@ -4962,7 +4931,7 @@ Consideremos los siguientes conjuntos:
 De donde obtenemos:
 
 \begin{equation}
-  C_{2}(K(M_{6}))\cong S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
+  C_{2}(K(M_{6}))\cong S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}.
   \label{C2-KM6}
 \end{equation}
 
@@ -5002,23 +4971,23 @@ Como $\widehat\varepsilon$ es sobreyectiva y por el teorema
 así que
 \begin{equation*}
   \label{ker0-KM6}
-  \ker\widehat\varepsilon\cong S^{(4,2)}\oplus S^{(2,2,2)}
+  \ker\widehat\varepsilon\cong S^{(4,2)}\oplus S^{(2,2,2)}.
 \end{equation*}
 Sabemos que $\widetilde H_{0}(K(M_{6}))=\ker \widehat\varepsilon/\im
 \widehat\partial_{1}=0$ pues $K(M_{6})$ es conexo, se sigue que $\ker \widehat\varepsilon\cong
 \im\widehat\partial_{1}$, con lo cual:
 \begin{equation}
   \label{im1-KM6}
-  \im \widehat\partial_{1}\cong S^{(4,2)}\oplus S^{(2,2,2)}
+  \im \widehat\partial_{1}\cong S^{(4,2)}\oplus S^{(2,2,2)}.
 \end{equation}
 
 Además de el teorema \ref{teorema-isomorfismo-mod} y la expresión \ref{im1-KM6} se tiene:
 $$(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus
-      S^{(2,2,2)}\oplus S^{(3,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}$$
+      S^{(2,2,2)}\oplus S^{(3,2,1)})/\ker \widehat\partial_{1}\cong \im \widehat\partial_{1}.$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
-\label{ker1-KM6}
-\ker \widehat\partial_{1}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}
+  \label{ker1-KM6}
+  \ker \widehat\partial_{1}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(3,2,1)}.
 \end{equation}
 Por otro lado, $\widehat\partial_{3}$ es un morfismo de módulos, así que:
 \begin{equation*}
@@ -5035,11 +5004,11 @@ H_{2}(M_{6})=0$, así que:
 por lo que $\ker \widehat\partial_{2}=0$. De el teorema
 \ref{teorema-isomorfismo-mod} tenemos:
 $$(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})/\ker \widehat\partial_{2}\cong \im
-\widehat\partial_{2}$$
+\widehat\partial_{2}.$$
 De lo anterior y la proposición \ref{modulos-iguales} tenemos:
 \begin{equation}
-\im \widehat\partial_{2}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}
-\label{im2-KM6}
+  \im \widehat\partial_{2}=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}.
+  \label{im2-KM6}
 \end{equation}
 
 De las ecuaciones \ref{ker1-KM6} y \ref{im2-KM6} tenemos:
@@ -5048,10 +5017,10 @@ De las ecuaciones \ref{ker1-KM6} y \ref{im2-KM6} tenemos:
   \widehat\partial_{2}\\
   &=&(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus
   S^{(3,2,1)})/(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})\\
-  &=&S^{(3,2,1)}
+  &=&S^{(3,2,1)}.
 \end{eqnarray*}
 
-Anteriormente usamos el hecho de que $M_{6}\simeq K(M_{6})$  para
+De igual modo que en $M_{5}$, usamos el hecho de que $M_{6}\simeq K(M_{6})$  para
 concluir que $\widetilde H_{2}(K(M_{6}))=\widetilde H_{2}(M_{6})=0$, sin embargo veamos que 
 es posible calcular $\im \widehat\partial_{2}$ por medio de cálculos elementales.
 
@@ -5061,7 +5030,7 @@ $\im \partial_{2}=\langle\partial_{2}(c_{1}),\ldots,\partial_{2}(c_{15})\rangle$
 veamos que el número de vectores linealmente independientes de la
 $\im \partial_{2}$ es 15, es
 decir, si
-$$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{15}\partial_{2}(c_{15})=0$$
+$$\lambda_{1}\partial_{2}(c_{1})+\lambda_{2}\partial_{2}(c_{2})+\ldots+\lambda_{15}\partial_{2}(c_{15})=0,$$
 así que:
 
 \begin{footnotesize}
@@ -5072,10 +5041,9 @@ así que:
     &+\lambda_{10}(a_{11}a_{12}-a_{10}a_{12}+a_{10}a_{11})+\lambda_{11}(a_{14}a_{15}-a_{13}a_{15}+a_{13}a_{14})\\
     &+\lambda_{12}(a_{10}a_{13}-a_{7}a_{13}+a_{7}a_{10})+\lambda_{13}(a_{11}a_{14}-a_{4}a_{14}+a_{4}a_{11})\\
     &+\lambda_{14}(a_{8}a_{15}-a_{5}a_{15}+a_{5}a_{8})\lambda_{15}(a_{9}a_{12}-a_{6}a_{12}+a_{6}a_{9})\\
-    &=0
+    &=0.
   \end{align*}
 \end{footnotesize}
-
 Claramente $\lambda_{1}=\lambda_{2}=\cdots=\lambda_{15}=0$,
 intuitivamente esto se puede deducir de la gráfica \ref{fig:KG_5}.
 Sea $b_{j}$ la frontera de algún $2$-simplejo $c_{i}$, las aristas
@@ -5088,10 +5056,15 @@ $\dim(\im\widehat\partial_{2})=15$ (se sigue de la definición de
 $\widehat\partial_{2}$).
 
 Ahora, por el teorema \ref{im-mod-irreducible} tenemos:
-  $$\widehat\partial_{2}(S^{(2,1,1,1,1)})=S^{(2,1,1,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(2,1,1,1,1)})=0$$
-  $$\widehat\partial_{2}(S^{(3,1,1,1)})=S^{(3,1,1,1)} \quad \mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1,1)})=0$$
+\begin{align*}
+  \widehat\partial_{2}(S^{(2,1,1,1,1)})=S^{(2,1,1,1,1)} \quad &\mbox{o
+  }\quad \widehat\partial_{2}(S^{(2,1,1,1,1)})=0\\
+  &\mbox{y}\\
+  \widehat\partial_{2}(S^{(3,1,1,1)})=S^{(3,1,1,1)} \quad &\mbox{o }\quad \widehat\partial_{2}(S^{(3,1,1,1)})=0.
+\end{align*}
+
 Además $\dim(S^{(2,1,1,1,1)})=5$ y $\dim(S^{(3,1,1,1)})=10$, entonces:
-$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}$$
+$$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)})=S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}.$$
 
 \chapter*{Conclusiones}
  
@@ -5121,7 +5094,7 @@ K(G_{n})$ para $n\leq 8$. Esto implica, por el teorema
 se tiene el siguiente isomorfismo como espacios vectoriales:
 \begin{equation}
   \label{equ:iso}
-  \widetilde H_{k}(M_{n})\cong \widetilde H_{k}(K(M_{n}))
+  \widetilde H_{k}(M_{n})\cong \widetilde H_{k}(K(M_{n})).
 \end{equation}
 
 Surge la pregunta interesante si también se da el isomorfismo entre
