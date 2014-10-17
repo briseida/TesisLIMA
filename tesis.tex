@@ -148,7 +148,7 @@ gráfica de clanes $K(G_{n})$, donde $n\leq 6$.
   {\bfseries\Large Abstract}
 \end{flushleft}
 
-In this thesis we seek to analyze the structure of the homology of
+In this work we seek to analyze the structure of the homology of
 certain simplicial complexes built from a finite graph where the
 symmetric group~$S_{n}$ acts. 
 
@@ -159,7 +159,7 @@ $G_{n}=M(K_{n})$, the group~$S_{n}$ acts naturally, so their homology
 with coefficients in the field of complex numbers define representations of $S_{n}$. 
 
 The decomposition into irreducibles of such homologies has been shown
-by Bouc (1984). In this thesis, we show the corresponding calculations for
+by Bouc (1984). In this work, we show the corresponding calculations for
 the clique graph $K(G_{n})$, where $n\leq 6$.
 
 \chapter*{Introducción}
@@ -304,34 +304,41 @@ gráficas de clanes $K(G_{n})$, para $n\leq 6$.
 
  \newpage \thispagestyle{empty}
 
-\chapter{Repaso de álgebra lineal}
+\chapter{Preliminares}
 \label{cha:repaso-algebra-lineal}
 
-En éste capítulo se revisan algunos resultados de álgebra lineal, las
-pruebas se omiten pero se puede consultar algún texto de álgebra
-lineal como \cite{friedberg1982algebra}
-para más  detalles. En éste trabajo todos los espacios vectoriales
-considerados serán dimensionalmente finitos y sobre el campo de los
-números complejos.
+En la sección 1.1 se revisan algunos resultados de álgebra lineal, algunas
+pruebas se omiten pero se puede consultar en
+\cite{friedberg1982algebra} y \cite{herstein1990algebra}. 
 
-\section{Espacios vectoriales}
+En la seccion 1.2 grupos...
+
+En la sección 1.3 .... es definir gráfica de clanes y gráfica
+bipartita clánica para lo cual necesitamos algunas definiciones previas. Las definiciones aquí
+escritas se pueden consultar en \cite{harary} y \cite{LPV08a}. Además
+a las gráficas les asociamos complejos simpliciales.
+
+% En éste trabajo todos los espacios vectoriales considerados serán de
+% dimensión finita y sobre el campo de los números complejos.
+
+\section{Álgebra lineal}
 \label{esp-vec}
 
 \begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.9, p.42]}.
   \label{clunica}
   Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
-  subconjunto de $V$. Luego $\beta$ es una base de $V$ si y solo si
-  cada vector $y\in V$ puede ser expresado de manera única como una
+  subconjunto de $V$. Entonces $\beta$ es una base de $V$, si y solo si
+  cada vector $v\in V$ puede ser expresado de manera única como una
   combinación lineal de vectores de~$\beta$, es decir, puede ser
   expresado de la forma
-  $$y=\lambda_{1}v_{1}+\cdots+\lambda_{n}v_{n}$$
+  $$v=\lambda_{1}v_{1}+\cdots+\lambda_{n}v_{n}$$
   para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
 \end{theorem}
 
 \begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.12, p.50]}.
   \label{esp-iguales}
   Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
-  $n$. Entonces, $W$ es dimensionalmente finito y $\dim(W)\leq
+  $n$. Entonces, $W$ es de dimensión finita y $\dim(W)\leq
   n$. Además, si~$\dim(W)=n$, entonces $W=V$.
 \end{theorem}
 
@@ -373,7 +380,7 @@ Se puede demostrar lo siguiente:
 \item $v_{1}+W=v_{2}+W$ si y solo si $v_{1}-v_{2}\in W.$
 \end{itemize}
 La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
-V\}$ de todos las clases laterales de $W$ como: 
+V\}$ de todas las clases laterales de $W$ como: 
 \begin{itemize}
 \item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
 \item $a(v+W)=av+W$ para todo $v\in V$ y $a\in \mathbb{C}$.
@@ -385,7 +392,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
   definidas anteriormente y se llama \textbf{espacio cociente de $V$ módulo $W$} y se denota mediante $V/W$. 
 \end{definition}
 
-\begin{theorem}
+\begin{theorem}{[\cite{herstein1990algebra}, lema 4.8, p.168]}.
   \label{dim-esp-coc}
   Sea $(V/W)$ el espacio cociente de $V$ módulo $W$, se tiene:
   $$\dim(V/W)=\dim(V)-\dim(W)$$
@@ -398,13 +405,13 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 %   $$\dim(W_{1}+W_{2})=\dim(W_{1})+\dim(W_{2})-\dim(W_{1}\cap W_{2}).$$ 
 % \end{theorem}
 
-\section{Transformaciones lineales}
-\label{trasn-lin}
+% \section{Transformaciones lineales}
+% \label{trasn-lin}
 
 \begin{definition}
   \label{vec-coor}
   Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base para un espacio
-  vectorial~$V$. Para $v\in V$ definimos al \textbf{vector coordenado de $v$
+  vectorial~$V$. Dado $v\in V$ definimos al \textbf{vector coordenado de $v$
   relativo a $\beta$}, denotado por $[v]_{\beta}$, mediante
   \begin{center}
     $[v]_{\beta}=\begin{pmatrix}
@@ -422,7 +429,7 @@ donde
 \begin{definition}
   \label{matr-rep-T}
   Sean $\beta=\{v_{1},\ldots,v_{n}\}$ y
-  $\gamma=\{w_{1},\ldots,w_{m}\}$ las bases de los espacios
+  $\gamma=\{w_{1},\ldots,w_{m}\}$ bases de los espacios
   vectoriales $V$ y $W$ respectivamente. Sea $T:V\rightarrow W$ una
   transformación lineal. La \textbf{matriz que representa a $T$}
   en las bases $\beta$ y $\gamma$, denotada como
@@ -451,14 +458,15 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
 
 \begin{theorem}{[\cite{friedberg1982algebra}, corolario 2.3, p.69]}.
   \label{imT}
-  Sean $V$ y $W$ espacios vectoriales y sea $T:V \rightarrow W$
-  lineal. Si $V$ tiene una base $\beta=\{v_{1},\ldots,v_{n}\}$,
+  Sean $V$ y $W$ espacios vectoriales y $T:V \rightarrow W$
+  una trasnformación lineal. Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base de $V$,
   entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
 \end{theorem}
 
 \begin{theorem}{[\cite{friedberg1982algebra}, teorema 2.22, p.98]}.
   \label{esp-isomorfos}
-  Sean $V$ y $W$ espacios vectoriales. Entonces $V$ es isomorfo a $W$
+  Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre el
+  mismo campo $F$. Entonces $V$ es isomorfo a $W$
   si y solo si $\dim (V)=\dim(W).$
 \end{theorem}
 
@@ -482,6 +490,344 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
   demostrar que es inyectiva y sobreyectiva, lo cual también se hace
   de forma directa.
 \end{proof}
+
+\section{Grupos}
+\label{grupos}
+
+\begin{definition}
+  Una \textbf{operación binaria} en un conjunto $G$ es una función
+  de la forma $*:G  \times G \rightarrow G$. Para cada $(a,b)\in G
+  \times G$, denotaremos al elemento~$*((a,b))\in G$ por $ab$. 
+\end{definition} 
+
+\begin{definition} 
+  Un \textbf{grupo} es un conjunto $G$, junto con una
+  \textbf{operación binaria} $*$ que satisface las siguientes condiciones:
+    \begin{enumerate}
+    \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
+    \item Existe un elemento neutro $1 \in G$ que
+      satisface: $$a1=1a=a$$ para todo $a \in G$.
+    \item Para cada elemento $a \in G$ existe otro elemento $a^{-1} \in G$
+      tal que $$aa^{-1}=a^{-1}a=1$$ Al elemento $a^{-1}$ se le llama inverso del elemento $a$.
+    \end{enumerate}
+
+    Decimos que un grupo $G$ es \textbf{abeliano} si para cualquier
+    $a,b\in G$ se tiene $ab=ba$.
+\end{definition}
+
+\begin{definition}
+  Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
+  en $H$ es una función $\rho:G\rightarrow H$ la cual
+  satisface $$\rho(ab)=\rho(a)\rho(b)$$ para todo $a,b \in G$
+\end{definition}
+
+\begin{theorem}{[\cite{fraleigh}, teorema 13.2, p.128]}.
+  Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
+  \begin{enumerate}
+    \item $\rho(1)=1^{'}$, donde $1\in G$ y  $1^{'}\in G^{'}$ son los
+    neutros respectivos. 
+    \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
+  \end{enumerate}
+{\setlength{\fboxsep}{0pt}\colorbox{green}{quiza este no vaya si se
+    quita teorema 2.1.3}}
+\end{theorem}
+%La demostración aparece en el teorema 13.12 de \cite{fraleigh}.
+% \begin{definition}
+%   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
+%   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
+%   $G$ y $H$ son grupos  \textbf{isomorfos} cuando exista un
+%     isomorfismo entre ellos, usaremos la notación $G\cong H$.
+% \end{definition}
+
+% \begin{theorem}
+%   Supongamos que $G$ y $H$ son grupos y sea $\phi:G\rightarrow H$ un
+%   homomorfismo. Entonces $$G/\ker \phi\cong \im \phi$$ 
+% \end{theorem}.
+
+\begin{definition}
+  Una \textbf{permutación de un conjunto} $Y$ es una función biyectiva
+  $\pi:Y\rightarrow Y$.
+\end{definition}
+
+\begin{theorem}{[\cite{fraleigh}, teorema 8.5, p.77]}.
+  Sea $Y$ un conjunto no vacío y sea $S_{Y}$ el conjunto de todas las
+  permutaciones de $Y$. Entonces $S_{Y}$ es un grupo con la operación dada por la composición de
+  permutaciones.
+\end{theorem}
+
+\begin{definition}
+  Sea $Y$ el conjunto finito $\{1,2,\ldots,n\}$. El grupo de todas las
+  permutaciones de $Y$ es el\textbf{ grupo simétrico} y es denotado por $S_{n}$.
+\end{definition}
+
+\begin{definition}{{\setlength{\fboxsep}{0pt}\colorbox{green}{falta
+        definicion de ciclo}}}.
+  
+\end{definition}
+
+\begin{definition}
+  Un ciclo de longitud 2 es una \textbf{transposición}.
+\end{definition}
+
+\begin{theorem}{[\cite{fraleigh}, corolario 9.12, p.90]}.
+  Toda permutación $\pi\in S_{n}$ es producto de transposiciones.
+\end{theorem}
+
+\begin{theorem}{[\cite{fraleigh}, teorema 9.15, p.91]}.
+  Sea $\pi\in S_{n}$, si expresamos a $\pi$ como producto
+  transposiciones, el número de transposiciones es par o bien impar.
+  % Si $\pi\in S_{n}$ el número de transposiciones que aparecen en
+  % cualquier factorización de $\pi$, siempre es par o siempre es impar.
+\end{theorem}
+
+\section{lo nuevo}
+%\label{}
+\begin{definition}
+  Un conjunto no vacío $R$ se dice que es un \textbf{anillo} si en $R$
+  están definidas dos operaciones, denotadas por $+$ y $\cdot$ tales
+  que para cualquier $a,b,c \in R$:
+  \begin{enumerate}
+  \item $(R,+)$ es un grupo abeliano.
+  \item $a\cdot b\in R$.
+  \item $a\cdot (b\cdot c)=(a\cdot b)\cdot c$.
+  \item $a\cdot (b+c)=a\cdot b+a\cdot c$ y $(b+c)\cdot a=b\cdot a+c\cdot a$
+  \end{enumerate}
+
+  Si existe un elemento $1\in R$ tal que $a\cdot 1=1\cdot a=a$ para todo
+  $a\in R$, diremos que $R$ es un \textbf{anillo con elemento unitario}.
+\end{definition}
+
+\begin{definition}
+  Sea $R$ un anillo cualquiera; un conjunto no vacío $M$ se dice que
+  es un \textbf{$R$-módulo} o (módulo sobre $R$) si $M$ es un grupo abeliano
+  bajo una operación $+$, tal que para cada $r\in R$ y $m\in M$ existe
+  un elemento $rm\in M$ de tal modo que:
+  \begin{enumerate}
+  \item $r(a+b)=ra+rb$
+  \item $r(sa)=(rs)a$
+  \item $(r+s)a=ra+sa$
+  \end{enumerate}
+  para cualquier $a,b \in M$ y $r,s\in R$.
+
+  Si $R$ tiene un elemento unitario, es decir, existe $1\in R$ tal que $1m=m$ para todo elemento
+  $m\in M$, entonces a $M$ lo llamaremos un \textbf{$R$-módulo
+  unitario}.
+\end{definition}
+{\setlength{\fboxsep}{0pt}\colorbox{green}{falta redactar bien lo
+    siguiente}}
+
+$End(A)=\{f:A\rightarrow A\mid f\mbox{es un homomorfismo de grupos}\}$
+
+$End(A)$ es un anillo.
+
+$A$ es un módulo sobre $End(A)$.
+
+\section{Gráficas}
+\label{graficas}
+
+\begin{definition}
+  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V=V(G)$
+  de $p$ \textbf{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
+  ordenados de vértices distintos pertenecientes al conjunto $V(G)$. Cada par $e=\{u,v\}$ de vértices
+  en $E$ es una \textbf{arista} de $G$, y se dice que $e$ une a $u$ y
+  $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \textbf{adyacentes};
+  %un vértice $u$ y una arista $e$ son \emph{incidentes} si $u\in e$. 
+  Dos aristas $e$ y $f$ son \textbf{ajenas} si $e\cap f=\emptyset$.
+  % Una gráfica con $p$ vértices y $q$
+  % aristas es llamada una $(p,q)$ gráfica.
+
+  Una manera natural de ver una gráfica es poner puntos para los
+  vértices y una línea entre dos puntos si los vértices correspondientes
+  son adyacentes.
+\end{definition}
+
+\begin{definition}
+  Decimos que $G$ es una gráfica \textbf{completa} si para
+  todos~$u,v\in V(G)$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
+  $n$ vértices se denota como $K_{n}$.
+\end{definition}
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[rotate=90,scale=.8]
+    \GraphInit[vstyle=Classic] 
+    \SetUpVertex[MinSize=1pt]
+    \SetVertexNoLabel 
+    \grComplete[RA=2.5]{5}
+  \end{tikzpicture}
+  
+  \caption{$K_{5}$}
+\label{fig:K5}
+\end{figure}
+
+\begin{definition}
+  Una gráfica $H$ se llama \textbf{subgráfica} de $G$ si tiene todos
+  sus vértices y aristas en $G$, es decir, $V(H)\subseteq V (G)$ y
+  $E(H)\subseteq E(G)$. 
+\end{definition}
+
+\begin{definition}
+  Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
+  subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
+  \textbf{gráfica de intersección} de $F$ es denotada por $\Omega(F)$
+  y definida por $V(\Omega(F))=F$, con~$S_{i}$ y $S_{j}$ adyacentes
+  siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$.
+\end{definition}
+
+\begin{definition}
+  Un \textbf{clan} de una gráfica es una subgráfica completa
+  maximal, es decir, no está contenida en ninguna otra subgráfica completa.
+\end{definition}
+
+\begin{definition}
+  La \textbf{gráfica de clanes} de una gráfica dada $G$ es la gráfica
+  de intersección de la familia de clanes de $G$. Denotemos a la
+  gráfica de clanes de $G$ como $K(G)$. 
+\end{definition}
+Por ejemplo la gráfica $K_{4}$ de la figura \ref{KG} es la gráfica de
+clanes de $G$ de la figura \ref{G}.
+
+\begin{center}
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.45\linewidth}
+      \centering
+      \begin{tikzpicture}[scale=.8]
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \SetVertexNoLabel \grTriangularGrid[prefix=G,Math,RA=1.5]{3}%
+      \end{tikzpicture}
+
+      \caption{$G$}
+      \label{G}
+    \end{minipage}
+    \begin{minipage}[h]{0.45\linewidth}
+      \centering
+      \begin{tikzpicture}[scale=.8]
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \SetVertexNoLabel \grTetrahedral[RA=1.9]
+      \end{tikzpicture}
+    
+      \caption{$K(G)$}
+      \label{KG}
+    \end{minipage}
+  \end{figure}
+\end{center}
+\begin{definition}
+  La \textbf{gráfica bipartita clánica} de $G$ es definida como la gráfica
+  $BK(G)$ con $V(BK(G))=V(G)\cup V(K(G))$, donde $x\in V(G)$,
+  $c\in (K(G))$ son adyacentes si $x\in c$.
+\end{definition}
+Por ejemplo, la gráfica bipartita clánica de la figura \ref{G} aparece
+en la figura \ref{BKG}, donde los vértices en color gris corresponden a los
+clanes de la figura \ref{G} y los vértices restantes son los vértices
+de la gráfica de la figura~\ref{G}.
+
+\begin{figure}[h]
+  \centering
+  \begin{tikzpicture}[scale=.45]
+    \SetVertexNoLabel 
+    \GraphInit[vstyle=Classic]
+    \SetUpVertex[MinSize=1pt] 
+    \grStar[RA=2,Math,rotation=270]{4}
+    \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
+    \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
+    \EdgeFromOneToSeq{b}{a}{0}{1}{2} 
+    \EdgeFromOneToSeq{a}{b}{2}{1}{1}
+    \EdgeFromOneToSeq{a}{b}{0}{1}{1} 
+    \EdgeFromOneToSeq{b}{a}{2}{0}{1}
+    \EdgeIdentity{b}{c}{3}
+    \AddVertexColor{gray}{a3,b0,b1,b2}
+  \end{tikzpicture}
+  
+  \caption{$BK(G)$}
+\label{BKG}
+\end{figure}
+
+\begin{definition}
+  \label{graf-emparejamientos}
+  Consideremos la gráfica completa de $n$ vértices $K_{n}$ cuyos
+  vértices están etiquetados como $1,2,\ldots,n$. Además
+  $\overline{ij}$ denotará la arista que une al vértice $i$ con el
+  vértice $j$ (donde $\overline{ij}=\overline{ji}$).
+  
+  Llamaremos \textbf{gráfica de emparejamientos} de orden $n$ a la
+  gráfica $G_{n}$ tal que:
+  
+  \begin{enumerate}
+  \item Su conjunto de vértices $V(G_{n})$ consta de las aristas de la gráfica
+    $K_{n}$. 
+  \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
+    $V(G_{n})$, $\{v_{i},v_{j}\}$ es una arista en $E(G_{n})$ si $v_{i}$
+    y $v_{j}$ son ajenas.
+  \end{enumerate}
+\end{definition} 
+
+A continuación se muestran ejemplos de gráficas de emparejamientos.
+
+\begin{center}
+\begin{minipage}{0.26\linewidth}
+  \centering
+  \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+    \draw[help lines] (-2,0);% grid (0,2);
+    \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+    \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{1}
+    \Vertex[x=0,y=0,Math]{2}
+    \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90]{3}
+    \Edge(1)(2) 
+    \Edge(1)(3) 
+    \Edge(2)(3) 
+  \end{tikzpicture}
+  
+  $K_{3}$
+\end{minipage}
+\begin{minipage}{0.26\linewidth}
+  \centering
+  \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+    \draw[help lines] (-2,0);% grid (0,2);
+    \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+    \Vertex[x=-2,y=0,Math,LabelOut,Lpos=90,L=\overline{12}]{12}
+    \Vertex[x=-1,y=0,Math,LabelOut,Lpos=90,L=\overline{13}]{13}
+    \Vertex[x=0,y=0,Math,LabelOut,Lpos=90,L=\overline{23}]{23}
+  \end{tikzpicture}
+  
+  $G_{3}$
+\end{minipage}
+\end{center}
+
+\begin{center}
+\begin{minipage}{0.26\linewidth}
+  \centering
+  \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+    \draw[help lines] (-2,0);% grid (0,2);
+    \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+    \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
+    \Vertex[x=0,y=0,Math]{3}
+    \Vertex[x=-2,y=2,Math,LabelOut,Lpos=180]{1}
+    \Vertex[x=0,y=2,Math]{4} \Edge(1)(2) \Edge(1)(3) \Edge(1)(4)
+    \Edge(2)(3) \Edge(2)(4) \Edge(3)(4)
+  \end{tikzpicture}
+  
+  $K_{4}$
+\end{minipage}
+\begin{minipage}{0.26\linewidth}
+  \centering
+  \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+    \draw[help lines] (-2,0);% grid (0,2);
+    \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+    \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90,L=\overline{12}]{12}
+    \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90,L=\overline{34}]{34}
+    \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90,L=\overline{24}]{24}
+    \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90,L=\overline{13}]{13}
+    \Vertex[x=0,y=2,Math,LabelOut,Lpos=90,L=\overline{14}]{14}
+    \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90,L=\overline{23}]{23} \Edge(12)(34)
+    \Edge(24)(13) \Edge(14)(23)
+  \end{tikzpicture}
+  
+  $G_{4}$
+\end{minipage}
+\end{center}
+
+{\setlength{\fboxsep}{0pt}\colorbox{green}{n=6, poner gráficas
+    completa, emparejamientos, clanes????}}
 
 \chapter{Representaciones de grupos}
 \label{Representaciones de grupos}
@@ -516,53 +862,9 @@ obtener el carácter de una representación inducida.
 % $G$-módulo inducido por el $H$-módulo $W$ sus respectivos caracteres
 % son iguales.
 
-\section{Grupos}
-\label{grupos}
+\bigskip
+{\setlength{\fboxsep}{0pt}\colorbox{green}{....de aquí en adelante???}}
 
-\begin{definition}
-  Una \textbf{operación binaria} en un conjunto $G$ es una función
-  de la forma $*:G  \times G \rightarrow G$. Para cada $(a,b)\in G
-  \times G$, denotaremos al elemento~$*((a,b))\in G$ por $ab$. 
-\end{definition} 
-
-\begin{definition} 
-  Un \textbf{grupo} es un conjunto $G$, junto con una
-  \textbf{operación binaria} $*$ que satisface las siguientes condiciones:
-    \begin{enumerate}
-    \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
-    \item Existe un elemento neutro $1 \in G$ que
-      satisface: $$a1=1a=a$$ para todo $a \in G$.
-    \item Para cada elemento $a \in G$ existe otro elemento $a^{-1} \in G$
-      tal que $$aa^{-1}=a^{-1}a=1$$ Al elemento $a^{-1}$ se le llama inverso del elemento $a$.
-    \end{enumerate}
-\end{definition}
-
-\begin{definition}
-  Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
-  en $H$ es una función $\rho:G\rightarrow H$ la cual
-  satisface $$\rho(ab)=\rho(a)\rho(b)$$ para todo $a,b \in G$
-\end{definition}
-
-\begin{theorem}{[\cite{fraleigh}, teorema 13.2, p.128]}.
-  Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
-  \begin{enumerate}
-    \item $\rho(1)=1^{'}$, donde $1\in G$ y  $1^{'}\in G^{'}$ son los
-    neutros respectivos. 
-    \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
-  \end{enumerate}
-\end{theorem}
-%La demostración aparece en el teorema 13.12 de \cite{fraleigh}.
-% \begin{definition}
-%   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
-%   diremos que $\phi$ es un  \textbf{isomorfismo}. También diremos que
-%   $G$ y $H$ son grupos  \textbf{isomorfos} cuando exista un
-%     isomorfismo entre ellos, usaremos la notación $G\cong H$.
-% \end{definition}
-
-% \begin{theorem}
-%   Supongamos que $G$ y $H$ son grupos y sea $\phi:G\rightarrow H$ un
-%   homomorfismo. Entonces $$G/\ker \phi\cong \im \phi$$ 
-% \end{theorem}
 Denotemos $GL(n,\mathbb{C})$ al grupo de matrices
 invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
 Y a $GL(V)$ a los operadores lineales invertibles en un
@@ -573,13 +875,13 @@ Además, existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 \label{acc-grup}
 
 \begin{definition}
-  Sea $G$ un grupo y $Y$ un conjunto no vacío. Una  \textbf{acción de $G$
-  en $Y$} es una función $*:G \times Y \rightarrow Y$ tal que
+  Sea $G$ un grupo y $X$ un conjunto no vacío. Una  \textbf{acción de $G$
+  en $X$} es una función $*:G \times X \rightarrow X$ tal que
 \begin{enumerate}
-\item $1*x=x$ para todo $x\in Y.$
-\item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in Y$ y $g_{1},g_{2}\in G.$
+\item $1*x=x$ para todo $x\in X.$
+\item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in X$ y $g_{1},g_{2}\in G.$
 \end{enumerate}
-   Bajo estas condiciones, también decimos que $Y$ es un \textbf{$G$-conjunto}. En ocasiones, por
+   Bajo estas condiciones, también decimos que $X$ es un \textbf{$G$-conjunto}. En ocasiones, por
    abuso de notación, en lugar de $g*x$ usaremos la notación $gx.$
 \end{definition}
 
@@ -663,20 +965,17 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
      $$\rho:G\rightarrow GL(V).$$
 \end{definition}
 
-Así, el teorema \ref{rep-mod} nos dice que estudiar las representaciones de $G$
+Así, el teorema \ref{rep-mod} dice que estudiar las representaciones de $G$
 en $V$, es equivalente a estudiar $G$-módulos $V$.  A
 dicho espacio $V$ se le llamará \emph{espacio de representación} y a
 su dimensión el \emph{grado} de la representación. 
 
 \begin{definition}
-  Si fijamos una base de $V$, entonces toda transformación lineal
-  $V\to V$
-  determina una matriz asociada a la transformación lineal. Llamemos \textbf{representación matricial} al homomorfismo
+  Llamemos \textbf{representación matricial} al homomorfismo
   obtenido a partir de la definición \ref{representacion}, es decir, 
-  $$X:G\rightarrow GL(n,\mathbb{C})$$
+  $$X:G\rightarrow GL(n,\mathbb{C}),$$
   simplemente para resaltar que para cada $g\in G$, $X(g)$  es la
-  matriz invertible~$n \times n$ con entradas en $\mathbb{C}$ asociada
-  a $\rho(g)$.
+  matriz invertible~$n \times n$ con entradas en $\mathbb{C}$.
 \end{definition}
 
 % Se denotará $(\rho,V)$ para enfatizar el hecho de que la
@@ -688,16 +987,10 @@ su dimensión el \emph{grado} de la representación.
 \end{example}
 
 \begin{example}[Representación signo]
-  Sean $n$ un número entero positivo e~$\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
-  Una función biyectiva $\pi:\mathbb{I}_{n}\rightarrow\mathbb{I}_{n}$
-  se llamará una permutación de $\mathbb{I}_{n}$. El grupo simétrico
-  $S_{n}$ es el conjunto de todas las
-  permutaciones de $\mathbb{I}_{n}$, con la operación
-  dada por la composición de permutaciones. 
   Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones, definimos la función signo
   $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
-  mediante $$\sgn(\pi):=(-1)^{k}.$$
+  mediante $$\sgn(\pi):=(-1)^{k},$$
   así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
   \[
   \pi v=
@@ -706,9 +999,7 @@ su dimensión el \emph{grado} de la representación.
     -v, & \text{ si } \pi \text{ es impar,}
   \end{cases}
   \]
-  para $\pi\in S_{n}$, $v\in \mathbb{C}$. Cuando hablemos de
-  $\mathbb{C}$ como un $S_{n}$-módulo por ésta acción lo denotaremos con
-  $\widehat{\mathbb{C}}$. Ésta representación tiene grado $1$.
+  para $\pi\in S_{n}$, $v\in \mathbb{C}$. Ésta representación tiene grado $1$.
 \end{example}
 
 % \begin{example}[Representación defining]
@@ -1212,7 +1503,7 @@ sea.
 Se muestra al final de ésta sección, un ejemplo de cómo calcular caracteres de la representación
 trivial, signo y estándar con la acción de $S_{3}$.
 \begin{definition}
-  Dos elementos $g,g_{1}\in G$ están \emph{conjugados} si
+  Dos elementos $g,g_{1}\in G$ son \textbf{conjugados} si
   \begin{equation*}
   g=hg_{1}h^{-1}
 \end{equation*}
@@ -2119,7 +2410,7 @@ renglón. Similarmente, definimos al grupo columna.
 \begin{definition}
   Para un tablero $t$ de tamaño $n$, el \textbf{grupo renglón} de $t$,
   denotado por $R_{t}$, es el subgrupo de $S_{n}$ que consiste de las
-  permutaciones que solo permutan elementos entre cada renglón
+  permutaciones que solo mueven elementos entre cada renglón
   de $t$. Similarmente, el \textbf{grupo columna} $C_{t}$ es el
   subgrupo de $S_{n}$ que consiste de las permutaciones las cuales
   solo permutan los elementos entre cada columna de $t$.
@@ -3013,138 +3304,10 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
   \label{homologia-realizacion}
 \end{theorem}
  
-\chapter{Gráfica de clanes}
-\label{cha:grafica-clanes}
+\chapter{Sobró}
+ 
+{\setlength{\fboxsep}{0pt}\colorbox{green}{Quizá en el siguiente capítulo.}}
 
-La finalidad de éste capítulo es definir gráfica de clanes y gráfica
-bipartita clánica para lo cual necesitamos algunas definiciones previas. Las definiciones aquí
-escritas se pueden consultar en \cite{harary} y \cite{LPV08a}. Además
-a las gráficas les asociamos complejos simpliciales.
-
-\section{Gráficas}
-\label{graficas}
-
-\begin{definition}
-  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V=V(G)$
-  de $p$ \emph{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
-  ordenados de vértices distintos pertenecientes al conjunto $V(G)$. Cada par $e=\{u,v\}$ de vértices
-  en $E$ es una \emph{arista} de $G$, y se dice que $e$ une a $u$ y
-  $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \emph{vértices
-    adyacentes}; un vértice $u$ y una arista $e$ son \emph{incidentes}
-  si $u\in e$. Dos aristas $e$ y $f$ son \emph{aristas adyacentes}
-  si $e\cap f\neq\emptyset$.
-  % Una gráfica con $p$ vértices y $q$
-  % aristas es llamada una $(p,q)$ gráfica.
-
-  Una manera natural de ver una gráfica es poner puntos para los
-  vértices y una línea entre dos puntos si los vértices correspondientes
-  son adyacentes.
-\end{definition}
-
-\begin{definition}
-  Decimos que $G$ es una gráfica \textbf{completa} si para
-  todos~$u,v\in V(G)$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
-  $n$ vértices se denota como $K_{n}$.
-\end{definition}
-
-\begin{figure}[h]
-  \centering
-  \begin{tikzpicture}[rotate=90,scale=.8]
-    \GraphInit[vstyle=Classic] 
-    \SetUpVertex[MinSize=1pt]
-    \SetVertexNoLabel 
-    \grComplete[RA=2.5]{5}
-  \end{tikzpicture}
-  
-  \caption{$K_{5}$}
-\label{fig:K5}
-\end{figure}
-
-\begin{definition}
-  Una gráfica $H$ se llama \textbf{subgráfica} de $G$ si tiene todos
-  sus vértices y aristas en $G$, es decir, $V(H)\subseteq V (G)$ y
-  $E(H)\subseteq E(G)$. 
-\end{definition}
-
-\section{Gráfica de intersección}
-
-\begin{definition}
-  Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
-  subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
-  \textbf{gráfica de intersección} de $F$ es denotada por $\Omega(F)$
-  y definida por $V(\Omega(F))=F$, con~$S_{i}$ y $S_{j}$ adyacentes
-  siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$.
-\end{definition}
-
-\begin{definition}
-  Un \textbf{clan} de una gráfica es una subgráfica completa
-  maximal, es decir, no está contenida en ninguna otra subgráfica completa.
-\end{definition}
-
-\begin{definition}
-  La \textbf{gráfica de clanes} de una gráfica dada $G$ es la gráfica
-  de intersección de la familia de clanes de $G$. Denotemos a la
-  gráfica de clanes de $G$ como $K(G)$. 
-\end{definition}
-Por ejemplo la gráfica $K_{4}$ de la figura \ref{KG} es la gráfica de
-clanes de $G$ de la figura \ref{G}.
-
-\begin{center}
-  \begin{figure}[h]
-    \begin{minipage}[h]{0.45\linewidth}
-      \centering
-      \begin{tikzpicture}[scale=.8]
-        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-        \SetVertexNoLabel \grTriangularGrid[prefix=G,Math,RA=1.5]{3}%
-      \end{tikzpicture}
-
-      \caption{$G$}
-      \label{G}
-    \end{minipage}
-    \begin{minipage}[h]{0.45\linewidth}
-      \centering
-      \begin{tikzpicture}[scale=.8]
-        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-        \SetVertexNoLabel \grTetrahedral[RA=1.9]
-      \end{tikzpicture}
-    
-      \caption{$K(G)$}
-      \label{KG}
-    \end{minipage}
-  \end{figure}
-\end{center}
-
-\begin{definition}
-  La \textbf{gráfica bipartita clánica} de $G$ es definida como la gráfica
-  $BK(G)$ con $V(BK(G))=V(G)\cup V(K(G))$, donde $x\in V(G)$,
-  $c\in (K(G))$ son adyacentes si $x\in c$.
-\end{definition}
-Por ejemplo, la gráfica bipartita clánica de la figura \ref{G} aparece
-en la figura \ref{BKG}, donde los vértices en color gris corresponden a los
-clanes de la figura \ref{G} y los vértices restantes son los vértices
-de la gráfica de la figura~\ref{G}.
-
-\begin{figure}[h]
-  \centering
-  \begin{tikzpicture}[scale=.45]
-    \SetVertexNoLabel 
-    \GraphInit[vstyle=Classic]
-    \SetUpVertex[MinSize=1pt] 
-    \grStar[RA=2,Math,rotation=270]{4}
-    \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
-    \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
-    \EdgeFromOneToSeq{b}{a}{0}{1}{2} 
-    \EdgeFromOneToSeq{a}{b}{2}{1}{1}
-    \EdgeFromOneToSeq{a}{b}{0}{1}{1} 
-    \EdgeFromOneToSeq{b}{a}{2}{0}{1}
-    \EdgeIdentity{b}{c}{3}
-    \AddVertexColor{gray}{a3,b0,b1,b2}
-  \end{tikzpicture}
-  
-  \caption{$BK(G)$}
-\label{BKG}
-\end{figure}
-\bigskip
 A cada gráfica $G$ finita se le asocia un espacio topológico por
 medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
 las subgráficas completas. Entonces a $G$ le podemos asociar conceptos topológicos por
@@ -3215,24 +3378,11 @@ $n\leq 6$.
 
 \section{Complejo de emparejamientos}
 \label{complejo-emparejamientos}
+
+Recordemos que denotamos como $G_{n}$ a la gráfica de
+emparejamientos de orden $n$ (ver definición \ref{graf-emparejamientos}).
+
 \begin{definition}
-Consideremos la gráfica completa de $n$ vértices $K_{n}$ cuyos
-vértices están etiquetados como $1,2,\ldots,n$. Además
-$\overline{ij}$ denotará la arista que une al vértice $i$ con el
-vértice $j$ (donde $\overline{ij}=\overline{ji}$).
-
-Llamaremos \textbf{gráfica de emparejamientos} de orden $n$ a la
-gráfica $G_{n}$ tal que:
-
-\begin{enumerate}
-  \item Su conjunto de vértices $V(G_{n})$ consta de las aristas de la gráfica
-  $K_{n}$. 
-
-  \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
-  $V(G_{n})$, $\{v_{i},v_{j}\}$ es una arista en $E(G_{n})$ si $v_{i}$
-  y $v_{j}$ son ajenas.
-\end{enumerate} 
-
 El \textbf{complejo de emparejamientos} de $K_{n}$ será denotado
 entonces por $M_{n}$, y se define como $M_{n}=\Delta(G_{n})$
 \end{definition}
@@ -5068,7 +5218,7 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1
 
 \chapter*{Conclusiones}
  
-En ésta tesis, para $n\leq 6$, describimos la descomposición 
+En este trabajo, para $n\leq 6$, describimos la descomposición 
 del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$ en submódulos irreducibles, donde
 $\widetilde H_{k}(M_{n})$ es la homología reducida de los complejos simpliciales
 de emparejamientos.
