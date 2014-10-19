@@ -192,7 +192,9 @@ irreducibles).
 ...Aunque hay varias teorías de homología [Mun..], la homología que
 usamos en este trabajo es la homología singular,...
 
-
+{\setlength{\fboxsep}{0pt}\colorbox{green}{Tal vez convenga poner las
+    graficas de las que vamos a obtener los complejos simpliciales, es
+  decir $G_{n}$ y $K(G_{n})$}}
 
 La idea de la presente tesis surge a partir del Teorema de Bouc
 \cite{MR756517}: 
@@ -324,24 +326,23 @@ a las gráficas les asociamos complejos simpliciales.
 \section{Álgebra lineal}
 \label{esp-vec}
 
-\begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.9, p.42]}.
-  \label{clunica}
-  Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
-  subconjunto de $V$. Entonces $\beta$ es una base de $V$, si y solo si
-  cada vector $v\in V$ puede ser expresado de manera única como una
-  combinación lineal de vectores de~$\beta$, es decir, puede ser
-  expresado de la forma
-  $$v=\lambda_{1}v_{1}+\cdots+\lambda_{n}v_{n}$$
-  para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
-\end{theorem}
+% \begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.9, p.42]}.
+%   \label{clunica}
+%   Sea $V$ un espacio vectorial y $\beta=\{v_{1},\dots,v_{n}\}$ un
+%   subconjunto de $V$. Entonces $\beta$ es una base de $V$, si y solo si
+%   cada vector $v\in V$ puede ser expresado de manera única como una
+%   combinación lineal de vectores de~$\beta$, es decir, puede ser
+%   expresado de la forma
+%   $$v=\lambda_{1}v_{1}+\cdots+\lambda_{n}v_{n}$$
+%   para escalares únicos $\lambda_{1},\ldots,\lambda_{n}.$
+% \end{theorem}
 
-\begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.12, p.50]}.
-  \label{esp-iguales}
-  Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
-  $n$. Entonces, $W$ es de dimensión finita y $\dim(W)\leq
-  n$. Además, si~$\dim(W)=n$, entonces $W=V$.
-\end{theorem}
-
+% \begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.12, p.50]}.
+%   \label{esp-iguales}
+%   Sea $W$ un subespacio de un espacio vectorial $V$ de dimensión
+%   $n$. Entonces, $W$ es de dimensión finita y $\dim(W)\leq
+%   n$. Además, si~$\dim(W)=n$, entonces $W=V$.
+% \end{theorem}
 \begin{definition}
   Si $W_{1}$ y $W_{2}$ son dos subconjuntos no vacíos de un espacio
   vectorial $V$, entonces la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
@@ -407,6 +408,43 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 
 % \section{Transformaciones lineales}
 % \label{trasn-lin}
+{\setlength{\fboxsep}{0pt}\colorbox{green}{def transformación lineal,
+    im(T), tal vez ker(f)}}
+
+\begin{theorem}{[\cite{friedberg1982algebra}, corolario 2.3, p.69]}.
+  \label{imT}
+  Sean $V$ y $W$ espacios vectoriales y $T:V \rightarrow W$
+  una transformación lineal. Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base de $V$,
+  entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
+\end{theorem}
+
+\begin{theorem}{[\cite{friedberg1982algebra}, teorema 2.22, p.98]}.
+  \label{esp-isomorfos}
+  Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre el
+  mismo campo $F$. Entonces $V$ es isomorfo a $W$
+  si y solo si $\dim (V)=\dim(W).$
+\end{theorem}
+
+\begin{theorem}[Teorema de isomorfismo]
+  \label{teorema-isomorfismo-esp}
+  Si $f:V\rightarrow W$ es una transformación lineal, el espacio
+  cociente $V/\ker(f)$ es isomorfo a $\im(f)$. Un isomorfismo entre estos dos
+  espacios es el siguiente:
+  $$\phi:V/\ker(f)\rightarrow \im(f)$$
+  definido por $\phi(v+\ker(f))=f(v).$
+\end{theorem}
+\begin{proof}[Demostración.]
+  Hay que demostrar que $\phi$ está bien definida, es decir, si
+  tenemos que
+  $v_1+\ker(f)=v_2+\ker(f)$, entonces
+  $f(v_1)=f(v_{2}).$ Sabemos que 
+  $v_1+\ker(f)=v_2+\ker(f)$ si y solo si
+  $v_{1}-v_{2}\in \ker(f)$, es decir,~$f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
+  como se quería. Queda por demostrar de forma directa que $\phi$ es
+  una transformación lineal; y para demostrar que es isomorfismo falta
+  demostrar que es inyectiva y sobreyectiva, lo cual también se hace
+  de forma directa.
+\end{proof}
 
 \begin{definition}
   \label{vec-coor}
@@ -454,42 +492,8 @@ donde
     \end{pmatrix}$.
   \end{center}
 Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
+{\setlength{\fboxsep}{0pt}\colorbox{green}{siguiendo a friedberg y haffman...}}
 \end{definition}
-
-\begin{theorem}{[\cite{friedberg1982algebra}, corolario 2.3, p.69]}.
-  \label{imT}
-  Sean $V$ y $W$ espacios vectoriales y $T:V \rightarrow W$
-  una trasnformación lineal. Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base de $V$,
-  entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
-\end{theorem}
-
-\begin{theorem}{[\cite{friedberg1982algebra}, teorema 2.22, p.98]}.
-  \label{esp-isomorfos}
-  Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre el
-  mismo campo $F$. Entonces $V$ es isomorfo a $W$
-  si y solo si $\dim (V)=\dim(W).$
-\end{theorem}
-
-\begin{theorem}[Teorema de isomorfismo]
-  \label{teorema-isomorfismo-esp}
-  Si $f:V\rightarrow W$ es una transformación lineal, el espacio
-  cociente $V/\ker(f)$ es isomorfo a $\im(f)$. Un isomorfismo entre estos dos
-  espacios es el siguiente:
-  $$\phi:V/\ker(f)\rightarrow \im(f)$$
-  definido por $\phi(v+\ker(f))=f(v).$
-\end{theorem}
-\begin{proof}[Demostración.]
-  Hay que demostrar que $\phi$ está bien definida, es decir, si
-  tenemos que
-  $v_1+\ker(f)=v_2+\ker(f)$, entonces
-  $f(v_1)=f(v_{2}).$ Sabemos que 
-  $v_1+\ker(f)=v_2+\ker(f)$ si y solo si
-  $v_{1}-v_{2}\in \ker(f)$, es decir,~$f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
-  como se quería. Queda por demostrar de forma directa que $\phi$ es
-  una transformación lineal; y para demostrar que es isomorfismo falta
-  demostrar que es inyectiva y sobreyectiva, lo cual también se hace
-  de forma directa.
-\end{proof}
 
 \section{Grupos}
 \label{grupos}
@@ -528,8 +532,6 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
     neutros respectivos. 
     \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
   \end{enumerate}
-{\setlength{\fboxsep}{0pt}\colorbox{green}{quiza este no vaya si se
-    quita teorema 2.1.3}}
 \end{theorem}
 %La demostración aparece en el teorema 13.12 de \cite{fraleigh}.
 % \begin{definition}
@@ -557,17 +559,40 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
 
 \begin{definition}
   Sea $Y$ el conjunto finito $\{1,2,\ldots,n\}$. El grupo de todas las
-  permutaciones de $Y$ es el\textbf{ grupo simétrico} y es denotado por $S_{n}$.
-\end{definition}
-
-\begin{definition}{{\setlength{\fboxsep}{0pt}\colorbox{green}{falta
-        definicion de ciclo}}}.
-  
+  permutaciones de $Y$ es el\textbf{ grupo simétrico} y es denotado
+  por $S_{n}$. Dado $\pi \in S_{n}$, usaremos la siguiente notación
+  para designar a $\pi$
+  \[ \pi=\left(
+    \begin{array}{ccccc}
+      1 & 2 & 3 & \cdots & n\\
+      \pi(1) & \pi(2) & \pi(3) & \cdots & \pi(n) 
+    \end{array} 
+  \right)\] 
+  donde debajo de cada $x\in Y$ se encuentra su valor o imagen
+  $\pi(x)\in Y$.
 \end{definition}
 
 \begin{definition}
-  Un ciclo de longitud 2 es una \textbf{transposición}.
+  Sea $Y$ el conjunto finito $\{1,2,\ldots,n\}$. Si $\pi\in S_{n}$ es una permutación y
+  $x\in Y$ es un elemento, diremos que $\pi$ fija a $x$ si
+  $\pi(x)=x$. En caso contrario, diremos que $\pi$ mueve a $x$. Ahora,
+  si $i_{1},i_{2},\ldots, i_{k}$ son enteros distintos que pertenecen a
+  $Y$ y si $\pi\in S_{n}$ es tal que
+  $$\pi(i_{1})=i_{2},\pi(i_{2})=i_{3},\ldots,\pi(i_{k-1})=i_{k},\pi(i_{k})=i_{1}$$
+  y $\pi$ fija a los otros elementos de $Y$, si los hay, entonces,
+  diremos que $\pi$ es un \textbf{ ciclo de longitud $k$} o un\textbf{$k$-ciclo}. Un ciclo de longitud 2 es una \textbf{transposición}.
 \end{definition}
+
+\begin{example}
+  Sea $\pi\in S_{5}$, 
+  \[\pi=\left(
+    \begin{array}{ccccc}
+      1 & 2 & 3 & 4 & 5\\
+      2 & 4 & 3 & 1 & 5  
+    \end{array} 
+  \right)=(124)(3)(5)=(124),\]
+  $\pi$ es un 3-ciclo.
+\end{example}
 
 \begin{theorem}{[\cite{fraleigh}, corolario 9.12, p.90]}.
   Toda permutación $\pi\in S_{n}$ es producto de transposiciones.
@@ -594,7 +619,13 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
   \end{enumerate}
 
   Si existe un elemento $1\in R$ tal que $a\cdot 1=1\cdot a=a$ para todo
-  $a\in R$, diremos que $R$ es un \textbf{anillo con elemento unitario}.
+  $a\in R$, diremos que $R$ es un \textbf{anillo con elemento
+    unitario}.
+  
+  Si la multiplicación de $R$ es tal que $a\cdot b=b\cdot a$ para todo
+  $a,b\in R$ entonces llamamos a $R$ \textbf{anillo conmutativo}.
+
+  {\setlength{\fboxsep}{0pt}\colorbox{green}{No usaremos $\cdot$}}
 \end{definition}
 
 \begin{definition}
@@ -609,14 +640,14 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
   \end{enumerate}
   para cualquier $a,b \in M$ y $r,s\in R$.
 
-  Si $R$ tiene un elemento unitario, es decir, existe $1\in R$ tal que $1m=m$ para todo elemento
+  Si $R$ tiene un elemento unitario, 1, y si $1m=m$ para todo elemento
   $m\in M$, entonces a $M$ lo llamaremos un \textbf{$R$-módulo
   unitario}.
 \end{definition}
 {\setlength{\fboxsep}{0pt}\colorbox{green}{falta redactar bien lo
     siguiente}}
 
-$End(A)=\{f:A\rightarrow A\mid f\mbox{es un homomorfismo de grupos}\}$
+$End(A)=\{f:A\rightarrow A\mid f\mbox{ es un homomorfismo de grupos}\}$
 
 $End(A)$ es un anillo.
 
