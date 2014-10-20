@@ -408,8 +408,31 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 
 % \section{Transformaciones lineales}
 % \label{trasn-lin}
-{\setlength{\fboxsep}{0pt}\colorbox{green}{def transformación lineal,
-    im(T), tal vez ker(f)}}
+\begin{definition}
+  \label{t-l}
+  Sean $V$ y $W$ espacios vectoriales sobre el campo $F$. Una función
+  $T:V\rightarrow W$ se llama \textbf{transformación lineal} de $V$ en
+  $W$ si para todo $x,y\in V$ y $c\in F$ tenemos que
+  \begin{enumerate}
+  \item $T(x+y)=T(x)+T(y)$.
+  \item $T(cx)=cT(x)$.
+  \end{enumerate}
+\end{definition}
+
+\begin{definition}
+  \label{ker-im}
+  Sean $V$ y $W$ espacios vectoriales y sea $T:V\rightarrow W$ una
+  transformación lineal. El \textbf{kernel o espacio nulo de $T$},
+  es denotado como $\ker(T)$ y está dado por el conjunto:
+  \begin{equation*}
+    \ker(T)=\{v\in V\mid T(v)=0\}.
+  \end{equation*}
+  Definimos a la \textbf{imagen o rango de $T$}, denotado como
+  $\im(T)$, dado por el conjunto:
+  \begin{equation*}
+    \im (T)=\{T(v)\mid v\in V\}.
+  \end{equation*}
+\end{definition}
 
 \begin{theorem}{[\cite{friedberg1982algebra}, corolario 2.3, p.69]}.
   \label{imT}
@@ -580,7 +603,7 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
   $Y$ y si $\pi\in S_{n}$ es tal que
   $$\pi(i_{1})=i_{2},\pi(i_{2})=i_{3},\ldots,\pi(i_{k-1})=i_{k},\pi(i_{k})=i_{1}$$
   y $\pi$ fija a los otros elementos de $Y$, si los hay, entonces,
-  diremos que $\pi$ es un \textbf{ ciclo de longitud $k$} o un\textbf{$k$-ciclo}. Un ciclo de longitud 2 es una \textbf{transposición}.
+  diremos que $\pi$ es un \textbf{ciclo de longitud $k$} o un \textbf{$k$-ciclo}. Un ciclo de longitud 2 es una \textbf{transposición}.
 \end{definition}
 
 \begin{example}
@@ -625,7 +648,7 @@ Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
   Si la multiplicación de $R$ es tal que $a\cdot b=b\cdot a$ para todo
   $a,b\in R$ entonces llamamos a $R$ \textbf{anillo conmutativo}.
 
-  {\setlength{\fboxsep}{0pt}\colorbox{green}{No usaremos $\cdot$}}
+  Usaremos la notación $ab$ en lugar de $a\cdot b$, para $a,b\in R$.
 \end{definition}
 
 \begin{definition}
