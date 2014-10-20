@@ -487,35 +487,50 @@ donde
 \end{equation*}
 \end{definition}
 
+% \begin{definition}
+%   \label{matr-rep-T}
+%   Sean $\beta=\{v_{1},\ldots,v_{n}\}$ y
+%   $\gamma=\{w_{1},\ldots,w_{m}\}$ bases de los espacios
+%   vectoriales $V$ y $W$ respectivamente. Sea $T:V\rightarrow W$ una
+%   transformación lineal. La \textbf{matriz que representa a $T$}
+%   en las bases $\beta$ y $\gamma$, denotada como
+%   $[T]^{\gamma}_{\beta}$, se define como la matriz $m\times n$:
+%   \begin{equation*}
+%     [T]^{\gamma}_{\beta}=([T(v_{1})]_{\gamma},[T(v_{2})]_{\gamma},\cdots,[T(v_{n})]_{\gamma})
+%   \end{equation*}
+%   En otras palabras, si
+%   $T(v_{j})=\lambda_{1j}w_{1}+\lambda_{2j}w_{2}+\cdots+\lambda_{mj}w_{m}$,
+%   entonces
+% \begin{center}
+%     $[T(v_{j})]_{\gamma}=\begin{pmatrix}
+%       \lambda_{1j}\\
+%       \lambda_{2j}\\
+%       \vdots\\
+%       \lambda_{mj}
+%     \end{pmatrix}$,\quad y \quad $[T]^{\gamma}_{\beta}=\begin{pmatrix}
+%       \lambda_{11} & \lambda_{12} & \cdots & \lambda_{1n} \\
+%       \lambda_{21} & \lambda_{22} & \cdots & \lambda_{2n} \\
+%       \vdots & \vdots & \ddots & \vdots \\ 
+%       \lambda_{m1} & \lambda_{m2} & \cdots & \lambda_{mn} \\
+%     \end{pmatrix}$.
+%   \end{center}
+% Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
+% \end{definition}
 \begin{definition}
   \label{matr-rep-T}
-  Sean $\beta=\{v_{1},\ldots,v_{n}\}$ y
-  $\gamma=\{w_{1},\ldots,w_{m}\}$ bases de los espacios
-  vectoriales $V$ y $W$ respectivamente. Sea $T:V\rightarrow W$ una
-  transformación lineal. La \textbf{matriz que representa a $T$}
-  en las bases $\beta$ y $\gamma$, denotada como
-  $[T]^{\gamma}_{\beta}$, se define como la matriz $m\times n$:
+  Denote $F$ un campo. Sean $V$ y $W$ espacios vectoriales de dimensión finita con bases $\beta=\{v_{1},\ldots,v_{n}\}$ y
+  $\gamma=\{w_{1},\ldots,w_{m}\}$, respectivamente. Sea $T:V\rightarrow~W$ una
+  transformación lineal. Entonces existen escalares únicos $a_{ij}\in F$
+  con $i=1,\ldots,m$ y $j=1,\ldots,n$, tales que
   \begin{equation*}
-    [T]^{\gamma}_{\beta}=([T(v_{1})]_{\gamma},[T(v_{2})]_{\gamma},\cdots,[T(v_{n})]_{\gamma})
+    T(v_{j})=\sum_{i=1}^{m}a_{ij}w_{i} \mbox{ para } 1\leq j\leq n. 
   \end{equation*}
-  En otras palabras, si
-  $T(v_{j})=\lambda_{1j}w_{1}+\lambda_{2j}w_{2}+\cdots+\lambda_{mj}w_{m}$,
-  entonces
-\begin{center}
-    $[T(v_{j})]_{\gamma}=\begin{pmatrix}
-      \lambda_{1j}\\
-      \lambda_{2j}\\
-      \vdots\\
-      \lambda_{mj}
-    \end{pmatrix}$,\quad y \quad $[T]^{\gamma}_{\beta}=\begin{pmatrix}
-      \lambda_{11} & \lambda_{12} & \cdots & \lambda_{1n} \\
-      \lambda_{21} & \lambda_{22} & \cdots & \lambda_{2n} \\
-      \vdots & \vdots & \ddots & \vdots \\ 
-      \lambda_{m1} & \lambda_{m2} & \cdots & \lambda_{mn} \\
-    \end{pmatrix}$.
-  \end{center}
-Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
-{\setlength{\fboxsep}{0pt}\colorbox{green}{siguiendo a friedberg y haffman...}}
+  Utilizando la notación anterior, llamaremos a la matriz $A$ de
+  $m\times n$, definida mediante $A_{ij}=a_{ij}$, la \textbf{matriz que representa a $T$
+  en las bases $\beta$ y $\gamma$} y la escribiremos de acuerdo a la
+  notación de \cite{friedberg1982algebra} como
+  $A=[T]^{\gamma}_{\beta}$. Si $V=W$ y $\beta=\gamma$, escribiremos
+  $A=[T]_{\beta}$.
 \end{definition}
 
 \section{Grupos}
