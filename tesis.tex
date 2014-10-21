@@ -1542,8 +1542,8 @@ entre suma directa y suma directa externa.
 
   Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$, así
   $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
-  dado que $S\cap S^{'}\leq S^{'}$ por el teorema \ref{esp-iguales}, tenemos
-  que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería
+  dado que $S\cap S^{'}\leq S^{'}$, %por el teorema \ref{esp-iguales}, 
+  tenemos que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería
   demostrar.
 \end{proof}
 
@@ -3045,7 +3045,8 @@ de las correspondientes cadenas elementales $\sigma_{i}$. La cadena
 $c$ asigna el valor~$n_{i}$ al \emph{p}-simplejo orientado
 $\sigma_{i}$ , el valor $(-n_{i})$ a la orientación opuesta de
 $\sigma_{i}$ y el valor $0$ a todo \emph{p}-simplejo orientado que no
-aparece en la suma. Entonces la afirmación se sigue del teorema $\ref{clunica}$.
+aparece en la suma. 
+%Entonces la afirmación se sigue del teorema $\ref{clunica}$.
 \end{proof}
 
 \begin{corollary}{[\cite{munkres1984elements}, corolario 5.2, p.36]}.
@@ -4486,25 +4487,49 @@ conmutativo de los complejos de cadena de $K(M_{5})$, donde $f_{0}$,
 $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
 \ref{C0-KM5}, \ref{C1-KM5} y \ref{C2-KM5}.
 
-\begin{sidewaysfigure}%[h]
-  %\centering
-  {\small
-  \[
+Denotemos a $\widehat C_{2}(K(M_{5}))$, $\widehat C_{1}(K(M_{5}))$ y
+$\widehat C_{0}(K(M_{5}))$ como sigue:
+\begin{eqnarray*}
+  \widehat C_{2}(K(M_{5}))&=&S^{(2,1,1,1)}\oplus S^{(3,1,1)}.\\
+  \widehat C_{1}(K(M_{5}))&=&S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus 2S^{(3,1,1)}\oplus S^{(3,2)} \oplus S^{(2,2,1)}.\\
+  \widehat C_{0}(K(M_{5}))&=&\mathbb{C}\oplus S^{(4,1)}\oplus S^{(3,2)}\oplus S^{(2,2,1)}.
+\end{eqnarray*}
+\begin{figure}[h]
+  \centering
+    \[
   \begin{CD}
     0 @>{\partial_{3}}>> C_{2}(K(M_{5})) @>{\partial_{2}}>> C_{1}(K(M_{5})) @>{\partial_{1}}>> C_{0}(K(M_{5})) @>{\varepsilon}>> \mathbb{C}\\
     @VVV   @Vf_{2}VV   @Vf_{1}VV  @Vf_{0}VV  @VVV    \\
-    0 @>{\widehat\partial_{3}}>> S^{(2,1,1,1)}\oplus S^{(3,1,1)}
-    @>{\widehat\partial_{2}}>> S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus
-    2S^{(3,1,1)}\oplus S^{(3,2)} \oplus S^{(2,2,1)}
-    @>{\widehat\partial_{1}}>> \mathbb{C}\oplus S^{(4,1)}\oplus
-    S^{(3,2)}\oplus S^{(2,2,1)}@>{\widehat \varepsilon}>> \mathbb{C}
+    0 @>{\widehat\partial_{3}}>> \widehat C_{2}(K(M_{5}))
+    @>{\widehat\partial_{2}}>> \widehat C_{1}(K(M_{5}))
+    @>{\widehat\partial_{1}}>> \widehat C_{0}(K(M_{5})) 
+    @>{\widehat \varepsilon}>> \mathbb{C}
   \end{CD}
   \]
-   }
   
   \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{5})$}
   \label{fig:diagrama-conmutativo-clanes5}
-\end{sidewaysfigure}
+\end{figure}
+
+% \begin{sidewaysfigure}%[h]
+%   %\centering
+%   {\small
+%   \[
+%   \begin{CD}
+%     0 @>{\partial_{3}}>> C_{2}(K(M_{5})) @>{\partial_{2}}>> C_{1}(K(M_{5})) @>{\partial_{1}}>> C_{0}(K(M_{5})) @>{\varepsilon}>> \mathbb{C}\\
+%     @VVV   @Vf_{2}VV   @Vf_{1}VV  @Vf_{0}VV  @VVV    \\
+%     0 @>{\widehat\partial_{3}}>> S^{(2,1,1,1)}\oplus S^{(3,1,1)}
+%     @>{\widehat\partial_{2}}>> S^{(4,1)}\oplus S^{(2,1,1,1)}\oplus
+%     2S^{(3,1,1)}\oplus S^{(3,2)} \oplus S^{(2,2,1)}
+%     @>{\widehat\partial_{1}}>> \mathbb{C}\oplus S^{(4,1)}\oplus
+%     S^{(3,2)}\oplus S^{(2,2,1)}@>{\widehat \varepsilon}>> \mathbb{C}
+%   \end{CD}
+%   \]
+%    }
+  
+%   \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{5})$}
+%   \label{fig:diagrama-conmutativo-clanes5}
+% \end{sidewaysfigure}
 
 Calculemos las homologías reducidas $\widetilde H_{0}(K(M_{5}))$,
 $\widetilde H_{1}(K(M_{5}))$ y $\widetilde H_{2}(K(M_{5}))$.
@@ -5248,29 +5273,51 @@ De donde obtenemos:
   \label{C2-KM6}
 \end{equation}
 
-En la figura \ref{fig:diagrama-conmutativo-clanes5} se muestra el diagrama
+En la figura \ref{fig:diagrama-conmutativo-clanes6} se muestra el diagrama
 conmutativo de los complejos de cadena de $K(M_{6})$, donde $f_{0}$,
 $f_{1}$ y $f_{2}$ son los isomorfismos obtenidos de las expresiones
 \ref{C0-KM6}, \ref{C1-KM6} y \ref{C2-KM6}.
 
-\begin{sidewaysfigure}%[h]
-  {\small
+\begin{figure}[h]
+  \centering
     \[
     \begin{CD}
       0 @>{\partial_{3}}>> C_{2}(K(M_{6})) @>{\partial_{2}}>> C_{1}(K(M_{6})) @>{\partial_{1}}>> C_{0}(K(M_{6})) @>{\varepsilon}>> \mathbb{C}\\
       @VVV   @Vf_{2}VV   @Vf_{1}VV   @Vf_{0}VV   @VVV    \\
-      0  @>{\widehat\partial_{3}}>> S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)} @>{\widehat\partial_{2}}>>
-      S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus
-      S^{(2,2,2)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>>
-      \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)} @>{\widehat
-        \varepsilon}>> \mathbb{C}
+      0  @>{\widehat\partial_{3}}>> \widehat C_{2}(K(M_{6}))
+      @>{\widehat\partial_{2}}>>  \widehat C_{1}(K(M_{6}))
+      @>{\widehat\partial_{1}}>> \widehat C_{0}(K(M_{6}))
+      @>{\widehat\varepsilon}>> \mathbb{C}
     \end{CD}
     \]
-  }
   
   \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{6})$}
   \label{fig:diagrama-conmutativo-clanes6}
-\end{sidewaysfigure}
+\end{figure}
+donde
+\begin{eqnarray*}
+  \widehat C_{2}(K(M_{6}))&=&S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}. \\
+  \widehat C_{1}(K(M_{6}))&=&S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus S^{(2,2,2)}\oplus S^{(3,2,1)}.\\
+  \widehat C_{0}(K(M_{6}))&=&\mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)}.
+\end{eqnarray*}
+% \begin{sidewaysfigure}%[h]
+%   {\small
+%     \[
+%     \begin{CD}
+%       0 @>{\partial_{3}}>> C_{2}(K(M_{6})) @>{\partial_{2}}>> C_{1}(K(M_{6})) @>{\partial_{1}}>> C_{0}(K(M_{6})) @>{\varepsilon}>> \mathbb{C}\\
+%       @VVV   @Vf_{2}VV   @Vf_{1}VV   @Vf_{0}VV   @VVV    \\
+%       0  @>{\widehat\partial_{3}}>> S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)} @>{\widehat\partial_{2}}>>
+%       S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1)}\oplus S^{(4,2)}\oplus
+%       S^{(2,2,2)}\oplus S^{(3,2,1)} @>{\widehat\partial_{1}}>>
+%       \mathbb{C} \oplus S^{(4,2)}\oplus S^{(2,2,2)} @>{\widehat
+%         \varepsilon}>> \mathbb{C}
+%     \end{CD}
+%     \]
+%   }
+  
+%   \caption{Diagrama conmutativo de los complejos de cadenas de $K(M_{6})$}
+%   \label{fig:diagrama-conmutativo-clanes6}
+% \end{sidewaysfigure}
 
 Calculemos las homologías reducidas $\widetilde H_{0}(K(M_{6}))$,
 $\widetilde H_{1}(K(M_{6}))$ y $\widetilde H_{2}(K(M_{6}))$.
