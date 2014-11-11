@@ -176,15 +176,13 @@ espacios propios de $T$, es decir,
 $$V=E_{\lambda_{1}}\oplus E_{\lambda_{2}}\oplus \cdots \oplus E_{\lambda_{k}},$$
 donde $\lambda_{1},\lambda_{2},\dots,\lambda_{k}$ son los distintos
 valores propios de $T$.
- 
-{\setlength{\fboxsep}{0pt}\colorbox{green}{poner referencia o no???}}
 %ver [\cite{friedberg1982algebra}, teorema 5.14, p.257].
 
 Dada una transformación lineal $T$ en un espacio vectorial $V$ de
 dimensión finita. Es deseable descomponer a $V$ en una suma directa de
-subespacios $T$-invariantes propios, es decir, un subespacio propio $W$ de $V$
-se llama $T$-invariante de $V$ si $T(W)\subseteq W$, esto es $T(x)\in
-W$ para toda $x\in W$. Esta descomposición de $V$ resulta útil, puesto que el
+subespacios $T$-invariantes propios, es decir, cuando se aplica la
+transformación a cada elemento del subespacio lo envía a otro elemento
+del mismo subespacio. Esta descomposición de $V$ resulta útil, puesto que el
 comportamiento de $T$ puede ser inferido a través de su comportamiento
 en cada uno de los sumandos directos, es decir, de la restricción de
 $T$ a un subespacio $T$-invariante $W$, la cual es la transformación
@@ -200,32 +198,32 @@ En álgebra lineal se estudian espacios vectoriales sobre campos
 arbitrarios. El concepto de módulo es una generalización de un espacio
 vectorial. Se obtiene la generalización simplemente reemplazando el
 campo por algún anillo. Ahora hagamos ciertas analogías relacionando
-algunos conceptos de la teoría ordinaria de representaciones con el
-lenguaje ya conocido de álgebra lineal: como se mencionó, módulo es una
-generalización de un espacio vectorial, asociamos submódulo con
-subespacio y a un submódulo irreducible con un subespacio $T$-invariante.
+algunos conceptos de la teoría de representaciones con el lenguaje ya
+conocido de álgebra lineal: asociamos módulo con espacio vectorial, submódulo con
+subespacio y submódulo irreducible con subespacio $T$-invariante.
 
-El teorema de Maschke, {\setlength{\fboxsep}{0pt}\colorbox{green}{poner referencia o no???}} %[\cite{sagan2001symmetric}, teorema 1.5.3, p.16],
-se usa con frecuencia en este trabajo y sigue la
-idea de descomponer a un módulo en sus piezas más pequeñas, el cual
-enuncia que, un módulo es completamente reducible, es decir, es suma directa de
-submódulos irreducibles.
-
-%[Teorema de Maschke][\cite{sagan2001symmetric}, teorema 1.5.3, p.16],
+El teorema fundamental de la aritmética es análogo al teorema de
+Maschke [\cite{sagan2001symmetric}, teorema 1.5.3, p.16], el cual
+sigue la idea de descomponer a un módulo en sus piezas más
+pequeñas. El teorema de Maschke enuncia que, un módulo es completamente reducible,
+es decir, es suma directa de submódulos irreducibles.
 %[\cite{fulton1991representation}, proposición 1.8, p.7]. pag 24 teorema de Machke.
 
-Estudiar representaciones de el anillo de grupo $FG$ en $V$, donde $V$
-es un espacio vectorial sobre el campo $F$, es equivalente a estudiar
-representaciones de el grupo $G$ en $V$, que a su vez, es equivalente
-a estudiar $G$-módulos. Usaremos tales conceptos según sea
-conveniente, por ejemplo, nos referimos a una representación de $G$ en $V$
-cuando consideramos caracteres y $G$-módulo cuando descomponemos
-tal módulo en submódulos irreducibles. {\setlength{\fboxsep}{0pt}\colorbox{green}{¿¿¿}} Decir
-que las representaciones de $FG$ en $V$ es una generalización de
-representaciones de el grupo $G$ en $V$ o no decir
-... {\setlength{\fboxsep}{0pt}\colorbox{green}{???}}
+A cada campo $F$ y cada grupo $G$ se le asocia un anillo denotado por
+$FG$ llamado el anillo de grupo. Estudiar estructuras de módulo sobre el
+anillo de grupo $FG$, es equivalente a estudiar representaciones de el grupo $G$ en
+$V$, donde $V$ es un espacio vectorial sobre
+$F$, que a su vez, es equivalente a estudiar $G$-módulos. Usaremos
+tales conceptos según sea conveniente, por ejemplo, nos referimos a
+una representación de $G$ en $V$ cuando consideramos caracteres y
+$G$-módulo cuando descomponemos tal módulo en submódulos
+irreducibles. 
 
-Nos interesa la teoría ordinaria de representaciones de grupos finitos
+¿¿¿ Decir que los módulos sobre $FG$ es una
+generalización de representaciones de el grupo $G$ en $V$ o no decir
+{\setlength{\fboxsep}{0pt}\colorbox{green}{???}}
+
+Nos interesa la llamada teoría ordinaria de representaciones de grupos finitos
 actuando en un espacio vectorial de dimensión finita sobre el campo de
 los números complejos y más generalmente sobre campos de
 característica que no divide al orden del grupo, ésta restricción en
@@ -235,7 +233,7 @@ característica divide al orden de el grupo, en este caso pueden
 existir módulos que no son completamente reducibles, como se
 muestra en el ejemplo {\setlength{\fboxsep}{0pt}\colorbox{green}{(ref
     todavía no escrito)}}. En este trabajo no consideraremos la teoría
-modular. 
+modular, ya que en ese contexto no es válido el teorema de Maschke. 
 
 Un complejo simplicial $\Delta$ está formado por un conjunto de
 vértices y una colección de subconjuntos de vértices, llamados
@@ -349,24 +347,23 @@ realizamos son para $n=4,5,6$ y sus respectivas gráficas aparecen abajo.
   $K(G_{6})$
 \end{minipage}
 \end{center}
+% El grupo simétrico $S_{n}$ actúa en el espacio de $p$-cadenas
+% $C_{p}(M_{n})$ con coeficientes en el campo de los
+% números complejos, así $C_{p}(M_{n})$ es un $S_{n}$-módulo el cual
+% descomponemos en suma directa de submódulos irreducibles. Se define el $p$-ésimo
+% operador frontera $\partial_{p}$, el cual es un homomorfismo de
+% $C_{p}(M_{n})$ en $C_{p-1}(M_{n})$, del mismo modo como notamos que
+% resulta útil descomponer un espacio vectorial en suma directa de
+% subespacios invariantes, es útil descomponer un módulo en submódulos irreducibles,
+% puesto que el comportamiento de $\partial_{p}$ puede ser inferido
+% mediante su comportamiento en cada uno de los sumandos directos.
 
-El grupo simétrico $S_{n}$ actúa en el espacio de $p$-cadenas
-$C_{p}(M_{n})$ con coeficientes en el campo de los
-números complejos, así $C_{p}(M_{n})$ es un $S_{n}$-módulo el cual
-descomponemos en suma directa de submódulos irreducibles. Se define el $p$-ésimo
-operador frontera $\partial_{p}$, el cual es un homomorfismo de
-$C_{p}(M_{n})$ en $C_{p-1}(M_{n})$, del mismo modo como notamos que
-resulta útil descomponer un espacio vectorial en suma directa de
-subespacios invariantes, es útil descomponer un módulo en submódulos irreducibles,
-puesto que el comportamiento de $\partial_{p}$ puede ser inferido
-mediante su comportamiento en cada uno de los sumandos directos.
-
-...Aunque hay varias teorías de homología [\cite{munkres1984elements},
+Aunque hay varias teorías de homología [\cite{munkres1984elements},
 {\setlength{\fboxsep}{0pt}\colorbox{green}{...??}}], la homología que
 usamos en este trabajo es la homología simplicial, pues... 
 
-Las homologías reducidas de $M_{n}$ con coeficientes en el campo de los números
-complejos denotada por $\widetilde H_{k-1}(M_{n})$ definen módulos de $S_{n}$.
+Las homologías de $\Delta$ con coeficientes en el campo de los números
+complejos denotadas por $H_{k-1}(\Delta)$ definen módulos de el grupo $G$.
 
 La idea de este trabajo surge a partir del teorema de Bouc
 [\cite{MR756517}, teorema ...,
@@ -384,10 +381,6 @@ $K(G_{n})$ en donde también actúa el grupo simétrico $S_{n}$, con
 $n=4,5,6$.
 
 \bigskip
-
-Palabras clave: representación, módulo, submódulo, submódulo
-irreducible, complejo simplicial, gráficas de emparejamientos,
-gráficas de clanes, homología.
 
 En el primer capítulo capítulo... 
 
