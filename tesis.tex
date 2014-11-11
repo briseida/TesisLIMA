@@ -164,38 +164,102 @@ the clique graph $K(G_{n})$, where $n\leq 6$.
 
 \chapter*{Introducción}
 
-(Decir mejor lo siguiente) Es de importacia descomponer algo en sus piezas más pequenas por
-ejemplo,
-
-Sabemos de el Teorema fundamental de la Aritmética que todo número
+En matemáticas como en otras ciencias es importante descomponer cierto
+objeto en piezas y mejor aún si tales piezas son las más pequeñas. Por
+ejemplo, de el teorema fundamental de la aritmética sabemos que todo número
 entero positivo puede ser expresado como producto de potencias de
-primos.
+primos. Enseguida se muestran dos ejemplos más de álgebra lineal. 
+
+Una transformación lineal $T$ en un espacio vectorial $V$ de dimensión
+finita, es diagonalizable si y solo si $V$ es suma directa de los
+espacios propios de $T$, es decir,
+$$V=E_{\lambda_{1}}\oplus E_{\lambda_{2}}\oplus \cdots \oplus E_{\lambda_{k}},$$
+donde $\lambda_{1},\lambda_{2},\dots,\lambda_{k}$ son los distintos
+valores propios de $T$.
+ 
+{\setlength{\fboxsep}{0pt}\colorbox{green}{poner referencia o no???}}
+%ver [\cite{friedberg1982algebra}, teorema 5.14, p.257].
 
 Dada una transformación lineal $T$ en un espacio vectorial $V$ de
-dimensión finita. Es deseable descomponer a $V$
-en una suma directa de tantos subespacios $T$-invariantes  (un
-subespacio $W$ de $V$ se llama $T$-invariante de $V$ si
-$T(W)\subseteq W$, esto es $T(x)\in W$ para toda $x\in W$) propios
-como sea posible, puesto que el comportamiento de $T$ puede ser
-inferido a través de su comportamiento en cada uno de los sumandos
-directos, es decir, la restricción de $T$ a un subespacio
-$T$-invariante $W$ es un mapeo de $W$ en sí mismo. 
+dimensión finita. Es deseable descomponer a $V$ en una suma directa de
+subespacios $T$-invariantes propios, es decir, un subespacio propio $W$ de $V$
+se llama $T$-invariante de $V$ si $T(W)\subseteq W$, esto es $T(x)\in
+W$ para toda $x\in W$. Esta descomposición de $V$ resulta útil, puesto que el
+comportamiento de $T$ puede ser inferido a través de su comportamiento
+en cada uno de los sumandos directos, es decir, de la restricción de
+$T$ a un subespacio $T$-invariante $W$, la cual es la transformación
+lineal $T$ en $W$. El siguiente ejemplo enuncia como son los espacios
+$T$-invariantes bajo la condición de que $T$ sea
+diagonalizable: Si $T$ es diagonalizable, entonces $V$ puede
+descomponerse en una suma directa de subespacios $T$-invariantes
+unidimensionales, que son los subespacios generados por los vectores
+de la base formada por los vectores propios de $T$. 
+%[\cite{friedberg1982algebra}, ejercicio 7, p.303]
 
-Si $T$ es diagonalizable, entonces $V$ puede descomponerse en una suma
-directa de subespacios $T$-invariantes unidimensionales, que son los
-subespacios generados por los vectores de la base formada por los
-vectores propios de $T$. 
+En álgebra lineal se estudian espacios vectoriales sobre campos
+arbitrarios. El concepto de módulo es una generalización de un espacio
+vectorial. Se obtiene la generalización simplemente reemplazando el
+campo por algún anillo. Ahora hagamos ciertas analogías relacionando
+algunos conceptos de la teoría ordinaria de representaciones con el
+lenguaje ya conocido de álgebra lineal: como se mencionó, módulo es una
+generalización de un espacio vectorial, asociamos submódulo con
+subespacio y a un submódulo irreducible con un subespacio $T$-invariante.
 
-(Explicación de descomposición de un módulo en submódulos
-irreducibles).
+El teorema de Maschke, {\setlength{\fboxsep}{0pt}\colorbox{green}{poner referencia o no???}} %[\cite{sagan2001symmetric}, teorema 1.5.3, p.16],
+se usa con frecuencia en este trabajo y sigue la
+idea de descomponer a un módulo en sus piezas más pequeñas, el cual
+enuncia que, un módulo es completamente reducible, es decir, es suma directa de
+submódulos irreducibles.
 
-...Aunque hay varias teorías de homología [Mun..], la homología que
-usamos en este trabajo es la homología singular,...
+%[Teorema de Maschke][\cite{sagan2001symmetric}, teorema 1.5.3, p.16],
+%[\cite{fulton1991representation}, proposición 1.8, p.7]. pag 24 teorema de Machke.
 
-{\setlength{\fboxsep}{0pt}\colorbox{green}{Tal vez convenga poner las
-    graficas de las que vamos a obtener los complejos simpliciales, es
-  decir $G_{n}$ y $K(G_{n})$}}
-\bigskip
+Estudiar representaciones de el anillo de grupo $FG$ en $V$, donde $V$
+es un espacio vectorial sobre el campo $F$, es equivalente a estudiar
+representaciones de el grupo $G$ en $V$, que a su vez, es equivalente
+a estudiar $G$-módulos. Usaremos tales conceptos según sea
+conveniente, por ejemplo, nos referimos a una representación de $G$ en $V$
+cuando consideramos caracteres y $G$-módulo cuando descomponemos
+tal módulo en submódulos irreducibles. {\setlength{\fboxsep}{0pt}\colorbox{green}{¿¿¿}} Decir
+que las representaciones de $FG$ en $V$ es una generalización de
+representaciones de el grupo $G$ en $V$ o no decir
+... {\setlength{\fboxsep}{0pt}\colorbox{green}{???}}
+
+Nos interesa la teoría ordinaria de representaciones de grupos finitos
+actuando en un espacio vectorial de dimensión finita sobre el campo de
+los números complejos y más generalmente sobre campos de
+característica que no divide al orden del grupo, ésta restricción en
+la característica implica que todo módulo es completamente
+reducible. Por otra parte, la teoría modular, estudia módulos sobre campos cuya
+característica divide al orden de el grupo, en este caso pueden
+existir módulos que no son completamente reducibles, como se
+muestra en el ejemplo {\setlength{\fboxsep}{0pt}\colorbox{green}{(ref
+    todavía no escrito)}}. En este trabajo no consideraremos la teoría
+modular. 
+
+Un complejo simplicial $\Delta$ está formado por un conjunto de
+vértices y una colección de subconjuntos de vértices, llamados
+simplejos, tal que si $A$ es un elemento de $\Delta$, cada subconjunto
+no vacío de $A$ pertenece a $\Delta$. A cada complejo simplicial se le
+puede asociar un espacio topológico $|\Delta|$, llamado su realización
+geométrica. Los complejos simpliciales son una herramienta fundamental
+para introducir conceptos topológicos dentro de la combinatoria.
+
+Consideraremos complejos simpliciales obtenidos a partir de
+gráficas. Es decir, a cada gráfica $G$ simple finita se le asocia un
+espacio topológico por medio del complejo simplicial $\Delta(G)$, cuyos
+simplejos son las subgráficas completas. 
+% Por lo tanto, a la gráfica $G$ se le asocian conceptos topológicos por
+% medio de $|\Delta(G)|$. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas
+% finitas, diremos que $G_{1}$ y $G_{2}$ son homeomorfas si
+% $|\Delta(G_{1})|$ y $|\Delta(G_{2})|$ lo son.
+
+Estamos interesados en la graficas de emparejamientos $G_{n}$ las
+cuales se construyen a partir  de gráficas completas de $n$ vértices,
+a su vez, $K(G_{n})$ denota las gráficas de clanes obtenidas de
+$G_{n}$. Con estas gráficas se definen los complejos simpliciales
+$M_{n}=\Delta(G_{n})$ y $K(M_{n})=\Delta(K(G_{n}))$. Todos los cálculos que
+realizamos son para $n=4,5,6$ y sus respectivas gráficas aparecen abajo.
 
 \begin{center}
   \begin{minipage}{0.3\linewidth}
@@ -282,114 +346,155 @@ usamos en este trabajo es la homología singular,...
     \EdgeFromOneToSeq{a}{b}{2}{4}{7} \EdgeFromOneToSeq{a}{b}{0}{8}{11}
   \end{tikzpicture}
   
-  $K(M_{6})$
+  $K(G_{6})$
 \end{minipage}
 \end{center}
 
-La idea de la presente tesis surge a partir del Teorema de Bouc
-\cite{MR756517}: 
-\begin{equation*}
-  \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
-      \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda},
-\end{equation*}
-para todo $n,k\geq1$. Tal teorema describe la descomposición en
-submódulos irreducibles del $S_{n}$-módulo $\widetilde
-H_{k-1}(M_{n})$, donde $\widetilde H_{k-1}(M_{n})$ es la homología
-reducida de complejos simpliciales $M_{n}$ construidos a partir de ciertas
-gráficas, (llamadas \emph{gráficas de emparejamientos}) en donde actúa
-el grupo simétrico~$S_{n}$.
+El grupo simétrico $S_{n}$ actúa en el espacio de $p$-cadenas
+$C_{p}(M_{n})$ con coeficientes en el campo de los
+números complejos, así $C_{p}(M_{n})$ es un $S_{n}$-módulo el cual
+descomponemos en suma directa de submódulos irreducibles. Se define el $p$-ésimo
+operador frontera $\partial_{p}$, el cual es un homomorfismo de
+$C_{p}(M_{n})$ en $C_{p-1}(M_{n})$, del mismo modo como notamos que
+resulta útil descomponer un espacio vectorial en suma directa de
+subespacios invariantes, es útil descomponer un módulo en submódulos irreducibles,
+puesto que el comportamiento de $\partial_{p}$ puede ser inferido
+mediante su comportamiento en cada uno de los sumandos directos.
 
-Se define la gráfica de emparejamientos $M(G)$ de la gráfica simple
-$G$ como la gráfica cuyos vértices son las aristas de $G$ y dos
-vértices son adyacentes si las correspondientes aristas son
-ajenas. Denotemos por $K_{n}$ a la gráfica completa con $n$
-vértices. En la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de
-manera natural.
+...Aunque hay varias teorías de homología [\cite{munkres1984elements},
+{\setlength{\fboxsep}{0pt}\colorbox{green}{...??}}], la homología que
+usamos en este trabajo es la homología simplicial, pues... 
 
-Un complejo simplicial $\Delta$ está formado por un conjunto de
-vértices y una colección de subconjuntos de vértices, llamados
-\emph{simplejos}, tal que la colección es cerrada bajo tomar
-subconjuntos. A cada complejo simplicial se le puede asociar un
-espacio topológico $|\Delta|$, llamado su \emph{realización
-  geométrica}. Los complejos simpliciales son una herramienta
-fundamental para introducir conceptos topológicos dentro de la
-combinatoria. 
+Las homologías reducidas de $M_{n}$ con coeficientes en el campo de los números
+complejos denotada por $\widetilde H_{k-1}(M_{n})$ definen módulos de $S_{n}$.
 
-Consideraremos complejos simpliciales obtenidos a partir de
-gráficas. Es decir, a cada gráfica $G$ simple finita se le asocia un
-espacio topológico por medio del complejo simplicial $\Delta(G)$, cuyos
-simplejos son las subgráficas completas. Por lo tanto, a la gráfica
-$G$ se le asocian conceptos topológicos por medio de
-$|\Delta(G)|$. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas finitas,
-diremos que $G_{1}$ y $G_{2}$ son homeomorfas si $|\Delta(G_{1})|$
-y $|\Delta(G_{2})|$ lo son.
+La idea de este trabajo surge a partir del teorema de Bouc
+[\cite{MR756517}, teorema ...,
+p.{\setlength{\fboxsep}{0pt}\colorbox{green}{??}}], el cual describe
+la descomposición del $S_{n}$-módulo $\widetilde H_{k-1}(M_{n})$ en
+suma directa de submódulos irreducibles, en donde actúa el grupo
+simétrico $S_{n}$, para todo $n,k\geq1$.
 
-Se define entonces el complejo simplicial $M_{n}$ como
-$M_{n}=\Delta(G_{n})$. Puesto que $S_{n}$ actúa en $M_{n}$, las
-homologías de $M_{n}$ con coeficientes en el campo de los
-números complejos definen representaciones de $S_{n}$.
+En este trabajo reproducimos el resultado de Bouc para $n=4,5,6,$ por
+medio de argumentos elementales de representaciones de grupos y
+topología. Además se calcula la descomposición en módulos irreducibles
+de $\widetilde H(K(M_{n}))$, es decir, de las homologías reducidas de
+los complejos simpliciales obtenidos a partir de la gráfica de clanes
+$K(G_{n})$ en donde también actúa el grupo simétrico $S_{n}$, con
+$n=4,5,6$.
 
-En la tesis reproducimos el resultado de Bouc para $n\leq 6$ por medio de
-argumentos elementales de representaciones de grupos y
-topología. Además se calcula la descomposición en módulos irreducibles de las homologías
-reducidas de los complejos simpliciales obtenidos a partir de la
-gráfica de clanes $K(G_{n})$ en donde también actúa el grupo simétrico
-$S_{n}$, con $n\leq 6$.
+\bigskip
 
-Un clan es una subgráfica completa maximal. La gráfica de clanes
-$K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
-de $G$ y dos vértices son adyacentes si los correspondientes clanes se
-intersecan.
+Palabras clave: representación, módulo, submódulo, submódulo
+irreducible, complejo simplicial, gráficas de emparejamientos,
+gráficas de clanes, homología.
 
-En el primer capítulo, se enuncian algunas definiciones y teoremas
-de espacios vectoriales y transformaciones lineales que usaremos en el
-desarrollo de éste trabajo. Entre las definiciones que utilizamos
-frecuentemente son la suma directa de espacios vectoriales y
-espacio cociente. 
+En el primer capítulo capítulo... 
 
-En el segundo capítulo, se presenta la teoría de representaciones de
-grupos. Estudiar representaciones de un grupo $G$ en un espacio
-vectorial $V$ resulta equivalente a estudiar $G$-módulos $V$. Se
-discute el teorema de Maschke que enuncia que cualquier $G$-módulo $V$
-se puede descomponer como suma directa de $G$-submódulos
-irreducibles. Por otra parte, los caracteres de una
-representación y el producto interno de caracteres nos proporcionan información
-acerca las representaciones. El capítulo termina con la sección de
-caracteres y módulos inducidos.
+% La idea de la presente tesis surge a partir del Teorema de Bouc
+% \cite{MR756517}: 
+% \begin{equation*}
+%   \widetilde H_{k-1}(M_{n})\cong_{S_{n}}\bigoplus_{\substack{\lambda:\lambda\vdash n\\
+%       \lambda=\lambda^{'}\\d(\lambda)=n-2k}} S^{\lambda},
+% \end{equation*}
+% para todo $n,k\geq1$. Tal teorema describe la descomposición en
+% submódulos irreducibles del $S_{n}$-módulo $\widetilde
+% H_{k-1}(M_{n})$, donde $\widetilde H_{k-1}(M_{n})$ es la homología
+% reducida de complejos simpliciales $M_{n}$ construidos a partir de ciertas
+% gráficas, (llamadas \emph{gráficas de emparejamientos}) en donde actúa
+% el grupo simétrico~$S_{n}$.
 
-En el tercer capítulo, estudiamos la relación entre tableros de Young
-y representaciones del grupo simétrico. Describimos la construcción de
-módulos de Specht los cuales dan una lista completa de las representaciones irreducibles de
-$S_{n}$.
+% Se define la gráfica de emparejamientos $M(G)$ de la gráfica simple
+% $G$ como la gráfica cuyos vértices son las aristas de $G$ y dos
+% vértices son adyacentes si las correspondientes aristas son
+% ajenas. Denotemos por $K_{n}$ a la gráfica completa con $n$
+% vértices. En la gráfica $G_{n}=M(K_{n})$, el grupo $S_{n}$ actúa de
+% manera natural.
 
-Las homologías de complejos simpliciales son el tema del capítulo 4.
-En la sección \ref{com-sim-abs} se desarrollan conceptos como:
-complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$, el
-operador frontera $\partial_{p}$. En la sección \ref{hom-simp}, se
-define homología  y homología reducida de un complejo simplicial. Se
-presentan los complejos de cadenas abstractos en la sección \ref{com-cad} y por
-último, en la sección \ref{hom-ind}, se definen espacios topológicos
-homotópicos y se menciona que las homologías de espacios homotópicos son
-isomorfas.
+% Un complejo simplicial $\Delta$ está formado por un conjunto de
+% vértices y una colección de subconjuntos de vértices, llamados
+% \emph{simplejos}, tal que la colección es cerrada bajo tomar
+% subconjuntos. A cada complejo simplicial se le puede asociar un
+% espacio topológico $|\Delta|$, llamado su \emph{realización
+%   geométrica}. Los complejos simpliciales son una herramienta
+% fundamental para introducir conceptos topológicos dentro de la
+% combinatoria. 
 
-En el capítulo 5, se define gráfica de clanes y gráfica
-bipartita clánica. Asimismo, a las gráficas finitas se les asocia complejos
-simpliciales.
+% Consideraremos complejos simpliciales obtenidos a partir de
+% gráficas. Es decir, a cada gráfica $G$ simple finita se le asocia un
+% espacio topológico por medio del complejo simplicial $\Delta(G)$, cuyos
+% simplejos son las subgráficas completas. Por lo tanto, a la gráfica
+% $G$ se le asocian conceptos topológicos por medio de
+% $|\Delta(G)|$. Por ejemplo, si $G_{1}$ y $G_{2}$ son gráficas finitas,
+% diremos que $G_{1}$ y $G_{2}$ son homeomorfas si $|\Delta(G_{1})|$
+% y $|\Delta(G_{2})|$ lo son.
 
-Finalmente, en el capítulo 6 se utilizará la teoría presentada en los
-capítulos anteriores. Se define el complejo de emparejamientos y se
-enuncia el teorema de Bouc.  Además, calculamos las homologías
-reducidas de complejos de emparejamientos $M_{n}$ y de los complejos
-simpliciales obtenidos de las gráficas de clanes $K(G_{n})$, para
-$n\leq 6$.
+% Se define entonces el complejo simplicial $M_{n}$ como
+% $M_{n}=\Delta(G_{n})$. Puesto que $S_{n}$ actúa en $M_{n}$, las
+% homologías de $M_{n}$ con coeficientes en el campo de los
+% números complejos definen representaciones de $S_{n}$.
 
-En \cite{robles08:_repres}, se describe la descomposición de
-$\widetilde H_{k}(M_{n})$ en submódulos irreducibles, para $n\leq
-5$. Ésta tesis amplía los resultados de \cite{robles08:_repres}, pues
-de forma análoga se calcula la descomposición en módulos
-irreducibles de $\widetilde H_{k}(M_{6})$, así mismo se calculan las
-homologías reducidas  de los complejos simpliciales obtenidos de las
-gráficas de clanes $K(G_{n})$, para $n\leq 6$.
+% En la tesis reproducimos el resultado de Bouc para $n\leq 6$ por medio de
+% argumentos elementales de representaciones de grupos y
+% topología. Además se calcula la descomposición en módulos irreducibles de las homologías
+% reducidas de los complejos simpliciales obtenidos a partir de la
+% gráfica de clanes $K(G_{n})$ en donde también actúa el grupo simétrico
+% $S_{n}$, con $n\leq 6$.
+
+% Un clan es una subgráfica completa maximal. La gráfica de clanes
+% $K(G)$ de una gráfica $G$ es la gráfica cuyos vértices son los clanes
+% de $G$ y dos vértices son adyacentes si los correspondientes clanes se
+% intersecan.
+
+% En el primer capítulo, se enuncian algunas definiciones y teoremas
+% de espacios vectoriales y transformaciones lineales que usaremos en el
+% desarrollo de éste trabajo. Entre las definiciones que utilizamos
+% frecuentemente son la suma directa de espacios vectoriales y
+% espacio cociente. 
+
+% En el segundo capítulo, se presenta la teoría de representaciones de
+% grupos. Estudiar representaciones de un grupo $G$ en un espacio
+% vectorial $V$ resulta equivalente a estudiar $G$-módulos $V$. Se
+% discute el teorema de Maschke que enuncia que cualquier $G$-módulo $V$
+% se puede descomponer como suma directa de $G$-submódulos
+% irreducibles. Por otra parte, los caracteres de una
+% representación y el producto interno de caracteres nos proporcionan información
+% acerca las representaciones. El capítulo termina con la sección de
+% caracteres y módulos inducidos.
+
+% En el tercer capítulo, estudiamos la relación entre tableros de Young
+% y representaciones del grupo simétrico. Describimos la construcción de
+% módulos de Specht los cuales dan una lista completa de las representaciones irreducibles de
+% $S_{n}$.
+
+% Las homologías de complejos simpliciales son el tema del capítulo 4.
+% En la sección \ref{com-sim-abs} se desarrollan conceptos como:
+% complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$, el
+% operador frontera $\partial_{p}$. En la sección \ref{hom-simp}, se
+% define homología  y homología reducida de un complejo simplicial. Se
+% presentan los complejos de cadenas abstractos en la sección \ref{com-cad} y por
+% último, en la sección \ref{hom-ind}, se definen espacios topológicos
+% homotópicos y se menciona que las homologías de espacios homotópicos son
+% isomorfas.
+
+% En el capítulo 5, se define gráfica de clanes y gráfica
+% bipartita clánica. Asimismo, a las gráficas finitas se les asocia complejos
+% simpliciales.
+
+% Finalmente, en el capítulo 6 se utilizará la teoría presentada en los
+% capítulos anteriores. Se define el complejo de emparejamientos y se
+% enuncia el teorema de Bouc.  Además, calculamos las homologías
+% reducidas de complejos de emparejamientos $M_{n}$ y de los complejos
+% simpliciales obtenidos de las gráficas de clanes $K(G_{n})$, para
+% $n\leq 6$.
+
+% En \cite{robles08:_repres}, se describe la descomposición de
+% $\widetilde H_{k}(M_{n})$ en submódulos irreducibles, para $n\leq
+% 5$. Ésta tesis amplía los resultados de \cite{robles08:_repres}, pues
+% de forma análoga se calcula la descomposición en módulos
+% irreducibles de $\widetilde H_{k}(M_{6})$, así mismo se calculan las
+% homologías reducidas  de los complejos simpliciales obtenidos de las
+% gráficas de clanes $K(G_{n})$, para $n\leq 6$.
 
 \tableofcontents
 
@@ -5128,7 +5233,7 @@ y los $2$-simplejos:
     \AssignVertexLabel{b}{\textsl{$a_{7}$},\textsl{$a_{4}$},\textsl{$a_{15}$},\textsl{$a_{12}$},\textsl{$a_{6}$},\textsl{$a_{13}$},\textsl{$a_{11}$},\textsl{$a_{8}$},\textsl{$a_{10}$},\textsl{$a_{5}$},\textsl{$a_{14}$},\textsl{$a_{9}$}}
   \end{tikzpicture}
   
-  \caption{Gráfica de clanes $K(M_{6})$}
+  \caption{Gráfica de clanes $K(G_{6})$}
   \label{fig:KM6}
 \end{figure}
 
