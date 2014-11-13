@@ -874,6 +874,38 @@ $End(A)$ es un anillo.
 
 $A$ es un módulo sobre $End(A)$.
 
+\bigskip
+
+Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
+\begin{equation*}
+  FX=\{f:X\rightarrow F\mid f(x)\neq 0, \mbox{ para una cantidad finita de
+  valores de }x\in X \}.
+\end{equation*}
+
+$FX$ es un espacio vectorial con las siguientes operaciones:
+\begin{itemize}
+\item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FG$, 
+\item $(rf)(x)=rf(x)$, con $r\in F$.
+\end{itemize}
+
+Ahora, definimos la función $\varphi:X\rightarrow FX$, tal que 
+\[
+  \varphi(x)(y)=
+  \begin{cases}
+    1, & \text{si } x=y \\
+    0, & \text{si } x\neq y \\
+  \end{cases}
+  \]
+Notemos que $\varphi$ es inyectiva, puesto que, si $x,y\in X$ y $x\neq y$,
+entonces $\varphi(x)(y)\neq\varphi(y)(y)$, pues
+$\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, por lo tanto $\varphi(x)\neq\varphi(y)$. Además $\varphi(X)$ es
+subconjunto de $FX$. Así, $\varphi(X)$ es base de $FX$, es decir, podemos
+escribir a $f\in FX$ como $f=\sum_{x\in X} \lambda_{x}\varphi(x)$, donde $\lambda_{x}=f(x)$.
+
+Sea $G$ un grupo y sea $X=G$, el espacio vectorial $FG$ con la
+operación $gh$, donde $g,h\in G$, lo llamaremos el \textbf{anillo de
+  grupo}, pues resulta ser un anillo con elemento unitario.
+
 \section{Gráficas}
 \label{graficas}
 
