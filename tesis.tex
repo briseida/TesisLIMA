@@ -878,15 +878,23 @@ $A$ es un módulo sobre $End(A)$.
 
 Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
 \begin{equation*}
-  FX=\{f:X\rightarrow F\mid f(x)\neq 0, \mbox{ para una cantidad finita de
-  valores de }x\in X \}.
+  FX=\{f:X\rightarrow F\mid \{x\in X\mid f(x)\neq 0\} \mbox{ es finito}\}.
 \end{equation*}
 
 $FX$ es un espacio vectorial con las siguientes operaciones:
 \begin{itemize}
-\item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FG$, 
+\item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FX$, 
 \item $(rf)(x)=rf(x)$, con $r\in F$.
 \end{itemize}
+Para checar que la suma está bien definida, verifiquemos que si
+$f,g\in FX$, entonces $(f+g) \in FX$. Sean $f,g\in FX$ y $A,B$
+subconjuntos finitos de $X$, donde $f(x)\neq 0$ para $x\in A$ y
+$g(y)\neq 0$ para $y\in B$, notemos que $A\cup B$ es un subconjunto
+finito de $X$, así $(f+g)(z)\neq 0$ para $z\in A\cup B$, por tanto,
+$(f+g) \in FX$. De forma similar comprobemos que el producto por
+escalar está bien definido. Si $r\in F$, $f\in FX$ y $C$ es un subconjunto finito
+de $X$, donde $f(x)\neq 0$ para $x\in C$, entonces $(rf)(x)\neq 0$ para
+$x\in C$, por tanto~$(rf)\in FX$.
 
 Ahora, definimos la función $\varphi:X\rightarrow FX$, tal que 
 \[
@@ -898,13 +906,29 @@ Ahora, definimos la función $\varphi:X\rightarrow FX$, tal que
   \]
 Notemos que $\varphi$ es inyectiva, puesto que, si $x,y\in X$ y $x\neq y$,
 entonces $\varphi(x)(y)\neq\varphi(y)(y)$, pues
-$\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, por lo tanto $\varphi(x)\neq\varphi(y)$. Además $\varphi(X)$ es
-subconjunto de $FX$. Así, $\varphi(X)$ es base de $FX$, es decir, podemos
-escribir a $f\in FX$ como $f=\sum_{x\in X} \lambda_{x}\varphi(x)$, donde $\lambda_{x}=f(x)$.
+$\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, así
+$\varphi(x)\neq\varphi(y)$. Por tanto, $\varphi(X)$ es
+subconjunto de $FX$. 
+\begin{theorem}
+  $\varphi(X)$ es base de el espacio vectorial $FX$.
+\end{theorem}
+\begin{proof}[Demostración]
+  Si $\sum_{x\in X} \lambda_{x}\varphi(x)=f$, tal que $f(x)=0$ para
+  todo $x\in X$, es decir, para cada $y\in X$ tenemos $\sum_{x\in
+    X}\lambda_{x}\varphi(x)(y)=0$. Tomemos $y\in X$, entonces
+  $\sum_{x\in X}\lambda_{x}\varphi(x)(y)=0$, si $x\neq y$ y
+  $\sum_{x\in X}\lambda_{x}\varphi(x)(y)=\lambda_{x}$, si $x=y$,
+  entonces $\lambda_{x}=0$. De igual manera, para todo $y\in X$, se
+  tiene $\lambda_{x}=0$. Por tanto, $\varphi$ es linealmente independiente.
 
+  Por otra parte, sea $f\in FX$, se puede escribir a $f$ como $f=\sum_{x\in X}
+  f(x)\varphi(x)$. 
+\end{proof}
+
+\bigskip
 Sea $G$ un grupo y sea $X=G$, el espacio vectorial $FG$ con la
 operación $gh$, donde $g,h\in G$, lo llamaremos el \textbf{anillo de
-  grupo}, pues resulta ser un anillo con elemento unitario.
+  grupo}, pues resulta ser un anillo con elemento unitario .
 
 \section{Gráficas}
 \label{graficas}
