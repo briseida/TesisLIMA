@@ -740,10 +740,25 @@ donde
     $a,b\in G$ se tiene $ab=ba$.
 \end{definition}
 
+\begin{example}
+  \label{GL(nF)}
+  El conjunto de matrices invertibles $n \times n$ con
+  entradas en $F$, denotado como $GL(n,F)$, junto con el producto de matrices es un grupo.  
+\end{example}
+
+\begin{example}
+  \label{GL(V)}
+  El conjunto de operadores lineales invertibles en un espacio vectorial $V$ de dimensión finita
+  $n$ sobre el campo $F$, denotado por $GL(V)$, junto con la
+  operación composición de operadores es un grupo.
+\end{example}
+
 \begin{definition}
   Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
   en $H$ es una función $\rho:G\rightarrow H$ la cual
-  satisface $$\rho(ab)=\rho(a)\rho(b)$$ para todo $a,b \in G$
+  satisface $$\rho(ab)=\rho(a)\rho(b),$$
+  para todo $a,b \in G$. Si $\rho$ es biyectivo diremos que $\rho$ es
+  un \textbf{isomorfismo}.
 \end{definition}
 
 \begin{theorem}{[\cite{fraleigh}, teorema 13.2, p.128]}.
@@ -826,6 +841,38 @@ donde
   % cualquier factorización de $\pi$, siempre es par o siempre es impar.
 \end{theorem}
 
+\begin{definition}
+  \label{accion-grupo}
+  Sea $G$ un grupo y $X$ un conjunto no vacío. Una  \textbf{acción de $G$
+  en $X$} es una función $*:G \times X \rightarrow X$ tal que
+\begin{enumerate}
+\item $1*x=x$ para todo $x\in X.$
+\item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in X$ y $g_{1},g_{2}\in G.$
+\end{enumerate}
+   %Bajo estas condiciones, también decimos que $X$ es un \textbf{$G$-conjunto}.
+   En ocasiones, por abuso de notación, en lugar de escribir $g*x$ usaremos la notación $gx$.
+\end{definition}
+
+\begin{definition}
+  \label{accion-lineal}
+  Sea $G$ un grupo y $V$ un
+  espacio vectorial de dimensión
+  finita sobre el campo $F$. Una
+  \textbf{acción lineal de $G$ en
+    $V$} es una función
+ $$*:G\times V \rightarrow V $$
+que satisface los axiomas:
+\begin{enumerate}
+\item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
+\item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
+  $g_{1},g_{2}\in G$.
+\item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
+\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in F$,
+  $v\in V$ y $g_{1}\in G.$
+\end{enumerate}
+Diremos que $V$ es un \textbf{$G$-módulo.}
+\end{definition} 
+
 \section{lo nuevo}
 %\label{}
 \begin{definition}
@@ -881,35 +928,48 @@ Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
   FX=\{f:X\rightarrow F\mid \{x\in X\mid f(x)\neq 0\} \mbox{ es finito}\}.
 \end{equation*}
 
-$FX$ es un espacio vectorial con las siguientes operaciones:
-\begin{itemize}
-\item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FX$, 
-\item $(rf)(x)=rf(x)$, con $r\in F$.
-\end{itemize}
-Para checar que la suma está bien definida, verifiquemos que si
-$f,g\in FX$, entonces $(f+g) \in FX$. Sean $f,g\in FX$ y $A,B$
-subconjuntos finitos de $X$, donde $f(x)\neq 0$ para $x\in A$ y
-$g(y)\neq 0$ para $y\in B$, notemos que $A\cup B$ es un subconjunto
-finito de $X$, así $(f+g)(z)\neq 0$ para $z\in A\cup B$, por tanto,
-$(f+g) \in FX$. De forma similar comprobemos que el producto por
-escalar está bien definido. Si $r\in F$, $f\in FX$ y $C$ es un subconjunto finito
-de $X$, donde $f(x)\neq 0$ para $x\in C$, entonces $(rf)(x)\neq 0$ para
-$x\in C$, por tanto~$(rf)\in FX$.
+\begin{lemma}
+  \label{FX}
+  $FX$ es un espacio vectorial con las siguientes operaciones:
+  \begin{itemize}
+  \item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FX$,
+  \item $(rf)(x)=rf(x)$, con $r\in F$.
+  \end{itemize}
+\end{lemma}
 
-Ahora, definimos la función $\varphi:X\rightarrow FX$, tal que 
-\[
+\begin{proof}[Demostración]
+  Para checar que la suma está bien definida, verifiquemos que si
+  $f,g\in FX$, entonces $(f+g) \in FX$. Sean $f,g\in FX$ y $A,B$
+  subconjuntos finitos de $X$, donde $f(x)\neq 0$ para $x\in A$ y
+  $g(y)\neq 0$ para $y\in B$, notemos que $A\cup B$ es un
+  subconjunto finito de $X$, así $(f+g)(z)\neq 0$ para $z\in A\cup
+  B$, por tanto, $(f+g) \in FX$. De forma similar comprobemos que el
+  producto por escalar está bien definido. Si $r\in F$, $f\in FX$ y
+  $C$ es un subconjunto finito de $X$, donde $f(x)\neq 0$ para $x\in
+  C$, entonces $(rf)(x)\neq 0$ para
+  $x\in C$, por tanto~$(rf)\in FX$. Queda por demostrar que se cumplan
+  las otras condiciones de espacio vectorial.
+\end{proof}
+
+\begin{definition}
+  \label{fun-caracteristica}
+  Definimos a la \textbf{función característica} $\varphi:X\rightarrow
+  FX$, tal que
+  \[
   \varphi(x)(y)=
   \begin{cases}
     1, & \text{si } x=y \\
     0, & \text{si } x\neq y \\
   \end{cases}
   \]
+\end{definition}
 Notemos que $\varphi$ es inyectiva, puesto que, si $x,y\in X$ y $x\neq y$,
 entonces $\varphi(x)(y)\neq\varphi(y)(y)$, pues
 $\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, así
 $\varphi(x)\neq\varphi(y)$. Por tanto, $\varphi(X)$ es
 subconjunto de $FX$. 
 \begin{theorem}
+  \label{base-FX}
   $\varphi(X)$ es base de el espacio vectorial $FX$.
 \end{theorem}
 \begin{proof}[Demostración]
@@ -925,10 +985,13 @@ subconjunto de $FX$.
   f(x)\varphi(x)$. 
 \end{proof}
 
-\bigskip
-Sea $G$ un grupo y sea $X=G$, el espacio vectorial $FG$ con la
-operación $gh$, donde $g,h\in G$, lo llamaremos el \textbf{anillo de
-  grupo}, pues resulta ser un anillo con elemento unitario .
+Por abuso de notación y ya que $\varphi$ es inyectiva se
+``identifica'' cada elemento $x\in X$ con su función característica
+$\varphi(x)$. Con esta notación, cada elemento $f$ de el espacio vectorial
+$FX$ se escribe como combinación lineal de los elementos de $X$:
+\begin{equation*}
+  f=\sum_{x\in X} f(x)x_{x}.
+\end{equation*}
 
 \section{Gráficas}
 \label{graficas}
@@ -1177,48 +1240,80 @@ obtener el carácter de una representación inducida.
 \bigskip
 {\setlength{\fboxsep}{0pt}\colorbox{green}{....de aquí en adelante???}}
 
-Denotemos $GL(n,\mathbb{C})$ al grupo de matrices
-invertibles  $n \times n$ con entradas en $\mathbb{C}$.  
-Y a $GL(V)$ a los operadores lineales invertibles en un
-$\mathbb{C}$-espacio vectorial $V$ de dimensión finita $n$.
-Además, existe un isomorfismo entre los grupos $GL(n,\mathbb{C})$ y $GL(V)$.
+\section{Representaciones de grupos}
+\label{rep-grup}
 
-\section{Acciones de grupos}
-\label{acc-grup}
+La idea básica de teoría de representaciones es estudiar grupos considerándolos como
+transformaciones lineales. Esto se hace como sigue: dado un grupo $G$
+y un espacio vectorial $V$ de dimensión finita sobre el campo $F$,
+se asocia a cada $g\in G$ una transformación lineal $\rho(g)\in GL(V)$ de manera que hace a la
+función $\rho:G\rightarrow GL(V)$ un homomorfismo de grupos. $\rho$ es
+llamada la \textbf{representación de
+  $G$ en $V$}. 
+%A dicho espacio $V$ se le llamará \emph{espacio de representación} y a
+%su dimensión el \emph{grado} de la representación. 
 
-\begin{definition}
-  Sea $G$ un grupo y $X$ un conjunto no vacío. Una  \textbf{acción de $G$
-  en $X$} es una función $*:G \times X \rightarrow X$ tal que
-\begin{enumerate}
-\item $1*x=x$ para todo $x\in X.$
-\item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in X$ y $g_{1},g_{2}\in G.$
-\end{enumerate}
-   Bajo estas condiciones, también decimos que $X$ es un \textbf{$G$-conjunto}. En ocasiones, por
-   abuso de notación, en lugar de $g*x$ usaremos la notación $gx.$
-\end{definition}
+Dada cierta representación $\rho$, se sigue que $\rho(G)$ es un
+subgrupo de $GL(V)$, al cual se le puede aplicar las ideas de álgebra
+lineal. Si $\rho$ es inyectiva, entonces $G\cong \rho(G)$.
 
-\begin{definition}[Acciones lineales]
-  \label{Gmodulo}
-  Sea $G$ un grupo. Una acción de $G$ en un $\mathbb{C}$-espacio
-  vectorial $V$ de dimensión finita es una función
- $$*:G\times V \rightarrow V $$
-que satisface los axiomas:
-\begin{enumerate}
-\item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
-\item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
-  $g_{1},g_{2}\in G$.
-\item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
-\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in \mathbb{C}$,
-  $v\in V$ y $g_{1}\in G.$
-\end{enumerate}
-Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
-\end{definition} 
+Usualmente se estudia teoría de representaciones mediante la
+representaciones en sí mismas o a través de sus correspondientes
+$G$-módulos, donde $G$ es un grupo. Esto se explica mejor por analogía con otro tipo de representación.
+
+Sea $S_{A}$ denote el grupo de permutaciones de un conjunto $A$. El
+teorema de Cayley nos dice que cualquier grupo $G$ es isomorfo a un
+subgrupo de $S_{A}$ para un conjunto $A$ suficientemente
+grande. Formalmente, esto significa que se puede construir un
+homomorfismo inyectivo $f:G\rightarrow S_{A}$, asi que $G\cong
+f(G)$. Cada permutación $f(g)\in S_{A}$ ``representa'' al elemento de el grupo $g\in
+G$. 
+% Además, si tenemos algún otro homomorfismo $\pi:G\rightarrow
+% S_{A}$, no necesariamente inyectivo, la imagen de el grupo $G$ bajo
+% $\pi$ es un grupo de permutaciones isomorfo a algún grupo cociente de
+% $G$. Tales funciones son  llamadas \textbf{representaciones
+%   permutación} de $G$.
+
+Si tenemos otro homomorfismo $\phi:G\rightarrow S_{A}$, no
+necesariamente inyectivo. El grupo $G$ permuta el conjunto $A$ como sigue: dado
+$\phi:G\rightarrow S_{A}$ se define $*:G\times A\rightarrow A$ como
+$g*a=\phi(g)a$. Por propiedades de homomorfismo esta función tiene las
+siguientes propiedades:
+\begin{itemize}
+\item $1*a=a$
+\item $(gh)*a=g*(h*a)$
+\end{itemize}
+
+Estos son exactamente los axiomas de
+acción de grupo (ver definición \ref{accion-grupo}). En adelante,
+usaremos la notación $ga$ en lugar de $g*a$. De igual modo se puede
+definir un homomorfismo $\phi:G\rightarrow S_{A}$ dada una acción de grupo. Esto establece una
+correspondencia biyectiva entre el homomorfismo $\phi:G\rightarrow
+S_{A}$ y acciones de grupo.
+
+Análogamente, si dada una representación $\rho:G\rightarrow GL(V)$ e igualmente se define
+$gv=\rho(g)v$ conseguimos nuevamente los axiomas de grupo y dos
+propiedades más, las cuales establecen que $*$ es una acción lineal.
+\begin{itemize}
+\item $1v=v$
+\item $(gh)v=g(hv)$
+\item $g(v+w)=gv+gw$
+\item $g(\lambda v)=\lambda(gv)$
+\end{itemize}
+
+Estos cuatro axiomas definen un $G$-módulo (ver definición
+\ref{accion-lineal}). Inversamente se puede definir una representación
+$\rho$ a partir de un $G$-módulo como sigue:
+Dado un $G$-módulo, sea $\rho(g)(v)=gv$. Enseguida se
+enuncia y demuestra justamente lo
+discutido sobre representaciones de
+$G$ en $V$ y $G$-módulos.
 
 \begin{theorem}
   \label{rep-mod}
-  Existe una correspondencia biyectiva entre el conjunto de acciones
-  lineales de un grupo $G$ en un $\mathbb{C}$-espacio vectorial $V$ y el conjunto
-  de homomorfismos de $G$ en $GL(V)$.
+  Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
+  sobre el campo $F$. Existe una correspondencia biyectiva entre el conjunto de acciones
+  lineales $G$ en $V$ y el conjunto de representaciones de $G$ en $GL(V)$.
 \end{theorem}
 
 \begin{proof}[Demostración]
@@ -1228,7 +1323,7 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
   g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.
 
   Enseguida demostraremos que $\rho g$ es una transformación lineal
-  invertible. Sean $v,w\in V$, $\lambda \in \mathbb{C}$, entonces:
+  invertible. Sean $v,w\in V$, $\lambda \in F$, entonces:
   \begin{flalign*}
     &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w,\\
     &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v).
@@ -1262,32 +1357,72 @@ Diremos que la acción es $G$-lineal y que $V$ es un \textbf{$G$-módulo.}
     \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
   \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=(\rho g)(v+w)=(\rho
     g)v+(\rho g)w=gv+gw$$
-  \item Para $\lambda\in \mathbb{C}$, $v\in V$ y $g\in G$,
+  \item Para $\lambda\in F$, $v\in V$ y $g\in G$,
     $$g(\lambda v)=(\rho g)(\lambda v)=\lambda((\rho g)v)=\lambda(gv)$$
   \end{enumerate}
 \end{proof}
 
-\section{Representaciones de grupos}
-\label{rep-grup}
-
-\begin{definition}
-  \label{representacion}
-  Si $G$ es un grupo y $V$ es un $\mathbb{C}$-espacio vectorial, una
-  \textbf{representación} de $G$ en $V$ es un homomorfismo 
-     $$\rho:G\rightarrow GL(V).$$
-\end{definition}
+% \begin{definition}
+%   \label{representacion}
+%   Si $G$ es un grupo y $V$ es un $\mathbb{C}$-espacio vectorial, una
+%   \textbf{representación} de $G$ en $V$ es un homomorfismo 
+%      $$\rho:G\rightarrow GL(V).$$
+% \end{definition}
 
 Así, el teorema \ref{rep-mod} dice que estudiar las representaciones de $G$
-en $V$, es equivalente a estudiar $G$-módulos $V$.  A
-dicho espacio $V$ se le llamará \emph{espacio de representación} y a
-su dimensión el \emph{grado} de la representación. 
+en $V$, es equivalente a estudiar $G$-módulos $V$. 
 
-\begin{definition}
+Ahora seguimos la construcción de el anillo de grupo dada en
+[\cite{fulton1991representation}, sección 3.4, p.36]. Sea un grupo $G$, cualquier representación de $G$ asocia a cada
+elemento de el grupo un operador lineal. Por tanto, en el contexto de
+teoría de representaciones, los grupos pueden ser considerados como
+conjuntos abstractos de operadores lineales. Consideremos al espacio
+vectorial $FG$ construido como en el lema \ref{FX}, en donde $X$ es el grupo
+$G$. Daremos al espacio vectorial $FG$ una operación multiplicación.
+
+Sea el espacio vectorial $FG$. Si consideramos a los elementos de el
+grupo~$G$ como operadores lineales invertibles podemos multiplicar
+elementos de $FG$ exactamente como multiplicaríamos sumas de
+transformaciones lineales:
+\begin{equation*}
+\label{mult-alg-grupo}
+  (\sum_{g\in G}\lambda_{g}g)(\sum_{h\in G}\mu_{h}h)=\sum_{g\in
+    G}\sum_{h \in G}\lambda_{g}\mu_{h}gh.
+\end{equation*}
+Esta definición de multiplicación convierte a el espacio vectorial
+$FG$ en un anillo con elemento unitario, al cual llamamos
+\textbf{anillo de grupo de $G$}.
+
+Sea $V$ un $G$-módulo, es decir, se tiene la acción lineal de $G$ en $V$ 
+$$*:G\times V\rightarrow V,$$ 
+se define la función $*:FG\times V\rightarrow V$ como: 
+\begin{equation*}
+  (\sum_{g\in G}\lambda_{g}g)v=\sum_{g\in G}\lambda_{g}(gv),
+\end{equation*}
+para cada $\sum_{g\in G}\lambda_{g}g\in FG$ y $v\in V$. Así, $V$ es un
+$FG$-módulo.
+
+Ahora supongamos que se tiene un $FG$-módulo, definimos la función
+$*:G\times V\rightarrow V$ dada por:
+\begin{equation*}
+  gv=(\sum_{g\in G}\lambda_{g}g)v
+\end{equation*}
+para cada $g\in G$ y $v\in V$. Por tanto, $V$ es un $G$-módulo.
+
+Es equivalente estudiar $FG$-módulos y $G$-módulos, ya que tenemos una
+correspondencia biyectiva entre tales estructuras.
+
+Recordemos que $GL(n,F)$ es el grupo de matrices invertibles (ver
+ejemplo\ref{GL(nF)}). Y $GL(V)$ son los operadores lineales
+invertibles (ver ejemplo \ref{GL(V)}). Existe un isomorfismo entre los
+grupos $GL(n,\mathbb{C})$ y $GL(V)$.
+
+\begin{definition}{\setlength{\fboxsep}{0pt}\colorbox{green}{corregir}}
   Llamemos \textbf{representación matricial} al homomorfismo
   obtenido a partir de la definición \ref{representacion}, es decir, 
-  $$X:G\rightarrow GL(n,\mathbb{C}),$$
+  $$X:G\rightarrow GL(n,F),$$
   simplemente para resaltar que para cada $g\in G$, $X(g)$  es la
-  matriz invertible~$n \times n$ con entradas en $\mathbb{C}$.
+  matriz invertible~$n \times n$ con entradas en $F$.
 \end{definition}
 
 % Se denotará $(\rho,V)$ para enfatizar el hecho de que la
@@ -1456,6 +1591,33 @@ su dimensión el \emph{grado} de la representación.
 % representación regular del ejemplo \ref{rep-regular}. Se puede
 % demostrar que esto es cierto para cualquier $n$. \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}}
 % \end{example}
+({\setlength{\fboxsep}{0pt}\colorbox{green}{Falta redactar bien esto
+    de módulo de permutación.}})
+\textbf{Linealizando una acción de grupo.} Una acción en un espacio
+vectorial $V$ está determinada por su acción en los elementos de una
+base de $V$({\setlength{\fboxsep}{0pt}\colorbox{green}{???}}). Usamo este hecho para extender la acción de grupo a un $FG$-módulo{\setlength{\fboxsep}{0pt}\colorbox{green}{FX???}}, como sigue: 
+
+Dado que $G$ actúa en $X$, considere cada elemento $x_{i}$ de $X$
+como un vector de la base de un espacio vectorial $V_{X}$ sobre un
+campo particular $F$. Podemos construir este espacio vectorial $V_{X}$
+de las siguientes dos maneras:
+\begin{itemize}
+\item Considere $V_{X}$ como el espacio de todas la funciones de $A$ a
+  $F$, con cada $a\in X$ asociado asociado a la función $\delta_{a}$,
+  donde $\delta_{a}(x)$ es 1 si $x=a$ y 0 en otro caso. Estas son las
+  funciones delta Kronecker.
+\item Considere $V_{X}$ el conjunto de todas la sumas formales de
+  elementos en $X$ donde los coeficientes están en $F$.
+\end{itemize}
+Ahora definimos la acción de $G$ en $V_{X}$ mediante la extensión
+lineal:
+\begin{equation*}
+  \label{extension-lineal}
+  g*\sum_{i}\lambda_{i}a_{i}=\sum\lambda_{i}(g*a_{i}).
+\end{equation*}
+Una acción de este tipo es llamada una \textbf{módulo de permutación}
+para $G$. 
+
 \begin{example}[Módulo de permutaciones]
   \label{CS}
   Sea $G$ un grupo. Es posible tomar un conjunto en el cual actúe $G$
