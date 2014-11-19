@@ -989,9 +989,10 @@ Por abuso de notación y ya que $\varphi$ es inyectiva se
 ``identifica'' cada elemento $x\in X$ con su función característica
 $\varphi(x)$. Con esta notación, cada elemento $f$ de el espacio vectorial
 $FX$ se escribe como combinación lineal de los elementos de $X$:
-\begin{equation*}
-  f=\sum_{x\in X} f(x)x_{x}.
-\end{equation*}
+\begin{equation}
+  \label{sumas-formales}
+  f=\sum_{x\in X} f(x)x.
+\end{equation}
 
 \section{Gráficas}
 \label{graficas}
@@ -1410,7 +1411,7 @@ $*:G\times V\rightarrow V$ dada por:
 para cada $g\in G$ y $v\in V$. Por tanto, $V$ es un $G$-módulo.
 
 Es equivalente estudiar $FG$-módulos y $G$-módulos, ya que tenemos una
-correspondencia biyectiva entre tales estructuras.
+correspondencia biyectiva entre estas estructuras.
 
 Recordemos que $GL(n,F)$ es el grupo de matrices invertibles (ver
 ejemplo\ref{GL(nF)}). Y $GL(V)$ son los operadores lineales
@@ -1591,91 +1592,64 @@ grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 % representación regular del ejemplo \ref{rep-regular}. Se puede
 % demostrar que esto es cierto para cualquier $n$. \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}}
 % \end{example}
-({\setlength{\fboxsep}{0pt}\colorbox{green}{Falta redactar bien esto
-    de módulo de permutación.}})
-\textbf{Linealizando una acción de grupo.} Una acción en un espacio
-vectorial $V$ está determinada por su acción en los elementos de una
-base de $V$({\setlength{\fboxsep}{0pt}\colorbox{green}{???}}). Usamo este hecho para extender la acción de grupo a un $FG$-módulo{\setlength{\fboxsep}{0pt}\colorbox{green}{FX???}}, como sigue: 
-
-Dado que $G$ actúa en $X$, considere cada elemento $x_{i}$ de $X$
-como un vector de la base de un espacio vectorial $V_{X}$ sobre un
-campo particular $F$. Podemos construir este espacio vectorial $V_{X}$
-de las siguientes dos maneras:
-\begin{itemize}
-\item Considere $V_{X}$ como el espacio de todas la funciones de $A$ a
-  $F$, con cada $a\in X$ asociado asociado a la función $\delta_{a}$,
-  donde $\delta_{a}(x)$ es 1 si $x=a$ y 0 en otro caso. Estas son las
-  funciones delta Kronecker.
-\item Considere $V_{X}$ el conjunto de todas la sumas formales de
-  elementos en $X$ donde los coeficientes están en $F$.
-\end{itemize}
-Ahora definimos la acción de $G$ en $V_{X}$ mediante la extensión
-lineal:
-\begin{equation*}
-  \label{extension-lineal}
-  g*\sum_{i}\lambda_{i}a_{i}=\sum\lambda_{i}(g*a_{i}).
-\end{equation*}
-Una acción de este tipo es llamada una \textbf{módulo de permutación}
-para $G$. 
-
+Veamos que $FX$ resulta un $G$-módulo
 \begin{example}[Módulo de permutaciones]
   \label{CS}
-  Sea $G$ un grupo. Es posible tomar un conjunto en el cual actúe $G$
-  y resulte un $G$-módulo, como lo hacemos a continuación. Sea
-  $Y=\{y_{1},y_{2},\ldots,y_{n}\}$ y $\mathbb{C}\boldsymbol{Y}=\mathbb{C}\{y_{1},y_{2},\ldots,y_{n}\}$ el
-  espacio vectorial generado por $Y$ sobre $\mathbb{C}$. Es decir,
-  $\mathbb{C}\boldsymbol{Y}$ consiste de todas las combinaciones lineales
+  Sea $G$ un grupo, $F$ un campo, $X$ el conjunto $\{x_{1},x_{2},\ldots,x_{n}\}$ y $FX$ el
+  espacio vectorial construido como en el lema \ref{FX}, es decir,
+  si $x\in FX$, podemos escribir a $x$ como hicimos en la expresión
+\ref{sumas-formales}, es decir,
+$x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
   \begin{equation*}
-    V=\mathbb{C}\boldsymbol{Y}=\{\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
-    +\lambda_{n}y_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in \mathbb{C}\}.
+    V=FX=\{\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots
+    +\lambda_{n}x_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in F\}.
   \end{equation*}
   La adición y multiplicación por escalar
-  en $\mathbb{C}\boldsymbol{Y}$ está definida por
+  en $FX$ está definida por
   \begin{eqnarray*}
-    (\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots
-    +\lambda_{n}y_{n})+(\lambda^{'}_{1}y_{1}+\lambda^{'}_{2}y_{2}+\cdots +\lambda^{'}_{n}y_{n})\\
-    =(\lambda_{1}+\lambda^{'}_{1})y_{1}+(\lambda_{2}+\lambda^{'}_{2})y_{2}+\cdots
-    +(\lambda_{n}+\lambda^{'}_{n})y_{n}
+    (\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots
+    +\lambda_{n}x_{n})+(\lambda^{'}_{1}x_{1}+\lambda^{'}_{2}x_{2}+\cdots +\lambda^{'}_{n}x_{n})\\
+    =(\lambda_{1}+\lambda^{'}_{1})x_{1}+(\lambda_{2}+\lambda^{'}_{2})x_{2}+\cdots
+    +(\lambda_{n}+\lambda^{'}_{n})x_{n}
   \end{eqnarray*}
   y
   \begin{eqnarray*}
-    c(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=(c\lambda_{1})y_{1}+(c\lambda_{2})y_{2}+\cdots +(c\lambda_{n})y_{n},
+    c(\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots +\lambda_{n}x_{n})=(c\lambda_{1})x_{1}+(c\lambda_{2})x_{2}+\cdots +(c\lambda_{n})x_{n},
   \end{eqnarray*}
   respectivamente. Sean $v\in V$, con
-  $v=\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots+\lambda_{n}y_{n}$ y
+  $v=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$ y
   $g\in G$ entonces la acción de $G$ en $V$ está dada por
   \begin{equation*}
-    gv=g(\lambda_{1}y_{1}+\lambda_{2}y_{2}+\cdots +\lambda_{n}y_{n})=\lambda_{1}(gy_{1})+\lambda_{2}(gy_{2})+\cdots +\lambda_{n}(gy_{n}).
+    gv=g(\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots +\lambda_{n}x_{n})=\lambda_{1}(gx_{1})+\lambda_{2}(gx_{2})+\cdots +\lambda_{n}(gx_{n}).
   \end{equation*}
-  Así, $\mathbb{C}\boldsymbol{Y}$ resulta ser un $G$-módulo
-  de dimensión $|Y|$. A~$\mathbb{C}\boldsymbol{Y}$ le llamamos
-  \emph{módulo de permutaciones}. Los elementos de
-  $Y$ forman una base para $\mathbb{C}\boldsymbol{Y}$ llamada
-  \emph{base estándar}.
+  Así, $FX$ resulta ser un $G$-módulo de dimensión $|X|$. A~$FX$ le llamamos
+  \emph{módulo de permutaciones}. Los elementos de $X$ forman una base para $FX$.
 
-  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $S=\{1,2,\ldots,n\}$. Ahora,
+  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $S=\{1,2,\ldots,n\}$.
   \begin{equation*}
-    \mathbb{C}\boldsymbol{S}=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid \lambda_{i}\in\mathbb{C}\}
+    FS=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
+    \lambda_{i}\in F\},
   \end{equation*}
-  con la acción
+  sea $\pi\in S_{n}$, la acción es
   \begin{equation*}
     \pi(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)=\lambda_{1}\pi(1)+\lambda_{2}\pi(2)+\cdots+\lambda_{n}\pi(n).
   \end{equation*}
 
   Un submódulo importante de dimensión $n-1$ de
-  $\mathbb{C}\boldsymbol{S}$ es:
+  $FS$ es:
   \begin{equation*}
-    E=\Big\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\in \mathbb{C}\boldsymbol{S}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
+    E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in FS\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
   \end{equation*}
   La representación asociada a éste submódulo se llama
   \textbf{representación estándar}. 
   
   Sea $\mathbb{C}\cong
   \{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
-  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ submódulo de
-  $\mathbb{C}\boldsymbol{S}$. Se obtiene que es isomorfo a la representación trivial, y que:
+  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ submódulo de~$FS$. Se
+  obtiene que es isomorfo a la representación trivial, y que:
+
   \begin{equation*}
-    \mathbb{C}\boldsymbol{S}=E\oplus \mathbb{C}.
+    FS=E\oplus \mathbb{C}.
   \end{equation*}
   
   Consideremos un caso específico, el de $S_{3}$ actuando en
