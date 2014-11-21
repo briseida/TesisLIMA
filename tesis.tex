@@ -943,15 +943,15 @@ Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
 \begin{proof}[Demostración]
   Para checar que la suma está bien definida, verifiquemos que si
   $f,g\in FX$, entonces $(f+g) \in FX$. Sean $f,g\in FX$ y $A,B$
-  subconjuntos finitos de $X$, donde $f(x)\neq 0$ para $x\in A$ y
-  $g(y)\neq 0$ para $y\in B$, notemos que $A\cup B$ es un
-  subconjunto finito de $X$, así $(f+g)(z)\neq 0$ para $z\in A\cup
-  B$, por tanto, $(f+g) \in FX$. De forma similar comprobemos que el
+  subconjuntos finitos de $X$, tales que $f(x)=0$ para $x\not\in A$ y
+  $g(y)=0$ para $y\not\in B$. Notemos que $A\cup B$ es un
+  subconjunto finito de $X$ y $(f+g)(z)=0$ para $z\not\in A\cup
+  B$, por tanto, $(f+g) \in FX$. De forma similar, comprobemos que el
   producto por escalar está bien definido. Si $r\in F$, $f\in FX$ y
-  $C$ es un subconjunto finito de $X$, donde $f(x)\neq 0$ para $x\in
-  C$, entonces $(rf)(x)\neq 0$ para
-  $x\in C$, por tanto~$(rf)\in FX$. Queda por demostrar que se cumplan
-  las otras condiciones de espacio vectorial.
+  $C$ es un subconjunto finito de $X$, tal que $f(x)=0$ para $x\not\in
+  C$, entonces $(rf)(x)=0$ para $x\not\in C$, por tanto~$(rf)\in
+  FX$. Queda por demostrar que se cumplan las otras condiciones de
+  espacio vectorial.
 \end{proof}
 
 \begin{definition}
@@ -976,16 +976,19 @@ está en biyección con $X$.
   $\varphi(X)$ es base de el espacio vectorial $FX$.
 \end{theorem}
 \begin{proof}[Demostración]
-  Si $\sum_{x\in X} \lambda_{x}\varphi(x)=f$, tal que $f(x)=0$ para
-  todo $x\in X$, es decir, para cada $y\in X$ tenemos $\sum_{x\in
-    X}\lambda_{x}\varphi(x)(y)=0$. Tomemos $y\in X$, entonces
-  $\sum_{x\in X}\lambda_{x}\varphi(x)(y)=0$, si $x\neq y$ y
-  $\sum_{x\in X}\lambda_{x}\varphi(x)(y)=\lambda_{x}$, si $x=y$,
-  entonces $\lambda_{x}=0$. De igual manera, para todo $y\in X$, se
-  tiene $\lambda_{x}=0$. Por tanto, $\varphi$ es linealmente independiente.
+  Sea $D=\{x_{1},x_{2},\dots,x_{n}\}$ un subconjunto finito de $X$. Si
+  $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})=0$, con
+  $\lambda_{x_{i}}\in F$. Sea $y\in D$, entonces
+  $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})(y)=~\lambda_{x_{i}}$,
+  si $y=x_{i}$, entonces $\lambda_{x_{i}}=0$. De igual manera, para todo $y\in D$, se
+  tiene $\lambda_{x_{i}}=0$. Por tanto, $\{\varphi(x_{i})\mid x_{i}\in D\}$ es linealmente independiente.
 
-  Por otra parte, sea $f\in FX$, se puede escribir a $f$ como $f=\sum_{x\in X}
-  f(x)\varphi(x)$. 
+  Por otra parte, sea $E$ un subconjunto finito de $X$. Sea $f\in FX$, tal que~$f(x)\neq 0$ para $x\in E$, tenemos:
+  $$\sum_{x\in X}f(x)\varphi(x)=\sum_{x\in
+    E}f(x)\varphi(x)+\sum_{x\not\in E}f(x)\varphi(x)=\sum_{x\in E}f(x)\varphi(x)$$
+  Ahora, tomemos $y\in E$, entonces $\sum_{x\in
+    E}f(x)\varphi(x)(y)=f(x)$ si $y=x$. Así, para todo $y\in E$,
+  tenemos $\sum_{x\in E}f(x)\varphi(x)(y)=f(x)$ cuando $y=x$. Por tanto, se puede escribir a $f$ como $f=\sum_{x\in X}f(x)\varphi(x)$. 
 \end{proof}
 
 Por abuso de notación y ya que $\varphi$ es inyectiva se
@@ -1595,7 +1598,6 @@ grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 % representación regular del ejemplo \ref{rep-regular}. Se puede
 % demostrar que esto es cierto para cualquier $n$. \setlength{\fboxsep}{0pt}\colorbox{green}{\textbf{??}}
 % \end{example}
-Veamos que $FX$ resulta un $G$-módulo
 \begin{example}[Módulo de permutaciones]
   \label{CS}
   Sea $G$ un grupo, $F$ un campo, $X$ el conjunto $\{x_{1},x_{2},\ldots,x_{n}\}$ y $FX$ el
