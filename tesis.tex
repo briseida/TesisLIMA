@@ -744,7 +744,7 @@ donde
 \begin{example}
   \label{GL(nF)}
   El conjunto de matrices invertibles $n \times n$ con
-  entradas en $F$, denotado como $GL(n,F)$, junto con el producto de matrices es un grupo.  
+  entradas en~$F$, denotado como $GL(n,F)$, junto con el producto de matrices es un grupo.  
 \end{example}
 
 \begin{example}
@@ -752,6 +752,14 @@ donde
   El conjunto de operadores lineales invertibles en un espacio vectorial $V$ de dimensión finita
   $n$ sobre el campo $F$, denotado por $GL(V)$, junto con la
   operación composición de operadores es un grupo.
+\end{example}
+
+\begin{example}
+  \label{grupo-ciclico}
+  Sea $n\in \mathbb{Z}$, construimos un grupo denotado por $C_{n}$ como sigue: consistirá
+  en todos los símbolos $a^{i}$, con $i=0,1,2,\dots,n-1$ en donde $a^{0}=a^{n}$, $a^{i}a^{j}=a^{i+j}$ si $i+j\leq n$ y
+  $a^{i}a^{j}=a^{i+j-n}$ si $i+j>n$. A $C_{n}$ se le conoce como \textbf{grupo
+    cíclico}.
 \end{example}
 
 \begin{definition}
@@ -881,7 +889,6 @@ Diremos que $V$ es un \textbf{$G$-módulo.}
   que para cualquier $a,b,c \in R$:
   \begin{enumerate}
   \item $(R,+)$ es un grupo abeliano.
-  \item $a\cdot b\in R$.
   \item $a\cdot (b\cdot c)=(a\cdot b)\cdot c$.
   \item $a\cdot (b+c)=a\cdot b+a\cdot c$ y $(b+c)\cdot a=b\cdot a+c\cdot a$
   \end{enumerate}
