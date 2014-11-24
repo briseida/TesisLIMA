@@ -228,8 +228,7 @@ la característica implica que todo módulo es completamente
 reducible. Por otra parte, la teoría modular, estudia módulos sobre campos cuya
 característica divide al orden de el grupo, en este caso pueden
 existir módulos que no son completamente reducibles, como se
-muestra en el ejemplo {\setlength{\fboxsep}{0pt}\colorbox{green}{(ref
-    todavía no escrito)}}. En este trabajo no consideraremos la teoría
+muestra en el ejemplo \ref{ej-no-reducibilidad}. En este trabajo no consideraremos la teoría
 modular, ya que en ese contexto no es válido el teorema de Maschke. 
 
 Un complejo simplicial $\Delta$ está formado por un conjunto de
@@ -738,9 +737,13 @@ donde
     \end{enumerate}
 
     Decimos que un grupo $G$ es \textbf{abeliano} si para cualquier
-    $a,b\in G$ se tiene $ab=ba$.
+    $a,b\in G$ se tiene~$ab=ba$.
 \end{definition}
+El número de elementos de un grupo $G$, es el \textbf{orden} de $G$, y
+lo denotamos por $|G|$. Cuando $|G|$ es finito, decimos que $G$ es un
+\textbf{grupo finito}.
 
+Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \begin{example}
   \label{GL(nF)}
   El conjunto de matrices invertibles $n \times n$ con
@@ -902,6 +905,14 @@ Diremos que $V$ es un \textbf{$G$-módulo.}
   $a,b\in R$ entonces llamamos a $R$ \textbf{anillo conmutativo}.
 
   Usaremos la notación $ab$ en lugar de $a\cdot b$, para $a,b\in R$.
+\end{definition}
+
+En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, donde hay $n$ sumandos.
+
+\begin{definition}
+  La \textbf{característica} de un anillo $R$ es el menor entero positivo $n$
+  tal que $nx=0$ para toda $x\in R$. Si no existe tal entero, decimos
+  que $R$ tiene característica cero.
 \end{definition}
 
 \begin{definition}
@@ -1750,7 +1761,8 @@ En esta sección, $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
 \begin{theorem}[Teorema de Maschke][\cite{sagan2001symmetric}, teorema
   1.5.3, p.16], [\cite{fulton1991representation}, proposición 1.8, p.7].
   \label{maschke}
-  Sea $G$ un grupo finito y $V$ un $G$-módulo. Entonces $V$ es
+  Sea $G$ un grupo finito, $F$ un campo tal que su característica no
+  divide al orden de $G$ y $V$ un $G$-módulo. Entonces $V$ es
   \textbf{completamente reducible}, es decir
   \begin{equation*}
     V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
@@ -1759,11 +1771,12 @@ donde $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
 irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
 decir la cantidad de $W^{(i)}$.
 \end{theorem}
-%La demostración de el teorema de Maschke se encuentra en el teorema~1.5.3 de \cite{sagan2001symmetric}.
+En el siguiente ejemplo, la característica de el campo divide al
+orden de el grupo, por tanto, no es válido el teorema de Maschke.
 \begin{example}
   \label{ej-no-reducibilidad}
   Sea el campo $F=\{0,1\}$ y $G=C_{2}=\{g^{0},g^{1}\}$ el grupo
-  cíclico con dos elementos. Sea el espacio vectorial
+  cíclico de orden 2. Sea el espacio vectorial
   $V=F^{2}=\{v_{1},v_{2},v_{3},v_{4}\}$, donde  
   $v_{1}=
   \begin{pmatrix}
