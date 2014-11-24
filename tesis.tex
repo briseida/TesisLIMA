@@ -756,7 +756,8 @@ donde
 
 \begin{example}
   \label{grupo-ciclico}
-  Sea $n\in \mathbb{Z}$, construimos un grupo denotado por $C_{n}$ como sigue: consistirá
+  Sea $n\in \mathbb{Z}$, {\setlength{\fboxsep}{0pt}\colorbox{green}{Naturales?}}
+  construimos un grupo denotado por $C_{n}$ como sigue: consistirá
   en todos los símbolos $a^{i}$, con $i=0,1,2,\dots,n-1$ en donde $a^{0}=a^{n}$, $a^{i}a^{j}=a^{i+j}$ si $i+j\leq n$ y
   $a^{i}a^{j}=a^{i+j-n}$ si $i+j>n$. A $C_{n}$ se le conoce como \textbf{grupo
     cíclico}.
@@ -1759,6 +1760,168 @@ irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
 decir la cantidad de $W^{(i)}$.
 \end{theorem}
 %La demostración de el teorema de Maschke se encuentra en el teorema~1.5.3 de \cite{sagan2001symmetric}.
+\begin{example}
+  \label{ej-no-reducibilidad}
+  Sea el campo $F=\{0,1\}$ y $G=C_{2}=\{g^{0},g^{1}\}$ el grupo
+  cíclico con dos elementos. Sea el espacio vectorial
+  $V=F^{2}=\{v_{1},v_{2},v_{3},v_{4}\}$, donde  
+  $v_{1}=
+  \begin{pmatrix}
+    0\\
+    0  
+  \end{pmatrix},
+  v_{2}=
+  \begin{pmatrix}
+    0\\
+    1  
+  \end{pmatrix},
+  v_{3}=
+  \begin{pmatrix}
+    1\\
+    0  
+  \end{pmatrix},
+  v_{4}=
+  \begin{pmatrix}
+    1\\
+    1  
+  \end{pmatrix}.
+  $
+  Definimos la función
+  $\phi:G\rightarrow GL(V)$ como:
+  \begin{center}
+    $\phi(g^{r})=
+    \begin{pmatrix}
+      1 & 0 \\
+      r & 1 
+    \end{pmatrix}$,
+  \end{center}
+  la cual está bien definida y determina un homomorfismo de grupos.
+
+Queremos determinar si $V$ tiene algún submódulo propio. Como $V$
+tiene dimensión 2, un submódulo propio $W$ deberá tener dimensión 1,
+es decir, sería generado por un elemento diferente de cero.
+
+%Primero veamos que $\langle v_{3}\rangle$ y $\langle v_{4}\rangle$ son
+%subespacios no invariantes.
+
+Primero notemos que los subespacios $\langle v_{3}\rangle$ y $\langle
+v_{4}\rangle$ no son invariantes.
+\begin{center}
+  $g^{1}v_{3}=\phi(g^{1})v_{3}=
+  \begin{pmatrix}
+      1 & 0 \\
+      1 & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+    1\\
+    0  
+  \end{pmatrix}=
+  \begin{pmatrix}
+    1\\
+    1  
+  \end{pmatrix}=v_{4},
+  $
+\end{center}
+como $v_{4}\not\in\langle v_{3}\rangle$, por tanto el subespacio $\langle
+v_{3}\rangle$ no es invariante, es decir, $\langle v_{3} \rangle$ no
+es submódulo propio de $V$.
+\begin{center}
+  $g^{1}v_{4}=\phi(g^{1})v_{4}=
+  \begin{pmatrix}
+      1 & 0 \\
+      1 & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+    1\\
+    1  
+  \end{pmatrix}=
+  \begin{pmatrix}
+    1\\
+    0  
+  \end{pmatrix}=v_{3},
+  $
+\end{center}
+similarmente, $v_{3}\not\in\langle v_{4}\rangle$, el subespacio $\langle
+v_{4}\rangle$ no es submódulo propio de $V$.
+
+A continuación se verifica que $\langle v_{2}\rangle=\{v_{1},v_{2}\}$ es el
+único submódulo propio de $V$, pues $\langle v_{2}\rangle$ es
+invariante bajo la acción de $G$.
+\begin{align*}
+  g^{0}v_{1}&=\phi(g^{0})v_{1}=v_{1}, \\
+  g^{1}v_{1}&=\phi(g^{1})v_{1}=v_{1}, \\
+  g^{0}v_{2}&=\phi(g^{0})v_{2}=v_{2}, \\
+  g^{1}v_{2}&=\phi(g^{1})v_{2}=v_{2},
+\end{align*}
+Por tanto, $V$ no es completamente reducible.
+
+\bigskip
+\begin{center}
+  $g^{0}v_{1}=\phi(g^{0})v_{1}=
+  \begin{pmatrix}
+      1 & 0 \\
+      0 & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+    0\\
+    0  
+  \end{pmatrix}=
+  \begin{pmatrix}
+    0\\
+    0  
+  \end{pmatrix}=v_{1}
+  $
+\end{center}
+\begin{center}
+  $g^{1}v_{1}=\phi(g^{1})v_{1}=
+  \begin{pmatrix}
+      1 & 0 \\
+      1 & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+    0\\
+    0  
+  \end{pmatrix}=
+  \begin{pmatrix}
+    0\\
+    0  
+  \end{pmatrix}=v_{1}
+  $
+\end{center}
+\begin{center}
+  $g^{0}v_{2}=\phi(g^{0})v_{2}=
+  \begin{pmatrix}
+      1 & 0 \\
+      0 & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+    0\\
+    1  
+  \end{pmatrix}=
+  \begin{pmatrix}
+    0\\
+    1  
+  \end{pmatrix}=v_{2}
+  $
+\end{center}
+\begin{center}
+  $g^{1}v_{2}=\phi(g^{1})v_{2}=
+  \begin{pmatrix}
+      1 & 0 \\
+      1 & 1 
+    \end{pmatrix}
+    \begin{pmatrix}
+    0\\
+    1  
+  \end{pmatrix}=
+  \begin{pmatrix}
+    0\\
+    1  
+  \end{pmatrix}=v_{2}
+  $
+\end{center}
+\end{example}
+
 \begin{theorem}
   \label{interseccion-submodulos}
   Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
