@@ -716,6 +716,85 @@ donde
   $A=[T]_{\beta}$.
 \end{definition}
 
+A continuación, construiremos un espacio vectorial muy importante, ya
+que lo usaremos más adelante en la sección \ref{}
+{\setlength{\fboxsep}{0pt}\colorbox{green}{ref}} de representaciones
+de grupos.
+
+Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
+\begin{equation*}
+  FX=\{f:X\rightarrow F\mid \{x\in X\mid f(x)\neq 0\} \mbox{ es finito}\}.
+\end{equation*}
+
+\begin{lemma}
+  \label{FX}
+  $FX$ es un espacio vectorial con las siguientes operaciones:
+  \begin{itemize}
+  \item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FX$,
+  \item $(rf)(x)=rf(x)$, con $r\in F$.
+  \end{itemize}
+\end{lemma}
+
+\begin{proof}[Demostración]
+  Para checar que la suma está bien definida, verifiquemos que si
+  $f,g\in FX$, entonces $(f+g) \in FX$. Sean $f,g\in FX$ y $A,B$
+  subconjuntos finitos de $X$, tales que $f(x)=0$ para $x\not\in A$ y
+  $g(y)=0$ para $y\not\in B$. Notemos que $A\cup B$ es un
+  subconjunto finito de $X$ y $(f+g)(z)=0$ para $z\not\in A\cup
+  B$, por tanto, $(f+g) \in FX$. De forma similar, comprobemos que el
+  producto por escalar está bien definido. Si $r\in F$, $f\in FX$ y
+  $C$ es un subconjunto finito de $X$, tal que $f(x)=0$ para $x\not\in
+  C$, entonces $(rf)(x)=0$ para $x\not\in C$, por tanto~$(rf)\in
+  FX$. Queda por demostrar que se cumplan las otras condiciones de
+  espacio vectorial.
+\end{proof}
+
+\begin{definition}
+  \label{fun-caracteristica}
+  Definimos a la \textbf{función característica} $\varphi:X\rightarrow
+  FX$, tal que
+  \[
+  \varphi(x)(y)=
+  \begin{cases}
+    1, & \text{si } x=y \\
+    0, & \text{si } x\neq y \\
+  \end{cases}
+  \]
+\end{definition}
+Notemos que $\varphi$ es inyectiva, puesto que, si $x,y\in X$ y $x\neq y$,
+entonces $\varphi(x)(y)\neq\varphi(y)(y)$, pues
+$\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, así
+$\varphi(x)\neq\varphi(y)$. $\varphi(X)$ es un subconjunto de $FX$ que
+está en biyección con $X$.
+\begin{theorem}
+  \label{base-FX}
+  $\varphi(X)$ es base de el espacio vectorial $FX$.
+\end{theorem}
+\begin{proof}[Demostración]
+  Sea $D=\{x_{1},x_{2},\dots,x_{n}\}$ un subconjunto finito de $X$. Si
+  $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})=0$, con
+  $\lambda_{x_{i}}\in F$. Sea $y\in D$, entonces
+  $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})(y)=~\lambda_{x_{i}}$,
+  si $y=x_{i}$, entonces $\lambda_{x_{i}}=0$. De igual manera, para todo $y\in D$, se
+  tiene $\lambda_{x_{i}}=0$. Por tanto, $\{\varphi(x_{i})\mid x_{i}\in D\}$ es linealmente independiente.
+
+  Por otra parte, sea $E$ un subconjunto finito de $X$. Sea $f\in FX$, tal que~$f(x)\neq 0$ para $x\in E$, tenemos:
+  $$\sum_{x\in X}f(x)\varphi(x)=\sum_{x\in
+    E}f(x)\varphi(x)+\sum_{x\not\in E}f(x)\varphi(x)=\sum_{x\in E}f(x)\varphi(x)$$
+  Ahora, tomemos $y\in E$, entonces $\sum_{x\in
+    E}f(x)\varphi(x)(y)=f(x)$ si $y=x$. Así, para todo $y\in E$,
+  tenemos $\sum_{x\in E}f(x)\varphi(x)(y)=f(x)$ cuando $y=x$. Por tanto, se puede escribir a $f$ como $f=\sum_{x\in X}f(x)\varphi(x)$. 
+\end{proof}
+
+Por abuso de notación y ya que $\varphi$ es inyectiva se
+``identifica'' cada elemento $x\in X$ con su función característica
+$\varphi(x)$. Con esta notación, cada elemento $f$ de el espacio vectorial
+$FX$ se escribe como combinación lineal de los elementos de $X$:
+\begin{equation}
+  \label{sumas-formales}
+  f=\sum_{x\in X} f(x)x.
+\end{equation}
+
 \section{Grupos}
 \label{grupos}
 
@@ -885,8 +964,9 @@ que satisface los axiomas:
 Diremos que $V$ es un \textbf{$G$-módulo.}
 \end{definition} 
 
-\section{lo nuevo}
-%\label{}
+\section{Anillos}
+\label{anillos}
+
 \begin{definition}
   Un conjunto no vacío $R$ se dice que es un \textbf{anillo} si en $R$
   están definidas dos operaciones, denotadas por $+$ y $\cdot$ tales
@@ -909,6 +989,36 @@ Diremos que $V$ es un \textbf{$G$-módulo.}
 
   Usaremos la notación $ab$ en lugar de $a\cdot b$, para $a,b\in R$.
 \end{definition}
+A continuación se muestran ejemplos de anillos.
+\begin{example}
+  Un campo es un anillo conmutativo con división.
+\end{example}
+
+\begin{example}
+  El conjunto de los números enteros $\mathbb{C}$, los números reales~$\mathbb{R}$ y los números racionales $\mathbb{Q}$ son todos campos
+  y por tanto también son anillos.
+\end{example}
+
+\begin{example}
+  El conjunto de los enteros $\mathbb{Z}$ junto con la suma y la
+  multiplicación usual forman un anillo conmutativo con elemento unitario.
+\end{example}
+
+\begin{example}
+  El conjunto de matrices $M_{n}(\mathbb{Z})$ de $n\times n$ con
+  entradas enteras es un anillo no conmutativo con elemento unitario.
+\end{example}
+
+\begin{example}
+  Sea $A$ un grupo abeliano, denotemos a los endomorfismos de $A$ como
+  el siguiente conjunto: 
+  \begin{equation*}
+    \End(A)=\{f:A\rightarrow A\mid f\mbox{ es un homomorfismo de grupos}\}.
+    \label{endomorfismos}
+  \end{equation*}
+  Sea $f,g\in\End$, definimos el producto $fg$ por $(fg)(x)=f(g(x))$ y
+  la suma~$f+g$ por $(f+g)(x)=f(x)+g(x)$ . Entonces $\End(A)$ es un anillo.
+\end{example}
 
 En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, donde hay $n$ sumandos.
 \begin{definition}
@@ -916,6 +1026,9 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
   tal que $nx=0$ para toda $x\in R$. Si no existe tal entero, decimos
   que $R$ tiene característica cero.
 \end{definition}
+
+\section{Módulos}
+\label{modulos}
 
 \begin{definition}
   Sea $R$ un anillo cualquiera; un conjunto no vacío $M$ se dice que
@@ -933,91 +1046,6 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
   $m\in M$, entonces a $M$ lo llamaremos un \textbf{$R$-módulo
   unitario}.
 \end{definition}
-{\setlength{\fboxsep}{0pt}\colorbox{green}{falta redactar bien lo
-    siguiente}}
-
-$A$ grupo abeliano....
-$\End(A)=\{f:A\rightarrow A\mid f\mbox{ es un homomorfismo de grupos}\}$
-
-$\End(A)$ es un anillo.
-
-$A$ es un módulo sobre $\End(A)$.
-
-\bigskip
-
-Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
-\begin{equation*}
-  FX=\{f:X\rightarrow F\mid \{x\in X\mid f(x)\neq 0\} \mbox{ es finito}\}.
-\end{equation*}
-
-\begin{lemma}
-  \label{FX}
-  $FX$ es un espacio vectorial con las siguientes operaciones:
-  \begin{itemize}
-  \item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FX$,
-  \item $(rf)(x)=rf(x)$, con $r\in F$.
-  \end{itemize}
-\end{lemma}
-
-\begin{proof}[Demostración]
-  Para checar que la suma está bien definida, verifiquemos que si
-  $f,g\in FX$, entonces $(f+g) \in FX$. Sean $f,g\in FX$ y $A,B$
-  subconjuntos finitos de $X$, tales que $f(x)=0$ para $x\not\in A$ y
-  $g(y)=0$ para $y\not\in B$. Notemos que $A\cup B$ es un
-  subconjunto finito de $X$ y $(f+g)(z)=0$ para $z\not\in A\cup
-  B$, por tanto, $(f+g) \in FX$. De forma similar, comprobemos que el
-  producto por escalar está bien definido. Si $r\in F$, $f\in FX$ y
-  $C$ es un subconjunto finito de $X$, tal que $f(x)=0$ para $x\not\in
-  C$, entonces $(rf)(x)=0$ para $x\not\in C$, por tanto~$(rf)\in
-  FX$. Queda por demostrar que se cumplan las otras condiciones de
-  espacio vectorial.
-\end{proof}
-
-\begin{definition}
-  \label{fun-caracteristica}
-  Definimos a la \textbf{función característica} $\varphi:X\rightarrow
-  FX$, tal que
-  \[
-  \varphi(x)(y)=
-  \begin{cases}
-    1, & \text{si } x=y \\
-    0, & \text{si } x\neq y \\
-  \end{cases}
-  \]
-\end{definition}
-Notemos que $\varphi$ es inyectiva, puesto que, si $x,y\in X$ y $x\neq y$,
-entonces $\varphi(x)(y)\neq\varphi(y)(y)$, pues
-$\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, así
-$\varphi(x)\neq\varphi(y)$. $\varphi(X)$ es un subconjunto de $FX$ que
-está en biyección con $X$.
-\begin{theorem}
-  \label{base-FX}
-  $\varphi(X)$ es base de el espacio vectorial $FX$.
-\end{theorem}
-\begin{proof}[Demostración]
-  Sea $D=\{x_{1},x_{2},\dots,x_{n}\}$ un subconjunto finito de $X$. Si
-  $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})=0$, con
-  $\lambda_{x_{i}}\in F$. Sea $y\in D$, entonces
-  $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})(y)=~\lambda_{x_{i}}$,
-  si $y=x_{i}$, entonces $\lambda_{x_{i}}=0$. De igual manera, para todo $y\in D$, se
-  tiene $\lambda_{x_{i}}=0$. Por tanto, $\{\varphi(x_{i})\mid x_{i}\in D\}$ es linealmente independiente.
-
-  Por otra parte, sea $E$ un subconjunto finito de $X$. Sea $f\in FX$, tal que~$f(x)\neq 0$ para $x\in E$, tenemos:
-  $$\sum_{x\in X}f(x)\varphi(x)=\sum_{x\in
-    E}f(x)\varphi(x)+\sum_{x\not\in E}f(x)\varphi(x)=\sum_{x\in E}f(x)\varphi(x)$$
-  Ahora, tomemos $y\in E$, entonces $\sum_{x\in
-    E}f(x)\varphi(x)(y)=f(x)$ si $y=x$. Así, para todo $y\in E$,
-  tenemos $\sum_{x\in E}f(x)\varphi(x)(y)=f(x)$ cuando $y=x$. Por tanto, se puede escribir a $f$ como $f=\sum_{x\in X}f(x)\varphi(x)$. 
-\end{proof}
-
-Por abuso de notación y ya que $\varphi$ es inyectiva se
-``identifica'' cada elemento $x\in X$ con su función característica
-$\varphi(x)$. Con esta notación, cada elemento $f$ de el espacio vectorial
-$FX$ se escribe como combinación lineal de los elementos de $X$:
-\begin{equation}
-  \label{sumas-formales}
-  f=\sum_{x\in X} f(x)x.
-\end{equation}
 
 \section{Gráficas}
 \label{graficas}
