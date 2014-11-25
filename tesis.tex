@@ -1417,7 +1417,7 @@ $G$ en $V$ y $G$-módulos.
   \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=1_{V}(v)=v$$
     para todo $v\in V$.
   \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho g
-    \circ \rho h)v=\rho g((\rho h)v)=\rho g(hv)=g(hv)$$
+    \circ \rho h)v=\rho g((\rho h)v)=g((\rho h)v)=g(hv)$$
   \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=(\rho g)(v+w)=(\rho
     g)v+(\rho g)w=gv+gw$$
   \item Para $\lambda\in F$, $v\in V$ y $g\in G$,
@@ -1493,23 +1493,25 @@ grupos $GL(n,\mathbb{C})$ y $GL(V)$.
 
 \begin{example}[Representación trivial]
   La representación trivial de un grupo $G$ es el homomorfismo
-  $\rho:G\rightarrow \mathbb{C^{*}}$ dado por $\rho(g)=1$ para todo~$g\in G$. Ésta es una representación de grado $1$.
+  $\rho:G\rightarrow GL(\mathbb{C})$ dado por $\rho(g)=1$ para
+  todo~$g\in G$. Esta es una representación de grado 1, pues 1 es la
+  dimensión de $\mathbb{C}$.
 \end{example}
 
 \begin{example}[Representación signo]
   Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones, definimos la función signo
   $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
-  mediante $$\sgn(\pi):=(-1)^{k},$$
-  así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
-  \[
-  \pi v=
-  \begin{cases}
-    v, & \text{ si } \pi \text{ es par,}\\
-    -v, & \text{ si } \pi \text{ es impar,}
-  \end{cases}
-  \]
-  para $\pi\in S_{n}$, $v\in \mathbb{C}$. Ésta representación tiene grado $1$.
+  mediante $$\sgn(\pi):=(-1)^{k}.$$
+  % así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
+  % \[
+  % \pi v=
+  % \begin{cases}
+  %   v, & \text{ si } \pi \text{ es par,}\\
+  %   -v, & \text{ si } \pi \text{ es impar,}
+  % \end{cases}
+  % \]
+  % para $\pi\in S_{n}$, $v\in \mathbb{C}$. Ésta representación tiene grado $1$.
 \end{example}
 
 % \begin{example}[Representación defining]
@@ -1686,9 +1688,9 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
   Así, $FX$ resulta ser un $G$-módulo de dimensión $|X|$. A~$FX$ le llamamos
   \emph{módulo de permutaciones}. Los elementos de $X$ forman una base para $FX$.
 
-  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $S=\{1,2,\ldots,n\}$.
+  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
   \begin{equation*}
-    FS=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
+    F\mathbb{I}_{n}=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
     \lambda_{i}\in F\},
   \end{equation*}
   sea $\pi\in S_{n}$, la acción es
@@ -1697,9 +1699,9 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
   \end{equation*}
 
   Un submódulo importante de dimensión $n-1$ de
-  $FS$ es:
+  $F\mathbb{I}_{n}$ es:
   \begin{equation*}
-    E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in FS\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
+    E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in F\mathbb{I}_{n}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
   \end{equation*}
   La representación asociada a éste submódulo se llama
   \textbf{representación estándar}. 
@@ -1710,12 +1712,12 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
   obtiene que es isomorfo a la representación trivial, y que:
 
   \begin{equation*}
-    FS=E\oplus \mathbb{C}.
+    F\mathbb{I}_{n}=E\oplus \mathbb{C}.
   \end{equation*}
   
   Consideremos un caso específico, el de $S_{3}$ actuando en
-  $\{1,2,3\}$. Determinemos las
-  matrices asociadas respecto a la base estándar $\{1,2,3\}$. Para
+  $\mathbb{I}_{3}$. Determinemos las
+  matrices asociadas respecto a la base $\mathbb{I}_{3}$. Para
   $\pi=(12)$, calculamos
   \begin{center}
     (12)1=2; \qquad (12)2=1; \qquad (12)3=3
@@ -1758,6 +1760,7 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
       1 & 0 & 0 \\
     \end{pmatrix}$.
   \end{center}
+$F\mathbb{I}_{3}$ es un $S_{3}$-módulo de permutaciones.
 \end{example}
 
 \begin{example}[Módulo regular]
@@ -1781,7 +1784,8 @@ Con esta acción, $FG$ es un $G$-módulo, al cual llamamos \emph{módulo regular
 En esta sección, $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
 
 \begin{definition}
-  Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o \textbf{submódulo} de $V$ es un subespacio
+  Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o
+  \textbf{submódulo} de $V$ es un subespacio vectorial
   $W$ que es invariante bajo la acción de $G$, es decir, $ gw\in W$
   para todos $w\in W$, $g\in G$, tal que $W$ junto con la acción de
   $G$ es en sí mismo un $G$-módulo. Escribiremos $W\leq V$ si $W$ es
@@ -2068,14 +2072,14 @@ entre suma directa y suma directa externa.
   \begin{equation*}
     \phi(gv)=g\phi(v),
   \end{equation*}
-para todo $g\in G$ y $v\in V$. Decimos que $\phi$ \emph{preserva} la acción
+para todo $g\in G$ y $v\in V$. Decimos entonces que $\phi$ \emph{preserva} la acción
 de $G$.
 \end{definition}
 
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-isomorfismo} es un
   $G$-homomorfismo $\phi:V\rightarrow W$ el cual es biyectivo. En
-  éste caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} o
+  este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} o
   $G$\textbf{-equivalentes}, y lo denotaremos como~$V\cong W$.
 \end{definition}
 
@@ -2151,7 +2155,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 Mucha información contenida en una representación $X:G\rightarrow
 GL(n,\mathbb{C})$ puede ser obtenida de la traza de sus
 correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
-ésto se ocupa la teoría de caracteres.
+esto se ocupa la teoría de caracteres.
 
 \begin{definition}
   Sea $X(g)$ una representación matricial con $g\in G$. Entonces el \textbf{carácter} de $X$ es
@@ -2193,6 +2197,7 @@ denotado por $K_{g}$.
   \item $\chi(1)=n$.
   \item Si $K$ es una clase de conjugación de $G$, entonces $\chi(g)=\chi(h)$ para $g,h\in K$. 
   \end{enumerate}
+\label{carac-const}
 \end{proposition}
 %Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}.
 \begin{definition}
@@ -2202,6 +2207,8 @@ denotado por $K_{g}$.
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
 \end{definition} 
+Los caracteres son funciones de clase (ver inciso 2 de la proposición
+\ref{carac-const}).
 \begin{theorem}{[\cite{sagan2001symmetric}, proposición 1.10.1, p.40]}, {[\cite{sagan2001symmetric}, proposición 1.10.2, p.42]}.
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
@@ -2260,7 +2267,8 @@ primera columna corresponde a la clase identidad $K=(1)$.
   $(12)1=1$ y $(123)1=1$, se sigue que $\chi_{V}((12))=1$ y
   $\chi_{V}((123))=1$.
 
-  Ahora sea $V=\mathbb{\hat C}$, la representación signo. Nuevamente
+  Ahora denotemos al espacio de representación de la representación
+  signo como $V=\mathbb{\hat C}$. Nuevamente
   $\dim V=1$, pero $(1)1=1$, $(12)1=-1$ y $(123)1=1$, por lo que
   $\chi_{V}((1))=1$,  $\chi_{V}((12))=-1$ y  $\chi_{V}((123))=1$.
 
@@ -2376,6 +2384,22 @@ de $V^{(i)}$. Entonces
   para cada $g\in G$.
 \end{enumerate}
 \end{corollary}
+
+En el siguiente ejemplo se calcula el producto interno entre caracteres.
+\begin{example}
+  \label{rep-triv-sig-est}
+  De el ejemplo \ref{caracteres-S3}, calculamos los siguientes
+  productos internos basados en los valores de la tabla \ref{tabla-car-S3}:
+  \begin{align*}
+    \langle\chi_{\mathbb{C}},\chi_{\mathbb{C}}\rangle&=\frac{1}{6}(1(\chi_{\mathbb{C}}(1))(\chi_{\mathbb{C}}(1))+3(\chi_{\mathbb{C}}(12))(\chi_{\mathbb{C}}(12))+2(\chi_{\mathbb{C}}(123))(\chi_{\mathbb{C}}(123)))\\
+    &=\frac{1}{6}(1(1)(1)+3(1)(1)+2(1)(1))=1,  \\
+    \langle\chi_{\widehat{\mathbb{C}}},\chi_{\widehat{\mathbb{C}}}\rangle&=\frac{1}{6}(1(1)(1)+3(-1)(-1)+2(1)(1))=1,  \\
+    \langle\chi_{E},\chi_{E}\rangle&=\frac{1}{6}(1(2)(2)+3(0)(0)+2(-1)(-1))=1.
+  \end{align*}
+ Por el inciso 4 de el corolario \ref{multiplicidad}, las representaciones trivial,
+ signo y estándar son representaciones irreducibles de $S_{3}$.
+\end{example}
+
 \begin{corollary}
   \label{prod-car-pos}
   Sean $V$ y $W$ $G$-módulos, entonces $\langle\chi_{V},\chi_{W}\rangle$ es un número entero no negativo.
@@ -2396,14 +2420,6 @@ de $V^{(i)}$. Entonces
   así que  $\langle\chi_{V},\chi_{W}\rangle$ es un entero no
   negativo. 
 \end{proof}
-\textbf{\emph{Nota:}} Por el corolario \ref{multiplicidad}, las 
-representaciones de el ejemplo \ref{caracteres-S3} son irreducibles,
-es decir, basta calcular los siguientes productos internos:
-\begin{align*}
-  \langle\chi_{\mathbb{C}},\chi_{\mathbb{C}}\rangle&=\frac{1}{6}(1(1)(1)+3(1)(1)+2(1)(1))=1  \\
-  \langle\chi_{\widehat{\mathbb{C}}},\chi_{\widehat{\mathbb{C}}}\rangle&=\frac{1}{6}(1(1)(1)+3(-1)(-1)+2(1)(1))=1  \\
-  \langle\chi_{E},\chi_{E}\rangle&=\frac{1}{6}(1(2)(2)+3(0)(0)+2(-1)(-1))=1.
-\end{align*}
 
 \section{Caracteres y módulos inducidos}
 \label{carac-induc}
@@ -2686,7 +2702,7 @@ continuación:
 
 Hay una elegante descripción de representaciones irreducibles de
 $S_{n}$ mediante los tableros de Young. Recordemos que hay tres representaciones irreducibles de
-$S_{3}$, resulta que pueden ser descritas usando el conjunto de diagramas de
+$S_{3}$ (ver ejemplo \ref{rep-triv-sig-est}), resulta que pueden ser descritas usando el conjunto de diagramas de
 Young con tres cajas. La correspondencia es ilustrada abajo.
 
 \begin{center}
@@ -2769,7 +2785,8 @@ particiones usando diagramas de Young como sigue.
 \begin{definition}
   Si $\lambda=(\lambda_{1},\lambda_{2},\ldots,\lambda_{l})$ es una
   partición de $n$, entonces el \textbf{diagrama de Young} de $\lambda$
-  consiste de $n$ cajas colocadas en $l$ renglones donde el $i$-ésimo
+  consiste de $n$ cajas colocadas en $l$ renglones alineados a la
+  izquierda, donde el $i$-ésimo
   renglón tiene  $\lambda_{i}$ cajas.
 \end{definition}
 
@@ -4044,7 +4061,7 @@ Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
 \chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías del complejo de emparejamientos}
 \label{cha:hom-com-emp}
 
-En éste capítulo se utilizarán todos los conceptos y resultados
+En este capítulo se utilizarán todos los conceptos y resultados
 presentados en los capítulos anteriores. Se definirá el complejo de
 emparejamientos y finalmente conoceremos lo que quiere decir la
 fórmula de Bouc. Además, calculamos las homologías reducidas de los
