@@ -490,18 +490,44 @@ En el primer capítulo capítulo...
  \newpage \thispagestyle{empty}
 
 \chapter{Preliminares}
-\label{cha:repaso-algebra-lineal}
+\label{preliminares}
 
-En la sección 1.1 se revisan algunos resultados de álgebra lineal, algunas
-pruebas se omiten pero se puede consultar en
+En la sección \ref{esp-vec} se revisan algunos resultados de álgebra lineal, las 
+pruebas que se omiten se puede consultar en
 \cite{friedberg1982algebra} y \cite{herstein1990algebra}. 
 
-En la seccion 1.2 grupos...
+En la seccion \ref{grupos}  grupos...
 
-En la sección 1.3 .... es definir gráfica de clanes y gráfica
-bipartita clánica para lo cual necesitamos algunas definiciones previas. Las definiciones aquí
-escritas se pueden consultar en \cite{harary} y \cite{LPV08a}. Además
-a las gráficas les asociamos complejos simpliciales.
+En la finalidad de la sección \ref{graficas} es definir gráficas,
+gráfica de emparejamientos, clanes y bipartita clánica para lo cual
+necesitamos algunas definiciones previas. Estas definiciones se pueden
+consultar en \cite{harary} y \cite{LPV08a}.
+
+Las demostraciones de los resultados de grupos y de representaciones
+de grupos que no incluiremos explícitamente se pueden encontrar en
+\cite{fraleigh} y \cite{liebeck} respectivamente.
+
+En la primera sección se desarrollan conceptos básicos de grupos. En
+la sección \ref{acc-grup} y  \ref{rep-grup} observamos que estudiar
+representaciones de un grupo~$G$ en un espacio vectorial $V$ es
+equivalente a estudiar $G$-módulos $V$. Se discute el teorema de
+Maschke que enuncia que cualquier $G$-módulo $V$ se puede descomponer
+como suma directa de $G$-submódulos irreducibles en la sección~\ref{reducibilidad}. 
+
+Consideramos el lema de Schur, pues su demostración es similar a
+cierta proposición posterior que encontramos al final de la sección
+\ref{schur}. Por otra parte, los caracteres de una representación nos
+proporcionan información acerca de ésta, lo cual se describe con detalle en la
+sección \ref{caracteres}. Además, por medio del producto interno de
+caracteres podemos determinar si una
+representación es irreducible, cuándo dos representaciones son
+equivalentes, la multiplicidad de cierto submódulo irreducible en la
+descomposición de un $G$-módulo, entre otros resultados que vemos en la
+sección~\ref{producto-interno}. 
+
+El capítulo termina con la sección de caracteres y módulos inducidos,
+en donde se exponen la reciprocidad de Frobenius y la fórmula para
+obtener el carácter de una representación inducida.
 
 % En éste trabajo todos los espacios vectoriales considerados serán de
 % dimensión finita y sobre el campo de los números complejos.
@@ -717,9 +743,8 @@ donde
 \end{definition}
 
 A continuación, construiremos un espacio vectorial muy importante, ya
-que lo usaremos más adelante en la sección \ref{}
-{\setlength{\fboxsep}{0pt}\colorbox{green}{ref}} de representaciones
-de grupos.
+que lo usaremos más adelante en la sección \ref{rep-grup}
+de representaciones de grupos.
 
 Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
 \begin{equation*}
@@ -1055,253 +1080,6 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
   $f+g$ está dada por $(f+g)(x)=f(x)+g(x)$ y la multiplicación $fa$
   por $f(a)$, para $f,g\in\End(A)$ y $a\in A$. 
 \end{example}
-
-\section{Gráficas}
-\label{graficas}
-
-\begin{definition}
-  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V=V(G)$
-  de $p$ \textbf{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
-  ordenados de vértices distintos pertenecientes al conjunto $V(G)$. Cada par $e=\{u,v\}$ de vértices
-  en $E$ es una \textbf{arista} de $G$, y se dice que $e$ une a $u$ y
-  $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \textbf{adyacentes};
-  %un vértice $u$ y una arista $e$ son \emph{incidentes} si $u\in e$. 
-  Dos aristas $e$ y $f$ son \textbf{ajenas} si $e\cap f=\emptyset$.
-  % Una gráfica con $p$ vértices y $q$
-  % aristas es llamada una $(p,q)$ gráfica.
-\end{definition}
-
-Una manera natural de ver una gráfica es poner puntos para los
-vértices y una línea entre dos puntos si los vértices correspondientes
-son adyacentes.
-\begin{definition}
-  Decimos que $G$ es una gráfica \textbf{completa} si para
-  todos~$u,v\in V(G)$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
-  $n$ vértices se denota como $K_{n}$.
-\end{definition}
-\begin{example}
-  Gráfica completa de 5 vértices.
-  \bigskip
-
-  \begin{minipage}{1.0\linewidth}
-    \centering
-    \begin{tikzpicture}[rotate=90,scale=.7]
-      \GraphInit[vstyle=Classic] 
-      \SetUpVertex[MinSize=1pt]
-      \SetVertexNoLabel 
-      \grComplete[RA=2.3]{5}
-    \end{tikzpicture}
-  
-    $K_{5}$
-  \end{minipage}
-  \label{fig:K5}
-\end{example}
-
-\begin{definition}
-  \label{graf-emparejamientos}
-  Consideremos la gráfica completa de $n$ vértices $K_{n}$ cuyos
-  vértices están etiquetados como $1,2,\ldots,n$. Además
-  $\overline{ij}$ denotará la arista que une al vértice $i$ con el
-  vértice $j$ (donde $\overline{ij}=\overline{ji}$).
-  
-  Llamaremos \textbf{gráfica de emparejamientos} de orden $n$ a la
-  gráfica $G_{n}$ tal que:
-  
-  \begin{enumerate}
-  \item Su conjunto de vértices $V(G_{n})$ consta de las aristas de la gráfica
-    $K_{n}$. 
-  \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
-    $V(G_{n})$, $\{v_{i},v_{j}\}$ es una arista en $E(G_{n})$ si $v_{i}$
-    y $v_{j}$ son ajenas.
-  \end{enumerate}
-\end{definition} 
-
-\begin{example}
-  A continuación se muestran ejemplos de gráficas de emparejamientos,
-  obtenidas a partir de su respectiva gráfica completa.
-  \begin{center}
-    \begin{minipage}{0.26\linewidth}
-      \centering
-      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
-        \draw[help lines] (-2,0);% grid (0,2);
-        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{1}
-        \Vertex[x=0,y=0,Math]{2}
-        \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90]{3} \Edge(1)(2)
-        \Edge(1)(3) \Edge(2)(3)
-      \end{tikzpicture}
-  
-      $K_{3}$
-    \end{minipage}
-    \begin{minipage}{0.26\linewidth}
-      \centering
-      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
-        \draw[help lines] (-2,0);% grid (0,2);
-        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=90,L=\overline{12}]{12}
-        \Vertex[x=-1,y=0,Math,LabelOut,Lpos=90,L=\overline{13}]{13}
-        \Vertex[x=0,y=0,Math,LabelOut,Lpos=90,L=\overline{23}]{23}
-      \end{tikzpicture}
-  
-      $G_{3}$
-    \end{minipage}
-  \end{center}
-
-  \begin{center}
-    \begin{minipage}{0.3\linewidth}
-      \centering
-      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
-        \draw[help lines] (-2,0);% grid (0,2);
-        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
-        \Vertex[x=0,y=0,Math]{3}
-        \Vertex[x=-2,y=2,Math,LabelOut,Lpos=180]{1}
-        \Vertex[x=0,y=2,Math]{4} 
-        \Edge(1)(2) \Edge(1)(3) \Edge(1)(4)
-        \Edge(2)(3) \Edge(2)(4) \Edge(3)(4)
-      \end{tikzpicture}
-  
-      $K_{4}$
-    \end{minipage}
-    \begin{minipage}{0.26\linewidth}
-      \centering
-      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
-        \draw[help lines] (-2,0);% grid (0,2);
-        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-        \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90,L=\overline{12}]{12}
-        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90,L=\overline{34}]{34}
-        \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90,L=\overline{24}]{24}
-        \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90,L=\overline{13}]{13}
-        \Vertex[x=0,y=2,Math,LabelOut,Lpos=90,L=\overline{14}]{14}
-        \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90,L=\overline{23}]{23}
-        \Edge(12)(34) \Edge(24)(13) \Edge(14)(23)
-      \end{tikzpicture}
-  
-      $G_{4}$
-    \end{minipage}
-  \end{center}
-\end{example}
-\begin{definition}
-  Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
-  subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
-  \textbf{gráfica de intersección} de $F$ es denotada por $\Omega(F)$
-  y definida por $V(\Omega(F))=F$, con~$S_{i}$ y $S_{j}$ adyacentes
-  siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$.
-\end{definition}
-
-\begin{definition}
-  Una gráfica $H$ se llama \textbf{subgráfica} de $G$ si tiene todos
-  sus vértices y aristas en $G$, es decir, $V(H)\subseteq V (G)$ y
-  $E(H)\subseteq E(G)$. 
-\end{definition}
-
-\begin{definition}
-  Un \textbf{clan} de una gráfica es una subgráfica completa
-  maximal, es decir, no está contenida en ninguna otra subgráfica completa.
-\end{definition}
-
-\begin{definition}
-  La \textbf{gráfica de clanes} de una gráfica dada $G$ es la gráfica
-  de intersección de la familia de clanes de $G$. Denotemos a la
-  gráfica de clanes de $G$ como $K(G)$. 
-\end{definition}
-\begin{example}
-  La gráfica $K_{4}$ de la figura \ref{KG} es la gráfica de clanes de $G$ de la figura \ref{G}.
-
-  \begin{center}
-    \begin{figure}[h]
-      \begin{minipage}[h]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}[scale=.8]
-          \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-          \SetVertexNoLabel
-          \grTriangularGrid[prefix=G,Math,RA=1.5]{3}%
-        \end{tikzpicture}
-
-        \caption{$G$}
-        \label{G}
-      \end{minipage}
-      \begin{minipage}[h]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}[scale=.8]
-          \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-          \SetVertexNoLabel \grTetrahedral[RA=1.9]
-        \end{tikzpicture}
-    
-        \caption{$K(G)$}
-        \label{KG}
-      \end{minipage}
-    \end{figure}
-  \end{center}
-\end{example}
-
-\begin{definition}
-  La \textbf{gráfica bipartita clánica} de $G$ es definida como la gráfica
-  $BK(G)$ con $V(BK(G))=V(G)\cup V(K(G))$, donde $x\in V(G)$,
-  $c\in (K(G))$ son adyacentes si $x\in c$.
-\end{definition}
-\begin{example}
-  \label{BKG}
-  Sea $G$ la gráfica de la figura \ref{G}. La gráfica bipartita
-  clánica de $G$ se muestra enseguida, donde los vértices en color
-  gris corresponden a los clanes de $G$ y los vértices restantes son
-  los vértices de $G$.
-  \bigskip
-
-  \begin{minipage}{1.0\linewidth}
-    \centering
-    \begin{tikzpicture}[scale=.45]
-      \SetVertexNoLabel 
-      \GraphInit[vstyle=Classic]
-      \SetUpVertex[MinSize=1pt] 
-      \grStar[RA=2,Math,rotation=270]{4}
-      \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
-      \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
-      \EdgeFromOneToSeq{b}{a}{0}{1}{2} \EdgeFromOneToSeq{a}{b}{2}{1}{1}
-      \EdgeFromOneToSeq{a}{b}{0}{1}{1} \EdgeFromOneToSeq{b}{a}{2}{0}{1}
-      \EdgeIdentity{b}{c}{3} 
-      \AddVertexColor{gray}{a3,b0,b1,b2}
-    \end{tikzpicture}
-    
-    $BK(G)$
-  \end{minipage}
-\end{example}
-
-\chapter{Representaciones de grupos}
-\label{Representaciones de grupos}
-
-Las demostraciones de los resultados de grupos y de representaciones
-de grupos que no incluiremos explícitamente se pueden encontrar en
-\cite{fraleigh} y \cite{liebeck} respectivamente.
-
-En la primera sección se desarrollan conceptos básicos de grupos. En
-la sección \ref{acc-grup} y  \ref{rep-grup} observamos que estudiar
-representaciones de un grupo~$G$ en un espacio vectorial $V$ es
-equivalente a estudiar $G$-módulos $V$. Se discute el teorema de
-Maschke que enuncia que cualquier $G$-módulo $V$ se puede descomponer
-como suma directa de $G$-submódulos irreducibles en la sección~\ref{reducibilidad}. 
-
-Consideramos el lema de Schur, pues su demostración es similar a
-cierta proposición posterior que encontramos al final de la sección
-\ref{schur}. Por otra parte, los caracteres de una representación nos
-proporcionan información acerca de ésta, lo cual se describe con detalle en la
-sección \ref{caracteres}. Además, por medio del producto interno de
-caracteres podemos determinar si una
-representación es irreducible, cuándo dos representaciones son
-equivalentes, la multiplicidad de cierto submódulo irreducible en la
-descomposición de un $G$-módulo, entre otros resultados que vemos en la
-sección~\ref{producto-interno}. 
-
-El capítulo termina con la sección de caracteres y módulos inducidos,
-en donde se exponen la reciprocidad de Frobenius y la fórmula para
-obtener el carácter de una representación inducida.
-
-%  $V$ es un
-% $G$-módulo inducido por el $H$-módulo $W$ sus respectivos caracteres
-% son iguales.
-
-\bigskip
-{\setlength{\fboxsep}{0pt}\colorbox{green}{....de aquí en adelante???}}
 
 \section{Representaciones de grupos}
 \label{rep-grup}
@@ -2680,6 +2458,217 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   \end{align*}
 \end{proof}
 
+\section{Gráficas}
+\label{graficas}
+
+\begin{definition}
+  Una \textbf{gráfica} $G$ consiste de un conjunto finito no vacío $V=V(G)$
+  de $p$ \textbf{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
+  ordenados de vértices distintos pertenecientes al conjunto $V(G)$. Cada par $e=\{u,v\}$ de vértices
+  en $E$ es una \textbf{arista} de $G$, y se dice que $e$ une a $u$ y
+  $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \textbf{adyacentes};
+  %un vértice $u$ y una arista $e$ son \emph{incidentes} si $u\in e$. 
+  Dos aristas $e$ y $f$ son \textbf{ajenas} si $e\cap f=\emptyset$.
+  % Una gráfica con $p$ vértices y $q$
+  % aristas es llamada una $(p,q)$ gráfica.
+\end{definition}
+
+Una manera natural de ver una gráfica es poner puntos para los
+vértices y una línea entre dos puntos si los vértices correspondientes
+son adyacentes.
+\begin{definition}
+  Decimos que $G$ es una gráfica \textbf{completa} si para
+  todos~$u,v\in V(G)$ con $u\neq v$ se tiene que $uv\in E(G)$. Una gráfica completa con
+  $n$ vértices se denota como $K_{n}$.
+\end{definition}
+\begin{example}
+  Gráfica completa de 5 vértices.
+  \bigskip
+
+  \begin{minipage}{1.0\linewidth}
+    \centering
+    \begin{tikzpicture}[rotate=90,scale=.7]
+      \GraphInit[vstyle=Classic] 
+      \SetUpVertex[MinSize=1pt]
+      \SetVertexNoLabel 
+      \grComplete[RA=2.3]{5}
+    \end{tikzpicture}
+  
+    $K_{5}$
+  \end{minipage}
+  \label{fig:K5}
+\end{example}
+
+\begin{definition}
+  \label{graf-emparejamientos}
+  Consideremos la gráfica completa de $n$ vértices $K_{n}$ cuyos
+  vértices están etiquetados como $1,2,\ldots,n$. Además
+  $\overline{ij}$ denotará la arista que une al vértice $i$ con el
+  vértice $j$ (donde $\overline{ij}=\overline{ji}$).
+  
+  Llamaremos \textbf{gráfica de emparejamientos} de orden $n$ a la
+  gráfica $G_{n}$ tal que:
+  
+  \begin{enumerate}
+  \item Su conjunto de vértices $V(G_{n})$ consta de las aristas de la gráfica
+    $K_{n}$. 
+  \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
+    $V(G_{n})$, $\{v_{i},v_{j}\}$ es una arista en $E(G_{n})$ si $v_{i}$
+    y $v_{j}$ son ajenas.
+  \end{enumerate}
+\end{definition} 
+
+\begin{example}
+  A continuación se muestran ejemplos de gráficas de emparejamientos,
+  obtenidas a partir de su respectiva gráfica completa.
+  \begin{center}
+    \begin{minipage}{0.26\linewidth}
+      \centering
+      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+        \draw[help lines] (-2,0);% grid (0,2);
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{1}
+        \Vertex[x=0,y=0,Math]{2}
+        \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90]{3} \Edge(1)(2)
+        \Edge(1)(3) \Edge(2)(3)
+      \end{tikzpicture}
+  
+      $K_{3}$
+    \end{minipage}
+    \begin{minipage}{0.26\linewidth}
+      \centering
+      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+        \draw[help lines] (-2,0);% grid (0,2);
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=90,L=\overline{12}]{12}
+        \Vertex[x=-1,y=0,Math,LabelOut,Lpos=90,L=\overline{13}]{13}
+        \Vertex[x=0,y=0,Math,LabelOut,Lpos=90,L=\overline{23}]{23}
+      \end{tikzpicture}
+  
+      $G_{3}$
+    \end{minipage}
+  \end{center}
+
+  \begin{center}
+    \begin{minipage}{0.3\linewidth}
+      \centering
+      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+        \draw[help lines] (-2,0);% grid (0,2);
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=180]{2}
+        \Vertex[x=0,y=0,Math]{3}
+        \Vertex[x=-2,y=2,Math,LabelOut,Lpos=180]{1}
+        \Vertex[x=0,y=2,Math]{4} 
+        \Edge(1)(2) \Edge(1)(3) \Edge(1)(4)
+        \Edge(2)(3) \Edge(2)(4) \Edge(3)(4)
+      \end{tikzpicture}
+  
+      $K_{4}$
+    \end{minipage}
+    \begin{minipage}{0.26\linewidth}
+      \centering
+      \begin{tikzpicture}[x=0.8 cm,y=0.8 cm]
+        \draw[help lines] (-2,0);% grid (0,2);
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \Vertex[x=-2,y=2,Math,LabelOut,Lpos=90,L=\overline{12}]{12}
+        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=-90,L=\overline{34}]{34}
+        \Vertex[x=-1,y=0,Math,LabelOut,Lpos=-90,L=\overline{24}]{24}
+        \Vertex[x=-1,y=2,Math,LabelOut,Lpos=90,L=\overline{13}]{13}
+        \Vertex[x=0,y=2,Math,LabelOut,Lpos=90,L=\overline{14}]{14}
+        \Vertex[x=0,y=0,Math,LabelOut,Lpos=-90,L=\overline{23}]{23}
+        \Edge(12)(34) \Edge(24)(13) \Edge(14)(23)
+      \end{tikzpicture}
+  
+      $G_{4}$
+    \end{minipage}
+  \end{center}
+\end{example}
+\begin{definition}
+  Sea $S$ un conjunto y $F=\{S_{1},\cdots,S_{p}\}$ una familia de
+  subconjuntos distintos no vacíos de $S$ cuya unión es $S$. La
+  \textbf{gráfica de intersección} de $F$ es denotada por $\Omega(F)$
+  y definida por $V(\Omega(F))=F$, con~$S_{i}$ y $S_{j}$ adyacentes
+  siempre que $i\neq j$ y $S_{i}\cap S_{j}\neq\emptyset$.
+\end{definition}
+
+\begin{definition}
+  Una gráfica $H$ se llama \textbf{subgráfica} de $G$ si tiene todos
+  sus vértices y aristas en $G$, es decir, $V(H)\subseteq V (G)$ y
+  $E(H)\subseteq E(G)$. 
+\end{definition}
+
+\begin{definition}
+  Un \textbf{clan} de una gráfica es una subgráfica completa
+  maximal, es decir, no está contenida en ninguna otra subgráfica completa.
+\end{definition}
+
+\begin{definition}
+  La \textbf{gráfica de clanes} de una gráfica dada $G$ es la gráfica
+  de intersección de la familia de clanes de $G$. Denotemos a la
+  gráfica de clanes de $G$ como $K(G)$. 
+\end{definition}
+\begin{example}
+  La gráfica $K_{4}$ de la figura \ref{KG} es la gráfica de clanes de $G$ de la figura \ref{G}.
+
+  \begin{center}
+    \begin{figure}[h]
+      \begin{minipage}[h]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[scale=.8]
+          \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+          \SetVertexNoLabel
+          \grTriangularGrid[prefix=G,Math,RA=1.5]{3}%
+        \end{tikzpicture}
+
+        \caption{$G$}
+        \label{G}
+      \end{minipage}
+      \begin{minipage}[h]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[scale=.8]
+          \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+          \SetVertexNoLabel \grTetrahedral[RA=1.9]
+        \end{tikzpicture}
+    
+        \caption{$K(G)$}
+        \label{KG}
+      \end{minipage}
+    \end{figure}
+  \end{center}
+\end{example}
+
+\begin{definition}
+  La \textbf{gráfica bipartita clánica} de $G$ es definida como la gráfica
+  $BK(G)$ con $V(BK(G))=V(G)\cup V(K(G))$, donde $x\in V(G)$,
+  $c\in (K(G))$ son adyacentes si $x\in c$.
+\end{definition}
+\begin{example}
+  \label{BKG}
+  Sea $G$ la gráfica de la figura \ref{G}. La gráfica bipartita
+  clánica de $G$ se muestra enseguida, donde los vértices en color
+  gris corresponden a los clanes de $G$ y los vértices restantes son
+  los vértices de $G$.
+  \bigskip
+
+  \begin{minipage}{1.0\linewidth}
+    \centering
+    \begin{tikzpicture}[scale=.45]
+      \SetVertexNoLabel 
+      \GraphInit[vstyle=Classic]
+      \SetUpVertex[MinSize=1pt] 
+      \grStar[RA=2,Math,rotation=270]{4}
+      \grEmptyCycle[RA=2,Math,rotation=90,prefix=b]{3}
+      \grEmptyCycle[RA=4,Math,rotation=90,prefix=c]{3}
+      \EdgeFromOneToSeq{b}{a}{0}{1}{2} \EdgeFromOneToSeq{a}{b}{2}{1}{1}
+      \EdgeFromOneToSeq{a}{b}{0}{1}{1} \EdgeFromOneToSeq{b}{a}{2}{0}{1}
+      \EdgeIdentity{b}{c}{3} 
+      \AddVertexColor{gray}{a3,b0,b1,b2}
+    \end{tikzpicture}
+    
+    $BK(G)$
+  \end{minipage}
+\end{example}
+
 \chapter[Representaciones del grupo simétrico]{Tableros de Young y representaciones del grupo simétrico}
 \label{repr-grupo-simetrico}
 
@@ -3997,10 +3986,6 @@ Si $X$ es homotópico a un punto, se dice que $X$ es
   \label{homologia-realizacion}
 \end{theorem}
  
-\chapter{Sobró}
- 
-{\setlength{\fboxsep}{0pt}\colorbox{green}{Quizá en el siguiente capítulo.}}
-
 A cada gráfica $G$ finita se le asocia un espacio topológico por
 medio del complejo simplicial $\Delta(G)$ cuyos simplejos son
 las subgráficas completas. Entonces a $G$ le podemos asociar conceptos topológicos por
@@ -4008,56 +3993,71 @@ medio de $\Delta(G)$. Por ejemplo, escribiremos $G_{1}\simeq G_{2}$ si
 se tiene que $\Delta(G_{1})\simeq\Delta(G_{2})$.
 
 Por otro lado si $G$ tiene una acción del grupo simétrico
-$S_{n}$, entonces las homologías de $G$ son representaciones
+$S_{n}$, entonces las homologías de $G$ son módulos
 de $S_{n}$.
 
-Para ejemplificar los conceptos antes expuestos tomemos la gráfica $G$ de la figura \ref{G}, entonces
-$\Delta(G)$ consta de los subconjuntos no vacíos de $\{1,2,4\}$,
-$\{2,3,5\}$, $\{2,4,5\}$, $\{4,5,6\}$. Un dibujo de $|\Delta(G)|$ se
-observa en \ref{fig:realizacion-geometrica}.
+Ahora, se ejemplifican los conceptos antes expuestos.
+\begin{example}
+  Sea la gráfica $G$ de la figura \ref{G1}, entonces $\Delta(G)$ consta de los
+  subconjuntos no vacíos de $\{1,2,4\}$, $\{2,3,5\}$, $\{2,4,5\}$,
+  $\{4,5,6\}$. En la figura \ref{fig:realizacion-geometrica} se
+  observa un dibujo de $|\Delta(G)|$. Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
+\mid |x|\leq 1\}$.
 
-\begin{figure}[h]
-  \centering
-  \begin{tikzpicture}[scale=0.6]%[x=0.5 cm,y=1cm]
-    \tikzstyle{circ} = [circle, minimum width=1mm, inner
-    sep=0pt,draw,fill] 
-    \tikzstyle{num} = [yshift=4mm]
-    % QUAD
-    \node[circ] (a) at (0,0) {}; \node[circ] (b) at (2,0) {};
-    \node[circ] (c) at (1,2) {}; \node[circ] (d) at (3,2) {};
-    \node[circ] (e) at (4,0) {}; \node[circ] (f) at (2,4) {};
-    \begin{pgfonlayer}{background}
-      \fill[draw, line width=0.3mm,top color=black!30,bottom
-      color=gray!30] (a.center)node[num]{1} -- (b.center)
-      node[num]{2} -- (c.center) node[num]{4} --
-      (a.center);%node[num]{4} -- (a.center);
-    \end{pgfonlayer}
-    \begin{pgfonlayer}{background}
-      \fill[draw, line width=0.3mm,top color=black!30,bottom
-      color=gray!30] (b.center)node[num]{2} -- (e.center)
-      node[num]{3} -- (d.center) node[num]{5} --
-      (b.center);%node[num]{4} -- (a.center);
-    \end{pgfonlayer}
-    \begin{pgfonlayer}{background}
-      \fill[draw, line width=0.3mm,top color=black!30,bottom
-      color=gray!30](b.center)node[num]{2} -- (d.center)
-      node[num]{5} -- (c.center) node[num]{4} --
-      (b.center);%node[num]{4} -- (a.center);
-    \end{pgfonlayer}
-    \begin{pgfonlayer}{background}
-      \fill[draw, line width=0.3mm,top color=black!30,bottom
-      color=gray!30] (c.center)node[num]{4} -- (d.center)
-      node[num]{5} -- (f.center) node[num]{6} --
-      (c.center);%node[num]{4} -- (a.center);
-    \end{pgfonlayer}
-  \end{tikzpicture}
-  
-  \caption{$|\Delta(G)|$}
-\label{fig:realizacion-geometrica}
-\end{figure}
+\begin{center}
+    \begin{figure}[h]
+      \begin{minipage}[h]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[scale=.8]
+          \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+          \SetVertexNoLabel
+          \grTriangularGrid[prefix=G,Math,RA=1.5]{3}%
+        \end{tikzpicture}
 
-Así que $|\Delta(G)|\simeq D^{2}$, donde $D^{2}=\{x\in\mathbb{R}^{2}
-\mid |x|\leq 1\}$. 
+        \caption{$G$}
+        \label{G1}
+      \end{minipage}  
+      \begin{minipage}[h]{0.45\linewidth}
+        \centering
+        \begin{tikzpicture}[scale=0.6]%[x=0.5 cm,y=1cm]
+          \tikzstyle{circ} = [circle, minimum width=1mm, inner
+          sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm]
+          % QUAD
+          \node[circ] (a) at (0,0) {}; \node[circ] (b) at (2,0) {};
+          \node[circ] (c) at (1,2) {}; \node[circ] (d) at (3,2) {};
+          \node[circ] (e) at (4,0) {}; \node[circ] (f) at (2,4) {};
+          \begin{pgfonlayer}{background}
+            \fill[draw, line width=0.3mm,top color=black!30,bottom
+            color=gray!30] (a.center)node[num]{1} -- (b.center) node[num]{2}
+            -- (c.center) node[num]{4} --
+            (a.center);%node[num]{4} -- (a.center);
+          \end{pgfonlayer}
+          \begin{pgfonlayer}{background}
+            \fill[draw, line width=0.3mm,top color=black!30,bottom
+            color=gray!30] (b.center)node[num]{2} -- (e.center) node[num]{3}
+            -- (d.center) node[num]{5} --
+            (b.center);%node[num]{4} -- (a.center);
+          \end{pgfonlayer}
+          \begin{pgfonlayer}{background}
+            \fill[draw, line width=0.3mm,top color=black!30,bottom
+            color=gray!30](b.center)node[num]{2} -- (d.center) node[num]{5}
+            -- (c.center) node[num]{4} --
+            (b.center);%node[num]{4} -- (a.center);
+          \end{pgfonlayer}
+          \begin{pgfonlayer}{background}
+            \fill[draw, line width=0.3mm,top color=black!30,bottom
+            color=gray!30] (c.center)node[num]{4} -- (d.center) node[num]{5}
+            -- (f.center) node[num]{6} --
+            (c.center);%node[num]{4} -- (a.center);
+          \end{pgfonlayer}
+        \end{tikzpicture}
+        
+        \caption{$|\Delta(G)|$}
+        \label{fig:realizacion-geometrica}
+      \end{minipage}
+    \end{figure}
+  \end{center}
+\end{example}
 
 \chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías del complejo de emparejamientos}
 \label{cha:hom-com-emp}
@@ -4083,7 +4083,7 @@ entonces por $M_{n}$, y se define como $M_{n}=\Delta(G_{n})$
 Puesto que $S_{n}$ actúa de manera
 natural en $G_{n}$ los espacios $C_{p}(M_{n})$, $Z_{p}(M_{n})$,
 $B_{p}(M_{n})$ (y por lo tanto $\widetilde H_{p}(M_{n})$) se convierten en
-$S_{n}$-módulos sobre $\mathbb{C}$. En éste capítulo consideramos
+$S_{n}$-módulos sobre~$\mathbb{C}$. En éste capítulo consideramos
 la descomposición en módulos irreducibles de
 $\widetilde H_{p}(M_{n})=\widetilde H_{p}(\Delta(G_{n}))$ y
 $\widetilde H_{p}(\Delta(K(G_{n})))$, con $n\leq 6$.
