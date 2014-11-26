@@ -229,7 +229,7 @@ reducible. Por otra parte, la teoría modular, estudia módulos sobre campos cuy
 característica divide al orden de el grupo, en este caso pueden
 existir módulos que no son completamente reducibles, como se
 muestra en el ejemplo \ref{ej-no-reducibilidad}. En este trabajo no consideraremos la teoría
-modular, ya que en ese contexto no es válido el teorema de Maschke. 
+modular, ya que en ese contexto no necesariamente se cumple el teorema de Maschke. 
 
 Un complejo simplicial $\Delta$ está formado por un conjunto de
 vértices y una colección de subconjuntos de vértices, llamados
@@ -1594,12 +1594,13 @@ donde $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
 irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
 decir la cantidad de $W^{(i)}$.
 \end{theorem}
-En el siguiente ejemplo, la característica de el campo divide al
-orden de el grupo, por tanto, no es válido el teorema de Maschke.
+En el siguiente ejemplo, no se cumple la hipótesis de el teorema de
+Maschke, pues la característica de el campo divide al orden de el
+grupo. Y en este ejemplo $V$ no es completamente reducible.
 \begin{example}
   \label{ej-no-reducibilidad}
   Sea el campo $F=\{0,1\}$ y $G=C_{2}=\{g^{0},g^{1}\}$ el grupo
-  cíclico de orden 2. Sea el espacio vectorial
+  cíclico de dos elementos. Sea el espacio vectorial
   $V=F^{2}=\{v_{1},v_{2},v_{3},v_{4}\}$, donde  
   $v_{1}=
   \begin{pmatrix}
@@ -1622,8 +1623,7 @@ orden de el grupo, por tanto, no es válido el teorema de Maschke.
     1  
   \end{pmatrix}.
   $
-  Definimos la función
-  $\phi:G\rightarrow GL(V)$ como:
+  Definimos la función $\phi:G\rightarrow GL(V)$ como:
   \begin{center}
     $\phi(g^{r})=
     \begin{pmatrix}
@@ -1682,64 +1682,8 @@ v_{4}\rangle$ no es submódulo propio de $V$.
 
 A continuación se verifica que $\langle v_{2}\rangle=\{v_{1},v_{2}\}$ es el
 único submódulo propio de $V$, pues $\langle v_{2}\rangle$ es
-invariante bajo la acción de $G$.
-\begin{align*}
-  g^{0}v_{1}&=\phi(g^{0})v_{1}=v_{1}, \\
-  g^{1}v_{1}&=\phi(g^{1})v_{1}=v_{1}, \\
-  g^{0}v_{2}&=\phi(g^{0})v_{2}=v_{2}, \\
-  g^{1}v_{2}&=\phi(g^{1})v_{2}=v_{2},
-\end{align*}
-Por tanto, $V$ no es completamente reducible.
-
-\bigskip
-\begin{center}
-  $g^{0}v_{1}=\phi(g^{0})v_{1}=
-  \begin{pmatrix}
-      1 & 0 \\
-      0 & 1 
-    \end{pmatrix}
-    \begin{pmatrix}
-    0\\
-    0  
-  \end{pmatrix}=
-  \begin{pmatrix}
-    0\\
-    0  
-  \end{pmatrix}=v_{1}
-  $
-\end{center}
-\begin{center}
-  $g^{1}v_{1}=\phi(g^{1})v_{1}=
-  \begin{pmatrix}
-      1 & 0 \\
-      1 & 1 
-    \end{pmatrix}
-    \begin{pmatrix}
-    0\\
-    0  
-  \end{pmatrix}=
-  \begin{pmatrix}
-    0\\
-    0  
-  \end{pmatrix}=v_{1}
-  $
-\end{center}
-\begin{center}
-  $g^{0}v_{2}=\phi(g^{0})v_{2}=
-  \begin{pmatrix}
-      1 & 0 \\
-      0 & 1 
-    \end{pmatrix}
-    \begin{pmatrix}
-    0\\
-    1  
-  \end{pmatrix}=
-  \begin{pmatrix}
-    0\\
-    1  
-  \end{pmatrix}=v_{2}
-  $
-\end{center}
+invariante bajo la acción de $G$, ya que $g^{0}v_{1}=v_{1}$,
+$g^{1}v_{1}=v_{1}$, $g^{0}v_{2}=v_{2}$ y
 \begin{center}
   $g^{1}v_{2}=\phi(g^{1})v_{2}=
   \begin{pmatrix}
@@ -1753,9 +1697,13 @@ Por tanto, $V$ no es completamente reducible.
   \begin{pmatrix}
     0\\
     1  
-  \end{pmatrix}=v_{2}
+  \end{pmatrix}=v_{2}.
   $
 \end{center}
+Por tanto, $V$ no es completamente reducible, es decir, no podemos
+escribir a $V$ como $V\cong\langle v_{2}\rangle\oplus W$, pues el
+submódulo $W$ debería tener dimensión 1, y el único submódulo con
+dimensión 1 es $\langle v_{2}\rangle$.
 \end{example}
 
 \begin{theorem}
