@@ -1731,7 +1731,7 @@ dimensión 1 es $\langle v_{2}\rangle$.
 
 \begin{definition}
   Sea $V$ un $G$-módulo. Al submódulo de $V$ generado por las combinaciones lineales de los
-  elementos de un $W\subseteq V$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
+  elementos de un subespacio $W$ de $V$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
 \end{definition}
 
 Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma
@@ -1743,19 +1743,21 @@ donde $u,u_{1}\in U$, $v,v_{1}\in V$ y $k\in \mathbb{C}$. Con estas
 operaciones $U\times V$ es un espacio vectorial, que designaremos por
 $$U\oplus V.$$
 
-Así, dados $V$ y $W$ $G$-módulos, podemos formar un tercer módulo a partir
+Así, dados $V$ y $W$ $G$-módulos, podemos formar un tercer $G$-módulo a partir
 de la suma directa externa $V\oplus W$, definiendo la acción como
 $a(v,w)=~(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
 cantidad finita de $G$-módulos.
 
 Por otro lado, si $V$ es un $G$-módulo, se llama la \textbf{suma} de $W_{1}$ y $W_{2}$ y se denota con
-$W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$. Ésta definición se puede extender a una
+$W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$, es
+decir, $W_{1}+W_{2}=\langle W_{1}\cup W_{2}\rangle$. Ésta definición se puede extender a una
 colección arbitraria $\{W_{i}\}_{i\in I}$, es
 decir,~$\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
 
 \textbf{\emph{Observación:}} Si $W_{1}$ y $W_{2}$ son
 submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
-$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por lo tanto, escribiremos $V=W_{1}\oplus W_{2}$
+$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por tanto, si $V=W_{1}+W_{2}$,
+es decir, si $V=\langle W_{1}\cup W_{2}\rangle$ y $W_{1}\cap W_{2}=0$, escribiremos $V=W_{1}\oplus W_{2}$
 aunque estrictamente hablando es $V\cong W_{1}\oplus W_{2}$. En adelante no distinguiremos
 entre suma directa y suma directa externa.
 
@@ -1785,7 +1787,7 @@ entre suma directa y suma directa externa.
 % $w_{1}=w^{'}_{1}$ y $w^{'}_{2}=w_{2}$.
 \begin{proposition}
   \label{modulos-iguales}
-  Supongamos que $S\leq M$, donde $S$ es irreducible. Supongamos
+  Sea $M$ un $G$-módulo. Supongamos que $S\leq M$, donde $S$ es irreducible. Supongamos
   además que $S$ aparece con multiplicidad 1 en la descomposición en
   irreducibles de $M$, y sea $S^{'}\leq M$, tal que $S^{'}\cong S$. Entonces~$S=S^{'}$.
 \end{proposition}
