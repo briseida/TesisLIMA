@@ -914,6 +914,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \end{definition}
 
 \begin{definition}
+  \label{trans}
   Sea $Y$ el conjunto finito $\{1,2,\ldots,n\}$. Si $\pi\in S_{n}$ es una permutación y
   $x\in Y$ es un elemento, diremos que $\pi$ fija a $x$ si
   $\pi(x)=x$. En caso contrario, diremos que $\pi$ mueve a $x$. Ahora,
@@ -940,6 +941,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \end{theorem}
 
 \begin{theorem}{\normalfont (\cite{fraleigh}, teorema 9.15, p.91)}.
+  \label{trans-par-impar}
   Sea $\pi\in S_{n}$. Si expresamos a~$\pi$ como $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}=\psi_{1}\psi_{2}\cdots\psi_{s}$,
   donde $\tau_{i}$ y $\psi_{j}$ son transposiciones para
   $i=1,\ldots,k$, $j=1,\ldots,s$, entonces $k$ y $s$
@@ -1264,15 +1266,15 @@ $GL(n,\mathbb{C})$ y $GL(V)$.
 \begin{example}[Representación trivial]
   La representación trivial de un grupo $G$ es el homomorfismo
   $\rho:G\rightarrow GL(\mathbb{C})$ dado por $\rho(g)=1$ para
-  todo~$g\in G$. Esta es una representación de grado 1, pues 1 es la
+  todo $g\in G$. Esta es una representación de grado 1, pues 1 es la
   dimensión de $\mathbb{C}$.
 \end{example}
 
 \begin{example}[Representación signo]
   Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
-  transposiciones, definimos la función signo
+  transposiciones (ver definición \ref{trans} y teorema \ref{trans-par-impar}), definimos la función signo
   $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
-  mediante $$\sgn(\pi):=(-1)^{k}.$$
+  mediante: $$\sgn(\pi):=(-1)^{k}.$$
   % así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
   % \[
   % \pi v=
