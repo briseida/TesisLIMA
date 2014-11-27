@@ -1476,23 +1476,6 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
     \pi(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)=\lambda_{1}\pi(1)+\lambda_{2}\pi(2)+\cdots+\lambda_{n}\pi(n).
   \end{equation*}
 
-  Un submódulo importante de dimensión $n-1$ de
-  $F\mathbb{I}_{n}$ es:
-  \begin{equation*}
-    E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in F\mathbb{I}_{n}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
-  \end{equation*}
-  La representación asociada a éste submódulo se llama
-  \textbf{representación estándar}. 
-  
-  Sea $\mathbb{C}\cong
-  \{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
-  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ submódulo de~$FS$. Se
-  obtiene que es isomorfo a la representación trivial, y que:
-
-  \begin{equation*}
-    F\mathbb{I}_{n}=E\oplus \mathbb{C}.
-  \end{equation*}
-  
   Consideremos un caso específico, el de $S_{2}=\{(1),(12)\}$ actuando en
   $\mathbb{I}_{2}$. Determinemos las
   matrices asociadas respecto a la base $\mathbb{I}_{2}$. Para
@@ -1579,7 +1562,7 @@ Con esta acción, $FG$ es un $G$-módulo, al cual llamamos \textbf{módulo regul
 \section{Reducibilidad}
 \label{reducibilidad}
 
-En esta sección, $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
+En esta sección, $G$ denota un grupo {\setlength{\fboxsep}{0pt}\colorbox{green}{finito???}} y $V$ un $\mathbb{C}$-espacio vectorial.
 
 \begin{definition}
   Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o
@@ -1589,6 +1572,25 @@ En esta sección, $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
   $G$ es en sí mismo un $G$-módulo. Escribiremos $W\leq V$ si $W$ es
   submódulo de~$V$. 
 \end{definition}
+
+\begin{example}
+  \label{sub-estandar}
+  De el ejemplo \ref{CS}, un submódulo importante de dimensión $n-1$ de
+  $F\mathbb{I}_{n}$ es:
+  \begin{equation*}
+    E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in F\mathbb{I}_{n}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
+  \end{equation*}
+  Este submódulo se llama \textbf{módulo estándar}. 
+  
+  Sea $\mathbb{C}\cong
+  \{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
+  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ submódulo de~$F\mathbb{I}_{n}$. Se
+  obtiene que es isomorfo a la representación trivial, y que:
+
+  \begin{equation*}
+    F\mathbb{I}_{n}=E\oplus \mathbb{C}.
+  \end{equation*}  
+\end{example}
 
 \begin{definition}
   Sea $V$ un $G$-módulo no trivial. Decimos que $V$ es \textbf{irreducible} si
