@@ -212,9 +212,9 @@ es decir, es suma directa de submódulos irreducibles.
 
 A cada campo $F$ y cada grupo $G$ se le asocia un anillo denotado por
 $FG$ llamado el anillo de grupo. Estudiar estructuras de módulo sobre el
-anillo de grupo $FG$, es equivalente a estudiar representaciones de el grupo $G$ en
-$V$, donde $V$ es un espacio vectorial sobre
-$F$, que a su vez, es equivalente a estudiar $G$-módulos. Usaremos
+anillo de grupo $FG$, es equivalente a estudiar $G$-módulos, que a su
+vez, es equivalente a estudiar representaciones de $G$ en
+$V$, donde $V$ es un espacio vectorial sobre $F$. Usaremos
 tales conceptos según sea conveniente, por ejemplo, nos referimos a
 una representación de $G$ en $V$ cuando consideramos caracteres y
 $G$-módulo cuando descomponemos tal módulo en submódulos
@@ -438,7 +438,7 @@ En el primer capítulo capítulo...
 % de espacios vectoriales y transformaciones lineales que usaremos en el
 % desarrollo de éste trabajo. Entre las definiciones que utilizamos
 % frecuentemente son la suma directa de espacios vectoriales y
-% espacio cociente. 
+% espacio cociente y se construye el espacio vectorial $FX$.
 
 % En el segundo capítulo, se presenta la teoría de representaciones de
 % grupos. Estudiar representaciones de un grupo $G$ en un espacio
@@ -486,48 +486,58 @@ En el primer capítulo capítulo...
 
 \tableofcontents
 
-
- \newpage \thispagestyle{empty}
+\newpage \thispagestyle{empty}
 
 \chapter{Preliminares}
 \label{preliminares}
 
-En la sección \ref{esp-vec} se revisan algunos resultados de álgebra lineal, las 
-pruebas que se omiten se puede consultar en
-\cite{friedberg1982algebra} y \cite{herstein1990algebra}. 
+El objetivo de este capítulo es estudiar conceptos de álgebra
+lineal, álgebra abstracta (grupos, anillos y módulos), representaciones
+de grupos y gráficas, los cuales usaremos en los próximos capítulos. 
 
-En la seccion \ref{grupos}  grupos...
+En la sección \ref{esp-vec} se revisan algunas definiciones y teoremas
+de espacios vectoriales y transformaciones lineales que usaremos en el
+desarrollo de éste trabajo. Entre las definiciones que utilizamos
+frecuentemente son la suma directa de espacios vectoriales y espacio
+cociente. Se construye el espacio vectorial $FX$. Las pruebas que se
+omiten se puede consultar en \cite{friedberg1982algebra} y
+\cite{herstein1990algebra}. 
 
-En la finalidad de la sección \ref{graficas} es definir gráficas,
-gráfica de emparejamientos, clanes y bipartita clánica para lo cual
-necesitamos algunas definiciones previas. Estas definiciones se pueden
-consultar en \cite{harary} y \cite{LPV08a}.
+De la sección \ref{grupos}, los conceptos importantes son: grupo, homomorfismo e isomorfismo de grupos, grupo
+simétrico, acción de un grupo~$G$ en un conjunto no vacío y acción lineal
+de un grupo $G$ en un espacio vectorial $V$. Las demostraciones de
+grupos que no incluiremos explícitamente se pueden encontrar en
+\cite{fraleigh}. En la sección \ref{anillos} y \ref{modulos} se
+definen anillos y módulos respectivamente.
 
-Las demostraciones de los resultados de grupos y de representaciones
-de grupos que no incluiremos explícitamente se pueden encontrar en
-\cite{fraleigh} y \cite{liebeck} respectivamente.
-
-En la primera sección se desarrollan conceptos básicos de grupos. En
-la sección \ref{acc-grup} y  \ref{rep-grup} observamos que estudiar
-representaciones de un grupo~$G$ en un espacio vectorial $V$ es
-equivalente a estudiar $G$-módulos $V$. Se discute el teorema de
-Maschke que enuncia que cualquier $G$-módulo $V$ se puede descomponer
-como suma directa de $G$-submódulos irreducibles en la sección~\ref{reducibilidad}. 
-
-Consideramos el lema de Schur, pues su demostración es similar a
-cierta proposición posterior que encontramos al final de la sección
-\ref{schur}. Por otra parte, los caracteres de una representación nos
-proporcionan información acerca de ésta, lo cual se describe con detalle en la
-sección \ref{caracteres}. Además, por medio del producto interno de
-caracteres podemos determinar si una
+Se desarrollan conceptos de representaciones de grupos de la sección
+\ref{rep-grup} a la sección \ref{carac-induc}. Más específicamente, en
+la sección \ref{rep-grup} observamos que si $F$ es un campo y $G$ un
+grupo, se define la multiplicación en el espacio vectorial~$FG$
+construido en la sección \ref{esp-vec} y se obtiene un anillo. Estudiar
+$FG$-módulos, es equivalente a estudiar $G$-módulos, que a su vez, es
+equivalente a estudiar representaciones de $G$ en $V$, donde $V$ es un
+espacio vectorial sobre $F$. Se discute en la sección
+\ref{reducibilidad} el teorema de Maschke, el cual
+enuncia que cualquier $G$-módulo $V$ se puede descomponer como suma
+directa de $G$-submódulos irreducibles. Consideramos el lema de Schur, pues su
+demostración es similar a cierta proposición posterior que encontramos
+al final de la sección \ref{schur}. Por otra parte, los caracteres de
+una representación nos proporcionan información acerca de ésta, lo
+cual se describe con detalle en la sección \ref{caracteres}. Además,
+por medio del producto interno de caracteres podemos determinar si una
 representación es irreducible, cuándo dos representaciones son
 equivalentes, la multiplicidad de cierto submódulo irreducible en la
-descomposición de un $G$-módulo, entre otros resultados que vemos en la
-sección~\ref{producto-interno}. 
+descomposición de un $G$-módulo, entre otros teoremas que se muestran en la
+sección~\ref{producto-interno}. En la sección \ref{carac-induc} de
+caracteres y módulos inducidos, se exponen la reciprocidad de
+Frobenius y la fórmula para obtener el carácter de una representación
+inducida.
 
-El capítulo termina con la sección de caracteres y módulos inducidos,
-en donde se exponen la reciprocidad de Frobenius y la fórmula para
-obtener el carácter de una representación inducida.
+El propósito de la sección \ref{graficas} es definir gráficas,
+gráfica de emparejamientos, clanes y bipartita clánica para lo cual
+necesitamos algunas definiciones previas. Estas definiciones se
+encuentran en \cite{harary} y \cite{LPV08a}.
 
 % En éste trabajo todos los espacios vectoriales considerados serán de
 % dimensión finita y sobre el campo de los números complejos.
@@ -988,6 +998,9 @@ que satisface los axiomas:
   $v\in V$ y $g_{1}\in G.$
 \end{enumerate}
 Diremos que $V$ es un \textbf{$G$-módulo.}
+
+{\setlength{\fboxsep}{0pt}\colorbox{green}{esta definición aquí o en
+    sección de módulos???}}
 \end{definition} 
 
 \section{Anillos}
@@ -1042,7 +1055,7 @@ A continuación se muestran ejemplos de anillos.
     \End(A)=\{f:A\rightarrow A\mid f\mbox{ es un homomorfismo de grupos}\}.
     \label{endomorfismos}
   \end{equation*}
-  Sea $f,g\in\End$, definimos el producto $fg$ por $(fg)(x)=f(g(x))$ y
+  Sea $f,g\in\End(A)$, definimos el producto $fg$ por $(fg)(x)=f(g(x))$ y
   la suma~$f+g$ por $(f+g)(x)=f(x)+g(x)$ . Entonces $\End(A)$ es un anillo.
 \end{example}
 
@@ -1588,7 +1601,7 @@ En esta sección, $G$ denota un grupo y $V$ un $\mathbb{C}$-espacio vectorial.
   $W$ que es invariante bajo la acción de $G$, es decir, $ gw\in W$
   para todos $w\in W$, $g\in G$, tal que $W$ junto con la acción de
   $G$ es en sí mismo un $G$-módulo. Escribiremos $W\leq V$ si $W$ es
-  submódulo de $V$. 
+  submódulo de~$V$. 
 \end{definition}
 
 \begin{definition}
@@ -2200,7 +2213,7 @@ para $h\in H$, $v\in V$, donde en el lado derecho de la ecuación hemos
 utilizado la acción ya definida de $G$ en $V$. 
 
 \begin{definition}
-  Sea $H$ un subgrupo de $G$ y $f:H\rightarrow G$ el morfismo
+  Sea $H$ un subgrupo de $G$ y $f:H\rightarrow G$ la función
   inclusión. Sea $V$ un $G$-módulo. El $H$-modulo obtenido por el
   procedimiento anterior se denota con $V\downarrow^{G}_{H}$ y se
   le llama \textbf{restricción} de $V$ de $G$ a $H$.
