@@ -937,6 +937,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \end{example}
 
 \begin{theorem}{\normalfont (\cite{fraleigh}, corolario 9.12, p.90)}.
+  \label{per-prod-trans}
   Toda permutación $\pi\in S_{n}$ es producto de transposiciones.
 \end{theorem}
 
@@ -1277,8 +1278,8 @@ $GL(n,\mathbb{C})$ y $GL(V)$.
 
 \begin{example}[Representación signo]
   Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
-  transposiciones (ver definición \ref{trans}), definimos la función signo
-  $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
+  transposiciones (ver definición \ref{trans} y teorema \ref{per-prod-trans}), definimos la función
+  signo $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
   mediante: $$\sgn(\pi):=(-1)^{k}1_{\mathbb{C}},$$
   debido al teorema \ref{trans-par-impar}, la función signo está bien definida.
   % así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
@@ -5928,18 +5929,18 @@ $$\im\widehat\partial_{2}=\widehat\partial_{2}(S^{(2,1,1,1,1)}\oplus S^{(3,1,1,1
 
 \chapter*{Conclusiones}
  
-En este trabajo, para $n\leq 6$, describimos la descomposición 
+En este trabajo, describimos la descomposición 
 del~$S_{n}$-módulo~$\widetilde H_{k}(M_{n})$ en submódulos irreducibles, donde
-$\widetilde H_{k}(M_{n})$ es la homología reducida de los complejos simpliciales
-de emparejamientos.
+$\widetilde H_{k}(M_{n})$ es el módulo de homología reducida de los
+complejos de emparejamientos, para $n=4,5,6$.
 
 Por otro lado, también calculamos la descomposición en módulos
-irreducibles de $\widetilde H_{k}(K(M_{n}))$, es decir, de las
-homologías reducidas de los complejos simpliciales determinados por
-la gráfica de clanes $K(G_{n})$, con $n\leq 6$.
+irreducibles de $\widetilde H_{k}(K(M_{n}))$, es decir, de los módulos de
+homología reducida de los complejos simpliciales determinados por
+la gráfica de clanes $K(G_{n})$, para $n=5,6$.
 
 Encontramos que $\widetilde H_{k}(M_{n})\cong_{S_n} \widetilde H_{k}(K(M_{n}))$ para
-$n=5,6$ y $k\geq0$. Enseguida se muestran las homologías reducidas que son distintas de cero.
+$n=5,6$ y $k\geq0$. Enseguida se muestran los módulos de homología reducida que son distintos de cero.
 \ytableausetup{boxsize=0.2em}
 \begin{equation*}
   \widetilde H_{1}(M_{5})\cong\widetilde H_{1}(K(M_{5}))\cong_{S_{5}} S^{(3,1,1)}=S^{\,\ydiagram{3,1,1}}.
@@ -5957,18 +5958,24 @@ se tiene el siguiente isomorfismo como espacios vectoriales:
   \widetilde H_{k}(M_{n})\cong \widetilde H_{k}(K(M_{n})).
 \end{equation}
 
-Surge la pregunta interesante si también se da el isomorfismo entre
+Surge la pregunta interesante si también existe el isomorfismo entre
 $\widetilde H_{k}(M_{n})$ y $\widetilde H_{k}(K(M_{n}))$ como
 $S_{n}$-módulos, para $n=7,8$. De los cálculos que se muestran en la
-tesis, se ve que para tales casos las complicaciones aumentarían
+tesis, se observa que para tales casos las complicaciones aumentarían
 significativamente, por lo que no es práctico efectuarlos
 directamente. Un posible camino es utilizar software especializado
 para tales cálculos. 
 
-Se sabe, sin embargo, que la ecuación~\ref{equ:iso} no es válida para
-$n\geq 9$. Por lo que otro problema interesante es encontrar una
-fórmula análoga a la de Bouc que muestre la descomposición de las
-homologías de $K(M_{n})$ en submódulos irreducibles.
+Si los $S_{n}$-módulos $\widetilde H_{k}(M_{n})$ y $\widetilde
+H_{k}(K(M_{n}))$ no son $S_{n}$-isomorfos, para algún $n\geq 7$, otro
+problema interesante es encontrar una fórmula análoga a la de Bouc que
+muestre la descomposición de los módulos de homología de $K(M_{n})$ en
+submódulos irreducibles.
+
+% Se sabe, sin embargo, que la ecuación~\ref{equ:iso} no es válida para
+% $n\geq 9$. Por lo que otro problema interesante es encontrar una
+% fórmula análoga a la de Bouc que muestre la descomposición de las
+% homologías de $K(M_{n})$ en submódulos irreducibles.
 
 
 \bibliographystyle{plain}
