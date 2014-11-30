@@ -1955,8 +1955,12 @@ denotado por $K_{g}$.
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
 \end{definition} 
-Los caracteres son funciones de clase (ver inciso 2 de la proposición
-\ref{carac-const}).
+Un ejemplo de funciones de clase son los caracteres (ver proposición~\ref{carac-const}).
+
+La suma de funciones de clase es una función de clase y el
+producto por escalar de una función de clase es una función de clase,
+se sigue que $R(G)$ es un subespacio vectorial de el
+espacio de todas las funciones  de $G$ en $\mathbb{C}$.
 \begin{theorem}{\normalfont[\cite{sagan2001symmetric}, proposición 1.10.1, p.40], [\cite{sagan2001symmetric}, proposición 1.10.2, p.42]}.
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
@@ -2296,16 +2300,11 @@ en donde se hizo el cambio de variable $u=y^{-1}x$ (esto es $x=yu$), y notamos
 que $yu\in G$ si y solo si $u\in G$.
 \end{proof}
 
-La suma de dos funciones de clase es una función de clase y el
-producto por escalar por una función de clase es una función de clase
-y la función constante cero $0:G\rightarrow \mathbb{C}$ está en el conjunto de todas las funciones de clase en $G$
-que anteriormente denotamos como $R(G)$, se sigue que $R(G)$ es un $\mathbb{C}$-subespacio vectorial
-del espacio de todas las funciones  de $G$ en $\mathbb{C}$ y por lo
-tanto, podemos considerar el producto de funciones de clase, es decir,
-si $\psi$, $\theta$ son funciones de clase, podemos definir
-$\langle\psi,\theta\rangle$ como $\frac{1}{|G|}\sum_{g\in
-  G}\psi(g)\overline{\theta(g)}$, el cual se puede demostrar que es un producto
-interno en el espacio de funciones de clase.
+Recordemos que el conjunto de todas las funciones de clase $R(G)$ es
+un subespacio vectorial de el espacio de todas las funciones  de $G$
+en $\mathbb{C}$. Si~$\psi,\theta\in R(G)$, se puede demostrar que 
+$\langle\psi,\theta\rangle$ es un producto interno en el espacio
+vectorial $R(G)$.
 \begin{theorem}[Reciprocidad de Frobenius]
   \label{frobenius}
   Sea $H\leq G$ y $\theta:H\rightarrow\mathbb{C}$,
