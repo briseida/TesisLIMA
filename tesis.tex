@@ -3891,24 +3891,33 @@ isomorfismo~$f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 \section[Homomorfismos inducidos]{Homomorfismos inducidos por funciones homotópicas}
 \label{hom-ind}
 
-En esta sección sea $I$ el intervalo $[0,1]$. Es posible definir homología de un espacio topológico general por
-medio del concepto de la \emph{homología singular}. Por otro lado, a cada complejo
-simplicial $\Delta$ se le puede asociar un espacio topológico denotado $|\Delta|$
-llamado la \textbf{realización geométrica} de $\Delta$, dado por:
+En esta sección $I$ es el intervalo $[0,1]$ y los vértices son
+$V(\Delta)=\{v_{1},v_{2},\dots,v_{n}\}$. Es posible definir homología
+de un espacio topológico general por medio del concepto de la
+\emph{homología singular} (ver [\cite{munkres1984elements},\S 51,
+p.309]). Por otro lado, a cada complejo simplicial $\Delta$ se le
+puede asociar un espacio topológico denotado~$|\Delta|$ llamado la
+\textbf{realización geométrica} de $\Delta$, dado por:
 
 $$|\Delta|=\{\alpha:V(\Delta)\rightarrow I\mid\alpha^{-1}(0,1]\in
 \Delta, \sum _{v\in V(\Delta)}\alpha(v)=1\}.$$
-Ahora a $|\Delta|$ le vamos a dar la topología generada por la métrica
+
+Podemos identificar a $\alpha\in |\Delta|$ con su $n$-ada de valores
+$(\alpha(v_{1}),\dots,\alpha(v_{n}))$, de tal manera que $|\Delta|$ se
+puede ver como subespacio topológico de $\mathbb{R}^{n}$.
+
+De otro modo, a $|\Delta|$ le podemos dar la topología generada por la
+métrica $d:|\Delta|\times |\Delta|\rightarrow\mathbb{R}$ tal que
 \begin{equation*}
   \label{metrica}
-  d:|\Delta|\times |\Delta|\rightarrow  \mathbb{R} \quad \mbox{tal
-    que}\quad d(\alpha,\beta)=\sqrt{\sum _{v\in V(\Delta)}(\alpha(v)-\beta(v))^{2}}.
+  d(\alpha,\beta)=\parallel
+  (\alpha(v_{1}),\dots,\alpha(v_{n}))-(\beta(v_{1}),\dots,\beta(v_{n}))\parallel=\sqrt{\sum
+    _{v\in V(\Delta)}(\alpha(v)-\beta(v))^{2}}.
 \end{equation*}
 
 A los complejos simpliciales se les asocian conceptos topológicos por
 medio de la realización geométrica. Por ejemplo, dos complejos se
 dicen homeomorfos si las realizaciones geométricas los son.
-
 \begin{definition}
   Sean $X$ y $Y$ espacios topológicos. Dos funciones continuas
   $h,k:X\rightarrow Y$ son \textbf{homotópicas} si existe una función continua
