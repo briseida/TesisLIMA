@@ -3805,41 +3805,38 @@ Determinaremos ahora $Z_{2}(\Delta)$. Si $c\in C_{2}(\Delta)$, es decir
 \begin{definition}
   Un \textbf{complejo de cadenas} $(A,\partial)$ es una sucesión
   $$A=\{\cdots,A_{2},A_{1},A_{0},A_{-1},A_{-2},\cdots\}$$
-  de espacios vectoriales $A_{k}$, junto con una colección
-  $\partial=\{\partial_{k}\mid k \in \mathbb{Z}\}$ de transformaciones
-  lineales tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$ y
-  $\partial_{k-1}\partial_{k}=0.$
-  % Al complejo de cadenas en donde $A_{-1}=\mathbb{C}$ y $\partial_{0}=\varepsilon$,
-  % donde $\varepsilon$ es la función aumento, le llamamos \textbf{complejo de cadenas aumentado}.
+  de espacios vectoriales $A_{k}$, junto con una colección de
+  operadores frontera $\partial=\{\partial_{k}\mid k \in \mathbb{Z}\}$
+  tales que $\partial_{k}:A_{k}\rightarrow A_{k-1}$.
 \end{definition}
 
-\begin{theorem}
-  Si $(A,\partial)$ es un complejo de cadenas, entonces la imagen bajo
-  $\partial_{k}$ es un subespacio de el kernel de $\partial_{k-1}$.
-\end{theorem}
-\begin{proof}[Demostración.]
-  Considere
-  \begin{small}
-    \[
-    \begin{array}{ccccc}
-      A_{k} & \stackrel{\partial_{k}}{\longrightarrow} & A_{k-1} &
-      \stackrel{\partial_{k-1}}{\longrightarrow} & A_{k-2}.
-    \end{array} 
-    \]
-  \end{small}
-  $\partial_{k-1}\partial_{k}=0,$ pues $(A,\partial)$ es un complejo
-  de cadenas. Esto es $\partial_{k-1}[\partial_{k}[A_{k}]]=0.$ Así,
-  $\partial_{k}[A_{k}]$ está contenido en el kernel de
-  $\partial_{k-1}$, como se quería demostrar.
-\end{proof}
+% \begin{theorem}
+%   Si $(A,\partial)$ es un complejo de cadenas, entonces la imagen bajo
+%   $\partial_{k}$ es un subespacio de el kernel de $\partial_{k-1}$.
+% \end{theorem}
+% \begin{proof}[Demostración.]
+%   Considere
+%   \begin{small}
+%     \[
+%     \begin{array}{ccccc}
+%       A_{k} & \stackrel{\partial_{k}}{\longrightarrow} & A_{k-1} &
+%       \stackrel{\partial_{k-1}}{\longrightarrow} & A_{k-2}.
+%     \end{array} 
+%     \]
+%   \end{small}
+%   $\partial_{k-1}\partial_{k}=0,$ pues $(A,\partial)$ es un complejo
+%   de cadenas. Esto es $\partial_{k-1}[\partial_{k}[A_{k}]]=0.$ Así,
+%   $\partial_{k}[A_{k}]$ está contenido en el kernel de
+%   $\partial_{k-1}$, como se quería demostrar.
+% \end{proof}
 
-\begin{definition}
-  Si $(A,\partial)$ es un complejo de cadenas, entonces el
-  kernel~$Z_{k}(A)$ de $\partial_{k}$ es el\textbf{ espacio de}
-  $\boldsymbol{k}$\textbf{-ciclos,} y la imagen $B_{k}(A)=\partial_{k+1}[A_{k+1}]$ es el \textbf{espacio
-    de} $\boldsymbol{k}$\textbf{-fronteras.} El espacio cociente $H_{k}(A)=Z_{k}(A)/B_{k}(A)$
-  es la $\boldsymbol{k}$\textbf{-ésima homología de $A$.}
-\end{definition}
+% \begin{definition}
+%   Si $(A,\partial)$ es un complejo de cadenas, entonces el
+%   kernel~$Z_{k}(A)$ de $\partial_{k}$ es el\textbf{ espacio de}
+%   $\boldsymbol{k}$\textbf{-ciclos,} y la imagen $B_{k}(A)=\partial_{k+1}[A_{k+1}]$ es el \textbf{espacio
+%     de} $\boldsymbol{k}$\textbf{-fronteras.} El espacio cociente $H_{k}(A)=Z_{k}(A)/B_{k}(A)$
+%   es la $\boldsymbol{k}$\textbf{-ésima homología de $A$.}
+% \end{definition}
 
 \begin{theorem}
   Sean $(A,\partial)$ y $(A^{'},\partial^{'})$ complejos de cadenas, y
