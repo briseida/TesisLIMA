@@ -498,9 +498,9 @@ equivalente a estudiar representaciones de $G$ en $V$, donde $V$ es un
 espacio vectorial sobre $F$. Se discute en la sección
 \ref{reducibilidad} el teorema de Maschke, el cual
 enuncia que cualquier $G$-módulo $V$ se puede descomponer como suma
-directa de $G$-submódulos irreducibles. Consideramos el lema de Schur, pues su
-demostración es similar a cierta proposición posterior que encontramos
-al final de la sección \ref{schur}. Por otra parte, los caracteres de
+directa de $G$-submódulos irreducibles. En la sección \ref{schur}
+consideramos el lema de Schur, pues la idea de su prueba es similar a
+las demostraciones de ciertas proposiciones posteriores de esta sección. Por otra parte, los caracteres de
 una representación nos proporcionan información acerca de esta, lo
 cual se describe con detalle en la sección \ref{caracteres}. Además,
 por medio del producto interno de caracteres podemos determinar si una
@@ -560,6 +560,17 @@ entonces $W_{1}+W_{2}$ es subespacio de $V$.
   son subespacios de $V$ tales que $W_{1}\cap W_{2}=\{0\}$ y
   $W_{1}+W_{2}=V.$ 
 \end{definition}
+
+% \begin{definition}
+%   \label{suma-externa}
+%   Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma
+%     directa externa} de
+%   $U$ y $V$ al conjunto $U\times V=\{(u,v):u\in U,v\in V\}$ con las operaciones
+%   $$(u,v)+(u_{1},v_{1})=(u+u_{1},v+v_{1}),$$
+%   $$k(u,v)=(ku,kv),$$
+%   donde $u,u_{1}\in U$, $v,v_{1}\in V$ y $k\in F$, donde $F$ es un campo. Con estas
+%   operaciones $U\times V$ es un espacio vectorial.
+% \end{definition}
 
 \begin{theorem}{\normalfont[\cite{friedberg1982algebra}, corolario 1.13, p.53]}. 
   Sean $W_{1}$ y $W_{2}$ subespacios de $V$ tales que
@@ -851,8 +862,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 
 \begin{example}
   \label{grupo-ciclico}
-  Sea $n\in \mathbb{Z}$, {\setlength{\fboxsep}{0pt}\colorbox{green}{Naturales?}}
-  construimos un grupo denotado por $C_{n}$ como sigue: consistirá
+  Sea $n\in \mathbb{Z}$, construimos un grupo denotado por $C_{n}$ como sigue: consistirá
   en todos los símbolos $a^{i}$, con $i=0,1,2,\dots,n-1$ en donde $a^{0}=a^{n}$, $a^{i}a^{j}=a^{i+j}$ si $i+j\leq n$ y
   $a^{i}a^{j}=a^{i+j-n}$ si $i+j>n$. A $C_{n}$ se le conoce como \textbf{grupo
     cíclico}.
@@ -1560,10 +1570,11 @@ Con esta acción, $FG$ es un $G$-módulo, al cual llamamos \textbf{módulo regul
 \section{Reducibilidad}
 \label{reducibilidad}
 
-En esta sección, $G$ denota un grupo {\setlength{\fboxsep}{0pt}\colorbox{green}{finito???}} y $V$ un $\mathbb{C}$-espacio vectorial.
+En esta sección, $G$ denota un grupo finito y $V$ un $G$-módulo.
 
 \begin{definition}
-  Sea $V$ un $G$-módulo. Un $\boldsymbol{G}$\textbf{-submódulo} o
+  %Sea $V$ un $G$-módulo. 
+  Un $\boldsymbol{G}$\textbf{-submódulo} o
   \textbf{submódulo} de $V$ es un subespacio vectorial
   $W$ que es invariante bajo la acción de $G$, es decir, $ gw\in W$
   para todos $w\in W$, $g\in G$, tal que $W$ junto con la acción de
@@ -1573,8 +1584,8 @@ En esta sección, $G$ denota un grupo {\setlength{\fboxsep}{0pt}\colorbox{green}
 
 \begin{example}
   \label{sub-estandar}
-  De el ejemplo \ref{CS}, un submódulo importante de dimensión $n-1$ de
-  $F\mathbb{I}_{n}$ es:
+  De el ejemplo \ref{CS}, un submódulo importante de
+  $F\mathbb{I}_{n}$ de dimensión $n-1$ es:
   \begin{equation*}
     E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in F\mathbb{I}_{n}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
   \end{equation*}
@@ -1595,6 +1606,7 @@ En esta sección, $G$ denota un grupo {\setlength{\fboxsep}{0pt}\colorbox{green}
   los únicos submódulos de $V$ son $0$ y $V$.
 \end{definition}
 
+Ejemplos submódulos de dimension 1. ..................... FALTA
 % De la definición \ref{suma-directa} (suma directa) si $V$ es un
 % $G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
 % que $W_{1}$ es \textbf{complemento directo} de $W_{2}$. 
@@ -1602,9 +1614,9 @@ En esta sección, $G$ denota un grupo {\setlength{\fboxsep}{0pt}\colorbox{green}
 \begin{theorem}[Teorema de Maschke]{\normalfont[\cite{sagan2001symmetric}, teorema
   1.5.3, p.16], [\cite{fulton1991representation}, proposición 1.8, p.7].
   \label{maschke}}
-  Sea $G$ un grupo finito, $F$ un campo tal que su característica no
-  divide al orden de $G$ y $V$ un $G$-módulo. Entonces $V$ es
-  \textbf{completamente reducible}, es decir
+  Sea $F$ un campo tal que su característica no
+  divide al orden de $G$. % y $V$ un $FG$-módulo. 
+  Entonces $V$ es \textbf{completamente reducible}, es decir,
   \begin{equation*}
     V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
   \end{equation*}
@@ -1724,94 +1736,12 @@ submódulo $W$ debería tener dimensión 1, y el único submódulo con
 dimensión 1 es $\langle v_{2}\rangle$.
 \end{example}
 
-\begin{theorem}
-  \label{interseccion-submodulos}
-  Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
-  colección de submódulos de $V$ es un submódulo de $V$.
-\end{theorem}
-
-\begin{definition}
-  Sea $V$ un $G$-módulo. Al submódulo de $V$ generado por las combinaciones lineales de los
-  elementos de un subespacio $W$ de $V$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
-\end{definition}
-
-Sean $U$ y $V$ dos espacios vectoriales. Llamaremos \textbf{suma
-  directa externa} de
-$U$ y $V$ al conjunto $U\times V=\{(u,v):u\in U,v\in V\}$ con las operaciones
-$$(u,v)+(u_{1},v_{1})=(u+u_{1},v+v_{1}),$$
-$$k(u,v)=(ku,kv),$$
-donde $u,u_{1}\in U$, $v,v_{1}\in V$ y $k\in \mathbb{C}$. Con estas
-operaciones $U\times V$ es un espacio vectorial, que designaremos por
-$$U\oplus V.$$
-
-Así, dados $V$ y $W$ $G$-módulos, podemos formar un tercer $G$-módulo a partir
-de la suma directa externa $V\oplus W$, definiendo la acción como
-$a(v,w)=~(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
-cantidad finita de $G$-módulos.
-
-Por otro lado, si $V$ es un $G$-módulo, se llama la \textbf{suma} de $W_{1}$ y $W_{2}$ y se denota con
-$W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$, es
-decir, $W_{1}+W_{2}=\langle W_{1}\cup W_{2}\rangle$. Esta definición se puede extender a una
-colección arbitraria $\{W_{i}\}_{i\in I}$, es
-decir,~$\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
-
-\textbf{\emph{Observación:}} Si $W_{1}$ y $W_{2}$ son
-submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
-$W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por tanto, si $V=W_{1}+W_{2}$,
-es decir, si $V=\langle W_{1}\cup W_{2}\rangle$ y $W_{1}\cap W_{2}=0$, escribiremos $V=W_{1}\oplus W_{2}$
-aunque estrictamente hablando es $V\cong W_{1}\oplus W_{2}$. En adelante no distinguiremos
-entre suma directa y suma directa externa.
-
-% dado por el siguiente isomorfismo:
-% \begin{align*}
-%   \phi:W_{1}+W_{2}&\rightarrow W_{1}\oplus W_{2}\\
-%   w & \mapsto  (w_{1},w_{2})
-% \end{align*}
-% sean
-% $w^{1}_{1},w^{2}_{1},\ldots,w^{n}_{1},w^{1}_{2},w^{2}_{2},\ldots,w^{m}_{2}$
-% los elementos de $W_{1}\cup W_{2}$ donde $w^{i}_{1}\in W_{1}$ y
-% $w^{i}_{2}\in W_{2}$, tomemos $w\in W_{1}+W_{2}$, es decir,
-% \begin{align*}
-%   w&=a_{1}w^{1}_{1}+a_{2}w^{2}_{1}+\ldots+a_{n}w^{n}_{1}+a_{n+1}w^{1}_{2}+a_{n+2}w^{2}_{2}+\ldots+a_{m}w^{m}_{2}\\
-%   &=w_{1}+w_{2}
-% \end{align*}
-% donde $w_{1}=a_{1}w^{1}_{1}+a_{2}w^{2}_{1}+\ldots+a_{n}w^{n}_{1}$ y
-% $w_{2}=a_{n+1}w^{1}_{2}+a_{n+2}w^{2}_{2}+\ldots+a_{m}w^{m}_{2}$,
-% $w_{1}\in W_{1}$ puesto que $w_{1}$ es combinación lineal de los
-% elementos de $W_{1}$, de forma análoga concluimos que $w_{2}\in
-% W_{2}$. Ahora veamos que $\phi$ está bien definida, supongamos que
-% $w=w_{1}+w_{2}=w^{'}_{1}+w^{'}_{2}$, así que
-% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}$ y notamos que $w_{1}-w^{'}_{1}\in W_{1}$ y
-% $w^{'}_{2}-w_{2}\in W_{2}$, así que
-% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}\in W_{1}\cap W_{2}$, entonces
-% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}=0$ por hipótesis, por lo tanto
-% $w_{1}=w^{'}_{1}$ y $w^{'}_{2}=w_{2}$.
-\begin{proposition}
-  \label{modulos-iguales}
-  Sea $M$ un $G$-módulo. Supongamos que $S\leq M$, donde $S$ es irreducible. Supongamos
-  además que $S$ aparece con multiplicidad 1 en la descomposición en
-  irreducibles de $M$, y sea $S^{'}\leq M$, tal que $S^{'}\cong S$. Entonces~$S=S^{'}$.
-\end{proposition}
-
-\begin{proof}[Demostración.]
-  Consideremos $S\cap S^{'}\leq S$, así que $S\cap S^{'}=0$ o $S\cap
-  S^{'}=S$, pues $S$ es irreducible.
-
-  Si $S\cap S^{'}=0$, consideremos $U$ el submódulo generado por $S\cup S'$ al cual
-  denotamos como $S+S^{'}$. Puesto que $S\cap S^{'}=0$, entonces
-  $S+S^{'}\cong S\oplus S^{'}$ como notamos en la observación anterior,
-  así que $M$ tendría un submódulo isomorfo a dos copias de $S$, lo cual
-  no es posible por hipótesis. 
-
-  Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$, así
-  $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
-  dado que $S\cap S^{'}\leq S^{'}$, %por el teorema \ref{esp-iguales}, 
-  tenemos que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería
-  demostrar.
-\end{proof}
-
 \section{$G$-homomorfismo y lema de Schur} 
 \label{schur}
+
+De aquí en adelante, ya que queremos usar el teorema de Maschke,
+$F$ será el campo de los números complejos. Así, todo $G$-modulo será
+completamente reducible.
 
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-homomorfismo} (o simplemente
@@ -1827,8 +1757,8 @@ de $G$.
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-isomorfismo} es un
   $G$-homomorfismo $\phi:V\rightarrow W$ el cual es biyectivo. En
-  este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} o
-  $G$\textbf{-equivalentes}, y lo denotaremos como~$V\cong W$.
+  este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} y lo
+  denotaremos como $V\cong W$.
 \end{definition}
 
 \begin{proposition}{\normalfont[\cite{sagan2001symmetric}, proposición 1.7.9, p.21]}.
@@ -1897,6 +1827,98 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 %   donde para cada $V^{(i)}$ y $V^{(j)}$ con $i\neq j$ son submódulos irreducibles no isomorfos y $\dim
 %   V^{(i)}=d_{i}$. Entonces $\dim V=m_{1}d_{1}+m_{2}d_{2}+\cdots+m_{k}d_{k}.$
 % \end{theorem}
+\begin{theorem}{\normalfont[\cite{herstein1990algebra}, cap. 4, \S 5, p.194].}
+  \label{interseccion-submodulos}
+  Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
+  colección de submódulos de $V$ es un submódulo de~$V$.
+\end{theorem}
+
+\begin{theorem}{\normalfont[\cite{herstein1990algebra}, cap. 4, \S 5, p.194].}
+  \label{suma-submodulo}
+  Sea $V$ un $G$-módulo y $W_{1}$, $W_{2}$ son submódulos de
+  $V$. Entonces $W_{1}+W_{2}=\{w_{1}+w_{2}\mid w_{1}\in W_{1},
+  w_{2}\in W_{2}\}$ es un $G$-submódulo de $V$.
+\end{theorem}
+% \begin{definition}
+%   Sea $V$ un $G$-módulo. Al submódulo de $V$ generado por las combinaciones lineales de los
+%   elementos de un subespacio $W$ de $V$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
+% \end{definition}
+
+% Dados $V$ y $W$ $G$-módulos, podemos formar un tercer $G$-módulo a partir
+% de la suma directa externa (ver definición \ref{suma-externa}), definiendo la acción como
+% $a(v,w)=~(av,aw)$, con $a\in G$. Podemos extender esta definición a cualquier
+% cantidad finita de $G$-módulos.
+
+% Por otro lado, si $V$ es un $G$-módulo, se llama la \textbf{suma} de $W_{1}$ y $W_{2}$ y se denota con
+% $W_{1}+W_{2}$ al submódulo de $V$ generado por $W_{1}\cup W_{2}$, es
+% decir, $W_{1}+W_{2}=\langle W_{1}\cup W_{2}\rangle$. Esta definición se puede extender a una
+% colección arbitraria $\{W_{i}\}_{i\in I}$, es
+% decir,~$\sum_{i\in I}W_{i}$ es el submódulo generado por $\bigcup_{i\in I}W_{i}$.
+
+% \begin{theorem}{\normalfont[\cite{herstein1990algebra}, cap. 4, \S 5,
+%     p.190a]}. 
+%   \label{sumas-isomorfas}
+%   Sea $V$ un $G$-módulo y sean $W_{1},\dots,W_{n},$
+%   submódulos de $V$. Si $V$ es la suma directa de $W_{1},\dots,W_{n},$
+%   entonces $V$ es $G$-isomorfo a la suma directa externa de
+%   $W_{1},\dots,W_{n}$.
+% \end{theorem}
+
+% \textbf{\emph{Observación:}} Si $W_{1}$ y $W_{2}$ son
+% submódulos de $V$ con $W_{1}\cap W_{2}=0$ tenemos que
+% $W_{1}+W_{2}\cong W_{1}\oplus W_{2}$.  Por tanto, si $V=W_{1}+W_{2}$,
+% es decir, si $V=\langle W_{1}\cup W_{2}\rangle$ y $W_{1}\cap W_{2}=0$, escribiremos $V=W_{1}\oplus W_{2}$
+% aunque estrictamente hablando es $V\cong W_{1}\oplus W_{2}$. En adelante no distinguiremos
+% entre suma directa y suma directa externa.
+
+% dado por el siguiente isomorfismo:
+% \begin{align*}
+%   \phi:W_{1}+W_{2}&\rightarrow W_{1}\oplus W_{2}\\
+%   w & \mapsto  (w_{1},w_{2})
+% \end{align*}
+% sean
+% $w^{1}_{1},w^{2}_{1},\ldots,w^{n}_{1},w^{1}_{2},w^{2}_{2},\ldots,w^{m}_{2}$
+% los elementos de $W_{1}\cup W_{2}$ donde $w^{i}_{1}\in W_{1}$ y
+% $w^{i}_{2}\in W_{2}$, tomemos $w\in W_{1}+W_{2}$, es decir,
+% \begin{align*}
+%   w&=a_{1}w^{1}_{1}+a_{2}w^{2}_{1}+\ldots+a_{n}w^{n}_{1}+a_{n+1}w^{1}_{2}+a_{n+2}w^{2}_{2}+\ldots+a_{m}w^{m}_{2}\\
+%   &=w_{1}+w_{2}
+% \end{align*}
+% donde $w_{1}=a_{1}w^{1}_{1}+a_{2}w^{2}_{1}+\ldots+a_{n}w^{n}_{1}$ y
+% $w_{2}=a_{n+1}w^{1}_{2}+a_{n+2}w^{2}_{2}+\ldots+a_{m}w^{m}_{2}$,
+% $w_{1}\in W_{1}$ puesto que $w_{1}$ es combinación lineal de los
+% elementos de $W_{1}$, de forma análoga concluimos que $w_{2}\in
+% W_{2}$. Ahora veamos que $\phi$ está bien definida, supongamos que
+% $w=w_{1}+w_{2}=w^{'}_{1}+w^{'}_{2}$, así que
+% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}$ y notamos que $w_{1}-w^{'}_{1}\in W_{1}$ y
+% $w^{'}_{2}-w_{2}\in W_{2}$, así que
+% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}\in W_{1}\cap W_{2}$, entonces
+% $w_{1}-w^{'}_{1}=w^{'}_{2}-w_{2}=0$ por hipótesis, por lo tanto
+% $w_{1}=w^{'}_{1}$ y $w^{'}_{2}=w_{2}$.
+\begin{proposition}
+  \label{modulos-iguales}
+  Sea $V$ un $G$-módulo. Supongamos que $S\leq V$, donde $S$ es irreducible. Supongamos
+  además que $S$ tiene multiplicidad 1 en la descomposición en
+  irreducibles de $V$, y sea $S^{'}\leq V$, tal que $S^{'}\cong S$. Entonces~$S=S^{'}$.
+\end{proposition}
+
+\begin{proof}[Demostración.]
+  Consideremos $S\cap S^{'}\leq S$, así que $S\cap S^{'}=0$ o $S\cap
+  S^{'}=S$, pues $S$ es irreducible.
+
+  Como $S$ y $S^{'}$ son submódulos de $V$, por el teorema
+  \ref{suma-submodulo}, $S+S^{'}$ es submódulo de $V$. Ahora, si
+  $S\cap S^{'}=0$, la suma directa $S\oplus S^{'}$ es submódulo de $V$, 
+  así que $V$ tendría un submódulo isomorfo a dos copias de $S$, lo cual
+  no es posible por hipótesis. 
+
+  Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$, así
+  $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
+  dado que $S\cap S^{'}\leq S^{'}$, %por el teorema \ref{esp-iguales}, 
+  tenemos que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería
+  demostrar.
+\end{proof}
+
 \section{Caracteres de representaciones}
 \label{caracteres}
 
