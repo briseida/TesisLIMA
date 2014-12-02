@@ -1242,19 +1242,22 @@ $FG$ en un anillo con elemento unitario, al cual llamamos
 
 Sea $V$ un $G$-módulo, es decir, se tiene la acción lineal de $G$ en $V$ 
 $$*:G\times V\rightarrow V,$$ 
-se define la función $*:FG\times V\rightarrow V$ como: 
+se define la acción lineal de el anillo de grupo $FG$ en $V$ justo
+como lo hace~$G$, es decir, se define la función $\cdot:FG\times
+V\rightarrow V$ como: 
 \begin{equation*}
   (\sum_{g\in G}\lambda_{g}g)v=\sum_{g\in G}\lambda_{g}(gv),
 \end{equation*}
 para cada $\sum_{g\in G}\lambda_{g}g\in FG$ y $v\in V$. Así, $V$ es un
 $FG$-módulo.
 
-Ahora supongamos que se tiene un $FG$-módulo, definimos la función
+Ahora supongamos que se tiene un módulo sobre $FG$, bajo la
+restricción de $G$, se define un $G$-módulo, como la función
 $*:G\times V\rightarrow V$ dada por:
 \begin{equation*}
   gv=(\sum_{g\in G}\lambda_{g}g)v
 \end{equation*}
-para cada $g\in G$ y $v\in V$. Por tanto, $V$ es un $G$-módulo.
+para cada $g\in G$ y $v\in V$. %Por tanto, $V$ es un $G$-módulo.
 
 Es equivalente estudiar $FG$-módulos y $G$-módulos, ya que tenemos una
 correspondencia biyectiva entre estas estructuras.
@@ -1268,7 +1271,7 @@ $GL(n,\mathbb{C})$ y $GL(V)$.
   Una \textbf{representación matricial de un grupo} $G$ es el
   homomorfismo de grupos 
   $$X:G\rightarrow GL(n,F),$$
-  notemos que esta es la definición de represetación de $G$ en $V$, simplemente resaltamos que para cada $g\in G$, $X(g)$  es la
+  notemos que esta es la definición de representación de $G$ en $V$, simplemente resaltamos que para cada $g\in G$, $X(g)$  es la
   matriz invertible $n \times n$ con entradas en $F$.
 \end{definition}
 
