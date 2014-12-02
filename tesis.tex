@@ -512,13 +512,14 @@ $n=5,6$.
 
 El objetivo de este capítulo es estudiar conceptos de álgebra
 lineal, álgebra abstracta (grupos, anillos y módulos), representaciones
-de grupos y gráficas, los cuales usaremos en los próximos capítulos. 
+de grupos y teoría de gráficas, los cuales usaremos en los próximos capítulos. 
 
 En la sección \ref{esp-vec} se revisan algunas definiciones y teoremas
 de espacios vectoriales y transformaciones lineales que usaremos en el
 desarrollo de este trabajo. Entre las definiciones que utilizamos
 frecuentemente son la suma directa de espacios vectoriales y espacio
-cociente. Se construye el espacio vectorial $FX$. Las pruebas que se
+cociente. Se construye el espacio vectorial $FX$ con base $X$ sobre el
+campo $F$. Las pruebas que se
 omiten se puede consultar en \cite{friedberg1982algebra} y
 \cite{herstein1990algebra}. 
 
@@ -533,12 +534,13 @@ Se desarrollan conceptos de representaciones de grupos de la sección
 \ref{rep-grup} a la sección \ref{carac-induc}. Más específicamente, en
 la sección \ref{rep-grup} observamos que si $F$ es un campo y $G$ un
 grupo, se define la multiplicación en el espacio vectorial~$FG$
-construido en la sección \ref{esp-vec} y se obtiene un anillo. Estudiar
-$FG$-módulos, es equivalente a estudiar $G$-módulos, que a su vez, es
+construido en la sección \ref{esp-vec} y se obtiene un anillo. Se
+muestra que estudiar
+$FG$-módulos es equivalente a estudiar $G$-módulos, que a su vez, es
 equivalente a estudiar representaciones de $G$ en $V$, donde $V$ es un
 espacio vectorial sobre $F$. Se discute en la sección
 \ref{reducibilidad} el teorema de Maschke, el cual
-enuncia que cualquier $G$-módulo $V$ se puede descomponer como suma
+enuncia que, bajo ciertas hipótesis, cualquier $G$-módulo $V$ se puede descomponer como suma
 directa de $G$-submódulos irreducibles. En la sección \ref{schur}
 consideramos el lema de Schur, pues la idea de su prueba es similar a
 las demostraciones de ciertas proposiciones posteriores de esta sección. Por otra parte, los caracteres de
@@ -546,7 +548,7 @@ una representación nos proporcionan información acerca de esta, lo
 cual se describe con detalle en la sección \ref{caracteres}. Además,
 por medio del producto interno de caracteres podemos determinar si una
 representación es irreducible, cuándo dos representaciones son
-equivalentes, la multiplicidad de cierto submódulo irreducible en la
+equivalentes, y la multiplicidad de cierto submódulo irreducible en la
 descomposición de un $G$-módulo, entre otros teoremas que se muestran en la
 sección~\ref{producto-interno}. En la sección \ref{carac-induc} de
 caracteres y módulos inducidos, se exponen la reciprocidad de
@@ -554,15 +556,20 @@ Frobenius y la fórmula para obtener el carácter de una representación
 inducida.
 
 El propósito de la sección \ref{graficas} es definir gráficas,
-gráfica de emparejamientos, clanes y bipartita clánica para lo cual
-necesitamos algunas definiciones previas. Estas definiciones se
-encuentran en \cite{harary} y \cite{LPV08a}.
+gráfica de emparejamientos, gráfica de clanes y gráfica bipartita
+clánica.
+% para lo cual
+% necesitamos algunas definiciones previas. Estas definiciones se
+% encuentran en \cite{harary} y \cite{LPV08a}.
 
 % En éste trabajo todos los espacios vectoriales considerados serán de
 % dimensión finita y sobre el campo de los números complejos.
 
 \section{Álgebra lineal}
 \label{esp-vec}
+
+En esta sección $F$ denota un campo, y todos los espacios vectoriales
+se suponen sobre $F$.
 
 % \begin{theorem}{[\cite{friedberg1982algebra}, teorema 1.9, p.42]}.
 %   \label{clunica}
@@ -613,7 +620,7 @@ entonces $W_{1}+W_{2}$ es subespacio de $V$.
 %   operaciones $U\times V$ es un espacio vectorial.
 % \end{definition}
 
-\begin{theorem}{\normalfont[\cite{friedberg1982algebra}, corolario 1.13, p.53]}. 
+\begin{theorem}{\normalfont (\cite{friedberg1982algebra}, corolario 1.13, p.53)}. 
   Sean $W_{1}$ y $W_{2}$ subespacios de $V$ tales que
   $V=W_{1}+W_{2}$. Luego, $V=W_{1}\oplus W_{2}$ si y solo si 
   $$\dim(V)=\dim(W_{1})+\dim(W_{2}).$$
@@ -633,7 +640,7 @@ La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
 V\}$ de todas las clases laterales de $W$ como: 
 \begin{itemize}
 \item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
-\item $a(v+W)=av+W$ para todo $v\in V$ y $a\in \mathbb{C}$.
+\item $a(v+W)=av+W$ para todo $v\in V$ y $a\in F$.
 \end{itemize}
 Se puede demostrar que las operaciones anteriores están bien definidas.
 
@@ -642,7 +649,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
   definidas anteriormente y se llama \textbf{espacio cociente de $V$ módulo $W$} y se denota mediante $V/W$. 
 \end{definition}
 
-\begin{theorem}{\normalfont[\cite{herstein1990algebra}, lema 4.8, p.168]}.
+\begin{theorem}{\normalfont (\cite{herstein1990algebra}, lema 4.8, p.168)}.
   \label{dim-esp-coc}
   Sea $(V/W)$ el espacio cociente de $V$ módulo $W$, se tiene:
   $$\dim(V/W)=\dim(V)-\dim(W)$$
@@ -659,7 +666,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 % \label{trasn-lin}
 \begin{definition}
   \label{t-l}
-  Sean $V$ y $W$ espacios vectoriales sobre el campo $F$. Una función
+  Sean $V$ y $W$ espacios vectoriales. Una función
   $T:V\rightarrow W$ se llama \textbf{transformación lineal} de $V$ en
   $W$ si para todo $x,y\in V$ y $c\in F$ tenemos que
   \begin{enumerate}
@@ -683,14 +690,14 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
   \end{equation*}
 \end{definition}
 
-\begin{theorem}{\normalfont[\cite{friedberg1982algebra}, corolario 2.3, p.69]}.
+\begin{theorem}{\normalfont (\cite{friedberg1982algebra}, corolario 2.3, p.69)}.
   \label{imT}
   Sean $V$ y $W$ espacios vectoriales y $T:V \rightarrow W$
   una transformación lineal. Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base de $V$,
   entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
 \end{theorem}
 
-\begin{theorem}{\normalfont[\cite{friedberg1982algebra}, teorema 2.22, p.98]}.
+\begin{theorem}{\normalfont (\cite{friedberg1982algebra}, teorema 2.22, p.98)}.
   \label{esp-isomorfos}
   Sean $V$ y $W$ espacios vectoriales de dimensión finita sobre el
   mismo campo $F$. Entonces $V$ es isomorfo a $W$
@@ -713,7 +720,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
   $v_1+\ker(f)=v_2+\ker(f)$ si y solo si
   $v_{1}-v_{2}\in \ker(f)$, es decir,~$f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
   como se quería. Queda por demostrar de forma directa que $\phi$ es
-  una transformación lineal; y para demostrar que es isomorfismo falta
+  una transformación lineal, y para demostrar que es isomorfismo falta
   demostrar que es inyectiva y sobreyectiva, lo cual también se hace
   de forma directa.
 \end{proof}
@@ -767,7 +774,7 @@ donde
 % \end{definition}
 \begin{definition}
   \label{matr-rep-T}
-  Denote $F$ un campo. Sean $V$ y $W$ espacios vectoriales de dimensión finita con bases $\beta=\{v_{1},\ldots,v_{n}\}$ y
+  Sean $V$ y $W$ espacios vectoriales de dimensión finita con bases $\beta=\{v_{1},\ldots,v_{n}\}$ y
   $\gamma=\{w_{1},\ldots,w_{m}\}$, respectivamente. Sea $T:V\rightarrow~W$ una
   transformación lineal. Entonces existen escalares únicos $a_{ij}\in F$
   con $i=1,\ldots,m$ y $j=1,\ldots,n$, tales que
@@ -786,7 +793,7 @@ A continuación, construiremos un espacio vectorial muy importante, ya
 que lo usaremos más adelante en la sección \ref{rep-grup}
 de representaciones de grupos.
 
-Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
+Sea $X$ un conjunto no vacío. Se define $FX$ como:
 \begin{equation*}
   FX=\{f:X\rightarrow F\mid \{x\in X\mid f(x)\neq 0\} \mbox{ es finito}\}.
 \end{equation*}
@@ -810,7 +817,7 @@ Sea $F$ un campo y $X$ un conjunto no vacío. Se define $FX$ como:
   producto por escalar está bien definido. Si $r\in F$, $f\in FX$ y
   $C$ es un subconjunto finito de $X$, tal que $f(x)=0$ para $x\not\in
   C$, entonces $(rf)(x)=0$ para $x\not\in C$, por tanto~$(rf)\in
-  FX$. Queda por demostrar que se cumplan las otras condiciones de
+  FX$. Es inmediato demostrar que se cumplan las otras condiciones de
   espacio vectorial.
 \end{proof}
 
@@ -836,19 +843,17 @@ está en biyección con $X$.
   $\varphi(X)$ es base de el espacio vectorial $FX$.
 \end{theorem}
 \begin{proof}[Demostración]
-  Sea $D=\{x_{1},x_{2},\dots,x_{n}\}$ un subconjunto finito de $X$. Si
+  Sea $D=\{x_{1},x_{2},\dots,x_{n}\}$ un subconjunto finito de $X$. Consideremos
   $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})=0$, con
   $\lambda_{x_{i}}\in F$. Sea $y\in D$, entonces
-  $\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})(y)=~\lambda_{x_{i}}$,
-  si $y=x_{i}$, entonces $\lambda_{x_{i}}=0$. De igual manera, para todo $y\in D$, se
-  tiene $\lambda_{x_{i}}=0$. Por tanto, $\{\varphi(x_{i})\mid x_{i}\in D\}$ es linealmente independiente.
+  $$\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})(y)=\lambda_{x_{j}},$$
+  si $y=x_{j}$, entonces $\lambda_{x_{j}}=0$. Por tanto, $\{\varphi(x_{i})\mid x_{i}\in D\}$ es linealmente independiente.
 
   Por otra parte, sea $E$ un subconjunto finito de $X$. Sea $f\in FX$, tal que~$f(x)\neq 0$ para $x\in E$, tenemos:
   $$\sum_{x\in X}f(x)\varphi(x)=\sum_{x\in
     E}f(x)\varphi(x)+\sum_{x\not\in E}f(x)\varphi(x)=\sum_{x\in E}f(x)\varphi(x)$$
   Ahora, tomemos $y\in E$, entonces $\sum_{x\in
-    E}f(x)\varphi(x)(y)=f(x)$ si $y=x$. Así, para todo $y\in E$,
-  tenemos $\sum_{x\in E}f(x)\varphi(x)(y)=f(x)$ cuando $y=x$. Por tanto, se puede escribir a $f$ como $f=\sum_{x\in X}f(x)\varphi(x)$. 
+    E}f(x)\varphi(x)(y)=f(y)$. Por tanto, se puede escribir a $f$ como $f=\sum_{x\in X}f(x)\varphi(x)$. 
 \end{proof}
 
 Por abuso de notación y ya que $\varphi$ es inyectiva se
