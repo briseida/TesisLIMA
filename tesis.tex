@@ -189,75 +189,81 @@ En matemáticas como en otras ciencias es importante descomponer cierto
 objeto en piezas y mejor aún si tales piezas son las más pequeñas. Por
 ejemplo, del teorema fundamental de la aritmética sabemos que todo número
 entero positivo puede ser expresado como producto de potencias de
-primos. Enseguida se muestran dos ejemplos más de álgebra lineal. 
-
-Una transformación lineal $T$ en un espacio vectorial $V$ de dimensión
-finita es diagonalizable si y solo si $V$ es suma directa de los
-espacios propios de $T$, es decir,
-$$V=E_{\lambda_{1}}\oplus E_{\lambda_{2}}\oplus \cdots \oplus E_{\lambda_{k}},$$
-donde $\lambda_{1},\lambda_{2},\dots,\lambda_{k}$ son los distintos
-valores propios de $T$.
+primos. %Enseguida se muestran dos ejemplos más de álgebra lineal. 
+% Una transformación lineal $T$ en un espacio vectorial $V$ de dimensión
+% finita es diagonalizable si y solo si $V$ es suma directa de los
+% espacios propios de $T$, es decir,
+% $$V=E_{\lambda_{1}}\oplus E_{\lambda_{2}}\oplus \cdots \oplus E_{\lambda_{k}},$$
+% donde $\lambda_{1},\lambda_{2},\dots,\lambda_{k}$ son los distintos
+% valores propios de $T$.
 %ver [\cite{friedberg1982algebra}, teorema 5.14, p.257].
-
-Dada una transformación lineal $T$ en un espacio vectorial $V$ de
-dimensión finita. Es deseable descomponer a $V$ en una suma directa de
+En álgebra lineal,
+dado un operador lineal $T$ en un espacio vectorial $V$ de
+dimensión finita es deseable descomponer a $V$ en una suma directa de
 subespacios $T$-invariantes propios, es decir, cuando se aplica la
 transformación a cada elemento del subespacio lo envía a otro elemento
-del mismo subespacio. Esta descomposición de $V$ resulta útil, puesto que el
-comportamiento de $T$ puede ser inferido a través de su comportamiento
+del mismo subespacio. Esta descomposición de $V$ resulta útil, puesto que ciertas
+propiedades de $T$ pueden ser inferidas a través de su comportamiento
 en cada uno de los sumandos directos, es decir, de la restricción de
-$T$ a un subespacio $T$-invariante $W$, la cual es la transformación
-lineal $T$ en $W$. El siguiente ejemplo enuncia como son los espacios
-$T$-invariantes bajo la condición de que $T$ sea
-diagonalizable: Si $T$ es diagonalizable, entonces $V$ puede
+$T$ a un subespacio $T$-invariante $W$.
+% , la cual es la transformación
+% lineal $T$ en $W$. 
+% El siguiente ejemplo enuncia como son los espacios
+% $T$-invariantes bajo la condición de que $T$ sea
+% diagonalizable: 
+En el mejor de los casos, si $T$ es diagonalizable, entonces $V$ puede
 descomponerse en una suma directa de subespacios $T$-invariantes
 unidimensionales, que son los subespacios generados por los vectores
 de la base formada por los vectores propios de $T$. 
 %[\cite{friedberg1982algebra}, ejercicio 7, p.303]
 
 En álgebra lineal se estudian espacios vectoriales sobre campos
-arbitrarios. El concepto de módulo es una generalización de un espacio
+arbitrarios. Para nosotros, nos será útil el concepto de módulo, el cual es una generalización de espacio
 vectorial. Se obtiene la generalización simplemente reemplazando el
 campo por algún anillo. Ahora hagamos ciertas analogías relacionando
 algunos conceptos de la teoría de representaciones con el lenguaje ya
 conocido de álgebra lineal: asociamos módulo con espacio vectorial, submódulo con
 subespacio y submódulo irreducible con subespacio $T$-invariante.
 
-El teorema fundamental de la aritmética es análogo al teorema de
-Maschke [\cite{sagan2001symmetric}, teorema 1.5.3, p.16], el cual
-sigue la idea de descomponer a un módulo en sus piezas más
-pequeñas. El teorema de Maschke enuncia que, un módulo es completamente reducible,
-es decir, es suma directa de submódulos irreducibles.
-%[\cite{fulton1991representation}, proposición 1.8, p.7]. pag 24 teorema de Machke.
-
 A cada campo $F$ y cada grupo $G$ se le asocia un anillo denotado por
-$FG$ llamado el anillo de grupo. Estudiar estructuras de módulo sobre el
-anillo de grupo $FG$, es equivalente a estudiar $G$-módulos, que a su
-vez, es equivalente a estudiar representaciones de $G$ en
+$FG$ llamado el anillo de grupo. Estudiar módulos sobre el
+anillo de grupo $FG$ es equivalente a estudiar nuevas estructuras
+llamadas $G$-módulos, y estas a su
+vez son equivalentes a estudiar representaciones de $G$ en
 $V$, donde $V$ es un espacio vectorial sobre $F$. Usaremos
 tales conceptos según sea conveniente, por ejemplo, nos referimos a
 una representación de $G$ en $V$ cuando consideramos caracteres y
-$G$-módulo cuando descomponemos tal módulo en submódulos
+$G$-módulos cuando descomponemos tales módulos en submódulos
 irreducibles. 
+
+El teorema fundamental de la aritmética es análogo al teorema de
+Maschke (\cite{sagan2001symmetric}, teorema 1.5.3, p.16), el cual
+sigue la idea de descomponer a un módulo en sus piezas más
+pequeñas. El teorema de Maschke enuncia que, bajo ciertas hipótesis en
+el campo $F$ y grupo $G$, todo $FG$-módulo es completamente reducible,
+es decir, es suma directa de submódulos irreducibles.
+%[\cite{fulton1991representation}, proposición 1.8, p.7]. pag 24 teorema de Machke.
 
 Nos interesa la llamada teoría ordinaria de representaciones de grupos finitos
 actuando en un espacio vectorial de dimensión finita sobre el campo de
 los números complejos y más generalmente sobre campos de
-característica que no divide al orden del grupo, esta restricción en
-la característica implica que todo módulo es completamente
-reducible. Por otra parte, la teoría modular, estudia módulos sobre campos cuya
+característica que no divide al orden del grupo. Esta restricción en
+la característica es necesaria para que se cumpla el teorema de Maschke.
+Por otra parte, la teoría modular estudia módulos sobre campos cuya
 característica divide al orden de el grupo, en este caso pueden
 existir módulos que no son completamente reducibles, como se
 muestra en el ejemplo \ref{ej-no-reducibilidad}. En este trabajo no consideraremos la teoría
-modular, ya que en ese contexto no necesariamente se cumple el teorema de Maschke. 
+modular.%, ya que en ese contexto no necesariamente se cumple el teorema de Maschke. 
 
-Un complejo simplicial $\Delta$ está formado por un conjunto de
-vértices y una colección de subconjuntos de vértices, llamados
-simplejos, tal que si $A$ es un elemento de $\Delta$, cada subconjunto
-no vacío de $A$ pertenece a $\Delta$. A cada complejo simplicial se le
-puede asociar un espacio topológico $|\Delta|$, llamado su realización
-geométrica. Los complejos simpliciales son una herramienta fundamental
-para introducir conceptos topológicos dentro de la combinatoria.
+Los $G$-módulos que estudiaremos resultan a partir de una construcción
+topológica que a continuación describimos. Un complejo simplicial
+$\Delta$ está formado por un conjunto de vértices y una colección de
+subconjuntos de vértices, llamados simplejos, tal que si $A$ es un
+elemento de $\Delta$, cada subconjunto no vacío de $A$ pertenece a
+$\Delta$. A cada complejo simplicial se le puede asociar un espacio
+topológico $|\Delta|$, llamado su realización geométrica. Los
+complejos simpliciales son una herramienta fundamental para introducir
+conceptos topológicos dentro de la combinatoria.
 
 Consideraremos complejos simpliciales obtenidos a partir de
 gráficas. Es decir, a cada gráfica $G$ simple finita se le asocia un
@@ -270,7 +276,8 @@ simplejos son las subgráficas completas.
 
 Estamos interesados en la graficas de emparejamientos $G_{n}$ las
 cuales se construyen a partir  de gráficas completas de $n$ vértices,
-a su vez, $K(G_{n})$ denota las gráficas de clanes obtenidas de
+a su vez, $K(G_{n})$ denota ciertas gráficas (llamadas gráficas de
+clanes) obtenidas a partir de
 $G_{n}$. Con estas gráficas se definen los complejos simpliciales
 $M_{n}=\Delta(G_{n})$ y $K(M_{n})=\Delta(K(G_{n}))$. Todos los cálculos que
 realizamos son para $n=4,5,6$ y sus respectivas gráficas aparecen abajo.
@@ -379,25 +386,23 @@ un modo de obtener información sobre espacios topológicos (en nuestro
 caso complejos simpliciales), por
 ejemplo, espacios homeomorfos tienen módulos de homología
 isomorfos. Aunque hay varias teorías de homología
-[\cite{munkres1984elements},
-{\setlength{\fboxsep}{0pt}\colorbox{green}{...??}}], la homología que
+(\cite[\S 26]{munkres1984elements}), la homología que
 usamos en este trabajo es la homología simplicial, pues sus módulos
 de homología son fáciles de calcular comparados con los módulos de
 homología singular. 
-
-Los módulos de homología de $\Delta$ con coeficientes en el campo de los números
-complejos denotadas por $H_{k-1}(\Delta)$ definen módulos de el grupo $G$.
+Si $G$ actúa en un complejo simplicial $\Delta$, los espacios de homología de $\Delta$ con coeficientes en el campo de los números
+complejos serán denotados por $H_{k-1}(\Delta)$, y definen módulos sobre el grupo $G$.
 
 La idea de este trabajo surge a partir del teorema de Bouc
-[\cite{MR756517}, proposición 4, p.172], el cual describe
-la descomposición del $S_{n}$-módulo $\widetilde H_{k-1}(M_{n})$ en
+(\cite{MR756517}, proposición 4, p.172]), el cual describe
+la descomposición del $S_{n}$-módulo $H_{k-1}(M_{n})$ en
 suma directa de submódulos irreducibles, en donde actúa el grupo
 simétrico~$S_{n}$, para todo $n,k\geq1$.
 
 En este trabajo reproducimos el resultado de Bouc para $n=4,5,6,$ por
 medio de argumentos elementales de representaciones de grupos y
 topología. Además se calcula la descomposición en módulos irreducibles
-de $\widetilde H(K(M_{n}))$, es decir, de los módulos de homología reducida de
+de $H(K(M_{n}))$, es decir, de los módulos de homología de
 los complejos simpliciales obtenidos a partir de la gráfica de clanes
 $K(G_{n})$ en donde también actúa el grupo simétrico $S_{n}$, con
 $n=5,6$.
