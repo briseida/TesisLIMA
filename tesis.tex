@@ -4591,7 +4591,7 @@ Entonces la familia de $1$-simplejos orientados estará dada por:
 \end{center}
 \begin{figure}[!hbtp]
   \centering
-  \begin{tikzpicture}[rotate=90,scale=0.75]
+  \begin{tikzpicture}[rotate=90,scale=0.6]
     \newcommand{\aset}[2]{$\{#1,#2\}$} \GraphInit[vstyle=Classic]
     \SetUpVertex[MinSize=17pt] \SetVertexNoLabel \SetVertexMath
     \grPetersen[RA=3,RB=1.5]
@@ -4633,8 +4633,28 @@ Consideremos:
   V_{0}&=&\langle\overline{45}\rangle\\
   H_{0}&=&\{g\in S_{5}\mid gV_{0}=V_{0}\}=\{\langle(1),(12),(123),(45),(12)(45),(123)(45)\rangle\}\\
 \end{eqnarray*}
+Sean
+\begin{table}[!hbtp]
+  \centering
+  \begin{tabular}{lllll}
+    $t_{1}=(1)$ & $t_{2}=(14)$ & $t_{3}=(15)$ & $t_{4}=(24)$ & $t_{5}=(25)$ \\
+    $t_{6}=(34)$ & $t_{7}=(35)$ & $t_{8}=(14)(25)$ & $t_{9}=(14)(35)$ & $t_{10}=(24)(35)$.
+  \end{tabular}
+\end{table}
 
-Entonces $C_{0}(M_{5})=V_{0}\uparrow^{S_{5}}_{H_0}$, por lo que:
+Sea
+$T=\{t_{1},t_{2},\dots,t_{10}\}$ la trasversal izquierda de $H_{0}$ en $S_{5}$, entonces 
+\begin{equation*}
+S_{5}=t_{1}H_{0}\cup t_{2}H_{0}\cup\cdots\cup t_{10}H_{0}.
+\end{equation*}
+Además
+$C_{0}(M_{5})=\bigoplus^{10}_{i=1}t_{i}V_{0}=V_{0}\uparrow^{S_{5}}_{H_0}$,
+por la proposición \ref{car-ind-W-V} se tiene
+$\chi_{C_{0}(M_{5})}=\chi_{V_{0}\uparrow^{S_{5}}_{H_0}}$.
+
+Aplicamos reciprocidad de Frobenius (ver teorema \ref{frobenius}),
+para obtener la multiplidad de cada módulo de Specht en la
+descomposición de $C_{0}(M_{5})$.
 
 \begin{table}[!hbtp]
   \centering
@@ -4684,8 +4704,8 @@ De los productos internos calculados anteriormente obtenemos:
 Ahora consideremos los siguientes conjuntos, nuevamente para usar
 reciprocidad de Frobenius.
 \begin{eqnarray*}
-  V_{1}&=&\langle(\overline{13},\overline{24})\rangle,\\
-  H_{1}&=&\{g\in S_{5}\mid gV_{1}=V_{1}\}.
+  H_{1}&=&\langle(\overline{13},\overline{24})\rangle,\\
+  V_{1}&=&\{g\in S_{5}\mid gH_{1}=H_{1}\}.
 \end{eqnarray*}
 
   \begin{table}[!hbtp]
