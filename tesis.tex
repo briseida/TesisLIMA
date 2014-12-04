@@ -4070,58 +4070,71 @@ Ahora, se ejemplifican los conceptos antes expuestos.
 \mid |x|\leq 1\}$.
 
 \begin{center}
-    \begin{figure}[h]
-      \begin{minipage}[h]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}[scale=.8]
-          \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
-          \SetVertexNoLabel
-          \grTriangularGrid[prefix=G,Math,RA=1.5]{3}%
-        \end{tikzpicture}
-
-        \caption{$G$}
-        \label{G1}
-      \end{minipage}  
-      \begin{minipage}[h]{0.45\linewidth}
-        \centering
-        \begin{tikzpicture}[scale=0.6]%[x=0.5 cm,y=1cm]
-          \tikzstyle{circ} = [circle, minimum width=1mm, inner
-          sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm]
-          % QUAD
-          \node[circ] (a) at (0,0) {}; \node[circ] (b) at (2,0) {};
-          \node[circ] (c) at (1,2) {}; \node[circ] (d) at (3,2) {};
-          \node[circ] (e) at (4,0) {}; \node[circ] (f) at (2,4) {};
-          \begin{pgfonlayer}{background}
-            \fill[draw, line width=0.3mm,top color=black!30,bottom
-            color=gray!30] (a.center)node[num]{1} -- (b.center) node[num]{2}
-            -- (c.center) node[num]{4} --
-            (a.center);%node[num]{4} -- (a.center);
-          \end{pgfonlayer}
-          \begin{pgfonlayer}{background}
-            \fill[draw, line width=0.3mm,top color=black!30,bottom
-            color=gray!30] (b.center)node[num]{2} -- (e.center) node[num]{3}
-            -- (d.center) node[num]{5} --
-            (b.center);%node[num]{4} -- (a.center);
-          \end{pgfonlayer}
-          \begin{pgfonlayer}{background}
-            \fill[draw, line width=0.3mm,top color=black!30,bottom
-            color=gray!30](b.center)node[num]{2} -- (d.center) node[num]{5}
-            -- (c.center) node[num]{4} --
-            (b.center);%node[num]{4} -- (a.center);
-          \end{pgfonlayer}
-          \begin{pgfonlayer}{background}
-            \fill[draw, line width=0.3mm,top color=black!30,bottom
-            color=gray!30] (c.center)node[num]{4} -- (d.center) node[num]{5}
-            -- (f.center) node[num]{6} --
-            (c.center);%node[num]{4} -- (a.center);
-          \end{pgfonlayer}
-        \end{tikzpicture}
-        
-        \caption{$|\Delta(G)|$}
-        \label{fig:realizacion-geometrica}
-      \end{minipage}
-    \end{figure}
-  \end{center}
+  \begin{figure}[h]
+    \begin{minipage}[h]{0.45\linewidth}
+      \centering
+      \begin{tikzpicture}[x=0.6 cm,y=1.2 cm]
+        \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+        \Vertex[x=-2,y=0,Math,LabelOut,Lpos=90]{1}
+        \Vertex[x=0,y=0,Math,LabelOut,Lpos=90]{2}
+        \Vertex[x=2,y=0,Math,LabelOut,Lpos=90]{3}
+        \Vertex[x=-1,y=1,Math,LabelOut,Lpos=90]{4}
+        \Vertex[x=1,y=1,Math,LabelOut,Lpos=90]{5}
+        \Vertex[x=0,y=2,Math,LabelOut,Lpos=90]{6} 
+        \Edge(1)(2) 
+        \Edge(1)(4) 
+        \Edge(2)(3)
+        \Edge(2)(4) 
+        \Edge(2)(5)
+        \Edge(3)(5)
+        \Edge(4)(5)
+        \Edge(4)(6)
+        \Edge(5)(6)
+      \end{tikzpicture}
+    
+    \caption{$G$}
+    \label{G1}
+  \end{minipage}  
+  \begin{minipage}[h]{0.45\linewidth}
+    \centering
+    \begin{tikzpicture}[scale=0.6]%[x=0.5 cm,y=1cm]
+      \tikzstyle{circ} = [circle, minimum width=1mm, inner
+      sep=0pt,draw,fill] \tikzstyle{num} = [yshift=4mm]
+      % QUAD
+      \node[circ] (a) at (0,0) {}; \node[circ] (b) at (2,0) {};
+      \node[circ] (c) at (1,2) {}; \node[circ] (d) at (3,2) {};
+      \node[circ] (e) at (4,0) {}; \node[circ] (f) at (2,4) {};
+      \begin{pgfonlayer}{background}
+        \fill[draw, line width=0.3mm,top color=black!30,bottom
+        color=gray!30] (a.center)node[num]{1} -- (b.center) node[num]{2}
+        -- (c.center) node[num]{4} --
+        (a.center);%node[num]{4} -- (a.center);
+      \end{pgfonlayer}
+      \begin{pgfonlayer}{background}
+        \fill[draw, line width=0.3mm,top color=black!30,bottom
+        color=gray!30] (b.center)node[num]{2} -- (e.center) node[num]{3}
+        -- (d.center) node[num]{5} --
+        (b.center);%node[num]{4} -- (a.center);
+      \end{pgfonlayer}
+      \begin{pgfonlayer}{background}
+        \fill[draw, line width=0.3mm,top color=black!30,bottom
+        color=gray!30](b.center)node[num]{2} -- (d.center) node[num]{5}
+        -- (c.center) node[num]{4} --
+        (b.center);%node[num]{4} -- (a.center);
+      \end{pgfonlayer}
+      \begin{pgfonlayer}{background}
+        \fill[draw, line width=0.3mm,top color=black!30,bottom
+        color=gray!30] (c.center)node[num]{4} -- (d.center) node[num]{5}
+        -- (f.center) node[num]{6} --
+        (c.center);%node[num]{4} -- (a.center);
+      \end{pgfonlayer}
+    \end{tikzpicture}
+    
+    \caption{$|\Delta(G)|$}
+    \label{fig:realizacion-geometrica}
+  \end{minipage}
+\end{figure}
+\end{center}
 \end{example}
 
 \chapter[Homologías de $M_{n}$ y $K(M_{n})$]{Homologías del complejo de emparejamientos}
