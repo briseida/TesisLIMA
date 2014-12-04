@@ -918,8 +918,8 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \begin{example}
   \label{grupo-ciclico}
   Sea $n\in \mathbb{Z}$, construimos un grupo denotado por $C_{n}$ como sigue: consistirá
-  en todos los símbolos $a^{i}$, con $i=0,1,2,\dots,n-1$ en donde $a^{0}=a^{n}$, $a^{i}a^{j}=a^{i+j}$ si $i+j\leq n$ y
-  $a^{i}a^{j}=a^{i+j-n}$ si $i+j>n$. A $C_{n}$ se le conoce como \textbf{grupo
+  en todos los símbolos $a^{i}$, con $i=0,1,2,\dots,n-1$ en donde $a^{i}a^{j}=a^{i+j}$ si $i+j< n$ y
+  $a^{i}a^{j}=a^{i+j-n}$ si $i+j\geq n$. A $C_{n}$ se le conoce como \textbf{grupo
     cíclico}.
 \end{example}
 
@@ -931,7 +931,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   un \textbf{isomorfismo}.
 \end{definition}
 
-\begin{theorem}{\normalfont[\cite{fraleigh}, teorema 13.2, p.128]}.
+\begin{theorem}{\normalfont (\cite{fraleigh}, teorema 13.2, p.128)}.
   Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
   \begin{enumerate}
     \item $\rho(1)=1^{'}$, donde $1\in G$ y  $1^{'}\in G^{'}$ son los
@@ -957,7 +957,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   $\pi:Y\rightarrow Y$.
 \end{definition}
 
-\begin{theorem}{\normalfont[\cite{fraleigh}, teorema 8.5, p.77]}.
+\begin{theorem}{\normalfont (\cite{fraleigh}, teorema 8.5, p.77)}.
   Sea $Y$ un conjunto no vacío y sea $S_{Y}$ el conjunto de todas las
   permutaciones de $Y$. Entonces $S_{Y}$ es un grupo con la operación dada por la composición de
   permutaciones.
@@ -986,7 +986,8 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   si $i_{1},i_{2},\ldots, i_{k}$ son enteros distintos que pertenecen a
   $Y$ y si $\pi\in S_{n}$ es tal que
   $$\pi(i_{1})=i_{2},\pi(i_{2})=i_{3},\ldots,\pi(i_{k-1})=i_{k},\pi(i_{k})=i_{1}$$
-  y $\pi$ fija a los otros elementos de $Y$, si los hay, entonces,
+  y $\pi$ fija a los elementos de $Y$ distintos de
+  $i_{1},i_{2},\ldots,i_{k}$, entonces,
   diremos que $\pi$ es un \textbf{ciclo de longitud $k$} o un \textbf{$k$-ciclo}. Un ciclo de longitud 2 es una \textbf{transposición}.
 \end{definition}
 
@@ -1001,12 +1002,12 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   entonces $\pi$ es un 3-ciclo.
 \end{example}
 
-\begin{theorem}{\normalfont [\cite{fraleigh}, corolario 9.12, p.90]}.
+\begin{theorem}{\normalfont (\cite{fraleigh}, corolario 9.12, p.90)}.
   \label{per-prod-trans}
   Toda permutación $\pi\in S_{n}$ es producto de transposiciones.
 \end{theorem}
 
-\begin{theorem}{\normalfont [\cite{fraleigh}, teorema 9.15, p.91]}.
+\begin{theorem}{\normalfont (\cite{fraleigh}, teorema 9.15, p.91)}.
   \label{trans-par-impar}
   Sea $\pi\in S_{n}$. Si expresamos a~$\pi$ como $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}=\psi_{1}\psi_{2}\cdots\psi_{s}$,
   donde $\tau_{i}$ y $\psi_{j}$ son transposiciones para
@@ -1099,7 +1100,8 @@ A continuación se muestran ejemplos de anillos.
     \label{endomorfismos}
   \end{equation*}
   Sea $f,g\in\End(A)$, definimos el producto $fg$ por $(fg)(x)=f(g(x))$ y
-  la suma~$f+g$ por $(f+g)(x)=f(x)+g(x)$ . Entonces $\End(A)$ es un anillo.
+  la suma~$f+g$ por $(f+g)(x)=f(x)+g(x)$. Entonces se puede demostrar
+  que con estas operaciones, $\End(A)$ tiene estructura de anillo.
 \end{example}
 
 En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, donde hay $n$ sumandos.
@@ -1113,7 +1115,7 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
 \label{modulos}
 
 \begin{definition}
-  Sea $R$ un anillo cualquiera; un conjunto no vacío $M$ se dice que
+  Sea $R$ un anillo cualquiera. Un conjunto no vacío $M$ se dice que
   es un \textbf{$R$-módulo} o (módulo sobre $R$) si $M$ es un grupo abeliano
   bajo una operación $+$, tal que para cada $r\in R$ y $m\in M$ existe
   un elemento $rm\in M$ de tal modo que:
@@ -1129,14 +1131,14 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
   unitario}.
 \end{definition}
 
-\begin{example}{\normalfont[\cite{herstein1990algebra}, ej. 1, p.189].}
+\begin{example}{\normalfont (\cite{herstein1990algebra}, ej. 1, p.189).}
   Se puede demostrar que todo grupo abeliano $G$ es un módulo sobre el anillo de los enteros
   $\mathbb{Z}$. Con la operación de $G$ como la suma y la
   multiplicación se define como: si $n>0$, $na=a+a+\cdots+a$, donde
-  hay $n$ sumandos, si  $n<0$, $(-n)a=-(na)$ y $0a=0$, para todo $a\in G$ y $n\in \mathbb{Z}$.
+  hay $n$ sumandos; si  $n<0$, $(-n)a=-(na)$ y $0a=0$, para todo $a\in G$ y $n\in \mathbb{Z}$.
 \end{example}
 
-\begin{example}{\normalfont[\cite{jacobson2012basic}, teorema 3.1, p.160].}
+\begin{example}{\normalfont (\cite{jacobson2012basic}, teorema 3.1, p.160).}
   Un grupo abeliano $A$ es un módulo sobre $\End(A)$, donde la suma
   $f+g$ está dada por $(f+g)(x)=f(x)+g(x)$ y la multiplicación $fa$
   por $f(a)$, para $f,g\in\End(A)$ y $a\in A$. 
@@ -1167,7 +1169,7 @@ Sea $S_{A}$ denote el grupo de permutaciones de un conjunto $A$. El
 teorema de Cayley nos dice que cualquier grupo $G$ es isomorfo a un
 subgrupo de $S_{A}$ para un conjunto $A$ suficientemente
 grande. Formalmente, esto significa que se puede construir un
-homomorfismo inyectivo $f:G\rightarrow S_{A}$, asi que $G\cong
+homomorfismo inyectivo $f:G\rightarrow S_{A}$, así que $G\cong
 f(G)$. Cada permutación $f(g)\in S_{A}$ ``representa'' al elemento de el grupo $g\in
 G$. 
 % Además, si tenemos algún otro homomorfismo $\pi:G\rightarrow
@@ -1177,7 +1179,7 @@ G$.
 %   permutación} de $G$.
 
 Si tenemos otro homomorfismo $\phi:G\rightarrow S_{A}$, no
-necesariamente inyectivo. El grupo $G$ permuta el conjunto $A$ como sigue: dado
+necesariamente inyectivo, el grupo $G$ permuta el conjunto $A$ como sigue: dado
 $\phi:G\rightarrow S_{A}$ se define $*:G\times A\rightarrow A$ como
 $g*a=\phi(g)a$. Por propiedades de homomorfismo esta función tiene las
 siguientes propiedades:
@@ -1206,7 +1208,7 @@ propiedades más, las cuales establecen que $*$ es una acción lineal.
 Estos cuatro axiomas definen un $G$-módulo (ver definición
 \ref{accion-lineal}). Inversamente se puede definir una representación
 $\rho$ a partir de un $G$-módulo como sigue:
-Dado un $G$-módulo, sea $\rho(g)(v)=gv$. Enseguida se
+dado un $G$-módulo, sea $\rho(g)(v)=gv$. Enseguida se
 enuncia y demuestra justamente lo
 discutido sobre representaciones de
 $G$ en $V$ y $G$-módulos.
@@ -1275,7 +1277,7 @@ Así, el teorema \ref{rep-mod} dice que estudiar las representaciones de $G$
 en $V$, es equivalente a estudiar $G$-módulos $V$. 
 
 Ahora seguimos la construcción de el anillo de grupo dada en
-[\cite{fulton1991representation}, sección 3.4, p.36]. Sea un grupo $G$, cualquier representación de $G$ asocia a cada
+(\cite{fulton1991representation}, sección 3.4, p.36). Para un grupo $G$, cualquier representación de $G$ asocia a cada
 elemento de el grupo un operador lineal. Por tanto, en el contexto de
 teoría de representaciones, los grupos pueden ser considerados como
 conjuntos abstractos de operadores lineales. Consideremos al espacio
@@ -1297,7 +1299,7 @@ $FG$ en un anillo con elemento unitario, al cual llamamos
 
 Sea $V$ un $G$-módulo, es decir, se tiene la acción lineal de $G$ en $V$ 
 $$*:G\times V\rightarrow V,$$ 
-se define la acción lineal de el anillo de grupo $FG$ en $V$ justo
+entonces se define la acción lineal del anillo de grupo $FG$ en $V$ justo
 como lo hace~$G$, es decir, se define la función $\cdot:FG\times
 V\rightarrow V$ como: 
 \begin{equation*}
@@ -1318,7 +1320,7 @@ Es equivalente estudiar $FG$-módulos y $G$-módulos, ya que tenemos una
 correspondencia biyectiva entre estas estructuras.
 
 Recordemos que $GL(n,F)$ es el grupo de matrices invertibles $n\times
-n$ con entradas en el campo $F$ (ver ejemplo\ref{GL(nF)}). Y $GL(V)$ son los operadores lineales
+n$ con entradas en el campo $F$ (ver ejemplo \ref{GL(nF)}). Y $GL(V)$ son los operadores lineales
 invertibles en un espacio vectorial $V$ de dimensión finita $n$ sobre~$F$(ver ejemplo \ref{GL(V)}). Existe un isomorfismo entre los grupos
 $GL(n,\mathbb{C})$ y $GL(V)$.
 
@@ -1530,7 +1532,7 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
     gv=g(\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots +\lambda_{n}x_{n})=\lambda_{1}(gx_{1})+\lambda_{2}(gx_{2})+\cdots +\lambda_{n}(gx_{n}).
   \end{equation*}
   Así, $FX$ resulta ser un $G$-módulo de dimensión $|X|$. A~$FX$ le llamamos
-  \textbf{módulo de permutaciones}. Los elementos de $X$ forman una base para~$FX$.
+  \textbf{módulo de permutaciones}. Los elementos del conjunto $X$ forman una base para~$FX$.
 
   Por ejemplo, el grupo simétrico $S_{n}$ actuando en $\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
   \begin{equation*}
@@ -1641,7 +1643,7 @@ En esta sección, $G$ denota un grupo finito y $V$ un $G$-módulo.
 \end{definition}
 
 \begin{example}
-  Cualquier $G$-módulo $V$, tiene a los submódulos 0 y $V$. Estos dos
+  Cualquier $G$-módulo $V$ tiene a los submódulos 0 y $V$. Estos dos
   submódulos son llamados triviales.
 \end{example}
 
