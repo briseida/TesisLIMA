@@ -175,4 +175,25 @@
   \AssignVertexLabel{a}{\textsl{$v_{0}$},\textsl{$v_{1}$},\textsl{$v_{2}$},\textsl{$v_{3}$}}
 \end{tikzpicture}
 
+ \begin{tikzpicture}[x=0.5 cm,y=0.8 cm]
+   % \draw[help lines] (-2,0)% grid (0,2);
+   \GraphInit[vstyle=Classic] \SetUpVertex[MinSize=1pt]
+   \Vertex[x=-2,y=0,Math,LabelOut,Lpos=90]{1}
+   \Vertex[x=0,y=0,Math,LabelOut,Lpos=90]{2}
+   \Vertex[x=2,y=0,Math,LabelOut,Lpos=90]{3}
+   \Vertex[x=-1,y=1,Math,LabelOut,Lpos=90]{4}
+   \Vertex[x=1,y=1,Math,LabelOut,Lpos=90]{5}
+   \Vertex[x=0,y=2,Math,LabelOut,Lpos=90]{6} 
+   \Edge(1)(2) 
+   \Edge(1)(4) 
+   \Edge(2)(3)
+   \Edge(2)(4) 
+   \Edge(2)(5)
+   \Edge(3)(5)
+   \Edge(4)(5)
+   \Edge(4)(6)
+   \Edge(5)(6)
+ \end{tikzpicture}
+
+
 \end{document}
