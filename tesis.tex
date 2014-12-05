@@ -191,7 +191,7 @@ Primero quisiera agradecer a las personas más importantes de mi vida,
 mi familia, por su cariño y constante preocupación por mi bienestar.
 
 Este trabajo no sería posible sin el apoyo de mi asesor, el
-Dr. Rafael Villaroel Flores, a quien agradezco su
+Dr. Rafael Villarroel Flores, a quien agradezco su
 tiempo, motivación, dedicación, y sobre todo su paciencia.
 
 Agradezco a mis sinodales, Dr. Fernando Barrera Mora, Dr. Benjamín
@@ -296,7 +296,7 @@ simplejos son las subgráficas completas.
 % finitas, diremos que $G_{1}$ y $G_{2}$ son homeomorfas si
 % $|\Delta(G_{1})|$ y $|\Delta(G_{2})|$ lo son.
 
-Estamos interesados en la graficas de emparejamientos $G_{n}$ las
+Estamos interesados en la gráficas de emparejamientos $G_{n}$ las
 cuales se construyen a partir  de gráficas completas de $n$ vértices,
 a su vez, $K(G_{n})$ denota ciertas gráficas (llamadas gráficas de
 clanes) obtenidas a partir de
@@ -1166,7 +1166,7 @@ representaciones en sí mismas o a través de sus correspondientes
 $G$-módulos, donde $G$ es un grupo. Esto se explica mejor por analogía con otro tipo de representación.
 
 Sea $S_{A}$ denote el grupo de permutaciones de un conjunto $A$. El
-teorema de Cayley nos dice que cualquier grupo $G$ es isomorfo a un
+teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77) nos dice que cualquier grupo $G$ es isomorfo a un
 subgrupo de $S_{A}$ para un conjunto $A$ suficientemente
 grande. Formalmente, esto significa que se puede construir un
 homomorfismo inyectivo $f:G\rightarrow S_{A}$, así que $G\cong
@@ -1322,7 +1322,7 @@ correspondencia biyectiva entre estas estructuras.
 Recordemos que $GL(n,F)$ es el grupo de matrices invertibles $n\times
 n$ con entradas en el campo $F$ (ver ejemplo \ref{GL(nF)}). Y $GL(V)$ son los operadores lineales
 invertibles en un espacio vectorial $V$ de dimensión finita $n$ sobre~$F$(ver ejemplo \ref{GL(V)}). Existe un isomorfismo entre los grupos
-$GL(n,\mathbb{C})$ y $GL(V)$.
+$GL(n,F)$ y $GL(V)$.
 
 \begin{definition}
   Una \textbf{representación matricial de un grupo} $G$ es el
@@ -1807,9 +1807,9 @@ dimensión 1 es $\langle v_{2}\rangle$.
 \section{$G$-homomorfismo y lema de Schur} 
 \label{schur}
 
-De aquí en adelante, ya que queremos usar el teorema de Maschke,
-$F$ será el campo de los números complejos. Así, todo $G$-modulo será
-completamente reducible.
+% De aquí en adelante, ya que queremos usar el teorema de Maschke,
+% $F$ será el campo de los números complejos. Así, todo $G$-modulo será
+% completamente reducible.
 
 \begin{definition}
   Dados dos $G$-módulos $V$ y $W$. Un $G$\textbf{-homomorfismo} (o simplemente
@@ -1990,8 +1990,8 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 \section{Caracteres de representaciones}
 \label{caracteres}
 
-Mucha información contenida en una representación $X:G\rightarrow
-GL(n,\mathbb{C})$ puede ser obtenida de la traza de sus
+En esta sección, $F$ es un campo. Mucha información contenida en una representación $X:G\rightarrow
+GL(n,F)$ puede ser obtenida de la traza de sus
 correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
 esto se ocupa la teoría de caracteres.
 
@@ -2003,7 +2003,7 @@ esto se ocupa la teoría de caracteres.
   donde $\tr$ denota la traza de una matriz dada. Dicho de otro modo,
   $\chi$ es la función
 \begin{equation*}
-  G\stackrel{\tr X}{\rightarrow}\mathbb{C}.
+  G\stackrel{\tr X}{\rightarrow}F.
 \end{equation*}
 Si $V$ es un $G$-módulo, su carácter es el carácter de alguna
 representación matricial $X$ correspondiente a $V$ (por propiedades de
@@ -2040,7 +2040,7 @@ denotado por $K_{g}$.
 %Se expone la demostración en la proposición 1.8.5 de \cite{sagan2001symmetric}.
 \begin{definition}
   Una \textbf{función de clase} es una función
-  $\theta:G\rightarrow\mathbb{C}$ que es constante en clases de
+  $\theta:G\rightarrow F$ que es constante en clases de
   conjugación de $G$, es decir, si $K$ es una clase de conjugación de
   $G$, entonces $\theta(g)=\theta(h)$ para $g,h\in K$. El conjunto de
   todas las funciones de clase en $G$ es denotado por $R(G)$.
@@ -2050,7 +2050,7 @@ Un ejemplo de funciones de clase son los caracteres (ver proposición~\ref{carac
 La suma de funciones de clase es una función de clase y el
 producto por escalar de una función de clase es una función de clase,
 se sigue que $R(G)$ es un subespacio vectorial de el
-espacio de todas las funciones  de $G$ en $\mathbb{C}$.
+espacio de todas las funciones  de $G$ en $F$.
 \begin{theorem}{\normalfont[\cite{sagan2001symmetric}, proposición 1.10.1, p.40], [\cite{sagan2001symmetric}, proposición 1.10.2, p.42]}.
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
@@ -2179,6 +2179,10 @@ Las tablas de caracteres que utilizaremos en el capítulo
 
 \section{Producto interno de caracteres}
 \label{producto-interno}
+
+De aquí en adelante, ya que queremos usar el teorema de Maschke,
+$F$ será el campo de los números complejos. Así, todo $G$-modulo será
+completamente reducible.
 
 Mediante el producto interno de caracteres  podemos determinar si una
 representación es irreducible o cuándo dos representaciones son
