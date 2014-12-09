@@ -3457,15 +3457,15 @@ función aumento, para definir homología y homología reducida.
 Se presentan los complejos de cadenas en la sección \ref{com-cad} y se
 establece cierto diagrama conmutativo de los complejos de cadenas en donde
 se define una trasformación lineal entre los espacios de tales
-complejos de cadenas la cual induce una transformación lineal de las homologías
+complejos de cadenas, la cual induce una transformación lineal de las homologías
 de los correspondientes espacios.
 
 Por último en la sección \ref{hom-ind}, a los complejos simpliciales
 $\Delta$ se les asocian conceptos topológicos por medio de su
 realización geométrica $|\Delta|$. Por otra parte, si dos espacios son
 homeomorfos, tienen homologías isomorfas. Una condición más débil que
-homeomorfismo que implica el mismo resultado, es el de espacios
-homotópicos.
+homeomorfismo que implica el mismo resultado, es que los espacios
+sean homotópicos.
 
 Las demostraciones que se omiten se pueden encontrar en
 \cite{munkres1984elements}.
@@ -3501,7 +3501,7 @@ subcolección de $\Delta$, que es a su vez es un complejo, se llama
 \begin{definition}
   Un complejo simplicial $\Delta$ es \textbf{conexo} si
   $\Delta^{(1)}$ es una gráfica conexa, es decir, si existe un camino en
-  $\Delta^{(1)}$  para cualquiera dos vértices.
+  $\Delta^{(1)}$  entre cualquiera dos vértices.
 \end{definition}
 
 Primero introducimos la idea de un \emph{n-simplejo orientado}. Un
@@ -3514,16 +3514,14 @@ región triangular $v_{0}v_{1}v_{2}$ con dirección de $v_{0}$ a $v_{1}$
 a $v_{2}$ como se aprecia en la figura \ref{fig:2-simplejo}, claramente~$v_{0}v_{1}v_{2}$ tiene el mismo orden que
 $v_{1}v_{2}v_{0}$ y $v_{2}v_{0}v_{1}$, pero con orientación opuesta a
 $v_{0}v_{2}v_{1}$, $v_{2}v_{1}v_{0}$ y $v_{1}v_{0}v_{2}$, es decir, estaremos de acuerdo que:
-$$v_{0}v_{1}v_{2}=v_{1}v_{2}v_{0}=v_{2}v_{0}v_{1}=-v_{0}v_{2}v_{1}=-v_{2}v_{1}v_{0}=-v_{1}v_{0}v_{2}.$$
-
-Note que $v_{i}v_{j}v_{k}$ es igual a $v_{0}v_{1}v_{2}$, si
+$$v_{0}v_{1}v_{2}=v_{1}v_{2}v_{0}=v_{2}v_{0}v_{1}=-v_{0}v_{2}v_{1}=-v_{2}v_{1}v_{0}=-v_{1}v_{0}v_{2},$$
+es decir, $v_{i}v_{j}v_{k}$ es igual a $v_{0}v_{1}v_{2}$, si
 \[ \left(
   \begin{array}{ccc}
     0 & 1 & 2 \\
     i & j & k 
   \end{array} 
 \right)\] 
-
 es una permutación par y es igual a $-v_{0}v_{1}v_{2}$ si la
 permutación es impar.
 
@@ -3613,7 +3611,7 @@ por una permutación par.
 % conjunto de vértices es finito, la segunda condición no se aplica.
 
 Sumamos $p$-cadenas sumando sus valores y producto por escalar de una
-$p$-cadena es la multiplicación de su valor por un elemento $\lambda\in\mathbb{C}$; el $\mathbb{C}$-espacio vectorial resultante es
+$p$-cadena es la multiplicación de su valor por un elemento $\lambda\in\mathbb{C}$. El $\mathbb{C}$-espacio vectorial resultante es
 denotado por $C_{p}(\Delta)$ y es llamado el \textbf{espacio de
   \emph{p}-cadenas (orientadas)} de $\Delta$. Si $p<0$ o $p>\dim \Delta$,
 $C_{p}(\Delta)$ denota al espacio trivial.
@@ -4012,11 +4010,12 @@ isomorfismo~$f_{*k}$, es decir, $H_{k}(A)\cong H_{k}(A^{'})$.
 \section[Homomorfismos inducidos]{Homomorfismos inducidos por funciones homotópicas}
 \label{hom-ind}
 
-En esta sección $I$ es el intervalo $[0,1]$ y los vértices son
+En esta sección $I$ es el intervalo $[0,1]$ y los vértices de un
+complejo simplicial $\Delta$ son
 $V(\Delta)=\{v_{1},v_{2},\dots,v_{n}\}$. Es posible definir homología
 de un espacio topológico general por medio del concepto de la
-\emph{homología singular} (ver [\cite{munkres1984elements},\S 51,
-p.309]). Por otro lado, a cada complejo simplicial $\Delta$ se le
+\emph{homología singular} (ver \cite{munkres1984elements},\S 51,
+p.309). Por otro lado, a cada complejo simplicial $\Delta$ se le
 puede asociar un espacio topológico denotado~$|\Delta|$ llamado la
 \textbf{realización geométrica} de $\Delta$, dado por:
 
@@ -4094,7 +4093,7 @@ Por otro lado si $G$ tiene una acción del grupo simétrico
 $S_{n}$, entonces las homologías de $G$ son módulos
 de $S_{n}$.
 
-Ahora, se ejemplifican los conceptos antes expuestos.
+Ahora se ejemplifican los conceptos antes expuestos.
 \begin{example}
   Sea la gráfica $G$ de la figura \ref{G1}, entonces $\Delta(G)$ consta de los
   subconjuntos no vacíos de $\{1,2,4\}$, $\{2,3,5\}$, $\{2,4,5\}$,
