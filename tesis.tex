@@ -1336,18 +1336,20 @@ $GL(n,F)$ y $GL(V)$.
 % representación $\rho$ de $G$  es sobre el espacio $V$.
 
 \begin{example}[Representación trivial]
+  Sea $V$ un espacio vectorial de dimensión finita $n$ sobre un campo $F$.
   La representación trivial de un grupo $G$ es el homomorfismo
-  $\rho:G\rightarrow GL(\mathbb{C})$ dado por
-  $\rho(g)=1_{\mathbb{C}}$, para todo $g\in G$, donde $1_{\mathbb{C}}$
-  es la función identidad $1_{\mathbb{C}}:\mathbb{C}\rightarrow\mathbb{C}$. Esta es una representación de grado 1, pues 1 es la
-  dimensión de $\mathbb{C}$.
+  $\rho:G\rightarrow GL(V)$ dado por
+  $\rho(g)=1_{V}$, para todo $g\in G$, donde $1_{V}$
+  es la función identidad $1_{V}:V\rightarrow V$. 
+  %Esta es una representación de grado 1, pues 1 es la dimensión de $\mathbb{C}$.
 \end{example}
 
 \begin{example}[Representación signo]
+  Sea $V$ un espacio vectorial de dimensión finita $n$ sobre un campo $F$.
   Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones (ver definición \ref{trans} y teorema \ref{per-prod-trans}), definimos la función
-  signo $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
-  mediante: $$\sgn(\pi):=(-1)^{k}1_{\mathbb{C}},$$
+  signo $\sgn:S_{n} \rightarrow GL(V)$
+  mediante: $$\sgn(\pi):=(-1)^{k}1_{V},$$
   debido al teorema \ref{trans-par-impar}, la función signo está bien definida.
   % así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
   % \[
