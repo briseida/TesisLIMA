@@ -2055,14 +2055,14 @@ Un ejemplo de funciones de clase son los caracteres (ver proposición~\ref{carac
 
 La suma de funciones de clase es una función de clase y el
 producto por escalar de una función de clase es una función de clase,
+por lo que se sigue que $R(G)$ es un subespacio vectorial del espacio
+de todas las funciones de $G$ en $F$.
 
-por lo que se sigue que $R(G)$ es un subespacio vectorial del
-espacio de todas las funciones de $G$ en $F$.
-
-Siguiendo a Isaacs (\cite{MR2047103}, \S 2, p.15), en adelante, el campo $F$ serán
+Siguiendo a Isaacs (\cite{MR2047103}, \S 2, p.15), en adelante, para
+que se cumpla el teorema de Maschke y el teorema \ref{no-rep-irr-no-cla-conj}, el campo $F$ serán
 los numéros complejos~$\mathbb{C}$. Sin embargo, se puede trabajar
 con cualquier campo algebraicamente cerrado de característica que no
-divida a $|G|$.
+divida a $|G|$ o bien el campo de los elementos algebraicos en $\mathbb{C}$.
 
 \begin{theorem}{\normalfont (\cite{sagan2001symmetric}, proposición 1.10.1, p.40, proposición 1.10.2, p.42)}.
   \label{no-rep-irr-no-cla-conj}
@@ -3027,12 +3027,10 @@ Por ejemplo, si
   \end{ytableau}
 \end{center}
 entonces $\{t\}$ es el tabloide dibujado como
-
 \begin{center}
   \ytableausetup{mathmode,tabloids,boxsize=1.2em}
   \ytableaushort{12,3}
 \end{center}
-
 el cual representa la clase de equivalencia que contiene a los
 siguientes tableros:
 \begin{center}  
@@ -3047,7 +3045,7 @@ siguientes tableros:
   \end{ytableau}\quad .
 \end{center}
 
-El orden de las entradas entre cada renglón es irrelevante. Por
+Como consecuencia de nuestras definiciones, el orden de las entradas entre cada renglón es irrelevante. Por
 ejemplo:
 
 \begin{center}
@@ -3080,7 +3078,7 @@ ser el mismo, esto es, $\pi\{t_{1}\}=\pi\{t_{2}\}$. Esto es claro,
 pues $\pi$ simplemente da la instrucción de mover algún número de un
 renglón a otro.
 
-Ahora, que hemos definido una forma para que $S_{n}$ actúe en los tabloides,
+Ahora que hemos definido una forma para que $S_{n}$ actúe en los tabloides,
 podemos definir una representación de $S_{n}$. Recordemos que una
 representación de un grupo $G$ en un espacio vectorial $V$ sobre el
 campo de los números complejos es equivalente a extender a $V$ a un $G$-módulo,
@@ -3106,12 +3104,12 @@ Young son de hecho representaciones conocidas.
 
 \begin{example}
   Consideremos $\lambda=(n)$. Así que $M^{\lambda}$ es el espacio
-  vectorial generado por un solo tabloide 
+  vectorial generado por un solo tabloide:
   \begin{center}
     \ytableausetup{mathmode,tabloids}    
-    \ytableaushort{1 2\cdots n} 
+    \ytableaushort{1 2\cdots n}
   \end{center}
-Donde el tabloide está fijo por $S_{n}$, por lo que $M^{\lambda}$ es
+donde el tabloide está fijo por $S_{n}$, por lo que $M^{\lambda}$ es
 una representación trivial de dimensión uno.
 \end{example}
 
@@ -3150,9 +3148,8 @@ una representación trivial de dimensión uno.
 \section{Módulo de Specht}
 \label{modulo-specht}
 En la sección previa, construimos $S_{n}$-módulos $M^{\lambda}$
-conocidos como módulos de permutación. En esta sección, consideramos
-submódulos irreducibles de~$M^{\lambda}$ que corresponden únicamente a
-$\lambda$. 
+conocidos como módulos de permutación. En esta sección, para cada $\lambda$ consideramos
+un submódulo irreducibles de~$M^{\lambda}$.
 
 El grupo $S_{n}$ actúa en el conjunto de tableros de Young de manera
 natural: para un tablero $t$ de tamaño $n$ y una permutación $\sigma\in
@@ -3173,13 +3170,13 @@ en la caja donde $t$ coloca a $i$. Por ejemplo,
   \end{ytableau}
 \end{center}
 
-Observe que un tabloide está fijo por las permutaciones, las cuales
-solo permuta las entradas de los renglones entre ellos mismos. Estas
+Observe que un tabloide está fijo por las permutaciones que
+permutan las entradas de los renglones entre ellos mismos. Estas
 permutaciones forman un subgrupo de $S_{n}$, al cual llamamos grupo
 renglón. Similarmente, definimos al grupo columna.
 
 \begin{definition}
-  Para un tablero $t$ de tamaño $n$, el \textbf{grupo renglón} de $t$,
+  Para un tablero $t$ de tamaño $n$, el \textbf{grupo renglón} de~$t$,
   denotado por $R_{t}$, es el subgrupo de $S_{n}$ que consiste de las
   permutaciones que solo mueven elementos entre cada renglón
   de $t$. Similarmente, el \textbf{grupo columna} $C_{t}$ es el
@@ -3189,7 +3186,7 @@ renglón. Similarmente, definimos al grupo columna.
 
 Por ejemplo, si
 \begin{center}$t=$
-  \ytableausetup{mathmode} %,boxsize=1 
+  \ytableausetup{mathmode,notabloids} %,boxsize=1 
   \begin{ytableau}
     4 & 1 & 2\\
     3 & 5
@@ -3340,10 +3337,11 @@ número de representaciones irreducibles de $S_{n}$ es igual al número
 de diagramas de Young con $n$ cajas. Este teorema da una biyección
 entre estos dos conjuntos.
 
-Note que los politabloides son generalmente linealmente dependientes. Por
+Note que el conjunto de todos los politabloides es generalmente linealmente dependiente. Por
 ejemplo, como vimos en el ejemplo \ref{1n}, cualquier par de
-politabloides en $S^{(1,1,\ldots,1)}$ son de hecho linealmente
-dependientes. Ya que sabemos que $S^{\lambda}$ es generado por los
+politabloides en $S^{(1,1,\ldots,1)}$ son uno un múltiplo escalar del
+otro. 
+Ya que sabemos que $S^{\lambda}$ es generado por los
 politabloides, podemos preguntarnos cómo seleccionar una base. El
 siguiente teorema nos da la respuesta.
 
