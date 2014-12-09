@@ -197,8 +197,8 @@ tiempo, motivación, dedicación, y sobre todo su paciencia.
 Agradezco a mis sinodales, Dr. Fernando Barrera Mora, Dr. Benjamín
 Alfonso Itzá Ortiz, Dra. Rocío Leonel Gómez y Dr. Jorge Viveros Rogel,
 por el tiempo que les tomó revisar este trabajo y por sus valiosas
-sugerencias. A los profesores investigadores del área académica de
-matemáticas y física por compartir sus conocimientos. También
+sugerencias. A los profesores investigadores del Área Académica de
+Matemáticas y Física por compartir sus conocimientos. También
 agradezco a mi amigos Liz y Beto por las experiencias compartidas.
 
 \tableofcontents
@@ -222,8 +222,8 @@ primos. %Enseguida se muestran dos ejemplos más de álgebra lineal.
 En álgebra lineal,
 dado un operador lineal $T$ en un espacio vectorial $V$ de
 dimensión finita es deseable descomponer a $V$ en una suma directa de
-subespacios $T$-invariantes propios, es decir, cuando se aplica la
-transformación a cada elemento del subespacio lo envía a otro elemento
+subespacios $T$-invariantes propios, es decir, cuando se aplica el
+operador a cada elemento del subespacio lo envía a otro elemento
 del mismo subespacio. Esta descomposición de $V$ resulta útil, puesto que ciertas
 propiedades de $T$ pueden ser inferidas a través de su comportamiento
 en cada uno de los sumandos directos, es decir, de la restricción de
@@ -1336,18 +1336,20 @@ $GL(n,F)$ y $GL(V)$.
 % representación $\rho$ de $G$  es sobre el espacio $V$.
 
 \begin{example}[Representación trivial]
+  Sea $V$ un espacio vectorial de dimensión finita $n$ sobre un campo $F$.
   La representación trivial de un grupo $G$ es el homomorfismo
-  $\rho:G\rightarrow GL(\mathbb{C})$ dado por
-  $\rho(g)=1_{\mathbb{C}}$, para todo $g\in G$, donde $1_{\mathbb{C}}$
-  es la función identidad $1_{\mathbb{C}}:\mathbb{C}\rightarrow\mathbb{C}$. Esta es una representación de grado 1, pues 1 es la
-  dimensión de $\mathbb{C}$.
+  $\rho:G\rightarrow GL(V)$ dado por
+  $\rho(g)=1_{V}$, para todo $g\in G$, donde $1_{V}$
+  es la función identidad $1_{V}:V\rightarrow V$. 
+  %Esta es una representación de grado 1, pues 1 es la dimensión de $\mathbb{C}$.
 \end{example}
 
 \begin{example}[Representación signo]
+  Sea $V$ un espacio vectorial de dimensión finita $n$ sobre un campo $F$.
   Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones (ver definición \ref{trans} y teorema \ref{per-prod-trans}), definimos la función
-  signo $\sgn:S_{n} \rightarrow GL(\mathbb{C})$
-  mediante: $$\sgn(\pi):=(-1)^{k}1_{\mathbb{C}},$$
+  signo $\sgn:S_{n} \rightarrow GL(V)$
+  mediante: $$\sgn(\pi):=(-1)^{k}1_{V},$$
   debido al teorema \ref{trans-par-impar}, la función signo está bien definida.
   % así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
   % \[
@@ -1804,6 +1806,10 @@ submódulo $W$ debería tener dimensión 1, y el único submódulo con
 dimensión 1 es $\langle v_{2}\rangle$.
 \end{example}
 
+Debido a que queremos usar el teorema de Maschke, $F$ será un campo de
+característica cero. Así, todo $G$-modulo será completamente
+reducible.
+
 \section{$G$-homomorfismo y lema de Schur} 
 \label{schur}
 
@@ -2049,8 +2055,15 @@ Un ejemplo de funciones de clase son los caracteres (ver proposición~\ref{carac
 
 La suma de funciones de clase es una función de clase y el
 producto por escalar de una función de clase es una función de clase,
+
 por lo que se sigue que $R(G)$ es un subespacio vectorial del
 espacio de todas las funciones de $G$ en $F$.
+
+Siguiendo a Isaacs (\cite{MR2047103}, \S 2, p.15), en adelante, el campo $F$ serán
+los numéros complejos~$\mathbb{C}$. Sin embargo, se puede trabajar
+con cualquier campo algebraicamente cerrado de característica que no
+divida a $|G|$.
+
 \begin{theorem}{\normalfont (\cite{sagan2001symmetric}, proposición 1.10.1, p.40, proposición 1.10.2, p.42)}.
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
