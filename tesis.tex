@@ -2005,7 +2005,7 @@ esto se ocupa la teoría de caracteres.
 \begin{equation*}
   G\stackrel{\tr X}{\rightarrow}F.
 \end{equation*}
-Si $V$ es un $G$-módulo, su carácter es el carácter de alguna
+Si $V$ es un $G$-módulo, se define su carácter como el carácter de alguna
 representación matricial $X$ correspondiente a $V$ (por propiedades de
 la traza, el carácter no depende de la base de $V$ escogida). En ocasiones, para resaltar
 que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
@@ -2028,7 +2028,7 @@ dado $g$ es llamado \textbf{clase de conjugación} de $g$ y es
 denotado por $K_{g}$.
 \end{definition}
 
-\begin{proposition}{\normalfont[\cite{sagan2001symmetric}, proposición 1.8.5, p.32]}.
+\begin{proposition}{\normalfont (\cite{sagan2001symmetric}, proposición 1.8.5, p.32)}.
   Sea $G$ un grupo finito y sea $\chi$ el carácter de una
   representación $\rho:G\rightarrow GL(V)$ de grado $n$. Entonces,
   \begin{enumerate}
@@ -2049,17 +2049,17 @@ Un ejemplo de funciones de clase son los caracteres (ver proposición~\ref{carac
 
 La suma de funciones de clase es una función de clase y el
 producto por escalar de una función de clase es una función de clase,
-se sigue que $R(G)$ es un subespacio vectorial de el
-espacio de todas las funciones  de $G$ en $F$.
-\begin{theorem}{\normalfont[\cite{sagan2001symmetric}, proposición 1.10.1, p.40], [\cite{sagan2001symmetric}, proposición 1.10.2, p.42]}.
+por lo que se sigue que $R(G)$ es un subespacio vectorial del
+espacio de todas las funciones de $G$ en $F$.
+\begin{theorem}{\normalfont (\cite{sagan2001symmetric}, proposición 1.10.1, p.40, proposición 1.10.2, p.42)}.
   \label{no-rep-irr-no-cla-conj}
   Sea $G$ un grupo finito. Entonces,
   \begin{enumerate}
   \item Los caracteres irreducibles
     $\chi_{1},\chi_{2},\ldots,\chi_{r}$ de $G$ forman una base del
     espacio de funciones de clase $R(G)$.
-    \item El número de representaciones irreducibles de $G$, salvo
-      isomorfismos, es igual al número de clases de conjugación de $G$.
+    \item La cantidad de distintas representaciones irreducibles de $G$, salvo
+      isomorfismos, es igual a la cantidad de clases de conjugación de $G$.
   \end{enumerate}
 \end{theorem}
 %Se puede consultar la demostración en 1.10.2 de \cite{sagan2001symmetric}.
@@ -2180,9 +2180,9 @@ Las tablas de caracteres que utilizaremos en el capítulo
 \section{Producto interno de caracteres}
 \label{producto-interno}
 
-De aquí en adelante, ya que queremos usar el teorema de Maschke,
-$F$ será el campo de los números complejos. Así, todo $G$-modulo será
-completamente reducible.
+% De aquí en adelante, ya que queremos usar el teorema de Maschke,
+% $F$ será el campo de los números complejos. Así, todo $G$-modulo será
+% completamente reducible.
 
 Mediante el producto interno de caracteres  podemos determinar si una
 representación es irreducible o cuándo dos representaciones son
@@ -2198,7 +2198,7 @@ equivalentes. Además de otros resultados que veremos a continuación.
   \end{equation*}
 \end{definition}
 
-\begin{theorem}{\normalfont[\cite{sagan2001symmetric}, teorema 1.9.3, p.35]}.
+\begin{theorem}{\normalfont (\cite{sagan2001symmetric}, teorema 1.9.3, p.35)}.
   \label{prod-car-irr}
   Sean $V$ y $W$ representaciones irreducibles de un grupo $G$ con
   caracteres $\chi$, $\psi$ respectivamente. Entonces
@@ -2210,7 +2210,7 @@ equivalentes. Además de otros resultados que veremos a continuación.
   \end{cases}
   \]
 \end{theorem}
-\begin{corollary}{\normalfont[\cite{sagan2001symmetric}, corolario 1.9.4, p.37]}.
+\begin{corollary}{\normalfont (\cite{sagan2001symmetric}, corolario 1.9.4, p.37)}.
   \label{multiplicidad}
   Sea $V$ un $G$-módulo con carácter $\chi_{V}$ y supongamos que 
   \begin{equation*}
@@ -2310,6 +2310,12 @@ denotaremos al carácter de $V\downarrow^{G}_{H}$ como
 $\chi_{V}\downarrow^{G}_{H}$. Además, notemos que
 $\chi_{V}\downarrow^{G}_{H}=\chi_{V\downarrow^{G}_{H}}$.
 
+Habiendo obtenido de manera sencilla una representación de $H$ a
+partir de una de $G$ por medio de restricción, definiremos ahora a
+partir de una serie de resultados un procedimiento útil para obtener una
+representación del grupo $G$ a partir de una representación de su
+subgrupo $H$.
+
 % \begin{definition}
 %   Considere $H\leq G$ y $X:G\rightarrow GL(n,\mathbb{C})$ una
 %   representación matricial de $G$. La \textbf{restricción} de $X$ a
@@ -2336,7 +2342,7 @@ negativo si $\chi$ es irreducible.
 Supongamos ahora $\langle\theta,\chi_{j}\rangle=a_{j}$ para
 $j=1,\ldots,k$, donde $\chi_{1},\chi_{2},\ldots,\chi_{k}$ forman una
 colección completa de caracteres irreducibles y $a_{j}$ es un entero
-no negativo. Entonces $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde
+no negativo. Por el corolario~\ref{multiplicidad} se obtiene que $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde
 $\theta$ es el carácter del módulo~$a_{1}V^{(1)}\oplus
 a_{2}V^{(2)}\oplus\cdots\oplus a_{k}V^{(k)}\neq 0$. 
 \end{proof}
@@ -2519,6 +2525,12 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
     &=\sum_{\substack{t_{j}\in T,\\t^{-1}_{j}gt_{j}\in H}}\chi_{W}(t^{-1}_{j}gt_{j})=(\chi_{W})\uparrow^{G}_{H}(g).
   \end{align*}
 \end{proof}
+
+Por lo tanto, dado un grupo finito $G$ con subgrupo $W$, y dado $W$ un
+$H$-módulo, hemos definido el $G$-módulo $W\uparrow^{G}_{H}$. Además,
+definimos una operación de inducción en funciones de clase, de tal
+modo que el carácter de un módulo inducido $W\uparrow^{G}_{H}$ es
+igual a la inducción del carácter $\chi_{W}$.
 
 \section{Gráficas}
 \label{graficas}
