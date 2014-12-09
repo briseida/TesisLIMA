@@ -2540,7 +2540,7 @@ igual a la inducción del carácter $\chi_{W}$.
   de $p$ \textbf{vértices} junto con un conjunto $E=E(G)$ de $q$ pares no
   ordenados de vértices distintos pertenecientes al conjunto $V(G)$. Cada par $e=\{u,v\}$ de vértices
   en $E$ es una \textbf{arista} de $G$, y se dice que $e$ une a $u$ y
-  $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \textbf{adyacentes};
+  $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \textbf{adyacentes}.
   %un vértice $u$ y una arista $e$ son \emph{incidentes} si $u\in e$. 
   Dos aristas $e$ y $f$ son \textbf{ajenas} si $e\cap f=\emptyset$.
   % Una gráfica con $p$ vértices y $q$
@@ -2588,7 +2588,7 @@ son adyacentes.
     $K_{n}$. 
   \item Si $v_{i}=\overline{pq}$ y $v_{j}=\overline{rs}$ están en
     $V(G_{n})$, $\{v_{i},v_{j}\}$ es una arista en $E(G_{n})$ si $v_{i}$
-    y $v_{j}$ son ajenas.
+    y $v_{j}$ son aristas ajenas de $K_{n}$, es decir, si $\{p,q\}\cap\{r,s\}=\emptyset$.
   \end{enumerate}
 \end{definition} 
 
@@ -2681,8 +2681,11 @@ son adyacentes.
   de intersección de la familia de clanes de $G$. Denotemos a la
   gráfica de clanes de $G$ como $K(G)$. 
 \end{definition}
+
 \begin{example}
-  La gráfica $K_{4}$ de la figura \ref{KG} es la gráfica de clanes de $G$ de la figura \ref{G}.
+  Los clanes de la gráfica de la figura \ref{G} son sus cuatro subgráficas
+  completas de $3$ vértices. Como los cuatro clanes se intersecan dos
+  a dos, la gráfica $K_{4}$ de la figura \ref{KG} es la gráfica de clanes de $G$ de la figura~\ref{G}.
 
   \begin{center}
     \begin{figure}[h]
@@ -2714,7 +2717,7 @@ son adyacentes.
 \begin{definition}
   La \textbf{gráfica bipartita clánica} de $G$ es definida como la gráfica
   $BK(G)$ con $V(BK(G))=V(G)\cup V(K(G))$, donde $x\in V(G)$,
-  $c\in (K(G))$ son adyacentes si $x\in c$.
+  $c\in V(K(G))$ son adyacentes si $x\in c$ y no hay otras adyacencias.
 \end{definition}
 \begin{example}
   \label{BKG}
