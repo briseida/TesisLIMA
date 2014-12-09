@@ -2556,7 +2556,9 @@ igual a la inducción del carácter $\chi_{W}$.
   en $E$ es una \textbf{arista} de $G$, y se dice que $e$ une a $u$ y
   $v$. Escribimos a $e=uv$ y decimos que $u$ y $v$ son \textbf{adyacentes}.
   %un vértice $u$ y una arista $e$ son \emph{incidentes} si $u\in e$. 
-  Dos aristas $e$ y $f$ son \textbf{ajenas} si $e\cap f=\emptyset$.
+  Dos aristas $e$ y $f$ son \textbf{ajenas} si $e\cap f=\emptyset$. Un
+  \textbf{camino} es una sucesión finita de
+  vértices tal que exista una arista entre cada vértice y el siguiente.
   % Una gráfica con $p$ vértices y $q$
   % aristas es llamada una $(p,q)$ gráfica.
 \end{definition}
@@ -3597,7 +3599,10 @@ por una permutación par.
   \caption{3-simplejo}
   \label{fig:3-simplejo}
 \end{figure}
-
+A continuación, vamos a realizar un procedimiento análogo a la construcción del
+espacio $FX$ (ver lema \ref{FX} y teorema \ref{base-FX}), pero ahora en la
+construcción del espacio de \emph{p}-cadenas $C_{p}(\Delta)$, tomando
+en cuenta la orientación de los simplejos.
 \begin{definition}
   Sea $\Delta$ un complejo simplicial. Una \textbf{\emph{p}-cadena} en
   $\Delta$ es una función $c$ de el conjunto de $p$-simplejos
@@ -3741,6 +3746,8 @@ Comparando estas dos expresiones observamos que solo difieren por un signo.
     v_{j}\ldots).
   \end{align*}
   Los términos de estas dos sumas se cancelan a pares.
+
+  Por otro lado $\varepsilon(\partial_{1}(v_{0}v_{1}))=\varepsilon(v_{1}-v_{0})=1-1=0$.
 \end{proof}
 
 \begin{corollary}
