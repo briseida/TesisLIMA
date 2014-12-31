@@ -559,8 +559,7 @@ por medio del producto interno de caracteres podemos determinar si una
 representación es irreducible, cuándo dos representaciones son
 equivalentes, y la multiplicidad de cierto submódulo irreducible en la
 descomposición de un $G$-módulo, entre otros teoremas que se muestran en la
-sección~\ref{producto-interno}. En la sección \ref{carac-induc} de
-caracteres y módulos inducidos, se exponen la reciprocidad de
+sección~\ref{producto-interno}. En la sección \ref{carac-induc}, se expone la reciprocidad de
 Frobenius y la fórmula para obtener el carácter de una representación
 inducida.
 
@@ -598,8 +597,8 @@ se suponen sobre $F$.
 %   n$. Además, si~$\dim(W)=n$, entonces $W=V$.
 % \end{theorem}
 \begin{definition}
-  Si $W_{1}$ y $W_{2}$ son dos subconjuntos no vacíos de un espacio
-  vectorial $V$, entonces la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
+  Sean $W_{1}$ y $W_{2}$ dos subconjuntos no vacíos de un espacio
+  vectorial $V$, la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
   expresa como $W_{1}+W_{2}$, es el conjunto $\{x+y:x\in W_{1}$ y $y\in
   W_{_2}\}$. La suma de cualquier número finito de subconjuntos no
   vacíos de $V$: $W_{1},\ldots,W_{n}$, se define análogamente como el
@@ -637,7 +636,7 @@ entonces $W_{1}+W_{2}$ es subespacio de $V$.
 
 \begin{definition}
   Sea $W$ un subespacio de un espacio vectorial $V$. Para toda $v\in V$ el conjunto $\{v\}+W=\{v+w:w\in W\}$ se
-  llama \textbf{clase lateral de $W$ que contiene a $v$}. Es frecuente
+  llama \textbf{clase lateral de $W$}. Es frecuente
   expresar a esta clase lateral como~$v+W$ en vez de $\{v\}+W$. 
 \end{definition}
 
@@ -661,7 +660,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 \begin{theorem}{\normalfont (\cite{herstein1990algebra}, lema 4.8, p.168)}.
   \label{dim-esp-coc}
   Sea $(V/W)$ el espacio cociente de $V$ módulo $W$, se tiene:
-  $$\dim(V/W)=\dim(V)-\dim(W)$$
+  $$\dim(V/W)=\dim(V)-\dim(W).$$
 \end{theorem}
 
 % \begin{theorem}
@@ -673,36 +672,36 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
 
 % \section{Transformaciones lineales}
 % \label{trasn-lin}
-\begin{definition}
-  \label{t-l}
-  Sean $V$ y $W$ espacios vectoriales. Una función
-  $T:V\rightarrow W$ se llama \textbf{transformación lineal} de $V$ en
-  $W$ si para todo $x,y\in V$ y $c\in F$ tenemos que
-  \begin{enumerate}
-  \item $T(x+y)=T(x)+T(y)$.
-  \item $T(cx)=cT(x)$.
-  \end{enumerate}
-\end{definition}
+% \begin{definition}
+%   \label{t-l}
+%   Sean $V$ y $W$ espacios vectoriales. Una función
+%   $T:V\rightarrow W$ se llama \textbf{transformación lineal} de $V$ en
+%   $W$ si para todo $x,y\in V$ y $c\in F$ tenemos que
+%   \begin{enumerate}
+%   \item $T(x+y)=T(x)+T(y)$.
+%   \item $T(cx)=cT(x)$.
+%   \end{enumerate}
+% \end{definition}
 
-\begin{definition}
-  \label{ker-im}
-  Sean $V$ y $W$ espacios vectoriales y sea $T:V\rightarrow W$ una
-  transformación lineal. El \textbf{kernel o espacio nulo de $T$},
-  es denotado como $\ker(T)$ y está dado por el conjunto:
-  \begin{equation*}
-    \ker(T)=\{v\in V\mid T(v)=0\}.
-  \end{equation*}
-  Definimos a la \textbf{imagen o rango de $T$}, denotado como
-  $\im(T)$, dado por el conjunto:
-  \begin{equation*}
-    \im (T)=\{T(v)\mid v\in V\}.
-  \end{equation*}
-\end{definition}
+% \begin{definition}
+%   \label{ker-im}
+%   Sean $V$ y $W$ espacios vectoriales y sea $T:V\rightarrow W$ una
+%   transformación lineal. El \textbf{kernel o espacio nulo de $T$},
+%   es denotado como $\ker(T)$ y está dado por el conjunto:
+%   \begin{equation*}
+%     \ker(T)=\{v\in V\mid T(v)=0\}.
+%   \end{equation*}
+%   Definimos a la \textbf{imagen o rango de $T$}, denotado como
+%   $\im(T)$, dado por el conjunto:
+%   \begin{equation*}
+%     \im (T)=\{T(v)\mid v\in V\}.
+%   \end{equation*}
+% \end{definition}
 
 \begin{theorem}{\normalfont (\cite{friedberg1982algebra}, corolario 2.3, p.69)}.
   \label{imT}
-  Sean $V$ y $W$ espacios vectoriales y $T:V \rightarrow W$
-  una transformación lineal. Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base de $V$,
+  Si $V$ y $W$ son espacios vectoriales y $T:V \rightarrow W$
+  una transformación lineal. Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base de~$V$,
   entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
 \end{theorem}
 
@@ -713,7 +712,7 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
   si y solo si $\dim (V)=\dim(W).$
 \end{theorem}
 
-\begin{theorem}[Teorema de isomorfismo]
+\begin{theorem}[Teorema de isomorfismo]{\normalfont (\cite{herstein1990algebra}, teorema 4.A, p.160)}.
   \label{teorema-isomorfismo-esp}
   Si $f:V\rightarrow W$ es una transformación lineal, el espacio
   cociente $V/\ker(f)$ es isomorfo a $\im(f)$. Un isomorfismo entre estos dos
@@ -721,36 +720,36 @@ Se puede demostrar que las operaciones anteriores están bien definidas.
   $$\phi:V/\ker(f)\rightarrow \im(f)$$
   definido por $\phi(v+\ker(f))=f(v).$
 \end{theorem}
-\begin{proof}[Demostración.]
-  Hay que demostrar que $\phi$ está bien definida, es decir, si
-  tenemos que
-  $v_1+\ker(f)=v_2+\ker(f)$, entonces
-  $f(v_1)=f(v_{2}).$ Sabemos que 
-  $v_1+\ker(f)=v_2+\ker(f)$ si y solo si
-  $v_{1}-v_{2}\in \ker(f)$, es decir,~$f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
-  como se quería. Queda por demostrar de forma directa que $\phi$ es
-  una transformación lineal, y para demostrar que es isomorfismo falta
-  demostrar que es inyectiva y suprayectiva, lo cual también se hace
-  de forma directa.
-\end{proof}
+% \begin{proof}[Demostración.]
+%   Hay que demostrar que $\phi$ está bien definida, es decir, si
+%   tenemos que
+%   $v_1+\ker(f)=v_2+\ker(f)$, entonces
+%   $f(v_1)=f(v_{2}).$ Sabemos que 
+%   $v_1+\ker(f)=v_2+\ker(f)$ si y solo si
+%   $v_{1}-v_{2}\in \ker(f)$, es decir,~$f(v_{1}-v_{2})=f(v_1)-f(v_2)=0$,
+%   como se quería. Queda por demostrar de forma directa que $\phi$ es
+%   una transformación lineal, y para demostrar que es isomorfismo falta
+%   demostrar que es inyectiva y suprayectiva, lo cual también se hace
+%   de forma directa.
+% \end{proof}
 
-\begin{definition}
-  \label{vec-coor}
-  Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base para un espacio
-  vectorial~$V$. Dado $v\in V$ definimos al \textbf{vector coordenado de $v$
-  relativo a $\beta$}, denotado por $[v]_{\beta}$, mediante
-  \begin{center}
-    $[v]_{\beta}=\begin{pmatrix}
-      \lambda_{1}  \\
-      \vdots  \\
-      \lambda_{n}  
-    \end{pmatrix}$
-  \end{center}
-donde
-\begin{equation*}
-  v=\sum^{n}_{i=1}\lambda_{i}v_{i}.
-\end{equation*}
-\end{definition}
+% \begin{definition}
+%   \label{vec-coor}
+%   Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base para un espacio
+%   vectorial~$V$. Dado $v\in V$ definimos al \textbf{vector coordenado de $v$
+%   relativo a $\beta$}, denotado por $[v]_{\beta}$, mediante
+%   \begin{center}
+%     $[v]_{\beta}=\begin{pmatrix}
+%       \lambda_{1}  \\
+%       \vdots  \\
+%       \lambda_{n}  
+%     \end{pmatrix}$
+%   \end{center}
+% donde
+% \begin{equation*}
+%   v=\sum^{n}_{i=1}\lambda_{i}v_{i}.
+% \end{equation*}
+% \end{definition}
 
 % \begin{definition}
 %   \label{matr-rep-T}
@@ -781,59 +780,60 @@ donde
 %   \end{center}
 % Si $V=W$ y $\beta=\gamma$, escribiremos $[T]_{\beta}$.
 % \end{definition}
-\begin{definition}
-  \label{matr-rep-T}
-  Sean $V$ y $W$ espacios vectoriales de dimensión finita con bases $\beta=\{v_{1},\ldots,v_{n}\}$ y
-  $\gamma=\{w_{1},\ldots,w_{m}\}$, respectivamente. Sea $T:V\rightarrow~W$ una
-  transformación lineal. Entonces existen escalares únicos $a_{ij}\in F$
-  con $i=1,\ldots,m$ y $j=1,\ldots,n$, tales que
-  \begin{equation*}
-    T(v_{j})=\sum_{i=1}^{m}a_{ij}w_{i} \mbox{ para } 1\leq j\leq n. 
-  \end{equation*}
-  Utilizando la notación anterior, llamaremos a la matriz $A$ de
-  $m\times n$, definida mediante $A_{ij}=a_{ij}$, la \textbf{matriz que representa a $T$
-  en las bases $\beta$ y $\gamma$} y la escribiremos de acuerdo a la
-  notación de \cite{friedberg1982algebra} como
-  $A=[T]^{\gamma}_{\beta}$. Si $V=W$ y $\beta=\gamma$, escribiremos
-  $A=[T]_{\beta}$.
-\end{definition}
+% \begin{definition}
+%   \label{matr-rep-T}
+%   Sean $V$ y $W$ espacios vectoriales de dimensión finita con bases $\beta=\{v_{1},\ldots,v_{n}\}$ y
+%   $\gamma=\{w_{1},\ldots,w_{m}\}$, respectivamente. Sea $T:V\rightarrow~W$ una
+%   transformación lineal. Entonces existen escalares únicos $a_{ij}\in F$
+%   con $i=1,\ldots,m$ y $j=1,\ldots,n$, tales que
+%   \begin{equation*}
+%     T(v_{j})=\sum_{i=1}^{m}a_{ij}w_{i} \mbox{ para } 1\leq j\leq n. 
+%   \end{equation*}
+%   Utilizando la notación anterior, llamaremos a la matriz $A$ de
+%   $m\times n$, definida mediante $A_{ij}=a_{ij}$, la \textbf{matriz que representa a $T$
+%   en las bases $\beta$ y $\gamma$} y la escribiremos de acuerdo a la
+%   notación de \cite{friedberg1982algebra} como
+%   $A=[T]^{\gamma}_{\beta}$. Si $V=W$ y $\beta=\gamma$, escribiremos
+%   $A=[T]_{\beta}$.
+% \end{definition}
 
 A continuación, construiremos un espacio vectorial muy importante, ya
-que lo usaremos más adelante en la sección \ref{rep-grup}
-de representaciones de grupos.
+que lo usaremos más adelante en la sección \ref{rep-grup}.
+%de representaciones de grupos.
 
-Sea $X$ un conjunto no vacío. Se define $FX$ como:
+Sea $X$ un conjunto no vacío. Se define $F^{X}$ como:
 \begin{equation*}
-  FX=\{f:X\rightarrow F\mid \{x\in X\mid f(x)\neq 0\} \mbox{ es finito}\}.
+  %\label{F-X}
+  F^{X}=\{f:X\rightarrow F\mid f(x)\neq 0 \mbox{ para un número finito
+    de } x\in X\}.
 \end{equation*}
 
 \begin{lemma}
   \label{FX}
-  $FX$ es un espacio vectorial con las siguientes operaciones:
+  $F^{X}$ es un espacio vectorial con las siguientes operaciones:
   \begin{itemize}
-  \item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in FX$,
+  \item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in F^{X}$,
   \item $(rf)(x)=rf(x)$, con $r\in F$.
   \end{itemize}
 \end{lemma}
 
 \begin{proof}[Demostración]
   Para verificar que la suma está bien definida, verifiquemos que si
-  $f,g\in FX$, entonces $(f+g) \in FX$. Sean $f,g\in FX$ y $A,B$
+  $f,g\in F^{X}$, entonces $(f+g) \in F^{X}$. Sean $f,g\in F^{X}$ y $A,B$
   subconjuntos finitos de $X$, tales que $f(x)=0$ para $x\not\in A$ y
   $g(y)=0$ para $y\not\in B$. Notemos que $A\cup B$ es un
   subconjunto finito de $X$ y $(f+g)(z)=0$ para $z\not\in A\cup
-  B$, por tanto, $(f+g) \in FX$. De forma similar, comprobemos que el
-  producto por escalar está bien definido. Si $r\in F$, $f\in FX$ y
+  B$, por tanto, $(f+g) \in F^{X}$. De forma similar, comprobemos que el
+  producto por escalar está bien definido. Si $r\in F$, $f\in F^{X}$ y
   $C$ es un subconjunto finito de $X$, tal que $f(x)=0$ para $x\not\in
   C$, entonces $(rf)(x)=0$ para $x\not\in C$, por tanto~$(rf)\in
-  FX$. Es inmediato demostrar que se cumplan las otras condiciones de
+  F^{X}$. Es inmediato demostrar que se cumplan las otras condiciones de
   espacio vectorial.
 \end{proof}
 
-\begin{definition}
-  \label{fun-caracteristica}
-  Definimos a la \textbf{función característica} $\varphi:X\rightarrow
-  FX$, tal que
+%\begin{definition}
+ % \label{fun-caracteristica}
+  Sea la función $\varphi:X\rightarrow F^{X}$, tal que
   \[
   \varphi(x)(y)=
   \begin{cases}
@@ -841,15 +841,15 @@ Sea $X$ un conjunto no vacío. Se define $FX$ como:
     0, & \text{si } x\neq y \\
   \end{cases}
   \]
-\end{definition}
+%\end{definition}
 Notemos que $\varphi$ es inyectiva, puesto que, si $x,y\in X$ y $x\neq y$,
 entonces $\varphi(x)(y)\neq\varphi(y)(y)$, pues
 $\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, así
-$\varphi(x)\neq\varphi(y)$. $\varphi(X)$ es un subconjunto de $FX$ que
-está en biyección con $X$.
+$\varphi(x)\neq\varphi(y)$. $\varphi(X)$ es un subconjunto de $F^{X}$ que
+se identifica con $X$.
 \begin{theorem}
   \label{base-FX}
-  $\varphi(X)$ es base de el espacio vectorial $FX$.
+  $\varphi(X)$ es base del espacio vectorial $F^{X}$.
 \end{theorem}
 \begin{proof}[Demostración]
   Sea $D=\{x_{1},x_{2},\dots,x_{n}\}$ un subconjunto finito de $X$. Consideremos
@@ -858,7 +858,7 @@ está en biyección con $X$.
   $$\sum_{x_{i}\in D} \lambda_{x_{i}}\varphi(x_{i})(y)=\lambda_{x_{j}},$$
   si $y=x_{j}$, entonces $\lambda_{x_{j}}=0$. Por tanto, $\{\varphi(x_{i})\mid x_{i}\in D\}$ es linealmente independiente.
 
-  Por otra parte, sea $E$ un subconjunto finito de $X$. Sea $f\in FX$, tal que~$f(x)\neq 0$ para $x\in E$, tenemos:
+  Por otra parte, sea $E$ un subconjunto finito de $X$. Sea $f\in F^{X}$, tal que~$f(x)\neq 0$ para $x\in E$, tenemos:
   $$\sum_{x\in X}f(x)\varphi(x)=\sum_{x\in
     E}f(x)\varphi(x)+\sum_{x\not\in E}f(x)\varphi(x)=\sum_{x\in E}f(x)\varphi(x)$$
   Ahora, tomemos $y\in E$, entonces $\sum_{x\in
@@ -866,9 +866,9 @@ está en biyección con $X$.
 \end{proof}
 
 Por abuso de notación y ya que $\varphi$ es inyectiva se
-``identifica'' cada elemento $x\in X$ con su función característica
+identifica cada elemento $x\in X$ con la función
 $\varphi(x)$. Con esta notación, cada elemento $f$ de el espacio vectorial
-$FX$ se escribe como combinación lineal de los elementos de $X$:
+$F^{X}$ se escribe como combinación lineal de los elementos de $X$:
 \begin{equation}
   \label{sumas-formales}
   f=\sum_{x\in X} f(x)x.
