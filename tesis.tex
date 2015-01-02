@@ -644,18 +644,30 @@ Se puede demostrar lo siguiente:
 \begin{itemize}
 \item $v_{1}+W=v_{2}+W$ si y solo si $v_{1}-v_{2}\in W.$
 \end{itemize}
-La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
-V\}$ de todas las clases laterales de $W$ como: 
-\begin{itemize}
-\item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
-\item $a(v+W)=av+W$ para todo $v\in V$ y $a\in F$.
-\end{itemize}
-Se puede demostrar que las operaciones anteriores están bien definidas.
+Denotemos por $V/W$ al conjunto de todas las clases laterales de $W$.
+\begin{lemma}[\cite{herstein1990algebra}, lema 4.2, p.160]
+  \label{esp-coc}
+  Si $V$ es un espacio vectorial y si $W$ es un subespacio de $V$,
+  entonces $V/W$ es un espacio vectorial, donde para $v_{1}+W,v_{2}+W\in V/W$ y
+  $\lambda\in F$,
+  \begin{itemize}
+  \item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
+  \item $\lambda(v_{1}+W)=\lambda v_{1}+W$ para todo $v_{1}\in V$ y $\lambda\in F$.
+  \end{itemize}
+  Llamamos a $V/W$ el \textbf{espacio cociente de $V$ módulo $W$}.
+\end{lemma}
+% La suma y el producto puede definirse en el conjunto $S=\{v+W:v\in
+% V\}$ de todas las clases laterales de $W$ como: 
+% \begin{itemize}
+% \item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
+% \item $a(v+W)=av+W$ para todo $v\in V$ y $a\in F$.
+% \end{itemize}
+% Se puede demostrar que las operaciones anteriores están bien definidas.
 
-\begin{definition}
-  El conjunto $S$ es un espacio vectorial bajo las operaciones
-  definidas anteriormente y se llama \textbf{espacio cociente de $V$ módulo $W$} y se denota mediante $V/W$. 
-\end{definition}
+% \begin{definition}
+%   El conjunto $S$ es un espacio vectorial bajo las operaciones
+%   definidas anteriormente y se llama \textbf{espacio cociente de $V$ módulo $W$} y se denota mediante $V/W$. 
+% \end{definition}
 
 \begin{theorem}{\normalfont (\cite{herstein1990algebra}, lema 4.8, p.168)}.
   \label{dim-esp-coc}
@@ -810,7 +822,7 @@ Sea $X$ un conjunto no vacío. Se define $F^{X}$ como:
 
 \begin{lemma}
   \label{FX}
-  $F^{X}$ es un espacio vectorial con las siguientes operaciones:
+  $F^{X}$ es un espacio vectorial, donde:
   \begin{itemize}
   \item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in F^{X}$,
   \item $(rf)(x)=rf(x)$, con $r\in F$.
