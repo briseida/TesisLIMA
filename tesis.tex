@@ -896,18 +896,17 @@ $F^{X}$ se escribe como combinación lineal de los elementos de $X$:
 \end{definition} 
 
 \begin{definition} 
-  Un \textbf{grupo} es un conjunto $G$, junto con una
+  Un \textbf{grupo} es un conjunto no vacío $G$, junto con una
   \textbf{operación binaria} $*$ que satisface las siguientes condiciones:
     \begin{enumerate}
-    \item La operación es asociativa, es decir, $$a(bc)=(ab)c$$ para todo $a,b,c \in G$.
-    \item Existe un elemento neutro $1 \in G$ que
-      satisface: $$a1=1a=a$$ para todo $a \in G$.
-    \item Para cada elemento $a \in G$ existe otro elemento $a^{-1} \in G$
-      tal que $$aa^{-1}=a^{-1}a=1$$ Al elemento $a^{-1}$ se le llama inverso del elemento $a$.
+    \item La operación es asociativa, es decir, $a(bc)=(ab)c$, para
+      todos $a,b,c\in~G$.
+    \item Existe un elemento neutro $1 \in G$ tal que $a1=1a=a$, para
+      todo $a \in G$.
+    \item Para cada $a \in G$, existe $a^{-1} \in G$ tal que
+      $aa^{-1}=a^{-1}a=1$. A $a^{-1}$ se le llama inverso de $a$.
     \end{enumerate}
-
-    Decimos que un grupo $G$ es \textbf{abeliano} si para cualquier
-    $a,b\in G$ se tiene~$ab=ba$.
+Un grupo $G$ es \textbf{abeliano} si para cualquier $a,b\in G$ se tiene $ab=ba$.
 \end{definition}
 El número de elementos de un grupo $G$, es el \textbf{orden} de $G$, y
 lo denotamos por $|G|$. Cuando $|G|$ es finito, decimos que $G$ es un
@@ -917,7 +916,8 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \begin{example}
   \label{GL(nF)}
   El conjunto de matrices invertibles $n \times n$ con
-  entradas en~$F$, denotado como $GL(n,F)$, junto con el producto de matrices es un grupo.  
+  entradas en un campo $F$, denotado como $GL(n,F)$, junto con el
+  producto usual de matrices es un grupo.  
 \end{example}
 
 \begin{example}
@@ -929,9 +929,13 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 
 \begin{example}
   \label{grupo-ciclico}
-  Sea $n\in \mathbb{Z}$, construimos un grupo denotado por $C_{n}$ como sigue: consistirá
-  en todos los símbolos $a^{i}$, con $i=0,1,2,\dots,n-1$ en donde $a^{i}a^{j}=a^{i+j}$ si $i+j< n$ y
-  $a^{i}a^{j}=a^{i+j-n}$ si $i+j\geq n$. A $C_{n}$ se le conoce como \textbf{grupo
+  Sea $G$ un grupo y $g\in G$, definimos las potencias de $g$ como
+  sigue: $g^{0}=1$, $g^{1}=g$, $g^{2}=gg$,
+  $g^{3}=gg^{2}$, $\dots$, $g^{k}=gg^{k-1}$ para $k\geq0$ y
+  $g^{-k}=(g^{-1})^{k}$ para $k<0$.
+  Sea $n\in \mathbb{Z}$, construimos un grupo denotado por~$C_{n}$ como sigue: consistirá
+  de todas las potencias $g^{i}$, con $i=0,1,2,\dots,n-1$ en donde $g^{i}g^{j}=g^{i+j}$ si $i+j< n$ y
+  $g^{i}g^{j}=g^{i+j-n}$ si $i+j\geq n$. A $C_{n}$ se le conoce como \textbf{grupo
     cíclico}.
 \end{example}
 
@@ -939,7 +943,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
   en $H$ es una función $\rho:G\rightarrow H$ la cual
   satisface $$\rho(ab)=\rho(a)\rho(b),$$
-  para todo $a,b \in G$. Si $\rho$ es biyectivo diremos que $\rho$ es
+  para todo $a,b \in G$. Si $\rho$ es biyectiva diremos que $\rho$ es
   un \textbf{isomorfismo}.
 \end{definition}
 
@@ -1000,7 +1004,9 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   $$\pi(i_{1})=i_{2},\pi(i_{2})=i_{3},\ldots,\pi(i_{k-1})=i_{k},\pi(i_{k})=i_{1}$$
   y $\pi$ fija a los elementos de $Y$ distintos de
   $i_{1},i_{2},\ldots,i_{k}$, entonces,
-  diremos que $\pi$ es un \textbf{ciclo de longitud $k$} o un \textbf{$k$-ciclo}. Un ciclo de longitud 2 es una \textbf{transposición}.
+  diremos que $\pi$ es un \textbf{ciclo de longitud $k$} o un
+  \textbf{$k$-ciclo} y se denota por $\pi=(i_{1}i_{2}\dots i_{k})$. Un
+  ciclo de longitud 2 es una \textbf{transposición}.
 \end{definition}
 
 \begin{example}
@@ -1013,6 +1019,36 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   \right)=(124)(3)(5)=(124),\]
   entonces $\pi$ es un 3-ciclo.
 \end{example}
+
+\begin{definition}
+  La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la partición de
+  $n$ formada por las longitudes de los ciclos en la descomposición.
+\end{definition}
+
+\begin{example}
+  \[\pi=\left(
+    \begin{array}{ccccc}
+      1 & 2 & 3 & 4 & 5\\
+      2 & 3 & 1 & 5 & 4  
+    \end{array} 
+  \right)=(123)(45).\]
+  Así, $(123)(45)\in S_{5}$ tiene la estructura cíclica (3,2). 
+\end{example}
+
+\begin{definition}
+  Dos elementos $g,g_{1}\in G$ son \textbf{conjugados} si
+  \begin{equation*}
+  g=hg_{1}h^{-1},
+\end{equation*}
+para algún $h\in G$. El conjunto de todos los elementos conjugados
+dado $g$ es llamado \textbf{clase de conjugación} de $g$ y es
+denotado por $K_{g}$.
+\end{definition}
+
+\begin{theorem}{\normalfont (\cite{zaldivar}, teorema 4.12, p.43)}.
+  Dos elementos de $S_{n}$ son conjugados si y solo si tienen la misma
+  estructura cíclica.   
+\end{theorem}
 
 \begin{theorem}{\normalfont (\cite{fraleigh}, corolario 9.12, p.90)}.
   \label{per-prod-trans}
@@ -2037,15 +2073,6 @@ sea.
 
 Se muestra al final de esta sección, un ejemplo de cómo calcular caracteres de la representación
 trivial, signo y estándar con la acción de $S_{3}$.
-\begin{definition}
-  Dos elementos $g,g_{1}\in G$ son \textbf{conjugados} si
-  \begin{equation*}
-  g=hg_{1}h^{-1}
-\end{equation*}
-para algún $h\in G$. El conjunto de todos los elementos conjugados
-dado $g$ es llamado \textbf{clase de conjugación} de $g$ y es
-denotado por $K_{g}$.
-\end{definition}
 
 \begin{proposition}{\normalfont (\cite{sagan2001symmetric}, proposición 1.8.5, p.32)}.
   Sea $G$ un grupo finito y sea $\chi$ el carácter de una
