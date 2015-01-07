@@ -2258,7 +2258,9 @@ Las tablas de caracteres que utilizaremos en el capítulo
 Mediante el producto interno de caracteres  podemos determinar si una
 representación es irreducible o cuándo dos representaciones son
 equivalentes. Además de otros resultados que veremos a continuación.
+
 \begin{definition}
+  \label{producto-interno-de-funciones}
   % Sean $\chi$, $\psi$ los caracteres de dos representaciones de un grupo
   % $G$, entonces definimos el producto interno de $\chi$ y $\psi$ sobre
   % el espacio de funciones de $G$ en $\mathbb{C}$ como:
@@ -2383,9 +2385,11 @@ $\chi_{V}\downarrow^{G}_{H}=\chi_{V\downarrow^{G}_{H}}$.
 
 Habiendo obtenido de manera sencilla una representación de $H$ a
 partir de una de $G$ por medio de restricción, definiremos ahora a
-partir de una serie de resultados un procedimiento útil para obtener una
+partir de una serie de resultados un procedimiento, llamado inducción, para obtener una
 representación del grupo $G$ a partir de una representación de su
-subgrupo $H$.
+subgrupo~$H$. La inducción resultará muy útil en los siguientes
+capítulos para obtener una expresión simplificada de un $G$-módulo $V$
+a partir de un subgrupo adecuado~$H$ de $G$ y subespacio $W$ de $V$.
 
 % \begin{definition}
 %   Considere $H\leq G$ y $X:G\rightarrow GL(n,\mathbb{C})$ una
@@ -2404,6 +2408,7 @@ Una función de clase $\theta:G\rightarrow\mathbb{C}$ es un carácter si
 y solo si $\theta\neq 0$ y $\langle\theta,\chi\rangle$ es un entero no
 negativo para todo carácter irreducible~$\chi$ de $G$. 
 \end{proposition}
+
 \begin{proof}[Demostración]
 Si $\theta$ es un carácter, entonces $\theta(1)>0$, por lo tanto
 $\theta\neq 0$. Además, por el inciso $2$ de el corolario
@@ -2413,35 +2418,49 @@ negativo si $\chi$ es irreducible.
 Supongamos ahora $\langle\theta,\chi_{j}\rangle=a_{j}$ para
 $j=1,\ldots,k$, donde $\chi_{1},\chi_{2},\ldots,\chi_{k}$ forman una
 colección completa de caracteres irreducibles y $a_{j}$ es un entero
-no negativo. Por el corolario~\ref{multiplicidad} se obtiene que $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde
-$\theta$ es el carácter del módulo~$a_{1}V^{(1)}\oplus
+no negativo. Por el corolario~\ref{multiplicidad} se obtiene que $\theta=\sum^{k}_{j=1}a_{j}\chi_{j}$, de donde~$\theta$ es el carácter del módulo~$a_{1}V^{(1)}\oplus
 a_{2}V^{(2)}\oplus\cdots\oplus a_{k}V^{(k)}\neq 0$. 
 \end{proof}
 
 \begin{definition}
-  Sea $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ una función. Definimos la
+  Sean $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ una función. Definimos la
   función $\theta\uparrow^{G}_{H}:G\rightarrow \mathbb{C}$ como:
-  \begin{equation*}
+  \begin{equation}
+    \label{inducidas}
     \theta\uparrow^{G}_{H}(g)=\frac{1}{|H|}\sum_{\substack{x\in
         G\\x^{-1}gx\in H}}\theta(x^{-1}gx).
-  \end{equation*}
+  \end{equation}
   Decimos que la función $\theta\uparrow^{G}_{H}$ es \textbf{inducida}
   por la función $\theta$.
 \end{definition}
-Observemos que si $H\leq G$, y $x,g\in G$ son tales que $x^{-1}gx\in
-H$, entonces para todo $h\in H$ se tiene que
-$(xh)^{-1}g(xh)=h^{-1}(x^{-1}gx)h\in H$. Además, si $\theta$ es una función de
-clase, $\theta(h^{-1}(x^{-1}gx)h)=\theta(x^{-1}gx)$. Sea $T$ una \textbf{transversal izquierda} de $H$ en $G$, es decir, una
+
+En la suma del lado derecho de la ecuación~\ref{inducidas}, dado $g\in G$, los sumandos están
+indexados por los elementos $x\in G$ tales que $x^{-1}gx\in H$.
+Una expresión equivalente puede obtenerse por medio del concepto de transversal.
+Si $H$ es un subgrupo no necesariamente normal de $G$, una \textbf{transversal izquierda} de $H$ en $G$ es una
 colección de representantes de las clases laterales izquierdas de $H$,
 de modo que si $T=\{t_{1},\ldots,t_{s}\}$ entonces
-$G=t_{1}H\cup\cdots\cup t_{s}H$. Por lo tanto, si
+$G=t_{1}H\cup\cdots\cup t_{s}H$.
+
+Observemos que si $H\leq G$, y $x,g\in G$ son tales que $x^{-1}gx\in
+H$, entonces para todo $h\in H$ se tiene que
+$(xh)^{-1}g(xh)=h^{-1}(x^{-1}gx)h\in H$. Recíprocamente, si
+$(xh)^{-1}g(xh)\in H$, entonces $x^{-1}gx\in
+H$. Además, si $\theta$ es una función de
+clase, $\theta(h^{-1}(x^{-1}gx)h)=\theta(x^{-1}gx)$. Es decir, el
+hecho de que $x^{-1}gx\in H$ depende únicamente de la clase lateral
+donde esté $x$, y similarmente, el valor de la función
+$\theta(x^{-1}gx)$ es constante para todo $x$ en una clase lateral fija.
+
+Puesto que toda clase lateral tiene $|H|$ elementos, se tiene que si
 $\theta:H\rightarrow\mathbb{C}$ es una función de clase, podemos
 calcular a $\theta\uparrow^{G}_{H}$ por medio de la fórmula:
 \begin{equation}
   \label{fun-ind-trans}
   \theta\uparrow^{G}_{H}(g)=\sum_{\substack{x\in T,\\x^{-1}gx\in H}}\theta(x^{-1}gx).
 \end{equation}
-Por otro lado, notemos:
+
+Por ejemplo, tenemos que:
 \begin{equation*}
   \theta\uparrow^{G}_{H}(1)=\sum_{\substack{x\in T,\\x^{-1}1x\in
       H}}\theta(x^{-1}1x)=\sum_{\substack{x\in T,\\1\in
@@ -2449,6 +2468,7 @@ Por otro lado, notemos:
 \end{equation*}
 donde $[G:H]$ es el número de clases laterales de $H$ en $G$, llamado
 el \emph{índice} de $H$ en $G$.
+
 \begin{proposition}
   Si $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ es una función de
   clase, entonces $\theta\uparrow^{G}_{H}:G\rightarrow \mathbb{C}$ es
@@ -2471,11 +2491,9 @@ en donde se hizo el cambio de variable $u=y^{-1}x$ (esto es $x=yu$), y notamos
 que $yu\in G$ si y solo si $u\in G$.
 \end{proof}
 
-Recordemos que el conjunto de todas las funciones de clase $R(G)$ es
-un subespacio vectorial de el espacio de todas las funciones  de $G$
-en $\mathbb{C}$. Si~$\psi,\theta\in R(G)$, se puede demostrar que 
-$\langle\psi,\theta\rangle$ es un producto interno en el espacio
-vectorial $R(G)$.
+En el teorema siguiente ocupamos el concepto de producto interno de
+funciones de la definición~\ref{producto-interno-de-funciones}.
+
 \begin{theorem}[Reciprocidad de Frobenius]
   \label{frobenius}
   Sea $H\leq G$ y $\theta:H\rightarrow\mathbb{C}$,
@@ -2493,24 +2511,27 @@ vectorial $R(G)$.
     &=\frac{1}{|G|}\sum_{g\in G}\Bigg(\frac{1}{|H|}\sum_{\substack{x\in
         G\\x^{-1}gx\in H}}\theta(x^{-1}gx)\Bigg)\overline{\phi(g)}\\
     &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(g,x)\mid g,x\in G,x^{-1}gx\in
-      H\}}\theta(x^{-1}gx)\overline{\phi(g)},\\
-    \intertext{hacemos el cambio $u=x^{-1}gx$, entonces $g=xux^{-1}$,}
+      H\}}\theta(x^{-1}gx)\overline{\phi(g)}.\\
+    \intertext{Aquí hacemos el cambio de variable $u=x^{-1}gx$, de donde $g=xux^{-1}$}
     &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in
       G,u\in H\}}\theta(u)\overline{\phi(xux^{-1})}\\
     &=\frac{1}{|G|}\frac{1}{|H|}\sum_{\{(xux^{-1},x)\mid xux^{-1},x\in G,u\in H\}}\theta(u)\overline{\phi(u)}\\
     &=\frac{1}{|G|}\frac{1}{|H|}|G|\sum_{u\in
       H}\theta(u)\overline{\phi(u)}\\
-    \intertext{pues $u\in H$, $xux^{-1}\in G$ para todo $x\in G$,
-      además $\phi(xux^{-1})=\phi(u)$}
-    &=\langle\theta,\phi\downarrow^{G}_{H}\rangle.
- \end{align*} 
+    \intertext{pues si $u\in H$, entonces $xux^{-1}\in G$ para todo
+    $x\in G$, y
+      además $\phi(xux^{-1})=\phi(u)$, por ser $\phi$ una función de clase}
+    &=\langle\theta,\phi\downarrow^{G}_{H}\rangle
+  \end{align*}
+  como queríamos demostrar.
 \end{proof}
 
 \begin{corollary}
   \label{car-inducido}
-  Si $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ un carácter
-  entonces $\theta\uparrow^{G}_{H}:~G\rightarrow~\mathbb{C}$ es un carácter.
+  Si $H\leq G$ y $\theta:H\rightarrow \mathbb{C}$ es un carácter,
+  entonces la función $\theta\uparrow^{G}_{H}:~G\rightarrow~\mathbb{C}$ es un carácter.
 \end{corollary}
+
 \begin{proof}[Demostración]
   Ya sabemos que $\theta\uparrow^{G}_{H}$ es una función de
   clase. Aplicamos el criterio de la proposición
@@ -2531,19 +2552,23 @@ $H$ en $G$ fija, donde $t_{1}=1$.
 Si $W$ es un $H$-módulo, el corolario \ref{car-inducido} implica que
 $(\chi_{W})\uparrow^{G}_{H}$ es un carácter. Queremos encontrar un
 $G$-módulo $V$ tal que $\chi_{V}=(\chi_{W})\uparrow^{G}_{H}$.
+
 \begin{definition}
-  Sea $V$ un $G$-módulo, $W$ un subespacio de $V$ tal que $\{g\in
-  G\mid gW=W\}=H$ (de modo que $W$ es un $H$-módulo). Decimos que el
+  Sea $V$ un $G$-módulo, y $W$ un subespacio de $V$ tal que $\{g\in
+  G\mid gW=W\}=H$ (de modo que $W$ tiene estructura de $H$-módulo). Decimos que el
   $G$-módulo $V$ es \textbf{inducido} por el $H$-módulo $W$ si
   $V=\bigoplus^{s}_{i=1}t_{i}W$ como espacio vectorial.
 \end{definition}
+
 Notemos que la definición no depende de la transversal escogida, pues
-si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
+si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$. 
+
 \begin{proposition}
   \label{car-ind-W-V}
   Si el $G$-módulo $V$ es inducido por el $H$-módulo $W$, entonces
   $\chi_{V}=(\chi_{W})\uparrow^{G}_{H}$.
 \end{proposition}
+
 \begin{proof}[Demostración]
   % Si $\beta=\{w_{1},w_{2},\ldots,w_{r}\}$ es base de $W$, entonces $\gamma=\bigcup^{s}_{j=1}t_{j}\beta$ es
   % base de $V$, por lo que dado $g\in G$ calcularemos $\chi_{V}(g)$
@@ -2556,16 +2581,26 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
   % $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, por lo que $\tr(g\mid
   % t_{j}W)=\chi_{V}(t^{-1}_{j}gt_{j})$, y por la ecuación \ref{fun-ind-trans}, queda
   % demostrado.
-  Si $\beta=\{w_{1},w_{2},\ldots,w_{r}\}$ es base de $W$, entonces $\gamma=\bigcup^{s}_{j=1}t_{j}\beta$ es
+  Si $\beta=\{w_{1},w_{2},\ldots,w_{r}\}$ es base de $W$, entonces
+  para $j\in\{1,2,\ldots,r\}$, se tiene que 
+  $t_{j}\beta=\{t_{j}w_{1},\ldots,t_{j}w_{r}\}$ es base de $t_{j}W$ y
+  por lo tanto, $\gamma=\bigcup^{s}_{j=1}t_{j}\beta$ es
   base de $V$. Dado $g\in G$, calcularemos $\chi_{V}(g)$
   usando esa base. Así,
   \begin{equation}
     \label{car-base-tjb}    
-    \chi_{V}(g)=\tr([g]_{\gamma})=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr([g]_{t_{j}\beta})
+    \chi_{V}(g)=\tr([g]_{\gamma})=\sum_{\{j\mid gt_{j}W= t_{j}W\}}\tr([g]_{t_{j}\beta}),
   \end{equation}
-  Veamos que $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, si
-  $t^{-1}_{j}gt_{j}\in H$.  Tomemos $w_{k}\in \beta$, escribimos a~
-  $gt_{j}w_{k}$ como:
+  donde usamos el hecho de que $V=\oplus^{s}_{i=1}t_{i}W$ y de que la
+  acción de $g$ permuta los sumandos, pues si $gt_{j}=t_{i}h$ con
+  $t_{i}\in T$, $h\in H$, entonces $gt_{j}W=t_{i}hW=t_{i}W$. Al
+  cálculo de la traza contribuyen exactamente los sumandos tales que
+  $gt_{j}W=t_{j}W$. 
+
+  Tenemos que $gt_{j}W= t_{j}W$ si y solo si $t_{j}^{-1}gt_{j}W= W$,
+  y por nuestras hipótesis, esto sucede si y solo si
+  $t_{j}^{-1}gt_{j}\in H$. Veamos que $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$, si
+  $t^{-1}_{j}gt_{j}\in H$. Tomemos $w_{k}\in \beta$, y escribimos a~$gt_{j}w_{k}$ como:
   \begin{equation*}
     gt_{j}w_{k}=\lambda_{1}t_{j}w_{1}+\cdots+\lambda_{r}t_{j}w_{r}
   \end{equation*}
@@ -2581,25 +2616,25 @@ si~$t=t^{'}h$ con $h\in H$, entonces $tW=t^{'}hW=t^{'}W$.
       \lambda_{r}  
     \end{pmatrix}=[t^{-1}_{j}gt_{j}(w_{k})]_{\beta}$.
   \end{center}
-  De donde
-  \begin{equation*}
-    [g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}.
-  \end{equation*}
+  De donde $[g]_{t_{j}\beta}=[t^{-1}_{j}gt_{j}]_{\beta}$ siempre que $t_{j}^{-1}gt_{j}\in H$.
   Por lo anterior, tenemos que
   \begin{equation*}
     \tr([g]_{t_{j}\beta})=\tr([t^{-1}_{j}gt_{j}]_{\beta})=\chi_{W}(t^{-1}_{j}gt_{j}).\\
   \end{equation*}
-  Continuando la ecuación \ref{car-base-tjb}, 
+  si $t_{j}^{-1}gt_{j}\in H$.
+
+  Continuando la ecuación \ref{car-base-tjb}:
   \begin{align*}
     \chi_{V}(g)&=\tr([g]_{\gamma})=\sum_{\{j\mid gt_{j}W\leq t_{j}W\}}\tr([g]_{t_{j}\beta})\\
     %\intertext{se sigue de la ecuación \ref{fun-ind-trans}, lo siguiente}
     &=\sum_{\substack{t_{j}\in T,\\t^{-1}_{j}gt_{j}\in H}}\chi_{W}(t^{-1}_{j}gt_{j})=(\chi_{W})\uparrow^{G}_{H}(g).
   \end{align*}
+  en donde en la última igualdad, hemos usado la ecuación~\ref{fun-ind-trans}.
 \end{proof}
 
 Por lo tanto, dado un grupo finito $G$ con subgrupo $W$, y dado $W$ un
-$H$-módulo, hemos definido el $G$-módulo $W\uparrow^{G}_{H}$. Además,
-definimos una operación de inducción en funciones de clase, de tal
+$H$-módulo, hemos definido el concepto de $G$-módulo inducido $W\uparrow^{G}_{H}$. Además,
+también hemos definido una operación de inducción en funciones de clase, de tal
 modo que el carácter de un módulo inducido $W\uparrow^{G}_{H}$ es
 igual a la inducción del carácter $\chi_{W}$.
 
