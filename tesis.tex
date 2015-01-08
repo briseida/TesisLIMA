@@ -61,6 +61,7 @@
 \DeclareMathOperator{\sgn}{sgn}
 \DeclareMathOperator{\tr}{tr}
 \DeclareMathOperator{\End}{End}
+\DeclareMathOperator{\idn}{id_{n}}
 
 \newcounter{in}
 \newcounter{ini}
@@ -939,6 +940,8 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
     cíclico}.
 \end{example}
 
+{\setlength{\fboxsep}{0pt}\colorbox{green}{subgrupo, subgrupo
+    generado, cambiar ejemplo del grupo cíclico}}
 \begin{definition}
   Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
   en $H$ es una función $\rho:G\rightarrow H$ la cual
@@ -1006,18 +1009,21 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   $i_{1},i_{2},\ldots,i_{k}$, entonces,
   diremos que $\pi$ es un \textbf{ciclo de longitud $k$} o un
   \textbf{$k$-ciclo} y se denota por $\pi=(i_{1}i_{2}\dots i_{k})$. Un
-  ciclo de longitud 2 es una \textbf{transposición}.
+  ciclo de longitud 2 es una \textbf{transposición}. Algunas veces
+  denotamos a la permutación identidad por $\idn=(1)$.
 \end{definition}
 
 \begin{example}
+  Usualmente no se escriben los ciclos de longitud 1.
   Sea $\pi\in S_{5}$, 
   \[\pi=\left(
     \begin{array}{ccccc}
       1 & 2 & 3 & 4 & 5\\
       2 & 4 & 3 & 1 & 5  
     \end{array} 
-  \right)=(124)(3)(5)=(124),\]
-  entonces $\pi$ es un 3-ciclo.
+  \right)=(124),\]
+  pues la permutación (124)(3)(5) se escribe simplemente como
+  (124). Así, $\pi$ es un 3-ciclo.
 \end{example}
 
 \begin{definition}
@@ -1035,7 +1041,6 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   Así, $(123)(45)\in S_{5}$ tiene la estructura cíclica (3,2). 
 \end{example}
 
-FALTA PONER ID, Y QUE LOS CICLOS DE LONGITUD 1 NO SE ESCRIBEN.......
 \begin{definition}
   Dos ciclos de un conjunto $Y=\{1,2,\dots,n\}$ son \textbf{disjuntos} si ningún elemento de
   $Y$ aparece en ambos ciclos.
@@ -1047,10 +1052,9 @@ FALTA PONER ID, Y QUE LOS CICLOS DE LONGITUD 1 NO SE ESCRIBEN.......
 \end{example}
 
 \begin{theorem}{\normalfont (\cite{zaldivar}, teorema 4.5, p.35)}.
-  Si $n\geq 2$, toda permutación $\pi\neq id_{n}$ en $S_{n}$ es el
-  producto de ciclos disjuntos de longitud $\geq 2$. Esta
-  factorización es única salvo por el orden en el que aparecen los
-  ciclos correspondientes.
+  Si $n\geq 2$, toda permutación $\pi\neq \idn$ en $S_{n}$ se puede
+  expresar de manera única, como producto de ciclos disjuntos de
+  longitud $\geq 2$, salvo por el orden en el que aparecen los ciclos.
 \end{theorem}
 
 \begin{definition}
@@ -1089,19 +1093,37 @@ denotado por $K_{g}$.
 \item $1*x=x$ para todo $x\in X.$
 \item $(g_{1}g_{2})*x=g_{1}*(g_{2}*x)$ para todo $x\in X$ y $g_{1},g_{2}\in G.$
 \end{enumerate}
-   %Bajo estas condiciones, también decimos que $X$ es un \textbf{$G$-conjunto}.
-   En ocasiones, por abuso de notación, en lugar de escribir $g*x$ usaremos la notación $gx$.
+   Bajo estas condiciones, también decimos que $X$ es un \textbf{$G$-conjunto}.
+   En ocasiones, por abuso de notación, escribiremos $gx$ en lugar de $g*x$.
 \end{definition}
+Sea $S_{Y}$ denote el grupo de permutaciones de un conjunto $Y$. El
+teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77)
+enuncia que cualquier grupo $G$ es isomorfo a un subgrupo de $S_{Y}$
+para un conjunto $Y$ suficientemente grande. Formalmente, esto
+significa que se puede construir un homomorfismo inyectivo
+$f:G\rightarrow S_{Y}$, así que $G\cong f(G)$. Cada permutación
+$f(g)\in S_{Y}$ ``representa'' al elemento del grupo $g\in G$.
+
+Si tenemos otro homomorfismo $\phi:G\rightarrow S_{Y}$, no
+necesariamente inyectivo, el grupo $G$ permuta el conjunto $Y$ como sigue: dado
+$\phi:G\rightarrow S_{Y}$ se define $*:G\times Y\rightarrow Y$ como
+$g*y=\phi(g)y$. Por propiedades de homomorfismo esta función tiene las
+siguientes propiedades:
+\begin{itemize}
+\item $1*y=y$
+\item $(gh)*y=g*(h*y)$
+\end{itemize}
+
+Estos son exactamente los axiomas de acción de grupo de la definición \ref{accion-grupo}. De igual modo se puede
+definir un homomorfismo $\phi:G\rightarrow S_{Y}$ dada una acción de grupo. Esto establece una
+correspondencia biyectiva entre los homomorfismos $\phi:G\rightarrow
+S_{Y}$ y las acciones de $G$ en $Y$.
 
 \begin{definition}
   \label{accion-lineal}
-  Sea $G$ un grupo y $V$ un
-  espacio vectorial de dimensión
-  finita sobre el campo $F$. Una
-  \textbf{acción lineal de $G$ en
-    $V$} es una función
- $$*:G\times V \rightarrow V $$
-que satisface los axiomas:
+  Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
+  sobre el campo $F$. Una \textbf{acción lineal de $G$ en $V$} es una
+  función $$*:G\times V \rightarrow V $$ que satisface los axiomas:
 \begin{enumerate}
 \item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
 \item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
@@ -1111,8 +1133,7 @@ que satisface los axiomas:
   $v\in V$ y $g_{1}\in G.$
 \end{enumerate}
 Diremos que $V$ es un \textbf{$G$-módulo.}
-\end{definition} 
-
+\end{definition}  
 \section{Anillos}
 \label{anillos}
 
@@ -1158,7 +1179,7 @@ A continuación se muestran ejemplos de anillos.
   entradas enteras es un anillo no conmutativo con elemento unitario.
 \end{example}
 
-\begin{example}
+\begin{example}{\normalfont (\cite{jacobson2012basic}, teorema 3.1, p.160).}
   Sea $A$ un grupo abeliano, denotemos a los endomorfismos de $A$ como
   el siguiente conjunto: 
   \begin{equation*}
@@ -1170,7 +1191,19 @@ A continuación se muestran ejemplos de anillos.
   que con estas operaciones, $\End(A)$ tiene estructura de anillo.
 \end{example}
 
+\begin{definition}
+  Sean $R$ y $R^{'}$ anillos con identidades $1_{R}$ y $1_{R^{'}}$
+  respectivamente. Un \textbf{morfismo de anillos} es una función
+  $\phi:R\rightarrow R^{'}$ si
+  \begin{enumerate}
+  \item $\phi(a+b)=\phi(a)+\phi(b),$
+  \item $\phi(ab)=\phi(a)\phi(b),$
+  \item $\phi(1_{R})=\phi(1_{R^{'}}),$
+  \end{enumerate}
+para $a,b\in R$.
+\end{definition}
 En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, donde hay $n$ sumandos.
+
 \begin{definition}
   La \textbf{característica} de un anillo $R$ es el menor entero positivo $n$
   tal que $nx=0$ para toda $x\in R$. Si no existe tal entero, decimos
@@ -1192,23 +1225,38 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
   \end{enumerate}
   para cualquier $a,b \in M$ y $r,s\in R$.
 
-  Si $R$ tiene un elemento unitario, 1, y si $1m=m$ para todo elemento
+  Si $R$ es un anillo con identidad, 1, y si $1m=m$ para todo elemento
   $m\in M$, entonces a $M$ lo llamaremos un \textbf{$R$-módulo
   unitario}.
 \end{definition}
 
-\begin{example}{\normalfont (\cite{herstein1990algebra}, ej. 1, p.189).}
-  Se puede demostrar que todo grupo abeliano $G$ es un módulo sobre el anillo de los enteros
-  $\mathbb{Z}$. Con la operación de $G$ como la suma y la
-  multiplicación se define como: si $n>0$, $na=a+a+\cdots+a$, donde
-  hay $n$ sumandos; si  $n<0$, $(-n)a=-(na)$ y $0a=0$, para todo $a\in G$ y $n\in \mathbb{Z}$.
+\begin{example}
+  Si $R$ es un campo, un $R$-módulo unitario es un espacio vectorial
+  sobre $R$.
 \end{example}
 
-\begin{example}{\normalfont (\cite{jacobson2012basic}, teorema 3.1, p.160).}
-  Un grupo abeliano $A$ es un módulo sobre $\End(A)$, donde la suma
-  $f+g$ está dada por $(f+g)(x)=f(x)+g(x)$ y la multiplicación $fa$
-  por $f(a)$, para $f,g\in\End(A)$ y $a\in A$. 
-\end{example}
+% \begin{example}{\normalfont (\cite{herstein1990algebra}, ej. 1, p.189).}
+%   Se puede demostrar que todo grupo abeliano $G$ es un módulo sobre el anillo de los enteros
+%   $\mathbb{Z}$. Con la operación de $G$ como la suma y la
+%   multiplicación se define como: si $n>0$, $na=a+a+\cdots+a$, donde
+%   hay $n$ sumandos; si  $n<0$, $(-n)a=-(na)$ y $0a=0$, para todo $a\in G$ y $n\in \mathbb{Z}$.
+% \end{example}
+
+% \begin{example}
+%   Un grupo abeliano $A$ es un módulo sobre $\End(A)$, donde la suma
+%   $f+g$ está dada por $(f+g)(x)=f(x)+g(x)$ y la multiplicación $fa$
+%   por $f(a)$, para $f,g\in\End(A)$ y $a\in A$. 
+%   \label{end-modulo}
+% \end{example}
+
+Sea $A$ un grupo abeliano y $R$ un anillo. Dado el morfismo de anillos $\phi:R\rightarrow \End(A)$, se
+define $*:R\times A\rightarrow A$ dado por: $r*a=\phi(r)a$
+para $r\in R$ y $a\in A$, por propiedades del morfismo de anillos
+observamos que $A$ es un $R$-módulo. 
+
+De forma análoga, si $A$ es un $R$-módulo, podemos definir un morfismo
+de anillos $\phi:R\rightarrow \End(A)$ dado por: $\phi(r)a=g*a$ para
+$r\in R$ y $a\in A$.
 
 \section{Representaciones de grupos}
 \label{rep-grup}
@@ -1229,55 +1277,56 @@ lineal. Si $\rho$ es inyectiva, entonces $G\cong \rho(G)$.
 
 Usualmente se estudia teoría de representaciones mediante la
 representaciones en sí mismas o a través de sus correspondientes
-$G$-módulos, donde $G$ es un grupo. Esto se explica mejor por analogía con otro tipo de representación.
+$G$-módulos, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía con otro tipo de representación.
 
-Sea $S_{A}$ denote el grupo de permutaciones de un conjunto $A$. El
-teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77) nos dice que cualquier grupo $G$ es isomorfo a un
-subgrupo de $S_{A}$ para un conjunto $A$ suficientemente
-grande. Formalmente, esto significa que se puede construir un
-homomorfismo inyectivo $f:G\rightarrow S_{A}$, así que $G\cong
-f(G)$. Cada permutación $f(g)\in S_{A}$ ``representa'' al elemento de el grupo $g\in
-G$. 
+% Sea $S_{A}$ denote el grupo de permutaciones de un conjunto $A$. El
+% teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77) nos dice que cualquier grupo $G$ es isomorfo a un
+% subgrupo de $S_{A}$ para un conjunto $A$ suficientemente
+% grande. Formalmente, esto significa que se puede construir un
+% homomorfismo inyectivo $f:G\rightarrow S_{A}$, así que $G\cong
+% f(G)$. Cada permutación $f(g)\in S_{A}$ ``representa'' al elemento de el grupo $g\in
+% G$. 
 % Además, si tenemos algún otro homomorfismo $\pi:G\rightarrow
 % S_{A}$, no necesariamente inyectivo, la imagen de el grupo $G$ bajo
 % $\pi$ es un grupo de permutaciones isomorfo a algún grupo cociente de
 % $G$. Tales funciones son  llamadas \textbf{representaciones
 %   permutación} de $G$.
 
-Si tenemos otro homomorfismo $\phi:G\rightarrow S_{A}$, no
-necesariamente inyectivo, el grupo $G$ permuta el conjunto $A$ como sigue: dado
-$\phi:G\rightarrow S_{A}$ se define $*:G\times A\rightarrow A$ como
-$g*a=\phi(g)a$. Por propiedades de homomorfismo esta función tiene las
-siguientes propiedades:
-\begin{itemize}
-\item $1*a=a$
-\item $(gh)*a=g*(h*a)$
-\end{itemize}
+% Si tenemos otro homomorfismo $\phi:G\rightarrow S_{A}$, no
+% necesariamente inyectivo, el grupo $G$ permuta el conjunto $A$ como sigue: dado
+% $\phi:G\rightarrow S_{A}$ se define $*:G\times A\rightarrow A$ como
+% $g*a=\phi(g)a$. Por propiedades de homomorfismo esta función tiene las
+% siguientes propiedades:
+% \begin{itemize}
+% \item $1*a=a$
+% \item $(gh)*a=g*(h*a)$
+% \end{itemize}
 
-Estos son exactamente los axiomas de
-acción de grupo (ver definición \ref{accion-grupo}). En adelante,
-usaremos la notación $ga$ en lugar de $g*a$. De igual modo se puede
-definir un homomorfismo $\phi:G\rightarrow S_{A}$ dada una acción de grupo. Esto establece una
-correspondencia biyectiva entre el homomorfismo $\phi:G\rightarrow
-S_{A}$ y acciones de grupo.
+% Estos son exactamente los axiomas de
+% acción de grupo (ver definición \ref{accion-grupo}). En adelante,
+% usaremos la notación $ga$ en lugar de $g*a$. De igual modo se puede
+% definir un homomorfismo $\phi:G\rightarrow S_{A}$ dada una acción de grupo. Esto establece una
+% correspondencia biyectiva entre el homomorfismo $\phi:G\rightarrow
+% S_{A}$ y acciones de grupo.
 
-Análogamente, si dada una representación $\rho:G\rightarrow GL(V)$ e igualmente se define
-$gv=\rho(g)v$ conseguimos nuevamente los axiomas de grupo y dos
-propiedades más, las cuales establecen que $*$ es una acción lineal.
-\begin{itemize}
-\item $1v=v$
-\item $(gh)v=g(hv)$
-\item $g(v+w)=gv+gw$
-\item $g(\lambda v)=\lambda(gv)$
-\end{itemize}
+Dada una representación $\rho:G\rightarrow GL(V)$, se define
+$gv=\rho(g)v$, conseguimos 
+%nuevamente los axiomas de grupo y dos propiedades más, las cuales establecen que $*$ es una acción lineal.
+los axiomas de una acción lineal de la definición \ref{accion-lineal},
+los cuales definen un $G$-módulo.
+% \begin{itemize}
+% \item $1v=v$
+% \item $(gh)v=g(hv)$
+% \item $g(v+w)=gv+gw$
+% \item $g(\lambda v)=\lambda(gv)$
+% \end{itemize}
 
-Estos cuatro axiomas definen un $G$-módulo (ver definición
-\ref{accion-lineal}). Inversamente se puede definir una representación
-$\rho$ a partir de un $G$-módulo como sigue:
-dado un $G$-módulo, sea $\rho(g)(v)=gv$. Enseguida se
-enuncia y demuestra justamente lo
-discutido sobre representaciones de
-$G$ en $V$ y $G$-módulos.
+% Estos cuatro axiomas definen un $G$-módulo (ver definición
+% \ref{accion-lineal}). 
+Inversamente se define una representación $\rho$ a partir de un
+$G$-módulo como sigue: dado un $G$-módulo, sea
+$\rho(g)(v)=gv$. Enseguida se enuncia y demuestra justamente lo
+discutido sobre representaciones de $G$ en $V$ y $G$-módulos.
 
 \begin{theorem}
   \label{rep-mod}
