@@ -528,7 +528,7 @@ En la sección \ref{esp-vec} se revisan algunas definiciones y teoremas
 de espacios vectoriales y transformaciones lineales que usaremos en el
 desarrollo de este trabajo. Entre las definiciones que utilizamos
 frecuentemente son la suma directa de espacios vectoriales y espacio
-cociente. Se construye el espacio vectorial $FX$ con base $X$ sobre el
+cociente. Se construye el espacio vectorial $F^{X}$ con base $X$ sobre el
 campo $F$. Las pruebas que se
 omiten se puede consultar en \cite{friedberg1982algebra} y
 \cite{herstein1990algebra}. 
@@ -810,8 +810,8 @@ Denotemos por $V/W$ al conjunto de todas las clases laterales de $W$.
 %   $A=[T]_{\beta}$.
 % \end{definition}
 
-A continuación, construiremos un espacio vectorial muy importante, ya
-que lo usaremos más adelante en la sección \ref{rep-grup}.
+A continuación, construiremos un espacio vectorial 
+que usaremos más adelante en la sección \ref{rep-grup}.
 %de representaciones de grupos.
 
 Sea $X$ un conjunto no vacío. Se define $F^{X}$ como:
@@ -823,7 +823,8 @@ Sea $X$ un conjunto no vacío. Se define $F^{X}$ como:
 
 \begin{lemma}
   \label{FX}
-  $F^{X}$ es un espacio vectorial, donde:
+  $F^{X}$ es un espacio vectorial, donde la suma y el producto por
+  escalares están definidos como:
   \begin{itemize}
   \item $(f+g)(x)=f(x)+g(x)$, donde $f,g\in F^{X}$,
   \item $(rf)(x)=rf(x)$, con $r\in F$.
@@ -846,7 +847,7 @@ Sea $X$ un conjunto no vacío. Se define $F^{X}$ como:
 
 %\begin{definition}
  % \label{fun-caracteristica}
-  Sea la función $\varphi:X\rightarrow F^{X}$, tal que
+  Consideremos la función $\varphi:X\rightarrow F^{X}$, tal que:
   \[
   \varphi(x)(y)=
   \begin{cases}
@@ -855,10 +856,10 @@ Sea $X$ un conjunto no vacío. Se define $F^{X}$ como:
   \end{cases}
   \]
 %\end{definition}
-Notemos que $\varphi$ es inyectiva, puesto que, si $x,y\in X$ y $x\neq y$,
-entonces $\varphi(x)(y)\neq\varphi(y)(y)$, pues
+Notemos que $\varphi$ es inyectiva, puesto que si $x,y\in X$ y $x\neq y$,
+entonces $\varphi(x)(y)\neq\varphi(y)(y)$, ya que
 $\varphi(x)(y)=0$ y $\varphi(y)(y)=1$, así
-$\varphi(x)\neq\varphi(y)$. $\varphi(X)$ es un subconjunto de $F^{X}$ que
+$\varphi(x)\neq\varphi(y)$. Se obtiene que $\varphi(X)$ es un subconjunto de $F^{X}$ que
 se identifica con $X$.
 \begin{theorem}
   \label{base-FX}
@@ -923,8 +924,8 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 
 \begin{example}
   \label{GL(V)}
-  El conjunto de operadores lineales invertibles en un espacio vectorial $V$ de dimensión finita
-  $n$ sobre el campo $F$, denotado por $GL(V)$, junto con la
+  El conjunto de operadores lineales invertibles en un espacio vectorial $V$
+  sobre el campo $F$, denotado por $GL(V)$, junto con la
   operación composición de operadores es un grupo.
 \end{example}
 
@@ -993,7 +994,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
       \pi(1) & \pi(2) & \pi(3) & \cdots & \pi(n) 
     \end{array} 
   \right)\] 
-  donde debajo de cada $x\in Y$ se encuentra su valor o imagen
+  donde debajo de cada $x\in Y$ se encuentra su imagen
   $\pi(x)\in Y$.
 \end{definition}
 
@@ -1014,36 +1015,19 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \end{definition}
 
 \begin{example}
-  Usualmente no se escriben los ciclos de longitud 1.
-  Sea $\pi\in S_{5}$, 
+  Consideremos la permutación $\pi\in S_{5}$, dada por:
   \[\pi=\left(
     \begin{array}{ccccc}
       1 & 2 & 3 & 4 & 5\\
       2 & 4 & 3 & 1 & 5  
     \end{array} 
-  \right)=(124),\]
-  pues la permutación (124)(3)(5) se escribe simplemente como
-  (124). Así, $\pi$ es un 3-ciclo.
-\end{example}
-
-\begin{definition}
-  La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la partición de
-  $n$ formada por las longitudes de los ciclos en la descomposición.
-\end{definition}
-
-\begin{example}
-  \[\pi=\left(
-    \begin{array}{ccccc}
-      1 & 2 & 3 & 4 & 5\\
-      2 & 3 & 1 & 5 & 4  
-    \end{array} 
-  \right)=(123)(45).\]
-  Así, $(123)(45)\in S_{5}$ tiene la estructura cíclica (3,2). 
+  \right)=(124).\]
+  Así, $\pi$ es un 3-ciclo.
 \end{example}
 
 \begin{definition}
   Dos ciclos de un conjunto $Y=\{1,2,\dots,n\}$ son \textbf{disjuntos} si ningún elemento de
-  $Y$ aparece en ambos ciclos.
+  $Y$ es movido por ambos ciclos.
 \end{definition}
 
 \begin{example}
@@ -1056,6 +1040,23 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   expresar de manera única, como producto de ciclos disjuntos de
   longitud $\geq 2$, salvo por el orden en el que aparecen los ciclos.
 \end{theorem}
+
+\begin{definition}
+  La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la partición de
+  $n$ formada por las longitudes de los ciclos en la descomposición
+  como producto en ciclos ajenos.
+\end{definition}
+
+\begin{example}
+  \[\pi=\left(
+    \begin{array}{ccccc}
+      1 & 2 & 3 & 4 & 5\\
+      2 & 3 & 1 & 5 & 4  
+    \end{array} 
+  \right)=(123)(45).\]
+  Así, $(123)(45)\in S_{5}$ tiene la estructura cíclica (3,2). 
+\end{example}
+
 
 \begin{definition}
   Dos elementos $g,g_{1}\in G$ son \textbf{conjugados} si
@@ -1085,6 +1086,28 @@ denotado por $K_{g}$.
   son ambos pares o bien ambos impares.
 \end{theorem}
 
+
+
+Denotemos con $S_{Y}$ al grupo de permutaciones de un conjunto $Y$. Del
+teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77)
+se deduce que cualquier grupo~$G$ es isomorfo a un subgrupo de $S_{Y}$
+para un conjunto $Y$ suficientemente grande. Formalmente, esto
+significa que se puede construir un homomorfismo inyectivo
+$f:G\rightarrow S_{Y}$, así que $G\cong f(G)$. Cada permutación
+$f(g)\in S_{Y}$ ``representa'' al elemento del grupo $g\in G$.
+
+Si tenemos un homomorfismo $\phi:G\rightarrow S_{Y}$, no
+necesariamente inyectivo, el grupo $G$ permuta el conjunto $Y$ como sigue: dado
+$\phi:G\rightarrow S_{Y}$ se define $*:G\times Y\rightarrow Y$ como
+$g*y=\phi(g)(y)$. Por propiedades de homomorfismo esta función tiene las
+siguientes propiedades:
+\begin{itemize}
+\item $1*y=y$
+\item $(gh)*y=g*(h*y)$
+\end{itemize}
+
+Abstrayendo estas propiedades, obtenemos la siguiente definición:
+
 \begin{definition}
   \label{accion-grupo}
   Sea $G$ un grupo y $X$ un conjunto no vacío. Una  \textbf{acción de $G$
@@ -1096,28 +1119,15 @@ denotado por $K_{g}$.
    Bajo estas condiciones, también decimos que $X$ es un \textbf{$G$-conjunto}.
    En ocasiones, por abuso de notación, escribiremos $gx$ en lugar de $g*x$.
 \end{definition}
-Sea $S_{Y}$ denote el grupo de permutaciones de un conjunto $Y$. El
-teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77)
-enuncia que cualquier grupo $G$ es isomorfo a un subgrupo de $S_{Y}$
-para un conjunto $Y$ suficientemente grande. Formalmente, esto
-significa que se puede construir un homomorfismo inyectivo
-$f:G\rightarrow S_{Y}$, así que $G\cong f(G)$. Cada permutación
-$f(g)\in S_{Y}$ ``representa'' al elemento del grupo $g\in G$.
 
-Si tenemos otro homomorfismo $\phi:G\rightarrow S_{Y}$, no
-necesariamente inyectivo, el grupo $G$ permuta el conjunto $Y$ como sigue: dado
-$\phi:G\rightarrow S_{Y}$ se define $*:G\times Y\rightarrow Y$ como
-$g*y=\phi(g)y$. Por propiedades de homomorfismo esta función tiene las
-siguientes propiedades:
-\begin{itemize}
-\item $1*y=y$
-\item $(gh)*y=g*(h*y)$
-\end{itemize}
+% Estos son exactamente los axiomas de acción de grupo de la definición
+% \ref{accion-grupo}. 
 
-Estos son exactamente los axiomas de acción de grupo de la definición \ref{accion-grupo}. De igual modo se puede
-definir un homomorfismo $\phi:G\rightarrow S_{Y}$ dada una acción de grupo. Esto establece una
-correspondencia biyectiva entre los homomorfismos $\phi:G\rightarrow
-S_{Y}$ y las acciones de $G$ en $Y$.
+Por otro lado, dada una acción del grupo $G$ en el conjunto $Y$, se
+puede definir un homomorfismo $\phi:G\rightarrow S_{Y}$ por medio de
+$\phi(g)(y)=g*y$. Esto establece una correspondencia biyectiva entre
+el conjunto de homomorfismos $\phi:G\rightarrow S_{Y}$ y el conjunto
+de las acciones de $G$ en $Y$.
 
 \begin{definition}
   \label{accion-lineal}
@@ -1310,7 +1320,7 @@ $G$-módulos, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía con
 % S_{A}$ y acciones de grupo.
 
 Dada una representación $\rho:G\rightarrow GL(V)$, se define
-$gv=\rho(g)v$, conseguimos 
+$gv=\rho(g)(v)$, conseguimos 
 %nuevamente los axiomas de grupo y dos propiedades más, las cuales establecen que $*$ es una acción lineal.
 los axiomas de una acción lineal de la definición \ref{accion-lineal},
 los cuales definen un $G$-módulo.
@@ -1366,7 +1376,7 @@ discutido sobre representaciones de $G$ en $V$ y $G$-módulos.
   por lo que $\rho(gh)=\rho g \circ \rho h$.
 
   Suponga ahora que se tiene un homomorfismo de grupos
-  $\rho:G\rightarrow GL(V)$. Demostraremos que $gv:=(\rho g)v$ define
+  $\rho:G\rightarrow GL(V)$. Demostraremos que $gv=(\rho g)v$ define
   un acción lineal de $G$ en $V$.
 
   \begin{enumerate}
@@ -1379,6 +1389,8 @@ discutido sobre representaciones de $G$ en $V$ y $G$-módulos.
   \item Para $\lambda\in F$, $v\in V$ y $g\in G$,
     $$g(\lambda v)=(\rho g)(\lambda v)=\lambda((\rho g)v)=\lambda(gv)$$
   \end{enumerate}
+
+  como queríamos demostrar.
 \end{proof}
 
 % \begin{definition}
@@ -1464,7 +1476,7 @@ $GL(n,F)$ y $GL(V)$.
   Si $\pi\in S_{n}$ y $\pi=\tau_{1}\tau_{2}\cdots\tau_{k}$, donde $\tau_{i}$ son
   transposiciones (ver definición \ref{trans} y teorema \ref{per-prod-trans}), definimos la función
   signo $\sgn:S_{n} \rightarrow GL(V)$
-  mediante: $$\sgn(\pi):=(-1)^{k}1_{V},$$
+  mediante: $$\sgn(\pi)=(-1)^{k}1_{V},$$
   debido al teorema \ref{trans-par-impar}, la función signo está bien definida.
   % así que $\mathbb{C}$ recibe una estructura de $S_{n}$-módulo, con acción:
   % \[
