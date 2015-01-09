@@ -929,36 +929,45 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
   operación composición de operadores es un grupo.
 \end{example}
 
-\begin{example}
-  \label{grupo-ciclico}
-  Sea $G$ un grupo y $g\in G$, definimos las potencias de $g$ como
-  sigue: $g^{0}=1$, $g^{1}=g$, $g^{2}=gg$,
-  $g^{3}=gg^{2}$, $\dots$, $g^{k}=gg^{k-1}$ para $k\geq0$ y
-  $g^{-k}=(g^{-1})^{k}$ para $k<0$.
-  Sea $n\in \mathbb{Z}$, construimos un grupo denotado por~$C_{n}$ como sigue: consistirá
-  de todas las potencias $g^{i}$, con $i=0,1,2,\dots,n-1$ en donde $g^{i}g^{j}=g^{i+j}$ si $i+j< n$ y
-  $g^{i}g^{j}=g^{i+j-n}$ si $i+j\geq n$. A $C_{n}$ se le conoce como \textbf{grupo
-    cíclico}.
-\end{example}
-
-{\setlength{\fboxsep}{0pt}\colorbox{green}{subgrupo, subgrupo
-    generado, cambiar ejemplo del grupo cíclico}}
 \begin{definition}
-  Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
-  en $H$ es una función $\rho:G\rightarrow H$ la cual
-  satisface $$\rho(ab)=\rho(a)\rho(b),$$
-  para todo $a,b \in G$. Si $\rho$ es biyectiva diremos que $\rho$ es
-  un \textbf{isomorfismo}.
+  Sea $H$ un subconjunto no vacío del grupo $G$. Si $H$ es cerrado bajo la operación binaria de $G$,
+  es decir, si $h_{1},h_{2}\in H$, entonces $h_{1}h_{2}\in H$ y $H$ es
+  un grupo con esta operación, decimos que $H$ es un \textbf{subgrupo} de $G$ y
+  lo denotamos como $H\leq G$.
 \end{definition}
 
-\begin{theorem}{\normalfont (\cite{fraleigh}, teorema 13.2, p.128)}.
-  Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
-  \begin{enumerate}
-    \item $\rho(1)=1^{'}$, donde $1\in G$ y  $1^{'}\in G^{'}$ son los
-    neutros respectivos. 
-    \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
-  \end{enumerate}
+Sea $G$ un grupo y $g\in G$, definimos las potencias de $g$ como
+sigue: $g^{0}=1$, $g^{1}=g$, $g^{2}=gg$, $g^{3}=gg^{2}$, $\dots$,
+$g^{k}=gg^{k-1}$ para $k\geq0$ y $g^{-k}=(g^{-1})^{k}$ para $k<0$. Se
+puede demostrar que se cumple $g^{n}g^{m}=g^{n+m}$, para cualesquiera
+$n,m\in\mathbb{Z}$.
+
+\begin{theorem}[\cite{fraleigh}, teorema 5.17, p.53]
+  Si $G$ un grupo y $g\in G$, el conjunto
+  \begin{equation*}
+    \langle g\rangle=\{g^{n}\mid n\in\mathbb{Z}\}
+  \end{equation*}
+  es un subgrupo de $G$. El grupo $\langle g\rangle$ se llama \textbf{subgrupo
+  cíclico generado} por g.
 \end{theorem}
+
+\begin{definition}
+  \label{grupo-ciclico}
+  Un grupo $G$ es un \textbf{grupo cíclico} si existe un
+   elemento $g\in G$ tal que $G=\langle g\rangle$.
+   Al elemento $g$ se le llama un \textbf{generador} de $G$.
+\end{definition}
+
+\begin{theorem}[\cite{zaldivar}, teorema 3.5, p.25]
+  Si $C_{n}$ es un grupo cíclico finito, entonces los elementos de $C_{n}$ son
+  potencias positivas del generador $g$ de $C_{n}$, desde $g^{0}=1$ hasta $g^{k-1}$, donde
+  $k=|C_{n}|$ es el orden del grupo y es el menor entero positivo que
+  anula a $g$, es decir, $g^{k}=1$. Así
+  \begin{equation*}
+    C_{n}=\{1=g^{0},g,g^{2},g^{3},\dots,g^{k-1}\}.
+  \end{equation*}
+\end{theorem}
+
 %La demostración aparece en el teorema 13.12 de \cite{fraleigh}.
 % \begin{definition}
 %   Cuando un homomorfismo de grupos $\phi:G\rightarrow H$ es biyectivo,
@@ -995,7 +1004,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
     \end{array} 
   \right)\] 
   donde debajo de cada $x\in Y$ se encuentra su imagen
-  $\pi(x)\in Y$.
+  $\pi(x)\in Y$. Sea la \textbf{función identidad} $\idn:Y \rightarrow Y$ dada por $\idn(x)=x$, para cualquier $x\in Y$.
 \end{definition}
 
 \begin{definition}
@@ -1044,7 +1053,7 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \begin{definition}
   La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la partición de
   $n$ formada por las longitudes de los ciclos en la descomposición
-  como producto en ciclos ajenos.
+  como producto en ciclos disjuntos.
 \end{definition}
 
 \begin{example}
@@ -1086,7 +1095,22 @@ denotado por $K_{g}$.
   son ambos pares o bien ambos impares.
 \end{theorem}
 
+\begin{definition}
+  Si $G$ y $H$ son grupos, entonces un \textbf{homomorfismo} de~$G$
+  en $H$ es una función $\rho:G\rightarrow H$ la cual
+  satisface $$\rho(ab)=\rho(a)\rho(b),$$
+  para todo $a,b \in G$. Si $\rho$ es biyectiva diremos que $\rho$ es
+  un \textbf{isomorfismo}.
+\end{definition}
 
+\begin{theorem}{\normalfont (\cite{fraleigh}, teorema 13.2, p.128)}.
+  Sea $\rho:G\rightarrow G^{'}$ un homomorfismo de grupos. Entonces
+  \begin{enumerate}
+    \item $\rho(1)=1^{'}$, donde $1\in G$ y  $1^{'}\in G^{'}$ son los
+    neutros respectivos. 
+    \item Si $g\in G$, entonces $\rho(g^{-1})=\rho (g)^{-1}$.
+  \end{enumerate}
+\end{theorem}
 
 Denotemos con $S_{Y}$ al grupo de permutaciones de un conjunto $Y$. Del
 teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77)
