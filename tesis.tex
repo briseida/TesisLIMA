@@ -930,9 +930,10 @@ Enseguida se muestran ejemplos de grupos que usaremos posteriormente.
 \end{example}
 
 \begin{definition}
-  Sea $H$ un subconjunto no vacío del grupo $G$. Si $H$ es cerrado bajo la operación binaria de $G$,
-  es decir, si $h_{1},h_{2}\in H$, entonces $h_{1}h_{2}\in H$ y $H$ es
-  un grupo con esta operación, decimos que $H$ es un \textbf{subgrupo} de $G$ y
+  Sea $H$ un subconjunto no vacío del grupo $G$. Si 
+  $h_{1},h_{2}\in H$ implica $h_{1}h_{2}\in H$, el
+  elemento neutro del grupo $G$ está en $H$ y dado $h\in H$, se tiene que
+  $h^{-1}\in H$, decimos que $H$ es un \textbf{subgrupo} de $G$ y
   lo denotamos como $H\leq G$.
 \end{definition}
 
@@ -959,12 +960,11 @@ $n,m\in\mathbb{Z}$.
 \end{definition}
 
 \begin{theorem}[\cite{zaldivar}, teorema 3.5, p.25]
-  Si $C_{n}$ es un grupo cíclico finito, entonces los elementos de $C_{n}$ son
-  potencias positivas del generador $g$ de $C_{n}$, desde $g^{0}=1$ hasta $g^{k-1}$, donde
-  $k=|C_{n}|$ es el orden del grupo y es el menor entero positivo que
-  anula a $g$, es decir, $g^{k}=1$. Así
+  Si $C_{n}$ es un grupo cíclico finito de orden $n$, entonces los elementos de $C_{n}$ son
+  potencias positivas del generador~$g$ de $C_{n}$, desde $g^{0}=1$
+  hasta $g^{n-1}$. Es decir:
   \begin{equation*}
-    C_{n}=\{1=g^{0},g,g^{2},g^{3},\dots,g^{k-1}\}.
+    C_{n}=\{1=g^{0},g,g^{2},g^{3},\dots,g^{n-1}\}.
   \end{equation*}
 \end{theorem}
 
@@ -1233,11 +1233,13 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
 \label{modulos}
 
 Sea $R$ un anillo con identidad, $A$ un grupo abeliano. Dado un
-morfismo de anillos $\phi:R\rightarrow \End(A)$, se
-define la función $\cdot:R\times A\rightarrow A$ dado por: $r\cdot a=\phi_{r}(a)$
-para $r\in R$ y $a\in A$. Con lo cual tenemos
+morfismo de anillos $\phi:R\rightarrow \End(A)$, y denotando a
+$\phi(r)$ como $\phi_{r}$, se puede definir una acción de $R$ en $A$ 
+$\cdot:R\times A\rightarrow A$ por medio de: $r\cdot a=\phi_{r}(a)$
+para $r\in R$ y $a\in A$. Con lo cual tenemos:
 \begin{itemize}
-\item $r\cdot (a+b)=\phi_{r}(a+b)=\phi_{r}(a)+\phi_{r}(b),$
+\item $r\cdot (a+b)=\phi_{r}(a+b)=\phi_{r}(a)+\phi_{r}(b)=r\cdot
+  a+r\cdot b,$
 \item $(r+s)\cdot a=\phi_{r+s}(a)=\phi_{r}(a)+\phi_{s}(a)=r\cdot
   a+s\cdot a,$
 \item $(rs)\cdot
@@ -1248,10 +1250,11 @@ para $r\in R$ y $a\in A$. Con lo cual tenemos
 para cualesquiera $a,b\in A$ y $r,s\in R$. En adelante, escribiremos
 $ra$ en lugar de $r\cdot a$.
 
-A continuación escribimos estas propiedades en la siguiente definición
-de $R$-módulo. 
+Las propiedades anteriores nos sirven para definir la estructura
+algebraica de $R$-módulo. 
+
 \begin{definition}
-  Sea $R$ un anillo con identidad. Un conjunto no vacío $M$ se dice que
+  Sea $R$ un anillo con identidad. Se dice que un conjunto~$M$
   es un \textbf{$R$-módulo} o \textbf{módulo} sobre $R$ si $M$ es un grupo abeliano
   bajo una operación $+$, tal que para cada $r\in R$ y $m\in M$ existe
   un elemento $rm\in M$ de tal modo que:
@@ -1262,14 +1265,13 @@ de $R$-módulo.
   \item $1m=m.$
   \end{enumerate}
   para cualesquiera $m,n \in M$ y $r,s\in R$.
-
   % Si $R$ es un anillo con identidad, 1, y si $1m=m$ para todo elemento
   % $m\in M$, entonces a $M$ lo llamaremos un \textbf{$R$-módulo
   % unitario}.
 \end{definition}
 
 \begin{example}
-  Si $R$ es un campo, un espacio vectorial sobre $R$ es un $R$~-módulo.
+  Si $R$ es un campo, cada espacio vectorial sobre $R$ es de hecho un $R$~-módulo.
 \end{example}
 
 % \begin{example}{\normalfont (\cite{herstein1990algebra}, ej. 1, p.189).}
@@ -1290,7 +1292,7 @@ Por otra parte, sea $A$ un grupo abeliano y $R$ un anillo con
 identidad. Dado $A$ un $R$-módulo, definimos un morfismo
 de anillos $\phi:R\rightarrow \End(A)$ dado por: $\phi_{r}(a)=ra$ para
 $r\in R$ y $a\in A$. Por tanto tenemos una correspondencia biyectiva entre el conjunto de
-morfismos de anillos $\phi:R\rightarrow End(A)$ y el conjunto de
+morfismos de anillos $\phi:R\rightarrow \End(A)$ y el conjunto de
 $R$-modulos $A$.
 
 \section{Representaciones de grupos}
