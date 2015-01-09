@@ -1123,11 +1123,11 @@ $f(g)\in S_{Y}$ ``representa'' al elemento del grupo $g\in G$.
 Si tenemos un homomorfismo $\phi:G\rightarrow S_{Y}$, no
 necesariamente inyectivo, el grupo $G$ permuta el conjunto $Y$ como sigue: dado
 $\phi:G\rightarrow S_{Y}$ se define $*:G\times Y\rightarrow Y$ como
-$g*y=\phi(g)(y)$. Por propiedades de homomorfismo esta función tiene las
+$g*y=\phi_{g}(y)$. Por propiedades de homomorfismo esta función tiene las
 siguientes propiedades:
 \begin{itemize}
-\item $1*y=y$
-\item $(gh)*y=g*(h*y)$
+\item $1*y=\phi_{1}(y)=y,$
+\item $(gh)*y=\phi_{gh}(y)=\phi_{g}(y)\phi_{h}(y)=\phi_{g}(\phi_{h}(y))=\phi_{g}(h*y)=g*(h*y).$
 \end{itemize}
 
 Abstrayendo estas propiedades, obtenemos la siguiente definición:
@@ -1149,25 +1149,10 @@ Abstrayendo estas propiedades, obtenemos la siguiente definición:
 
 Por otro lado, dada una acción del grupo $G$ en el conjunto $Y$, se
 puede definir un homomorfismo $\phi:G\rightarrow S_{Y}$ por medio de
-$\phi(g)(y)=g*y$. Esto establece una correspondencia biyectiva entre
+$\phi_{g}(y)=g*y$. Esto establece una correspondencia biyectiva entre
 el conjunto de homomorfismos $\phi:G\rightarrow S_{Y}$ y el conjunto
 de las acciones de $G$ en $Y$.
 
-\begin{definition}
-  \label{accion-lineal}
-  Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
-  sobre el campo $F$. Una \textbf{acción lineal de $G$ en $V$} es una
-  función $$*:G\times V \rightarrow V $$ que satisface los axiomas:
-\begin{enumerate}
-\item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
-\item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
-  $g_{1},g_{2}\in G$.
-\item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
-\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in F$,
-  $v\in V$ y $g_{1}\in G.$
-\end{enumerate}
-Diremos que $V$ es un \textbf{$G$-módulo.}
-\end{definition}  
 \section{Anillos}
 \label{anillos}
 
@@ -1232,7 +1217,7 @@ A continuación se muestran ejemplos de anillos.
   \begin{enumerate}
   \item $\phi(a+b)=\phi(a)+\phi(b),$
   \item $\phi(ab)=\phi(a)\phi(b),$
-  \item $\phi(1_{R})=\phi(1_{R^{'}}),$
+  \item $\phi(1_{R})=1_{R^{'}},$
   \end{enumerate}
 para $a,b\in R$.
 \end{definition}
@@ -1247,26 +1232,44 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
 \section{Módulos}
 \label{modulos}
 
+Sea $R$ un anillo con identidad, $A$ un grupo abeliano. Dado un
+morfismo de anillos $\phi:R\rightarrow \End(A)$, se
+define la función $\cdot:R\times A\rightarrow A$ dado por: $r\cdot a=\phi_{r}(a)$
+para $r\in R$ y $a\in A$. Con lo cual tenemos
+\begin{itemize}
+\item $r\cdot (a+b)=\phi_{r}(a+b)=\phi_{r}(a)+\phi_{r}(b),$
+\item $(r+s)\cdot a=\phi_{r+s}(a)=\phi_{r}(a)+\phi_{s}(a)=r\cdot
+  a+s\cdot a,$
+\item $(rs)\cdot
+  a=\phi_{rs}(a)=\phi_{r}(a)\phi_{s}(a)=\phi_{r}(\phi_{s}(a))=\phi_{r}(s\cdot
+  a)=r\cdot(s\cdot a),$
+\item $1\cdot a=\phi_{1}(a)=a.$
+\end{itemize}
+para cualesquiera $a,b\in A$ y $r,s\in R$. En adelante, escribiremos
+$gx$ en lugar de $g\cdot x$.
+
+A continuación escribimos estas propiedades en la siguiente definición
+de $R$-módulo. 
 \begin{definition}
-  Sea $R$ un anillo cualquiera. Un conjunto no vacío $M$ se dice que
-  es un \textbf{$R$-módulo} o (módulo sobre $R$) si $M$ es un grupo abeliano
+  Sea $R$ un anillo con identidad. Un conjunto no vacío $M$ se dice que
+  es un \textbf{$R$-módulo} o \textbf{módulo} sobre $R$ si $M$ es un grupo abeliano
   bajo una operación $+$, tal que para cada $r\in R$ y $m\in M$ existe
   un elemento $rm\in M$ de tal modo que:
   \begin{enumerate}
-  \item $r(a+b)=ra+rb$
-  \item $r(sa)=(rs)a$
-  \item $(r+s)a=ra+sa$
+  \item $r(m+n)=rm+rn,$
+  \item $(r+s)m=rm+sm,$
+  \item $(rs)m=r(sm),$
+  \item $1m=m.$
   \end{enumerate}
-  para cualquier $a,b \in M$ y $r,s\in R$.
+  para cualesquiera $m,n \in M$ y $r,s\in R$.
 
-  Si $R$ es un anillo con identidad, 1, y si $1m=m$ para todo elemento
-  $m\in M$, entonces a $M$ lo llamaremos un \textbf{$R$-módulo
-  unitario}.
+  % Si $R$ es un anillo con identidad, 1, y si $1m=m$ para todo elemento
+  % $m\in M$, entonces a $M$ lo llamaremos un \textbf{$R$-módulo
+  % unitario}.
 \end{definition}
 
 \begin{example}
-  Si $R$ es un campo, un $R$-módulo unitario es un espacio vectorial
-  sobre $R$.
+  Si $R$ es un campo, un espacio vectorial sobre $R$ es un $R$~-módulo.
 \end{example}
 
 % \begin{example}{\normalfont (\cite{herstein1990algebra}, ej. 1, p.189).}
@@ -1283,17 +1286,31 @@ En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, do
 %   \label{end-modulo}
 % \end{example}
 
-Sea $A$ un grupo abeliano y $R$ un anillo. Dado el morfismo de anillos $\phi:R\rightarrow \End(A)$, se
-define $*:R\times A\rightarrow A$ dado por: $r*a=\phi(r)a$
-para $r\in R$ y $a\in A$, por propiedades del morfismo de anillos
-observamos que $A$ es un $R$-módulo. 
-
-De forma análoga, si $A$ es un $R$-módulo, podemos definir un morfismo
-de anillos $\phi:R\rightarrow \End(A)$ dado por: $\phi(r)a=g*a$ para
-$r\in R$ y $a\in A$.
+Por otra parte, sea $A$ un grupo abeliano y $R$ un anillo con
+identidad. Dado $A$ un $R$-módulo, definimos un morfismo
+de anillos $\phi:R\rightarrow \End(A)$ dado por: $\phi_{r}(a)=ra$ para
+$r\in R$ y $a\in A$. Por tanto tenemos una correspondencia biyectiva entre el conjunto de
+morfismos de anillos $\phi:R\rightarrow End(A)$ y el conjunto de
+$R$-modulos $A$.
 
 \section{Representaciones de grupos}
 \label{rep-grup}
+
+\begin{definition}
+  \label{accion-lineal}
+  Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
+  sobre el campo $F$. Una \textbf{acción lineal de $G$ en $V$} es una
+  función $$*:G\times V \rightarrow V $$ que satisface los axiomas:
+\begin{enumerate}
+\item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
+\item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
+  $g_{1},g_{2}\in G$.
+\item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
+\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in F$,
+  $v\in V$ y $g_{1}\in G.$
+\end{enumerate}
+Diremos que $V$ es un \textbf{$G$-módulo.}
+\end{definition}  
 
 La idea básica de teoría de representaciones es estudiar grupos considerándolos como
 transformaciones lineales. Esto se hace como sigue: dado un grupo $G$
