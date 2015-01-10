@@ -1298,29 +1298,12 @@ $R$-modulos $A$.
 \section{Representaciones de grupos}
 \label{rep-grup}
 
-\begin{definition}
-  \label{accion-lineal}
-  Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
-  sobre el campo $F$. Una \textbf{acción lineal de $G$ en $V$} es una
-  función $$*:G\times V \rightarrow V $$ que satisface los axiomas:
-\begin{enumerate}
-\item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
-\item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
-  $g_{1},g_{2}\in G$.
-\item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
-\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in F$,
-  $v\in V$ y $g_{1}\in G.$
-\end{enumerate}
-Diremos que $V$ es un \textbf{$G$-módulo.}
-\end{definition}  
-
 La idea básica de teoría de representaciones es estudiar grupos considerándolos como
-transformaciones lineales. Esto se hace como sigue: dado un grupo $G$
+transformaciones lineales. Esto se hace como sigue: dado un grupo~$G$
 y un espacio vectorial $V$ de dimensión finita sobre el campo $F$,
-se asocia a cada $g\in G$ una transformación lineal $\rho(g)\in GL(V)$ de manera que hace a la
-función $\rho:G\rightarrow GL(V)$ un homomorfismo de grupos. $\rho$ es
-llamada la \textbf{representación de
-  $G$ en $V$}. 
+se asocia a cada $g\in G$ una transformación lineal $\rho(g)\in GL(V)$
+de manera que la función $\rho:G\rightarrow GL(V)$ es un homomorfismo
+de grupos llamado la \textbf{representación de $G$ en $V$}. 
 %A dicho espacio $V$ se le llamará \emph{espacio de representación} y a
 %su dimensión el \emph{grado} de la representación. 
 
@@ -1328,9 +1311,6 @@ Dada cierta representación $\rho$, se sigue que $\rho(G)$ es un
 subgrupo de $GL(V)$, al cual se le puede aplicar las ideas de álgebra
 lineal. Si $\rho$ es inyectiva, entonces $G\cong \rho(G)$.
 
-Usualmente se estudia teoría de representaciones mediante la
-representaciones en sí mismas o a través de sus correspondientes
-$G$-módulos, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía con otro tipo de representación.
 
 % Sea $S_{A}$ denote el grupo de permutaciones de un conjunto $A$. El
 % teorema de Cayley (\cite{herstein1990algebra}, teorema 2.F, p.77) nos dice que cualquier grupo $G$ es isomorfo a un
@@ -1362,11 +1342,29 @@ $G$-módulos, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía con
 % correspondencia biyectiva entre el homomorfismo $\phi:G\rightarrow
 % S_{A}$ y acciones de grupo.
 
-Dada una representación $\rho:G\rightarrow GL(V)$, se define
-$gv=\rho(g)(v)$, conseguimos 
-%nuevamente los axiomas de grupo y dos propiedades más, las cuales establecen que $*$ es una acción lineal.
-los axiomas de una acción lineal de la definición \ref{accion-lineal},
-los cuales definen un $G$-módulo.
+Sea $\rho:G\rightarrow GL(V)$ una representación de $G$ en $V$,
+denotamos a $\rho(g)$ como $\rho_{g}$, se define una función
+$*:G\times V\rightarrow V$ dada por $g*v=\rho_{g}(v)$ para $g\in G$ y
+$v\in V$. Como se hizo anteriormente, por abuso de notación escribiremos $gv$ en
+lugar de $g*v$. Por las propiedades del homomorfismo de grupos $\rho$,
+conseguimos establecer la estructura de un $G$-módulo en la definición
+\ref{accion-lineal}.
+
+\begin{definition}
+  \label{accion-lineal}
+  Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
+  sobre el campo $F$. Una \textbf{acción lineal de $G$ en $V$} es una
+  función $$*:G\times V \rightarrow V $$ que satisface los axiomas:
+\begin{enumerate}
+\item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
+\item $(g_{1}g_{2})v=g_{1}(g_{2}v)$ para todos $v\in V$ y
+  $g_{1},g_{2}\in G$.
+\item $g_{1}(v+w)=g_{1}v+g_{1}w$, para $g_{1}\in G$ y $v,w \in V .$
+\item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in F$,
+  $v\in V$ y $g_{1}\in G.$
+\end{enumerate}
+Diremos que $V$ es un \textbf{$G$-módulo.}
+\end{definition}  
 % \begin{itemize}
 % \item $1v=v$
 % \item $(gh)v=g(hv)$
@@ -1376,16 +1374,22 @@ los cuales definen un $G$-módulo.
 
 % Estos cuatro axiomas definen un $G$-módulo (ver definición
 % \ref{accion-lineal}). 
-Inversamente se define una representación $\rho$ a partir de un
-$G$-módulo como sigue: dado un $G$-módulo, sea
-$\rho(g)(v)=gv$. Enseguida se enuncia y demuestra justamente lo
-discutido sobre representaciones de $G$ en $V$ y $G$-módulos.
+Inversamente a partir de una acción lineal de $G$ en $V$ se define una
+representación $\rho:G\rightarrow V$ como $\rho_{g}(v)=gv$ para $g\in
+G$ y $v\in V$. Enseguida en el teorema \ref{rep-mod} se demuestra con
+detalle la correspondencia biyectiva entre el conjunto de
+representaciones de $G$ en $V$ y el conjunto de acciones lineales de
+$G$ en $V$.
+
+Usualmente se estudia teoría de representaciones mediante la
+representaciones en sí mismas o a través de sus correspondientes
+$G$-módulos.%, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía con otro tipo de representación.
 
 \begin{theorem}
   \label{rep-mod}
   Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
   sobre el campo $F$. Existe una correspondencia biyectiva entre el conjunto de acciones
-  lineales $G$ en $V$ y el conjunto de representaciones de $G$ en $GL(V)$.
+  lineales de $G$ en $V$ y el conjunto de representaciones de $G$ en $V$.
 \end{theorem}
 
 \begin{proof}[Demostración]
