@@ -558,7 +558,7 @@ una representación nos proporcionan información acerca de esta, lo
 cual se describe con detalle en la sección \ref{caracteres}. Además,
 por medio del producto interno de caracteres podemos determinar si una
 representación es irreducible, cuándo dos representaciones son
-equivalentes, y la multiplicidad de cierto submódulo irreducible en la
+equivalentes; así como la multiplicidad de cierto submódulo irreducible en la
 descomposición de un $G$-módulo, entre otros teoremas que se muestran en la
 sección~\ref{producto-interno}. En la sección \ref{carac-induc}, se expone la reciprocidad de
 Frobenius y la fórmula para obtener el carácter de una representación
@@ -600,7 +600,7 @@ se suponen sobre $F$.
 \begin{definition}
   Sean $W_{1}$ y $W_{2}$ dos subconjuntos no vacíos de un espacio
   vectorial $V$, la \textbf{suma} de $W_{1}$ y $W_{2}$, que se
-  expresa como $W_{1}+W_{2}$, es el conjunto $\{x+y:x\in W_{1}$ y $y\in
+  expresa como $W_{1}+W_{2}$, se define como el conjunto $\{x+y:x\in W_{1}$ y $y\in
   W_{_2}\}$. La suma de cualquier número finito de subconjuntos no
   vacíos de $V$: $W_{1},\ldots,W_{n}$, se define análogamente como el
   conjunto
@@ -650,7 +650,7 @@ Denotemos por $V/W$ al conjunto de todas las clases laterales de $W$.
   \label{esp-coc}
   Si $V$ es un espacio vectorial y si $W$ es un subespacio de $V$,
   entonces $V/W$ es un espacio vectorial, donde para $v_{1}+W,v_{2}+W\in V/W$ y
-  $\lambda\in F$,
+  $\lambda\in F$, se define:
   \begin{itemize}
   \item $(v_{1}+W)+(v_{2}+W)=(v_{1}+v_{2})+W$ para todos $v_{1}$, $v_{2}\in V$.
   \item $\lambda(v_{1}+W)=\lambda v_{1}+W$ para todo $v_{1}\in V$ y $\lambda\in F$.
@@ -713,8 +713,8 @@ Denotemos por $V/W$ al conjunto de todas las clases laterales de $W$.
 
 \begin{theorem}{\normalfont (\cite{friedberg1982algebra}, corolario 2.3, p.69)}.
   \label{imT}
-  Si $V$ y $W$ son espacios vectoriales y $T:V \rightarrow W$
-  una transformación lineal. Sea $\beta=\{v_{1},\ldots,v_{n}\}$ una base de~$V$,
+  Sean $V$ y $W$ espacios vectoriales y $T:V \rightarrow W$
+  una transformación lineal. Si $\beta=\{v_{1},\ldots,v_{n}\}$ es una base de~$V$,
   entonces $\im(T)=\langle T(v_{1}),\ldots,T(v_{n})\rangle.$  
 \end{theorem}
 
@@ -817,9 +817,13 @@ que usaremos más adelante en la sección \ref{rep-grup}.
 Sea $X$ un conjunto no vacío. Se define $F^{X}$ como:
 \begin{equation*}
   %\label{F-X}
-  F^{X}=\{f:X\rightarrow F\mid f(x)\neq 0 \mbox{ para un número finito
-    de } x\in X\}.
+  F^{X}=\{f:X\rightarrow F\mid \{x\in X\mid f(x)\neq 0\} \mbox{ es finito}\}.
 \end{equation*}
+% \begin{equation*}
+%   %\label{F-X}
+%   F^{X}=\{f:X\rightarrow F\mid f(x)\neq 0 \mbox{ para un número finito
+%     de } x\in X\}.
+% \end{equation*}
 
 \begin{lemma}
   \label{FX}
