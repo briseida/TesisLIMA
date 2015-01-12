@@ -1817,7 +1817,7 @@ Entonces $F^{2}$ es un $S_{2}$-módulo de permutaciones.
  %  \begin{equation*}
  %    gv=g(\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots +\lambda_{n}g_{n})=\lambda_{1}(gg_{1})+\lambda_{2}(gg_{2})+\cdots +\lambda_{n}(gg_{n}).
  %  \end{equation*}
-Con esta acción, $F^{G}$ es un $G$-módulo, al cual llamamos \textbf{módulo regular}.  
+De modo que, $F^{G}$ es un $G$-módulo, al cual llamamos \textbf{módulo regular}.  
 \end{example}
 
 \section{Reducibilidad}
@@ -1838,25 +1838,6 @@ En esta sección, $G$ denota un grupo finito y $V$ un $G$-módulo.
 \begin{example}
   Cualquier $G$-módulo $V$ tiene a los submódulos 0 y $V$. Estos dos
   submódulos son llamados triviales.
-\end{example}
-
-\begin{example}
-  \label{sub-estandar}
-  De el ejemplo \ref{CS}, un submódulo importante de
-  $F\mathbb{I}_{n}$ de dimensión $n-1$ es:
-  \begin{equation*}
-    E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in F\mathbb{I}_{n}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
-  \end{equation*}
-  Este submódulo se llama \textbf{módulo estándar}. 
-  
-  Tenemos también que $T=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
-  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ es submódulo
-  de~$F\mathbb{I}_{n}$, el cual tiene dimensión 1, y de hecho
-  es isomorfo a la representación trivial. Se sigue que:
-
-  \begin{equation*}
-    F\mathbb{I}_{n}=E\oplus T.
-  \end{equation*}  
 \end{example}
 
 \begin{definition}
@@ -1922,7 +1903,7 @@ grupo. Y en este ejemplo $V$ no es completamente reducible.
       r & 1 
     \end{pmatrix}$,
   \end{center}
-  la cual está bien definida y determina un homomorfismo de grupos.
+  la cual determina un homomorfismo de grupos.
 
 Queremos determinar si la estructura de $G$-módulo de $V$ tiene algún submódulo propio. Como $V$
 tiene dimensión 2, un submódulo propio $W$ deberá tener dimensión 1,
@@ -2025,6 +2006,25 @@ de $G$.
   este caso decimos que $V$ y $W$ son $G$\textbf{-isomorfos} y lo
   denotaremos como $V\cong W$.
 \end{definition}
+
+\begin{example}
+  \label{sub-estandar}
+  Del ejemplo \ref{CS}, un submódulo de
+  $F^{n}$ de dimensión $n-1$ es:
+  \begin{equation*}
+    E=\Big\{(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)\in F^{n}\mid\sum^{n}_{i=1}\lambda_{i}=0\Big\}.
+  \end{equation*}
+  Este submódulo se llama \textbf{módulo estándar}. 
+  
+  Tenemos también que $T=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
+  \lambda_{1}=\lambda_{2}=\cdots=\lambda_{n}\}$ es submódulo
+  de~$F^{n}$, el cual tiene dimensión 1 y de hecho
+  es isomorfo a la representación trivial. Se sigue que:
+
+  \begin{equation*}
+    F^{n}=E\oplus T.
+  \end{equation*}  
+\end{example}
 
 \begin{proposition}{\normalfont (\cite{sagan2001symmetric}, proposición 1.7.9, p.21)}.
   \label{ker-im-sub}
