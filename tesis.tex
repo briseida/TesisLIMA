@@ -1408,46 +1408,46 @@ $G$-módulos.%, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía c
 \begin{proof}[Demostración]
   Supongamos primero que se tiene una acción lineal
   $$*:G\times V \rightarrow V$$
-  para cada $g\in G$, usando esta acción definamos la función $\rho
-  g:V \rightarrow V$ dada por $(\rho g)v=gv$ para todo $v\in V$.
+  para cada $g\in G$, usando esta acción definamos la función
+  $\rho_{g}:V \rightarrow V$ dada por $\rho_{g}v=gv$ para todo $v\in
+  V$.
 
-  Enseguida demostraremos que $\rho g$ es una transformación lineal
+  Enseguida demostraremos que $\rho_{g}$ es una transformación lineal
   invertible. Sean $v,w\in V$, $\lambda \in F$, entonces:
   \begin{flalign*}
-    &(\rho g)(v+w)=g(v+w)=gv+gw=(\rho g)v+(\rho g)w,\\
-    &(\rho g)(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda((\rho g)v).
+    &\rho_{g}(v+w)=g(v+w)=gv+gw=\rho_{g}(v)+\rho_{g}(w),\\
+    &\rho_{g}(\lambda v)=g(\lambda v)=\lambda(gv)=\lambda\rho_{g}(v).
   \end{flalign*}
 
-  Así que $\rho g$ es lineal, ahora veamos que es invertible. Como $G$
+  Así que $\rho_{g}$ es lineal, ahora veamos que es invertible. Como $G$
   es un grupo, existe $g^{-1}\in G$.
   \begin{footnotesize}
     \begin{eqnarray*}
-      ((\rho g)(\rho g)^{-1})v=(\rho g)((\rho g)^{-1}v)=(\rho g)((\rho g^{-1})v)=(\rho g)(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v,\\
-      ((\rho g)^{-1}(\rho g))v=(\rho g)^{-1}((\rho g)v)=(\rho g^{-1})((\rho g)v)=(\rho g^{-1})(gv)=g^{-1}(gv)=(g^{-1}g)v=v,
+      (\rho_{g}\rho_{g}^{-1})(v)=\rho_{g}(\rho_{g}^{-1}(v))=\rho_{g}(\rho_{g^-1}(v))=\rho_{g}(g^{-1}v)=g(g^{-1}v)=(gg^{-1})v=v,\\
+      (\rho_{g}^{-1}\rho_{g})(v)=\rho_{g}^{-1}(\rho_{g}(v))=\rho_{g^{-1}}(\rho_{g}(v))=\rho_{g^{-1}}(gv)=g^{-1}(gv)=(g^{-1}g)v=v,
     \end{eqnarray*}
   \end{footnotesize}
-  por lo que $\rho g$ tiene como inversa a $\rho g^{-1}$.
+  por lo que $\rho_{g}$ tiene como inversa a $\rho_{g}^{-1}$.
 
   Ahora, observemos que la función $\rho:G\rightarrow GL(V)$ es un
   homomorfismo de grupos. Si $g,h\in G$, entonces para todo
   $v\in V$:
 
-  $$(\rho(gh))v=(gh)v=g(hv)=g((\rho h)v)=(\rho g)((\rho h)v)=(\rho g \circ \rho h)v$$
-  por lo que $\rho(gh)=\rho g \circ \rho h$.
+  $$\rho_{gh}(v)=(gh)v=g(hv)=g(\rho_{h}(v))=\rho_{g}(\rho_{h}(v))=(\rho_{g}\circ \rho_{h})(v)=(\rho_{g}\rho_{g})(v)$$
+  por lo que $\rho_{gh}=\rho_{g}\rho_{h}$.
 
   Suponga ahora que se tiene un homomorfismo de grupos
-  $\rho:G\rightarrow GL(V)$. Demostraremos que $gv=(\rho g)v$ define
+  $\rho:G\rightarrow GL(V)$. Demostraremos que $gv=\rho_{g}(v)$ define
   un acción lineal de $G$ en $V$.
 
   \begin{enumerate}
-  \item $1$ es el neutro de $G$, entonces $$1v=(\rho 1)v=1_{V}(v)=v$$
+  \item $1$ es el neutro de $G$, entonces $$1v=(\rho_{1})v=1_{V}(v)=v$$
     para todo $v\in V$.
-  \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=(\rho g h)v=(\rho g
-    \circ \rho h)v=\rho g((\rho h)v)=g((\rho h)v)=g(hv)$$
-  \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=(\rho g)(v+w)=(\rho
-    g)v+(\rho g)w=gv+gw$$
+  \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=\rho_{gh}(v)=(\rho_{g}
+    \circ \rho_{h})(v)=\rho_{g}(\rho_{h}(v))=g(\rho_{h}(v))=g(hv)$$
+  \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=\rho_{g}(v+w)=\rho_{g}(v)+\rho_{g}(w)=gv+gw$$
   \item Para $\lambda\in F$, $v\in V$ y $g\in G$,
-    $$g(\lambda v)=(\rho g)(\lambda v)=\lambda((\rho g)v)=\lambda(gv)$$
+    $$g(\lambda v)=\rho_{g}(\lambda v)=\lambda\rho_{g}(v)=\lambda(gv)$$
   \end{enumerate}
 
   como queríamos demostrar.
@@ -1468,12 +1468,13 @@ Ahora seguimos la construcción de el anillo de grupo dada en
 elemento de el grupo un operador lineal. Por tanto, en el contexto de
 teoría de representaciones, los grupos pueden ser considerados como
 conjuntos abstractos de operadores lineales. Consideremos al espacio
-vectorial $FG$ construido como en el lema \ref{FX}, en donde $X$ es el grupo
-$G$. Daremos al espacio vectorial $FG$ una operación multiplicación.
+vectorial $F^{G}$ construido como en el lema \ref{FX}, en donde $X$ es el grupo
+$G$. Daremos al espacio vectorial $F^{G}$ una operación multiplicación.
 
-Sea el espacio vectorial $FG$. Si consideramos a los elementos de el
+%Sea el espacio vectorial $FG$. 
+Si consideramos a los elementos de el
 grupo~$G$ como operadores lineales invertibles podemos multiplicar
-elementos de $FG$ exactamente como multiplicaríamos sumas de
+elementos de $F^{G}$ exactamente como multiplicaríamos sumas de
 transformaciones lineales:
 \begin{equation*}
 \label{mult-alg-grupo}
@@ -1481,21 +1482,21 @@ transformaciones lineales:
     G}\sum_{h \in G}\lambda_{g}\mu_{h}gh.
 \end{equation*}
 Esta definición de multiplicación convierte a el espacio vectorial
-$FG$ en un anillo con elemento unitario, al cual llamamos
+$F^{G}$ en un anillo con elemento unitario, al cual llamamos
 \textbf{anillo de grupo de $G$}.
 
 Sea $V$ un $G$-módulo, es decir, se tiene la acción lineal de $G$ en $V$ 
 $$*:G\times V\rightarrow V,$$ 
-entonces se define la acción lineal del anillo de grupo $FG$ en $V$ justo
-como lo hace~$G$, es decir, se define la función $\cdot:FG\times
+entonces se define la acción lineal del anillo de grupo $F^{G}$ en $V$ justo
+como lo hace~$G$, es decir, se define la función $\cdot:F^{G}\times
 V\rightarrow V$ como: 
 \begin{equation*}
   (\sum_{g\in G}\lambda_{g}g)v=\sum_{g\in G}\lambda_{g}(gv),
 \end{equation*}
-para cada $\sum_{g\in G}\lambda_{g}g\in FG$ y $v\in V$. Así, $V$ es un
-$FG$-módulo.
+para cada $\sum_{g\in G}\lambda_{g}g\in F^{G}$ y $v\in V$. Así, $V$ es un
+$F^{G}$-módulo.
 
-Ahora supongamos que se tiene un módulo sobre $FG$, bajo la
+Ahora supongamos que se tiene un módulo sobre $F^{G}$, bajo la
 restricción de $G$, se define un $G$-módulo, como la función
 $*:G\times V\rightarrow V$ dada por:
 \begin{equation*}
@@ -1503,7 +1504,7 @@ $*:G\times V\rightarrow V$ dada por:
 \end{equation*}
 para cada $g\in G$ y $v\in V$. %Por tanto, $V$ es un $G$-módulo.
 
-Es equivalente estudiar $FG$-módulos y $G$-módulos, ya que tenemos una
+Es equivalente estudiar $F^{G}$-módulos y $G$-módulos, ya que tenemos una
 correspondencia biyectiva entre estas estructuras.
 
 Recordemos que $GL(n,F)$ es el grupo de matrices invertibles $n\times
