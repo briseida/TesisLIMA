@@ -1472,8 +1472,7 @@ vectorial $F^{G}$ construido como en el lema \ref{FX}, en donde $X$ es el grupo
 $G$. Daremos al espacio vectorial $F^{G}$ una operación multiplicación.
 
 %Sea el espacio vectorial $FG$. 
-Si consideramos a los elementos de el
-grupo~$G$ como operadores lineales invertibles podemos multiplicar
+Si consideramos a los elementos del grupo $G$ como operadores lineales invertibles podemos multiplicar
 elementos de $F^{G}$ exactamente como multiplicaríamos sumas de
 transformaciones lineales:
 \begin{equation*}
@@ -1482,7 +1481,7 @@ transformaciones lineales:
     G}\sum_{h \in G}\lambda_{g}\mu_{h}gh.
 \end{equation*}
 Esta definición de multiplicación convierte a el espacio vectorial
-$F^{G}$ en un anillo con elemento unitario, al cual llamamos
+$F^{G}$ en un anillo con identidad, al cual llamamos
 \textbf{anillo de grupo de $G$}.
 
 Sea $V$ un $G$-módulo, es decir, se tiene la acción lineal de $G$ en $V$ 
@@ -1513,7 +1512,8 @@ invertibles en un espacio vectorial $V$ de dimensión finita $n$ sobre~$F$(ver e
 $GL(n,F)$ y $GL(V)$.
 
 \begin{definition}
-  Una \textbf{representación matricial de un grupo} $G$ es el
+  Sea $V$ un espacio vectorial de dimensión finita sobre el campo
+  $F$. Una \textbf{representación matricial de un grupo} $G$ es un
   homomorfismo de grupos 
   $$X:G\rightarrow GL(n,F),$$
   notemos que esta es la definición de representación de $G$ en $V$, simplemente resaltamos que para cada $g\in G$, $X(g)$  es la
@@ -1694,17 +1694,18 @@ $GL(n,F)$ y $GL(V)$.
 % \end{example}
 \begin{example}[Módulo de permutaciones]
   \label{CS}
-  Sea $G$ un grupo, $F$ un campo, $X$ el conjunto $\{x_{1},x_{2},\ldots,x_{n}\}$ y $FX$ el
+  Sean $G$ un grupo, $F$ un campo, $X$ el conjunto
+  $\{x_{1},x_{2},\ldots,x_{n}\}$ el cual es un $G$-conjunto y $F^{X}$ el
   espacio vectorial construido como en el lema \ref{FX}, es decir,
-  si $x\in FX$, podemos escribir a $x$ como hicimos en la expresión
-\ref{sumas-formales}, es decir,
-$x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
+  si $x\in F^{X}$, podemos escribir a $x$ como hicimos en la expresión
+\ref{sumas-formales}, es decir:
+%$x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
   \begin{equation*}
-    V=FX=\{\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots
+    V=F^{X}=\{\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots
     +\lambda_{n}x_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in F\}.
   \end{equation*}
-  La adición y multiplicación por escalar
-  en $FX$ está definida por
+  La suma y la multiplicación por escalar
+  en $F^{X}$ está definida por:
   \begin{eqnarray*}
     (\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots
     +\lambda_{n}x_{n})+(\lambda^{'}_{1}x_{1}+\lambda^{'}_{2}x_{2}+\cdots +\lambda^{'}_{n}x_{n})\\
@@ -1716,17 +1717,17 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
     c(\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots +\lambda_{n}x_{n})=(c\lambda_{1})x_{1}+(c\lambda_{2})x_{2}+\cdots +(c\lambda_{n})x_{n},
   \end{eqnarray*}
   respectivamente. Sean $v\in V$, con
-  $v=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$ y
-  $g\in G$ entonces la acción de $G$ en $V$ está dada por
+  $v=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$ y $g\in G$, entonces la acción de $G$ en $V$ está dada por
   \begin{equation*}
     gv=g(\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots +\lambda_{n}x_{n})=\lambda_{1}(gx_{1})+\lambda_{2}(gx_{2})+\cdots +\lambda_{n}(gx_{n}).
   \end{equation*}
-  Así, $FX$ resulta ser un $G$-módulo de dimensión $|X|$. A~$FX$ le llamamos
-  \textbf{módulo de permutaciones}. Los elementos del conjunto $X$ forman una base para~$FX$.
+  Así, $F^{X}$ resulta ser un $G$-módulo de dimensión $|X|$. A~$F^{X}$ le llamamos
+  \textbf{módulo de permutaciones}. Los elementos del conjunto $X$ forman una base para~$F^{X}$.
 
-  Por ejemplo, el grupo simétrico $S_{n}$ actuando en $\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
+  Por ejemplo, el grupo simétrico $S_{n}$ actuando en el conjunto de
+  los números naturales desde el 1 hasta $n$. %$\mathbb{I}_{n}=\{1,2,\ldots,n\}$.
   \begin{equation*}
-    F\mathbb{I}_{n}=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
+    F^{n}=\{\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n\mid
     \lambda_{i}\in F\},
   \end{equation*}
   sea $\pi\in S_{n}$, la acción es
@@ -1734,9 +1735,9 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
     \pi(\lambda_{1}1+\lambda_{2}2+\cdots+\lambda_{n}n)=\lambda_{1}\pi(1)+\lambda_{2}\pi(2)+\cdots+\lambda_{n}\pi(n).
   \end{equation*}
 
-  Consideremos un caso específico, el de $S_{2}=\{(1),(12)\}$ actuando en
-  $\mathbb{I}_{2}$. Determinemos las
-  matrices asociadas respecto a la base $\mathbb{I}_{2}$. Para
+  Consideremos un caso específico, el de $S_{2}=\{(1),(12)\}$ actuando
+  en el conjunto $\{1,2\}$. Determinemos las
+  matrices asociadas respecto a la base $\{1,2\}$. Para
   $\pi=(12)$, calculamos (12)1=2 y (12)2=1. Así que
   \begin{center}
     $X((12))=\begin{pmatrix}
@@ -1751,7 +1752,7 @@ $x=\lambda_{1}x_{1}+\lambda_{2}x_{2}+\cdots+\lambda_{n}x_{n}$.
       0 & 1  
     \end{pmatrix}$,
   \end{center}
-Entonces $F\mathbb{I}_{2}$ es un $S_{2}$-módulo de permutaciones.
+Entonces $F^{2}$ es un $S_{2}$-módulo de permutaciones.
 
 % Consideremos un caso específico, el de $S_{3}$ actuando en
 %   $\mathbb{I}_{3}$. Determinemos las
@@ -1803,19 +1804,20 @@ Entonces $F\mathbb{I}_{2}$ es un $S_{2}$-módulo de permutaciones.
 
 \begin{example}[Módulo regular]
   \label{regular}
-  Sea $G$ un grupo y $F$ un campo. Procedemos como en el ejemplo \ref{CS}, pero ahora $G$
-  actúa sobre el espacio vectorial~$FG$ con el producto usual de
-  grupo. Sean $X=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
-  \begin{equation*}
-    V=FG=\{\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
-    +\lambda_{n}g_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in F\}.
-  \end{equation*}
- Sean $v\in V$ con $v=\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
- +\lambda_{n}g_{n}$ y $g\in G$, entonces la acción de~$G$ en $V$ está dada por
-  \begin{equation*}
-    gv=g(\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots +\lambda_{n}g_{n})=\lambda_{1}(gg_{1})+\lambda_{2}(gg_{2})+\cdots +\lambda_{n}(gg_{n}).
-  \end{equation*}
-Con esta acción, $FG$ es un $G$-módulo, al cual llamamos \textbf{módulo regular}.  
+  Sea $G$ un grupo y $F$ un campo. Un caso particular del ejemplo
+  \ref{CS}, es cuando $X=G$, es decir, $G$ actúa sobre el espacio
+  vectorial $F^{G}$ con el producto usual de grupo.
+  % Sean $X=G=\{g_{1},g_{2},\ldots,g_{n}\}$ y 
+ %  \begin{equation*}
+ %    V=FG=\{\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
+ %    +\lambda_{n}g_{n}\mid\lambda_{1},\ldots,\lambda_{n}\in F\}.
+ %  \end{equation*}
+ % Sean $v\in V$ con $v=\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots
+ % +\lambda_{n}g_{n}$ y $g\in G$, entonces la acción de~$G$ en $V$ está dada por
+ %  \begin{equation*}
+ %    gv=g(\lambda_{1}g_{1}+\lambda_{2}g_{2}+\cdots +\lambda_{n}g_{n})=\lambda_{1}(gg_{1})+\lambda_{2}(gg_{2})+\cdots +\lambda_{n}(gg_{n}).
+ %  \end{equation*}
+Con esta acción, $F^{G}$ es un $G$-módulo, al cual llamamos \textbf{módulo regular}.  
 \end{example}
 
 \section{Reducibilidad}
