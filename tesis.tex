@@ -1168,22 +1168,22 @@ de las acciones de $G$ en $Y$.
 
 \begin{definition}
   Un conjunto no vacío $R$ se dice que es un \textbf{anillo} si en $R$
-  están definidas dos operaciones, denotadas por $+$ y $\cdot$ tales
-  que para cualquier $a,b,c \in R$:
+  están definidas dos operaciones suma y producto, denotadas por $+$ y
+  $\cdot$ respectivamente, tal que $R$ es un grupo abeliano bajo la suma y además:
   \begin{enumerate}
-  \item $(R,+)$ es un grupo abeliano.
-  \item $a\cdot (b\cdot c)=(a\cdot b)\cdot c$.
-  \item $a\cdot (b+c)=a\cdot b+a\cdot c$ y $(b+c)\cdot a=b\cdot a+c\cdot a$
+  \item $a\cdot (b\cdot c)=(a\cdot b)\cdot c$,
+  \item $a\cdot (b+c)=a\cdot b+a\cdot c$,
+  \item $(b+c)\cdot a=b\cdot a+c\cdot a$.
   \end{enumerate}
+  para cualesquiera $a,b,c \in R$.
 
   Si existe un elemento $1\in R$ tal que $a\cdot 1=1\cdot a=a$ para todo
-  $a\in R$, diremos que $R$ es un \textbf{anillo con elemento
-    unitario}.
+  $a\in R$, diremos que $R$ es un \textbf{anillo con identidad}.
   
   Si la multiplicación de $R$ es tal que $a\cdot b=b\cdot a$ para todo
   $a,b\in R$ entonces llamamos a $R$ \textbf{anillo conmutativo}.
-
-  Un anillo se dice que es un \textbf{anillo con división} si sus
+  
+  Un anillo con identidad es un \textbf{anillo con división} si sus
   elementos distintos de cero forman un grupo bajo la multiplicación.
 
   Usaremos la notación $ab$ en lugar de $a\cdot b$, para $a,b\in R$.
@@ -1194,18 +1194,19 @@ A continuación se muestran ejemplos de anillos.
 \end{example}
 
 \begin{example}
-  El conjunto de los números enteros $\mathbb{C}$, los números reales~$\mathbb{R}$ y los números racionales $\mathbb{Q}$ son todos campos
-  y por tanto también son anillos.
-\end{example}
-
-\begin{example}
   El conjunto de los enteros $\mathbb{Z}$ junto con la suma y la
-  multiplicación usual forman un anillo conmutativo con elemento unitario.
+  multiplicación usual forman un anillo conmutativo con identidad.
 \end{example}
 
 \begin{example}
-  El conjunto de matrices $M_{n}(\mathbb{Z})$ de $n\times n$ con
-  entradas enteras es un anillo no conmutativo con elemento unitario.
+  El conjunto de los números reales $\mathbb{R}$, los números
+  racionales~$\mathbb{Q}$ y los números complejos $\mathbb{C}$ con las
+  operaciones usuales son campos y por tanto también son anillos.
+\end{example}
+
+\begin{example}
+  El conjunto de matrices $M_{n}(\mathbb{Z})$ $n\times n$ con
+  entradas enteras es un anillo no conmutativo con identidad.
 \end{example}
 
 \begin{example}{\normalfont (\cite{jacobson2012basic}, teorema 3.1, p.160).}
@@ -1223,7 +1224,7 @@ A continuación se muestran ejemplos de anillos.
 \begin{definition}
   Sean $R$ y $R^{'}$ anillos con identidades $1_{R}$ y $1_{R^{'}}$
   respectivamente. Un \textbf{morfismo de anillos} es una función
-  $\phi:R\rightarrow R^{'}$ si
+  $\phi:R\rightarrow R^{'}$ tal que:
   \begin{enumerate}
   \item $\phi(a+b)=\phi(a)+\phi(b),$
   \item $\phi(ab)=\phi(a)\phi(b),$
@@ -1234,10 +1235,12 @@ para $a,b\in R$.
 En un anillo $R$, para $a\in R$, $n\in\mathbb{N}$, denotamos $na=a+\cdots+a$, donde hay $n$ sumandos.
 
 \begin{definition}
+  \label{caracteristica}
   La \textbf{característica} de un anillo $R$ es el menor entero positivo $n$
   tal que $nx=0$ para toda $x\in R$. Si no existe tal entero, decimos
   que $R$ tiene característica cero.
 \end{definition}
+La definición \ref{caracteristica} se usará en el teorema \ref{maschke}. 
 
 \section{Módulos}
 \label{modulos}
