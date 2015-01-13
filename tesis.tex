@@ -903,7 +903,7 @@ $F^{X}$ se escribe como combinación lineal de los elementos de $X$:
 
 \begin{definition}\footnote{Se puede definir grupo (\cite{barrera},
     definición 1.2.1, p.21), cambiando 2 y 3 por las condiciones de que exista el neutro por la izquierda, es decir, $1x=x$ y el inverso
-    por la izquierda $a^{-1}a=1$. Posteriormente demostrar que también
+    por la izquierda $a^{-1}a=1$. Se puede demostrar posteriormente que también
     existe el neutro por la derecha, es decir, $x1=x$ y el inverso por
     la derecha, $aa^{-1}=1$, como se hace en \cite{barrera}, teorema
     1.2.2, p.22, para obtener la definición \ref{def-grupo}.}
@@ -1313,7 +1313,7 @@ $R$-modulos $A$.
 
 La idea básica de teoría de representaciones es estudiar grupos considerándolos como
 transformaciones lineales. Esto se hace como sigue: dado un grupo~$G$
-y un espacio vectorial $V$ de dimensión finita sobre el campo $F$,
+y un espacio vectorial $V$ sobre el campo $F$,
 se asocia a cada $g\in G$ una transformación lineal $\rho(g)\in GL(V)$
 de manera que la función $\rho:G\rightarrow GL(V)$ es un homomorfismo
 de grupos llamado la \textbf{representación de $G$ en $V$}. 
@@ -1323,6 +1323,9 @@ de grupos llamado la \textbf{representación de $G$ en $V$}.
 Dada cierta representación $\rho$, se sigue que $\rho(G)$ es un
 subgrupo de $GL(V)$, al cual se le puede aplicar las ideas de álgebra
 lineal. Si $\rho$ es inyectiva, entonces $G\cong \rho(G)$.
+En la práctica nos interesaría que el espacio vectorial $V$ no sea muy
+grande, por lo cual supondremos en adelante que $V$ es de dimensión
+finita. 
 
 
 % Sea $S_{A}$ denote el grupo de permutaciones de un conjunto $A$. El
@@ -1365,8 +1368,8 @@ conseguimos establecer la estructura de un $G$-módulo en la definición
 
 \begin{definition}
   \label{accion-lineal}
-  Sea $G$ un grupo y $V$ un espacio vectorial de dimensión finita
-  sobre el campo $F$. Una \textbf{acción lineal de $G$ en $V$} es una
+  Sea $G$ un grupo y $V$ un espacio vectorial
+  sobre el campo~$F$. Una \textbf{acción lineal de $G$ en $V$} es una
   función $$*:G\times V \rightarrow V $$ que satisface los axiomas:
 \begin{enumerate}
 \item $1v=v$, para todo $v\in V$ (donde $1$ es el neutro de $G$).
@@ -1376,7 +1379,8 @@ conseguimos establecer la estructura de un $G$-módulo en la definición
 \item $g_{1}(\lambda v)=\lambda(g_{1}v)$, para $\lambda \in F$,
   $v\in V$ y $g_{1}\in G.$
 \end{enumerate}
-Diremos que $V$ es un \textbf{$G$-módulo.}
+A un espacio vectorial $V$ equipado con una acción lineal de $G$
+en $V$ se le llama un \textbf{$G$-módulo.}
 \end{definition}  
 % \begin{itemize}
 % \item $1v=v$
@@ -1394,9 +1398,9 @@ detalle la correspondencia biyectiva entre el conjunto de
 representaciones de $G$ en $V$ y el conjunto de acciones lineales de
 $G$ en $V$.
 
-Usualmente se estudia teoría de representaciones mediante la
-representaciones en sí mismas o a través de sus correspondientes
-$G$-módulos.%, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía con otro tipo de representación.
+% Usualmente se estudia teoría de representaciones mediante la
+% representaciones en sí mismas o a través de sus correspondientes
+% $G$-módulos.%, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía con otro tipo de representación.
 
 \begin{theorem}
   \label{rep-mod}
@@ -1461,7 +1465,12 @@ $G$-módulos.%, donde $G$ es un grupo. %%%%Esto se explica mejor por analogía c
 % \end{definition}
 
 Así, el teorema \ref{rep-mod} dice que estudiar las representaciones de $G$
-en $V$, es equivalente a estudiar $G$-módulos $V$. 
+en $V$, es equivalente a estudiar $G$-módulos $V$. En lo sucesivo, y
+como es usual en la literatura sobre representaciones de grupos,
+aplicaremos indistintamente conceptos definidos usando acciones
+lineales, o bien morfismos $G\to GL(V)$. Por ejemplo: más adelante
+definiremos la propiedad de que cierto $G$-módulo es irreducible. Diremos entonces que
+la representación $G\to GL(V)$ asociada al módulo es irreducible.
 
 Ahora seguimos la construcción de el anillo de grupo dada en
 (\cite{fulton1991representation}, sección 3.4, p.36). Para un grupo $G$, cualquier representación de $G$ asocia a cada
@@ -1503,13 +1512,15 @@ $*:G\times V\rightarrow V$ dada por:
 \end{equation*}
 para cada $g\in G$ y $v\in V$. %Por tanto, $V$ es un $G$-módulo.
 
-Es equivalente estudiar $F^{G}$-módulos y $G$-módulos, ya que tenemos una
+Resulta entonces que es equivalente estudiar $F^{G}$-módulos y $G$-módulos, ya que tenemos una
 correspondencia biyectiva entre estas estructuras.
 
 Recordemos que $GL(n,F)$ es el grupo de matrices invertibles $n\times
 n$ con entradas en el campo $F$ (ver ejemplo \ref{GL(nF)}). Y $GL(V)$ son los operadores lineales
-invertibles en un espacio vectorial $V$ de dimensión finita $n$ sobre~$F$(ver ejemplo \ref{GL(V)}). Existe un isomorfismo entre los grupos
-$GL(n,F)$ y $GL(V)$.
+invertibles en un espacio vectorial $V$ de dimensión finita $n$
+sobre~$F$(ver ejemplo \ref{GL(V)}). 
+Cada base de $V$ define un isomorfismo entre los grupos
+$GL(V)$ y $GL(n,F)$.
 
 \begin{definition}
   Sea $V$ un espacio vectorial de dimensión finita sobre el campo
@@ -2082,7 +2093,15 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 
   Por otro lado, si $\ker(f\circ i)=S$, tenemos
   $$0=S/S\cong\im(f\circ i)=f(S).$$
+  como queríamos demostrar.
 \end{proof}
+
+Otra manera de pensar en la demostración anterior es observar que
+$\ker f\cap S\leq S$, por lo que $\ker f\cap S=0$ o bien $\ker f\cap
+S=S$. En el primer caso se tiene que $f$ envía inyectivamente a $S$
+dentro de $W$, por lo cual $S\cong f(S)$. En el segundo caso, todos
+los elementos de $S$ están en $\ker f$, por lo cual $f(S)=0$.
+
 % \begin{theorem}
 %   Sea $V$ un $G$ módulo tal que
 %   \begin{equation*}
@@ -2092,18 +2111,14 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
 %   donde para cada $V^{(i)}$ y $V^{(j)}$ con $i\neq j$ son submódulos irreducibles no isomorfos y $\dim
 %   V^{(i)}=d_{i}$. Entonces $\dim V=m_{1}d_{1}+m_{2}d_{2}+\cdots+m_{k}d_{k}.$
 % \end{theorem}
-\begin{theorem}{\normalfont (\cite{herstein1990algebra}, cap. 4, \S 5, p.194).}
-  \label{interseccion-submodulos}
-  Sea $V$ un $G$-módulo. Entonces la intersección de cualquier
-  colección de submódulos de $V$ es un submódulo de~$V$.
-\end{theorem}
 
-\begin{theorem}{\normalfont (\cite{herstein1990algebra}, cap. 4, \S 5, p.194).}
-  \label{suma-submodulo}
-  Sea $V$ un $G$-módulo y $W_{1}$, $W_{2}$ son submódulos de
-  $V$. Entonces $W_{1}+W_{2}=\{w_{1}+w_{2}\mid w_{1}\in W_{1},
-  w_{2}\in W_{2}\}$ es un $G$-submódulo de $V$.
-\end{theorem}
+Como se puede observar en \cite[p.~194]{herstein1990algebra}, si $V$ es un $G$-módulo, se obtiene que
+la intersección de cualquier colección de submódulos de $V$ es un
+submódulo de~$V$, y además si $W_{1}$, $W_{2}$ son submódulos de $V$,
+se tiene que
+$W_{1}+W_{2}=\{w_{1}+w_{2}\mid w_{1}\in W_{1}, w_{2}\in W_{2}\}$ es un
+$G$-submódulo de $V$.
+
 % \begin{definition}
 %   Sea $V$ un $G$-módulo. Al submódulo de $V$ generado por las combinaciones lineales de los
 %   elementos de un subespacio $W$ de $V$ lo llamaremos \textbf{submódulo generado} por $W$ y lo denotaremos como $\langle W\rangle$.
@@ -2171,8 +2186,7 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
   Consideremos $S\cap S^{'}\leq S$, así que $S\cap S^{'}=0$ o $S\cap
   S^{'}=S$, pues $S$ es irreducible.
 
-  Como $S$ y $S^{'}$ son submódulos de $V$, por el teorema
-  \ref{suma-submodulo}, $S+S^{'}$ es submódulo de $V$. Ahora, si
+  Como $S$ y $S^{'}$ son submódulos de $V$, se tiene que $S+S^{'}$ es submódulo de $V$. Ahora, si
   $S\cap S^{'}=0$, la suma directa $S\oplus S^{'}$ es submódulo de $V$, 
   así que $V$ tendría un submódulo isomorfo a dos copias de $S$, lo cual
   no es posible por hipótesis. 
@@ -2183,6 +2197,11 @@ estructura de $G$-módulo en~$V/W$ llamada \textbf{módulo cociente}.
   tenemos que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería
   demostrar.
 \end{proof}
+
+Nótese que la conclusión de la proposición~\ref{modulos-iguales} es
+que no existe en $V$ un submódulo isomorfo a $S$ que no sea
+exactamente el mismo $S$. Esto resultará muy útil en los cálculos de
+las homologías en los capítulos siguientes.
 
 \section{Caracteres de representaciones}
 \label{caracteres}
