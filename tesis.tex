@@ -249,8 +249,8 @@ conocido de álgebra lineal: asociamos módulo con espacio vectorial, submódulo
 subespacio y submódulo irreducible con subespacio $T$-invariante.
 
 A cada campo $F$ y cada grupo $G$ se le asocia un anillo denotado por
-$FG$ llamado el anillo de grupo. Estudiar módulos sobre el
-anillo de grupo $FG$ es equivalente a estudiar nuevas estructuras
+$F^{G}$ llamado el anillo de grupo. Estudiar módulos sobre el
+anillo de grupo $F^{G}$ es equivalente a estudiar nuevas estructuras
 llamadas $G$-módulos, y estas a su
 vez son equivalentes a estudiar representaciones de $G$ en
 $V$, donde $V$ es un espacio vectorial sobre $F$. Usaremos
@@ -263,7 +263,7 @@ El teorema fundamental de la aritmética es análogo al teorema de
 Maschke (\cite{sagan2001symmetric}, teorema 1.5.3, p.16), el cual
 sigue la idea de descomponer a un módulo en sus piezas más
 pequeñas. El teorema de Maschke enuncia que, bajo ciertas hipótesis en
-el campo $F$ y grupo $G$, todo $FG$-módulo es completamente reducible,
+el campo $F$ y grupo $G$, todo $F^{G}$-módulo es completamente reducible,
 es decir, es suma directa de submódulos irreducibles.
 %[\cite{fulton1991representation}, proposición 1.8, p.7]. pag 24 teorema de Machke.
 
@@ -489,7 +489,7 @@ En el primer capítulo se estudian conceptos de álgebra lineal, grupos,
 anillos, módulos, representaciones de grupos y gráficas, los cuales se
 usarán en los capítulos posteriores. Siendo los conceptos más
 importantes el de representación de un grupo $G$ en un espacio
-vectorial $V$, $G$-módulos, $FG$-módulos. Destacando el teorema de
+vectorial $V$, $G$-módulos, $F^{G}$-módulos. Destacando el teorema de
 Maschke. Se definen las gráficas de emparejamientos, clanes y
 bipartita clánica.
 
@@ -543,10 +543,10 @@ definen anillos y módulos respectivamente.
 Se desarrollan conceptos de representaciones de grupos de la sección
 \ref{rep-grup} a la sección \ref{carac-induc}. Más específicamente, en
 la sección \ref{rep-grup} observamos que si $F$ es un campo y $G$ un
-grupo, se define la multiplicación en el espacio vectorial~$FG$
+grupo, se define la multiplicación en el espacio vectorial~$F^{G}$
 construido en la sección \ref{esp-vec} y se obtiene un anillo. Se
 muestra que estudiar
-$FG$-módulos es equivalente a estudiar $G$-módulos, que a su vez, es
+$F^{G}$-módulos es equivalente a estudiar $G$-módulos, que a su vez, es
 equivalente a estudiar representaciones de $G$ en $V$, donde $V$ es un
 espacio vectorial sobre $F$. Se discute en la sección
 \ref{reducibilidad} el teorema de Maschke, el cual
@@ -1834,7 +1834,14 @@ De modo que, $F^{G}$ es un $G$-módulo, al cual llamamos \textbf{módulo regular
 \section{Reducibilidad}
 \label{reducibilidad}
 
-En esta sección, $G$ denota un grupo finito y $V$ un $G$-módulo.
+En esta sección, $G$ denota un grupo finito y $V$ un $G$-módulo. Como
+se dijo anteriormente, en adelante aplicaremos indistintamente los
+conceptos definidos para $G$-módulos $V$ como para representaciones de
+$G$ en $V$. Para ejemplificar esto, definimos los conceptos de
+submódulo y módulo irreducible, así como también
+escribimos sus definiciones equivalentes en el lenguaje de
+representaciones, es decir, subrepresentación y representación
+irreducible.
 
 \begin{definition}
   %Sea $V$ un $G$-módulo. 
@@ -1863,29 +1870,36 @@ En esta sección, $G$ denota un grupo finito y $V$ un $G$-módulo.
 
 \begin{definition}
   Sea $V$ un $G$-módulo no trivial. Decimos que $V$ es \textbf{irreducible} si
-  los únicos submódulos de $V$ son $0$ y $V$.
+  los únicos submódulos de $V$ son $0$ y $V$. Esta definición de
+  $G$-módulo irreducible es equivalente  al de representación
+  \textbf{irreducible}, es decir si $\rho$ es una representación de
+  $G$ en $V$, sus únicas subrepresentaciones son $\rho$ y $\rho_{0}$ .
 \end{definition}
 
 \begin{example}
   Todo $G$-módulo $V$ de dimensión 1 es irreducible, ya que los únicos
-  submódulos posibles son el 0 y $V$.
+  subespacios posibles son el 0 y $V$.
 \end{example}
 % De la definición \ref{suma-directa} (suma directa) si $V$ es un
 % $G$-módulo y $W_{1}$, $W_{2}$ son $G$-submódulos, entonces diremos
 % que $W_{1}$ es \textbf{complemento directo} de $W_{2}$. 
+
+\begin{definition}
+   Se dice que $V$ es \textbf{completamente reducible}, si $V$ se
+   descompone en suma directa de submódulos irreducibles,  es decir,
+  \begin{equation*}
+    V=m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
+  \end{equation*}
+donde cada $W^{(i)}$ es un $G$-submódulo irreducible de $V$. Nos referiremos en ocasiones a tal descomposición de $V$
+simplemente como su descomposición en irreducibles.
+\end{definition}
 
 \begin{theorem}[Teorema de Maschke]{\normalfont (\cite{sagan2001symmetric}, teorema
   1.5.3, p.16), (\cite{fulton1991representation}, proposición 1.8, p.7).
   \label{maschke}}
   Sea $F$ un campo tal que su característica no
   divide al orden de $G$. % y $V$ un $FG$-módulo. 
-  Entonces $V$ es \textbf{completamente reducible}, es decir,
-  \begin{equation*}
-    V\cong m_{1}W^{(1)}\oplus m_{2}W^{(2)}\oplus\cdots \oplus m_{k}W^{(k)},
-  \end{equation*}
-donde $W^{(i)}$ y $W^{(j)}$ con $i\neq j$ son $G$-submódulos
-irreducibles de $V$ no isomorfos y $m_{i}$ es la multiplicidad, es
-decir la cantidad de sumandos directos isomorfos a $W^{(i)}$.
+  Entonces $V$ es \textbf{completamente reducible}.
 \end{theorem}
 En el siguiente ejemplo, no se cumple la hipótesis de el teorema de
 Maschke, pues la característica de el campo divide al orden de el
@@ -2028,6 +2042,14 @@ de $G$.
   denotaremos como $V\cong W$.
 \end{definition}
 
+\begin{definition}
+  Sean $G$ un grupo y $V,W$ espacios vectoriales. Si $\rho:G\rightarrow GL(V)$ y
+  $\rho^{'}:G\rightarrow GL(V^{'})$ son dos representaciones de $G$,
+  diremos que son \textbf{isomorfas} si existe un isomorfismo
+  $f:V\rightarrow V^{'}$ tal que para todo $g\in G$ se tiene que
+  $f\circ\rho(g)=\rho^{'}(g)\circ f$. 
+\end{definition}
+
 \begin{example}
   \label{sub-estandar}
   Del ejemplo \ref{CS}, un submódulo de
@@ -2049,7 +2071,7 @@ de $G$.
 
 \begin{proposition}{\normalfont (\cite{sagan2001symmetric}, proposición 1.7.9, p.21)}.
   \label{ker-im-sub}
-  Sea $\phi:V\rightarrow W$ sea un $G$-homomorfismo. Entonces
+  Sean $V$,$W$ $G$-módulos y $\phi:V\rightarrow W$ un $G$-homomorfismo. Entonces
   \begin{enumerate}
   \item $\ker\phi$ es un $G$-submódulo de $V$, y
   \item $\im\phi$ es un $G$-submódulo de $W$.
@@ -2217,22 +2239,21 @@ las homologías en los capítulos siguientes.
 \label{caracteres}
 
 En esta sección, $F$ es un campo. Mucha información contenida en una representación $X:G\rightarrow
-GL(n,F)$ puede ser obtenida de la traza de sus
-correspondientes representaciones matriciales $X(g)$ con $g\in G$. De
+GL(n,F)$ puede ser obtenida de la traza de $X(g)$ con $g\in G$. De
 esto se ocupa la teoría de caracteres.
 
 \begin{definition}
   Sea $X(g)$ una representación matricial con $g\in G$. Entonces el \textbf{carácter} de $X$ es
   \begin{equation*}
-    \chi(g)=\tr X(g),
+    \chi(g)=\tr \circ X(g),
   \end{equation*}
   donde $\tr$ denota la traza de una matriz dada. Dicho de otro modo,
   $\chi$ es la función
 \begin{equation*}
   G\stackrel{\tr X}{\rightarrow}F.
 \end{equation*}
-Si $V$ es un $G$-módulo, se define su carácter como el carácter de alguna
-representación matricial $X$ correspondiente a $V$ (por propiedades de
+Si $V$ es un $G$-módulo, se define un carácter de $V$ como el carácter de una
+representación de $G$ en $V$ (por propiedades de
 la traza, el carácter no depende de la base de $V$ escogida). En ocasiones, para resaltar
 que el carácter corresponde al $G$-módulo $V$ lo denotaremos como $\chi_{V}$.
 \end{definition}
@@ -2273,7 +2294,9 @@ Siguiendo a Isaacs (\cite{isaacs}, \S 2, p.15), en adelante, para
 que se cumpla el teorema de Maschke y el teorema \ref{no-rep-irr-no-cla-conj}, el campo $F$ serán
 los numéros complejos~$\mathbb{C}$. Sin embargo, se puede trabajar
 con cualquier campo algebraicamente cerrado de característica que no
-divida a $|G|$ o bien el campo de los elementos algebraicos en $\mathbb{C}$.
+divida a $|G|$ o bien el campo de los elementos algebraicos en
+$\mathbb{C}$, es decir, el campo de los números complejos que son raíz
+de los polinomios con coefientes enteros.
 
 \begin{theorem}{\normalfont (\cite{sagan2001symmetric}, proposición 1.10.1, p.40, proposición 1.10.2, p.42)}.
   \label{no-rep-irr-no-cla-conj}
@@ -2289,10 +2312,10 @@ divida a $|G|$ o bien el campo de los elementos algebraicos en $\mathbb{C}$.
 %Se puede consultar la demostración en 1.10.2 de \cite{sagan2001symmetric}.
 En general no se logra una correspondencia biyectiva natural entre las
 representaciones de $G$ y las clases de conjugación. Sin embargo, en
-el siguiente capítulo observamos que en el caso de el grupo simétrico sí se cuenta con
+el siguiente capítulo observamos que en el caso del grupo simétrico sí se cuenta con
 esta correspondencia.
 
-Si $K$ es una clase de conjugación y $\chi$ es una carácter, se define
+Si $K$ es una clase de conjugación y $\chi$ es un carácter, se define
 $\chi_{K}$ el valor del carácter en la clase dada.
 \begin{equation*}
   \chi_{K}=\chi(g)
@@ -2338,7 +2361,7 @@ primera columna corresponde a la clase identidad $K=(1)$.
   $\dim V=1$, pero $(1)1=1$, $(12)1=-1$ y $(123)1=1$, por lo que
   $\chi_{V}((1))=1$,  $\chi_{V}((12))=-1$ y  $\chi_{V}((123))=1$.
 
-  Por último sea $V=E$, la representación estándar. Es decir,
+  Por último, sea $V=E$, la representación estándar. Es decir,
   \begin{equation*}
     E\cong\{(x_{1},x_{2},x_{3})\in \mathbb{C}^{3}\mid x_{1}+x_{2}+x_{3}=0\}.
   \end{equation*}
@@ -2398,7 +2421,7 @@ conjugación.
 \end{table}
 
 Las tablas de caracteres que utilizaremos en el capítulo
-\ref{cha:hom-com-emp} se encuentran en~\cite{liebeck}.
+\ref{cha:hom-com-emp} se encuentran en~\cite{liebeck}, \S 16, p.159.
 \end{example}
 
 \section{Producto interno de caracteres}
@@ -2444,8 +2467,9 @@ equivalentes. Además de otros resultados que veremos a continuación.
     m_{k}V^{(k)},
   \end{equation*}
 donde $V^{(1)},\ldots,V^{(k)}$ son $G$-módulos
-irreducibles no isomorfos entre sí y $m_{i}$ denota la multiplicidad
-de $V^{(i)}$. Entonces
+irreducibles no isomorfos entre sí y $m_{i}$ denota la multiplicidad, es
+decir la cantidad de sumandos directos isomorfos a
+$V^{(i)}$. Entonces
 \begin{enumerate}
 \item $\chi_{V}=m_{1}\chi_{V^{(1)}}+m_{2}\chi_{V^{(2)}}+\cdots+m_{k}\chi_{V^{(k)}}$.
 \item $\langle\chi_{V},\chi_{V^{(j)}}\rangle=m_{j}$ para cada $j$.
@@ -2501,15 +2525,15 @@ representaciones de $G$ a partir de representaciones de $H$ y
 viceversa, usando operaciones de
 restricción e inducción.
 
-\begin{definition}
-  Dada una función $f:A\rightarrow B$ y un subconjunto $C\subseteq A$,
-  la \textbf{restricción} de $f$ al conjunto $C$ es la función
-  $f_{|C}:C\rightarrow B$, dada por: 
-  \begin{equation*}
-    \label{eq:restriccion}
-    f_{|C}(x)=f(x), \quad\mbox{para cada } x \in C.
-  \end{equation*}
-\end{definition}
+% \begin{definition}
+%   Dada una función $f:A\rightarrow B$ y un subconjunto $C\subseteq A$,
+%   la \textbf{restricción} de $f$ al conjunto $C$ es la función
+%   $f_{|C}:C\rightarrow B$, dada por: 
+%   \begin{equation*}
+%     \label{eq:restriccion}
+%     f_{|C}(x)=f(x), \quad\mbox{para cada } x \in C.
+%   \end{equation*}
+% \end{definition}
 
 Sea $V$ un $G$-módulo y $f:H\rightarrow G$ un homomorfismo de
 grupos. Tenemos una composición:
@@ -2519,6 +2543,7 @@ grupos. Tenemos una composición:
 que induce una estructura de $H$-módulo en $V$. La acción de $H$ en
 $V$ está determinada por:
 \begin{equation*}
+  \label{rest}
   hv=f(h)v,
 \end{equation*}
 para $h\in H$, $v\in V$, donde en el lado derecho de la ecuación hemos
@@ -2526,8 +2551,7 @@ utilizado la acción ya definida de $G$ en $V$.
 
 \begin{definition}
   Sea $H$ un subgrupo de $G$ y $f:H\rightarrow G$ la función
-  inclusión. Sea $V$ un $G$-módulo. El $H$-modulo obtenido por el
-  procedimiento anterior se denota con $V\downarrow^{G}_{H}$ y se
+  inclusión. Sea $V$ un $G$-módulo. El $H$-modulo obtenido como en \ref{rest}, se denota con $V\downarrow^{G}_{H}$ y se
   le llama \textbf{restricción} de $V$ de $G$ a $H$.
 \end{definition}
 
@@ -3229,7 +3253,7 @@ sobre permutaciones. Cada permutación $\pi \in S_{n}$ tiene una
 descomposición en ciclos disjuntos. Por ejemplo, $(123)(45)$ denota la
 permutación que envía $1\rightarrow 2 \rightarrow 3 \rightarrow 1$  e
 intercambia al $4$ y $5$ (si $n>5$, entonces por convención los otros
-elementos permanecen fijos por $\pi$). La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la
+elementos permanecen fijos por $\pi$). Recordemos que la \textbf{estructura cíclica} de $\pi\in S_{n}$ es la
 partición de $n$ formada por las longitudes de los ciclos en la
 descomposición. Así, $(123)(45)\in S_{5}$ tiene la estructura
 cíclica (3,2). Dos elementos de $S_{n}$ son conjugados si y solo si
@@ -3845,7 +3869,7 @@ por una permutación par.
   \label{fig:3-simplejo}
 \end{figure}
 A continuación, vamos a realizar un procedimiento análogo a la construcción del
-espacio $FX$ (ver lema \ref{FX} y teorema \ref{base-FX}), pero ahora en la
+espacio $F^{X}$ (ver lema \ref{FX} y teorema \ref{base-FX}), pero ahora en la
 construcción del espacio de \emph{p}-cadenas $C_{p}(\Delta)$, tomando
 en cuenta la orientación de los simplejos.
 \begin{definition}
