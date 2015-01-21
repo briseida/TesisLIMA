@@ -200,7 +200,7 @@ Alfonso Itzá Ortiz, Dra. Rocío Leonel Gómez y Dr. Jorge Viveros Rogel,
 por el tiempo que les tomó revisar este trabajo y por sus valiosas
 sugerencias. A los profesores investigadores del Área Académica de
 Matemáticas y Física por compartir sus conocimientos. También
-agradezco a mi amigos Liz y Beto por las experiencias compartidas.
+agradezco a mis amigos Beto y Liz por las experiencias compartidas.
 
 \tableofcontents
 
@@ -535,8 +535,9 @@ omiten se puede consultar en \cite{friedberg1982algebra} y
 \cite{herstein1990algebra}. 
 
 De la sección \ref{grupos}, los conceptos importantes son: grupo, homomorfismo e isomorfismo de grupos, grupo
-simétrico, acción de un grupo~$G$ en un conjunto no vacío y acción lineal
-de un grupo $G$ en un espacio vectorial $V$. Las demostraciones de
+simétrico, acción de un grupo~$G$ en un conjunto no vacío.
+%y acción lineal de un grupo $G$ en un espacio vectorial $V$. 
+Las demostraciones de
 grupos que no incluiremos explícitamente se pueden encontrar en
 \cite{fraleigh}. En la sección \ref{anillos} y \ref{modulos} se
 definen anillos y módulos respectivamente.
@@ -1133,7 +1134,7 @@ $f(g)\in S_{Y}$ ``representa'' al elemento del grupo $g\in G$.
 
 Si tenemos un homomorfismo $\phi:G\rightarrow S_{Y}$, no
 necesariamente inyectivo, el grupo $G$ permuta el conjunto $Y$ como sigue: dado
-$\phi:G\rightarrow S_{Y}$ se define $*:G\times Y\rightarrow Y$ como
+$\phi:G\rightarrow S_{Y}$, y denotando a $\phi(g)$ como $\phi_{g}$, se define $*:G\times Y\rightarrow Y$ como
 $g*y=\phi_{g}(y)$. Por propiedades de homomorfismo esta función tiene las
 siguientes propiedades:
 \begin{itemize}
@@ -1449,10 +1450,10 @@ $G$ en $V$.
   \item $1$ es el neutro de $G$, entonces $$1v=(\rho_{1})v=1_{V}(v)=v$$
     para todo $v\in V$.
   \item Si $g,h\in G$ y $v\in V$, entonces $$(gh)v=\rho_{gh}(v)=(\rho_{g}
-    \circ \rho_{h})(v)=\rho_{g}(\rho_{h}(v))=g(\rho_{h}(v))=g(hv)$$
-  \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=\rho_{g}(v+w)=\rho_{g}(v)+\rho_{g}(w)=gv+gw$$
+    \circ \rho_{h})(v)=\rho_{g}(\rho_{h}(v))=g(\rho_{h}(v))=g(hv).$$
+  \item Para $g\in G$ y $v,w\in V$, $$g(v+w)=\rho_{g}(v+w)=\rho_{g}(v)+\rho_{g}(w)=gv+gw.$$
   \item Para $\lambda\in F$, $v\in V$ y $g\in G$,
-    $$g(\lambda v)=\rho_{g}(\lambda v)=\lambda\rho_{g}(v)=\lambda(gv)$$
+    $$g(\lambda v)=\rho_{g}(\lambda v)=\lambda\rho_{g}(v)=\lambda(gv).$$
   \end{enumerate}
 
   como queríamos demostrar.
@@ -1895,9 +1896,10 @@ donde cada $W^{(i)}$ es un $G$-submódulo irreducible de $V$. Nos referiremos en
 simplemente como su descomposición en irreducibles.
 \end{definition}
 
-\begin{theorem}[Teorema de Maschke]{\normalfont (\cite{sagan2001symmetric}, teorema
-  1.5.3, p.16), (\cite{fulton1991representation}, proposición 1.8, p.7).
-  \label{maschke}}
+\begin{theorem}[Teorema de Maschke]{\normalfont
+    (\cite{sagan2001symmetric}, teorema 1.5.3, p.16)}. 
+  %,(\cite{fulton1991representation}, proposición 1.8, p.7).}
+  \label{maschke}
   Sea $F$ un campo tal que su característica no
   divide al orden de $G$. % y $V$ un $FG$-módulo. 
   Entonces $V$ es \textbf{completamente reducible}.
@@ -2225,9 +2227,9 @@ $G$-submódulo de $V$.
   no es posible por hipótesis. 
 
   Por otro lado, si $S\cap S^{'}=S$, entonces $\dim (S\cap S^{'})=\dim(S)$, además por hipótesis $S\cong S^{'}$, así
-  $\dim(S)=\dim(S^{'})$. Por tanto $\dim(S\cap S^{'})=\dim(S^{'})$ y
+  $\dim(S)=\dim(S^{'})$. Por tanto, $\dim(S\cap S^{'})=\dim(S^{'})$ y
   dado que $S\cap S^{'}\leq S^{'}$, %por el teorema \ref{esp-iguales}, 
-  tenemos que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$ como se quería
+  tenemos que $S\cap S^{'}=S^{'}$, con lo que~$S=S^{'}$. Como se quería
   demostrar.
 \end{proof}
 
@@ -3966,7 +3968,7 @@ difieren precisamente por un signo; los términos son idénticos,
 excepto que $v_{j}$ y~$v_{j+1}$ aparecen intercambiados. Veamos que
 sucede sobre el $i$-ésimo término cuando $i=j$ y $i=j+1$. En la primera
 expresión obtenemos:
-$$(-1)^{j}(\ldots v_{j-1} \widehat v_{j}v_{j+1}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j}\widehat v_{j+1}v_{j+2}\ldots).$$
+$$(-1)^{j}(\ldots v_{j-1} \widehat v_{j}v_{j+1}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j}\widehat v_{j+1}v_{j+2}\ldots),$$
 mientras que en la segunda expresión tenemos:
 $$(-1)^{j}(\ldots v_{j-1}\widehat v_{j+1}v_{j}v_{j+2}\ldots)+(-1)^{j+1}(\ldots v_{j-1}v_{j+1}\widehat v_{j}v_{j+2}\ldots).$$
 Comparando estas dos expresiones observamos que solo difieren por un signo.
