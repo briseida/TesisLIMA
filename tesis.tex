@@ -208,8 +208,8 @@ agradezco a mi amigos Liz y Beto por las experiencias compartidas.
 
 \chapter*{Introducción}
 
-En matemáticas como en otras ciencias es importante descomponer cierto
-objeto en piezas y mejor aún si tales piezas son las más pequeñas. Por
+En matemáticas, como en otras ciencias, es importante descomponer cierto
+objeto en piezas y mejor aún si tales piezas son pequeñas. Por
 ejemplo, del teorema fundamental de la aritmética sabemos que todo número
 entero positivo puede ser expresado como producto de potencias de
 primos. %Enseguida se muestran dos ejemplos más de álgebra lineal. 
@@ -263,17 +263,19 @@ El teorema fundamental de la aritmética es análogo al teorema de
 Maschke (\cite{sagan2001symmetric}, teorema 1.5.3, p.16), el cual
 sigue la idea de descomponer a un módulo en sus piezas más
 pequeñas. El teorema de Maschke enuncia que, bajo ciertas hipótesis en
-el campo $F$ y grupo $G$, todo $F^{G}$-módulo es completamente reducible,
+el campo $F$ y grupo $G$ (que se cumplen para todo grupo finito $G$
+en caso de que $F$ sea el campo de los números complejos), todo $F^{G}$-módulo es completamente reducible,
 es decir, es suma directa de submódulos irreducibles.
 %[\cite{fulton1991representation}, proposición 1.8, p.7]. pag 24 teorema de Machke.
 
-Nos interesa la llamada teoría ordinaria de representaciones de grupos finitos
-actuando en un espacio vectorial de dimensión finita sobre el campo de
+Nos interesa la llamada teoría ordinaria de representaciones de grupos finitos,
+en la cual se considera al grupo actuando en un espacio vectorial de dimensión finita sobre el campo de
 los números complejos y más generalmente sobre campos de
 característica que no divide al orden del grupo. Esta restricción en
-la característica es necesaria para que se cumpla el teorema de Maschke.
-Por otra parte, la teoría modular estudia módulos sobre campos cuya
-característica divide al orden de el grupo, en este caso pueden
+la característica es necesaria para que se cumplan las hipótesis del teorema de Maschke.
+Por otra parte, la teoría modular estudia módulos sobre anillos de
+grupo $F^{G}$ donde la
+característica del campo $F$ divide al orden del grupo $G$, en este caso pueden
 existir módulos que no son completamente reducibles, como se
 muestra en el ejemplo \ref{ej-no-reducibilidad}. En este trabajo no consideraremos la teoría
 modular.%, ya que en ese contexto no necesariamente se cumple el teorema de Maschke. 
@@ -300,8 +302,7 @@ simplejos son las subgráficas completas.
 Estamos interesados en la gráficas de emparejamientos $G_{n}$ las
 cuales se construyen a partir  de gráficas completas de $n$ vértices,
 a su vez, $K(G_{n})$ denota ciertas gráficas (llamadas gráficas de
-clanes) obtenidas a partir de
-$G_{n}$. Con estas gráficas se definen los complejos simpliciales
+clanes) obtenidas a partir de~$G_{n}$. Con estas gráficas se definen los complejos simpliciales
 $M_{n}=\Delta(G_{n})$ y $K(M_{n})=\Delta(K(G_{n}))$. Todos los cálculos que
 realizamos son para $n=4,5,6$ y sus respectivas gráficas aparecen abajo.
 
@@ -489,8 +490,8 @@ En el primer capítulo se estudian conceptos de álgebra lineal, grupos,
 anillos, módulos, representaciones de grupos y gráficas, los cuales se
 usarán en los capítulos posteriores. Siendo los conceptos más
 importantes el de representación de un grupo $G$ en un espacio
-vectorial $V$, $G$-módulos, $F^{G}$-módulos. Destacando el teorema de
-Maschke. Se definen las gráficas de emparejamientos, clanes y
+vectorial $V$, $G$-módulos y $F^{G}$-módulos. Se enuncia el teorema de
+Maschke. Además, se definen las gráficas de emparejamientos, clanes y
 bipartita clánica.
 
 En el segundo capítulo, estudiamos la relación entre tableros de Young
@@ -498,7 +499,7 @@ y representaciones del grupo simétrico. Describimos la construcción de
 módulos de Specht los cuales dan una lista completa de las
 representaciones irreducibles de $S_{n}$.
 
-El tema de el capítulo \ref{cha:hom-com-sim}, son los espacios de homología de complejos simpliciales.
+El tema del capítulo \ref{cha:hom-com-sim} es el de los espacios de homología de complejos simpliciales.
 En la sección \ref{com-sim-abs} se desarrollan conceptos como:
 complejo simplicial abstracto $\Delta$, espacio de cadenas $C_{p}(\Delta)$, el
 operador frontera $\partial_{p}$. En la sección \ref{hom-simp}, se
