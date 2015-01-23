@@ -650,7 +650,7 @@ Se puede demostrar lo siguiente:
 Denotemos por $V/W$ al conjunto de todas las clases laterales de $W$.
 \begin{lemma}[\cite{herstein1990algebra}, lema 4.2, p.160]
   \label{esp-coc}
-  Si $V$ es un espacio vectorial y si $W$ es un subespacio de $V$,
+  Sean $V$ un espacio vectorial y $W$ un subespacio de $V$,
   entonces $V/W$ es un espacio vectorial, donde para $v_{1}+W,v_{2}+W\in V/W$ y
   $\lambda\in F$, se define:
   \begin{itemize}
@@ -1063,9 +1063,13 @@ $n,m\in\mathbb{Z}$.
 \end{theorem}
 
 \begin{definition}
-  La \textbf{estructura cíclica} de $\pi\in S_{n}$ es la partición de
-  $n$ formada por las longitudes de los ciclos en la descomposición
-  como producto en ciclos disjuntos.
+  Sea una permutación $\pi\in S_{n}$. La \textbf{estructura en ciclos}
+  de $\pi$ son las longitudes de los ciclos de la descomposición de $\pi$
+  como producto de ciclos disjuntos. Listando las longitudes en orden decreciente.
+    
+% La \textbf{estructura en ciclos} de $\pi\in S_{n}$ es la partición de
+  % $n$ formada por las longitudes de los ciclos en la descomposición
+  % como producto en ciclos disjuntos.
 \end{definition}
 
 \begin{example}
@@ -1075,7 +1079,7 @@ $n,m\in\mathbb{Z}$.
       2 & 3 & 1 & 5 & 4  
     \end{array} 
   \right)=(123)(45).\]
-  Así, $(123)(45)\in S_{5}$ tiene la estructura cíclica (3,2). 
+  Así, $(123)(45)\in S_{5}$ tiene la estructura en ciclos (3,2). 
 \end{example}
 
 
@@ -1090,8 +1094,9 @@ denotado por $K_{g}$.
 \end{definition}
 
 \begin{theorem}{\normalfont (\cite{zaldivar}, teorema 4.12, p.43)}.
+  \label{estructura-ciclos}
   Dos elementos de $S_{n}$ son conjugados si y solo si tienen la misma
-  estructura cíclica.   
+  estructura en ciclos.   
 \end{theorem}
 
 \begin{theorem}{\normalfont (\cite{fraleigh}, corolario 9.12, p.90)}.
@@ -3264,18 +3269,21 @@ sobre permutaciones. Cada permutación $\pi \in S_{n}$ tiene una
 descomposición en ciclos disjuntos. Por ejemplo, $(123)(45)$ denota la
 permutación que envía $1\rightarrow 2 \rightarrow 3 \rightarrow 1$  e
 intercambia al $4$ y $5$ (si $n>5$, entonces por convención los otros
-elementos permanecen fijos por $\pi$). Recordemos que la \textbf{estructura cíclica} de $\pi\in S_{n}$ es la
-partición de $n$ formada por las longitudes de los ciclos en la
-descomposición. Así, $(123)(45)\in S_{5}$ tiene la estructura
-cíclica (3,2). Dos elementos de $S_{n}$ son conjugados si y solo si
-tienen la misma estructura cíclica (\cite{zaldivar}, teorema 4.12, p.43). % La forma mas fácil de ver esto es
+elementos permanecen fijos por $\pi$). 
+% Recordemos que la \textbf{estructura en ciclos} de $\pi\in S_{n}$ es la
+% partición de $n$ formada por las longitudes de los ciclos en la
+% descomposición. Así, $(123)(45)\in S_{5}$ tiene la estructura
+% cíclica (3,2). 
+Recordemos que dos elementos de $S_{n}$ son conjugados si y solo si
+tienen la misma estructura en ciclos (teorema \ref{estructura-ciclos}).
+%(\cite{zaldivar}, teorema 4.12, p.43). % La forma mas fácil de ver esto es
 % considerar la conjugación simplemente como una reetiquetación de los
 % elementos cuando la permutación es escrita en notación cíclica. En
 % efecto, si $$\pi=(a_{1},a_{2},\ldots,a_{k})(b_{1},b_{2},\ldots,b_{l})\cdots,$$
 % y $\sigma$ manda $x$ a $x^{'}$, entonces
 % $$\sigma\pi\sigma^{-1}=(a^{'}_{1},a^{'}_{2},\ldots,a^{'}_{k})(b^{'}_{1},b^{'}_{2},\ldots,b^{'}_{l})\cdots.$$
 Esto significa que las clases de conjugación de $S_{n}$ están
-caracterizadas por la estructura cíclica, y en consecuencia
+caracterizadas por la estructura en ciclos, y en consecuencia
 corresponden a las particiones de $n$, los cuales son equivalentes a
 los diagramas de Young de tamaño $n$. Recordemos del teorema
 \ref{no-rep-irr-no-cla-conj}, que el número de representaciones irreducibles de un
@@ -5043,7 +5051,7 @@ en diferentes columnas de la tabla \ref{tab:restriccion-H_0}. Sin
 embargo, para realizar los cálculos del producto interno de caracteres,
 se pudo haber considerado (45) en la misma columna de (12). En las
 tablas de caracteres que restan en el capítulo, colocaremos las
-permutaciones que tengan la misma estructura cíclica en la misma
+permutaciones que tengan la misma estructura en ciclos en la misma
 columna siempre y cuando tengan el mismo carácter, como la dimensión
 de todos los módulos inducidos considerados es 1, las permutaciones
 actuando en el simplejo que genera a tal módulo deben tener la misma
